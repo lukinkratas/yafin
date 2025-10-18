@@ -40,6 +40,7 @@ class _ClientManager:
 class AsyncSymbol(object):
     """Symbol class for a specific ticker."""
 
+    @typechecked
     def __init__(self, ticker: str) -> None:
         self.ticker = ticker
         self._open_client: AsyncClient | None = None
@@ -326,6 +327,7 @@ class AsyncSymbol(object):
         return timeseries_json['timeseries']['result']
 
     @log_args
+    @typechecked
     async def get_income_statement(
         self,
         frequency: str,
@@ -346,6 +348,7 @@ class AsyncSymbol(object):
         )
 
     @log_args
+    @typechecked
     async def get_balance_sheet(
         self,
         frequency: str,
@@ -364,6 +367,7 @@ class AsyncSymbol(object):
         return await self._get_financials(frequency, 'balance_sheet', period1, period2)
 
     @log_args
+    @typechecked
     async def get_cash_flow(
         self,
         frequency: str,

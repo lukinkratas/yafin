@@ -155,12 +155,30 @@ class TestUnitSymbol:
             ),
             (
                 dict(
+                    period_range=1,
+                    interval='1d',
+                    include_div=True,
+                    include_split='xxx',
+                ),
+                TypeCheckError,
+            ),
+            (
+                dict(
                     period_range='1y',
                     interval='xxx',
                     include_div=True,
                     include_split=True,
                 ),
                 ValueError,
+            ),
+            (
+                dict(
+                    period_range='1y',
+                    interval=1,
+                    include_div=True,
+                    include_split='xxx',
+                ),
+                TypeCheckError,
             ),
             (
                 dict(
@@ -631,6 +649,41 @@ class TestUnitSymbol:
     @pytest.mark.parametrize(
         'kwargs',
         [
+            dict(frequency='annual', typ='income_statement'),
+            dict(
+                frequency='annual',
+                typ='income_statement',
+                period1=datetime(2020, 1, 1).timestamp(),
+                period2=datetime.now().timestamp(),
+            ),
+            dict(
+                frequency='annual',
+                typ='income_statement',
+                period1=datetime(2020, 1, 1).timestamp(),
+            ),
+            dict(
+                frequency='annual',
+                typ='income_statement',
+                period2=datetime.now().timestamp(),
+            ),
+        ],
+    )
+    @pytest.mark.asyncio
+    async def test_get_financials(
+        self,
+        symbol: AsyncSymbol,
+        kwargs: dict[str, Any],
+        mocker: MockerFixture,
+        timeseries_income_statement_json_mock: dict[str, Any],
+    ) -> None:
+        """Test _get_financials method."""
+        mock_200_response(mocker, timeseries_income_statement_json_mock)
+        annual_income_stmt = await symbol._get_financials(**kwargs)
+        assert_annual_income_stmt_result(annual_income_stmt)
+
+    @pytest.mark.parametrize(
+        'kwargs',
+        [
             dict(frequency='annual'),
             dict(
                 frequency='annual',
@@ -654,11 +707,17 @@ class TestUnitSymbol:
         annual_income_stmt = await symbol.get_income_statement(**kwargs)
         assert_annual_income_stmt_result(annual_income_stmt)
 
+    @pytest.mark.parametrize(
+        'kwargs, err_cls',
+        [(dict(frequency='xxx'), ValueError), (dict(frequency=1), TypeCheckError)],
+    )
     @pytest.mark.asyncio
-    async def test_get_income_statement_invalid_args(self, symbol: AsyncSymbol) -> None:
+    async def test_get_income_statement_invalid_args(
+        self, symbol: AsyncSymbol, kwargs: dict[str, Any], err_cls: Type[Exception]
+    ) -> None:
         """Test get_income_statement method with invalid arguments.."""
-        with pytest.raises(ValueError):
-            await symbol.get_income_statement(frequency='xxx')
+        with pytest.raises(err_cls):
+            await symbol.get_income_statement(**kwargs)
 
     @pytest.mark.parametrize(
         'kwargs',
@@ -686,11 +745,21 @@ class TestUnitSymbol:
         annual_balance_sheet = await symbol.get_balance_sheet(**kwargs)
         assert_annual_balance_sheet_result(annual_balance_sheet)
 
+    @pytest.mark.parametrize(
+        'kwargs, err_cls',
+        [
+            (dict(frequency='xxx'), ValueError),
+            (dict(frequency=1), TypeCheckError),
+            (dict(frequency='trailing'), TrailingBalanceSheetError),
+        ],
+    )
     @pytest.mark.asyncio
-    async def test_get_balance_sheet_invalid_args(self, symbol: AsyncSymbol) -> None:
+    async def test_get_balance_sheet_invalid_args(
+        self, symbol: AsyncSymbol, kwargs: dict[str, Any], err_cls: Type[Exception]
+    ) -> None:
         """Test get_balance_sheet method."""
-        with pytest.raises(TrailingBalanceSheetError):
-            await symbol.get_balance_sheet(frequency='trailing')
+        with pytest.raises(err_cls):
+            await symbol.get_balance_sheet(**kwargs)
 
     @pytest.mark.parametrize(
         'kwargs',
@@ -717,6 +786,21 @@ class TestUnitSymbol:
         mock_200_response(mocker, timeseries_cash_flow_json_mock)
         annual_cash_flow = await symbol.get_cash_flow(**kwargs)
         assert_annual_cash_flow_result(annual_cash_flow)
+
+    @pytest.mark.parametrize(
+        'kwargs, err_cls',
+        [
+            (dict(frequency='xxx'), ValueError),
+            (dict(frequency=1), TypeCheckError),
+        ],
+    )
+    @pytest.mark.asyncio
+    async def test_get_cash_flow_invalid_args(
+        self, symbol: AsyncSymbol, kwargs: dict[str, Any], err_cls: Type[Exception]
+    ) -> None:
+        """Test get_cash_flow method with invalid arguments."""
+        with pytest.raises(err_cls):
+            await symbol.get_cash_flow(**kwargs)
 
     @pytest.mark.asyncio
     async def test_get_options(

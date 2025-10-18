@@ -5,6 +5,7 @@ from typing import Any, Type
 
 from curl_cffi.requests import AsyncSession, Response
 from curl_cffi.requests.exceptions import HTTPError
+from typeguard import typechecked
 
 from .const import ALL_MODULES, ALL_TYPES, EVENTS, INTERVALS, RANGES
 from .utils import encode_url, error, log_args
@@ -23,9 +24,10 @@ class AsyncClient(object):
         'corsDomain': 'finance.yahoo.com',
     }
 
+    @typechecked
     def __init__(self) -> None:
         self._open_session: AsyncSession[Any] | None = None
-        self._used_crumb: str | None = None
+        self._crumb: str | None = None
 
     @property
     def session(self) -> AsyncSession[Any]:
@@ -39,13 +41,14 @@ class AsyncClient(object):
 
         return self._open_session
 
+    @log_args
     async def close(self) -> None:
         """Close the session if open and reset crumb."""
         if self._open_session:
             await self._open_session.close()
             self._open_session = None
 
-        self._used_crumb = None
+        self._crumb = None
 
     async def __aenter__(self) -> 'AsyncClient':
         """When entering context manager, create the session."""
@@ -77,17 +80,17 @@ class AsyncClient(object):
 
         return response
 
+    @log_args
     async def _get_crumb(self) -> str | None:
-        logger.debug('Fetching crumb...')
-
-        if not self._used_crumb:
+        if not self._crumb:
             url = f'{self._BASE_URL}/v1/test/getcrumb'
             response = await self._get_async_request(url=url)
-            self._used_crumb = response.text
+            self._crumb = response.text
 
-        return self._used_crumb
+        return self._crumb
 
     @log_args
+    @typechecked
     async def get_chart(
         self,
         ticker: str,
@@ -143,6 +146,7 @@ class AsyncClient(object):
         return response.json()
 
     @log_args
+    @typechecked
     async def get_quote(self, tickers: str) -> dict[str, Any]:
         """Get quote for the ticker(s).
 
@@ -162,6 +166,7 @@ class AsyncClient(object):
         return response.json()
 
     @log_args
+    @typechecked
     async def get_quote_summary(self, ticker: str, modules: str) -> dict[str, Any]:
         """Get quote summary for the ticker.
 
@@ -193,6 +198,7 @@ class AsyncClient(object):
         return response.json()
 
     @log_args
+    @typechecked
     async def get_timeseries(
         self,
         ticker: str,
@@ -242,6 +248,7 @@ class AsyncClient(object):
         return response.json()
 
     @log_args
+    @typechecked
     async def get_options(self, ticker: str) -> dict[str, Any]:
         """Get options for the ticker.
 
@@ -258,6 +265,7 @@ class AsyncClient(object):
         return response.json()
 
     @log_args
+    @typechecked
     async def get_search(self, tickers: str) -> dict[str, Any]:
         """Get search results for the ticker.
 
@@ -274,6 +282,7 @@ class AsyncClient(object):
         return response.json()
 
     @log_args
+    @typechecked
     async def get_recommendations(self, ticker: str) -> dict[str, Any]:
         """Get analyst recommendations for the ticker.
 
@@ -290,6 +299,7 @@ class AsyncClient(object):
         return response.json()
 
     @log_args
+    @typechecked
     async def get_insights(self, ticker: str) -> dict[str, Any]:
         """Get insights for the ticker.
 

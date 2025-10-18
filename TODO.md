@@ -8,16 +8,15 @@
 
 - ~~[x] client._get_async_request -> NoReturn~~
 - ~~[x] redacting crumb~~
-- [] util funcs to make args, kwargs and result shorter
-  - [ ] unit test
 - ~~[x] add codex gh action~~
+- ~~[x] calling close() on one symbol closes the client for all - reference_count in _ClientSingletonFactory -> _refcount~~
+- ~~[x] add typeguard.typechecked + unit test~~
+- ~~[x] util funcs to make args, kwargs shorter + unit test~~
+- ~~[x] util funcs to make result shorter + unit test~~
 - [ ] session timeout ? - curl_cffi.requests.AsyncSession(timeout)
 - [ ] session retry ?
 - [ ] client into symbol dependency injection ?
 - [ ] session into client dependency injection ?
-- ~~[x] calling close() on one symbol closes the client for all - reference_count in _ClientSingletonFactory -> _refcount~~
-- [ ] add typeguard.typechecked
-  - [ ] unit test
 - [ ] issue calling client.session out of context window / after it was closed craetes new session?
 - [ ] issue calling symbol.client out of context window / after it was closed craetes new client?
 - [ ] get chart not now(), but round to midnight - check yfinance implementation

@@ -1,10 +1,11 @@
 from datetime import datetime
-from typing import Any, AsyncGenerator
+from typing import Any, AsyncGenerator, Type
 
 import pytest
 import pytest_asyncio
 from curl_cffi.requests.exceptions import HTTPError
 from pytest_mock import MockerFixture
+from typeguard import TypeCheckError
 
 from tests.assertions import (
     assert_annual_income_stmt_result,
@@ -77,6 +78,18 @@ class TestUnitClient:
         assert response
 
     @pytest.mark.asyncio
+    async def test_get_crumb(self) -> None:
+        """Test _get_crumb method."""
+        client = AsyncClient()
+        assert client._crumb is None
+
+        await client._get_crumb()
+        assert client._crumb
+
+        await client.close()
+        assert client._crumb is None
+
+    @pytest.mark.asyncio
     async def test_get_async_request_http_err(
         self,
         client: AsyncClient,
@@ -133,19 +146,48 @@ class TestUnitClient:
         assert_chart_result(chart['chart']['result'][0], kwargs['ticker'])
 
     @pytest.mark.parametrize(
-        'kwargs',
+        'kwargs, err_cls',
         [
-            dict(ticker='META', period_range='xxx', interval='1d', events='div,split'),
-            dict(ticker='META', period_range='1y', interval='xxx', events='div,split'),
-            dict(ticker='META', period_range='1y', interval='1d', events='xxx'),
+            (
+                dict(ticker=1, period_range='xxx', interval='1d', events='div,split'),
+                TypeCheckError,
+            ),
+            (
+                dict(
+                    ticker='META', period_range='xxx', interval='1d', events='div,split'
+                ),
+                ValueError,
+            ),
+            (
+                dict(ticker='META', period_range=1, interval='1d', events='div,split'),
+                TypeCheckError,
+            ),
+            (
+                dict(
+                    ticker='META', period_range='1y', interval='xxx', events='div,split'
+                ),
+                ValueError,
+            ),
+            (
+                dict(ticker='META', period_range='1y', interval=1, events='div,split'),
+                TypeCheckError,
+            ),
+            (
+                dict(ticker='META', period_range='1y', interval='1d', events='xxx'),
+                ValueError,
+            ),
+            (
+                dict(ticker='META', period_range='1y', interval='1d', events=1),
+                TypeCheckError,
+            ),
         ],
     )
     @pytest.mark.asyncio
     async def test_get_chart_invalid_args(
-        self, client: AsyncClient, kwargs: dict[str, str]
+        self, client: AsyncClient, kwargs: dict[str, Any], err_cls: Type[Exception]
     ) -> None:
         """Test get_chart method with invalid arguments."""
-        with pytest.raises(ValueError):
+        with pytest.raises(err_cls):
             await client.get_chart(**kwargs)
 
     @pytest.mark.asyncio
@@ -161,6 +203,12 @@ class TestUnitClient:
         quotes = await client.get_quote(tickers)
         assert_response_json(quotes, 'quoteResponse')
         assert_quotes(quotes, tickers)
+
+    @pytest.mark.asyncio
+    async def test_get_quote_invalid_args(self, client: AsyncClient) -> None:
+        """Test get_quote method with invalid arguments."""
+        with pytest.raises(TypeCheckError):
+            await client.get_quote(tickers=1)
 
     @pytest.mark.asyncio
     async def test_get_quote_summary(
@@ -180,18 +228,20 @@ class TestUnitClient:
         )
 
     @pytest.mark.parametrize(
-        'kwargs',
+        'kwargs, err_cls',
         [
-            dict(ticker='META', modules='xxx'),
-            dict(ticker='META', modules='assetProfil'),
+            (dict(ticker=1, modules=ALL_MODULES_CSV), TypeCheckError),
+            (dict(ticker='META', modules='xxx'), ValueError),
+            (dict(ticker='META', modules='assetProfil'), ValueError),
+            (dict(ticker='META', modules=1), TypeCheckError),
         ],
     )
     @pytest.mark.asyncio
     async def test_get_quote_summary_invalid_args(
-        self, client: AsyncClient, kwargs: dict[str, Any]
+        self, client: AsyncClient, kwargs: dict[str, Any], err_cls: Type[Exception]
     ) -> None:
         """Test get_quote_summary method with invalid arguments."""
-        with pytest.raises(ValueError):
+        with pytest.raises(err_cls):
             await client.get_quote_summary(**kwargs)
 
     @pytest.mark.parametrize(
@@ -241,11 +291,49 @@ class TestUnitClient:
         assert_response_json(timeseries, 'timeseries')
         assert_annual_income_stmt_result(timeseries['timeseries']['result'])
 
+    @pytest.mark.parametrize(
+        'kwargs, err_cls',
+        [
+            (
+                dict(
+                    ticker=1,
+                    types=get_types_with_frequency(
+                        frequency='annual', typ='income_statement'
+                    ),
+                ),
+                TypeCheckError,
+            ),
+            (dict(ticker='META', types='xxx'), ValueError),
+            (dict(ticker='META', types=1), TypeCheckError),
+            (
+                dict(
+                    ticker='META',
+                    types=get_types_with_frequency(
+                        frequency='annual', typ='income_statement'
+                    ),
+                    period1='xxx',
+                ),
+                TypeCheckError,
+            ),
+            (
+                dict(
+                    ticker='META',
+                    types=get_types_with_frequency(
+                        frequency='annual', typ='income_statement'
+                    ),
+                    period2='xxx',
+                ),
+                TypeCheckError,
+            ),
+        ],
+    )
     @pytest.mark.asyncio
-    async def test_get_timeseries_invalid_args(self, client: AsyncClient) -> None:
+    async def test_get_timeseries_invalid_args(
+        self, client: AsyncClient, kwargs: dict[str, Any], err_cls: Type[Exception]
+    ) -> None:
         """Test get_timeseries method with invalid arguments."""
-        with pytest.raises(ValueError):
-            await client.get_timeseries(ticker='META', types='xxx')
+        with pytest.raises(err_cls):
+            await client.get_timeseries(**kwargs)
 
     @pytest.mark.asyncio
     async def test_get_options(
@@ -262,6 +350,12 @@ class TestUnitClient:
         assert_options_result(options['optionChain']['result'][0], ticker)
 
     @pytest.mark.asyncio
+    async def test_get_options_invalid_args(self, client: AsyncClient) -> None:
+        """Test get_options method with invalid arguments."""
+        with pytest.raises(TypeCheckError):
+            await client.get_options(ticker=1)
+
+    @pytest.mark.asyncio
     async def test_get_search(
         self,
         client: AsyncClient,
@@ -272,6 +366,12 @@ class TestUnitClient:
         mock_200_response(mocker, search_json_mock)
         search = await client.get_search(tickers='META')
         assert_search(search)
+
+    @pytest.mark.asyncio
+    async def test_get_search_invalid_args(self, client: AsyncClient) -> None:
+        """Test get_search method with invalid arguments."""
+        with pytest.raises(TypeCheckError):
+            await client.get_search(tickers=1)
 
     @pytest.mark.asyncio
     async def test_get_recommendations(
@@ -288,6 +388,12 @@ class TestUnitClient:
         assert_recommendations_result(recommendations['finance']['result'][0], ticker)
 
     @pytest.mark.asyncio
+    async def test_get_recommendations_invalid_args(self, client: AsyncClient) -> None:
+        """Test get_recommendations method with invalid arguments."""
+        with pytest.raises(TypeCheckError):
+            await client.get_recommendations(ticker=1)
+
+    @pytest.mark.asyncio
     async def test_get_insights(
         self,
         client: AsyncClient,
@@ -300,6 +406,12 @@ class TestUnitClient:
         insights = await client.get_insights(ticker)
         assert_response_json(insights, 'finance')
         assert_insights_result(insights['finance']['result'], ticker)
+
+    @pytest.mark.asyncio
+    async def test_get_insights_invalid_args(self, client: AsyncClient) -> None:
+        """Test get_insights method with invalid arguments."""
+        with pytest.raises(TypeCheckError):
+            await client.get_insights(ticker=1)
 
     @pytest.mark.asyncio
     async def test_get_market_summaries(

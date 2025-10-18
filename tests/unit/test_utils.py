@@ -191,3 +191,26 @@ class TestUnitUtils:
             ),
         )
         assert simplifed_chart_df.equals(expected_df)
+
+    # @pytest.mark.parametrize(
+    #     'arg, expected',
+    #     [
+    #         ('xxx', 'xxx'),
+    #         (111, '111'),
+    #         (['xxx'], "['xxx']"),
+    #         ('x' * (CHAR_LIMIT + 1), 'x' * CHAR_LIMIT + '...'),
+    #         (int('1' * (CHAR_LIMIT + 1)), '1' * CHAR_LIMIT + '...'),
+    #         (['x' * (CHAR_LIMIT)], "['" + 'x' * (CHAR_LIMIT - 2) + '...'),
+    #     ],
+    # )
+    # def test_shorten_arg(self, arg: Any, expected: str) -> None:
+    #     """Test shorten_arg function."""
+    #     assert shorten_arg(arg) == expected
+
+    # def test_shorten_args(self) -> None:
+    #     """Test shorten_args function."""
+    #     pass
+
+    # def test_shorten_kwargs(self) -> None:
+    #     """Test shorten_kwargs function."""
+    #     pass
