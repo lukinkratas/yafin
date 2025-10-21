@@ -1,7 +1,7 @@
 import logging
 from datetime import datetime
 from types import TracebackType
-from typing import Any, Type
+from typing import Any, Type, Self
 
 from curl_cffi.requests import AsyncSession, Response
 from curl_cffi.requests.exceptions import HTTPError
@@ -55,7 +55,7 @@ class AsyncClient(object):
 
         self._crumb = None
 
-    async def __aenter__(self) -> 'AsyncClient':
+    async def __aenter__(self) -> Self:
         """When entering context manager, create the session."""
         self._get_session()
         return self

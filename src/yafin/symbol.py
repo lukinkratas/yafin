@@ -1,6 +1,6 @@
 import logging
 from types import TracebackType
-from typing import Any, Type
+from typing import Any, Type, Self
 
 from typeguard import typechecked
 
@@ -66,7 +66,7 @@ class AsyncSymbol(object):
             await _ClientManager.release_client()
             self._open_client = None
 
-    async def __aenter__(self) -> 'AsyncSymbol':
+    async def __aenter__(self) -> Self:
         """When entering context manager, create the client."""
         self._get_client()
         return self
