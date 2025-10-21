@@ -35,6 +35,12 @@ test = [
     "pytest-asyncio>=1.1.0",
     "pytest-cov>=4.0.0",
 ]
+doc = [
+    "mkdocs>=1.6.1",
+    "mkdocs-material>=9.6.22",
+    "mkdocstrings>=0.30.1",
+    "mkdocstrings-python>=1.18.2",
+]
 
 [project.urls]
 Homepage = "https://github.com/lukinkratas/yahoo_finance_client"

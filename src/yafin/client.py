@@ -106,6 +106,24 @@ class AsyncClient(object):
     ) -> ResponseJson:
         """Get chart data for the ticker.
 
+        Example:
+            
+            import asyncio
+
+            from yafin import AsyncClient
+
+            async def main() -> None:
+
+                client = AsyncClient()
+                meta_1y_chart = await client.get_chart(ticker='META', period_range='1y', interval='1d')
+                await client.close()
+
+                async with AsyncClient() as client:
+                    aapl_5d_chart = await client.get_chart(ticker='AAPL', period_range='5d', interval='1h', events='div,split')
+
+            if __name__ == '__main__':
+                asyncio.run(main())
+
         Args:
             ticker: Ticker symbol.
             period_range: Range of the period.

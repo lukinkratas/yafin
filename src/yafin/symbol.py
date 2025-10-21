@@ -91,6 +91,24 @@ class AsyncSymbol(object):
     ) -> Result:
         """Get chart data for the ticker.
 
+        Example:
+
+            import asyncio
+
+            from yafin import AsyncSymbol
+
+            async def main() -> None:
+
+                aapl = AsyncSymbol('AAPL')
+                aapl_5d_chart = await aapl.get_chart(period_range='5d', interval='1h', include_div=True, include_split=False)
+                await aapl.close()
+
+                async with AsyncSymbol('META') as meta:
+                    meta_1y_chart = await meta.get_chart(period_range='1y', interval='1d')
+
+            if __name__ == '__main__':
+                asyncio.run(main())
+
         Args:
             period_range: Range of the period
             interval: Data interval
