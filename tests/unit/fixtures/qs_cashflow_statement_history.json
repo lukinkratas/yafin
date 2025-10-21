@@ -1,0 +1,62 @@
+{
+  "quoteSummary": {
+    "result": [
+      {
+        "cashflowStatementHistory": {
+          "cashflowStatements": [
+            {
+              "maxAge": 1,
+              "endDate": {
+                "raw": 1735603200,
+                "fmt": "2024-12-31"
+              },
+              "netIncome": {
+                "raw": 62360000000,
+                "fmt": "62.36B",
+                "longFmt": "62,360,000,000"
+              }
+            },
+            {
+              "maxAge": 1,
+              "endDate": {
+                "raw": 1703980800,
+                "fmt": "2023-12-31"
+              },
+              "netIncome": {
+                "raw": 39098000000,
+                "fmt": "39.1B",
+                "longFmt": "39,098,000,000"
+              }
+            },
+            {
+              "maxAge": 1,
+              "endDate": {
+                "raw": 1672444800,
+                "fmt": "2022-12-31"
+              },
+              "netIncome": {
+                "raw": 23200000000,
+                "fmt": "23.2B",
+                "longFmt": "23,200,000,000"
+              }
+            },
+            {
+              "maxAge": 1,
+              "endDate": {
+                "raw": 1640908800,
+                "fmt": "2021-12-31"
+              },
+              "netIncome": {
+                "raw": 39370000000,
+                "fmt": "39.37B",
+                "longFmt": "39,370,000,000"
+              }
+            }
+          ],
+          "maxAge": 86400
+        }
+      }
+    ],
+    "error": null
+  }
+}

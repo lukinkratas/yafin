@@ -1,0 +1,1272 @@
+{
+	"info": {
+		"_postman_id": "a03a227a-be65-4bb1-9c98-503106b2c474",
+		"name": "Yahoo Finance",
+		"description": "desc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47894645",
+		"_collection_link": "https://lukin-kratas-s-team.postman.co/workspace/Team-Workspace~e65703fb-893e-45f5-8259-68ab8b0697f4/collection/47894645-a03a227a-be65-4bb1-9c98-503106b2c474?action=share&source=collection_link&creator=47894645"
+	},
+	"item": [
+		{
+			"name": "ws fundamentals timeseries",
+			"item": [
+				{
+					"name": "income stmt",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Error is null\", () => {",
+									"    pm.expect(response.timeseries.error).to.eql(null);",
+									"});",
+									"",
+									"pm.test(\"Result is not null\", () => {",
+									"    pm.expect(response.timeseries.result).to.not.eql(null);",
+									"});",
+									"",
+									"income_stmt_types = pm.environment.get('INCOME_STMT_ANNUAL_TYPES');",
+									"",
+									"income_stmt_types.split(\",\").forEach(",
+									"    (t) => {",
+									"        pm.test(`${t} is not null`, () => {",
+									"            pm.expect(response.timeseries.result[t]).to.not.eql(null);",
+									"        });",
+									"    } ",
+									");"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/ws/fundamentals-timeseries/v1/finance/timeseries/META?symbol=META&type={{INCOME_STMT_ANNUAL_TYPES}}&period1=1483138800&period2=1755475200&formatted=false&region=US&lang=en-US&corsDomain=finance.yahoo.com",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"ws",
+								"fundamentals-timeseries",
+								"v1",
+								"finance",
+								"timeseries",
+								"META"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "META"
+								},
+								{
+									"key": "type",
+									"value": "{{INCOME_STMT_ANNUAL_TYPES}}"
+								},
+								{
+									"key": "period1",
+									"value": "1483138800"
+								},
+								{
+									"key": "period2",
+									"value": "1755475200"
+								},
+								{
+									"key": "formatted",
+									"value": "false"
+								},
+								{
+									"key": "merge",
+									"value": "false",
+									"disabled": true
+								},
+								{
+									"key": "padTimeSeries",
+									"value": "false",
+									"disabled": true
+								},
+								{
+									"key": "region",
+									"value": "US"
+								},
+								{
+									"key": "lang",
+									"value": "en-US"
+								},
+								{
+									"key": "corsDomain",
+									"value": "finance.yahoo.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "balance sheet",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Error is null\", () => {",
+									"    pm.expect(response.timeseries.error).to.eql(null);",
+									"});",
+									"",
+									"pm.test(\"Result is not null\", () => {",
+									"    pm.expect(response.timeseries.result).to.not.eql(null);",
+									"});",
+									"",
+									"balance_sheet_types = pm.environment.get('BALANCE_SHEET_ANNUAL_TYPES');",
+									"",
+									"balance_sheet_types.split(\",\").forEach(",
+									"    (t) => {",
+									"        pm.test(`${t} is not null`, () => {",
+									"            pm.expect(response.timeseries.result[t]).to.not.eql(null);",
+									"        });",
+									"    } ",
+									");"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/ws/fundamentals-timeseries/v1/finance/timeseries/META?symbol=META&type={{BALANCE_SHEET_ANNUAL_TYPES}}&period1=1483138800&period2=1755475200&formatted=false&region=US&lang=en-US&corsDomain=finance.yahoo.com",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"ws",
+								"fundamentals-timeseries",
+								"v1",
+								"finance",
+								"timeseries",
+								"META"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "META"
+								},
+								{
+									"key": "type",
+									"value": "{{BALANCE_SHEET_ANNUAL_TYPES}}"
+								},
+								{
+									"key": "period1",
+									"value": "1483138800"
+								},
+								{
+									"key": "period2",
+									"value": "1755475200"
+								},
+								{
+									"key": "formatted",
+									"value": "false"
+								},
+								{
+									"key": "merge",
+									"value": "false",
+									"disabled": true
+								},
+								{
+									"key": "padTimeSeries",
+									"value": "false",
+									"disabled": true
+								},
+								{
+									"key": "region",
+									"value": "US"
+								},
+								{
+									"key": "lang",
+									"value": "en-US"
+								},
+								{
+									"key": "corsDomain",
+									"value": "finance.yahoo.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cash flow",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Error is null\", () => {",
+									"    pm.expect(response.timeseries.error).to.eql(null);",
+									"});",
+									"",
+									"pm.test(\"Result is not null\", () => {",
+									"    pm.expect(response.timeseries.result).to.not.eql(null);",
+									"});",
+									"",
+									"cash_flow_types = pm.environment.get('CASH_FLOW_ANNUAL_TYPES');",
+									"",
+									"cash_flow_types.split(\",\").forEach(",
+									"    (t) => {",
+									"        pm.test(`${t} is not null`, () => {",
+									"            pm.expect(response.timeseries.result[t]).to.not.eql(null);",
+									"        });",
+									"    } ",
+									");"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/ws/fundamentals-timeseries/v1/finance/timeseries/META?type={{CASH_FLOW_ANNUAL_TYPES}}&period1=1483138800&period2=1755475200&formatted=false&region=US&lang=en-US&corsDomain=finance.yahoo.com",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"ws",
+								"fundamentals-timeseries",
+								"v1",
+								"finance",
+								"timeseries",
+								"META"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "META",
+									"disabled": true
+								},
+								{
+									"key": "type",
+									"value": "{{CASH_FLOW_ANNUAL_TYPES}}"
+								},
+								{
+									"key": "period1",
+									"value": "1483138800"
+								},
+								{
+									"key": "period2",
+									"value": "1755475200"
+								},
+								{
+									"key": "formatted",
+									"value": "false"
+								},
+								{
+									"key": "merge",
+									"value": "false",
+									"disabled": true
+								},
+								{
+									"key": "padTimeSeries",
+									"value": "false",
+									"disabled": true
+								},
+								{
+									"key": "region",
+									"value": "US"
+								},
+								{
+									"key": "lang",
+									"value": "en-US"
+								},
+								{
+									"key": "corsDomain",
+									"value": "finance.yahoo.com"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "crumb",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.environment.set(\"crumb\", pm.response.text());"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BASE_URL}}/v1/test/getcrumb",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"v1",
+						"test",
+						"getcrumb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "finance chart",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"const response = pm.response.json();",
+							"",
+							"pm.test(\"Error is null\", () => {",
+							"    pm.expect(response.chart.error).to.eql(null);",
+							"});",
+							"",
+							"pm.test(\"Result is not null\", () => {",
+							"    pm.expect(response.chart.result).to.not.eql(null);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/v8/finance/chart/META?range=1mo&interval=1d&events=div,split&formatted=false&region=US&lang=en-US&corsDomain=finance.yahoo.com",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"v8",
+						"finance",
+						"chart",
+						"META"
+					],
+					"query": [
+						{
+							"key": "symbol",
+							"value": "META",
+							"disabled": true
+						},
+						{
+							"key": "range",
+							"value": "1mo"
+						},
+						{
+							"key": "period1",
+							"value": "-883612800",
+							"disabled": true
+						},
+						{
+							"key": "period2",
+							"value": "1756484725",
+							"disabled": true
+						},
+						{
+							"key": "interval",
+							"value": "1d"
+						},
+						{
+							"key": "events",
+							"value": "div,split"
+						},
+						{
+							"key": "useYfid",
+							"value": "false",
+							"disabled": true
+						},
+						{
+							"key": "includePrePost",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": ".tsrc",
+							"value": "finance",
+							"disabled": true
+						},
+						{
+							"key": "formatted",
+							"value": "false"
+						},
+						{
+							"key": "region",
+							"value": "US"
+						},
+						{
+							"key": "lang",
+							"value": "en-US"
+						},
+						{
+							"key": "corsDomain",
+							"value": "finance.yahoo.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "finance quote",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"const response = pm.response.json();",
+							"",
+							"pm.test(\"Error is null\", () => {",
+							"    pm.expect(response.quoteResponse.error).to.eql(null);",
+							"});",
+							"",
+							"pm.test(\"Result is not null\", () => {",
+							"    pm.expect(response.quoteResponse.result).to.not.eql(null);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/v7/finance/quote?symbols=META,AAPL&crumb={{crumb}}&formatted=false&region=US&lang=en-US&corsDomain=finance.yahoo.com",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"v7",
+						"finance",
+						"quote"
+					],
+					"query": [
+						{
+							"key": "symbols",
+							"value": "META,AAPL"
+						},
+						{
+							"key": "crumb",
+							"value": "{{crumb}}"
+						},
+						{
+							"key": "includePrePost",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "formatted",
+							"value": "false"
+						},
+						{
+							"key": "region",
+							"value": "US"
+						},
+						{
+							"key": "lang",
+							"value": "en-US"
+						},
+						{
+							"key": "corsDomain",
+							"value": "finance.yahoo.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "finance spark",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"const response = pm.response.json();",
+							"",
+							"pm.test(\"Error is null\", () => {",
+							"    pm.expect(response.spark.error).to.eql(null);",
+							"});",
+							"",
+							"pm.test(\"Result is not null\", () => {",
+							"    pm.expect(response.spark.result).to.not.eql(null);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/v7/finance/spark?symbols=META,AAPL&range=1mo&interval=1d&formatted=false&region=US&lang=en-US&corsDomain=finance.yahoo.com",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"v7",
+						"finance",
+						"spark"
+					],
+					"query": [
+						{
+							"key": "symbols",
+							"value": "META,AAPL"
+						},
+						{
+							"key": "range",
+							"value": "1mo"
+						},
+						{
+							"key": "interval",
+							"value": "1d"
+						},
+						{
+							"key": "includePrePost",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "includeTimestamps",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "formatted",
+							"value": "false"
+						},
+						{
+							"key": "region",
+							"value": "US"
+						},
+						{
+							"key": "lang",
+							"value": "en-US"
+						},
+						{
+							"key": "corsDomain",
+							"value": "finance.yahoo.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "finance quote summary",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"const response = pm.response.json();",
+							"",
+							"pm.test(\"Error is null\", () => {",
+							"    pm.expect(response.quoteSummary.error).to.eql(null);",
+							"});",
+							"",
+							"pm.test(\"Result is not null\", () => {",
+							"    pm.expect(response.quoteSummary.result).to.not.eql(null);",
+							"});",
+							"",
+							"modules = pm.environment.get('ALL_MODULES');",
+							"",
+							"modules.split(\",\").forEach(",
+							"    (m) => {",
+							"        pm.test(`${m} is not null`, () => {",
+							"            pm.expect(response.quoteSummary.result[m]).to.not.eql(null);",
+							"        });",
+							"    } ",
+							");"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/v10/finance/quoteSummary/META?crumb={{crumb}}&modules={{ALL_MODULES}}&formatted=false&region=US&lang=en-US&corsDomain=finance.yahoo.com",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"v10",
+						"finance",
+						"quoteSummary",
+						"META"
+					],
+					"query": [
+						{
+							"key": "crumb",
+							"value": "{{crumb}}"
+						},
+						{
+							"key": "modules",
+							"value": "{{ALL_MODULES}}"
+						},
+						{
+							"key": "formatted",
+							"value": "false"
+						},
+						{
+							"key": "region",
+							"value": "US"
+						},
+						{
+							"key": "lang",
+							"value": "en-US"
+						},
+						{
+							"key": "corsDomain",
+							"value": "finance.yahoo.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "finance quote market summary",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"const response = pm.response.json();",
+							"",
+							"pm.test(\"Error is null\", () => {",
+							"    pm.expect(response.marketSummaryResponse.error).to.eql(null);",
+							"});",
+							"",
+							"pm.test(\"Result is not null\", () => {",
+							"    pm.expect(response.marketSummaryResponse.result).to.not.eql(null);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/v6/finance/quote/marketSummary?formatted=false&region=US&lang=en-US&corsDomain=finance.yahoo.com",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"v6",
+						"finance",
+						"quote",
+						"marketSummary"
+					],
+					"query": [
+						{
+							"key": "formatted",
+							"value": "false"
+						},
+						{
+							"key": "region",
+							"value": "US"
+						},
+						{
+							"key": "lang",
+							"value": "en-US"
+						},
+						{
+							"key": "corsDomain",
+							"value": "finance.yahoo.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "finance trending",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"const response = pm.response.json();",
+							"",
+							"pm.test(\"Error is null\", () => {",
+							"    pm.expect(response.finance.error).to.eql(null);",
+							"});",
+							"",
+							"pm.test(\"Result is not null\", () => {",
+							"    pm.expect(response.finance.result).to.not.eql(null);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/v1/finance/trending/US?formatted=false&region=US&lang=en-US&corsDomain=finance.yahoo.com",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"v1",
+						"finance",
+						"trending",
+						"US"
+					],
+					"query": [
+						{
+							"key": "formatted",
+							"value": "false"
+						},
+						{
+							"key": "region",
+							"value": "US"
+						},
+						{
+							"key": "lang",
+							"value": "en-US"
+						},
+						{
+							"key": "corsDomain",
+							"value": "finance.yahoo.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "finance recommendations by symbol",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"const response = pm.response.json();",
+							"",
+							"pm.test(\"Error is null\", () => {",
+							"    pm.expect(response.finance.error).to.eql(null);",
+							"});",
+							"",
+							"pm.test(\"Result is not null\", () => {",
+							"    pm.expect(response.finance.result).to.not.eql(null);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/v6/finance/recommendationsbysymbol/META?formatted=false&region=US&lang=en-US&corsDomain=finance.yahoo.com",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"v6",
+						"finance",
+						"recommendationsbysymbol",
+						"META"
+					],
+					"query": [
+						{
+							"key": "formatted",
+							"value": "false"
+						},
+						{
+							"key": "region",
+							"value": "US"
+						},
+						{
+							"key": "lang",
+							"value": "en-US"
+						},
+						{
+							"key": "corsDomain",
+							"value": "finance.yahoo.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "finance options",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"const response = pm.response.json();",
+							"",
+							"pm.test(\"Error is null\", () => {",
+							"    pm.expect(response.optionChain.error).to.eql(null);",
+							"});",
+							"",
+							"pm.test(\"Result is not optionChain\", () => {",
+							"    pm.expect(response.optionChain.result).to.not.eql(null);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/v7/finance/options/META?crumb={{crumb}}&formatted=false&region=US&lang=en-US&corsDomain=finance.yahoo.com",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"v7",
+						"finance",
+						"options",
+						"META"
+					],
+					"query": [
+						{
+							"key": "crumb",
+							"value": "{{crumb}}"
+						},
+						{
+							"key": "date",
+							"value": "1756497020",
+							"disabled": true
+						},
+						{
+							"key": "formatted",
+							"value": "false"
+						},
+						{
+							"key": "region",
+							"value": "US"
+						},
+						{
+							"key": "lang",
+							"value": "en-US"
+						},
+						{
+							"key": "corsDomain",
+							"value": "finance.yahoo.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "finance currencies",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"const response = pm.response.json();",
+							"",
+							"pm.test(\"Error is null\", () => {",
+							"    pm.expect(response.currencies.error).to.eql(null);",
+							"});",
+							"",
+							"pm.test(\"Result is not optionChain\", () => {",
+							"    pm.expect(response.currencies.result).to.not.eql(null);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/v1/finance/currencies?formatted=false&region=US&lang=en-US&corsDomain=finance.yahoo.com",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"v1",
+						"finance",
+						"currencies"
+					],
+					"query": [
+						{
+							"key": "formatted",
+							"value": "false"
+						},
+						{
+							"key": "region",
+							"value": "US"
+						},
+						{
+							"key": "lang",
+							"value": "en-US"
+						},
+						{
+							"key": "corsDomain",
+							"value": "finance.yahoo.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "finance insights",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"const response = pm.response.json();",
+							"",
+							"pm.test(\"Error is null\", () => {",
+							"    pm.expect(response.finance.error).to.eql(null);",
+							"});",
+							"",
+							"pm.test(\"Result is not null\", () => {",
+							"    pm.expect(response.finance.result).to.not.eql(null);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/ws/insights/v2/finance/insights?symbol=META&formatted=false&region=US&lang=en-US&corsDomain=finance.yahoo.com",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"ws",
+						"insights",
+						"v2",
+						"finance",
+						"insights"
+					],
+					"query": [
+						{
+							"key": "symbol",
+							"value": "META"
+						},
+						{
+							"key": "formatted",
+							"value": "false"
+						},
+						{
+							"key": "region",
+							"value": "US"
+						},
+						{
+							"key": "lang",
+							"value": "en-US"
+						},
+						{
+							"key": "corsDomain",
+							"value": "finance.yahoo.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "finance search (incl. news)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"const response = pm.response.json();",
+							"",
+							"pm.test(\"News is not null\", () => {",
+							"    pm.expect(response.news).to.not.eql(null);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/v1/finance/search?q=META&formatted=false&region=US&lang=en-US&corsDomain=finance.yahoo.com",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"v1",
+						"finance",
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "META"
+						},
+						{
+							"key": "formatted",
+							"value": "false"
+						},
+						{
+							"key": "region",
+							"value": "US"
+						},
+						{
+							"key": "lang",
+							"value": "en-US"
+						},
+						{
+							"key": "corsDomain",
+							"value": "finance.yahoo.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "news",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"const response = pm.response.json();",
+							"",
+							"pm.test(\"Status is OK\", () => {",
+							"    pm.expect(response.status).to.eql(\"OK\");",
+							"});",
+							"",
+							"pm.test(\"Data is not null\", () => {",
+							"    pm.expect(response.data).to.not.eql(null);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"serviceConfig\": {\n        \"snippetCount\": 10,\n        \"s\": [\"AAPL\"]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://finance.yahoo.com/xhr/ncp?queryRef=latestNews&serviceKey=ncp_fin&formatted=false&region=US&lang=en-US&corsDomain=finance.yahoo.com",
+					"protocol": "https",
+					"host": [
+						"finance",
+						"yahoo",
+						"com"
+					],
+					"path": [
+						"xhr",
+						"ncp"
+					],
+					"query": [
+						{
+							"key": "queryRef",
+							"value": "latestNews"
+						},
+						{
+							"key": "serviceKey",
+							"value": "ncp_fin"
+						},
+						{
+							"key": "formatted",
+							"value": "false"
+						},
+						{
+							"key": "region",
+							"value": "US"
+						},
+						{
+							"key": "lang",
+							"value": "en-US"
+						},
+						{
+							"key": "corsDomain",
+							"value": "finance.yahoo.com"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,101 @@
+## TODO
+
+### Name
+- yafin / yahfin / yahofin
+- _~~ystonkz / yastonkz / yahstonks / yostonks~~_ - (not just stocks, also crypto and indexes)
+- _ytickers / yatickers / yotickers_ / ~~yahoo_tickers~~ - from ytickers import Ticker ?
+- _ysymbols / yasymbols / yosymbols_ / ~~yahoo_symbols~~ - from ysymbols import Symbol ?
+
+- [ ] automatic docs from docstrings?
+- [ ] publish to test
+- [ ] client into symbol dependency injection ?
+- [ ] session into client dependency injection ?
+- [ ] session retry logic ?
+- [ ] issue calling client.session out of context window / after it was closed craetes new session?
+- [ ] issue calling symbol.client out of context window / after it was closed craetes new client?
+- [ ] get chart not now(), but round to midnight - check yfinance implementation
+- [ ] mcp
+- get_finance_chart implement period1 and period2 ?
+- remove get_cashflow_statement_history, get_balance_sheet_history ?
+- remove quote summary modules and use only qs_all_modules?
+- (Sync) client ?
+- ~~[x] client._get_async_request -> NoReturn~~
+- ~~[x] redacting crumb~~
+- ~~[x] add codex gh action~~
+- ~~[x] calling close() on one symbol closes the client for all - reference_count in _ClientSingletonFactory -> _refcount~~
+- ~~[x] add typeguard.typechecked~~
+- ~~[x] util funcs to make args, kwargs shorter~~
+- ~~[x] util funcs to make result shorter~~
+- ~~[x] typecheck also private methods~~
+- ~~[x] periods as int or float~~
+- ~~[x] session timeout ? - curl_cffi.requests.AsyncSession(timeout)~~
+- ~~[x] custom types~~
+- ~~[x] ALL_MODULES and ALL_TYPES sets - then information of extra types / modules can be easily provided.~~
+- ~~[x] ALL_MODULES_CSV = ','.join(sorted(ALL_MODULES))~~
+- ~~[x]xrename Stonk -> Symbol ? (bcs 1. not onyl stocks, but also crypto, funds, indexes, etc., 2. Yahoo Finance uses symbol)~~
+- ~~[x] custom exceptions?~~
+- ~~[x] claude code review: client.session not closed properly -> resource leakage https://curl-cffi.readthedocs.io/en/v0.5.8.1/api/curl_cffi.requests/~~
+- ~~[x] claude code review: stonk.client management~~
+  - ~~[x] stonk.client singleton~~
+- ~~[x] claude code review: stonk._crumb caching~~
+- ~~[x] new unit tests~~
+- ~~[x] update unit tests~~
+- ~~[x] update readme~~
+- ~~[x] test utils process_chart_like_yfinance~~
+- ~~[x] perf test get chart - test even dict version - not anymore for yfinance~~
+- ~~[x] measure performance against yfinance - perf_test.py, tried pytest-benchmark - does not work with asyncio coroutines~~
+- ~~[x] test yfinance with asyncsession~~
+- ~~[x] AI code review gh action~~
+- ~~[x] common assertion functions for stonk.get_graph, client.get_graph (in unit and in integration)~~
+- ~~[x] mock_response function for tests?~~
+- ~~[x] build~~
+- ~~[x] add license~~
+- ~~[x] code QL gh action - > not it's in repo settings~~
+- ~~[x] add logging conf~~
+- ~~[x] args wrapper decorator~~
+- ~~[x] main commits cleanup~~
+- ~~[x] document~~
+- ~~[x] add logging~~
+- ~~[x] cicd~~
+- ~~[x] create postman collection from findings - yfinance urls + openapi spec~~
+- ~~[x] create tests within the postman collection~~
+- ~~[x] compare to the bruno collection~~
+- ~~[x] AsyncClient - get crumb only once~~
+    - crumb set as attribute in the constructor: TypeError: __init__() should return None, not 'coroutine'
+    - crumb cached_property: RuntimeError: cannot reuse already awaited coroutine
+    - fetch crumb via synchronous session - not possible session (cookies) and crumb have to 1:1 (otherwise HTTP401)
+- ~~[x] modules as enum~~ - Module.QUOTE_TYPE.value usage is meh
+- ~~[x] client as a separate module~~
+- ~~[x] fetch multiple tickers at once?~~ - used wheerever could
+- ~~[x] rest of found postman endpoints?~~
+    - ~~[x] finance quote~~
+    - ~~[x] finance quote summary market~~
+    - ~~[x] finance trending~~
+    - ~~[x] finance recommendations~~
+    - ~~[x] finance currencies~~
+    - ~~[x] finance insights~~
+- ~~[x] quoteSummary single modules~~
+- ~~[x] modules and types as str, instead of list~~
+- ~~[x] lint, format~~
+- ~~[x] remove finance from method names~~
+- ~~[x] process response method?~~
+- ~~[x] mypy type checking~~
+- ~~[x] makefile~~
+- ~~[x] unit tests~~
+  - ~~[x] test client w/o mocking~~
+  - ~~[x] add tests for stonk~~
+  - ~~[x] add mocking ?~~
+  - ~~[x] script for fetching mocks~~
+  - ~~[x] add tests for unit methods~~
+  - ~~[x] cover missing lines~~
+  - ~~[x] add invalid args tests~~
+  - ~~[x] add keys assertion~~
+  - ~~[x] test utils?~~
+  - ~~[x] utils docstrings args and returns~~
+- ~~[x] add integration tests for client~~
+  - ~~[x] add keys assertion~~
+- ~~[x] add integration tests for stonk~~
+- ~~[x] run and solve pre-commits~~
+- ~~[x] update main.py~~
+- ~~[x] client responses in raw format and not returning the result field? -> results parsing on stonk~~
+- ~~[x] const modules long line~~

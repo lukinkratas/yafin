@@ -1,0 +1,274 @@
+{
+  "quoteSummary": {
+    "result": [
+      {
+        "institutionOwnership": {
+          "maxAge": 1,
+          "ownershipList": [
+            {
+              "maxAge": 1,
+              "reportDate": {
+                "raw": 1751241600,
+                "fmt": "2025-06-30"
+              },
+              "organization": "Vanguard Group Inc",
+              "pctHeld": {
+                "raw": 0.0888,
+                "fmt": "8.88%"
+              },
+              "position": {
+                "raw": 192591101,
+                "fmt": "192.59M",
+                "longFmt": "192,591,101"
+              },
+              "value": {
+                "raw": 138071444941,
+                "fmt": "138.07B",
+                "longFmt": "138,071,444,941"
+              },
+              "pctChange": {
+                "raw": 0.008,
+                "fmt": "0.80%"
+              }
+            },
+            {
+              "maxAge": 1,
+              "reportDate": {
+                "raw": 1751241600,
+                "fmt": "2025-06-30"
+              },
+              "organization": "Blackrock Inc.",
+              "pctHeld": {
+                "raw": 0.0767,
+                "fmt": "7.67%"
+              },
+              "position": {
+                "raw": 166335987,
+                "fmt": "166.34M",
+                "longFmt": "166,335,987"
+              },
+              "value": {
+                "raw": 119248760465,
+                "fmt": "119.25B",
+                "longFmt": "119,248,760,465"
+              },
+              "pctChange": {
+                "raw": -0.0002,
+                "fmt": "-0.02%"
+              }
+            },
+            {
+              "maxAge": 1,
+              "reportDate": {
+                "raw": 1751241600,
+                "fmt": "2025-06-30"
+              },
+              "organization": "FMR, LLC",
+              "pctHeld": {
+                "raw": 0.0627,
+                "fmt": "6.27%"
+              },
+              "position": {
+                "raw": 135910094,
+                "fmt": "135.91M",
+                "longFmt": "135,910,094"
+              },
+              "value": {
+                "raw": 97435982053,
+                "fmt": "97.44B",
+                "longFmt": "97,435,982,053"
+              },
+              "pctChange": {
+                "raw": 0.0054,
+                "fmt": "0.54%"
+              }
+            },
+            {
+              "maxAge": 1,
+              "reportDate": {
+                "raw": 1751241600,
+                "fmt": "2025-06-30"
+              },
+              "organization": "State Street Corporation",
+              "pctHeld": {
+                "raw": 0.0401,
+                "fmt": "4.01%"
+              },
+              "position": {
+                "raw": 86925674,
+                "fmt": "86.93M",
+                "longFmt": "86,925,674"
+              },
+              "value": {
+                "raw": 62318317665,
+                "fmt": "62.32B",
+                "longFmt": "62,318,317,665"
+              },
+              "pctChange": {
+                "raw": 0.0194,
+                "fmt": "1.94%"
+              }
+            },
+            {
+              "maxAge": 1,
+              "reportDate": {
+                "raw": 1751241600,
+                "fmt": "2025-06-30"
+              },
+              "organization": "JPMORGAN CHASE & CO",
+              "pctHeld": {
+                "raw": 0.0252,
+                "fmt": "2.52%"
+              },
+              "position": {
+                "raw": 54721870,
+                "fmt": "54.72M",
+                "longFmt": "54,721,870"
+              },
+              "value": {
+                "raw": 39230928228,
+                "fmt": "39.23B",
+                "longFmt": "39,230,928,228"
+              },
+              "pctChange": {
+                "raw": -0.059699997,
+                "fmt": "-5.97%"
+              }
+            },
+            {
+              "maxAge": 1,
+              "reportDate": {
+                "raw": 1751241600,
+                "fmt": "2025-06-30"
+              },
+              "organization": "Geode Capital Management, LLC",
+              "pctHeld": {
+                "raw": 0.0238,
+                "fmt": "2.38%"
+              },
+              "position": {
+                "raw": 51575209,
+                "fmt": "51.58M",
+                "longFmt": "51,575,209"
+              },
+              "value": {
+                "raw": 36975039826,
+                "fmt": "36.98B",
+                "longFmt": "36,975,039,826"
+              },
+              "pctChange": {
+                "raw": 0.0134000005,
+                "fmt": "1.34%"
+              }
+            },
+            {
+              "maxAge": 1,
+              "reportDate": {
+                "raw": 1751241600,
+                "fmt": "2025-06-30"
+              },
+              "organization": "Price (T.Rowe) Associates Inc",
+              "pctHeld": {
+                "raw": 0.0189,
+                "fmt": "1.89%"
+              },
+              "position": {
+                "raw": 40997942,
+                "fmt": "41M",
+                "longFmt": "40,997,942"
+              },
+              "value": {
+                "raw": 29392038688,
+                "fmt": "29.39B",
+                "longFmt": "29,392,038,688"
+              },
+              "pctChange": {
+                "raw": 0.0477,
+                "fmt": "4.77%"
+              }
+            },
+            {
+              "maxAge": 1,
+              "reportDate": {
+                "raw": 1751241600,
+                "fmt": "2025-06-30"
+              },
+              "organization": "Capital World Investors",
+              "pctHeld": {
+                "raw": 0.018,
+                "fmt": "1.80%"
+              },
+              "position": {
+                "raw": 38969510,
+                "fmt": "38.97M",
+                "longFmt": "38,969,510"
+              },
+              "value": {
+                "raw": 27937825405,
+                "fmt": "27.94B",
+                "longFmt": "27,937,825,405"
+              },
+              "pctChange": {
+                "raw": 0.0233,
+                "fmt": "2.33%"
+              }
+            },
+            {
+              "maxAge": 1,
+              "reportDate": {
+                "raw": 1751241600,
+                "fmt": "2025-06-30"
+              },
+              "organization": "Morgan Stanley",
+              "pctHeld": {
+                "raw": 0.0172,
+                "fmt": "1.72%"
+              },
+              "position": {
+                "raw": 37219287,
+                "fmt": "37.22M",
+                "longFmt": "37,219,287"
+              },
+              "value": {
+                "raw": 26683064321,
+                "fmt": "26.68B",
+                "longFmt": "26,683,064,321"
+              },
+              "pctChange": {
+                "raw": -0.0177,
+                "fmt": "-1.77%"
+              }
+            },
+            {
+              "maxAge": 1,
+              "reportDate": {
+                "raw": 1751241600,
+                "fmt": "2025-06-30"
+              },
+              "organization": "Capital Research Global Investors",
+              "pctHeld": {
+                "raw": 0.015,
+                "fmt": "1.50%"
+              },
+              "position": {
+                "raw": 32458849,
+                "fmt": "32.46M",
+                "longFmt": "32,458,849"
+              },
+              "value": {
+                "raw": 23270235017,
+                "fmt": "23.27B",
+                "longFmt": "23,270,235,017"
+              },
+              "pctChange": {
+                "raw": -0.0544,
+                "fmt": "-5.44%"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "error": null
+  }
+}

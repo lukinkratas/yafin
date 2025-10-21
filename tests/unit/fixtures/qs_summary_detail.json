@@ -1,0 +1,54 @@
+{
+  "quoteSummary": {
+    "result": [
+      {
+        "summaryDetail": {
+          "maxAge": 1,
+          "priceHint": 2,
+          "previousClose": 712.07,
+          "open": 707.075,
+          "dayLow": 706.12,
+          "dayHigh": 718.54,
+          "regularMarketPreviousClose": 712.07,
+          "regularMarketOpen": 707.075,
+          "regularMarketDayLow": 706.12,
+          "regularMarketDayHigh": 718.54,
+          "dividendRate": 2.1,
+          "dividendYield": 0.0029,
+          "exDividendDate": 1758499200,
+          "payoutRatio": 0.0744,
+          "beta": 1.203,
+          "trailingPE": 26.041225,
+          "forwardPE": 28.336561,
+          "volume": 12232441,
+          "regularMarketVolume": 12232441,
+          "averageVolume": 11951298,
+          "averageVolume10days": 12375770,
+          "averageDailyVolume10Day": 12375770,
+          "bid": 671.19,
+          "ask": 717.69,
+          "bidSize": 100,
+          "askSize": 100,
+          "marketCap": 1800991932416,
+          "fiftyTwoWeekLow": 479.8,
+          "fiftyTwoWeekHigh": 796.25,
+          "allTimeHigh": 796.25,
+          "allTimeLow": 17.55,
+          "priceToSalesTrailing12Months": 10.072436,
+          "fiftyDayAverage": 747.3666,
+          "twoHundredDayAverage": 672.7606,
+          "trailingAnnualDividendRate": 2.05,
+          "trailingAnnualDividendYield": 0.0028789304,
+          "currency": "USD",
+          "fromCurrency": null,
+          "toCurrency": null,
+          "lastMarket": null,
+          "coinMarketCapLink": null,
+          "algorithm": null,
+          "tradeable": false
+        }
+      }
+    ],
+    "error": null
+  }
+}

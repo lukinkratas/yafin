@@ -1,0 +1,74 @@
+{
+  "finance": {
+    "result": [
+      {
+        "count": 20,
+        "quotes": [
+          {
+            "symbol": "BTC-USD"
+          },
+          {
+            "symbol": "ETH-USD"
+          },
+          {
+            "symbol": "XRP-USD"
+          },
+          {
+            "symbol": "SOL-USD"
+          },
+          {
+            "symbol": "DOGE-USD"
+          },
+          {
+            "symbol": "BTC-CAD"
+          },
+          {
+            "symbol": "XRP-CAD"
+          },
+          {
+            "symbol": "ADA-USD"
+          },
+          {
+            "symbol": "BTC-EUR"
+          },
+          {
+            "symbol": "NFLX"
+          },
+          {
+            "symbol": "SMMT"
+          },
+          {
+            "symbol": "ETH-CAD"
+          },
+          {
+            "symbol": "OPAI.PVT"
+          },
+          {
+            "symbol": "HBAR-USD"
+          },
+          {
+            "symbol": "LINK-USD"
+          },
+          {
+            "symbol": "LTC-USD"
+          },
+          {
+            "symbol": "SOL-CAD"
+          },
+          {
+            "symbol": "TAO22974-USD"
+          },
+          {
+            "symbol": "BNB-USD"
+          },
+          {
+            "symbol": "BYND"
+          }
+        ],
+        "jobTimestamp": 1760897721917,
+        "startInterval": 202510191700
+      }
+    ],
+    "error": null
+  }
+}

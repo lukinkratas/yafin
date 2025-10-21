@@ -1,0 +1,45 @@
+{
+  "quoteSummary": {
+    "result": [
+      {
+        "price": {
+          "maxAge": 1,
+          "preMarketSource": "FREE_REALTIME",
+          "postMarketChangePercent": 0.00074979133,
+          "postMarketChange": 0.5375366,
+          "postMarketTime": 1760745599,
+          "postMarketPrice": 717.4525,
+          "postMarketSource": "DELAYED",
+          "regularMarketChangePercent": 0.0068040653,
+          "regularMarketChange": 4.8449707,
+          "regularMarketTime": 1760731201,
+          "priceHint": 2,
+          "regularMarketPrice": 716.915,
+          "regularMarketDayHigh": 718.54,
+          "regularMarketDayLow": 706.12,
+          "regularMarketVolume": 12232441,
+          "regularMarketPreviousClose": 712.07,
+          "regularMarketSource": "FREE_REALTIME",
+          "regularMarketOpen": 707.075,
+          "exchange": "NMS",
+          "exchangeName": "NasdaqGS",
+          "exchangeDataDelayedBy": 0,
+          "marketState": "CLOSED",
+          "quoteType": "EQUITY",
+          "symbol": "META",
+          "underlyingSymbol": null,
+          "shortName": "Meta Platforms, Inc.",
+          "longName": "Meta Platforms, Inc.",
+          "currency": "USD",
+          "quoteSourceName": "Delayed Quote",
+          "currencySymbol": "$",
+          "fromCurrency": null,
+          "toCurrency": null,
+          "lastMarket": null,
+          "marketCap": 1800991932416
+        }
+      }
+    ],
+    "error": null
+  }
+}

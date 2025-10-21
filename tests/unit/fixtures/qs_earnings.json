@@ -1,0 +1,113 @@
+{
+  "quoteSummary": {
+    "result": [
+      {
+        "earnings": {
+          "maxAge": 86400,
+          "earningsChart": {
+            "quarterly": [
+              {
+                "date": "3Q2024",
+                "actual": 6.03,
+                "estimate": 5.29249,
+                "fiscalQuarter": "3Q2024",
+                "calendarQuarter": "3Q2024",
+                "difference": "0.74",
+                "surprisePct": "13.94"
+              },
+              {
+                "date": "4Q2024",
+                "actual": 8.02,
+                "estimate": 6.75838,
+                "fiscalQuarter": "4Q2024",
+                "calendarQuarter": "4Q2024",
+                "difference": "1.26",
+                "surprisePct": "18.67"
+              },
+              {
+                "date": "1Q2025",
+                "actual": 6.43,
+                "estimate": 5.22294,
+                "fiscalQuarter": "1Q2025",
+                "calendarQuarter": "1Q2025",
+                "difference": "1.21",
+                "surprisePct": "23.11"
+              },
+              {
+                "date": "2Q2025",
+                "actual": 7.14,
+                "estimate": 5.90298,
+                "fiscalQuarter": "2Q2025",
+                "calendarQuarter": "2Q2025",
+                "difference": "1.24",
+                "surprisePct": "20.96"
+              }
+            ],
+            "currentQuarterEstimate": 6.71221,
+            "currentQuarterEstimateDate": "3Q",
+            "currentCalendarQuarter": "3Q2025",
+            "currentQuarterEstimateYear": 2025,
+            "currentFiscalQuarter": "3Q2025",
+            "earningsDate": [
+              1761768000
+            ],
+            "isEarningsDateEstimate": false
+          },
+          "financialsChart": {
+            "yearly": [
+              {
+                "date": 2021,
+                "revenue": 117929000000,
+                "earnings": 39370000000
+              },
+              {
+                "date": 2022,
+                "revenue": 116609000000,
+                "earnings": 23200000000
+              },
+              {
+                "date": 2023,
+                "revenue": 134902000000,
+                "earnings": 39098000000
+              },
+              {
+                "date": 2024,
+                "revenue": 164501000000,
+                "earnings": 62360000000
+              }
+            ],
+            "quarterly": [
+              {
+                "date": "3Q2024",
+                "fiscalQuarter": "3Q2024",
+                "revenue": 40589000000,
+                "earnings": 15688000000
+              },
+              {
+                "date": "4Q2024",
+                "fiscalQuarter": "4Q2024",
+                "revenue": 48385000000,
+                "earnings": 20838000000
+              },
+              {
+                "date": "1Q2025",
+                "fiscalQuarter": "1Q2025",
+                "revenue": 42314000000,
+                "earnings": 16644000000
+              },
+              {
+                "date": "2Q2025",
+                "fiscalQuarter": "2Q2025",
+                "revenue": 47516000000,
+                "earnings": 18337000000
+              }
+            ]
+          },
+          "financialCurrency": "USD",
+          "defaultMethodology": "gaap"
+        }
+      }
+    ],
+    "error": null
+  }
+}

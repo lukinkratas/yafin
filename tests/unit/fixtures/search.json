@@ -1,0 +1,427 @@
+{
+  "explains": [],
+  "count": 20,
+  "quotes": [
+    {
+      "exchange": "NMS",
+      "shortname": "Meta Platforms, Inc.",
+      "quoteType": "EQUITY",
+      "symbol": "META",
+      "index": "quotes",
+      "score": 10497500.0,
+      "typeDisp": "Equity",
+      "longname": "Meta Platforms, Inc.",
+      "exchDisp": "NASDAQ",
+      "sector": "Communication Services",
+      "sectorDisp": "Communication Services",
+      "industry": "Internet Content & Information",
+      "industryDisp": "Internet Content & Information",
+      "dispSecIndFlag": true,
+      "isYahooFinance": true,
+      "prevName": "Facebook, Inc.",
+      "nameChangeDate": "2025-10-16"
+    },
+    {
+      "exchange": "NYQ",
+      "shortname": "Wheaton Precious Metals Corp",
+      "quoteType": "EQUITY",
+      "symbol": "WPM",
+      "index": "quotes",
+      "score": 20187.0,
+      "typeDisp": "Equity",
+      "longname": "Wheaton Precious Metals Corp.",
+      "exchDisp": "NYSE",
+      "sector": "Basic Materials",
+      "sectorDisp": "Basic Materials",
+      "industry": "Gold",
+      "industryDisp": "Gold",
+      "isYahooFinance": true
+    },
+    {
+      "exchange": "NGM",
+      "shortname": "Critical Metals Corp.",
+      "quoteType": "EQUITY",
+      "symbol": "CRML",
+      "index": "quotes",
+      "score": 20146.0,
+      "typeDisp": "Equity",
+      "longname": "Critical Metals Corp.",
+      "exchDisp": "NASDAQ",
+      "sector": "Basic Materials",
+      "sectorDisp": "Basic Materials",
+      "industry": "Other Industrial Metals & Mining",
+      "industryDisp": "Other Industrial Metals & Mining",
+      "isYahooFinance": true
+    },
+    {
+      "exchange": "PCX",
+      "shortname": "VanEck Rare Earth and Strategic",
+      "quoteType": "ETF",
+      "symbol": "REMX",
+      "index": "quotes",
+      "score": 20061.0,
+      "typeDisp": "ETF",
+      "longname": "VanEck Rare Earth and Strategic Metals ETF",
+      "exchDisp": "NYSEArca",
+      "isYahooFinance": true
+    },
+    {
+      "exchange": "ASE",
+      "shortname": "Trilogy Metals Inc.",
+      "quoteType": "EQUITY",
+      "symbol": "TMQ",
+      "index": "quotes",
+      "score": 20059.0,
+      "typeDisp": "Equity",
+      "longname": "Trilogy Metals Inc.",
+      "exchDisp": "NYSE MKT",
+      "sector": "Basic Materials",
+      "sectorDisp": "Basic Materials",
+      "industry": "Other Industrial Metals & Mining",
+      "industryDisp": "Other Industrial Metals & Mining",
+      "isYahooFinance": true
+    },
+    {
+      "exchange": "NMS",
+      "shortname": "TMC the metals company Inc.",
+      "quoteType": "EQUITY",
+      "symbol": "TMC",
+      "index": "quotes",
+      "score": 20040.0,
+      "typeDisp": "Equity",
+      "longname": "TMC the metals company Inc.",
+      "exchDisp": "NASDAQ",
+      "sector": "Basic Materials",
+      "sectorDisp": "Basic Materials",
+      "industry": "Other Industrial Metals & Mining",
+      "industryDisp": "Other Industrial Metals & Mining",
+      "isYahooFinance": true,
+      "prevName": "Sustainable Opportunities Acquisition Corp.",
+      "nameChangeDate": "2025-10-16"
+    },
+    {
+      "exchange": "NYQ",
+      "shortname": "Commercial Metals Company",
+      "quoteType": "EQUITY",
+      "symbol": "CMC",
+      "index": "quotes",
+      "score": 20027.0,
+      "typeDisp": "Equity",
+      "longname": "Commercial Metals Company",
+      "exchDisp": "NYSE",
+      "sector": "Basic Materials",
+      "sectorDisp": "Basic Materials",
+      "industry": "Steel",
+      "industryDisp": "Steel",
+      "isYahooFinance": true
+    }
+  ],
+  "news": [
+    {
+      "uuid": "921ed40d-c386-30ab-89bd-88d718cc0fc2",
+      "title": "Meta expands AI ambitions with mega deals",
+      "publisher": "TheStreet",
+      "link": "https://finance.yahoo.com/m/921ed40d-c386-30ab-89bd-88d718cc0fc2/meta-expands-ai-ambitions.html",
+      "providerPublishTime": 1760894841,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/CBbBhtRBQJUr41_cOCKOMg--~B/aD02NzU7dz0xMjAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/thestreet_881/02422df5f0358784c3a32a9660f1e688",
+            "width": 1200,
+            "height": 675,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/uEpPE_spy_ArFWKmdcFLfg--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/thestreet_881/02422df5f0358784c3a32a9660f1e688",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "META",
+        "CRWV"
+      ]
+    },
+    {
+      "uuid": "5d2158b3-a28b-401f-b535-81e14391dc60",
+      "title": "Nvidia's Big Tech customers might also be its biggest competitive threat",
+      "publisher": "Yahoo Finance",
+      "link": "https://finance.yahoo.com/news/nvidias-big-tech-customers-might-also-be-its-biggest-competitive-threat-153032596.html",
+      "providerPublishTime": 1760888474,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/TKTLd9zVwJZ3Xyq6IH41Nw--~B/aD00MDAwO3c9NjAwMDthcHBpZD15dGFjaHlvbg--/https://s.yimg.com/os/creatr-uploaded-images/2024-11/9f3bf690-a764-11ef-9fff-e38cc4fb1028",
+            "width": 6000,
+            "height": 4000,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/XqIpnRZUuJU1ax73vvHZNQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://s.yimg.com/os/creatr-uploaded-images/2024-11/9f3bf690-a764-11ef-9fff-e38cc4fb1028",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "GOOG",
+        "NVDA",
+        "GOOGL",
+        "AMZN",
+        "MSFT",
+        "OPAI.PVT",
+        "CRWV",
+        "AVGO",
+        "META",
+        "ANTH.PVT",
+        "AMD"
+      ]
+    },
+    {
+      "uuid": "b7c9d5a7-62c0-3d8c-8efe-512d868840f3",
+      "title": "Analyst Explains Why Meta Platforms (META) Signed Data Center Deal With Coreweave",
+      "publisher": "Insider Monkey",
+      "link": "https://finance.yahoo.com/news/analyst-explains-why-meta-platforms-151722421.html",
+      "providerPublishTime": 1760887042,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/V1FADT7Yc1WohVKZslRZ2Q--~B/aD0xMjgwO3c9MTkyMDthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/insidermonkey.com/8d483b146d91b4119ec83ba6c9dff08c",
+            "width": 1920,
+            "height": 1280,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/IvAiTjv1x.taBnRkPoJ39A--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/insidermonkey.com/8d483b146d91b4119ec83ba6c9dff08c",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "META",
+        "CRWV"
+      ]
+    },
+    {
+      "uuid": "50d2599c-f341-31ed-8ddd-d7c8aec470e0",
+      "title": "The Biggest Meta Settlements Of All Time",
+      "publisher": "Money Digest",
+      "link": "https://finance.yahoo.com/m/50d2599c-f341-31ed-8ddd-d7c8aec470e0/the-biggest-meta-settlements.html",
+      "providerPublishTime": 1760875200,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/fy.b11crSpm3zox7VQpicQ--~B/aD04OTk7dz0xNjAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/money_digest_articles_438/b571d2f46c6a6dd14d8c9002c5c3cfbf",
+            "width": 1600,
+            "height": 899,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/1CA6_gszFZjjZMSdERc1xQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/money_digest_articles_438/b571d2f46c6a6dd14d8c9002c5c3cfbf",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "META",
+        "AMZN",
+        "GOOGL",
+        "AAPL",
+        "MSFT",
+        "NVDA"
+      ]
+    },
+    {
+      "uuid": "015c72f7-ac07-3d65-bbe0-ff66ba360f2c",
+      "title": "Is This AI Stock Still Worth Buying After Its Massive Rally?",
+      "publisher": "Motley Fool",
+      "link": "https://finance.yahoo.com/m/015c72f7-ac07-3d65-bbe0-ff66ba360f2c/is-this-ai-stock-still-worth.html",
+      "providerPublishTime": 1760869800,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/EfGVMCw9oaCGsT6CvIdR1w--~B/aD0xMzIwO3c9MTk4MDthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/motleyfool.com/587d85499d5f1c1935490b4aa5ebb877",
+            "width": 1980,
+            "height": 1320,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/WyWivRXegz62ThoapbasaQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/587d85499d5f1c1935490b4aa5ebb877",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "NVDA",
+        "MSFT",
+        "OPAI.PVT",
+        "META"
+      ]
+    },
+    {
+      "uuid": "5dddd528-a49a-33dd-8692-8618f1b497a3",
+      "title": "The Best Trillion-Dollar Stock to Buy Right Now, According to Wall Street",
+      "publisher": "Motley Fool",
+      "link": "https://finance.yahoo.com/m/5dddd528-a49a-33dd-8692-8618f1b497a3/the-best-trillion-dollar.html",
+      "providerPublishTime": 1760863800,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/FJ3CcfatOB2rkVaTIQi73Q--~B/aD04MDA7dz0xMjAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/4e2ce5a2627d23816a1c81ee38d58519",
+            "width": 1200,
+            "height": 800,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/ImFssIIxbzxWVKgiOH0wLg--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/4e2ce5a2627d23816a1c81ee38d58519",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "AAPL",
+        "META"
+      ]
+    },
+    {
+      "uuid": "804c2db2-c1c1-3d22-a788-1ab5035d1c98",
+      "title": "What Oracle (ORCL)'s Bold AI Cloud Strategy and 2030 Targets Mean for Shareholders",
+      "publisher": "Simply Wall St.",
+      "link": "https://finance.yahoo.com/news/oracle-orcl-bold-ai-cloud-050541813.html",
+      "providerPublishTime": 1760850341,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/h5Sl8vD9y_csxX46X7BeKw--~B/aD00MzI7dz0xMTk0O2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/simply_wall_st__316/10232bfeaa28288a2e6f936e1c871a73",
+            "width": 1194,
+            "height": 432,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/4keDJW8tktSPYmUwmq.qZA--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/simply_wall_st__316/10232bfeaa28288a2e6f936e1c871a73",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "ORCL",
+        "META",
+        "AMD",
+        "IBM"
+      ]
+    },
+    {
+      "uuid": "d9c74708-b9f7-34f3-88a8-5544d9c4a9b8",
+      "title": "Assessing Blue Owl Capital After $1.5B Portfolio Sale Amid Recent Price Swings",
+      "publisher": "Simply Wall St.",
+      "link": "https://finance.yahoo.com/news/assessing-blue-owl-capital-1-011452708.html",
+      "providerPublishTime": 1760836492,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/6aUxsyZINKOU9.9KrHnBOA--~B/aD00MzI7dz0xMTk0O2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/simply_wall_st__316/4470f143ba4f4c0e99553a639759c619",
+            "width": 1194,
+            "height": 432,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/NCbJoFLHdrW466yVWeN71A--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/simply_wall_st__316/4470f143ba4f4c0e99553a639759c619",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "OWL",
+        "META"
+      ]
+    }
+  ],
+  "nav": [
+    {
+      "navName": "Metal Fabrication",
+      "navUrl": "https://finance.yahoo.com/sectors/industrials/metal-fabrication"
+    }
+  ],
+  "lists": [
+    {
+      "index": "63e7f272-cd8d-4307-9002-eb98746a036a",
+      "id": "63e7f272-cd8d-4307-9002-eb98746a036a",
+      "title": "Precious Metal ETFs",
+      "canonicalName": "PRECIOUS_METAL_ETFS",
+      "score": 1.0,
+      "type": "PREDEFINED_SCREENER",
+      "total": 16,
+      "isPremium": false,
+      "iconUrl": "https://edgecast-img.yahoo.net/mysterio/api/b241f4b88dcc1439d37ed7dd74c3ee884516f53bc29bc8eece9b9fcf5c850fe8/finance/resizefill_w96_h96/https://s.yimg.com/cv/apiv2/fin/img/assets/predefined_screeners/diamond.png"
+    },
+    {
+      "index": "2b0f0d69-53ad-4a85-bcd6-8b6c1035bd33",
+      "id": "2b0f0d69-53ad-4a85-bcd6-8b6c1035bd33",
+      "title": "Precious Metal Mutual Funds",
+      "canonicalName": "PRECIOUS_METAL_MUTUAL_FUNDS",
+      "score": 1.0,
+      "type": "PREDEFINED_SCREENER",
+      "total": 53,
+      "isPremium": false,
+      "iconUrl": "https://edgecast-img.yahoo.net/mysterio/api/b241f4b88dcc1439d37ed7dd74c3ee884516f53bc29bc8eece9b9fcf5c850fe8/finance/resizefill_w96_h96/https://s.yimg.com/cv/apiv2/fin/img/assets/predefined_screeners/diamond.png"
+    },
+    {
+      "index": "ca67a1b3-572c-433c-b1a4-a0da3738fc14",
+      "id": "ca67a1b3-572c-433c-b1a4-a0da3738fc14",
+      "title": "Commodity Metal Mutual Funds",
+      "canonicalName": "COMMODITY_MUTUAL_FUNDS",
+      "score": 1.0,
+      "type": "PREDEFINED_SCREENER",
+      "total": 82,
+      "isPremium": false,
+      "iconUrl": "https://edgecast-img.yahoo.net/mysterio/api/683fd6c45c5d4d5905e2caf5cd56ab1ab1c4e7d168bee45d8047945dc48ab943/finance/resizefill_w96_h96/https://s.yimg.com/cv/apiv2/fin/img/assets/predefined_screeners/theme.png"
+    },
+    {
+      "index": "62e97ea1-46c8-4e6e-86f2-901a4ffa8b47",
+      "id": "62e97ea1-46c8-4e6e-86f2-901a4ffa8b47",
+      "title": "Other Precious Metals & Mining",
+      "canonicalName": "OTHER_PRECIOUS_METALS_MINING",
+      "score": 1.0,
+      "type": "PREDEFINED_SCREENER",
+      "total": 6,
+      "isPremium": false,
+      "iconUrl": "https://edgecast-img.yahoo.net/mysterio/api/b241f4b88dcc1439d37ed7dd74c3ee884516f53bc29bc8eece9b9fcf5c850fe8/finance/resizefill_w96_h96/https://s.yimg.com/cv/apiv2/fin/img/assets/predefined_screeners/diamond.png"
+    }
+  ],
+  "researchReports": [],
+  "screenerFieldResults": [],
+  "totalTime": 36,
+  "timeTakenForQuotes": 427,
+  "timeTakenForNews": 700,
+  "timeTakenForAlgowatchlist": 400,
+  "timeTakenForPredefinedScreener": 400,
+  "timeTakenForCrunchbase": 0,
+  "timeTakenForNav": 400,
+  "timeTakenForResearchReports": 0,
+  "timeTakenForScreenerField": 0,
+  "timeTakenForCulturalAssets": 0,
+  "timeTakenForSearchLists": 0
+}

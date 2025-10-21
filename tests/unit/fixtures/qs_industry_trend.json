@@ -1,0 +1,14 @@
+{
+  "quoteSummary": {
+    "result": [
+      {
+        "industryTrend": {
+          "maxAge": 1,
+          "symbol": null,
+          "estimates": []
+        }
+      }
+    ],
+    "error": null
+  }
+}

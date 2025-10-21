@@ -1,0 +1,24 @@
+{
+  "quoteSummary": {
+    "result": [
+      {
+        "quoteType": {
+          "exchange": "NMS",
+          "quoteType": "EQUITY",
+          "symbol": "META",
+          "underlyingSymbol": "META",
+          "shortName": "Meta Platforms, Inc.",
+          "longName": "Meta Platforms, Inc.",
+          "firstTradeDateEpochUtc": 1337347800,
+          "timeZoneFullName": "America/New_York",
+          "timeZoneShortName": "EDT",
+          "uuid": "e59f1c4f-b1aa-3d70-a8c3-eb59ff3e461b",
+          "messageBoardId": "finmb_20765463",
+          "gmtOffSetMilliseconds": -14400000,
+          "maxAge": 1
+        }
+      }
+    ],
+    "error": null
+  }
+}
