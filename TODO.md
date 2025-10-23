@@ -6,7 +6,6 @@
 - _ytickers / yatickers / yotickers_ / ~~yahoo_tickers~~ - from ytickers import Ticker ?
 - _ysymbols / yasymbols / yosymbols_ / ~~yahoo_symbols~~ - from ysymbols import Symbol ?
 
-- doc example with all possbile combination and default arfs e.g. for periods
 - ~~[x] automatic docs from docstrings?~~
 - ~~[x] add docstrings everywhere~~
 - [ ] gh pages
@@ -15,6 +14,7 @@
 - [ ] issue calling client.session out of context window / after it was closed craetes new session? -> get rid of session as a property ?
 - [] issue calling symbol.client out of context window / after it was closed craetes new client? -> get rid of client as a property ?
 - [ ] session retry logic ?
+- [ ] review default args, e.g.: perioed default args timestamp and not none + update doc
 - [ ] reverse eng the rest API
 - [ ] unit test symbol / client singleton factory
 - [ ] publish to test
