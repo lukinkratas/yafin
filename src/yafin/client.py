@@ -1,7 +1,7 @@
 import logging
 from datetime import datetime
 from types import TracebackType
-from typing import Any, Type, Self
+from typing import Any, Self, Type
 
 from curl_cffi.requests import AsyncSession, Response
 from curl_cffi.requests.exceptions import HTTPError
@@ -19,11 +19,14 @@ class AsyncClient(object):
     """Client for Yahoo Finance API.
 
     Warning: HTTP resources closing
-        Uses http resources, so do not forget to close them after use to avoid resource leakage or use context manager.
-    
+        Uses http resources, so do not forget to close them after use to avoid resource
+            leakage or use context manager.
+
     Attributes:
         timeout: timeout (in secs) for each http request.
-        _open_session: session instance, that is used for all http requests. (Is lazily initialized.)
+        _open_session:
+            session instance, that is used for all http requests.
+                (Is lazily initialized.)
     """
 
     _BASE_URL = r'https://query2.finance.yahoo.com'
@@ -37,7 +40,7 @@ class AsyncClient(object):
     @typechecked
     def __init__(self, timeout: int = 5) -> None:
         """Create new AsynClient instance.
-        
+
         Args:
             timeout: timeout (in secs) for each http request.
         """
@@ -68,6 +71,7 @@ class AsyncClient(object):
         self._crumb = None
 
     async def __aenter__(self) -> Self:
+        """When entering context manager, create the session."""
         self._get_session()
         return self
 
@@ -126,7 +130,8 @@ class AsyncClient(object):
         Returns: Chart response json including result and error.
 
         Raises:
-            ValueError: If any of period_range, interval or parsed_events are not in list of valid values.
+            ValueError: If any of period_range, interval or parsed_events are not in
+                list of valid values.
         """
         logger.debug(
             f'Getting finance/chart for ticker {ticker}, {period_range=}, {interval=}, {events=}.'  # noqa E501

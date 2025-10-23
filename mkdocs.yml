@@ -39,10 +39,10 @@ theme:
 
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
-      scheme: slate 
+      scheme: slate
       toggle:
         icon: material/lightbulb-outline
-        name: Switch to light mode    
+        name: Switch to light mode
       primary: deep purple
       accent: deep orange
 
@@ -63,7 +63,7 @@ plugins:
             show_symbol_type_heading: true
             show_symbol_type_toc: true
             docstring_style: google
-      
+
 markdown_extensions:
   - pymdownx.highlight:
       use_pygments: true

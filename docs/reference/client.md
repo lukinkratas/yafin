@@ -8,7 +8,7 @@ Some endpoints are only available in the `AsyncClient` class.
     options:
         members:
         - __init__
-        - close 
+        - close
         - get_quote
         - get_quote_summary
         - get_timeseries
