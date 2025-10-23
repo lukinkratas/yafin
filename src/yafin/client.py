@@ -16,7 +16,15 @@ type ResponseJson = dict[str, Any]
 
 
 class AsyncClient(object):
-    """Client for Yahoo Finance API."""
+    """Client for Yahoo Finance API.
+
+    Warning: HTTP resources closing
+        Uses http resources, so do not forget to close them after use to avoid resource leakage or use context manager.
+    
+    Attributes:
+        timeout: timeout (in secs) for each http request.
+        _open_session: session instance, that is used for all http requests. (Is lazily initialized.)
+    """
 
     _BASE_URL = r'https://query2.finance.yahoo.com'
     _DEFAULT_PARAMS = {
@@ -25,10 +33,15 @@ class AsyncClient(object):
         'lang': 'en-US',
         'corsDomain': 'finance.yahoo.com',
     }
-    _DEFAULT_TIMEOUT = 5
 
     @typechecked
-    def __init__(self) -> None:
+    def __init__(self, timeout: int = 5) -> None:
+        """Create new AsynClient instance.
+        
+        Args:
+            timeout: timeout (in secs) for each http request.
+        """
+        self.timeout = timeout
         self._open_session: AsyncSession[Any] | None = None
         self._crumb: str | None = None
 
@@ -38,10 +51,9 @@ class AsyncClient(object):
         return self._get_session()
 
     def _get_session(self) -> AsyncSession[Any]:
-        """Create session if not exists."""
         if self._open_session is None:
             self._open_session = AsyncSession(
-                impersonate='chrome', timeout=self._DEFAULT_TIMEOUT
+                impersonate='chrome', timeout=self.timeout
             )
 
         return self._open_session
@@ -56,7 +68,6 @@ class AsyncClient(object):
         self._crumb = None
 
     async def __aenter__(self) -> Self:
-        """When entering context manager, create the session."""
         self._get_session()
         return self
 
@@ -106,31 +117,16 @@ class AsyncClient(object):
     ) -> ResponseJson:
         """Get chart data for the ticker.
 
-        Example:
-            
-            import asyncio
-
-            from yafin import AsyncClient
-
-            async def main() -> None:
-
-                client = AsyncClient()
-                meta_1y_chart = await client.get_chart(ticker='META', period_range='1y', interval='1d')
-                await client.close()
-
-                async with AsyncClient() as client:
-                    aapl_5d_chart = await client.get_chart(ticker='AAPL', period_range='5d', interval='1h', events='div,split')
-
-            if __name__ == '__main__':
-                asyncio.run(main())
-
         Args:
             ticker: Ticker symbol.
             period_range: Range of the period.
             interval: Data interval.
             events: Events to include.
 
-        Returns: Chart data as a dictionary.
+        Returns: Chart response json including result and error.
+
+        Raises:
+            ValueError: If any of period_range, interval or parsed_events are not in list of valid values.
         """
         logger.debug(
             f'Getting finance/chart for ticker {ticker}, {period_range=}, {interval=}, {events=}.'  # noqa E501
@@ -177,7 +173,7 @@ class AsyncClient(object):
         Args:
             tickers: Comma-separated ticker symbols.
 
-        Returns: Quote data as a dictionary.
+        Returns: Quote response json including result and error.
         """
         logger.debug(f'Getting finance/quote for ticker {tickers}.')
 
@@ -198,7 +194,7 @@ class AsyncClient(object):
             ticker: Ticker symbol.
             modules: Comma-separated modules to include.
 
-        Returns: Quote summary data as a dictionary.
+        Returns: Quote summary response json including result and error.
         """
         logger.debug(f'Getting finance/quoteSummary for ticker {ticker}.')
 
@@ -238,7 +234,10 @@ class AsyncClient(object):
             period1: Start timestamp (optional).
             period2: End timestamp (optional).
 
-        Returns: Timeseries data as a dictionary.
+        Returns: Timeseries response json including result and error.
+
+        Raises:
+            ValueError: If types are not in list of valid values.
         """
         logger.debug(
             f'Getting finance/timeseries for ticker {ticker}, {types=}, {period1=}, {period2=}.'  # noqa E501
@@ -279,7 +278,7 @@ class AsyncClient(object):
         Args:
             ticker: Ticker symbol.
 
-        Returns: Options as a dictionary.
+        Returns: Options response json including result and error.
         """
         logger.debug(f'Getting finance/options for ticker {ticker}.')
 
@@ -296,7 +295,7 @@ class AsyncClient(object):
         Args:
             tickers: Comma-separated ticker symbols.
 
-        Returns: Search results as a dictionary.
+        Returns: Search response json including result and error.
         """
         logger.debug(f'Getting finance/search for ticker {tickers}.')
 
@@ -313,7 +312,7 @@ class AsyncClient(object):
         Args:
             ticker: Ticker symbol.
 
-        Returns: Recommendations as a dictionary.
+        Returns: Recommendations response json including result and error.
         """
         logger.debug(f'Getting finance/recommendations for ticker {ticker}.')
 
@@ -330,7 +329,7 @@ class AsyncClient(object):
         Args:
             ticker: Ticker symbol.
 
-        Returns: Insights as a dictionary.
+        Returns: Insights response json including result and error.
         """
         logger.debug(f'Getting finance/insights for ticker {ticker}.')
 
@@ -343,7 +342,7 @@ class AsyncClient(object):
     async def get_market_summaries(self) -> ResponseJson:
         """Get market summaries.
 
-        Returns: Market summaries as a list of dictionaries.
+        Returns: Market summaries response json including result and error.
         """
         logger.debug('Getting finance/quote/marketSummary.')
 
@@ -356,7 +355,7 @@ class AsyncClient(object):
     async def get_trending(self) -> ResponseJson:
         """Get trending tickers.
 
-        Returns: Trending tickers as a dictionary.
+        Returns: Trending tickers response json including result and error.
         """
         logger.debug('Getting finance/trending.')
 
@@ -369,7 +368,7 @@ class AsyncClient(object):
     async def get_currencies(self) -> ResponseJson:
         """Get currency exchange rates.
 
-        Returns: Currency exchange rates as a list of dictionaries.
+        Returns: Currency exchange rates response json including result and error.
         """
         logger.debug('Getting finance/currencies.')
 

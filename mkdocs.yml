@@ -1,16 +1,75 @@
 site_name: Yafin
 
+repo_url: https://github.com/lukinkratas/yafin
+repo_name: lukinkratas/yafin
+
 theme:
   name: "material"
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.path
+    - navigation.top
+    - navigation.sections
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+    - content.code.annotate
+    - search.suggest
+    - search.highlight
+  language: en
+  palette:
+
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/lightbulb-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/lightbulb
+        name: Switch to dark mode
+      primary: deep purple
+      accent: deep orange
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate 
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to light mode    
+      primary: deep purple
+      accent: deep orange
+
+nav:
+  - Home: index.md
+  - Reference:
+    - reference/symbol.md
+    - reference/client.md
+  - examples.md
 
 plugins:
+  - search
   - mkdocstrings:
       handlers:
         python:
           options:
+            show_root_heading: true
+            show_symbol_type_heading: true
+            show_symbol_type_toc: true
             docstring_style: google
-
-nav:
-  - Home: index.md
-  - Client: client.md
-  - Symbol: symbol.md
+      
+markdown_extensions:
+  - pymdownx.highlight:
+      use_pygments: true
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
