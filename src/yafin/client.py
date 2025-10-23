@@ -164,7 +164,7 @@ class AsyncClient(object):
         url = f'{self._BASE_URL}/v8/finance/chart/{ticker}'
         params = self._DEFAULT_PARAMS | {'range': period_range, 'interval': interval}
 
-        if parsed_events:
+        if events:
             params['events'] = ','.join(parsed_events)
 
         response = await self._get_async_request(url, params)
