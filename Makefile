@@ -1,4 +1,4 @@
-.PHONY: install install-all install-dev install-test format format lint lint-fix typecheck test test-int test-all build doc
+.PHONY: install install-all install-dev install-test format format lint lint-fix typecheck test test-int test-all build doc doc-serve
 
 help:
 	@echo "Available targets:"
@@ -16,6 +16,7 @@ help:
 	@echo "  clean          - Removes htmlcov, __pycache__, pytest mypy and ruff cache dirs"
 	@echo "  build          - Build package - bdist wheel and sdist"
 	@echo "  doc            - build documentation html"
+	@echo "  doc-serve      - serve documentation html"
 	@echo "  help           - Show this help message"
 
 install:
@@ -62,4 +63,6 @@ build:
 
 doc:
 	uv run --group doc mkdocs build
+
+doc-serve:
 	uv run --group doc mkdocs serve

@@ -2,7 +2,7 @@
 
 Below are example for each endpoint.
 
-Output example JSONs can be found in [unit test fixtures](https://github.com/lukinkratas/yafintests/unit/fixtures). If needed, they can be reproduced with [fetch_mocks.py](https://github.com/lukinkratas/yafinscripts/fetch_mocks.py) script.
+Output example JSONs can be found in [unit test fixtures](https://github.com/lukinkratas/yafin/tree/main/tests/unit/fixtures). If needed, they can be reproduced with [fetch_mocks.py](https://github.com/lukinkratas/yafin/blob/main/scripts/fetch_mocks.py) script.
 
 ### Chart Endpoint
 

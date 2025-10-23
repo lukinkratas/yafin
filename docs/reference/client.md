@@ -4,7 +4,7 @@ It uses `curl_cffi.requests.AsyncSession` under the hood.
 
 Some endpoints are only available in the `AsyncClient` class.
 
-:::src.yafin.AsyncClient
+:::yafin.AsyncClient
     options:
         members:
         - __init__

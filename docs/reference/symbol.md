@@ -2,7 +2,7 @@
 
 It uses `AsyncClient` as a singleton (multiple symbols use shared AsyncClient instance) to save resources.
 
-::: src.yafin.AsyncSymbol
+::: yafin.AsyncSymbol
     options:
         members:
         - __init__
