@@ -66,7 +66,7 @@ class AsyncSymbol(object):
         """Client attribute for API requests."""
         return self._get_client()
 
-    def _get_client(self) -> None:
+    def _get_client(self) -> AsyncClient:
         if self._open_client is None:
             self._open_client = _ClientManager.get_client()
 
