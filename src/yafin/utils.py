@@ -4,7 +4,7 @@ from functools import wraps
 from typing import Any, NoReturn, Type
 from urllib.parse import urlencode
 
-from .const import FREQUENCIES, TYPES
+from .const import _TYPES, FREQUENCIES
 from .exceptions import TrailingBalanceSheetError
 
 logger = logging.getLogger(__name__)
@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 CHAR_LIMIT = 20
 
 
-def error(msg: str, err_cls: Type[Exception] = Exception) -> NoReturn:
+def _error(msg: str, err_cls: Type[Exception] = Exception) -> NoReturn:
     """Log error message and raise exception.
 
     Args:
@@ -23,7 +23,7 @@ def error(msg: str, err_cls: Type[Exception] = Exception) -> NoReturn:
     raise err_cls(msg)
 
 
-def encode_url(url: str, params: dict[str, str] | None = None) -> str:
+def _encode_url(url: str, params: dict[str, str] | None = None) -> str:
     """Print URL with parameters.
 
     Args:
@@ -56,23 +56,29 @@ def get_types_with_frequency(frequency: str, typ: str) -> str:
 
     Returns:
         types enriched with frequency e.g. for income_statement:
-        trailingNetIncome,trailingEBIT,trailingEBITDA,trailingGrossProfit, ...
+            trailingNetIncome,trailingEBIT,trailingEBITDA,trailingGrossProfit, ...
+
+    Raises:
+        ValueError: If frequency or typ are not in list of valid values.
+        TrailingBalanceSheetError:
+            If attempting to request balance sheet with trailing
+                frequency.
     """
     if frequency not in FREQUENCIES:
-        error(
+        _error(
             msg=f'Invalid {frequency=}. Valid values: {FREQUENCIES}', err_cls=ValueError
         )
 
-    if typ not in TYPES.keys():
-        error(msg=f'Invalid {typ=}. Valid values: {TYPES.keys()}', err_cls=ValueError)
+    if typ not in _TYPES.keys():
+        _error(msg=f'Invalid {typ=}. Valid values: {_TYPES.keys()}', err_cls=ValueError)
 
     if typ == 'balance_sheet' and frequency == 'trailing':
-        error(
+        _error(
             msg=f'{frequency=} not allowed for balance sheet.',
             err_cls=TrailingBalanceSheetError,
         )
 
-    types = TYPES[typ]
+    types = _TYPES[typ]
     types_with_frequency = [f'{frequency}{t}' for t in types]
     return ','.join(types_with_frequency)
 
@@ -99,27 +105,7 @@ def _get_func_name_and_args(
     return func.__name__, args
 
 
-# def shorten_arg(arg: Any) -> str:
-#     """Make a single argument shorter for logging."""
-#     arg_str = str(arg)
-#     return f'{arg_str[:CHAR_LIMIT]}...' if len(arg_str) > CHAR_LIMIT else arg_str
-
-
-# def shorten_args(args: tuple[Any, ...]) -> list[str]:
-#     """Make arguments shorter for logging."""
-#     return [f'{arg.__class__.__name__}:{shorten_arg(arg)}' for arg in args]
-
-
-# def shorten_kwargs(kwargs: dict[str, Any]) -> list[str]:
-#     """Make keyword arguments shorter for logging."""
-#     return [f'{key}:{val.__class__.__name__}={shorten_arg(val)}' for key, val in
-# kwargs.items()]
-
-# def shorten_result(result: Any) -> list[str]:
-#     return result
-
-
-def log_args(func: Callable[..., Any]) -> Callable[..., Any]:
+def _log_args(func: Callable[..., Any]) -> Callable[..., Any]:
     """Decorator for logging functions and its' args, kwargs."""
 
     @wraps(func)

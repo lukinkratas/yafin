@@ -18,8 +18,7 @@ from tests.assertions import (
     assert_trending_result,
 )
 from yafin import AsyncClient
-from yafin.const import ALL_MODULES_CSV
-from yafin.utils import get_types_with_frequency
+from yafin.const import ALL_MODULES_CSV, ANNUAL_INCOME_STATEMENT_TYPES_CSV
 
 
 class TestIntegrationClient:
@@ -65,8 +64,9 @@ class TestIntegrationClient:
     @pytest.mark.asyncio
     async def test_get_timeseries(self, client: AsyncClient) -> None:
         """Test get_timeseries method."""
-        types = get_types_with_frequency(frequency='annual', typ='income_statement')
-        timeseries = await client.get_timeseries(ticker='META', types=types)
+        timeseries = await client.get_timeseries(
+            ticker='META', types=ANNUAL_INCOME_STATEMENT_TYPES_CSV
+        )
         assert_response_json(timeseries, 'timeseries')
         assert_annual_income_stmt_result(timeseries['timeseries']['result'])
 

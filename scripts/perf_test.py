@@ -87,7 +87,8 @@ def process_chart_like_yfinance(chart: dict[str, Any]) -> pd.DataFrame:
         ['Open', 'High', 'Low', 'Close', 'Volume', 'Dividends', 'Stock Splits'],
     ]
 
-def test_process_chart_like_yfinance(self) -> None:
+
+def test_process_chart_like_yfinance() -> None:
     """Test process_chart_like_yfinance function."""
     timestamps = [1759843800, 1759930200, 1760016600, 1760103000, 1760371117]
     opens = [
@@ -167,11 +168,10 @@ def test_process_chart_like_yfinance(self) -> None:
             'Dividends': [0.0, 0.0, 0.0, 0.525, 0.0],
             'Stock Splits': [0.0, 4.0, 0.0, 0.0, 0.0],
         },
-        index=pd.DatetimeIndex(
-            data=pd.to_datetime(timestamps, unit='s'), name='date'
-        ),
+        index=pd.DatetimeIndex(data=pd.to_datetime(timestamps, unit='s'), name='date'),
     )
     assert simplifed_chart_df.equals(expected_df)
+
 
 @log_performance(NRUNS)
 def main_yfinance() -> None:  # noqa: D103

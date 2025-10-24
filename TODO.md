@@ -6,19 +6,31 @@
 - _ytickers / yatickers / yotickers_ / ~~yahoo_tickers~~ - from ytickers import Ticker ?
 - _ysymbols / yasymbols / yosymbols_ / ~~yahoo_symbols~~ - from ysymbols import Symbol ?
 
-- [ ] automatic docs from docstrings?
-- [ ] publish to test
+- [ ] timeout float ? gh copilot: src/yafin/client.py:41 – The new timeout argument is type-checked as int, so passing a sub-second float (which curl_cffi accepts) now raises a TypeError. Please widen the annotation to float | int (or similar) so callers can still tune timeouts precisely.
+- [ ] src.yafin.* -> yafin.* like fastapi or pydantic ? -> check uv build
+- [ ] review default args, e.g.: perioed default args timestamp and not none + update doc
+- [ ] reverse eng the rest API
+- [ ] unit test symbol / client singleton factory
+- [ ] publish to pypi test
 - [ ] client into symbol dependency injection ?
 - [ ] session into client dependency injection ?
-- [ ] session retry logic ?
-- [ ] issue calling client.session out of context window / after it was closed craetes new session?
-- [ ] issue calling symbol.client out of context window / after it was closed craetes new client?
 - [ ] get chart not now(), but round to midnight - check yfinance implementation
 - [ ] mcp
 - get_finance_chart implement period1 and period2 ?
 - remove get_cashflow_statement_history, get_balance_sheet_history ?
 - remove quote summary modules and use only qs_all_modules?
 - (Sync) client ?
+- [~] docs for const (+options)
+- ~~[x] gh pages~~
+- ~~[x] utils - private functions - error, encode_url, log_arg~~
+- ~~[x] session retry logic ?~~
+- ~~[x] examples docs update~~
+- ~~[x] docs for utils~~
+- ~~[x] const - ANNUAL_INCOME_STMT, TRALING_CASH_FLOW, etc~~
+- ~~[x] automatic docs from docstrings?~~
+- ~~[x] add docstrings everywhere~~
+- ~~[x] issue calling client.session out of context window / after it was closed craetes new session? -> get rid of session as a property ?~~
+- ~~[x] issue calling symbol.client out of context window / after it was closed craetes new client? -> get rid of client as a property ?~~
 - ~~[x] client._get_async_request -> NoReturn~~
 - ~~[x] redacting crumb~~
 - ~~[x] add codex gh action~~

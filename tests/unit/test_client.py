@@ -23,8 +23,7 @@ from tests.assertions import (
 )
 from tests.utils import mock_200_response, mock_404_response
 from yafin import AsyncClient
-from yafin.const import ALL_MODULES_CSV
-from yafin.utils import get_types_with_frequency
+from yafin.const import ALL_MODULES_CSV, ANNUAL_INCOME_STATEMENT_TYPES_CSV
 
 
 class TestUnitClient:
@@ -34,20 +33,18 @@ class TestUnitClient:
     async def test_session(self) -> None:
         """Test session attribute."""
         client = AsyncClient()
-        assert client._open_session is None
+        assert client._session is None
 
         client._get_session()
-        assert client._open_session
-        assert client.session
+        assert client._session
 
         await client.close()
-        assert client._open_session is None
+        assert client._session is None
 
         async with AsyncClient() as client:
-            assert client._open_session
-            assert client.session
+            assert client._session
 
-        assert client._open_session is None
+        assert client._session is None
 
     @pytest_asyncio.fixture
     async def client(self) -> AsyncGenerator[AsyncClient, None]:
@@ -268,76 +265,53 @@ class TestUnitClient:
     @pytest.mark.parametrize(
         'kwargs',
         [
+            dict(ticker='META', types=ANNUAL_INCOME_STATEMENT_TYPES_CSV),
             dict(
                 ticker='META',
-                types=get_types_with_frequency(
-                    frequency='annual', typ='income_statement'
-                ),
-            ),
-            dict(
-                ticker='META',
-                types=get_types_with_frequency(
-                    frequency='annual', typ='income_statement'
-                ),
+                types=ANNUAL_INCOME_STATEMENT_TYPES_CSV,
                 period1=datetime(2020, 1, 1).timestamp(),
                 period2=datetime.now().timestamp(),
             ),
             dict(
                 ticker='META',
-                types=get_types_with_frequency(
-                    frequency='annual', typ='income_statement'
-                ),
+                types=ANNUAL_INCOME_STATEMENT_TYPES_CSV,
                 period1=1577833200.0,
                 period2=1760857217.66133,
             ),
             dict(
                 ticker='META',
-                types=get_types_with_frequency(
-                    frequency='annual', typ='income_statement'
-                ),
+                types=ANNUAL_INCOME_STATEMENT_TYPES_CSV,
                 period1=1577833200,
                 period2=1760857217,
             ),
             dict(
                 ticker='META',
-                types=get_types_with_frequency(
-                    frequency='annual', typ='income_statement'
-                ),
+                types=ANNUAL_INCOME_STATEMENT_TYPES_CSV,
                 period1=datetime(2020, 1, 1).timestamp(),
             ),
             dict(
                 ticker='META',
-                types=get_types_with_frequency(
-                    frequency='annual', typ='income_statement'
-                ),
+                types=ANNUAL_INCOME_STATEMENT_TYPES_CSV,
                 period1=1577833200.0,
             ),
             dict(
                 ticker='META',
-                types=get_types_with_frequency(
-                    frequency='annual', typ='income_statement'
-                ),
+                types=ANNUAL_INCOME_STATEMENT_TYPES_CSV,
                 period1=1577833200,
             ),
             dict(
                 ticker='META',
-                types=get_types_with_frequency(
-                    frequency='annual', typ='income_statement'
-                ),
+                types=ANNUAL_INCOME_STATEMENT_TYPES_CSV,
                 period2=datetime.now().timestamp(),
             ),
             dict(
                 ticker='META',
-                types=get_types_with_frequency(
-                    frequency='annual', typ='income_statement'
-                ),
+                types=ANNUAL_INCOME_STATEMENT_TYPES_CSV,
                 period2=1760857217.66133,
             ),
             dict(
                 ticker='META',
-                types=get_types_with_frequency(
-                    frequency='annual', typ='income_statement'
-                ),
+                types=ANNUAL_INCOME_STATEMENT_TYPES_CSV,
                 period2=1760857217,
             ),
         ],
@@ -359,23 +333,13 @@ class TestUnitClient:
     @pytest.mark.parametrize(
         'kwargs, err_cls',
         [
-            (
-                dict(
-                    ticker=1,
-                    types=get_types_with_frequency(
-                        frequency='annual', typ='income_statement'
-                    ),
-                ),
-                TypeCheckError,
-            ),
+            (dict(ticker=1, types=ANNUAL_INCOME_STATEMENT_TYPES_CSV), TypeCheckError),
             (dict(ticker='META', types='xxx'), ValueError),
             (dict(ticker='META', types=1), TypeCheckError),
             (
                 dict(
                     ticker='META',
-                    types=get_types_with_frequency(
-                        frequency='annual', typ='income_statement'
-                    ),
+                    types=ANNUAL_INCOME_STATEMENT_TYPES_CSV,
                     period1='xxx',
                 ),
                 TypeCheckError,
@@ -383,9 +347,7 @@ class TestUnitClient:
             (
                 dict(
                     ticker='META',
-                    types=get_types_with_frequency(
-                        frequency='annual', typ='income_statement'
-                    ),
+                    types=ANNUAL_INCOME_STATEMENT_TYPES_CSV,
                     period2='xxx',
                 ),
                 TypeCheckError,

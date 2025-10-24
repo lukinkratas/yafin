@@ -62,20 +62,18 @@ class TestUnitSymbol:
     async def test_client(self) -> None:
         """Test client attribute."""
         symbol = AsyncSymbol('META')
-        assert symbol._open_client is None
+        assert symbol._client is None
 
         symbol._get_client()
-        assert symbol._open_client
-        assert symbol.client
+        assert symbol._client
 
         await symbol.close()
-        assert symbol._open_client is None
+        assert symbol._client is None
 
         async with AsyncSymbol('META') as symbol:
-            assert symbol._open_client
-            assert symbol.client
+            assert symbol._client
 
-        assert symbol._open_client is None
+        assert symbol._client is None
 
     @pytest.mark.asyncio
     async def test_client_singleton(self) -> None:
@@ -83,9 +81,11 @@ class TestUnitSymbol:
         meta = AsyncSymbol('META')
         aapl = AsyncSymbol('AAPL')
 
+        meta._get_client()
+        aapl._get_client()
+
         # test it is singleton
-        assert meta._get_client() is aapl._get_client()
-        assert meta.client is aapl.client
+        assert meta._client is aapl._client
 
         await meta.close()
         await aapl.close()
@@ -99,17 +99,17 @@ class TestUnitSymbol:
         meta._get_client()
         aapl._get_client()
 
-        assert meta._open_client
-        assert aapl._open_client
+        assert meta._client
+        assert aapl._client
 
         # meta close should not close the aapl client
         await meta.close()
-        assert meta._open_client is None
-        assert aapl._open_client
+        assert meta._client is None
+        assert aapl._client
 
         await aapl.close()
-        assert meta._open_client is None
-        assert aapl._open_client is None
+        assert meta._client is None
+        assert aapl._client is None
 
     @pytest_asyncio.fixture
     async def symbol(self) -> AsyncGenerator[AsyncSymbol, None]:
