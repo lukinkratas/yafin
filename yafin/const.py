@@ -17,7 +17,7 @@ INTERVALS = {
 
 RANGES = {'1d', '5d', '1mo', '3mo', '6mo', '1y', '2y', '5y', '10y', 'ytd', 'max'}
 
-EVENTS = {'div', 'split'}
+EVENTS = {'div', 'split', 'earn', 'capitalGain'}
 
 ALL_MODULES = {
     'quoteType',
@@ -443,10 +443,27 @@ CASH_FLOW_TYPES = {
     'ReceiptsfromCustomers',
 }
 
-_TYPES = {
-    'income_statement': INCOME_STATEMENT_TYPES,
-    'balance_sheet': BALANCE_SHEET_TYPES,
-    'cash_flow': CASH_FLOW_TYPES,
+OTHER_TYPES = {
+    'MarketCap',
+    'EnterpriseValue',
+    'PeRatio',
+    'ForwardPeRatio',
+    'PegRatio',
+    'PsRatio',
+    'PbRatio',
+    'EnterprisesValueRevenueRatio',
+    'EnterprisesValueEBITDARatio',
+    'spEarningsReleaseEvents',
+    'analystRatings',
+    'economicEvents',
+    'earningsConferenceCallEvents',
+    'corporateConferenceCallEvents',
+    'conferencePresentation',
+    'otherCorporate',
+    'conferenceEvents',
+    'shareHoldersAnnualMeetingsEvents',
+    'corporateAnalystMeeting',
+    'mergerAndAcquisitionAnnouncement',
 }
 
 ANNUAL_INCOME_STATEMENT_TYPES = {f'annual{typ}' for typ in INCOME_STATEMENT_TYPES}

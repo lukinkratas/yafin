@@ -25,7 +25,7 @@ QUOTE_KEYS = [
     'region',
     'quoteType',
     'typeDisp',
-    'quoteSourceName',
+    # 'quoteSourceName',
     'triggerable',
     'customPriceAlertConfidence',
     'currency',

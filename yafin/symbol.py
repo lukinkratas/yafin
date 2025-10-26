@@ -101,6 +101,8 @@ class AsyncSymbol(object):
         interval: str,
         include_div: bool = True,
         include_split: bool = True,
+        include_earn: bool = True,
+        include_capital_gain: bool = True,
     ) -> Result:
         """Get chart data for the ticker.
 
@@ -109,6 +111,8 @@ class AsyncSymbol(object):
             interval: Data interval.
             include_div: Whether to include dividends.
             include_split: Whether to include stock splits.
+            include_earn: Whether to include earnings.
+            include_capital_gain: Whether to include capital gains.
 
         Returns: Chart response result json.
         """
@@ -119,6 +123,12 @@ class AsyncSymbol(object):
 
         if include_split:
             events_list.append('split')
+
+        if include_earn:
+            events_list.append('earn')
+
+        if include_capital_gain:
+            events_list.append('capitalGain')
 
         events = ','.join(events_list) if events_list else None
 

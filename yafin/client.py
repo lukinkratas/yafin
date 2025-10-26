@@ -119,7 +119,7 @@ class AsyncClient(object):
         ticker: str,
         period_range: str,
         interval: str,
-        events: str | None = 'div,split',
+        events: str | None = 'div,split,earn,capitalGain',
     ) -> ResponseJson:
         """Get chart data for the ticker.
 
@@ -127,7 +127,7 @@ class AsyncClient(object):
             ticker: Ticker symbol.
             period_range: Range of the period.
             interval: Data interval.
-            events: Events to include.
+            events: Comma-separated events to include.
 
         Returns: Chart response json including result and error.
 
@@ -164,7 +164,14 @@ class AsyncClient(object):
                 )
 
         url = f'{self._BASE_URL}/v8/finance/chart/{ticker}'
-        params = self._DEFAULT_PARAMS | {'range': period_range, 'interval': interval}
+        params = self._DEFAULT_PARAMS | {
+            'range': period_range,
+            'interval': interval,
+            'includePrePost': True,
+            'source': 'cosaic',
+            'includeAdjustedClose': True,
+            'userYfid': True,
+        }
 
         if events:
             params['events'] = ','.join(parsed_events)
@@ -218,6 +225,9 @@ class AsyncClient(object):
 
         url = f'{self._BASE_URL}/v10/finance/quoteSummary/{ticker}'
         params = self._DEFAULT_PARAMS | {
+            'enablePrivateCompany': True,
+            'enableQSPExpandedEarnings': True,
+            'overnightPrice': True,
             'modules': ','.join(parsed_modules),
             'crumb': await self._get_crumb(),
         }
@@ -269,9 +279,11 @@ class AsyncClient(object):
 
         url = f'{self._BASE_URL}/ws/fundamentals-timeseries/v1/finance/timeseries/{ticker}'  # noqa E501
         params = self._DEFAULT_PARAMS | {
-            'type': ','.join(parsed_types),
+            'merge': False,
+            'padTimeSeries': True,
             'period1': int(period1),
             'period2': int(period2),
+            'type': ','.join(parsed_types),
         }
 
         response = await self._get_async_request(url, params)
@@ -290,7 +302,11 @@ class AsyncClient(object):
         logger.debug(f'Getting finance/options for ticker {ticker}.')
 
         url = f'{self._BASE_URL}/v7/finance/options/{ticker}'
-        params = self._DEFAULT_PARAMS | {'crumb': await self._get_crumb()}
+        params = self._DEFAULT_PARAMS | {
+            'date': -1,
+            'straddle': False,
+            'crumb': await self._get_crumb(),
+        }
         response = await self._get_async_request(url, params)
         return response.json()
 
@@ -341,7 +357,13 @@ class AsyncClient(object):
         logger.debug(f'Getting finance/insights for ticker {ticker}.')
 
         url = f'{self._BASE_URL}/ws/insights/v2/finance/insights'
-        params = self._DEFAULT_PARAMS | {'symbol': ticker}
+        params = self._DEFAULT_PARAMS | {
+            'symbol': ticker,
+            'disableRelatedReports': True,
+            'getAllResearchReports': True,
+            'reportsCount': 4,
+            'ssl': True,
+        }
         response = await self._get_async_request(url, params)
         return response.json()
 

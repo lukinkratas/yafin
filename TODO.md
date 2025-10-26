@@ -6,8 +6,8 @@
 - _ytickers / yatickers / yotickers_ / ~~yahoo_tickers~~ - from ytickers import Ticker ?
 - _ysymbols / yasymbols / yosymbols_ / ~~yahoo_symbols~~ - from ysymbols import Symbol ?
 
-- [ ] review default args, e.g.: perioed default args timestamp and not none + update doc
 - [ ] reverse eng the rest API
+- [ ] example from docs to main
 - [ ] unit test symbol / client singleton factory
 - [ ] publish to pypi test
 - [ ] client into symbol dependency injection ?
@@ -16,6 +16,7 @@
 - get_finance_chart implement period1 and period2 ?
 - remove get_cashflow_statement_history, get_balance_sheet_history ?
 - remove quote summary modules and use only qs_all_modules?
+- [ ] client.get_timeseries, symbol.get_income_statement, symbol.get_balance_sheet and symbol.get_cash_flow default period1 and 2 args datetime.datetime.timestamp ?
 - (Sync) client ?
 - [ ] mcp
 - [~] docs for const (+options)
