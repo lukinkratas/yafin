@@ -13,6 +13,7 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
 ]
 dependencies = [
     "curl-cffi>=0.13.0",
@@ -78,7 +79,7 @@ quote-style = "single"
 indent-style = "space"
 
 [tool.mypy]
-mypy_path = ["src"]
+# mypy_path = ["yafin"]
 strict = true
 explicit_package_bases = true
 check_untyped_defs = true
@@ -92,3 +93,10 @@ markers = [
     "performance: marks tests as performance benchmarks",
 ]
 testpaths = ["tests"]
+
+[build-system]
+requires = ["wheel>=0.45.1", "setuptools>=80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["yafin"]

@@ -6,8 +6,6 @@
 - _ytickers / yatickers / yotickers_ / ~~yahoo_tickers~~ - from ytickers import Ticker ?
 - _ysymbols / yasymbols / yosymbols_ / ~~yahoo_symbols~~ - from ysymbols import Symbol ?
 
-- [ ] timeout float ? gh copilot: src/yafin/client.py:41 – The new timeout argument is type-checked as int, so passing a sub-second float (which curl_cffi accepts) now raises a TypeError. Please widen the annotation to float | int (or similar) so callers can still tune timeouts precisely.
-- [ ] src.yafin.* -> yafin.* like fastapi or pydantic ? -> check uv build
 - [ ] review default args, e.g.: perioed default args timestamp and not none + update doc
 - [ ] reverse eng the rest API
 - [ ] unit test symbol / client singleton factory
@@ -15,11 +13,11 @@
 - [ ] client into symbol dependency injection ?
 - [ ] session into client dependency injection ?
 - [ ] get chart not now(), but round to midnight - check yfinance implementation
-- [ ] mcp
 - get_finance_chart implement period1 and period2 ?
 - remove get_cashflow_statement_history, get_balance_sheet_history ?
 - remove quote summary modules and use only qs_all_modules?
 - (Sync) client ?
+- [ ] mcp
 - [~] docs for const (+options)
 - ~~[x] gh pages~~
 - ~~[x] utils - private functions - error, encode_url, log_arg~~

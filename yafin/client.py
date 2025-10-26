@@ -3,7 +3,7 @@ from datetime import datetime
 from types import TracebackType
 from typing import Any, Self, Type
 
-from curl_cffi.requests import AsyncSession, Response
+from curl_cffi import AsyncSession, Response
 from curl_cffi.requests.exceptions import HTTPError
 from typeguard import typechecked
 
@@ -39,7 +39,7 @@ class AsyncClient(object):
     }
 
     @typechecked
-    def __init__(self, timeout: int = 5, max_retries: int = 5) -> None:
+    def __init__(self, timeout: float = 5.0, max_retries: int = 5) -> None:
         """Create new AsynClient instance.
 
         Args:

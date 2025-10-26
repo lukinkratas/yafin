@@ -24,7 +24,7 @@ import asyncio
 
 from yafin import AsyncClient
 from yafin.const import (
-    ANNUAL_INCOME_STATEMENT_TYPES_CSV, 
+    ANNUAL_INCOME_STATEMENT_TYPES_CSV,
     QUARTERLY_BALANCE_SHEET_TYPES_CSV,
     TRAILING_CASH_FLOW_TYPES_CSV,
 )
