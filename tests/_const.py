@@ -111,20 +111,20 @@ _QUOTE_KEYS = [
 ]
 
 _QUOTE_TYPE_KEYS = [
-    "symbol",
-    "quoteType",
-    "quartrId",
-    "exchange",
-    "shortName",
-    "longName",
-    "messageBoardId",
-    "exchangeTimezoneName",
-    "exchangeTimezoneShortName",
-    "gmtOffSetMilliseconds",
-    "market",
-    "isEsgPopulated",
-    "hasSelerityEarnings",
-    "selerityIsGaap"
+    'symbol',
+    'quoteType',
+    'quartrId',
+    'exchange',
+    'shortName',
+    'longName',
+    'messageBoardId',
+    'exchangeTimezoneName',
+    'exchangeTimezoneShortName',
+    'gmtOffSetMilliseconds',
+    'market',
+    'isEsgPopulated',
+    'hasSelerityEarnings',
+    'selerityIsGaap',
 ]
 
 _ASSET_PROFILE_KEYS = [
@@ -604,5 +604,5 @@ _ANALYSIS_KEYS = [
     'optionsAnalysis',
     'overview',
     'priceMovement',
-    'symbol'
+    'symbol',
 ]

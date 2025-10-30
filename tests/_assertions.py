@@ -2,6 +2,7 @@ import warnings
 from typing import Any
 
 from tests._const import (
+    _ANALYSIS_KEYS,
     _ASSET_PROFILE_KEYS,
     _CALENDAR_EVENTS_EARNING_KEYS,
     _CURRENCY_KEYS,
@@ -20,8 +21,8 @@ from tests._const import (
     _OWNERSHIP_KEYS,
     _PRICE_KEYS,
     _QUOTE_KEYS,
-    _QUOTE_TYPE_KEYS,
     _QUOTE_SUMMARY_QUOTE_TYPE_KEYS,
+    _QUOTE_TYPE_KEYS,
     _RECOMMENDATIONS_TREND_KEYS,
     _SEARCH_KEYS,
     _SEC_FILING_KEYS,
@@ -30,10 +31,14 @@ from tests._const import (
     _TRANSACTION_KEYS,
     _TRENDING_KEYS,
     _UPGRADE_DOWNGRADE_HISTORY_KEYS,
-    _ANALYSIS_KEYS,
 )
-from yafin.const import ALL_MODULES_SET, ANNUAL_INCOME_STATEMENT_TYPES_SET, ANNUAL_BALANCE_SHEET_TYPES_SET, ANNUAL_CASH_FLOW_TYPES_SET
-from yafin.types import Result, ResponseJson
+from yafin.const import (
+    ALL_MODULES_SET,
+    ANNUAL_BALANCE_SHEET_TYPES_SET,
+    ANNUAL_CASH_FLOW_TYPES_SET,
+    ANNUAL_INCOME_STATEMENT_TYPES_SET,
+)
+from yafin.types import ResponseJson, Result
 
 
 def _assert_contains_keys(data: dict[str, Any] | None, keys: list[str]) -> None:
@@ -44,7 +49,6 @@ def _assert_contains_keys(data: dict[str, Any] | None, keys: list[str]) -> None:
         data: dict to be checked
         keys: keys to check in data (dict)
     """
-
     assert data is not None
 
     for key in keys:
@@ -60,7 +64,6 @@ def _assert_keys_are_not_none(data: dict[str, Any] | None, keys: list[str]) -> N
         data: dict to be checked
         keys: keys to check in data (dict)
     """
-
     assert data is not None
 
     for key in keys:
@@ -85,15 +88,18 @@ def _assert_quotes(quotes: ResponseJson, tickers: str) -> None:
     ):
         _assert_quote_result(quote, ticker)
 
+
 def _assert_quote_types(quote_types: ResponseJson, tickers: str) -> None:
     """Assertions for quote types response json."""
     tickers_list = tickers.split(',')
     quote_types_list = quote_types['quoteType']['result']
     assert len(quote_types_list) == len(tickers_list)
     for ticker, quote in zip(
-        sorted(tickers_list), sorted(quote_types_list, key=lambda result: result['symbol'])
+        sorted(tickers_list),
+        sorted(quote_types_list, key=lambda result: result['symbol']),
     ):
         _assert_quote_type_result(quote, ticker)
+
 
 def _assert_insights(insights: ResponseJson, tickers: str) -> None:
     """Assertions for insights response json."""
@@ -105,15 +111,18 @@ def _assert_insights(insights: ResponseJson, tickers: str) -> None:
     ):
         _assert_insight_result(insight, ticker)
 
+
 def _assert_recommendations(recommendations: ResponseJson, tickers: str) -> None:
     """Assertions for insights recommendations json."""
     tickers_list = tickers.split(',')
     recommendations_list = recommendations['finance']['result']
     assert len(recommendations_list) == len(tickers_list)
     for ticker, insight in zip(
-        sorted(tickers_list), sorted(recommendations_list, key=lambda result: result['symbol'])
+        sorted(tickers_list),
+        sorted(recommendations_list, key=lambda result: result['symbol']),
     ):
         _assert_recommendation_result(insight, ticker)
+
 
 def _assert_market_summary_results(
     market_summary_results: list[Result],
@@ -166,6 +175,7 @@ def _assert_quote_type_result(quote_type_result: Result, ticker: str) -> None:
     assert quote_type_result
     _assert_contains_keys(quote_type_result, _QUOTE_TYPE_KEYS)
     assert quote_type_result['symbol'] == ticker
+
 
 def _assert_quote_summary_all_modules_result(
     quote_summary_all_modules: Result,
@@ -404,19 +414,25 @@ def _assert_page_views(page_views: Result) -> None:
 def _assert_annual_income_stmt_result(annual_income_stmt_result: Result) -> None:
     """Assertions for result field of annual income statement response json."""
     assert annual_income_stmt_result
-    assert sorted(ANNUAL_INCOME_STATEMENT_TYPES_SET) == sorted(annual_income_stmt_result['meta']['type'])
+    assert sorted(ANNUAL_INCOME_STATEMENT_TYPES_SET) == sorted(
+        annual_income_stmt_result['meta']['type']
+    )
 
 
 def _assert_annual_balance_sheet_result(annual_balance_sheet_result: Result) -> None:
     """Assertions for result field of annual balance sheet response json."""
     assert annual_balance_sheet_result
-    assert sorted(ANNUAL_BALANCE_SHEET_TYPES_SET) == sorted(annual_balance_sheet_result['meta']['type'])
+    assert sorted(ANNUAL_BALANCE_SHEET_TYPES_SET) == sorted(
+        annual_balance_sheet_result['meta']['type']
+    )
 
 
 def _assert_annual_cash_flow_result(annual_cash_flow_result: Result) -> None:
     """Assertions for result field of annual cash flow response json."""
     assert annual_cash_flow_result
-    assert sorted(ANNUAL_CASH_FLOW_TYPES_SET) == sorted(annual_cash_flow_result['meta']['type'])
+    assert sorted(ANNUAL_CASH_FLOW_TYPES_SET) == sorted(
+        annual_cash_flow_result['meta']['type']
+    )
 
 
 def _assert_options_result(options_result: Result, ticker: str) -> None:
@@ -439,6 +455,7 @@ def _assert_insight_result(insights_result: Result, ticker: str) -> None:
     assert insights_result
     _assert_contains_keys(insights_result, _INSIGHTS_KEYS)
     assert insights_result['symbol'] == ticker
+
 
 def _assert_search_result(search: ResponseJson) -> None:
     """Assertions for search response json."""
