@@ -7,17 +7,16 @@
 - _ysymbols / yasymbols / yosymbols_ / ~~yahoo_symbols~~ - from ysymbols import Symbol ?
 
 - [ ] fetch mocks for get_analysis do not work
-- [ ] reverse eng the rest API again
 - [ ] example from docs to main or integration tests
 - [ ] unit test symbol / client singleton factory
-- [ ] publish to pypi test
 - [ ] test_utils - add OTHER types ? -> str | None annotation
 - [ ] get chart not now(), but round to midnight - check yfinance implementation
-- get_finance_chart implement period1 and period2 ?
-- remove get_cashflow_statement_history, get_balance_sheet_history ?
-- remove quote summary modules and use only qs_all_modules?
+- get_chart implement period1 and period2 ?
 - [ ] client.get_timeseries, symbol.get_income_statement, symbol.get_balance_sheet and symbol.get_cash_flow default period1 and 2 args datetime.datetime.timestamp ?
-- (Sync) client ? + pytest-benchmark tests
+- [ ] reverse eng the rest API again - check, if all endpoints are present
+- [ ] (sync) client and (sync) symbol ? + pytest-benchmark tests
+- [ ] publish to pypi test
+- [ ] publish
 - [ ] mcp
 - ~~[x] reverse eng the rest API~~
 - ~~[x] symbol - test other endpoints with multiple symbols~~
