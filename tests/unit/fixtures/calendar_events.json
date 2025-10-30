@@ -1,0 +1,691 @@
+{
+  "finance": {
+    "result": {
+      "economicEvents": [
+        {
+          "timestamp": 1756094400000,
+          "timestampString": "2025-08-25",
+          "timezone": "America/New_York",
+          "count": 1,
+          "totalCount": 1,
+          "records": [
+            {
+              "economicEvents": true,
+              "event": "Non-Farm Payrolls",
+              "countryCode": "CH",
+              "eventTime": 1756103400000,
+              "period": "Q2",
+              "actual": "5.53",
+              "prior": "5.51",
+              "description": "State Secretariat for Economic Affairs Includes both full time and part time work. "
+            }
+          ]
+        },
+        {
+          "timestamp": 1756353600000,
+          "timestampString": "2025-08-28",
+          "timezone": "America/New_York",
+          "count": 2,
+          "totalCount": 2,
+          "records": [
+            {
+              "economicEvents": true,
+              "event": "GDP YY",
+              "countryCode": "CH",
+              "eventTime": 1756364400000,
+              "period": "Q2",
+              "actual": "1.2",
+              "prior": "2",
+              "revisedFrom": "1.8",
+              "description": "Gross National Product and Gross Domestic Product is the total value of the finished goods and services produced in the economy. It is not a precise measure of national economic well-being but expressed in volume (adjusted for inflation) it is the closest single number we have got to such a measure. It is the sum of final expenditures; Export of goods and services, Imports of goods and services, Private Consumption, Government Consumption, Gross Fixed Capital Formation and Increases/Decreases(-) in stocks. The difference between Gross National Product and Gross Domestic Product is the Net Factor Income/Payments abroad. Stocks and flows are measured according to their exchange value i.e. the value at which flows and stocks are in fact, or should be, exchanged for cash. Market prices are thus ESAs basic reference for valuation. "
+            },
+            {
+              "economicEvents": true,
+              "event": "GDP QQ",
+              "countryCode": "CH",
+              "eventTime": 1756364400000,
+              "period": "Q2",
+              "actual": "0.1",
+              "prior": "0.5",
+              "revisedFrom": "0.4",
+              "description": "Gross National Product and Gross Domestic Product is the total value of the finished goods and services produced in the economy. It is not a precise measure of national economic well-being but expressed in volume (adjusted for inflation) it is the closest single number we have got to such a measure. It is the sum of final expenditures; Export of goods and services, Imports of goods and services, Private Consumption, Government Consumption, Gross Fixed Capital Formation and Increases/Decreases(-) in stocks. The difference between Gross National Product and Gross Domestic Product is the Net Factor Income/Payments abroad. Stocks and flows are measured according to their exchange value i.e. the value at which flows and stocks are in fact, or should be, exchanged for cash. Market prices are thus ESAs basic reference for valuation. "
+            }
+          ]
+        },
+        {
+          "timestamp": 1756440000000,
+          "timestampString": "2025-08-29",
+          "timezone": "America/New_York",
+          "count": 4,
+          "totalCount": 4,
+          "records": [
+            {
+              "economicEvents": true,
+              "event": "GDP QQ Annualized",
+              "countryCode": "CA",
+              "eventTime": 1756470600000,
+              "period": "Q2",
+              "actual": "-1.6",
+              "prior": "2.2",
+              "revisedFrom": "2",
+              "description": "Expenditure Approach Gross National Product and Gross Domestic Product is the total value of the finished goods and services produced in the economy. It is not a precise measure of national economic well-being but expressed in volume (adjusted for inflation) it is the closest single number we have got to such a measure. It is the sum of final expenditures; Export of goods and services, Imports of goods and services, Private Consumption, Government Consumption, Gross Fixed Capital Formation and Increases/Decreases(-) in stocks. The difference between Gross National Product and Gross Domestic Product is the Net Factor Income/Payments abroad. "
+            },
+            {
+              "economicEvents": true,
+              "event": "GDP QQ",
+              "countryCode": "CA",
+              "eventTime": 1756470600000,
+              "period": "Q2",
+              "actual": "-0.4",
+              "prior": "0.5",
+              "description": "Expenditure Approach Gross National Product and Gross Domestic Product is the total value of the finished goods and services produced in the economy. It is not a precise measure of national economic well-being but expressed in volume (adjusted for inflation) it is the closest single number we have got to such a measure. It is the sum of final expenditures; Export of goods and services, Imports of goods and services, Private Consumption, Government Consumption, Gross Fixed Capital Formation and Increases/Decreases(-) in stocks. The difference between Gross National Product and Gross Domestic Product is the Net Factor Income/Payments abroad. "
+            },
+            {
+              "economicEvents": true,
+              "event": "GDP Implicit Price QQ",
+              "countryCode": "CA",
+              "eventTime": 1756470600000,
+              "period": "Q2",
+              "actual": "0",
+              "prior": "0.6",
+              "revisedFrom": "0.7",
+              "description": "Canada, Implicit Price Deflator, Total (GDP), SA, CAD "
+            },
+            {
+              "economicEvents": true,
+              "event": "GDP Quarterly YY*",
+              "countryCode": "IN",
+              "eventTime": 1756463400000,
+              "period": "Q1",
+              "actual": "7.8",
+              "prior": "7.4",
+              "description": "The national accounts feature Gross Domestic Product (GDP) as a measure of the output of the economy at factor cost. The factor cost measure excludes all taxes on production, taxes on products and subsidies. The national accounts statistics are compiled following the United Nation's System of National Accounts (SNA 1968). Gross National Product and Gross Domestic Product is the total value of the finished goods and services produced in the economy. It is not a precise measure of national economic well-being but expressed in volume (adjusted for inflation) It is the sum of final expenditures; Export of goods and services, Imports of goods and services, Private Consumption, Government Consumption, Gross Fixed Capital Formation and Increases/Decreases(-) in stocks. The difference between Gross National Product and Gross Domestic Product is the Net Factor Income/Payments abroad."
+            }
+          ]
+        },
+        {
+          "timestamp": 1756699200000,
+          "timestampString": "2025-09-01",
+          "timezone": "America/New_York",
+          "count": 1,
+          "totalCount": 1,
+          "records": [
+            {
+              "economicEvents": true,
+              "event": "Trade Balance-RBI*",
+              "countryCode": "IN",
+              "eventTime": 1756728000000,
+              "period": "Q2",
+              "actual": "-68.5",
+              "prior": "-59.5",
+              "description": "Balance of payments is a set of accounts recording all economic transactions between the residents of the country and the rest of the world in a given period of time, usually one year. Payments into the country are called credits, payments out of the country are called debits. Current account records the values of the following: - trade balance exprots and imports of goods and services - income payments and expenditure interest, dividends, salaries - unilateral transfers aid, taxes, one-way gifths It shows how a country deals with the global economy on a non-investment basis."
+            }
+          ]
+        },
+        {
+          "timestamp": 1756785600000,
+          "timestampString": "2025-09-02",
+          "timezone": "America/New_York",
+          "count": 2,
+          "totalCount": 2,
+          "records": [
+            {
+              "economicEvents": true,
+              "event": "GDP QQ",
+              "countryCode": "BR",
+              "eventTime": 1756814400000,
+              "period": "Q2",
+              "actual": "0.4",
+              "prior": "1.4",
+              "revisedFrom": "1.3",
+              "description": "GDP measures summary value of goods and services generated in a relevant country or region. A region's gross domestic product, or GDP, is one of the ways for measuring the size of its economy. Expenditure approach - Total expenditures on all finished goods and services produced within the economy. Calculation: GDP using the expenditure approach is derived as the sum of all final expenditures, changes in inventories and exports of goods and services less imports of goods and services. Final consumption expenditure - Expenditure incurred by resident institutional units on goods or services that are used for the direct satisfaction of individual needs or wants or the collective needs of members of the community it may take place both on the domestic territory and abroad. The institutional units incurring in the \"Final consumption expenditure\" are: households, non-profit institutions serving households (NPISH) and general government. Final consumption expenditure by general government - expenditure, including imputed expenditure, incurred by general government on both individual consumption goods and services and collective consumption services."
+            },
+            {
+              "economicEvents": true,
+              "event": "GDP YY",
+              "countryCode": "BR",
+              "eventTime": 1756814400000,
+              "period": "Q2",
+              "actual": "2.2",
+              "prior": "2.9",
+              "description": "GDP measures summary value of goods and services generated in a relevant country or region. A region's gross domestic product, or GDP, is one of the ways for measuring the size of its economy. Expenditure approach - Total expenditures on all finished goods and services produced within the economy. Calculation: GDP using the expenditure approach is derived as the sum of all final expenditures, changes in inventories and exports of goods and services less imports of goods and services. Final consumption expenditure - Expenditure incurred by resident institutional units on goods or services that are used for the direct satisfaction of individual needs or wants or the collective needs of members of the community it may take place both on the domestic territory and abroad. The institutional units incurring in the \"Final consumption expenditure\" are: households, non-profit institutions serving households (NPISH) and general government. Final consumption expenditure by general government - expenditure, including imputed expenditure, incurred by general government on both individual consumption goods and services and collective consumption services."
+            }
+          ]
+        },
+        {
+          "timestamp": 1757044800000,
+          "timestampString": "2025-09-05",
+          "timezone": "America/New_York",
+          "count": 4,
+          "totalCount": 4,
+          "records": [
+            {
+              "economicEvents": true,
+              "event": "Employment Final YY *",
+              "countryCode": "EU",
+              "eventTime": 1757062800000,
+              "period": "Q2",
+              "actual": "0.6",
+              "prior": "0.7",
+              "description": "Employment in the whole economy.Data for employment are based on the ESA 95. Due to differences in coverage, quarterly data are not fully consistent with annual data.The series, including the historical data, covers all the member states that have adopted euro at the time to which the latest statistics relate. That is, when a new country is added to EA aggregates, the historical data is recalculated including the new country. "
+            },
+            {
+              "economicEvents": true,
+              "event": "Employment Final QQ *",
+              "countryCode": "EU",
+              "eventTime": 1757062800000,
+              "period": "Q2",
+              "actual": "0.1",
+              "prior": "0.1",
+              "description": "Employment in the whole economy.Data for employment are based on the ESA 95. Due to differences in coverage, quarterly data are not fully consistent with annual data.The series, including the historical data, covers all the member states that have adopted euro at the time to which the latest statistics relate. That is, when a new country is added to EA aggregates, the historical data is recalculated including the new country. "
+            },
+            {
+              "economicEvents": true,
+              "event": "GDP Revised QQ *",
+              "countryCode": "EU",
+              "eventTime": 1757062800000,
+              "period": "Q2",
+              "actual": "0.1",
+              "prior": "0.1",
+              "description": "Gross domestic product at market prices is the final result of the production activity of resident producer units.It corresponds to the economy's output of goods and services less intermediate consumption, plus VAT on products and net taxes (i.e. taxes less subsidies) linked to imports. Valuation at constant prices means valuing the flows and stocks in an accounting period at the prices of the reference period "
+            },
+            {
+              "economicEvents": true,
+              "event": "GDP Revised YY *",
+              "countryCode": "EU",
+              "eventTime": 1757062800000,
+              "period": "Q2",
+              "actual": "1.5",
+              "prior": "1.4",
+              "description": "Gross domestic product at market prices is the final result of the production activity of resident producer units. (ESA 1995, 8.89) It corresponds to the economy&apos;s output of goods and services less intermediate consumption, plus VAT on products and net taxes (i.e. taxes less subsidies) linked to imports. Valuation at constant prices means valuing the flows and stocks in an accounting period at the prices of the reference period. (ESA 1995. 1.56) "
+            }
+          ]
+        },
+        {
+          "timestamp": 1757649600000,
+          "timestampString": "2025-09-12",
+          "timezone": "America/New_York",
+          "count": 2,
+          "totalCount": 2,
+          "records": [
+            {
+              "economicEvents": true,
+              "event": "GDP YY Quarterly Revised",
+              "countryCode": "RU",
+              "eventTime": 1757692800000,
+              "period": "Q2",
+              "actual": "1.1",
+              "prior": "1.1"
+            },
+            {
+              "economicEvents": true,
+              "event": "Capacity Utilization*",
+              "countryCode": "CA",
+              "eventTime": 1757680200000,
+              "period": "Q2",
+              "actual": "79.3",
+              "prior": "80.1",
+              "revisedFrom": "79.9",
+              "description": "Capacity utilization is the extent to which a country actually uses its potential production capacity. 100% denotes full capacity being used. This indicator rises as a response to market demand growth. If demand weakens, capacity utilization will diminish. Capacity utilization is a useful indicator of inflation pressures. It is believed that capacity utilization above 82-85% propels price inflation. All else constant, the lower capacity utilization falls (relative to the trend capacity utilization rate), the better the bond market reacts to it. Strong capacity utilization (above the trend rate) leads to bonds being sold off, as investors expect higher interest rates (which decreases bond prices) to offset the higher expected rate of inflation. "
+            }
+          ]
+        },
+        {
+          "timestamp": 1757995200000,
+          "timestampString": "2025-09-16",
+          "timezone": "America/New_York",
+          "count": 1,
+          "totalCount": 1,
+          "records": [
+            {
+              "economicEvents": true,
+              "event": "Wages In Euro Zone",
+              "countryCode": "EU",
+              "eventTime": 1758013200000,
+              "period": "Q2",
+              "actual": "3.7",
+              "prior": "3.4",
+              "revisedFrom": "3.5",
+              "description": "\"Breakdown of total nominal hourly labour costs, whole economy: wages.% change from previous year, not seasonally adjusted. In addition to employees gross earnings, total labour costs include indirect costs such as employers social contributions and taxes connected to the employment. Gross earnings or wages are those paid directly and regularly by the employer at the time of each wage payment. They include the value of any social contributions, income taxes, etc. payable by the employee, even if actually withheld by the employer and paid directly to social insurance schemes, tax authorities, etc. on behalf of the employee. Hourly labour cost indices show the short-term development of the total cost for employers of employing the labour force. These indices are calculated by Member States using jointly-agreed definitions. When calculating these indices, all enterprises, whatever their size, and all employees should be taken into account.Labour costs include gross wages and salaries, employers social contributions and taxes net of subsidies connected to employment.Labour costs here do not include costs for occupational training or other costs such as those for canteens or recruitment.Hourly labour costs are obtained by dividing the total of these costs for all employees in a defined country by all hours worked by these employees. Here, instead of hours worked, hours paid/number of employees might have been used as a measure of volume of labour.\" "
+            }
+          ]
+        },
+        {
+          "timestamp": 1758772800000,
+          "timestampString": "2025-09-25",
+          "timezone": "America/New_York",
+          "count": 3,
+          "totalCount": 3,
+          "records": [
+            {
+              "economicEvents": true,
+              "event": "GDP Final",
+              "countryCode": "US",
+              "eventTime": 1758803400000,
+              "period": "Q2",
+              "actual": "3.8",
+              "prior": "3.3"
+            },
+            {
+              "economicEvents": true,
+              "event": "Core PCE Prices Fnal",
+              "countryCode": "US",
+              "eventTime": 1758803400000,
+              "period": "Q2",
+              "actual": "2.6",
+              "prior": "2.5"
+            },
+            {
+              "economicEvents": true,
+              "event": "SNB Policy Rate",
+              "countryCode": "CH",
+              "eventTime": 1758785400000,
+              "period": "Q3",
+              "actual": "0",
+              "prior": "0",
+              "description": " Policy Rates, 3 Month LIBOR Target Range, Mid Price "
+            }
+          ]
+        },
+        {
+          "timestamp": 1759204800000,
+          "timestampString": "2025-09-30",
+          "timezone": "America/New_York",
+          "count": 2,
+          "totalCount": 2,
+          "records": [
+            {
+              "economicEvents": true,
+              "event": "GDP YY",
+              "countryCode": "GB",
+              "eventTime": 1759212000000,
+              "period": "Q2",
+              "actual": "1.4",
+              "prior": "1.2",
+              "description": "chained volume measure Gross National Product and Gross Domestic Product is the total value of the finished goods and services produced in the economy. It is not a precise measure of national economic well-being but expressed in volume (adjusted for inflation) it is the closest single number we have got to such a measure. It is the sum of final expenditures; Exports of goods and services, Imports of goods and services, Private Consumption, Government Consumption, Gross Fixed Capital Formation and Increases/Decreases(-) in stocks. The difference between Gross National Product and Gross Domestic Product is the Net Factor Income/Payments abroad. Stocks and flows are measured according to their exchange value i.e. the value at which flows and stocks are in fact, or should be, exchanged for cash. Market prices are thus ESAs basic reference for valuation. "
+            },
+            {
+              "economicEvents": true,
+              "event": "GDP QQ",
+              "countryCode": "GB",
+              "eventTime": 1759212000000,
+              "period": "Q2",
+              "actual": "0.3",
+              "prior": "0.3",
+              "description": "Gross National Product and Gross Domestic Product is the total value of the finished goods and services produced in the economy. It is not a precise measure of national economic well-being but expressed in volume (adjusted for inflation) it is the closest single number we have got to such a measure. It is the sum of final expenditures; Exports of goods and services, Imports of goods and services, Private Consumption, Government Consumption, Gross Fixed Capital Formation and Increases/Decreases(-) in stocks. The difference between Gross National Product and Gross Domestic Product is the Net Factor Income/Payments abroad. Stocks and flows are measured according to their exchange value i.e. the value at which flows and stocks are in fact, or should be, exchanged for cash. "
+            }
+          ]
+        },
+        {
+          "timestamp": 1760846400000,
+          "timestampString": "2025-10-19",
+          "timezone": "America/New_York",
+          "count": 1,
+          "totalCount": 1,
+          "records": [
+            {
+              "economicEvents": true,
+              "event": "GDP YY",
+              "countryCode": "CN",
+              "eventTime": 1760925600000,
+              "period": "Q3",
+              "actual": "4.8",
+              "prior": "5.2",
+              "description": "China, Production Approach, Gross Domestic Product, Total, growth rate, Constant Prices, Chg Y/Y GDP measures summary value of goods and services generated in a relevant country or region. A region's gross domestic product, or GDP, is one of the ways for measuring the size of its economy. GDP using the production approach is derived as the sum of gross value added for each industry plus taxes less subsidies on products. Market influence of GDP Unexpectedly high quarterly GDP growth is perceived to be potentially inflationary if the economy is close to full capacity; this, in turn, causes bond prices to drop and yields and interest rates to rise.Larger than expected GDP growth will tend to appreciate the exchange rate as it is expected to lead to higher interest rates. "
+            }
+          ]
+        },
+        {
+          "timestamp": 1760932800000,
+          "timestampString": "2025-10-20",
+          "timezone": "America/New_York",
+          "count": 2,
+          "totalCount": 2,
+          "records": [
+            {
+              "economicEvents": true,
+              "event": "Producer Prices MM",
+              "countryCode": "CA",
+              "eventTime": 1760963400000,
+              "period": "Sep",
+              "actual": "0.8",
+              "prior": "0.5",
+              "revisedFrom": "0.2",
+              "description": "The Industrial Product Price index (IPPI) reflects the prices that producers receive as the goods leave the plant gate. It does not reflect what the consumer pays. Unlike the consumer price index, the IPPI excludes indirect taxes and all the costs that occur between the time when a goods leaves the plant and the time when the final user takes possession of it, including the transportation, wholesale and retail costs. "
+            },
+            {
+              "economicEvents": true,
+              "event": "Producer Prices YY",
+              "countryCode": "CA",
+              "eventTime": 1760963400000,
+              "period": "Sep",
+              "actual": "5.5",
+              "prior": "4",
+              "revisedFrom": "3.7",
+              "description": "The Industrial Product Price index (IPPI) reflects the prices that producers receive as the goods leave the plant gate. It does not reflect what the consumer pays. Unlike the consumer price index, the IPPI excludes indirect taxes and all the costs that occur between the time when a goods leaves the plant and the time when the final user takes possession of it, including the transportation, wholesale and retail costs. "
+            }
+          ]
+        },
+        {
+          "timestamp": 1761192000000,
+          "timestampString": "2025-10-23",
+          "timezone": "America/New_York",
+          "count": 6,
+          "totalCount": 6,
+          "records": [
+            {
+              "economicEvents": true,
+              "event": "CPI, Core Nationwide YY",
+              "countryCode": "JP",
+              "eventTime": 1761262200000,
+              "period": "Sep",
+              "actual": "2.9",
+              "prior": "2.7",
+              "description": "The consumer price index (CPI) is a measure of change over a specified period of time in the general level of prices of goods and services that a given population acquires, uses or pays for consumption. It compares a household's cost for a specific basket of finished goods and services with the cost of the same basket during an earlier benchmark period. "
+            },
+            {
+              "economicEvents": true,
+              "event": "CPI, Overall Nationwide",
+              "countryCode": "JP",
+              "eventTime": 1761262200000,
+              "period": "Sep",
+              "actual": "2.9",
+              "prior": "2.7",
+              "description": "The consumer price index (CPI) is a measure of change over a specified period of time in the general level of prices of goods and services that a given population acquires, uses or pays for consumption. It compares a household's cost for a specific basket of finished goods and services with the cost of the same basket during an earlier benchmark period "
+            },
+            {
+              "economicEvents": true,
+              "event": "GfK Consumer Confidence",
+              "countryCode": "GB",
+              "eventTime": 1761260460000,
+              "period": "Oct",
+              "actual": "-17",
+              "prior": "-19",
+              "description": "The UK Consumer Confidence Survey from GfK NOP was conducted amongst a sample of 2000 individuals aged 16+ on behalf of the European Commission.Quotas are imposed on age, sex, region and social class to ensure the final sample is representative of the UK population. The figures contained within the Consumer Confidence Barometer have an estimated margin of error of +/-2%.Results for the Consumer Confidence Barometer are available on the last working day of each month at 10.30am "
+            },
+            {
+              "economicEvents": true,
+              "event": "Consumer Confid. Flash *",
+              "countryCode": "EU",
+              "eventTime": 1761228000000,
+              "period": "Oct",
+              "actual": "-14.2",
+              "prior": "-14.9",
+              "description": " The indicator is the arithmetic average of the balances (%) for the present and the future business situation, and for stocks - with inverted sign. Balances: i.e. differences between the percentages of respondents giving positive and negative replies. "
+            },
+            {
+              "economicEvents": true,
+              "event": "Existing Home Sales",
+              "countryCode": "US",
+              "eventTime": 1761228000000,
+              "period": "Sep",
+              "actual": "4.06",
+              "prior": "4",
+              "description": "Construction industry provides information on construction output and activity. Such information gives an insight into the supply on the housing and construction market. Rising number of new construction starts or value of construction completed reflects higher consumer and business optimism. Expanding construction indicates growth in the housing market and predicts an increase in the overall economy. However, an excessive supply of new buildings may result in a drop in housing prices. The construction industry is one of the first to go into a recession when the economy declines but also to recover as conditions improve. "
+            },
+            {
+              "economicEvents": true,
+              "event": "Retail Sales Ex-Autos MM",
+              "countryCode": "CA",
+              "eventTime": 1761222600000,
+              "period": "Aug",
+              "actual": "0.7",
+              "prior": "-1.2",
+              "revisedFrom": "-1.1",
+              "description": "The North American Industry Classification System (NAICS) was introduced in June 2004. "
+            }
+          ]
+        },
+        {
+          "timestamp": 1761278400000,
+          "timestampString": "2025-10-24",
+          "timezone": "America/New_York",
+          "count": 4,
+          "totalCount": 4,
+          "records": [
+            {
+              "economicEvents": true,
+              "event": "U Mich Sentiment Final*",
+              "countryCode": "US",
+              "eventTime": 1761314400000,
+              "period": "Oct",
+              "actual": "53.6",
+              "prior": "55"
+            },
+            {
+              "economicEvents": true,
+              "event": "New Housing Price Index*",
+              "countryCode": "CA",
+              "eventTime": 1761309000000,
+              "period": "Sep",
+              "actual": "-0.2",
+              "prior": "-0.3",
+              "description": "The index measures changes of contractor's selling prices of new residential houses. House price index is a statistic designed to reflect the average change of house prices across the country or a certain area. It ensures that the relative importance of different property types in different regions remains fixed throughout the life of the index. Different adjustment must be used as no two houses are identical. Therefore characteristics such as physical attributes of a house or its location should be included in the calculation if the index. "
+            },
+            {
+              "economicEvents": true,
+              "event": "Retail Sales MM",
+              "countryCode": "GB",
+              "eventTime": 1761285600000,
+              "period": "Sep",
+              "actual": "0.5",
+              "prior": "0.5",
+              "revisedFrom": "0.6",
+              "description": "Retail sales data represents total consumer purchase from retail stores. It provides valuable information about consumer spending which makes up the consumption part of GDP. The most volatile components like autos, gas prices and food prices are often removed from the report to show more underlying demand patterns as changes in sales in these categories are frequently a result of price changes. It is not adjusted for inflation. Spending on services is not included. Rising retail sales indicate stronger economic growth. However, if the increase is larger than forecast, it may be inflationary. "
+            },
+            {
+              "economicEvents": true,
+              "event": "Retail Sales YY",
+              "countryCode": "GB",
+              "eventTime": 1761285600000,
+              "period": "Sep",
+              "actual": "1.5",
+              "prior": "0.7",
+              "description": "Retail sales data represents total consumer purchase from retail stores. It provides valuable information about consumer spending which makes up the consumption part of GDP. The most volatile components like autos, gas prices and food prices are often removed from the report to show more underlying demand patterns as changes in sales in these categories are frequently a result of price changes. It is not adjusted for inflation. Spending on services is not included. Rising retail sales indicate stronger economic growth. However, if the increase is larger than forecast, it may be inflationary. "
+            }
+          ]
+        },
+        {
+          "timestamp": 1761624000000,
+          "timestampString": "2025-10-28",
+          "timezone": "America/New_York",
+          "count": 5,
+          "totalCount": 5,
+          "records": [
+            {
+              "economicEvents": true,
+              "event": "Non-Farm Payrolls",
+              "countryCode": "US",
+              "eventTime": 1761696000000,
+              "period": "Sep",
+              "prior": "22",
+              "description": "Employees on Nonagricultural Payrolls measures the number people employed in all activities except agriculture.Employment data, except those for the Federal Government, refer to persons on establishment payrolls who received pay for any part of the pay period which includes the 12th of the month. For Federal Government establishments,employment figures represent the number of persons who occupied positions on the last day of the calendar month. Intermittent workers are counted if they performed any service during the month. The data exclude proprietors, the self-employed, unpaid volunteer or family workers, farm workers, and domestic workers. Salaried officers of corporations are included. Government employment covers only civilian employees; military personnel are excluded. Employees of the Central Intelligence Agency and the National Security Agency also are excluded. Persons on establishment payrolls who are on paid sick leave (when pay is received directly from the firm), on paid holiday, on paid vacation, or work during a part of the pay period even though they are unemployed or on strike during the rest of the period are counted as employed. "
+            },
+            {
+              "economicEvents": true,
+              "event": "Unemployment Rate",
+              "countryCode": "US",
+              "eventTime": 1761696000000,
+              "period": "Sep",
+              "prior": "4.3",
+              "description": "The unemployment rate represents the number of unemployed persons expressed as a percentage of the labour force. The unemployment rate for a particular age/sex group is the number of unemployed in that group expressed as a percentage of the labour force for that group. "
+            },
+            {
+              "economicEvents": true,
+              "event": "Employment Trends*",
+              "countryCode": "US",
+              "eventTime": 1761696000000,
+              "period": "Sep",
+              "prior": "106.41",
+              "description": "The Employment Trends Index (ETI)\u2122 aggregates eight labor-market indicators each of which has proven accurate in its own area. Aggregating individual indicators into a composite index filters out so-called \"noise\" to show underlying trends more clearly. The eight labor-market indicators aggregated into the Employment Trends Index (ETI)\u2122 include: Percentage of respondents who say they find \"Jobs Hard to Get\" (The Conference Board Consumer Confidence Survey). Initial Claims for Unemployment Insurance (U.S. Department of Labor). Percentage of Firms With Positions Not Able to Fill Right Now (National Federation of Independent Business). Number of employees hired by the temporary-help industry (U.S. Bureau of Labor Statistics). Part-time Workers for Economic Reasons (BLS). Job Openings (BLS). Industrial Production (Federal Reserve Board). Real Manufacturing and Trade Sales (U.S. Bureau of Economic Analysis). "
+            },
+            {
+              "economicEvents": true,
+              "event": "GDP YY Monthly*",
+              "countryCode": "RU",
+              "eventTime": 1761696000000,
+              "period": "Sep",
+              "actual": "0.9",
+              "prior": "0.4",
+              "description": " A region's gross domestic product, or GDP, is one of the ways for measuring the size of its economy. The GDP of a country is defined as the market value of all final goods and services produced within a country in a given period of time. It is also considered the sum of value added at every stage of production of all final goods and services produced within a country in a given period of time "
+            },
+            {
+              "economicEvents": true,
+              "event": "Industrial Output YY*",
+              "countryCode": "IN",
+              "eventTime": 1761647400000,
+              "period": "Sep",
+              "actual": "4",
+              "prior": "4",
+              "revisedFrom": "4.1",
+              "description": "Industry is a basic category of business activity. Firms in the same industry are on the same side of the market, produce goods which are close substitutes and compete for the same customers. For statistical purposes, industries are categorized following a uniform classification code such as Standard Industrial Classification (SIC). Changes in the volume of the physical output of the nations factories, mines and utilities are meaured by the index of industrial production. The figure is calculated as a weighted aggregate of goods and reported in headlines as a percent change from previous months. It is often adjusted by season or weather conditions and thus volatile. However, it is used as a leading indicator and helps in forecasting GDP changes. Rising industrial production figures signify increasing economic growth and can positively influence the sentiment towards local currency."
+            }
+          ]
+        },
+        {
+          "timestamp": 1761710400000,
+          "timestampString": "2025-10-29",
+          "timezone": "America/New_York",
+          "count": 9,
+          "totalCount": 9,
+          "records": [
+            {
+              "economicEvents": true,
+              "event": "Unemployment Rate",
+              "countryCode": "US",
+              "eventTime": 1761782400000,
+              "period": "Sep",
+              "prior": "4.3",
+              "description": "The unemployment rate represents the number of unemployed persons expressed as a percentage of the labour force. The unemployment rate for a particular age/sex group is the number of unemployed in that group expressed as a percentage of the labour force for that group. "
+            },
+            {
+              "economicEvents": true,
+              "event": "Non-Farm Payrolls",
+              "countryCode": "US",
+              "eventTime": 1761782400000,
+              "period": "Sep",
+              "prior": "22",
+              "description": "Employees on Nonagricultural Payrolls measures the number people employed in all activities except agriculture.Employment data, except those for the Federal Government, refer to persons on establishment payrolls who received pay for any part of the pay period which includes the 12th of the month. For Federal Government establishments,employment figures represent the number of persons who occupied positions on the last day of the calendar month. Intermittent workers are counted if they performed any service during the month. The data exclude proprietors, the self-employed, unpaid volunteer or family workers, farm workers, and domestic workers. Salaried officers of corporations are included. Government employment covers only civilian employees; military personnel are excluded. Employees of the Central Intelligence Agency and the National Security Agency also are excluded. Persons on establishment payrolls who are on paid sick leave (when pay is received directly from the firm), on paid holiday, on paid vacation, or work during a part of the pay period even though they are unemployed or on strike during the rest of the period are counted as employed. "
+            },
+            {
+              "economicEvents": true,
+              "event": "Employment Trends*",
+              "countryCode": "US",
+              "eventTime": 1761782400000,
+              "period": "Sep",
+              "prior": "106.41",
+              "description": "The Employment Trends Index (ETI)\u2122 aggregates eight labor-market indicators each of which has proven accurate in its own area. Aggregating individual indicators into a composite index filters out so-called \"noise\" to show underlying trends more clearly. The eight labor-market indicators aggregated into the Employment Trends Index (ETI)\u2122 include: Percentage of respondents who say they find \"Jobs Hard to Get\" (The Conference Board Consumer Confidence Survey). Initial Claims for Unemployment Insurance (U.S. Department of Labor). Percentage of Firms With Positions Not Able to Fill Right Now (National Federation of Independent Business). Number of employees hired by the temporary-help industry (U.S. Bureau of Labor Statistics). Part-time Workers for Economic Reasons (BLS). Job Openings (BLS). Industrial Production (Federal Reserve Board). Real Manufacturing and Trade Sales (U.S. Bureau of Economic Analysis). "
+            },
+            {
+              "economicEvents": true,
+              "event": "Initial Jobless Clm",
+              "countryCode": "US",
+              "eventTime": 1761782400000,
+              "prior": "218",
+              "description": "U.S Labor Department report of initial state jobless benefit claims. Unemployment insurance data for regular state programs. Initial claims - Any notice of unemployment filed: (1) to request a determination of entitlement to and eligibility for compensation or (2) to begin a second or subsequent period of eligibility within a benefit year or period of eligibility. "
+            },
+            {
+              "economicEvents": true,
+              "event": "Fed Funds Tgt Rate",
+              "countryCode": "US",
+              "eventTime": 1761760800000,
+              "actual": "4",
+              "prior": "4.12",
+              "description": "The federal funds rate is the interest rate at which depository institutions lend balances at the Federal Reserve to other depository institutions overnight. The Federal Reserve's objective for open market operations has varied over the years. During the 1980s, the focus gradually shifted toward attaining a specified level of the federal funds rate, a process that was largely complete by the end of the decade. Beginning in 1994, the FOMC began announcing changes in its policy stance, and in 1995 it began to explicitly state its target level for the federal funds rate. Since February 2000, the statement issued by the FOMC shortly after each of its meetings usually has included the Committee's assessment of the risks to the attainment of its long-run goals of price stability and sustainable economic growth. "
+            },
+            {
+              "economicEvents": true,
+              "event": "Unemployment Rate",
+              "countryCode": "RU",
+              "eventTime": 1761753600000,
+              "period": "Sep",
+              "actual": "2.2",
+              "prior": "2.1",
+              "description": " The unemployment rate represents the number of unemployed persons expressed as a percentage of the labour force. The unemployment rate for a particular age/sex group is the number of unemployed in that group expressed as a percentage of the labour force for that group. "
+            },
+            {
+              "economicEvents": true,
+              "event": "Pending Homes Index",
+              "countryCode": "US",
+              "eventTime": 1761746400000,
+              "period": "Sep",
+              "actual": "74.8",
+              "prior": "74.7",
+              "revisedFrom": "74.8",
+              "description": "The Pending Home Sales Index is based on a large national sample, typically representing about 20 percent of transactions for existing-home sales. In developing the model for the index, it was demonstrated that the level of monthly sales-contract activity from 2001 through 2004 closely parallels the level of closed existing-home sales in the following two months. "
+            },
+            {
+              "economicEvents": true,
+              "event": "BoC Rate Decision",
+              "countryCode": "CA",
+              "eventTime": 1761745500000,
+              "actual": "2.25",
+              "prior": "2.5",
+              "description": " THE TARGET FOR THE OVERNIGHT RATE is the main tool used by the Bank of Canada to conduct monetary policy. It tells major financial institutions the average interest rate the Bank of Canada wants to see in the marketplace where they lend each other money for one day, or \"overnight.\" When the Bank changes the Overnight Rate Target, this change usually affects other interest rates, including mortgage rates and prime rates charged by commercial banks. When the Bank changes the Overnight Rate Target, this sends a clear signal about the direction in which it wants short-term interest rates to go. These changes usually lead to moves in the prime rate at commercial banks, which serves as a benchmark for many of their loans. These changes can also indirectly affect mortgage rates, and the interest paid to consumers on bank accounts, GICs, and other savings. "
+            },
+            {
+              "economicEvents": true,
+              "event": "Consumer Confid. Index*",
+              "countryCode": "JP",
+              "eventTime": 1761714000000,
+              "period": "Oct",
+              "actual": "35.8",
+              "prior": "35.3",
+              "description": "The survey is conducted on a sample of 5040 households. One-person households, non-Japanese households and student households are excluded from the survey. Consumer perceptions of the following four categories are surveyed: overall livelihood, income growth, employment, and willingness to buy durable goods. Respondents are asked to evaluate on a scale of one to five what they consider the prospects to be for the five subjects over the next six months. Points are then allotted in accordance with the one-to-five scale for each category based on the anticipated effects on consumption. The consumer perception index is calculated by computing the weighted average of the points of the results (component ratio). The consumer confidence index (original figure) is then calculated by simply averaging the four consumer perception indexes (original figures). "
+            }
+          ]
+        },
+        {
+          "timestamp": 1761796800000,
+          "timestampString": "2025-10-30",
+          "timezone": "America/New_York",
+          "count": 4,
+          "totalCount": 4,
+          "records": [
+            {
+              "economicEvents": true,
+              "event": "IGP-M Inflation Index*",
+              "countryCode": "BR",
+              "eventTime": 1761822000000,
+              "period": "Oct",
+              "actual": "-0.36",
+              "prior": "0.42",
+              "description": "An index that measures and tracks the changes in price of goods in the stages before the retail level. Wholesale price indexes (WPIs) report monthly to show the average price changes of goods sold in bulk, and they are a group of the indicators that follow growth in the economy. Although some countries still use the WPIs as a measure of inflation, many countries, including the United States, use the producer price index (PPI) instead."
+            },
+            {
+              "economicEvents": true,
+              "event": "Unemployment Rate",
+              "countryCode": "EU",
+              "eventTime": 1761818400000,
+              "period": "Sep",
+              "actual": "6.3",
+              "prior": "6.3",
+              "description": "Unemployment rates represent unemployed persons as a percentage of the labour force. The labour force is the total number of people employed and unemployed. Unemployed persons comprise persons aged 15 to 74 who were: a. Without work during the reference week, b. Currently available for work, i.e. were available for paid employment or self-employment before the end of the two weeks following the reference week, c. Actively seeking work, i.e. had taken specific steps in the four weeks period ending with the reference week to seek paid employment or self-employment or who found a job to start later, i.e. within a period of at most three months. This series covers euro area with 13 Member States (Belgium, Germany, Spain, France, Ireland, Italy, Luxembourg, Netherlands, Austria, Portugal, Slovenia, Finland. "
+            },
+            {
+              "economicEvents": true,
+              "event": "Consumer Confid. Final *",
+              "countryCode": "EU",
+              "eventTime": 1761818400000,
+              "period": "Oct",
+              "actual": "-14.2",
+              "prior": "-14.2",
+              "description": "The indicator represents the arithmetic average of the following questions: - Financial situation over the next 12 months - General economic situation over the next 12 months - Unemployment expectations over the next 12 months - Savings over the next 12 months. - Balances: i.e. differences between the percentages of respondents giving positive and negative replies. "
+            },
+            {
+              "economicEvents": true,
+              "event": "KOF Indicator",
+              "countryCode": "CH",
+              "eventTime": 1761811200000,
+              "period": "Oct",
+              "actual": "101.3",
+              "prior": "98",
+              "description": "The previous KOF economic barometer has been published on monthly basis. Following a period of reappraisal and development, this is now being replaced with immediate effect by a new KOF economic barometer with a multi- sectoral design. The new KOF economic barometer will also be published monthly. In the new version, economic patterns in individual sectors (banking, construction and other sectors) will be recorded separately using specific indicators, and then compiled to create the new KOF barometer. In addition to the new design, a new filter method is also being used. "
+            }
+          ]
+        }
+      ]
+    },
+    "error": null
+  }
+}

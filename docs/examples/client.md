@@ -36,6 +36,22 @@ if __name__ == '__main__':
     asyncio.run(main())
 ```
 
+### Quote Type Endpoint
+
+```python
+import asyncio
+
+from yafin import AsyncClient
+
+async def main() -> None:
+
+    async with AsyncClient() as client:
+        aapl_meta_quotes = await client.get_quote_type(tickers='AAPL,META')
+
+if __name__ == '__main__':
+    asyncio.run(main())
+```
+
 ### Quote Summary Endpoint
 
 ```python
@@ -108,7 +124,7 @@ from yafin import AsyncSymbol
 async def main() -> None:
 
     async with AsyncClient() as client:
-        meta_search = await client.get_search(tickers='AAPL,META')
+        aapl_meta_search = await client.get_search(tickers='AAPL,META')
 
 if __name__ == '__main__':
     asyncio.run(main())
@@ -140,7 +156,39 @@ from yafin import AsyncClient
 async def main() -> None:
 
     async with AsyncClient() as client:
-        meta_insights = await client.get_insights(ticker='META')
+        aapl_meta_insights = await client.get_insights(tickers='AAPL,META')
+
+if __name__ == '__main__':
+    asyncio.run(main())
+```
+
+### Ratings Endpoint
+
+```python
+import asyncio
+
+from yafin import AsyncClient
+
+async def main() -> None:
+
+    async with AsyncClient() as client:
+        meta_ratings = await client.get_ratings(ticker='META')
+
+if __name__ == '__main__':
+    asyncio.run(main())
+```
+
+### Analysis Endpoint
+
+```python
+import asyncio
+
+from yafin import AsyncClient
+
+async def main() -> None:
+
+    async with AsyncClient() as client:
+        meta_analysis = await client.get_analysis(ticker='META')
 
 if __name__ == '__main__':
     asyncio.run(main())
@@ -189,6 +237,22 @@ async def main() -> None:
 
     async with AsyncClient() as client:
         currencies = await client.get_currencies()
+
+if __name__ == '__main__':
+    asyncio.run(main())
+```
+
+### Calendas Events Endpoint
+
+```python
+import asyncio
+
+from yafin import AsyncClient
+
+async def main() -> None:
+
+    async with AsyncClient() as client:
+        currencies = await client.get_calendar_events()
 
 if __name__ == '__main__':
     asyncio.run(main())

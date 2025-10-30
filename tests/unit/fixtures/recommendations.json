@@ -6,23 +6,23 @@
         "recommendedSymbols": [
           {
             "symbol": "AMZN",
-            "score": 0.226236
+            "score": 0.220906
           },
           {
             "symbol": "AAPL",
-            "score": 0.218215
+            "score": 0.213821
           },
           {
             "symbol": "GOOG",
-            "score": 0.211192
+            "score": 0.205721
           },
           {
             "symbol": "TSLA",
-            "score": 0.203167
+            "score": 0.198465
           },
           {
             "symbol": "NFLX",
-            "score": 0.193937
+            "score": 0.189371
           }
         ]
       }

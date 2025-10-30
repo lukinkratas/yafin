@@ -5,7 +5,7 @@ from curl_cffi.requests.exceptions import HTTPError
 from pytest_mock import MockerFixture
 
 
-def mock_200_response(mocker: MockerFixture, response_json: dict[str, Any]) -> None:
+def _mock_200_response(mocker: MockerFixture, response_json: dict[str, Any]) -> None:
     """Mock response with status code 200."""
     mock_response = mocker.Mock(spec=Response)
     mock_response.status_code = 200
@@ -17,7 +17,7 @@ def mock_200_response(mocker: MockerFixture, response_json: dict[str, Any]) -> N
     )
 
 
-def mock_404_response(mocker: MockerFixture, response_json: dict[str, Any]) -> None:
+def _mock_404_response(mocker: MockerFixture, response_json: dict[str, Any]) -> None:
     """Mock response with status code 404."""
     mock_response = mocker.Mock(spec=Response)
     mock_response.status_code = 404

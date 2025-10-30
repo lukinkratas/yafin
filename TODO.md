@@ -6,20 +6,35 @@
 - _ytickers / yatickers / yotickers_ / ~~yahoo_tickers~~ - from ytickers import Ticker ?
 - _ysymbols / yasymbols / yosymbols_ / ~~yahoo_symbols~~ - from ysymbols import Symbol ?
 
-- [ ] reverse eng the rest API
-- [ ] example from docs to main
+- [ ] fetch mocks for get_analysis do not work
+- [ ] reverse eng the rest API again
+- [ ] example from docs to main or integration tests
 - [ ] unit test symbol / client singleton factory
 - [ ] publish to pypi test
-- [ ] client into symbol dependency injection ?
-- [ ] session into client dependency injection ?
+- [ ] test_utils - add OTHER types ? -> str | None annotation
 - [ ] get chart not now(), but round to midnight - check yfinance implementation
 - get_finance_chart implement period1 and period2 ?
 - remove get_cashflow_statement_history, get_balance_sheet_history ?
 - remove quote summary modules and use only qs_all_modules?
 - [ ] client.get_timeseries, symbol.get_income_statement, symbol.get_balance_sheet and symbol.get_cash_flow default period1 and 2 args datetime.datetime.timestamp ?
-- (Sync) client ?
+- (Sync) client ? + pytest-benchmark tests
 - [ ] mcp
-- [~] docs for const (+options)
+- ~~[x] reverse eng the rest API~~
+- ~~[x] symbol - test other endpoints with multiple symbols~~
+  - ~~[x] recommendations~~
+- ~~[x] const TYPES_CSV -> TYPES / TYPES -> TYPES_LIST~~
+- ~~[x] custom types in types.py~~
+- ~~[x] ResponseJson with strict schema - result, error -> not working, because this is always behinf a key, e.g. finance.~~
+- ~~[x] switch to query1 (insights v3) -> keep query2 - more stable, less. crowded~~
+- ~~[x] fetch mocks - mapping -> not readable~~
+- ~~[x] new events + unit tests~~
+- ~~[x] new types + unit tests~~
+- ~~[x] docs for const (+options)~~
+- ~~[x] new endpoints client + symbol + fixtures + unit tests + integration tests + doc examples~~
+  - ~~[x] quoteType~~
+  - ~~[x] ratings/top~~
+  - ~~[x] ws/screeners/v1/finance/calendar-events~~
+  - ~~[x] xhr/ticker-analysis~~
 - ~~[x] gh pages~~
 - ~~[x] utils - private functions - error, encode_url, log_arg~~
 - ~~[x] session retry logic ?~~

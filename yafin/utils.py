@@ -64,13 +64,13 @@ def get_types_with_frequency(frequency: str, typ: str) -> str:
             If attempting to request balance sheet with trailing
                 frequency.
     """
+    if typ not in _TYPES.keys():
+        _error(msg=f'Invalid {typ=}. Valid values: {_TYPES.keys()}', err_cls=ValueError)
+
     if frequency not in FREQUENCIES:
         _error(
             msg=f'Invalid {frequency=}. Valid values: {FREQUENCIES}', err_cls=ValueError
         )
-
-    if typ not in _TYPES.keys():
-        _error(msg=f'Invalid {typ=}. Valid values: {_TYPES.keys()}', err_cls=ValueError)
 
     if typ == 'balance_sheet' and frequency == 'trailing':
         _error(

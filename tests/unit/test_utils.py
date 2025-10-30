@@ -3,17 +3,17 @@ from typing import Any, Type
 import pytest
 from curl_cffi.requests.exceptions import HTTPError
 
-from tests.assertions import assert_contains_keys, assert_keys_are_not_none
+from tests._assertions import _assert_contains_keys, _assert_keys_are_not_none
 from yafin.const import (
     _TYPES,
-    ANNUAL_BALANCE_SHEET_TYPES_CSV,
-    ANNUAL_CASH_FLOW_TYPES_CSV,
-    ANNUAL_INCOME_STATEMENT_TYPES_CSV,
-    QUARTERLY_BALANCE_SHEET_TYPES_CSV,
-    QUARTERLY_CASH_FLOW_TYPES_CSV,
-    QUARTERLY_INCOME_STATEMENT_TYPES_CSV,
-    TRAILING_CASH_FLOW_TYPES_CSV,
-    TRAILING_INCOME_STATEMENT_TYPES_CSV,
+    ANNUAL_BALANCE_SHEET_TYPES,
+    ANNUAL_CASH_FLOW_TYPES,
+    ANNUAL_INCOME_STATEMENT_TYPES,
+    QUARTERLY_BALANCE_SHEET_TYPES,
+    QUARTERLY_CASH_FLOW_TYPES,
+    QUARTERLY_INCOME_STATEMENT_TYPES,
+    TRAILING_CASH_FLOW_TYPES,
+    TRAILING_INCOME_STATEMENT_TYPES,
 )
 from yafin.exceptions import TrailingBalanceSheetError
 from yafin.utils import (
@@ -59,30 +59,30 @@ class TestUnitUtils:
         [
             (
                 dict(frequency='annual', typ='income_statement'),
-                ANNUAL_INCOME_STATEMENT_TYPES_CSV,
+                ANNUAL_INCOME_STATEMENT_TYPES,
             ),
             (
                 dict(frequency='quarterly', typ='income_statement'),
-                QUARTERLY_INCOME_STATEMENT_TYPES_CSV,
+                QUARTERLY_INCOME_STATEMENT_TYPES,
             ),
             (
                 dict(frequency='trailing', typ='income_statement'),
-                TRAILING_INCOME_STATEMENT_TYPES_CSV,
+                TRAILING_INCOME_STATEMENT_TYPES,
             ),
             (
                 dict(frequency='annual', typ='balance_sheet'),
-                ANNUAL_BALANCE_SHEET_TYPES_CSV,
+                ANNUAL_BALANCE_SHEET_TYPES,
             ),
             (
                 dict(frequency='quarterly', typ='balance_sheet'),
-                QUARTERLY_BALANCE_SHEET_TYPES_CSV,
+                QUARTERLY_BALANCE_SHEET_TYPES,
             ),
-            (dict(frequency='annual', typ='cash_flow'), ANNUAL_CASH_FLOW_TYPES_CSV),
+            (dict(frequency='annual', typ='cash_flow'), ANNUAL_CASH_FLOW_TYPES),
             (
                 dict(frequency='quarterly', typ='cash_flow'),
-                QUARTERLY_CASH_FLOW_TYPES_CSV,
+                QUARTERLY_CASH_FLOW_TYPES,
             ),
-            (dict(frequency='trailing', typ='cash_flow'), TRAILING_CASH_FLOW_TYPES_CSV),
+            (dict(frequency='trailing', typ='cash_flow'), TRAILING_CASH_FLOW_TYPES),
         ],
     )
     def test_get_types_with_frequency(
@@ -122,12 +122,12 @@ class TestUnitUtils:
         assert func_name == 'print'
         assert args_copy == ('a', 'b', 'c')
 
-    def test_assert_contains_keys(self) -> None:
-        """Test assert_contains_keys function."""
-        assert_contains_keys({'a': 1, 'b': 2}, ['a', 'b'])
-        assert_contains_keys({'a': 1, 'b': 2}, ['a'])
+    def test__assert_contains_keys(self) -> None:
+        """Test _assert_contains_keys function."""
+        _assert_contains_keys({'a': 1, 'b': 2}, ['a', 'b'])
+        _assert_contains_keys({'a': 1, 'b': 2}, ['a'])
         with pytest.raises(AssertionError):
-            assert_contains_keys({'a': 1}, ['a', 'b'])
+            _assert_contains_keys({'a': 1}, ['a', 'b'])
 
     @pytest.mark.parametrize(
         'kwargs',
@@ -140,7 +140,7 @@ class TestUnitUtils:
             dict(data={'a': None, 'b': 2}, keys=['a', 'b']),
         ],
     )
-    def test_assert_keys_are_not_none(self, kwargs: dict[str, Any]) -> None:
-        """Test assert_keys_are_not_none function."""
+    def test__assert_keys_are_not_none(self, kwargs: dict[str, Any]) -> None:
+        """Test _assert_keys_are_not_none function."""
         with pytest.raises(AssertionError):
-            assert_keys_are_not_none(**kwargs)
+            _assert_keys_are_not_none(**kwargs)

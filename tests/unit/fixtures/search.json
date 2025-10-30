@@ -8,7 +8,7 @@
       "quoteType": "EQUITY",
       "symbol": "META",
       "index": "quotes",
-      "score": 10497500.0,
+      "score": 13309500.0,
       "typeDisp": "Equity",
       "longname": "Meta Platforms, Inc.",
       "exchDisp": "NASDAQ",
@@ -17,9 +17,7 @@
       "industry": "Internet Content & Information",
       "industryDisp": "Internet Content & Information",
       "dispSecIndFlag": true,
-      "isYahooFinance": true,
-      "prevName": "Facebook, Inc.",
-      "nameChangeDate": "2025-10-16"
+      "isYahooFinance": true
     },
     {
       "exchange": "NYQ",
@@ -27,7 +25,7 @@
       "quoteType": "EQUITY",
       "symbol": "WPM",
       "index": "quotes",
-      "score": 20187.0,
+      "score": 20262.0,
       "typeDisp": "Equity",
       "longname": "Wheaton Precious Metals Corp.",
       "exchDisp": "NYSE",
@@ -38,12 +36,40 @@
       "isYahooFinance": true
     },
     {
+      "exchange": "PCX",
+      "shortname": "VanEck Rare Earth and Strategic",
+      "quoteType": "ETF",
+      "symbol": "REMX",
+      "index": "quotes",
+      "score": 20128.0,
+      "typeDisp": "ETF",
+      "longname": "VanEck Rare Earth and Strategic Metals ETF",
+      "exchDisp": "NYSEArca",
+      "isYahooFinance": true
+    },
+    {
+      "exchange": "NMS",
+      "shortname": "TMC the metals company Inc.",
+      "quoteType": "EQUITY",
+      "symbol": "TMC",
+      "index": "quotes",
+      "score": 20103.0,
+      "typeDisp": "Equity",
+      "longname": "TMC the metals company Inc.",
+      "exchDisp": "NASDAQ",
+      "sector": "Basic Materials",
+      "sectorDisp": "Basic Materials",
+      "industry": "Other Industrial Metals & Mining",
+      "industryDisp": "Other Industrial Metals & Mining",
+      "isYahooFinance": true
+    },
+    {
       "exchange": "NGM",
       "shortname": "Critical Metals Corp.",
       "quoteType": "EQUITY",
       "symbol": "CRML",
       "index": "quotes",
-      "score": 20146.0,
+      "score": 20101.0,
       "typeDisp": "Equity",
       "longname": "Critical Metals Corp.",
       "exchDisp": "NASDAQ",
@@ -54,24 +80,12 @@
       "isYahooFinance": true
     },
     {
-      "exchange": "PCX",
-      "shortname": "VanEck Rare Earth and Strategic",
-      "quoteType": "ETF",
-      "symbol": "REMX",
-      "index": "quotes",
-      "score": 20061.0,
-      "typeDisp": "ETF",
-      "longname": "VanEck Rare Earth and Strategic Metals ETF",
-      "exchDisp": "NYSEArca",
-      "isYahooFinance": true
-    },
-    {
       "exchange": "ASE",
       "shortname": "Trilogy Metals Inc.",
       "quoteType": "EQUITY",
       "symbol": "TMQ",
       "index": "quotes",
-      "score": 20059.0,
+      "score": 20083.0,
       "typeDisp": "Equity",
       "longname": "Trilogy Metals Inc.",
       "exchDisp": "NYSE MKT",
@@ -82,58 +96,40 @@
       "isYahooFinance": true
     },
     {
-      "exchange": "NMS",
-      "shortname": "TMC the metals company Inc.",
+      "exchange": "NCM",
+      "shortname": "Aqua Metals, Inc.",
       "quoteType": "EQUITY",
-      "symbol": "TMC",
+      "symbol": "AQMS",
       "index": "quotes",
-      "score": 20040.0,
+      "score": 20067.0,
       "typeDisp": "Equity",
-      "longname": "TMC the metals company Inc.",
+      "longname": "Aqua Metals, Inc.",
       "exchDisp": "NASDAQ",
-      "sector": "Basic Materials",
-      "sectorDisp": "Basic Materials",
-      "industry": "Other Industrial Metals & Mining",
-      "industryDisp": "Other Industrial Metals & Mining",
-      "isYahooFinance": true,
-      "prevName": "Sustainable Opportunities Acquisition Corp.",
-      "nameChangeDate": "2025-10-16"
-    },
-    {
-      "exchange": "NYQ",
-      "shortname": "Commercial Metals Company",
-      "quoteType": "EQUITY",
-      "symbol": "CMC",
-      "index": "quotes",
-      "score": 20027.0,
-      "typeDisp": "Equity",
-      "longname": "Commercial Metals Company",
-      "exchDisp": "NYSE",
-      "sector": "Basic Materials",
-      "sectorDisp": "Basic Materials",
-      "industry": "Steel",
-      "industryDisp": "Steel",
+      "sector": "Industrials",
+      "sectorDisp": "Industrials",
+      "industry": "Waste Management",
+      "industryDisp": "Waste Management",
       "isYahooFinance": true
     }
   ],
   "news": [
     {
-      "uuid": "921ed40d-c386-30ab-89bd-88d718cc0fc2",
-      "title": "Meta expands AI ambitions with mega deals",
-      "publisher": "TheStreet",
-      "link": "https://finance.yahoo.com/m/921ed40d-c386-30ab-89bd-88d718cc0fc2/meta-expands-ai-ambitions.html",
-      "providerPublishTime": 1760894841,
-      "type": "STORY",
+      "uuid": "7a97054b-56db-3518-918a-a4bcd78a3869",
+      "title": "Meta, Chipotle, Steve Madden: Top Analyst Calls",
+      "publisher": "Yahoo Finance Video",
+      "link": "https://finance.yahoo.com/video/meta-chipotle-steve-madden-top-143025509.html",
+      "providerPublishTime": 1761834625,
+      "type": "VIDEO",
       "thumbnail": {
         "resolutions": [
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/CBbBhtRBQJUr41_cOCKOMg--~B/aD02NzU7dz0xMjAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/thestreet_881/02422df5f0358784c3a32a9660f1e688",
-            "width": 1200,
-            "height": 675,
+            "url": "https://s.yimg.com/uu/api/res/1.2/OiN.r9aMzXNmNB7PR_MDWA--~B/aD0xOTAzO3c9MzM4ODthcHBpZD15dGFjaHlvbg--/https://s.yimg.com/os/creatr-uploaded-images/2025-10/f4205290-b59c-11f0-bcfb-4dcd1d6be504",
+            "width": 3388,
+            "height": 1903,
             "tag": "original"
           },
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/uEpPE_spy_ArFWKmdcFLfg--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/thestreet_881/02422df5f0358784c3a32a9660f1e688",
+            "url": "https://s.yimg.com/uu/api/res/1.2/SJPEV2qxdJBz9pAce1udGQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://s.yimg.com/os/creatr-uploaded-images/2025-10/f4205290-b59c-11f0-bcfb-4dcd1d6be504",
             "width": 140,
             "height": 140,
             "tag": "140x140"
@@ -142,63 +138,143 @@
       },
       "relatedTickers": [
         "META",
-        "CRWV"
+        "CMG",
+        "SHOO"
       ]
     },
     {
-      "uuid": "5d2158b3-a28b-401f-b535-81e14391dc60",
-      "title": "Nvidia's Big Tech customers might also be its biggest competitive threat",
-      "publisher": "Yahoo Finance",
-      "link": "https://finance.yahoo.com/news/nvidias-big-tech-customers-might-also-be-its-biggest-competitive-threat-153032596.html",
-      "providerPublishTime": 1760888474,
+      "uuid": "2b2537e9-065d-3fb3-ac1d-40e1f2a0dccf",
+      "title": "BC-Most Active Stocks",
+      "publisher": "Associated Press Finance",
+      "link": "https://finance.yahoo.com/news/bc-most-active-stocks-143018859.html",
+      "providerPublishTime": 1761834618,
       "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/TKTLd9zVwJZ3Xyq6IH41Nw--~B/aD00MDAwO3c9NjAwMDthcHBpZD15dGFjaHlvbg--/https://s.yimg.com/os/creatr-uploaded-images/2024-11/9f3bf690-a764-11ef-9fff-e38cc4fb1028",
-            "width": 6000,
-            "height": 4000,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/XqIpnRZUuJU1ax73vvHZNQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://s.yimg.com/os/creatr-uploaded-images/2024-11/9f3bf690-a764-11ef-9fff-e38cc4fb1028",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
       "relatedTickers": [
-        "GOOG",
+        "CMBM",
+        "JZXN",
+        "BYND",
+        "ASST",
         "NVDA",
-        "GOOGL",
-        "AMZN",
-        "MSFT",
-        "OPAI.PVT",
-        "CRWV",
-        "AVGO",
+        "HBIO",
+        "INTS",
+        "^IXIC",
+        "GLE",
+        "VIVK",
+        "VCIG",
+        "ORIS",
+        "MBRX",
         "META",
-        "ANTH.PVT",
-        "AMD"
+        "GOOGL"
       ]
     },
     {
-      "uuid": "b7c9d5a7-62c0-3d8c-8efe-512d868840f3",
-      "title": "Analyst Explains Why Meta Platforms (META) Signed Data Center Deal With Coreweave",
-      "publisher": "Insider Monkey",
-      "link": "https://finance.yahoo.com/news/analyst-explains-why-meta-platforms-151722421.html",
-      "providerPublishTime": 1760887042,
+      "uuid": "2e65fee0-0493-337f-b2cc-0fc533c93961",
+      "title": "BofA Securities Adjusts Meta Platforms Price Target to $810 From $900, Maintains Buy Rating",
+      "publisher": "MT Newswires",
+      "link": "https://finance.yahoo.com/news/bofa-securities-adjusts-meta-platforms-141647162.html",
+      "providerPublishTime": 1761833807,
+      "type": "STORY",
+      "relatedTickers": [
+        "META"
+      ]
+    },
+    {
+      "uuid": "4c504093-4ea1-394f-8e38-291f546fa88b",
+      "title": "SYNERGY CHC (NASDAQ:SNYR) Featured on \u201cNew to The Street\u201d - Bloomberg Television, Saturday, November 1st at 6:30 PM ET",
+      "publisher": "ACCESS Newswire",
+      "link": "https://finance.yahoo.com/news/synergy-chc-nasdaq-snyr-featured-141500439.html",
+      "providerPublishTime": 1761833700,
+      "type": "STORY",
+      "relatedTickers": [
+        "SNYR",
+        "META"
+      ]
+    },
+    {
+      "uuid": "fc299a85-8335-36c2-abdd-a2a74e7cdaed",
+      "title": "Zelestra Closes on US Tax Equity Transaction for the 81 MW Jasper County Solar Project",
+      "publisher": "Business Wire",
+      "link": "https://finance.yahoo.com/news/zelestra-closes-us-tax-equity-140000376.html",
+      "providerPublishTime": 1761832800,
       "type": "STORY",
       "thumbnail": {
         "resolutions": [
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/V1FADT7Yc1WohVKZslRZ2Q--~B/aD0xMjgwO3c9MTkyMDthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/insidermonkey.com/8d483b146d91b4119ec83ba6c9dff08c",
+            "url": "https://s.yimg.com/uu/api/res/1.2/eZkWZ0FCqyXdpiaF6p9iwA--~B/aD0zMjA7dz00ODA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/business-wire.com/061204ec5c22e51d9b35b585279014fd",
+            "width": 480,
+            "height": 320,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/16UFa_PSKhy5LXkCqfunlA--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/business-wire.com/061204ec5c22e51d9b35b585279014fd",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "META",
+        "SAN.MC"
+      ]
+    },
+    {
+      "uuid": "8b941382-ff1c-35a6-a44b-22dba0ec5010",
+      "title": "Meta Platforms (NASDAQ: META) Stock Price Prediction for 2025: Where Will It Be in 1 Year (Oct 30)",
+      "publisher": "24/7 Wall St.",
+      "link": "https://finance.yahoo.com/m/8b941382-ff1c-35a6-a44b-22dba0ec5010/meta-platforms-%28nasdaq%3A-meta%29.html",
+      "providerPublishTime": 1761832544,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/XAgz2ap3qhzvlAtiQDCRSg--~B/aD03Njc7dz0xMzY2O2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/24_7_wall_st__718/f848f2b8e43fcb5f0b3dc1c98f489038",
+            "width": 1366,
+            "height": 767,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/F21VMpTblkUOMpkCjsFWGg--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/24_7_wall_st__718/f848f2b8e43fcb5f0b3dc1c98f489038",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "AAPL",
+        "META",
+        "AMZN"
+      ]
+    },
+    {
+      "uuid": "815c58ed-deaf-3957-856a-af6e52fa8d6b",
+      "title": "UBS Adjusts Meta Platforms Price Target to $915 From $900, Maintains Buy Rating",
+      "publisher": "MT Newswires",
+      "link": "https://finance.yahoo.com/news/ubs-adjusts-meta-platforms-price-135434198.html",
+      "providerPublishTime": 1761832474,
+      "type": "STORY",
+      "relatedTickers": [
+        "META"
+      ]
+    },
+    {
+      "uuid": "0d1bab63-ac81-3490-a467-db204635e21d",
+      "title": "META: Meta Stock Faces Massive Sell-Off After Q3 Earnings Miss",
+      "publisher": "GuruFocus.com",
+      "link": "https://finance.yahoo.com/news/meta-meta-stock-faces-massive-135413145.html",
+      "providerPublishTime": 1761832453,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/l4RQ9ctGoVJ.pATDH._65Q--~B/aD0xOTIwO3c9MTkyMDthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/us.finance.gurufocus/0a1fabbe0615fb9205b4c17d7c6011e3",
             "width": 1920,
-            "height": 1280,
+            "height": 1920,
             "tag": "original"
           },
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/IvAiTjv1x.taBnRkPoJ39A--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/insidermonkey.com/8d483b146d91b4119ec83ba6c9dff08c",
+            "url": "https://s.yimg.com/uu/api/res/1.2/VUt4xocHBmNOSFpKPnmsyA--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/us.finance.gurufocus/0a1fabbe0615fb9205b4c17d7c6011e3",
             "width": 140,
             "height": 140,
             "tag": "140x140"
@@ -206,155 +282,6 @@
         ]
       },
       "relatedTickers": [
-        "META",
-        "CRWV"
-      ]
-    },
-    {
-      "uuid": "50d2599c-f341-31ed-8ddd-d7c8aec470e0",
-      "title": "The Biggest Meta Settlements Of All Time",
-      "publisher": "Money Digest",
-      "link": "https://finance.yahoo.com/m/50d2599c-f341-31ed-8ddd-d7c8aec470e0/the-biggest-meta-settlements.html",
-      "providerPublishTime": 1760875200,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/fy.b11crSpm3zox7VQpicQ--~B/aD04OTk7dz0xNjAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/money_digest_articles_438/b571d2f46c6a6dd14d8c9002c5c3cfbf",
-            "width": 1600,
-            "height": 899,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/1CA6_gszFZjjZMSdERc1xQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/money_digest_articles_438/b571d2f46c6a6dd14d8c9002c5c3cfbf",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "META",
-        "AMZN",
-        "GOOGL",
-        "AAPL",
-        "MSFT",
-        "NVDA"
-      ]
-    },
-    {
-      "uuid": "015c72f7-ac07-3d65-bbe0-ff66ba360f2c",
-      "title": "Is This AI Stock Still Worth Buying After Its Massive Rally?",
-      "publisher": "Motley Fool",
-      "link": "https://finance.yahoo.com/m/015c72f7-ac07-3d65-bbe0-ff66ba360f2c/is-this-ai-stock-still-worth.html",
-      "providerPublishTime": 1760869800,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/EfGVMCw9oaCGsT6CvIdR1w--~B/aD0xMzIwO3c9MTk4MDthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/motleyfool.com/587d85499d5f1c1935490b4aa5ebb877",
-            "width": 1980,
-            "height": 1320,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/WyWivRXegz62ThoapbasaQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/587d85499d5f1c1935490b4aa5ebb877",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "NVDA",
-        "MSFT",
-        "OPAI.PVT",
-        "META"
-      ]
-    },
-    {
-      "uuid": "5dddd528-a49a-33dd-8692-8618f1b497a3",
-      "title": "The Best Trillion-Dollar Stock to Buy Right Now, According to Wall Street",
-      "publisher": "Motley Fool",
-      "link": "https://finance.yahoo.com/m/5dddd528-a49a-33dd-8692-8618f1b497a3/the-best-trillion-dollar.html",
-      "providerPublishTime": 1760863800,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/FJ3CcfatOB2rkVaTIQi73Q--~B/aD04MDA7dz0xMjAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/4e2ce5a2627d23816a1c81ee38d58519",
-            "width": 1200,
-            "height": 800,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/ImFssIIxbzxWVKgiOH0wLg--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/4e2ce5a2627d23816a1c81ee38d58519",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "AAPL",
-        "META"
-      ]
-    },
-    {
-      "uuid": "804c2db2-c1c1-3d22-a788-1ab5035d1c98",
-      "title": "What Oracle (ORCL)'s Bold AI Cloud Strategy and 2030 Targets Mean for Shareholders",
-      "publisher": "Simply Wall St.",
-      "link": "https://finance.yahoo.com/news/oracle-orcl-bold-ai-cloud-050541813.html",
-      "providerPublishTime": 1760850341,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/h5Sl8vD9y_csxX46X7BeKw--~B/aD00MzI7dz0xMTk0O2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/simply_wall_st__316/10232bfeaa28288a2e6f936e1c871a73",
-            "width": 1194,
-            "height": 432,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/4keDJW8tktSPYmUwmq.qZA--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/simply_wall_st__316/10232bfeaa28288a2e6f936e1c871a73",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "ORCL",
-        "META",
-        "AMD",
-        "IBM"
-      ]
-    },
-    {
-      "uuid": "d9c74708-b9f7-34f3-88a8-5544d9c4a9b8",
-      "title": "Assessing Blue Owl Capital After $1.5B Portfolio Sale Amid Recent Price Swings",
-      "publisher": "Simply Wall St.",
-      "link": "https://finance.yahoo.com/news/assessing-blue-owl-capital-1-011452708.html",
-      "providerPublishTime": 1760836492,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/6aUxsyZINKOU9.9KrHnBOA--~B/aD00MzI7dz0xMTk0O2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/simply_wall_st__316/4470f143ba4f4c0e99553a639759c619",
-            "width": 1194,
-            "height": 432,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/NCbJoFLHdrW466yVWeN71A--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/simply_wall_st__316/4470f143ba4f4c0e99553a639759c619",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "OWL",
         "META"
       ]
     }
@@ -413,9 +340,9 @@
   ],
   "researchReports": [],
   "screenerFieldResults": [],
-  "totalTime": 36,
-  "timeTakenForQuotes": 427,
-  "timeTakenForNews": 700,
+  "totalTime": 141,
+  "timeTakenForQuotes": 436,
+  "timeTakenForNews": 600,
   "timeTakenForAlgowatchlist": 400,
   "timeTakenForPredefinedScreener": 400,
   "timeTakenForCrunchbase": 0,

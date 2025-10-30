@@ -11,12 +11,12 @@
           "ratingYear": 2025,
           "ratingMonth": 10,
           "highestControversy": 4.0,
-          "peerCount": 581,
+          "peerCount": 582,
           "esgPerformance": "AVG_PERF",
           "peerGroup": "Software & Services",
           "peerEsgScorePerformance": {
             "min": 6.66,
-            "avg": 20.872650602409642,
+            "avg": 20.873745704467357,
             "max": 34.15
           },
           "peerGovernancePerformance": {
@@ -36,7 +36,7 @@
           },
           "peerHighestControversyPerformance": {
             "min": 0.0,
-            "avg": 0.7314974182444062,
+            "avg": 0.7336769759450171,
             "max": 4.0
           },
           "percentile": null,

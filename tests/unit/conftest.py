@@ -20,6 +20,12 @@ def quote_json_mock() -> dict[str, Any]:
 
 
 @pytest.fixture
+def quote_type_json_mock() -> dict[str, Any]:
+    """Mock get_quote_type response json with data for META."""
+    return json.loads(FIXTURES_PATH.joinpath('quote_types.json').read_text())
+
+
+@pytest.fixture
 def search_json_mock() -> dict[str, Any]:
     """Mock search response json with data for META."""
     return json.loads(FIXTURES_PATH.joinpath('search.json').read_text())
@@ -44,6 +50,18 @@ def insights_json_mock() -> dict[str, Any]:
 
 
 @pytest.fixture
+def ratings_json_mock() -> dict[str, Any]:
+    """Mock ratings response json with data for META."""
+    return json.loads(FIXTURES_PATH.joinpath('ratings.json').read_text())
+
+
+@pytest.fixture
+def analysis_json_mock() -> dict[str, Any]:
+    """Mock analysis response json with data for META."""
+    return json.loads(FIXTURES_PATH.joinpath('analysis.json').read_text())
+
+
+@pytest.fixture
 def market_summaries_json_mock() -> dict[str, Any]:
     """Mock market summaries response."""
     return json.loads(FIXTURES_PATH.joinpath('market_summaries.json').read_text())
@@ -59,6 +77,12 @@ def trending_json_mock() -> dict[str, Any]:
 def currencies_json_mock() -> dict[str, Any]:
     """Mock currencies response json."""
     return json.loads(FIXTURES_PATH.joinpath('currencies.json').read_text())
+
+
+@pytest.fixture
+def client_calendar_events_json_mock() -> dict[str, Any]:
+    """Mock currencies response json."""
+    return json.loads(FIXTURES_PATH.joinpath('calendar_events.json').read_text())
 
 
 @pytest.fixture
@@ -92,7 +116,7 @@ def asset_profile_json_mock() -> dict[str, Any]:
 
 
 @pytest.fixture
-def quote_type_json_mock() -> dict[str, Any]:
+def quote_summary_quote_type_json_mock() -> dict[str, Any]:
     """Mock quote summary response json with quote type data for META."""
     return json.loads(FIXTURES_PATH.joinpath('qs_quote_type.json').read_text())
 
@@ -186,7 +210,7 @@ def financial_data_json_mock() -> dict[str, Any]:
 
 
 @pytest.fixture
-def calendar_events_json_mock() -> dict[str, Any]:
+def symbol_calendar_events_json_mock() -> dict[str, Any]:
     """Mock quote summary response json with calendar events data for META."""
     return json.loads(FIXTURES_PATH.joinpath('qs_calendar_events.json').read_text())
 

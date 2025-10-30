@@ -5,6 +5,54 @@
         "secFilings": {
           "filings": [
             {
+              "date": "2025-10-30",
+              "epochDate": 1761782400,
+              "type": "10-Q",
+              "title": "Periodic Financial Reports",
+              "edgarUrl": "https://finance.yahoo.com/sec-filing/META/0001628280-25-047240_1326801",
+              "exhibits": [
+                {
+                  "type": "10-Q",
+                  "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001326801/000162828025047240/meta-20250930.htm"
+                },
+                {
+                  "type": "EX-31.1",
+                  "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001326801/000162828025047240/meta09302025-ex311.htm"
+                },
+                {
+                  "type": "EX-31.2",
+                  "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001326801/000162828025047240/meta09302025-ex312.htm"
+                },
+                {
+                  "type": "EX-32.1",
+                  "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001326801/000162828025047240/meta09302025-ex321.htm"
+                },
+                {
+                  "type": "EX-32.2",
+                  "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001326801/000162828025047240/meta09302025-ex322.htm"
+                }
+              ],
+              "maxAge": 1
+            },
+            {
+              "date": "2025-10-29",
+              "epochDate": 1761696000,
+              "type": "8-K",
+              "title": "Corporate Changes & Voting Matters",
+              "edgarUrl": "https://finance.yahoo.com/sec-filing/META/0001628280-25-047114_1326801",
+              "exhibits": [
+                {
+                  "type": "EX-99.1",
+                  "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001326801/000162828025047114/meta-09302025xexhibit991.htm"
+                },
+                {
+                  "type": "8-K",
+                  "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001326801/000162828025047114/meta-20251029.htm"
+                }
+              ],
+              "maxAge": 1
+            },
+            {
               "date": "2025-07-31",
               "epochDate": 1753920000,
               "type": "10-Q",

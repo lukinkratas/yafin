@@ -1,8 +1,8 @@
 from logging.config import dictConfig
 
 
-def setup_logging() -> None:
-    """Setup logging config."""
+def configure_logging() -> None:
+    """Configure logging."""
     cfg = {
         'version': 1,
         'disable_existing_loggers': False,

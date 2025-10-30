@@ -5,11 +5,16 @@ import pathlib
 from datetime import datetime
 from typing import Any
 
-from logging_config import setup_logging
+from logging_config import configure_logging
 
 from yafin import AsyncClient
-from yafin.const import ALL_MODULES_CSV
-from yafin.utils import get_types_with_frequency
+from yafin.const import (
+    ALL_MODULES,
+    ANNUAL_BALANCE_SHEET_TYPES,
+    ANNUAL_CASH_FLOW_TYPES,
+    ANNUAL_INCOME_STATEMENT_TYPES,
+    OTHER_TYPES,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -48,7 +53,7 @@ async def process_mock(
 
 
 async def main() -> None:  # noqa: D103
-    setup_logging()
+    configure_logging()
 
     params = dict(ticker=TICKER, period1=PERIOD1, period2=PERIOD2)
     params_path = get_fixture_path('params')
@@ -70,8 +75,14 @@ async def main() -> None:  # noqa: D103
         )
         await process_mock(
             instance=client,
+            method_name='get_quote_type',
+            kwargs=dict(tickers='META'),
+            file_name='quote_types',
+        )
+        await process_mock(
+            instance=client,
             method_name='get_quote_summary',
-            kwargs=dict(ticker=TICKER, modules=ALL_MODULES_CSV),
+            kwargs=dict(ticker=TICKER, modules=ALL_MODULES),
             file_name='qs_all_modules',
         )
         await process_mock(
@@ -271,9 +282,7 @@ async def main() -> None:  # noqa: D103
             method_name='get_timeseries',
             kwargs=dict(
                 ticker=TICKER,
-                types=get_types_with_frequency(
-                    frequency='annual', typ='income_statement'
-                ),
+                types=ANNUAL_INCOME_STATEMENT_TYPES,
                 period1=PERIOD1,
                 period2=PERIOD2,
             ),
@@ -284,7 +293,7 @@ async def main() -> None:  # noqa: D103
             method_name='get_timeseries',
             kwargs=dict(
                 ticker=TICKER,
-                types=get_types_with_frequency(frequency='annual', typ='balance_sheet'),
+                types=ANNUAL_BALANCE_SHEET_TYPES,
                 period1=PERIOD1,
                 period2=PERIOD2,
             ),
@@ -295,11 +304,22 @@ async def main() -> None:  # noqa: D103
             method_name='get_timeseries',
             kwargs=dict(
                 ticker=TICKER,
-                types=get_types_with_frequency(frequency='annual', typ='cash_flow'),
+                types=ANNUAL_CASH_FLOW_TYPES,
                 period1=PERIOD1,
                 period2=PERIOD2,
             ),
             file_name='ts_cash_flow',
+        )
+        await process_mock(
+            instance=client,
+            method_name='get_timeseries',
+            kwargs=dict(
+                ticker=TICKER,
+                types=OTHER_TYPES,
+                period1=PERIOD1,
+                period2=PERIOD2,
+            ),
+            file_name='ts_other',
         )
         await process_mock(
             instance=client,
@@ -316,14 +336,26 @@ async def main() -> None:  # noqa: D103
         await process_mock(
             instance=client,
             method_name='get_recommendations',
-            kwargs=dict(ticker=TICKER),
+            kwargs=dict(tickers=TICKER),
             file_name='recommendations',
         )
         await process_mock(
             instance=client,
             method_name='get_insights',
-            kwargs=dict(ticker=TICKER),
+            kwargs=dict(tickers=TICKER),
             file_name='insights',
+        )
+        await process_mock(
+            instance=client,
+            method_name='get_ratings',
+            kwargs=dict(ticker=TICKER),
+            file_name='ratings',
+        )
+        await process_mock(
+            instance=client,
+            method_name='get_analysis',
+            kwargs=dict(ticker=TICKER),
+            file_name='analysis',
         )
         await process_mock(
             instance=client,
@@ -335,6 +367,11 @@ async def main() -> None:  # noqa: D103
         )
         await process_mock(
             instance=client, method_name='get_currencies', file_name='currencies'
+        )
+        await process_mock(
+            instance=client,
+            method_name='get_calendar_events',
+            file_name='calendar_events',
         )
 
 

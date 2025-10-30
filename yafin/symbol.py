@@ -1,17 +1,15 @@
 import logging
 from types import TracebackType
-from typing import Any, Self, Type
+from typing import Self, Type
 
 from typeguard import typechecked
 
 from .client import AsyncClient
-from .const import ALL_MODULES_CSV
+from .const import ALL_MODULES
+from .types import Result
 from .utils import _log_args, get_types_with_frequency
 
 logger = logging.getLogger(__name__)
-
-type Result = dict[str, Any]
-type ResultList = list[Result]
 
 
 class _ClientManager:
@@ -146,9 +144,17 @@ class AsyncSymbol(object):
         """
         self._get_client()
         quote_json = await self._client.get_quote(self.ticker)
-        # client.get_quote can be quiried with multiple tickers, e.g.: 'META,AAPL'
-        # from Stonk class we are only querying one ticker
         return quote_json['quoteResponse']['result'][0]
+
+    @_log_args
+    async def get_quote_type(self) -> Result:
+        """Get quote type for the ticker.
+
+        Returns: Quote type response result json.
+        """
+        self._get_client()
+        quote_type_json = await self._client.get_quote_type(self.ticker)
+        return quote_type_json['quoteType']['result'][0]
 
     @_log_args
     async def get_quote_summary_all_modules(self) -> Result:
@@ -158,7 +164,7 @@ class AsyncSymbol(object):
         """
         self._get_client()
         quote_summary_json = await self._client.get_quote_summary(
-            self.ticker, ALL_MODULES_CSV
+            self.ticker, ALL_MODULES
         )
         return quote_summary_json['quoteSummary']['result'][0]
 
@@ -170,7 +176,7 @@ class AsyncSymbol(object):
         return quote_summary_json['quoteSummary']['result'][0][module]
 
     @_log_args
-    async def get_quote_type(self) -> Result:
+    async def get_quote_summary_quote_type(self) -> Result:
         """Get quote type for the ticker.
 
         Returns: Quote summary with quote type module response result json.
@@ -202,7 +208,7 @@ class AsyncSymbol(object):
         return await self._get_quote_summary_single_module('summaryDetail')
 
     @_log_args
-    async def get_income_statement_history(self) -> ResultList:
+    async def get_income_statement_history(self) -> list[Result]:
         """Get income statement history for the ticker.
 
         Returns:
@@ -213,7 +219,7 @@ class AsyncSymbol(object):
         return result['incomeStatementHistory']
 
     @_log_args
-    async def get_income_statement_history_quarterly(self) -> ResultList:
+    async def get_income_statement_history_quarterly(self) -> list[Result]:
         """Get income statement history quarterly for the ticker.
 
         Returns:
@@ -226,7 +232,7 @@ class AsyncSymbol(object):
         return result['incomeStatementHistory']
 
     @_log_args
-    async def get_balance_sheet_history(self) -> ResultList:
+    async def get_balance_sheet_history(self) -> list[Result]:
         """Get balance sheet history for the ticker.
 
         Returns: Quote summary with balance sheet history module response results json.
@@ -235,7 +241,7 @@ class AsyncSymbol(object):
         return result['balanceSheetStatements']
 
     @_log_args
-    async def get_balance_sheet_history_quarterly(self) -> ResultList:
+    async def get_balance_sheet_history_quarterly(self) -> list[Result]:
         """Get balance sheet history quarterly for the ticker.
 
         Returns:
@@ -248,7 +254,7 @@ class AsyncSymbol(object):
         return result['balanceSheetStatements']
 
     @_log_args
-    async def get_cashflow_statement_history(self) -> ResultList:
+    async def get_cashflow_statement_history(self) -> list[Result]:
         """Get cashflow statement history for the ticker.
 
         Returns:
@@ -259,7 +265,7 @@ class AsyncSymbol(object):
         return result['cashflowStatements']
 
     @_log_args
-    async def get_cashflow_statement_history_quarterly(self) -> ResultList:
+    async def get_cashflow_statement_history_quarterly(self) -> list[Result]:
         """Get cashflow statement history quarterly for the ticker.
 
         Returns:
@@ -320,7 +326,7 @@ class AsyncSymbol(object):
         return await self._get_quote_summary_single_module('secFilings')
 
     @_log_args
-    async def get_upgrade_downgrade_history(self) -> ResultList:
+    async def get_upgrade_downgrade_history(self) -> list[Result]:
         """Get upgrade downgrade history for the ticker.
 
         Returns:
@@ -331,7 +337,7 @@ class AsyncSymbol(object):
         return result['history']
 
     @_log_args
-    async def get_institution_ownership(self) -> ResultList:
+    async def get_institution_ownership(self) -> list[Result]:
         """Get institution ownership for the ticker.
 
         Returns: Quote summary with institution ownership module response results json.
@@ -340,7 +346,7 @@ class AsyncSymbol(object):
         return result['ownershipList']
 
     @_log_args
-    async def get_fund_ownership(self) -> ResultList:
+    async def get_fund_ownership(self) -> list[Result]:
         """Get fund ownership for the ticker.
 
         Returns: Quote summary with fund ownership module response results json.
@@ -365,7 +371,7 @@ class AsyncSymbol(object):
         return await self._get_quote_summary_single_module('majorHoldersBreakdown')
 
     @_log_args
-    async def get_insider_transactions(self) -> ResultList:
+    async def get_insider_transactions(self) -> list[Result]:
         """Get insider transactions for the ticker.
 
         Returns: Quote summary with insider transactions module response results json.
@@ -374,7 +380,7 @@ class AsyncSymbol(object):
         return result['transactions']
 
     @_log_args
-    async def get_insider_holders(self) -> ResultList:
+    async def get_insider_holders(self) -> list[Result]:
         """Get insider holders for the ticker.
 
         Returns: Quote summary with insider holders module response results json.
@@ -401,7 +407,7 @@ class AsyncSymbol(object):
         return await self._get_quote_summary_single_module('earnings')
 
     @_log_args
-    async def get_earnings_history(self) -> ResultList:
+    async def get_earnings_history(self) -> list[Result]:
         """Get earnings history for the ticker.
 
         Returns: Quote summary with earnings history module response results json.
@@ -410,7 +416,7 @@ class AsyncSymbol(object):
         return result['history']
 
     @_log_args
-    async def get_earnings_trend(self) -> ResultList:
+    async def get_earnings_trend(self) -> list[Result]:
         """Get earnings trend for the ticker.
 
         Returns: Quote summary with earnings trend module response results json.
@@ -443,7 +449,7 @@ class AsyncSymbol(object):
         return await self._get_quote_summary_single_module('sectorTrend')
 
     @_log_args
-    async def get_recommendation_trend(self) -> ResultList:
+    async def get_recommendation_trend(self) -> list[Result]:
         """Get recommendation trend for the ticker.
 
         Returns: Quote summary with recommendation trend module response results json.
@@ -467,13 +473,13 @@ class AsyncSymbol(object):
         typ: str,
         period1: int | float | None = None,
         period2: int | float | None = None,
-    ) -> ResultList:
+    ) -> Result:
         self._get_client()
         types = get_types_with_frequency(frequency, typ)
         timeseries_json = await self._client.get_timeseries(
             self.ticker, types, period1, period2
         )
-        return timeseries_json['timeseries']['result']
+        return timeseries_json['timeseries']['result'][0]
 
     @_log_args
     @typechecked
@@ -482,13 +488,13 @@ class AsyncSymbol(object):
         frequency: str,
         period1: int | float | None = None,
         period2: int | float | None = None,
-    ) -> ResultList:
+    ) -> Result:
         """Get income statement for the ticker.
 
         Args:
             frequency: annual, quarterly or trailing.
-            period1: Start timestamp.
-            period2: End timestamp.
+            period1: Start timestamp in seconds.
+            period2: End timestamp in seconds.
 
         Returns: Income statement response results json.
         """
@@ -503,13 +509,13 @@ class AsyncSymbol(object):
         frequency: str,
         period1: int | float | None = None,
         period2: int | float | None = None,
-    ) -> ResultList:
+    ) -> Result:
         """Get balance sheet for the ticker.
 
         Args:
             frequency: annual, quarterly or trailing.
-            period1: Start timestamp.
-            period2: End timestamp.
+            period1: Start timestamp in seconds.
+            period2: End timestamp in seconds.
 
         Returns: Balance sheet response results json.
         """
@@ -522,13 +528,13 @@ class AsyncSymbol(object):
         frequency: str,
         period1: int | float | None = None,
         period2: int | float | None = None,
-    ) -> ResultList:
+    ) -> Result:
         """Get cash flow statement for the ticker.
 
         Args:
             frequency: annual, quarterly or trailing.
-            period1: Start timestamp.
-            period2: End timestamp.
+            period1: Start timestamp in seconds.
+            period2: End timestamp in seconds.
 
         Returns: Cash flow response results json.
         """
@@ -571,4 +577,22 @@ class AsyncSymbol(object):
         """
         self._get_client()
         insights_json = await self._client.get_insights(self.ticker)
-        return insights_json['finance']['result']
+        return insights_json['finance']['result'][0]
+
+    @_log_args
+    async def get_ratings(self) -> Result:
+        """Get ratings for the ticker.
+
+        Returns: Ratings response result json.
+        """
+        self._get_client()
+        return await self._client.get_ratings(self.ticker)
+
+    @_log_args
+    async def get_analysis(self) -> Result:
+        """Get analysis for the ticker.
+
+        Returns: Analysis response result json.
+        """
+        self._get_client()
+        return await self._client.get_analysis(self.ticker)

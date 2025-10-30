@@ -5,68 +5,68 @@
         "count": 20,
         "quotes": [
           {
+            "symbol": "META"
+          },
+          {
+            "symbol": "LLY"
+          },
+          {
+            "symbol": "GOOG"
+          },
+          {
+            "symbol": "CMG"
+          },
+          {
             "symbol": "BTC-USD"
           },
           {
-            "symbol": "ETH-USD"
+            "symbol": "GOOGL"
           },
           {
-            "symbol": "XRP-USD"
+            "symbol": "MO"
           },
           {
-            "symbol": "SOL-USD"
+            "symbol": "MRK"
           },
           {
-            "symbol": "DOGE-USD"
+            "symbol": "CROX"
           },
           {
-            "symbol": "BTC-CAD"
+            "symbol": "VCIG"
           },
           {
-            "symbol": "XRP-CAD"
+            "symbol": "BMY"
           },
           {
-            "symbol": "ADA-USD"
+            "symbol": "SIRI"
           },
           {
-            "symbol": "BTC-EUR"
+            "symbol": "CMBM"
           },
           {
-            "symbol": "NFLX"
+            "symbol": "CMCSA"
           },
           {
-            "symbol": "SMMT"
+            "symbol": "EL"
           },
           {
-            "symbol": "ETH-CAD"
+            "symbol": "SPGI"
           },
           {
-            "symbol": "OPAI.PVT"
+            "symbol": "MTSR"
           },
           {
-            "symbol": "HBAR-USD"
+            "symbol": "HBIO"
           },
           {
-            "symbol": "LINK-USD"
+            "symbol": "NVO"
           },
           {
-            "symbol": "LTC-USD"
-          },
-          {
-            "symbol": "SOL-CAD"
-          },
-          {
-            "symbol": "TAO22974-USD"
-          },
-          {
-            "symbol": "BNB-USD"
-          },
-          {
-            "symbol": "BYND"
+            "symbol": "HSY"
           }
         ],
-        "jobTimestamp": 1760897721917,
-        "startInterval": 202510191700
+        "jobTimestamp": 1761826419525,
+        "startInterval": 202510301100
       }
     ],
     "error": null

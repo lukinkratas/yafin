@@ -1,4 +1,4 @@
-SEARCH_KEYS = [
+_SEARCH_KEYS = [
     'explains',
     'count',
     'quotes',
@@ -20,7 +20,7 @@ SEARCH_KEYS = [
     'timeTakenForSearchLists',
 ]
 
-QUOTE_KEYS = [
+_QUOTE_KEYS = [
     'language',
     'region',
     'quoteType',
@@ -110,7 +110,24 @@ QUOTE_KEYS = [
     'symbol',
 ]
 
-ASSET_PROFILE_KEYS = [
+_QUOTE_TYPE_KEYS = [
+    "symbol",
+    "quoteType",
+    "quartrId",
+    "exchange",
+    "shortName",
+    "longName",
+    "messageBoardId",
+    "exchangeTimezoneName",
+    "exchangeTimezoneShortName",
+    "gmtOffSetMilliseconds",
+    "market",
+    "isEsgPopulated",
+    "hasSelerityEarnings",
+    "selerityIsGaap"
+]
+
+_ASSET_PROFILE_KEYS = [
     'address1',
     'city',
     'state',
@@ -138,7 +155,7 @@ ASSET_PROFILE_KEYS = [
     'maxAge',
 ]
 
-QUOTE_TYPE_KEYS = [
+_QUOTE_SUMMARY_QUOTE_TYPE_KEYS = [
     'exchange',
     'quoteType',
     'symbol',
@@ -154,7 +171,7 @@ QUOTE_TYPE_KEYS = [
     'maxAge',
 ]
 
-SUMMARY_PROFILE_KEYS = [
+_SUMMARY_PROFILE_KEYS = [
     'address1',
     'city',
     'state',
@@ -175,7 +192,7 @@ SUMMARY_PROFILE_KEYS = [
     'maxAge',
 ]
 
-SUMMARY_DETAIL_KEYS = [
+_SUMMARY_DETAIL_KEYS = [
     'maxAge',
     'priceHint',
     'previousClose',
@@ -221,7 +238,7 @@ SUMMARY_DETAIL_KEYS = [
     'tradeable',
 ]
 
-INCOME_STATEMENT_HISTORY_KEYS = [
+_INCOME_STATEMENT_HISTORY_KEYS = [
     'maxAge',
     'endDate',
     'totalRevenue',
@@ -248,7 +265,7 @@ INCOME_STATEMENT_HISTORY_KEYS = [
     'netIncomeApplicableToCommonShares',
 ]
 
-ESG_SCORES_KEYS = [
+_ESG_SCORES_KEYS = [
     'maxAge',
     'totalEsg',
     'environmentScore',
@@ -286,7 +303,7 @@ ESG_SCORES_KEYS = [
     'tobacco',
 ]
 
-PRICE_KEYS = [
+_PRICE_KEYS = [
     'maxAge',
     # 'preMarketChangePercent',
     # 'preMarketChange',
@@ -327,7 +344,7 @@ PRICE_KEYS = [
     'marketCap',
 ]
 
-DEFAULT_KEY_STATISTICS_KEYS = [
+_DEFAULT_KEY_STATISTICS_KEYS = [
     'maxAge',
     'priceHint',
     'enterpriseValue',
@@ -369,7 +386,7 @@ DEFAULT_KEY_STATISTICS_KEYS = [
     'leadInvestor',
 ]
 
-FINANCIAL_DATA_KEYS = [
+_FINANCIAL_DATA_KEYS = [
     'maxAge',
     'currentPrice',
     'targetHighPrice',
@@ -402,7 +419,7 @@ FINANCIAL_DATA_KEYS = [
     'financialCurrency',
 ]
 
-CALENDAR_EVENTS_EARNING_KEYS = [
+_CALENDAR_EVENTS_EARNING_KEYS = [
     'earningsDate',
     'earningsCallDate',
     'isEarningsDateEstimate',
@@ -414,7 +431,7 @@ CALENDAR_EVENTS_EARNING_KEYS = [
     'revenueHigh',
 ]
 
-SEC_FILING_KEYS = [
+_SEC_FILING_KEYS = [
     'date',
     'epochDate',
     'type',
@@ -424,7 +441,7 @@ SEC_FILING_KEYS = [
     'maxAge',
 ]
 
-UPGRADE_DOWNGRADE_HISTORY_KEYS = [
+_UPGRADE_DOWNGRADE_HISTORY_KEYS = [
     'epochGradeDate',
     'firm',
     'toGrade',
@@ -435,7 +452,7 @@ UPGRADE_DOWNGRADE_HISTORY_KEYS = [
     'priorPriceTarget',
 ]
 
-OWNERSHIP_KEYS = [
+_OWNERSHIP_KEYS = [
     'maxAge',
     'reportDate',
     'organization',
@@ -445,7 +462,7 @@ OWNERSHIP_KEYS = [
     'pctChange',
 ]
 
-MAJOR_HOLDERS_BREAKDOWN_KEYS = [
+_MAJOR_HOLDERS_BREAKDOWN_KEYS = [
     'maxAge',
     'insidersPercentHeld',
     'institutionsPercentHeld',
@@ -453,7 +470,7 @@ MAJOR_HOLDERS_BREAKDOWN_KEYS = [
     'institutionsCount',
 ]
 
-TRANSACTION_KEYS = [
+_TRANSACTION_KEYS = [
     'maxAge',
     'shares',
     # 'value',
@@ -466,7 +483,7 @@ TRANSACTION_KEYS = [
     'ownership',
 ]
 
-HOLDER_KEYS = [
+_HOLDER_KEYS = [
     'maxAge',
     'name',
     'relation',
@@ -477,7 +494,7 @@ HOLDER_KEYS = [
     # 'positionDirectDate',
 ]
 
-NET_SHARE_PURCHASE_ACIVITY_KEYS = [
+_NET_SHARE_PURCHASE_ACIVITY_KEYS = [
     'maxAge',
     'period',
     'buyInfoCount',
@@ -488,7 +505,7 @@ NET_SHARE_PURCHASE_ACIVITY_KEYS = [
     'totalInsiderShares',
 ]
 
-EARNINGS_HISTORY_KEYS = [
+_EARNINGS_HISTORY_KEYS = [
     'maxAge',
     'epsActual',
     'epsEstimate',
@@ -499,7 +516,7 @@ EARNINGS_HISTORY_KEYS = [
     'period',
 ]
 
-EARNINGS_TREND_KEYS = [
+_EARNINGS_TREND_KEYS = [
     'maxAge',
     'period',
     'endDate',
@@ -510,7 +527,7 @@ EARNINGS_TREND_KEYS = [
     'epsRevisions',
 ]
 
-RECOMMENDATIONS_TREND_KEYS = [
+_RECOMMENDATIONS_TREND_KEYS = [
     'period',
     'strongBuy',
     'buy',
@@ -519,7 +536,7 @@ RECOMMENDATIONS_TREND_KEYS = [
     'strongSell',
 ]
 
-OPTIONS_KEYS = [
+_OPTIONS_KEYS = [
     'underlyingSymbol',
     'expirationDates',
     'strikes',
@@ -528,7 +545,7 @@ OPTIONS_KEYS = [
     'options',
 ]
 
-INSIGHTS_KEYS = [
+_INSIGHTS_KEYS = [
     'symbol',
     'instrumentInfo',
     'companySnapshot',
@@ -538,10 +555,10 @@ INSIGHTS_KEYS = [
     'events',
     'reports',
     'sigDevs',
-    'secReports',
+    # 'secReports',
 ]
 
-MARKET_SUMMARY_KEYS = [
+_MARKET_SUMMARY_KEYS = [
     'language',
     'region',
     'quoteType',
@@ -574,6 +591,18 @@ MARKET_SUMMARY_KEYS = [
     'symbol',
 ]
 
-TRENDING_KEYS = ['count', 'quotes', 'jobTimestamp', 'startInterval']
+_TRENDING_KEYS = ['count', 'quotes', 'jobTimestamp', 'startInterval']
 
-CURRENCY_KEYS = ['shortName', 'longName', 'symbol', 'localLongName']
+_CURRENCY_KEYS = ['shortName', 'longName', 'symbol', 'localLongName']
+
+_ANALYSIS_KEYS = [
+    'analystRatings',
+    'earningsCallInsights',
+    'earningsInsights',
+    'insiderActivity',
+    'newsSummary',
+    'optionsAnalysis',
+    'overview',
+    'priceMovement',
+    'symbol'
+]

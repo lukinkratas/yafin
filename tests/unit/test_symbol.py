@@ -6,51 +6,54 @@ import pytest_asyncio
 from pytest_mock import MockerFixture
 from typeguard import TypeCheckError
 
-from tests.assertions import (
-    assert_annual_balance_sheet_result,
-    assert_annual_cash_flow_result,
-    assert_annual_income_stmt_result,
-    assert_asset_profile,
-    assert_balance_sheet_history,
-    assert_balance_sheet_history_quarterly,
-    assert_calendar_events,
-    assert_cashflow_statement_history,
-    assert_cashflow_statement_history_quarterly,
-    assert_chart_result,
-    assert_default_key_statistics,
-    assert_earnings,
-    assert_earnings_history,
-    assert_earnings_trend,
-    assert_esg_scores,
-    assert_financial_data,
-    assert_fund_ownership,
-    assert_income_statement_history,
-    assert_income_statement_history_quarterly,
-    assert_index_trend,
-    assert_industry_trend,
-    assert_insider_holders,
-    assert_insider_transactions,
-    assert_insights_result,
-    assert_institution_ownership,
-    assert_major_direct_holders,
-    assert_major_holders_breakdown,
-    assert_net_share_purchase_activity,
-    assert_options_result,
-    assert_page_views,
-    assert_price,
-    assert_quote_result,
-    assert_quote_summary_all_modules_result,
-    assert_quote_type,
-    assert_recommendation_trend,
-    assert_recommendations_result,
-    assert_search,
-    assert_sec_filings,
-    assert_sector_trend,
-    assert_summary_detail,
-    assert_summary_profile,
-    assert_upgrade_downgrade_history,
+from tests._assertions import (
+    _assert_analysis_result,
+    _assert_annual_balance_sheet_result,
+    _assert_annual_cash_flow_result,
+    _assert_annual_income_stmt_result,
+    _assert_asset_profile,
+    _assert_balance_sheet_history,
+    _assert_balance_sheet_history_quarterly,
+    _assert_cashflow_statement_history,
+    _assert_cashflow_statement_history_quarterly,
+    _assert_chart_result,
+    _assert_default_key_statistics,
+    _assert_earnings,
+    _assert_earnings_history,
+    _assert_earnings_trend,
+    _assert_esg_scores,
+    _assert_financial_data,
+    _assert_fund_ownership,
+    _assert_income_statement_history,
+    _assert_income_statement_history_quarterly,
+    _assert_index_trend,
+    _assert_industry_trend,
+    _assert_insider_holders,
+    _assert_insider_transactions,
+    _assert_insight_result,
+    _assert_institution_ownership,
+    _assert_major_direct_holders,
+    _assert_major_holders_breakdown,
+    _assert_net_share_purchase_activity,
+    _assert_options_result,
+    _assert_page_views,
+    _assert_price,
+    _assert_quote_result,
+    _assert_quote_summary_all_modules_result,
+    _assert_quote_summary_quote_type,
+    _assert_quote_type_result,
+    _assert_ratings_result,
+    _assert_recommendation_result,
+    _assert_recommendation_trend,
+    _assert_search_result,
+    _assert_sec_filings,
+    _assert_sector_trend,
+    _assert_summary_detail,
+    _assert_summary_profile,
+    _assert_symbol_calendar_events,
+    _assert_upgrade_downgrade_history,
 )
-from tests.utils import mock_200_response
+from tests._utils import _mock_200_response
 from yafin import AsyncSymbol
 from yafin.exceptions import TrailingBalanceSheetError
 
@@ -122,10 +125,17 @@ class TestUnitSymbol:
         [
             dict(period_range='1y', interval='1d'),
             dict(
-                period_range='1y', interval='1d', include_div=True, include_split=True
+                period_range='1y',
+                interval='1d',
+                include_div=True,
+                include_split=True,
+                include_earn=True,
+                include_capital_gain=True,
             ),
             dict(period_range='1y', interval='1d', include_div=True),
             dict(period_range='1y', interval='1d', include_split=True),
+            dict(period_range='1y', interval='1d', include_earn=True),
+            dict(period_range='1y', interval='1d', include_capital_gain=True),
         ],
     )
     @pytest.mark.asyncio
@@ -137,9 +147,9 @@ class TestUnitSymbol:
         chart_json_mock: dict[str, Any],
     ) -> None:
         """Test get_chart method."""
-        mock_200_response(mocker, chart_json_mock)
+        _mock_200_response(mocker, chart_json_mock)
         chart = await symbol.get_chart(**kwargs)
-        assert_chart_result(chart, symbol.ticker)
+        _assert_chart_result(chart, symbol.ticker)
 
     @pytest.mark.parametrize(
         'kwargs, err_cls',
@@ -150,6 +160,8 @@ class TestUnitSymbol:
                     interval='1d',
                     include_div=True,
                     include_split=True,
+                    include_earn=True,
+                    include_capital_gain=True,
                 ),
                 ValueError,
             ),
@@ -158,7 +170,9 @@ class TestUnitSymbol:
                     period_range=1,
                     interval='1d',
                     include_div=True,
-                    include_split='xxx',
+                    include_split=True,
+                    include_earn=True,
+                    include_capital_gain=True,
                 ),
                 TypeCheckError,
             ),
@@ -168,6 +182,8 @@ class TestUnitSymbol:
                     interval='xxx',
                     include_div=True,
                     include_split=True,
+                    include_earn=True,
+                    include_capital_gain=True,
                 ),
                 ValueError,
             ),
@@ -176,7 +192,9 @@ class TestUnitSymbol:
                     period_range='1y',
                     interval=1,
                     include_div=True,
-                    include_split='xxx',
+                    include_split=True,
+                    include_earn=True,
+                    include_capital_gain=True,
                 ),
                 TypeCheckError,
             ),
@@ -186,6 +204,8 @@ class TestUnitSymbol:
                     interval='1d',
                     include_div='xxx',
                     include_split=True,
+                    include_earn=True,
+                    include_capital_gain=True,
                 ),
                 TypeCheckError,
             ),
@@ -195,6 +215,30 @@ class TestUnitSymbol:
                     interval='1d',
                     include_div=True,
                     include_split='xxx',
+                    include_earn=True,
+                    include_capital_gain=True,
+                ),
+                TypeCheckError,
+            ),
+            (
+                dict(
+                    period_range='1y',
+                    interval='1d',
+                    include_div=True,
+                    include_split=True,
+                    include_earn='xxx',
+                    include_capital_gain=True,
+                ),
+                TypeCheckError,
+            ),
+            (
+                dict(
+                    period_range='1y',
+                    interval='1d',
+                    include_div=True,
+                    include_split=True,
+                    include_earn=True,
+                    include_capital_gain='xxx',
                 ),
                 TypeCheckError,
             ),
@@ -216,9 +260,21 @@ class TestUnitSymbol:
         quote_json_mock: dict[str, Any],
     ) -> None:
         """Test get_quote method."""
-        mock_200_response(mocker, quote_json_mock)
+        _mock_200_response(mocker, quote_json_mock)
         quote = await symbol.get_quote()
-        assert_quote_result(quote, symbol.ticker)
+        _assert_quote_result(quote, symbol.ticker)
+
+    @pytest.mark.asyncio
+    async def test_get_quote_type(
+        self,
+        symbol: AsyncSymbol,
+        mocker: MockerFixture,
+        quote_type_json_mock: dict[str, Any],
+    ) -> None:
+        """Test get_quote_type method."""
+        _mock_200_response(mocker, quote_type_json_mock)
+        quote_type = await symbol.get_quote_type()
+        _assert_quote_type_result(quote_type, symbol.ticker)
 
     @pytest.mark.asyncio
     async def test_get_quote_summary_all_modules(
@@ -228,9 +284,9 @@ class TestUnitSymbol:
         quote_summary_all_modules_json_mock: dict[str, Any],
     ) -> None:
         """Test get_quote_summary_all_modules method."""
-        mock_200_response(mocker, quote_summary_all_modules_json_mock)
+        _mock_200_response(mocker, quote_summary_all_modules_json_mock)
         quote_summary_all_modules = await symbol.get_quote_summary_all_modules()
-        assert_quote_summary_all_modules_result(quote_summary_all_modules)
+        _assert_quote_summary_all_modules_result(quote_summary_all_modules)
 
     @pytest.mark.asyncio
     async def test_get_quote_summary_single_module(
@@ -240,11 +296,11 @@ class TestUnitSymbol:
         asset_profile_json_mock: dict[str, Any],
     ) -> None:
         """Test _get_quote_summary_single_module method."""
-        mock_200_response(mocker, asset_profile_json_mock)
+        _mock_200_response(mocker, asset_profile_json_mock)
         asset_profile = await symbol._get_quote_summary_single_module(
             module='assetProfile'
         )
-        assert_asset_profile(asset_profile)
+        _assert_asset_profile(asset_profile)
 
     @pytest.mark.parametrize(
         'kwargs, err_cls',
@@ -262,16 +318,16 @@ class TestUnitSymbol:
             await symbol._get_quote_summary_single_module(**kwargs)
 
     @pytest.mark.asyncio
-    async def test_get_quote_type(
+    async def test_get_quote_summary_quote_type(
         self,
         symbol: AsyncSymbol,
         mocker: MockerFixture,
-        quote_type_json_mock: dict[str, Any],
+        quote_summary_quote_type_json_mock: dict[str, Any],
     ) -> None:
         """Test get_quote_type method."""
-        mock_200_response(mocker, quote_type_json_mock)
-        quote_type = await symbol.get_quote_type()
-        assert_quote_type(quote_type)
+        _mock_200_response(mocker, quote_summary_quote_type_json_mock)
+        quote_type = await symbol.get_quote_summary_quote_type()
+        _assert_quote_summary_quote_type(quote_type)
 
     @pytest.mark.asyncio
     async def test_get_asset_profile(
@@ -281,9 +337,9 @@ class TestUnitSymbol:
         asset_profile_json_mock: dict[str, Any],
     ) -> None:
         """Test get_asset_profile method."""
-        mock_200_response(mocker, asset_profile_json_mock)
+        _mock_200_response(mocker, asset_profile_json_mock)
         asset_profile = await symbol.get_asset_profile()
-        assert_asset_profile(asset_profile)
+        _assert_asset_profile(asset_profile)
 
     @pytest.mark.asyncio
     async def test_get_summary_profile(
@@ -293,9 +349,9 @@ class TestUnitSymbol:
         summary_profile_json_mock: dict[str, Any],
     ) -> None:
         """Test get_summary_profile method."""
-        mock_200_response(mocker, summary_profile_json_mock)
+        _mock_200_response(mocker, summary_profile_json_mock)
         summary_profile = await symbol.get_summary_profile()
-        assert_summary_profile(summary_profile)
+        _assert_summary_profile(summary_profile)
 
     @pytest.mark.asyncio
     async def test_get_summary_detail(
@@ -305,9 +361,9 @@ class TestUnitSymbol:
         summary_detail_json_mock: dict[str, Any],
     ) -> None:
         """Test get_summary_detail method."""
-        mock_200_response(mocker, summary_detail_json_mock)
+        _mock_200_response(mocker, summary_detail_json_mock)
         summary_detail = await symbol.get_summary_detail()
-        assert_summary_detail(summary_detail)
+        _assert_summary_detail(summary_detail)
 
     @pytest.mark.asyncio
     async def test_get_income_statement_history(
@@ -317,9 +373,9 @@ class TestUnitSymbol:
         income_statement_history_json_mock: dict[str, Any],
     ) -> None:
         """Test get_income_statement_history method."""
-        mock_200_response(mocker, income_statement_history_json_mock)
+        _mock_200_response(mocker, income_statement_history_json_mock)
         income_statement_history = await symbol.get_income_statement_history()
-        assert_income_statement_history(income_statement_history)
+        _assert_income_statement_history(income_statement_history)
 
     @pytest.mark.asyncio
     async def test_get_income_statement_history_quarterly(
@@ -329,11 +385,11 @@ class TestUnitSymbol:
         income_statement_history_quarterly_json_mock: dict[str, Any],
     ) -> None:
         """Test get_income_statement_history_quarterly method."""
-        mock_200_response(mocker, income_statement_history_quarterly_json_mock)
+        _mock_200_response(mocker, income_statement_history_quarterly_json_mock)
         income_statement_history_quarterly = (
             await symbol.get_income_statement_history_quarterly()
         )
-        assert_income_statement_history_quarterly(income_statement_history_quarterly)
+        _assert_income_statement_history_quarterly(income_statement_history_quarterly)
 
     @pytest.mark.asyncio
     async def test_get_balance_sheet_history(
@@ -343,9 +399,9 @@ class TestUnitSymbol:
         balance_sheet_history_json_mock: dict[str, Any],
     ) -> None:
         """Test get_balance_sheet_history method."""
-        mock_200_response(mocker, balance_sheet_history_json_mock)
+        _mock_200_response(mocker, balance_sheet_history_json_mock)
         balance_sheet_history = await symbol.get_balance_sheet_history()
-        assert_balance_sheet_history(balance_sheet_history)
+        _assert_balance_sheet_history(balance_sheet_history)
 
     @pytest.mark.asyncio
     async def test_get_balance_sheet_history_quarterly(
@@ -355,11 +411,11 @@ class TestUnitSymbol:
         balance_sheet_history_quarterly_json_mock: dict[str, Any],
     ) -> None:
         """Test get_balance_sheet_history_quarterly method."""
-        mock_200_response(mocker, balance_sheet_history_quarterly_json_mock)
+        _mock_200_response(mocker, balance_sheet_history_quarterly_json_mock)
         balance_sheet_history_quarterly = (
             await symbol.get_balance_sheet_history_quarterly()
         )
-        assert_balance_sheet_history_quarterly(balance_sheet_history_quarterly)
+        _assert_balance_sheet_history_quarterly(balance_sheet_history_quarterly)
 
     @pytest.mark.asyncio
     async def test_get_cashflow_statement_history(
@@ -369,9 +425,9 @@ class TestUnitSymbol:
         cashflow_statement_history_json_mock: dict[str, Any],
     ) -> None:
         """Test get_cashflow_statement_history method."""
-        mock_200_response(mocker, cashflow_statement_history_json_mock)
+        _mock_200_response(mocker, cashflow_statement_history_json_mock)
         cashflow_statement_history = await symbol.get_cashflow_statement_history()
-        assert_cashflow_statement_history(cashflow_statement_history)
+        _assert_cashflow_statement_history(cashflow_statement_history)
 
     @pytest.mark.asyncio
     async def test_get_cashflow_statement_history_quarterly(
@@ -381,11 +437,11 @@ class TestUnitSymbol:
         cashflow_statement_history_quarterly_json_mock: dict[str, Any],
     ) -> None:
         """Test get_cashflow_statement_history_quarterly method."""
-        mock_200_response(mocker, cashflow_statement_history_quarterly_json_mock)
+        _mock_200_response(mocker, cashflow_statement_history_quarterly_json_mock)
         cashflow_statement_history_quarterly = (
             await symbol.get_cashflow_statement_history_quarterly()
         )
-        assert_cashflow_statement_history_quarterly(
+        _assert_cashflow_statement_history_quarterly(
             cashflow_statement_history_quarterly
         )
 
@@ -397,9 +453,9 @@ class TestUnitSymbol:
         esg_scores_json_mock: dict[str, Any],
     ) -> None:
         """Test get_esg_scores method."""
-        mock_200_response(mocker, esg_scores_json_mock)
+        _mock_200_response(mocker, esg_scores_json_mock)
         esg_scores = await symbol.get_esg_scores()
-        assert_esg_scores(esg_scores)
+        _assert_esg_scores(esg_scores)
 
     @pytest.mark.asyncio
     async def test_get_price(
@@ -409,9 +465,9 @@ class TestUnitSymbol:
         price_json_mock: dict[str, Any],
     ) -> None:
         """Test get_price method."""
-        mock_200_response(mocker, price_json_mock)
+        _mock_200_response(mocker, price_json_mock)
         price = await symbol.get_price()
-        assert_price(price)
+        _assert_price(price)
 
     @pytest.mark.asyncio
     async def test_get_default_key_statistics(
@@ -421,9 +477,9 @@ class TestUnitSymbol:
         default_key_statistics_json_mock: dict[str, Any],
     ) -> None:
         """Test get_default_key_statistics method."""
-        mock_200_response(mocker, default_key_statistics_json_mock)
+        _mock_200_response(mocker, default_key_statistics_json_mock)
         default_key_statistics = await symbol.get_default_key_statistics()
-        assert_default_key_statistics(default_key_statistics)
+        _assert_default_key_statistics(default_key_statistics)
 
     @pytest.mark.asyncio
     async def test_get_financial_data(
@@ -433,21 +489,21 @@ class TestUnitSymbol:
         financial_data_json_mock: dict[str, Any],
     ) -> None:
         """Test get_financial_data method."""
-        mock_200_response(mocker, financial_data_json_mock)
+        _mock_200_response(mocker, financial_data_json_mock)
         financial_data = await symbol.get_financial_data()
-        assert_financial_data(financial_data)
+        _assert_financial_data(financial_data)
 
     @pytest.mark.asyncio
     async def test_get_calendar_events(
         self,
         symbol: AsyncSymbol,
         mocker: MockerFixture,
-        calendar_events_json_mock: dict[str, Any],
+        symbol_calendar_events_json_mock: dict[str, Any],
     ) -> None:
         """Test get_calendar_events method."""
-        mock_200_response(mocker, calendar_events_json_mock)
+        _mock_200_response(mocker, symbol_calendar_events_json_mock)
         calendar_events = await symbol.get_calendar_events()
-        assert_calendar_events(calendar_events)
+        _assert_symbol_calendar_events(calendar_events)
 
     @pytest.mark.asyncio
     async def test_get_sec_filings(
@@ -457,9 +513,9 @@ class TestUnitSymbol:
         sec_filings_json_mock: dict[str, Any],
     ) -> None:
         """Test get_sec_filings method."""
-        mock_200_response(mocker, sec_filings_json_mock)
+        _mock_200_response(mocker, sec_filings_json_mock)
         sec_filings = await symbol.get_sec_filings()
-        assert_sec_filings(sec_filings)
+        _assert_sec_filings(sec_filings)
 
     @pytest.mark.asyncio
     async def test_get_upgrade_downgrade_history(
@@ -469,9 +525,9 @@ class TestUnitSymbol:
         upgrade_downgrade_history_json_mock: dict[str, Any],
     ) -> None:
         """Test get_upgrade_downgrade_history method."""
-        mock_200_response(mocker, upgrade_downgrade_history_json_mock)
+        _mock_200_response(mocker, upgrade_downgrade_history_json_mock)
         upgrade_downgrade_history = await symbol.get_upgrade_downgrade_history()
-        assert_upgrade_downgrade_history(upgrade_downgrade_history)
+        _assert_upgrade_downgrade_history(upgrade_downgrade_history)
 
     @pytest.mark.asyncio
     async def test_get_institution_ownership(
@@ -481,9 +537,9 @@ class TestUnitSymbol:
         institution_ownership_json_mock: dict[str, Any],
     ) -> None:
         """Test get_institution_ownership method."""
-        mock_200_response(mocker, institution_ownership_json_mock)
+        _mock_200_response(mocker, institution_ownership_json_mock)
         institution_ownership = await symbol.get_institution_ownership()
-        assert_institution_ownership(institution_ownership)
+        _assert_institution_ownership(institution_ownership)
 
     @pytest.mark.asyncio
     async def test_get_fund_ownership(
@@ -493,9 +549,9 @@ class TestUnitSymbol:
         fund_ownership_json_mock: dict[str, Any],
     ) -> None:
         """Test get_fund_ownership method."""
-        mock_200_response(mocker, fund_ownership_json_mock)
+        _mock_200_response(mocker, fund_ownership_json_mock)
         fund_ownership = await symbol.get_fund_ownership()
-        assert_fund_ownership(fund_ownership)
+        _assert_fund_ownership(fund_ownership)
 
     @pytest.mark.asyncio
     async def test_get_major_direct_holders(
@@ -505,9 +561,9 @@ class TestUnitSymbol:
         major_direct_holders_json_mock: dict[str, Any],
     ) -> None:
         """Test get_major_direct_holders method."""
-        mock_200_response(mocker, major_direct_holders_json_mock)
+        _mock_200_response(mocker, major_direct_holders_json_mock)
         major_direct_holders = await symbol.get_major_direct_holders()
-        assert_major_direct_holders(major_direct_holders)
+        _assert_major_direct_holders(major_direct_holders)
 
     @pytest.mark.asyncio
     async def test_get_major_holders_breakdown(
@@ -517,9 +573,9 @@ class TestUnitSymbol:
         major_holders_breakdown_json_mock: dict[str, Any],
     ) -> None:
         """Test get_major_holders_breakdown method."""
-        mock_200_response(mocker, major_holders_breakdown_json_mock)
+        _mock_200_response(mocker, major_holders_breakdown_json_mock)
         major_holders_breakdown = await symbol.get_major_holders_breakdown()
-        assert_major_holders_breakdown(major_holders_breakdown)
+        _assert_major_holders_breakdown(major_holders_breakdown)
 
     @pytest.mark.asyncio
     async def test_get_insider_transactions(
@@ -529,9 +585,9 @@ class TestUnitSymbol:
         insider_transactions_json_mock: dict[str, Any],
     ) -> None:
         """Test get_insider_transactions method."""
-        mock_200_response(mocker, insider_transactions_json_mock)
+        _mock_200_response(mocker, insider_transactions_json_mock)
         insider_transactions = await symbol.get_insider_transactions()
-        assert_insider_transactions(insider_transactions)
+        _assert_insider_transactions(insider_transactions)
 
     @pytest.mark.asyncio
     async def test_get_insider_holders(
@@ -541,9 +597,9 @@ class TestUnitSymbol:
         insider_holders_json_mock: dict[str, Any],
     ) -> None:
         """Test get_insider_holders method."""
-        mock_200_response(mocker, insider_holders_json_mock)
+        _mock_200_response(mocker, insider_holders_json_mock)
         insider_holders = await symbol.get_insider_holders()
-        assert_insider_holders(insider_holders)
+        _assert_insider_holders(insider_holders)
 
     @pytest.mark.asyncio
     async def test_get_net_share_purchase_activity(
@@ -553,9 +609,9 @@ class TestUnitSymbol:
         net_share_purchase_activity_json_mock: dict[str, Any],
     ) -> None:
         """Test get_net_share_purchase_activity method."""
-        mock_200_response(mocker, net_share_purchase_activity_json_mock)
+        _mock_200_response(mocker, net_share_purchase_activity_json_mock)
         net_share_purchase_activity = await symbol.get_net_share_purchase_activity()
-        assert_net_share_purchase_activity(net_share_purchase_activity)
+        _assert_net_share_purchase_activity(net_share_purchase_activity)
 
     @pytest.mark.asyncio
     async def test_get_earnings(
@@ -565,9 +621,9 @@ class TestUnitSymbol:
         earnings_json_mock: dict[str, Any],
     ) -> None:
         """Test get_earnings method."""
-        mock_200_response(mocker, earnings_json_mock)
+        _mock_200_response(mocker, earnings_json_mock)
         earnings = await symbol.get_earnings()
-        assert_earnings(earnings)
+        _assert_earnings(earnings)
 
     @pytest.mark.asyncio
     async def test_get_earnings_history(
@@ -577,9 +633,9 @@ class TestUnitSymbol:
         earnings_history_json_mock: dict[str, Any],
     ) -> None:
         """Test get_earnings_history method."""
-        mock_200_response(mocker, earnings_history_json_mock)
+        _mock_200_response(mocker, earnings_history_json_mock)
         earnings_history = await symbol.get_earnings_history()
-        assert_earnings_history(earnings_history)
+        _assert_earnings_history(earnings_history)
 
     @pytest.mark.asyncio
     async def test_get_earnings_trend(
@@ -589,9 +645,9 @@ class TestUnitSymbol:
         earnings_trend_json_mock: dict[str, Any],
     ) -> None:
         """Test get_earnings_trend method."""
-        mock_200_response(mocker, earnings_trend_json_mock)
+        _mock_200_response(mocker, earnings_trend_json_mock)
         earnings_trend = await symbol.get_earnings_trend()
-        assert_earnings_trend(earnings_trend)
+        _assert_earnings_trend(earnings_trend)
 
     @pytest.mark.asyncio
     async def test_get_industry_trend(
@@ -601,9 +657,9 @@ class TestUnitSymbol:
         industry_trend_json_mock: dict[str, Any],
     ) -> None:
         """Test get_industry_trend method."""
-        mock_200_response(mocker, industry_trend_json_mock)
+        _mock_200_response(mocker, industry_trend_json_mock)
         industry_trend = await symbol.get_industry_trend()
-        assert_industry_trend(industry_trend)
+        _assert_industry_trend(industry_trend)
 
     @pytest.mark.asyncio
     async def test_get_index_trend(
@@ -613,9 +669,9 @@ class TestUnitSymbol:
         index_trend_json_mock: dict[str, Any],
     ) -> None:
         """Test get_index_trend method."""
-        mock_200_response(mocker, index_trend_json_mock)
+        _mock_200_response(mocker, index_trend_json_mock)
         index_trend = await symbol.get_index_trend()
-        assert_index_trend(index_trend)
+        _assert_index_trend(index_trend)
 
     @pytest.mark.asyncio
     async def test_get_sector_trend(
@@ -625,9 +681,9 @@ class TestUnitSymbol:
         sector_trend_json_mock: dict[str, Any],
     ) -> None:
         """Test get_sector_trend method."""
-        mock_200_response(mocker, sector_trend_json_mock)
+        _mock_200_response(mocker, sector_trend_json_mock)
         sector_trend = await symbol.get_sector_trend()
-        assert_sector_trend(sector_trend)
+        _assert_sector_trend(sector_trend)
 
     @pytest.mark.asyncio
     async def test_get_recommendation_trend(
@@ -637,9 +693,9 @@ class TestUnitSymbol:
         recommendation_trend_json_mock: dict[str, Any],
     ) -> None:
         """Test get_recommendation_trend method."""
-        mock_200_response(mocker, recommendation_trend_json_mock)
+        _mock_200_response(mocker, recommendation_trend_json_mock)
         recommendation_trend = await symbol.get_recommendation_trend()
-        assert_recommendation_trend(recommendation_trend)
+        _assert_recommendation_trend(recommendation_trend)
 
     @pytest.mark.asyncio
     async def test_get_page_views(
@@ -649,9 +705,9 @@ class TestUnitSymbol:
         page_views_json_mock: dict[str, Any],
     ) -> None:
         """Test get_page_views method."""
-        mock_200_response(mocker, page_views_json_mock)
+        _mock_200_response(mocker, page_views_json_mock)
         page_views = await symbol.get_page_views()
-        assert_page_views(page_views)
+        _assert_page_views(page_views)
 
     @pytest.mark.parametrize(
         'kwargs',
@@ -700,9 +756,9 @@ class TestUnitSymbol:
         timeseries_income_statement_json_mock: dict[str, Any],
     ) -> None:
         """Test _get_financials method."""
-        mock_200_response(mocker, timeseries_income_statement_json_mock)
+        _mock_200_response(mocker, timeseries_income_statement_json_mock)
         annual_income_stmt = await symbol._get_financials(**kwargs)
-        assert_annual_income_stmt_result(annual_income_stmt)
+        _assert_annual_income_stmt_result(annual_income_stmt)
 
     @pytest.mark.parametrize(
         'kwargs, err_cls',
@@ -755,9 +811,9 @@ class TestUnitSymbol:
         timeseries_income_statement_json_mock: dict[str, Any],
     ) -> None:
         """Test get_income_statement method."""
-        mock_200_response(mocker, timeseries_income_statement_json_mock)
+        _mock_200_response(mocker, timeseries_income_statement_json_mock)
         annual_income_stmt = await symbol.get_income_statement(**kwargs)
-        assert_annual_income_stmt_result(annual_income_stmt)
+        _assert_annual_income_stmt_result(annual_income_stmt)
 
     @pytest.mark.parametrize(
         'kwargs, err_cls',
@@ -804,9 +860,9 @@ class TestUnitSymbol:
         timeseries_balance_sheet_json_mock: dict[str, Any],
     ) -> None:
         """Test get_balance_sheet method."""
-        mock_200_response(mocker, timeseries_balance_sheet_json_mock)
+        _mock_200_response(mocker, timeseries_balance_sheet_json_mock)
         annual_balance_sheet = await symbol.get_balance_sheet(**kwargs)
-        assert_annual_balance_sheet_result(annual_balance_sheet)
+        _assert_annual_balance_sheet_result(annual_balance_sheet)
 
     @pytest.mark.parametrize(
         'kwargs, err_cls',
@@ -854,9 +910,9 @@ class TestUnitSymbol:
         timeseries_cash_flow_json_mock: dict[str, Any],
     ) -> None:
         """Test get_cash_flow method."""
-        mock_200_response(mocker, timeseries_cash_flow_json_mock)
+        _mock_200_response(mocker, timeseries_cash_flow_json_mock)
         annual_cash_flow = await symbol.get_cash_flow(**kwargs)
-        assert_annual_cash_flow_result(annual_cash_flow)
+        _assert_annual_cash_flow_result(annual_cash_flow)
 
     @pytest.mark.parametrize(
         'kwargs, err_cls',
@@ -883,9 +939,9 @@ class TestUnitSymbol:
         options_json_mock: dict[str, Any],
     ) -> None:
         """Test get_options method."""
-        mock_200_response(mocker, options_json_mock)
+        _mock_200_response(mocker, options_json_mock)
         options = await symbol.get_options()
-        assert_options_result(options, symbol.ticker)
+        _assert_options_result(options, symbol.ticker)
 
     @pytest.mark.asyncio
     async def test_get_search(
@@ -895,9 +951,9 @@ class TestUnitSymbol:
         search_json_mock: dict[str, Any],
     ) -> None:
         """Test get_search method."""
-        mock_200_response(mocker, search_json_mock)
+        _mock_200_response(mocker, search_json_mock)
         search = await symbol.get_search()
-        assert_search(search)
+        _assert_search_result(search)
 
     @pytest.mark.asyncio
     async def test_get_recommendations(
@@ -907,9 +963,9 @@ class TestUnitSymbol:
         recommendations_json_mock: dict[str, Any],
     ) -> None:
         """Test get_recommendations method."""
-        mock_200_response(mocker, recommendations_json_mock)
+        _mock_200_response(mocker, recommendations_json_mock)
         recommendations = await symbol.get_recommendations()
-        assert_recommendations_result(recommendations, symbol.ticker)
+        _assert_recommendation_result(recommendations, symbol.ticker)
 
     @pytest.mark.asyncio
     async def test_get_insights(
@@ -919,6 +975,30 @@ class TestUnitSymbol:
         insights_json_mock: dict[str, Any],
     ) -> None:
         """Test get_insights method."""
-        mock_200_response(mocker, insights_json_mock)
+        _mock_200_response(mocker, insights_json_mock)
         insights = await symbol.get_insights()
-        assert_insights_result(insights, symbol.ticker)
+        _assert_insight_result(insights, symbol.ticker)
+
+    @pytest.mark.asyncio
+    async def test_get_ratings(
+        self,
+        symbol: AsyncSymbol,
+        mocker: MockerFixture,
+        ratings_json_mock: dict[str, Any],
+    ) -> None:
+        """Test get_ratings method."""
+        _mock_200_response(mocker, ratings_json_mock)
+        ratings = await symbol.get_ratings()
+        _assert_ratings_result(ratings)
+
+    @pytest.mark.asyncio
+    async def test_get_analysis(
+        self,
+        symbol: AsyncSymbol,
+        mocker: MockerFixture,
+        analysis_json_mock: dict[str, Any],
+    ) -> None:
+        """Test get_analysis method."""
+        _mock_200_response(mocker, analysis_json_mock)
+        analysis = await symbol.get_analysis()
+        _assert_analysis_result(analysis)

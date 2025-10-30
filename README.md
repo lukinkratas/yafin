@@ -28,9 +28,6 @@ https://github.com/pasdam/yahoo-finance-openapi/blob/main/query1.yml
 https://github.com/Scarvy/yahoo-finance-api-collection
 
 ### Reverse eng
-new event: earn|capitalGain -> + unit test + update fixtures
-
-new types (other types + new fixtures): MarketCap,EnterpriseValue,PeRatio,ForwardPeRatio,PegRatio,PsRatio,PbRatio,EnterprisesValueRevenueRatio,EnterprisesValueEBITDARatio,spEarningsReleaseEvents,analystRatings,economicEvents,earningsConferenceCallEvents,corporateConferenceCallEvents,conferencePresentation,otherCorporate,conferenceEvents,shareHoldersAnnualMeetingsEvents,corporateAnalystMeeting,mergerAndAcquisitionAnnouncement -> new fixtures
 
 new endpoint (+ unit tests + new fixtures):
 https://query1.finance.yahoo.com/ws/screeners/v1/finance/calendar-events
@@ -43,21 +40,6 @@ endDate=1761490800000
 modules=economicEvents
 startDate=1761404400000
 https://query1.finance.yahoo.com/ws/screeners/v1/finance/calendar-events?countPerDay=25&economicEventsHighImportanceOnly=true&economicEventsRegionFilter=&endDate=1761490800000&modules=economicEvents&startDate=1761404400000&lang=en-US&region=US
-
-new endpoint (+ unit tests + new fixtures):
-https://query1.finance.yahoo.com/v2/ratings/top/AAPL
-lang=en-US
-region=US
-exclude_noncurrent=true
-https://query1.finance.yahoo.com/v2/ratings/top/AAPL?exclude_noncurrent=true&lang=en-US&region=US
-
-new endpoint (+ unit tests + new fixtures):
-https://query1.finance.yahoo.com/v1/finance/quoteType/
-symbol=AAPL
-lang=en-US
-region=US
-enablePrivateCompany=true
-https://query1.finance.yahoo.com/v1/finance/quoteType/?symbol=AAPL&lang=en-US&region=US&enablePrivateCompany=true
 
 new endpoint (+ unit tests + new fixtures):
 https://finance.yahoo.com/xhr/ticker-analysis

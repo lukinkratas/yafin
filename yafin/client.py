@@ -1,5 +1,5 @@
 import logging
-from datetime import datetime
+from datetime import datetime, timedelta
 from types import TracebackType
 from typing import Any, Self, Type
 
@@ -7,12 +7,11 @@ from curl_cffi import AsyncSession, Response
 from curl_cffi.requests.exceptions import HTTPError
 from typeguard import typechecked
 
-from .const import _ALL_TYPES, ALL_MODULES, EVENTS, INTERVALS, RANGES
+from .const import _ALL_TYPES_SET, ALL_MODULES_SET, EVENTS, INTERVALS, RANGES
+from .types import ResponseJson, Result
 from .utils import _encode_url, _error, _log_args
 
 logger = logging.getLogger(__name__)
-
-type ResponseJson = dict[str, Any]
 
 
 class AsyncClient(object):
@@ -32,9 +31,9 @@ class AsyncClient(object):
 
     _BASE_URL = r'https://query2.finance.yahoo.com'
     _DEFAULT_PARAMS = {
-        'formatted': 'false',
         'region': 'US',
         'lang': 'en-US',
+        'formatted': False,
         'corsDomain': 'finance.yahoo.com',
     }
 
@@ -136,7 +135,8 @@ class AsyncClient(object):
                 list of valid values.
         """
         logger.debug(
-            f'Getting finance/chart for ticker {ticker}, {period_range=}, {interval=}, {events=}.'  # noqa E501
+            f'Getting finance/chart for {ticker=}, '
+            f'{period_range=}, {interval=}, {events=}.'
         )
 
         if period_range not in RANGES:
@@ -182,19 +182,40 @@ class AsyncClient(object):
     @_log_args
     @typechecked
     async def get_quote(self, tickers: str) -> ResponseJson:
-        """Get quote for the ticker(s).
+        """Get quote for tickers.
 
         Args:
             tickers: Comma-separated ticker symbols.
 
         Returns: Quote response json including result and error.
         """
-        logger.debug(f'Getting finance/quote for ticker {tickers}.')
+        logger.debug(f'Getting finance/quote for {tickers=}.')
 
         url = f'{self._BASE_URL}/v7/finance/quote'
         params = self._DEFAULT_PARAMS | {
             'symbols': tickers,
+            'includePrePost': True,
             'crumb': await self._get_crumb(),
+        }
+        response = await self._get_async_request(url, params)
+        return response.json()
+
+    @_log_args
+    @typechecked
+    async def get_quote_type(self, tickers: str) -> ResponseJson:
+        """Get quote type for tickers.
+
+        Args:
+            tickers: Comma-separated ticker symbols.
+
+        Returns: Quote type response json including result and error.
+        """
+        logger.debug(f'Getting finance/quoteType for {tickers=}.')
+
+        url = f'{self._BASE_URL}/v1/finance/quoteType/'
+        params = self._DEFAULT_PARAMS | {
+            'symbol': tickers,
+            'enablePrivateCompany': True,
         }
         response = await self._get_async_request(url, params)
         return response.json()
@@ -210,25 +231,25 @@ class AsyncClient(object):
 
         Returns: Quote summary response json including result and error.
         """
-        logger.debug(f'Getting finance/quoteSummary for ticker {ticker}.')
+        logger.debug(f'Getting finance/quoteSummary for {ticker=}.')
 
         parsed_modules = {m.strip() for m in modules.split(',')}
 
-        if not parsed_modules <= ALL_MODULES:
+        if not parsed_modules <= ALL_MODULES_SET:
             _error(
                 msg=(
-                    f'Invalid modules={parsed_modules - ALL_MODULES}. '
-                    f'Valid values: {ALL_MODULES}'
+                    f'Invalid modules={parsed_modules - ALL_MODULES_SET}. '
+                    f'Valid values: {ALL_MODULES_SET}'
                 ),
                 err_cls=ValueError,
             )
 
         url = f'{self._BASE_URL}/v10/finance/quoteSummary/{ticker}'
         params = self._DEFAULT_PARAMS | {
+            'modules': ','.join(parsed_modules),
             'enablePrivateCompany': True,
             'enableQSPExpandedEarnings': True,
             'overnightPrice': True,
-            'modules': ','.join(parsed_modules),
             'crumb': await self._get_crumb(),
         }
         response = await self._get_async_request(url, params)
@@ -248,8 +269,8 @@ class AsyncClient(object):
         Args:
             ticker: Ticker symbol.
             types: Comma-separated types (incl. frequency) to include.
-            period1: Start timestamp (optional).
-            period2: End timestamp (optional).
+            period1: Start timestamp in seconds.
+            period2: End timestamp in seconds.
 
         Returns: Timeseries response json including result and error.
 
@@ -257,29 +278,33 @@ class AsyncClient(object):
             ValueError: If types are not in list of valid values.
         """
         logger.debug(
-            f'Getting finance/timeseries for ticker {ticker}, {types=}, {period1=}, {period2=}.'  # noqa E501
+            f'Getting finance/timeseries for {ticker=}, '
+            f'{types=}, {period1=}, {period2=}.'
         )
 
         parsed_types = {t.strip() for t in types.split(',')}
 
-        if not parsed_types <= _ALL_TYPES:
+        if not parsed_types <= _ALL_TYPES_SET:
             _error(
                 msg=(
-                    f'Invalid types={parsed_types - _ALL_TYPES}. '
-                    f'Valid values: {_ALL_TYPES}'
+                    f'Invalid types={parsed_types - _ALL_TYPES_SET}. '
+                    f'Valid values: {_ALL_TYPES_SET}'
                 ),
                 err_cls=ValueError,
             )
 
-        if not period1:
+        if period1 is None:
             period1 = datetime(2020, 1, 1).timestamp()
 
-        if not period2:
+        if period2 is None:
             period2 = datetime.now().timestamp()
 
-        url = f'{self._BASE_URL}/ws/fundamentals-timeseries/v1/finance/timeseries/{ticker}'  # noqa E501
+        url = (
+            f'{self._BASE_URL}/ws/fundamentals-timeseries/'
+            f'v1/finance/timeseries/{ticker}'
+        )
         params = self._DEFAULT_PARAMS | {
-            'merge': False,
+            'merge': True,
             'padTimeSeries': True,
             'period1': int(period1),
             'period2': int(period2),
@@ -299,7 +324,7 @@ class AsyncClient(object):
 
         Returns: Options response json including result and error.
         """
-        logger.debug(f'Getting finance/options for ticker {ticker}.')
+        logger.debug(f'Getting finance/options for {ticker=}.')
 
         url = f'{self._BASE_URL}/v7/finance/options/{ticker}'
         params = self._DEFAULT_PARAMS | {
@@ -312,15 +337,15 @@ class AsyncClient(object):
 
     @_log_args
     @typechecked
-    async def get_search(self, tickers: str) -> ResponseJson:
-        """Get search results for the ticker.
+    async def get_search(self, tickers: str) -> Result:
+        """Get search results for tickers.
 
         Args:
             tickers: Comma-separated ticker symbols.
 
-        Returns: Search response json including result and error.
+        Returns: Search response json.
         """
-        logger.debug(f'Getting finance/search for ticker {tickers}.')
+        logger.debug(f'Getting finance/search for {tickers=}.')
 
         url = f'{self._BASE_URL}/v1/finance/search'
         params = self._DEFAULT_PARAMS | {'q': tickers}
@@ -329,41 +354,75 @@ class AsyncClient(object):
 
     @_log_args
     @typechecked
-    async def get_recommendations(self, ticker: str) -> ResponseJson:
-        """Get analyst recommendations for the ticker.
+    async def get_recommendations(self, tickers: str) -> ResponseJson:
+        """Get analyst recommendations for tickers.
 
         Args:
-            ticker: Ticker symbol.
+            tickers: Comma-separated ticker symbols.
 
         Returns: Recommendations response json including result and error.
         """
-        logger.debug(f'Getting finance/recommendations for ticker {ticker}.')
+        logger.debug(f'Getting finance/recommendations for {tickers=}.')
 
-        url = f'{self._BASE_URL}/v6/finance/recommendationsbysymbol/{ticker}'
+        url = f'{self._BASE_URL}/v6/finance/recommendationsbysymbol/{tickers}'
         params = self._DEFAULT_PARAMS
         response = await self._get_async_request(url, params)
         return response.json()
 
     @_log_args
     @typechecked
-    async def get_insights(self, ticker: str) -> ResponseJson:
-        """Get insights for the ticker.
+    async def get_insights(self, tickers: str) -> ResponseJson:
+        """Get insights for tickers.
 
         Args:
-            ticker: Ticker symbol.
+            tickers: Comma-separated ticker symbols.
 
         Returns: Insights response json including result and error.
         """
-        logger.debug(f'Getting finance/insights for ticker {ticker}.')
+        logger.debug(f'Getting finance/insights for {tickers=}.')
 
-        url = f'{self._BASE_URL}/ws/insights/v2/finance/insights'
+        url = f'{self._BASE_URL}/ws/insights/v3/finance/insights'
         params = self._DEFAULT_PARAMS | {
-            'symbol': ticker,
+            'symbols': tickers,
             'disableRelatedReports': True,
             'getAllResearchReports': True,
             'reportsCount': 4,
             'ssl': True,
         }
+        response = await self._get_async_request(url, params)
+        return response.json()
+
+    @_log_args
+    @typechecked
+    async def get_ratings(self, ticker: str) -> Result:
+        """Get ratings for the ticker.
+
+        Args:
+            ticker: Ticker symbol.
+
+        Returns: Ratings response json.
+        """
+        logger.debug(f'Getting ratings for {ticker=}.')
+
+        url = f'{self._BASE_URL}/v2/ratings/top/{ticker}'
+        params = self._DEFAULT_PARAMS | {'exclude_noncurrent': True}
+        response = await self._get_async_request(url, params)
+        return response.json()
+
+    @_log_args
+    @typechecked
+    async def get_analysis(self, ticker: str) -> Result:
+        """Get analysis for the ticker.
+
+        Args:
+            ticker: Ticker symbol.
+
+        Returns: Analysis response json.
+        """
+        logger.debug(f'Getting analysis for {ticker=}.')
+
+        url = 'https://finance.yahoo.com/xhr/ticker-analysis'
+        params = self._DEFAULT_PARAMS | {'debug': False, 'symbol': ticker}
         response = await self._get_async_request(url, params)
         return response.json()
 
@@ -403,5 +462,41 @@ class AsyncClient(object):
 
         url = f'{self._BASE_URL}/v1/finance/currencies'
         params = self._DEFAULT_PARAMS
+        response = await self._get_async_request(url, params)
+        return response.json()
+
+    @_log_args
+    @typechecked
+    async def get_calendar_events(
+        self, period1: int | float | None = None, period2: int | float | None = None
+    ) -> ResponseJson:
+        """Get calendar events.
+
+        Args:
+            period1: Start timestamp in miliseconds.
+            period2: End timestamp in miliseconds.
+
+        Returns: Calendar events response json including result and error.
+
+        Note: Query range cannot be greater than 150 days.
+        """
+        logger.debug('Getting finance/calendar-events.')
+
+        if period2 is None:
+            period2 = datetime.now().timestamp() * 1000
+
+        if period1 is None:
+            dt = datetime.fromtimestamp(period2 / 1000) - timedelta(days=149)
+            period1 = dt.timestamp() * 1000
+
+        url = f'{self._BASE_URL}/ws/screeners/v1/finance/calendar-events'
+        params = self._DEFAULT_PARAMS | {
+            'countPerDay': 25,
+            'economicEventsHighImportanceOnly': True,
+            'economicEventsRegionFilter': '',
+            'modules': 'economicEvents',
+            'startDate': int(period1),
+            'endDate': int(period2),
+        }
         response = await self._get_async_request(url, params)
         return response.json()

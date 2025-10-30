@@ -7,15 +7,6 @@
           "earningsChart": {
             "quarterly": [
               {
-                "date": "3Q2024",
-                "actual": 6.03,
-                "estimate": 5.29249,
-                "fiscalQuarter": "3Q2024",
-                "calendarQuarter": "3Q2024",
-                "difference": "0.74",
-                "surprisePct": "13.94"
-              },
-              {
                 "date": "4Q2024",
                 "actual": 8.02,
                 "estimate": 6.75838,
@@ -41,17 +32,26 @@
                 "calendarQuarter": "2Q2025",
                 "difference": "1.24",
                 "surprisePct": "20.96"
+              },
+              {
+                "date": "3Q2025",
+                "actual": 1.05,
+                "estimate": 6.70696,
+                "fiscalQuarter": "3Q2025",
+                "calendarQuarter": "3Q2025",
+                "difference": "-5.66",
+                "surprisePct": "-84.34"
               }
             ],
-            "currentQuarterEstimate": 6.71221,
-            "currentQuarterEstimateDate": "3Q",
-            "currentCalendarQuarter": "3Q2025",
+            "currentQuarterEstimate": 8.13208,
+            "currentQuarterEstimateDate": "4Q",
+            "currentCalendarQuarter": "4Q2025",
             "currentQuarterEstimateYear": 2025,
-            "currentFiscalQuarter": "3Q2025",
+            "currentFiscalQuarter": "4Q2025",
             "earningsDate": [
-              1761768000
+              1769630400
             ],
-            "isEarningsDateEstimate": false
+            "isEarningsDateEstimate": true
           },
           "financialsChart": {
             "yearly": [
@@ -78,12 +78,6 @@
             ],
             "quarterly": [
               {
-                "date": "3Q2024",
-                "fiscalQuarter": "3Q2024",
-                "revenue": 40589000000,
-                "earnings": 15688000000
-              },
-              {
                 "date": "4Q2024",
                 "fiscalQuarter": "4Q2024",
                 "revenue": 48385000000,
@@ -100,6 +94,12 @@
                 "fiscalQuarter": "2Q2025",
                 "revenue": 47516000000,
                 "earnings": 18337000000
+              },
+              {
+                "date": "3Q2025",
+                "fiscalQuarter": "3Q2025",
+                "revenue": 51242000000,
+                "earnings": 2709000000
               }
             ]
           },

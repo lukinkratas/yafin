@@ -7,31 +7,6 @@
             {
               "maxAge": 1,
               "epsActual": {
-                "raw": 6.03,
-                "fmt": "6.03"
-              },
-              "epsEstimate": {
-                "raw": 5.29249,
-                "fmt": "5.29"
-              },
-              "epsDifference": {
-                "raw": 0.74,
-                "fmt": "0.74"
-              },
-              "surprisePercent": {
-                "raw": 0.13939999,
-                "fmt": "13.94%"
-              },
-              "quarter": {
-                "raw": 1727654400,
-                "fmt": "2024-09-30"
-              },
-              "currency": "USD",
-              "period": "-4q"
-            },
-            {
-              "maxAge": 1,
-              "epsActual": {
                 "raw": 8.02,
                 "fmt": "8.02"
               },
@@ -52,7 +27,7 @@
                 "fmt": "2024-12-31"
               },
               "currency": "USD",
-              "period": "-3q"
+              "period": "-4q"
             },
             {
               "maxAge": 1,
@@ -77,7 +52,7 @@
                 "fmt": "2025-03-31"
               },
               "currency": "USD",
-              "period": "-2q"
+              "period": "-3q"
             },
             {
               "maxAge": 1,
@@ -100,6 +75,31 @@
               "quarter": {
                 "raw": 1751241600,
                 "fmt": "2025-06-30"
+              },
+              "currency": "USD",
+              "period": "-2q"
+            },
+            {
+              "maxAge": 1,
+              "epsActual": {
+                "raw": 1.05,
+                "fmt": "1.05"
+              },
+              "epsEstimate": {
+                "raw": 6.70696,
+                "fmt": "6.71"
+              },
+              "epsDifference": {
+                "raw": -5.66,
+                "fmt": "-5.66"
+              },
+              "surprisePercent": {
+                "raw": -0.84339994,
+                "fmt": "-84.34%"
+              },
+              "quarter": {
+                "raw": 1759190400,
+                "fmt": "2025-09-30"
               },
               "currency": "USD",
               "period": "-1q"

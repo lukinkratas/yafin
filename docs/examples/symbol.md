@@ -38,6 +38,22 @@ if __name__ == '__main__':
     asyncio.run(main())
 ```
 
+### Quote Type Endpoint
+
+```python
+import asyncio
+
+from yafin import AsyncSymbol
+
+async def main() -> None:
+
+    async with AsyncSymbol('META') as meta:
+        meta_quote = await meta.get_quote_type()
+
+if __name__ == '__main__':
+    asyncio.run(main())
+```
+
 ### Quote Summary Endpoint
 
 ```python
@@ -169,6 +185,38 @@ async def main() -> None:
 
     async with AsyncSymbol('META') as meta:
         meta_insights = await meta.get_insights()
+
+if __name__ == '__main__':
+    asyncio.run(main())
+```
+
+### Ratings Endpoint
+
+```python
+import asyncio
+
+from yafin import AsyncSymbol
+
+async def main() -> None:
+
+    async with AsyncSymbol('META') as meta:
+        meta_ratings = await meta.get_ratings()
+
+if __name__ == '__main__':
+    asyncio.run(main())
+```
+
+### Analysis Endpoint
+
+```python
+import asyncio
+
+from yafin import AsyncSymbol
+
+async def main() -> None:
+
+    async with AsyncSymbol('META') as meta:
+        meta_analysis = await meta.get_analysis()
 
 if __name__ == '__main__':
     asyncio.run(main())

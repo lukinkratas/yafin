@@ -2,13 +2,13 @@ import asyncio
 import json
 from datetime import datetime
 
-from logging_config import setup_logging
+from logging_config import configure_logging
 
 from yafin import AsyncClient, AsyncSymbol
 
 
 async def main() -> None:  # noqa: D103
-    setup_logging()
+    configure_logging()
 
     client = AsyncClient()
 
@@ -21,12 +21,18 @@ async def main() -> None:  # noqa: D103
 
     async with AsyncClient() as client:
         aapl_5d_chart = await client.get_chart(
-            ticker='AAPL', period_range='5d', interval='1h', events='div,split'
+            ticker='AAPL',
+            period_range='5d',
+            interval='1h',
+            events='div,split,earn,capitalGain',
         )
         print(json.dumps(aapl_5d_chart, indent=2))
 
         aapl_meta_quotes = await client.get_quote(tickers='AAPL,META')
         print(json.dumps(aapl_meta_quotes, indent=2))
+
+        aapl_meta_quote_types = await client.get_quote_type(tickers='AAPL,META')
+        print(json.dumps(aapl_meta_quote_types, indent=2))
 
         meta_quote_summary = await client.get_quote_summary(
             ticker='META',
@@ -59,11 +65,19 @@ async def main() -> None:  # noqa: D103
         meta_search = await client.get_search(tickers='META')
         print(json.dumps(meta_search, indent=2))
 
-        meta_recommendations = await client.get_recommendations(ticker='META')
-        print(json.dumps(meta_recommendations, indent=2))
+        aapl_meta_recommendations = await client.get_recommendations(
+            tickers='AAPL,META'
+        )
+        print(json.dumps(aapl_meta_recommendations, indent=2))
 
-        meta_insights = await client.get_insights(ticker='META')
-        print(json.dumps(meta_insights, indent=2))
+        aapl_meta_insights = await client.get_insights(tickers='AAPL,META')
+        print(json.dumps(aapl_meta_insights, indent=2))
+
+        meta_ratings = await client.get_ratings(ticker='META')
+        print(json.dumps(meta_ratings, indent=2))
+
+        meta_analysis = await client.get_analysis(ticker='META')
+        print(json.dumps(meta_analysis, indent=2))
 
         market_summaries = await client.get_market_summaries()
         print(json.dumps(market_summaries, indent=2))
@@ -74,10 +88,18 @@ async def main() -> None:  # noqa: D103
         currencies = await client.get_currencies()
         print(json.dumps(currencies, indent=2))
 
+        calendar_events = await client.get_calendar_events()
+        print(json.dumps(calendar_events, indent=2))
+
     aapl = AsyncSymbol('AAPL')
 
     aapl_5d_chart = await aapl.get_chart(
-        period_range='5d', interval='1h', include_div=True, include_split=False
+        period_range='5d',
+        interval='1h',
+        include_div=True,
+        include_split=True,
+        include_earn=True,
+        include_capital_gain=True,
     )
 
     await aapl.close()
@@ -91,11 +113,14 @@ async def main() -> None:  # noqa: D103
         meta_quote = await meta.get_quote()
         print(json.dumps(meta_quote, indent=2))
 
+        meta_quote_type = await meta.get_quote_type()
+        print(json.dumps(meta_quote_type, indent=2))
+
         meta_quote_summary_all_modules = await meta.get_quote_summary_all_modules()
         print(json.dumps(meta_quote_summary_all_modules, indent=2))
 
-        meta_quote_type = await meta.get_quote_type()
-        print(json.dumps(meta_quote_type, indent=2))
+        meta_quote_summary_quote_type = await meta.get_quote_summary_quote_type()
+        print(json.dumps(meta_quote_summary_quote_type, indent=2))
 
         meta_asset_profile = await meta.get_asset_profile()
         print(json.dumps(meta_asset_profile, indent=2))
@@ -222,6 +247,12 @@ async def main() -> None:  # noqa: D103
 
         meta_insights = await meta.get_insights()
         print(json.dumps(meta_insights, indent=2))
+
+        meta_ratings = await meta.get_ratings()
+        print(json.dumps(meta_ratings, indent=2))
+
+        meta_analysis = await meta.get_analysis()
+        print(json.dumps(meta_analysis, indent=2))
 
 
 if __name__ == '__main__':
