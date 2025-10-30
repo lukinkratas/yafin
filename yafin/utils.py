@@ -9,6 +9,7 @@ from .exceptions import TrailingBalanceSheetError
 
 logger = logging.getLogger(__name__)
 
+
 def _error(msg: str, err_cls: Type[Exception] = Exception) -> NoReturn:
     """Log error message and raise exception.
 
