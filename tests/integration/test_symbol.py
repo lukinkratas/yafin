@@ -122,4 +122,4 @@ class TestUnitSymbol:
     async def test_get_analysis(self, symbol: AsyncSymbol) -> None:
         """Test get_analysis method."""
         analysis = await symbol.get_analysis()
-        _assert_analysis_result(analysis)
+        _assert_analysis_result(analysis, symbol.ticker)

@@ -1,12 +1,5 @@
 ## TODO
 
-### Name
-- yafin / yahfin / yahofin
-- _~~ystonkz / yastonkz / yahstonks / yostonks~~_ - (not just stocks, also crypto and indexes)
-- _ytickers / yatickers / yotickers_ / ~~yahoo_tickers~~ - from ytickers import Ticker ?
-- _ysymbols / yasymbols / yosymbols_ / ~~yahoo_symbols~~ - from ysymbols import Symbol ?
-
-- [ ] fetch mocks for get_analysis do not work
 - [ ] example from docs to main or integration tests
 - [ ] unit test symbol / client singleton factory
 - [ ] test_utils - add OTHER types ? -> str | None annotation
@@ -124,3 +117,9 @@
 - ~~[x] update main.py~~
 - ~~[x] client responses in raw format and not returning the result field? -> results parsing on stonk~~
 - ~~[x] const modules long line~~
+
+### Name
+- yafin / yahfin
+- _~~ystonkz / yastonkz / yahstonks / yostonks~~_ - (not just stocks, also crypto and indexes)
+- ~~_ytickers / yatickers / yotickers_ / yahoo_tickers~~ - from ytickers import Ticker ?
+- ~~_ysymbols / yasymbols / yosymbols_ / yahoo_symbols~~ - from ysymbols import Symbol ?

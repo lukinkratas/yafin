@@ -523,7 +523,7 @@ class TestUnitClient:
         _mock_200_response(mocker, analysis_json_mock)
         ticker = 'META'
         analysis = await client.get_analysis(ticker)
-        _assert_analysis_result(analysis)
+        _assert_analysis_result(analysis, ticker)
 
     @pytest.mark.asyncio
     async def test_get_analysis_invalid_args(self, client: AsyncClient) -> None:
@@ -587,10 +587,7 @@ class TestUnitClient:
 
     @pytest.mark.parametrize(
         'kwargs, err_cls',
-        [
-            (dict(period1='xxx'), TypeCheckError),
-            (dict(period2='xxx'), TypeCheckError),
-        ],
+        [(dict(period1='xxx'), TypeCheckError), (dict(period2='xxx'), TypeCheckError)],
     )
     @pytest.mark.asyncio
     async def test_get_calendar_events_invalid_args(

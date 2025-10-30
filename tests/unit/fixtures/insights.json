@@ -106,12 +106,12 @@
         },
         "events": [
           {
-            "eventType": "Price Crosses Moving Average",
+            "eventType": "Gap Up",
             "pricePeriod": "D",
-            "tradingHorizon": "I",
-            "tradeType": "L",
+            "tradingHorizon": "S",
+            "tradeType": "U",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1761571800,
+            "startDate": 1761312600,
             "endDate": 1761571800
           }
         ],
@@ -143,8 +143,8 @@
               "TRGP",
               "AMAT",
               "AAPL",
-              "JPM",
               "ADI",
+              "JPM",
               "AXON",
               "DASH",
               "URI",
@@ -160,15 +160,15 @@
               "NFLX",
               "META",
               "NVDA",
-              "SYK",
               "CEG",
+              "SYK",
               "BSX",
               "ORCL",
               "PWR",
               "NOW",
               "SCHW",
-              "AJG",
-              "AMZN"
+              "AMZN",
+              "AJG"
             ],
             "title": "The Argus Innovation Model Portfolio"
           },
@@ -265,8 +265,8 @@
         ],
         "sigDevs": [
           {
-            "headline": "Meta Q3 Revenue USD 51,242 Million Vs. IBES Estimate USD 49,408 Million",
-            "date": "2025-10-29"
+            "headline": "Meta Looks To Raise At Least $25 Billion From Jumbo Bond Sale - Bloomberg News",
+            "date": "2025-10-30"
           }
         ],
         "secReports": [
@@ -343,15 +343,6 @@
             "formType": "8-K"
           },
           {
-            "id": "0001326801-25-000095_1326801",
-            "type": "Offering Registrations",
-            "title": "S-8 POS : Offering Registrations",
-            "description": "Post-effective amendment to a S-8 registration statement",
-            "filingDate": 1748563200000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000095/thumbnail.png",
-            "formType": "S-8 POS"
-          },
-          {
             "id": "0001326801-25-000094_1326801",
             "type": "Offering Registrations",
             "title": "S-8 POS : Offering Registrations",
@@ -361,12 +352,21 @@
             "formType": "S-8 POS"
           },
           {
-            "id": "0001326801-25-000097_1326801",
+            "id": "0001326801-25-000095_1326801",
             "type": "Offering Registrations",
             "title": "S-8 POS : Offering Registrations",
             "description": "Post-effective amendment to a S-8 registration statement",
             "filingDate": 1748563200000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000097/thumbnail.png",
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000095/thumbnail.png",
+            "formType": "S-8 POS"
+          },
+          {
+            "id": "0001326801-25-000092_1326801",
+            "type": "Offering Registrations",
+            "title": "S-8 POS : Offering Registrations",
+            "description": "Post-effective amendment to a S-8 registration statement",
+            "filingDate": 1748563200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000092/thumbnail.png",
             "formType": "S-8 POS"
           },
           {
@@ -379,12 +379,12 @@
             "formType": "S-8 POS"
           },
           {
-            "id": "0001326801-25-000092_1326801",
+            "id": "0001326801-25-000097_1326801",
             "type": "Offering Registrations",
             "title": "S-8 POS : Offering Registrations",
             "description": "Post-effective amendment to a S-8 registration statement",
             "filingDate": 1748563200000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000092/thumbnail.png",
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000097/thumbnail.png",
             "formType": "S-8 POS"
           },
           {

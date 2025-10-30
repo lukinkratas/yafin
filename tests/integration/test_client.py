@@ -131,7 +131,7 @@ class TestIntegrationClient:
         """Test get_analysis method."""
         ticker = 'META'
         analysis = await client.get_analysis(ticker)
-        _assert_analysis_result(analysis)
+        _assert_analysis_result(analysis, ticker)
 
     @pytest.mark.integration
     @pytest.mark.asyncio

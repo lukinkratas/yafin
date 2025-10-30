@@ -469,7 +469,8 @@ def _assert_ratings_result(ratings: ResponseJson) -> None:
     _assert_contains_keys(ratings, ['dir', 'mm', 'pt', 'fin_score'])
 
 
-def _assert_analysis_result(analysis: ResponseJson) -> None:
+def _assert_analysis_result(analysis: ResponseJson, ticker: str) -> None:
     """Assertions for search response json."""
     assert analysis
     _assert_contains_keys(analysis, _ANALYSIS_KEYS)
+    assert analysis['symbol'] == ticker

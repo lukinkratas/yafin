@@ -7,26 +7,26 @@
             "META"
           ],
           "type": [
-            "economicEvents",
-            "MarketCap",
-            "PeRatio",
-            "PsRatio",
-            "otherCorporate",
-            "shareHoldersAnnualMeetingsEvents",
-            "conferenceEvents",
-            "corporateAnalystMeeting",
             "EnterprisesValueRevenueRatio",
+            "MarketCap",
+            "otherCorporate",
+            "conferenceEvents",
+            "analystRatings",
             "conferencePresentation",
-            "PbRatio",
-            "ForwardPeRatio",
-            "corporateConferenceCallEvents",
-            "EnterprisesValueEBITDARatio",
             "PegRatio",
+            "shareHoldersAnnualMeetingsEvents",
+            "EnterprisesValueEBITDARatio",
             "EnterpriseValue",
-            "spEarningsReleaseEvents",
+            "ForwardPeRatio",
             "earningsConferenceCallEvents",
+            "PeRatio",
+            "corporateAnalystMeeting",
+            "PbRatio",
+            "economicEvents",
+            "corporateConferenceCallEvents",
             "mergerAndAcquisitionAnnouncement",
-            "analystRatings"
+            "spEarningsReleaseEvents",
+            "PsRatio"
           ]
         },
         "timestamp": [
@@ -468,7 +468,6 @@
           1746043500,
           1753905900,
           1758803400,
-          1761228000,
           1761314400,
           1761696000,
           1761746400,
@@ -476,7 +475,7 @@
           1761768658,
           1761782400
         ],
-        "economicEvents,MarketCap,PeRatio,PsRatio,otherCorporate,shareHoldersAnnualMeetingsEvents,conferenceEvents,corporateAnalystMeeting,EnterprisesValueRevenueRatio,conferencePresentation,PbRatio,ForwardPeRatio,corporateConferenceCallEvents,EnterprisesValueEBITDARatio,PegRatio,EnterpriseValue,spEarningsReleaseEvents,earningsConferenceCallEvents,mergerAndAcquisitionAnnouncement,analystRatings": [
+        "EnterprisesValueRevenueRatio,MarketCap,otherCorporate,conferenceEvents,analystRatings,conferencePresentation,PegRatio,shareHoldersAnnualMeetingsEvents,EnterprisesValueEBITDARatio,EnterpriseValue,ForwardPeRatio,earningsConferenceCallEvents,PeRatio,corporateAnalystMeeting,PbRatio,economicEvents,corporateConferenceCallEvents,mergerAndAcquisitionAnnouncement,spEarningsReleaseEvents,PsRatio": [
           {
             "eventType": 2,
             "symbol": "META",
@@ -5739,14 +5738,6 @@
             "period": "Q2"
           },
           {
-            "eventTime": 1761228000000,
-            "countryCode": "US",
-            "eventName": "Existing Home Sales",
-            "prior": "4",
-            "actual": "4.06",
-            "period": "Sep"
-          },
-          {
             "eventTime": 1761314400000,
             "countryCode": "US",
             "eventName": "U Mich Sentiment Final*",
@@ -5757,8 +5748,8 @@
           {
             "eventTime": 1761696000000,
             "countryCode": "US",
-            "eventName": "Unemployment Rate",
-            "prior": "4.3",
+            "eventName": "Employment Trends*",
+            "prior": "106.41",
             "period": "Sep"
           },
           {
@@ -5805,8 +5796,8 @@
           {
             "eventTime": 1761782400000,
             "countryCode": "US",
-            "eventName": "Unemployment Rate",
-            "prior": "4.3",
+            "eventName": "Employment Trends*",
+            "prior": "106.41",
             "period": "Sep"
           }
         ]

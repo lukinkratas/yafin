@@ -5,68 +5,68 @@
         "count": 20,
         "quotes": [
           {
-            "symbol": "META"
+            "symbol": "AMZN"
           },
           {
-            "symbol": "LLY"
+            "symbol": "AAPL"
           },
           {
-            "symbol": "GOOG"
+            "symbol": "RDDT"
           },
           {
-            "symbol": "CMG"
+            "symbol": "COIN"
+          },
+          {
+            "symbol": "MSTR"
           },
           {
             "symbol": "BTC-USD"
           },
           {
-            "symbol": "GOOGL"
+            "symbol": "INTS"
           },
           {
-            "symbol": "MO"
+            "symbol": "NFLX"
           },
           {
-            "symbol": "MRK"
+            "symbol": "ROKU"
           },
           {
-            "symbol": "CROX"
+            "symbol": "TWLO"
           },
           {
-            "symbol": "VCIG"
+            "symbol": "NET"
           },
           {
-            "symbol": "BMY"
+            "symbol": "GSAT"
           },
           {
-            "symbol": "SIRI"
+            "symbol": "ETH-USD"
           },
           {
-            "symbol": "CMBM"
+            "symbol": "GILD"
           },
           {
-            "symbol": "CMCSA"
+            "symbol": "FSLR"
           },
           {
-            "symbol": "EL"
+            "symbol": "WDC"
           },
           {
-            "symbol": "SPGI"
+            "symbol": "FMC"
           },
           {
-            "symbol": "MTSR"
+            "symbol": "MRNA"
           },
           {
-            "symbol": "HBIO"
+            "symbol": "TEAM"
           },
           {
-            "symbol": "NVO"
-          },
-          {
-            "symbol": "HSY"
+            "symbol": "MDA.TO"
           }
         ],
-        "jobTimestamp": 1761826419525,
-        "startInterval": 202510301100
+        "jobTimestamp": 1761858963422,
+        "startInterval": 202510302000
       }
     ],
     "error": null

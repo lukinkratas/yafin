@@ -61,6 +61,17 @@
           "records": [
             {
               "economicEvents": true,
+              "event": "GDP Implicit Price QQ",
+              "countryCode": "CA",
+              "eventTime": 1756470600000,
+              "period": "Q2",
+              "actual": "0",
+              "prior": "0.6",
+              "revisedFrom": "0.7",
+              "description": "Canada, Implicit Price Deflator, Total (GDP), SA, CAD "
+            },
+            {
+              "economicEvents": true,
               "event": "GDP QQ Annualized",
               "countryCode": "CA",
               "eventTime": 1756470600000,
@@ -79,17 +90,6 @@
               "actual": "-0.4",
               "prior": "0.5",
               "description": "Expenditure Approach Gross National Product and Gross Domestic Product is the total value of the finished goods and services produced in the economy. It is not a precise measure of national economic well-being but expressed in volume (adjusted for inflation) it is the closest single number we have got to such a measure. It is the sum of final expenditures; Export of goods and services, Imports of goods and services, Private Consumption, Government Consumption, Gross Fixed Capital Formation and Increases/Decreases(-) in stocks. The difference between Gross National Product and Gross Domestic Product is the Net Factor Income/Payments abroad. "
-            },
-            {
-              "economicEvents": true,
-              "event": "GDP Implicit Price QQ",
-              "countryCode": "CA",
-              "eventTime": 1756470600000,
-              "period": "Q2",
-              "actual": "0",
-              "prior": "0.6",
-              "revisedFrom": "0.7",
-              "description": "Canada, Implicit Price Deflator, Total (GDP), SA, CAD "
             },
             {
               "economicEvents": true,
@@ -131,6 +131,16 @@
           "records": [
             {
               "economicEvents": true,
+              "event": "GDP YY",
+              "countryCode": "BR",
+              "eventTime": 1756814400000,
+              "period": "Q2",
+              "actual": "2.2",
+              "prior": "2.9",
+              "description": "GDP measures summary value of goods and services generated in a relevant country or region. A region's gross domestic product, or GDP, is one of the ways for measuring the size of its economy. Expenditure approach - Total expenditures on all finished goods and services produced within the economy. Calculation: GDP using the expenditure approach is derived as the sum of all final expenditures, changes in inventories and exports of goods and services less imports of goods and services. Final consumption expenditure - Expenditure incurred by resident institutional units on goods or services that are used for the direct satisfaction of individual needs or wants or the collective needs of members of the community it may take place both on the domestic territory and abroad. The institutional units incurring in the \"Final consumption expenditure\" are: households, non-profit institutions serving households (NPISH) and general government. Final consumption expenditure by general government - expenditure, including imputed expenditure, incurred by general government on both individual consumption goods and services and collective consumption services."
+            },
+            {
+              "economicEvents": true,
               "event": "GDP QQ",
               "countryCode": "BR",
               "eventTime": 1756814400000,
@@ -138,16 +148,6 @@
               "actual": "0.4",
               "prior": "1.4",
               "revisedFrom": "1.3",
-              "description": "GDP measures summary value of goods and services generated in a relevant country or region. A region's gross domestic product, or GDP, is one of the ways for measuring the size of its economy. Expenditure approach - Total expenditures on all finished goods and services produced within the economy. Calculation: GDP using the expenditure approach is derived as the sum of all final expenditures, changes in inventories and exports of goods and services less imports of goods and services. Final consumption expenditure - Expenditure incurred by resident institutional units on goods or services that are used for the direct satisfaction of individual needs or wants or the collective needs of members of the community it may take place both on the domestic territory and abroad. The institutional units incurring in the \"Final consumption expenditure\" are: households, non-profit institutions serving households (NPISH) and general government. Final consumption expenditure by general government - expenditure, including imputed expenditure, incurred by general government on both individual consumption goods and services and collective consumption services."
-            },
-            {
-              "economicEvents": true,
-              "event": "GDP YY",
-              "countryCode": "BR",
-              "eventTime": 1756814400000,
-              "period": "Q2",
-              "actual": "2.2",
-              "prior": "2.9",
               "description": "GDP measures summary value of goods and services generated in a relevant country or region. A region's gross domestic product, or GDP, is one of the ways for measuring the size of its economy. Expenditure approach - Total expenditures on all finished goods and services produced within the economy. Calculation: GDP using the expenditure approach is derived as the sum of all final expenditures, changes in inventories and exports of goods and services less imports of goods and services. Final consumption expenditure - Expenditure incurred by resident institutional units on goods or services that are used for the direct satisfaction of individual needs or wants or the collective needs of members of the community it may take place both on the domestic territory and abroad. The institutional units incurring in the \"Final consumption expenditure\" are: households, non-profit institutions serving households (NPISH) and general government. Final consumption expenditure by general government - expenditure, including imputed expenditure, incurred by general government on both individual consumption goods and services and collective consumption services."
             }
           ]
@@ -171,16 +171,6 @@
             },
             {
               "economicEvents": true,
-              "event": "Employment Final QQ *",
-              "countryCode": "EU",
-              "eventTime": 1757062800000,
-              "period": "Q2",
-              "actual": "0.1",
-              "prior": "0.1",
-              "description": "Employment in the whole economy.Data for employment are based on the ESA 95. Due to differences in coverage, quarterly data are not fully consistent with annual data.The series, including the historical data, covers all the member states that have adopted euro at the time to which the latest statistics relate. That is, when a new country is added to EA aggregates, the historical data is recalculated including the new country. "
-            },
-            {
-              "economicEvents": true,
               "event": "GDP Revised QQ *",
               "countryCode": "EU",
               "eventTime": 1757062800000,
@@ -198,6 +188,16 @@
               "actual": "1.5",
               "prior": "1.4",
               "description": "Gross domestic product at market prices is the final result of the production activity of resident producer units. (ESA 1995, 8.89) It corresponds to the economy&apos;s output of goods and services less intermediate consumption, plus VAT on products and net taxes (i.e. taxes less subsidies) linked to imports. Valuation at constant prices means valuing the flows and stocks in an accounting period at the prices of the reference period. (ESA 1995. 1.56) "
+            },
+            {
+              "economicEvents": true,
+              "event": "Employment Final QQ *",
+              "countryCode": "EU",
+              "eventTime": 1757062800000,
+              "period": "Q2",
+              "actual": "0.1",
+              "prior": "0.1",
+              "description": "Employment in the whole economy.Data for employment are based on the ESA 95. Due to differences in coverage, quarterly data are not fully consistent with annual data.The series, including the historical data, covers all the member states that have adopted euro at the time to which the latest statistics relate. That is, when a new country is added to EA aggregates, the historical data is recalculated including the new country. "
             }
           ]
         },
@@ -336,42 +336,11 @@
           ]
         },
         {
-          "timestamp": 1760932800000,
-          "timestampString": "2025-10-20",
-          "timezone": "America/New_York",
-          "count": 2,
-          "totalCount": 2,
-          "records": [
-            {
-              "economicEvents": true,
-              "event": "Producer Prices MM",
-              "countryCode": "CA",
-              "eventTime": 1760963400000,
-              "period": "Sep",
-              "actual": "0.8",
-              "prior": "0.5",
-              "revisedFrom": "0.2",
-              "description": "The Industrial Product Price index (IPPI) reflects the prices that producers receive as the goods leave the plant gate. It does not reflect what the consumer pays. Unlike the consumer price index, the IPPI excludes indirect taxes and all the costs that occur between the time when a goods leaves the plant and the time when the final user takes possession of it, including the transportation, wholesale and retail costs. "
-            },
-            {
-              "economicEvents": true,
-              "event": "Producer Prices YY",
-              "countryCode": "CA",
-              "eventTime": 1760963400000,
-              "period": "Sep",
-              "actual": "5.5",
-              "prior": "4",
-              "revisedFrom": "3.7",
-              "description": "The Industrial Product Price index (IPPI) reflects the prices that producers receive as the goods leave the plant gate. It does not reflect what the consumer pays. Unlike the consumer price index, the IPPI excludes indirect taxes and all the costs that occur between the time when a goods leaves the plant and the time when the final user takes possession of it, including the transportation, wholesale and retail costs. "
-            }
-          ]
-        },
-        {
           "timestamp": 1761192000000,
           "timestampString": "2025-10-23",
           "timezone": "America/New_York",
-          "count": 6,
-          "totalCount": 6,
+          "count": 4,
+          "totalCount": 4,
           "records": [
             {
               "economicEvents": true,
@@ -402,26 +371,6 @@
               "actual": "-17",
               "prior": "-19",
               "description": "The UK Consumer Confidence Survey from GfK NOP was conducted amongst a sample of 2000 individuals aged 16+ on behalf of the European Commission.Quotas are imposed on age, sex, region and social class to ensure the final sample is representative of the UK population. The figures contained within the Consumer Confidence Barometer have an estimated margin of error of +/-2%.Results for the Consumer Confidence Barometer are available on the last working day of each month at 10.30am "
-            },
-            {
-              "economicEvents": true,
-              "event": "Consumer Confid. Flash *",
-              "countryCode": "EU",
-              "eventTime": 1761228000000,
-              "period": "Oct",
-              "actual": "-14.2",
-              "prior": "-14.9",
-              "description": " The indicator is the arithmetic average of the balances (%) for the present and the future business situation, and for stocks - with inverted sign. Balances: i.e. differences between the percentages of respondents giving positive and negative replies. "
-            },
-            {
-              "economicEvents": true,
-              "event": "Existing Home Sales",
-              "countryCode": "US",
-              "eventTime": 1761228000000,
-              "period": "Sep",
-              "actual": "4.06",
-              "prior": "4",
-              "description": "Construction industry provides information on construction output and activity. Such information gives an insight into the supply on the housing and construction market. Rising number of new construction starts or value of construction completed reflects higher consumer and business optimism. Expanding construction indicates growth in the housing market and predicts an increase in the overall economy. However, an excessive supply of new buildings may result in a drop in housing prices. The construction industry is one of the first to go into a recession when the economy declines but also to recover as conditions improve. "
             },
             {
               "economicEvents": true,
@@ -494,12 +443,13 @@
           "records": [
             {
               "economicEvents": true,
-              "event": "Non-Farm Payrolls",
-              "countryCode": "US",
+              "event": "GDP YY Monthly*",
+              "countryCode": "RU",
               "eventTime": 1761696000000,
               "period": "Sep",
-              "prior": "22",
-              "description": "Employees on Nonagricultural Payrolls measures the number people employed in all activities except agriculture.Employment data, except those for the Federal Government, refer to persons on establishment payrolls who received pay for any part of the pay period which includes the 12th of the month. For Federal Government establishments,employment figures represent the number of persons who occupied positions on the last day of the calendar month. Intermittent workers are counted if they performed any service during the month. The data exclude proprietors, the self-employed, unpaid volunteer or family workers, farm workers, and domestic workers. Salaried officers of corporations are included. Government employment covers only civilian employees; military personnel are excluded. Employees of the Central Intelligence Agency and the National Security Agency also are excluded. Persons on establishment payrolls who are on paid sick leave (when pay is received directly from the firm), on paid holiday, on paid vacation, or work during a part of the pay period even though they are unemployed or on strike during the rest of the period are counted as employed. "
+              "actual": "0.9",
+              "prior": "0.4",
+              "description": " A region's gross domestic product, or GDP, is one of the ways for measuring the size of its economy. The GDP of a country is defined as the market value of all final goods and services produced within a country in a given period of time. It is also considered the sum of value added at every stage of production of all final goods and services produced within a country in a given period of time "
             },
             {
               "economicEvents": true,
@@ -512,22 +462,21 @@
             },
             {
               "economicEvents": true,
+              "event": "Non-Farm Payrolls",
+              "countryCode": "US",
+              "eventTime": 1761696000000,
+              "period": "Sep",
+              "prior": "22",
+              "description": "Employees on Nonagricultural Payrolls measures the number people employed in all activities except agriculture.Employment data, except those for the Federal Government, refer to persons on establishment payrolls who received pay for any part of the pay period which includes the 12th of the month. For Federal Government establishments,employment figures represent the number of persons who occupied positions on the last day of the calendar month. Intermittent workers are counted if they performed any service during the month. The data exclude proprietors, the self-employed, unpaid volunteer or family workers, farm workers, and domestic workers. Salaried officers of corporations are included. Government employment covers only civilian employees; military personnel are excluded. Employees of the Central Intelligence Agency and the National Security Agency also are excluded. Persons on establishment payrolls who are on paid sick leave (when pay is received directly from the firm), on paid holiday, on paid vacation, or work during a part of the pay period even though they are unemployed or on strike during the rest of the period are counted as employed. "
+            },
+            {
+              "economicEvents": true,
               "event": "Employment Trends*",
               "countryCode": "US",
               "eventTime": 1761696000000,
               "period": "Sep",
               "prior": "106.41",
               "description": "The Employment Trends Index (ETI)\u2122 aggregates eight labor-market indicators each of which has proven accurate in its own area. Aggregating individual indicators into a composite index filters out so-called \"noise\" to show underlying trends more clearly. The eight labor-market indicators aggregated into the Employment Trends Index (ETI)\u2122 include: Percentage of respondents who say they find \"Jobs Hard to Get\" (The Conference Board Consumer Confidence Survey). Initial Claims for Unemployment Insurance (U.S. Department of Labor). Percentage of Firms With Positions Not Able to Fill Right Now (National Federation of Independent Business). Number of employees hired by the temporary-help industry (U.S. Bureau of Labor Statistics). Part-time Workers for Economic Reasons (BLS). Job Openings (BLS). Industrial Production (Federal Reserve Board). Real Manufacturing and Trade Sales (U.S. Bureau of Economic Analysis). "
-            },
-            {
-              "economicEvents": true,
-              "event": "GDP YY Monthly*",
-              "countryCode": "RU",
-              "eventTime": 1761696000000,
-              "period": "Sep",
-              "actual": "0.9",
-              "prior": "0.4",
-              "description": " A region's gross domestic product, or GDP, is one of the ways for measuring the size of its economy. The GDP of a country is defined as the market value of all final goods and services produced within a country in a given period of time. It is also considered the sum of value added at every stage of production of all final goods and services produced within a country in a given period of time "
             },
             {
               "economicEvents": true,
@@ -639,9 +588,19 @@
           "timestamp": 1761796800000,
           "timestampString": "2025-10-30",
           "timezone": "America/New_York",
-          "count": 4,
-          "totalCount": 4,
+          "count": 5,
+          "totalCount": 5,
           "records": [
+            {
+              "economicEvents": true,
+              "event": "ECB Refinancing Rate *",
+              "countryCode": "EU",
+              "eventTime": 1761830100000,
+              "period": "Oct",
+              "actual": "2.15",
+              "prior": "2.15",
+              "description": "On 8 June 2000 the ECB announced that, starting from the operation to be settled on 28 June 2000, the main refinancing operations of the Eurosystem would be conducted as variable rate tenders. The minimum bid rate refers to the minimum interest rate at which counterparties may place their bids. For the purpose of signalling the monetary policy stance the minimum bid rate plays the role previously performed by the rate in fixed tenders (Refinancing Tender). "
+            },
             {
               "economicEvents": true,
               "event": "IGP-M Inflation Index*",

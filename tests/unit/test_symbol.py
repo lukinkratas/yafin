@@ -1001,4 +1001,4 @@ class TestUnitSymbol:
         """Test get_analysis method."""
         _mock_200_response(mocker, analysis_json_mock)
         analysis = await symbol.get_analysis()
-        _assert_analysis_result(analysis)
+        _assert_analysis_result(analysis, symbol.ticker)

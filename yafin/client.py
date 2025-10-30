@@ -80,15 +80,26 @@ class AsyncClient(object):
     @_log_args
     @typechecked
     async def _get_async_request(
-        self, url: str, params: dict[str, Any] | None = None
+        self,
+        url: str,
+        params: dict[str, Any] | None = None,
+        headers: dict[str, str] | None = None,
     ) -> Response:
         logger.debug(_encode_url(url, params))
+
+        kwargs: dict[str, Any] = {'url': url}
+
+        if params is not None:
+            kwargs['params'] = params
+
+        if headers is not None:
+            kwargs['headers'] = headers
 
         for attempt in range(1, self.max_retries + 1):
             try:
                 logger.debug(f'Request no. {attempt}/{self.max_retries} - started.')
                 self._get_session()
-                response = await self._session.get(url, params=params)
+                response = await self._session.request(method='GET', **kwargs)
                 response.raise_for_status()
                 logger.debug(f'Request no. {attempt}/{self.max_retries} - succeeded.')
                 return response
@@ -106,7 +117,7 @@ class AsyncClient(object):
     async def _get_crumb(self) -> str | None:
         if not self._crumb:
             url = f'{self._BASE_URL}/v1/test/getcrumb'
-            response = await self._get_async_request(url=url)
+            response = await self._get_async_request(url)
             self._crumb = response.text
 
         return self._crumb
@@ -423,7 +434,8 @@ class AsyncClient(object):
 
         url = 'https://finance.yahoo.com/xhr/ticker-analysis'
         params = self._DEFAULT_PARAMS | {'debug': False, 'symbol': ticker}
-        response = await self._get_async_request(url, params)
+        headers = {'Accept': 'application/json'}
+        response = await self._get_async_request(url, params, headers)
         return response.json()
 
     @_log_args
