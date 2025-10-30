@@ -51,11 +51,11 @@
 							"listen": "prerequest",
 							"script": {
 								"exec": [
-									"const period = Math.floor(new Date(2019,1,1).getTime() / 1000);",
-									"pm.environment.set(\"periodStart\", period);",
+									"const startTs = Math.floor(new Date(2019,1,1).getTime() / 1000);",
+									"pm.environment.set(\"startTs\", startTs);",
 									"",
-									"const current_ts = Math.floor(new Date().getTime() / 1000);",
-									"pm.environment.set(\"currentTs\", current_ts);",
+									"const currentTs = Math.floor(new Date().getTime() / 1000);",
+									"pm.environment.set(\"currentTs\", currentTs);",
 									"",
 									"pm.environment.set(\"ANNUAL_INCOME_STATEMENT_TYPES\", \"annualContinuingAndDiscontinuedDilutedEPS,annualEBITDA,annualInterestExpenseNonOperating,annualNetIncomeExtraordinary,annualExciseTaxes,annualSellingAndMarketingExpense,annualTotalExpenses,annualNetPolicyholderBenefitsAndClaims,annualDilutedAccountingChange,annualDilutedNIAvailtoComStockholders,annualNetIncomeCommonStockholders,annualOtherNonOperatingIncomeExpenses,annualDilutedContinuousOperations,annualNormalizedIncome,annualInterestIncomeNonOperating,annualOtherSpecialCharges,annualBasicDiscontinuousOperations,annualTaxProvision,annualTaxLossCarryforwardDilutedEPS,annualDilutedAverageShares,annualNetNonOperatingInterestIncomeExpense,annualBasicExtraordinary,annualTaxEffectOfUnusualItems,annualNormalizedEBITDA,annualProvisionForDoubtfulAccounts,annualDepletionIncomeStatement,annualSpecialIncomeCharges,annualAmortization,annualNetIncomeDiscontinuousOperations,annualTotalOtherFinanceCost,annualSecuritiesAmortization,annualNetInterestIncome,annualLossAdjustmentExpense,annualOtherOperatingExpenses,annualPreferredStockDividends,annualNormalizedDilutedEPS,annualNetIncomeFromContinuingOperationNetMinorityInterest,annualOccupancyAndEquipment,annualTaxLossCarryforwardBasicEPS,annualSellingGeneralAndAdministration,annualDilutedEPS,annualGainOnSaleOfPPE,annualGainOnSaleOfBusiness,annualNetIncomeContinuousOperations,annualOtherunderPreferredStockDividend,annualOperatingRevenue,annualTaxRateForCalcs,annualOtherNonInterestExpense,annualOtherGandA,annualAverageDilutionEarnings,annualRentExpenseSupplemental,annualNetIncomeFromContinuingAndDiscontinuedOperation,annualReconciledDepreciation,annualBasicEPS,annualBasicEPSOtherGainsLosses,annualResearchAndDevelopment,annualProfessionalExpenseAndContractServicesExpense,annualRestructuringAndMergernAcquisition,annualSalariesAndWages,annualBasicAccountingChange,annualGeneralAndAdministrativeExpense,annualDilutedEPSOtherGainsLosses,annualReportedNormalizedDilutedEPS,annualTotalUnusualItemsExcludingGoodwill,annualInterestIncome,annualBasicAverageShares,annualTotalUnusualItems,annualPolicyholderBenefitsGross,annualEarningsFromEquityInterest,annualInterestExpense,annualEarningsFromEquityInterestNetOfTax,annualOperatingExpense,annualTotalRevenue,annualWriteOff,annualOtherTaxes,annualOtherIncomeExpense,annualRentAndLandingFees,annualPolicyholderBenefitsCeded,annualBasicContinuousOperations,annualMinorityInterests,annualOperatingIncome,annualImpairmentOfCapitalAssets,annualDepreciationIncomeStatement,annualDividendPerShare,annualDilutedDiscontinuousOperations,annualNetIncome,annualDepreciationAndAmortizationInIncomeStatement,annualDilutedExtraordinary,annualReportedNormalizedBasicEPS,annualEBIT,annualTotalOperatingIncomeAsReported,annualReconciledCostOfRevenue,annualPretaxIncome,annualNetIncomeIncludingNoncontrollingInterests,annualDepreciationAmortizationDepletionIncomeStatement,annualInsuranceAndClaims,annualNetIncomeFromTaxLossCarryforward,annualNormalizedBasicEPS,annualGainOnSaleOfSecurity,annualAmortizationOfIntangiblesIncomeStatement,annualGrossProfit,annualContinuingAndDiscontinuedBasicEPS,annualCostOfRevenue\");"
 								],
@@ -72,7 +72,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BASE_URL}}/ws/fundamentals-timeseries/v1/finance/timeseries/META?type={{ANNUAL_INCOME_STATEMENT_TYPES}}&period1={{periodStart}}&period2={{currentTs}}&formatted=false&merge=true&padTimeSeries=true&region=US&lang=en-US&corsDomain=finance.yahoo.com",
+							"raw": "{{BASE_URL}}/ws/fundamentals-timeseries/v1/finance/timeseries/META?type={{ANNUAL_INCOME_STATEMENT_TYPES}}&period1={{startTs}}&period2={{currentTs}}&formatted=false&merge=true&padTimeSeries=true&region=US&lang=en-US&corsDomain=finance.yahoo.com",
 							"host": [
 								"{{BASE_URL}}"
 							],
@@ -96,7 +96,7 @@
 								},
 								{
 									"key": "period1",
-									"value": "{{periodStart}}"
+									"value": "{{startTs}}"
 								},
 								{
 									"key": "period2",
@@ -171,11 +171,11 @@
 							"listen": "prerequest",
 							"script": {
 								"exec": [
-									"const period = Math.floor(new Date(2019,1,1).getTime() / 1000);",
-									"pm.environment.set(\"periodStart\", period);",
+									"const startTs = Math.floor(new Date(2019,1,1).getTime() / 1000);",
+									"pm.environment.set(\"startTs\", startTs);",
 									"",
-									"const current_ts = Math.floor(new Date().getTime() / 1000);",
-									"pm.environment.set(\"currentTs\", current_ts);",
+									"const currentTs = Math.floor(new Date().getTime() / 1000);",
+									"pm.environment.set(\"currentTs\", currentTs);",
 									"",
 									"pm.environment.set(\"ANNUAL_BALANCE_SHEET_TYPES\", \"annualTreasurySharesNumber,annualPreferredSharesNumber,annualOrdinarySharesNumber' annualShareIssued,annualNetDebt,annualTotalDebt,annualTangibleBookValue,annualInvestedCapital,annualWorkingCapital,annualNetTangibleAssets,annualCapitalLeaseObligations,annualCommonStockEquity,annualPreferredStockEquity,annualTotalCapitalization,annualTotalEquityGrossMinorityInterest,annualMinorityInterest,annualStockholdersEquity,annualOtherEquityInterest,annualGainsLossesNotAffectingRetainedEarnings,annualOtherEquityAdjustments,annualFixedAssetsRevaluationReserve,annualForeignCurrencyTranslationAdjustments,annualMinimumPensionLiabilities,annualUnrealizedGainLoss,annualTreasuryStock,annualRetainedEarnings,annualAdditionalPaidInCapital,annualCapitalStock,annualOtherCapitalStock,annualCommonStock,annualPreferredStock,annualTotalPartnershipCapital,annualGeneralPartnershipCapital,annualLimitedPartnershipCapital,annualTotalLiabilitiesNetMinorityInterest,annualTotalNonCurrentLiabilitiesNetMinorityInterest,annualOtherNonCurrentLiabilities,annualLiabilitiesHeldforSaleNonCurrent,annualRestrictedCommonStock,annualPreferredSecuritiesOutsideStockEquity,annualDerivativeProductLiabilities,annualEmployeeBenefits,annualNonCurrentPensionAndOtherPostretirementBenefitPlans,annualNonCurrentAccruedExpenses,annualDuetoRelatedPartiesNonCurrent,annualTradeandOtherPayablesNonCurrent,annualNonCurrentDeferredLiabilities,annualNonCurrentDeferredRevenue,annualNonCurrentDeferredTaxesLiabilities,annualLongTermDebtAndCapitalLeaseObligation,annualLongTermCapitalLeaseObligation,annualLongTermDebt,annualLongTermProvisions,annualCurrentLiabilities,annualOtherCurrentLiabilities,annualCurrentDeferredLiabilities,annualCurrentDeferredRevenue,annualCurrentDeferredTaxesLiabilities,annualCurrentDebtAndCapitalLeaseObligation,annualCurrentCapitalLeaseObligation,annualCurrentDebt,annualOtherCurrentBorrowings,annualLineOfCredit,annualCommercialPaper,annualCurrentNotesPayable,annualPensionandOtherPostRetirementBenefitPlansCurrent,annualCurrentProvisions,annualPayablesAndAccruedExpenses,annualCurrentAccruedExpenses,annualInterestPayable,annualPayables,annualOtherPayable,annualDuetoRelatedPartiesCurrent,annualDividendsPayable,annualTotalTaxPayable,annualIncomeTaxPayable,annualAccountsPayable,annualTotalAssets,annualTotalNonCurrentAssets,annualOtherNonCurrentAssets,annualDefinedPensionBenefit,annualNonCurrentPrepaidAssets,annualNonCurrentDeferredAssets,annualNonCurrentDeferredTaxesAssets,annualDuefromRelatedPartiesNonCurrent,annualNonCurrentNoteReceivables,annualNonCurrentAccountsReceivable,annualFinancialAssets,annualInvestmentsAndAdvances,annualOtherInvestments,annualInvestmentinFinancialAssets,annualHeldToMaturitySecurities,annualAvailableForSaleSecurities,annualFinancialAssetsDesignatedasFairValueThroughProfitorLossTotal,annualTradingSecurities,annualLongTermEquityInvestment,annualInvestmentsinJointVenturesatCost,annualInvestmentsInOtherVenturesUnderEquityMethod,annualInvestmentsinAssociatesatCost,annualInvestmentsinSubsidiariesatCost,annualInvestmentProperties,annualGoodwillAndOtherIntangibleAssets,annualOtherIntangibleAssets,annualGoodwill,annualNetPPE,annualAccumulatedDepreciation,annualGrossPPE,annualLeases,annualConstructionInProgress,annualOtherProperties,annualMachineryFurnitureEquipment,annualBuildingsAndImprovements,annualLandAndImprovements,annualProperties,annualCurrentAssets,annualOtherCurrentAssets,annualHedgingAssetsCurrent,annualAssetsHeldForSaleCurrent,annualCurrentDeferredAssets,annualCurrentDeferredTaxesAssets,annualRestrictedCash,annualPrepaidAssets,annualInventory,annualInventoriesAdjustmentsAllowances,annualOtherInventories,annualFinishedGoods,annualWorkInProcess,annualRawMaterials,annualReceivables,annualReceivablesAdjustmentsAllowances,annualOtherReceivables,annualDuefromRelatedPartiesCurrent,annualTaxesReceivable,annualAccruedInterestReceivable,annualNotesReceivable,annualLoansReceivable,annualAccountsReceivable,annualAllowanceForDoubtfulAccountsReceivable,annualGrossAccountsReceivable,annualCashCashEquivalentsAndShortTermInvestments,annualOtherShortTermInvestments,annualCashAndCashEquivalents,annualCashEquivalents,annualCashFinancial,annualCashCashEquivalentsAndFederalFundsSold\");"
 								],
@@ -192,7 +192,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BASE_URL}}/ws/fundamentals-timeseries/v1/finance/timeseries/META?type={{ANNUAL_BALANCE_SHEET_TYPES}}&period1=1483138800&period2=1755475200&formatted=false&merge=true&padTimeSeries=true&region=US&lang=en-US&corsDomain=finance.yahoo.com",
+							"raw": "{{BASE_URL}}/ws/fundamentals-timeseries/v1/finance/timeseries/META?type={{ANNUAL_BALANCE_SHEET_TYPES}}&period1={{startTs}}&period2={{currentTs}}&formatted=false&merge=true&padTimeSeries=true&region=US&lang=en-US&corsDomain=finance.yahoo.com",
 							"host": [
 								"{{BASE_URL}}"
 							],
@@ -216,11 +216,11 @@
 								},
 								{
 									"key": "period1",
-									"value": "1483138800"
+									"value": "{{startTs}}"
 								},
 								{
 									"key": "period2",
-									"value": "1755475200"
+									"value": "{{currentTs}}"
 								},
 								{
 									"key": "formatted",
@@ -291,11 +291,11 @@
 							"listen": "prerequest",
 							"script": {
 								"exec": [
-									"const period = Math.floor(new Date(2019,1,1).getTime() / 1000);",
-									"pm.environment.set(\"periodStart\", period);",
+									"const startTs = Math.floor(new Date(2019,1,1).getTime() / 1000);",
+									"pm.environment.set(\"startTs\", startTs);",
 									"",
-									"const current_ts = Math.floor(new Date().getTime() / 1000);",
-									"pm.environment.set(\"currentTs\", current_ts);",
+									"const currentTs = Math.floor(new Date().getTime() / 1000);",
+									"pm.environment.set(\"currentTs\", currentTs);",
 									"",
 									"pm.environment.set(\"ANNUAL_CASH_FLOW_TYPES\", \"annualForeignSales,annualDomesticSales,annualAdjustedGeographySegmentData,annualFreeCashFlow,annualRepurchaseOfCapitalStock,annualRepaymentOfDebt,annualIssuanceOfDebt,annualIssuanceOfCapitalStock,annualCapitalExpenditure,annualInterestPaidSupplementalData,annualIncomeTaxPaidSupplementalData,annualEndCashPosition,annualOtherCashAdjustmentOutsideChangeinCash,annualBeginningCashPosition,annualEffectOfExchangeRateChanges,annualChangesInCash,annualOtherCashAdjustmentInsideChangeinCash,annualCashFlowFromDiscontinuedOperation,annualFinancingCashFlow,annualCashFromDiscontinuedFinancingActivities,annualCashFlowFromContinuingFinancingActivities,annualNetOtherFinancingCharges,annualInterestPaidCFF,annualProceedsFromStockOptionExercised,annualCashDividendsPaid,annualPreferredStockDividendPaid,annualCommonStockDividendPaid,annualNetPreferredStockIssuance,annualPreferredStockPayments,annualPreferredStockIssuance,annualNetCommonStockIssuance,annualCommonStockPayments,annualCommonStockIssuance,annualNetIssuancePaymentsOfDebt,annualNetShortTermDebtIssuance,annualShortTermDebtPayments,annualShortTermDebtIssuance,annualNetLongTermDebtIssuance,annualLongTermDebtPayments,annualLongTermDebtIssuance,annualInvestingCashFlow,annualCashFromDiscontinuedInvestingActivities,annualCashFlowFromContinuingInvestingActivities,annualNetOtherInvestingChanges,annualInterestReceivedCFI,annualDividendsReceivedCFI,annualNetInvestmentPurchaseAndSale,annualSaleOfInvestment,annualPurchaseOfInvestment,annualNetInvestmentPropertiesPurchaseAndSale,annualSaleOfInvestmentProperties,annualPurchaseOfInvestmentProperties,annualNetBusinessPurchaseAndSale,annualSaleOfBusiness,annualPurchaseOfBusiness,annualNetIntangiblesPurchaseAndSale,annualSaleOfIntangibles,annualPurchaseOfIntangibles,annualNetPPEPurchaseAndSale,annualSaleOfPPE,annualPurchaseOfPPE,annualCapitalExpenditureReported,annualOperatingCashFlow,annualCashFromDiscontinuedOperatingActivities,annualCashFlowFromContinuingOperatingActivities,annualTaxesRefundPaid,annualInterestReceivedCFO,annualInterestPaidCFO,annualDividendReceivedCFO,annualDividendPaidCFO,annualChangeInWorkingCapital,annualChangeInOtherWorkingCapital,annualChangeInOtherCurrentLiabilities,annualChangeInOtherCurrentAssets,annualChangeInPayablesAndAccruedExpense,annualChangeInAccruedExpense,annualChangeInInterestPayable,annualChangeInPayable,annualChangeInDividendPayable,annualChangeInAccountPayable,annualChangeInTaxPayable,annualChangeInIncomeTaxPayable,annualChangeInPrepaidAssets,annualChangeInInventory,annualChangeInReceivables,annualChangesInAccountReceivables,annualOtherNonCashItems,annualExcessTaxBenefitFromStockBasedCompensation,annualStockBasedCompensation,annualUnrealizedGainLossOnInvestmentSecurities,annualProvisionandWriteOffofAssets,annualAssetImpairmentCharge,annualAmortizationOfSecurities,annualDeferredTax,annualDeferredIncomeTax,annualDepreciationAmortizationDepletion,annualDepletion,annualDepreciationAndAmortization,annualAmortizationCashFlow,annualAmortizationOfIntangibles,annualDepreciation,annualOperatingGainsLosses,annualPensionAndEmployeeBenefitExpense,annualEarningsLossesFromEquityInvestments,annualGainLossOnInvestmentSecurities,annualNetForeignCurrencyExchangeGainLoss,annualGainLossOnSaleOfPPE,annualGainLossOnSaleOfBusiness,annualNetIncomeFromContinuingOperations,annualCashFlowsfromusedinOperatingActivitiesDirect,annualTaxesRefundPaidDirect,annualInterestReceivedDirect,annualInterestPaidDirect,annualDividendsReceivedDirect,annualDividendsPaidDirect,annualClassesofCashPayments,annualOtherCashPaymentsfromOperatingActivities,annualPaymentsonBehalfofEmployees,annualPaymentstoSuppliersforGoodsandServices,annualClassesofCashReceiptsfromOperatingActivities,annualOtherCashReceiptsfromOperatingActivities,annualReceiptsfromGovernmentGrants,annualReceiptsfromCustomers\");"
 								],
@@ -312,7 +312,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BASE_URL}}/ws/fundamentals-timeseries/v1/finance/timeseries/META?type={{ANNUAL_CASH_FLOW_TYPES}}&period1=1483138800&period2=1755475200&formatted=false&merge=true&padTimeSeries=true&region=US&lang=en-US&corsDomain=finance.yahoo.com",
+							"raw": "{{BASE_URL}}/ws/fundamentals-timeseries/v1/finance/timeseries/META?type={{ANNUAL_CASH_FLOW_TYPES}}&period1={{startTs}}&period2={{currentTs}}&formatted=false&merge=true&padTimeSeries=true&region=US&lang=en-US&corsDomain=finance.yahoo.com",
 							"host": [
 								"{{BASE_URL}}"
 							],
@@ -336,11 +336,11 @@
 								},
 								{
 									"key": "period1",
-									"value": "1483138800"
+									"value": "{{startTs}}"
 								},
 								{
 									"key": "period2",
-									"value": "1755475200"
+									"value": "{{currentTs}}"
 								},
 								{
 									"key": "formatted",
@@ -411,11 +411,11 @@
 							"listen": "prerequest",
 							"script": {
 								"exec": [
-									"const period = Math.floor(new Date(2019,1,1).getTime() / 1000);",
-									"pm.environment.set(\"periodStart\", period);",
+									"const startTs = Math.floor(new Date(2019,1,1).getTime() / 1000);",
+									"pm.environment.set(\"startTs\", startTs);",
 									"",
-									"const current_ts = Math.floor(new Date().getTime() / 1000);",
-									"pm.environment.set(\"currentTs\", current_ts);",
+									"const currentTs = Math.floor(new Date().getTime() / 1000);",
+									"pm.environment.set(\"currentTs\", currentTs);",
 									"",
 									"pm.environment.set(\"OTHER_TYPES\", \"EnterpriseValue,EnterprisesValueRevenueRatio,PbRatio,corporateConferenceCallEvents,analystRatings,otherCorporate,conferenceEvents,spEarningsReleaseEvents,shareHoldersAnnualMeetingsEvents,economicEvents,earningsConferenceCallEvents,MarketCap,ForwardPeRatio,PegRatio,corporateAnalystMeeting,EnterprisesValueEBITDARatio,PeRatio,mergerAndAcquisitionAnnouncement,conferencePresentation,PsRatio\");"
 								],
@@ -432,7 +432,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{BASE_URL}}/ws/fundamentals-timeseries/v1/finance/timeseries/META?type={{OTHER_TYPES}}&period1=1483138800&period2=1755475200&formatted=false&merge=true&padTimeSeries=true&region=US&lang=en-US&corsDomain=finance.yahoo.com",
+							"raw": "{{BASE_URL}}/ws/fundamentals-timeseries/v1/finance/timeseries/META?type={{OTHER_TYPES}}&period1={{startTs}}&period2={{currentTs}}&formatted=false&merge=true&padTimeSeries=true&region=US&lang=en-US&corsDomain=finance.yahoo.com",
 							"host": [
 								"{{BASE_URL}}"
 							],
@@ -456,11 +456,11 @@
 								},
 								{
 									"key": "period1",
-									"value": "1483138800"
+									"value": "{{startTs}}"
 								},
 								{
 									"key": "period2",
-									"value": "1755475200"
+									"value": "{{currentTs}}"
 								},
 								{
 									"key": "formatted",
@@ -1524,6 +1524,106 @@
 			"response": []
 		},
 		{
+			"name": "ws screener calendar events",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"const response = pm.response.json();",
+							"",
+							"pm.test(\"Error is null\", () => {",
+							"    pm.expect(response.finance.error).to.eql(null);",
+							"});",
+							"",
+							"pm.test(\"Result is not null\", () => {",
+							"    pm.expect(response.finance.result).to.not.eql(null);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const currentTsMs = new Date().getTime();",
+							"pm.environment.set(\"currentTsMs\", currentTsMs);",
+							"",
+							"const startTsMs = new Date(currentTsMs - 149*24*60*60*1000).getTime();",
+							"pm.environment.set(\"startTsMs\", startTsMs);",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://query1.finance.yahoo.com/ws/screeners/v1/finance/calendar-events?countPerDay=25&economicEventsHighImportanceOnly=true&economicEventsRegionFilter=&endDate={{currentTsMs}}&modules=economicEvents&startDate={{startTsMs}}&lang=en-US&region=US",
+					"protocol": "https",
+					"host": [
+						"query1",
+						"finance",
+						"yahoo",
+						"com"
+					],
+					"path": [
+						"ws",
+						"screeners",
+						"v1",
+						"finance",
+						"calendar-events"
+					],
+					"query": [
+						{
+							"key": "countPerDay",
+							"value": "25"
+						},
+						{
+							"key": "economicEventsHighImportanceOnly",
+							"value": "true"
+						},
+						{
+							"key": "economicEventsRegionFilter",
+							"value": ""
+						},
+						{
+							"key": "endDate",
+							"value": "{{currentTsMs}}"
+						},
+						{
+							"key": "modules",
+							"value": "economicEvents"
+						},
+						{
+							"key": "startDate",
+							"value": "{{startTsMs}}"
+						},
+						{
+							"key": "lang",
+							"value": "en-US"
+						},
+						{
+							"key": "region",
+							"value": "US"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "finance spark",
 			"event": [
 				{
@@ -1608,90 +1708,6 @@
 			"response": []
 		},
 		{
-			"name": "ws screener calendar events",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {",
-							"    pm.response.to.have.status(200);",
-							"});",
-							"",
-							"const response = pm.response.json();",
-							"",
-							"pm.test(\"Error is null\", () => {",
-							"    pm.expect(response.finance.error).to.eql(null);",
-							"});",
-							"",
-							"pm.test(\"Result is not null\", () => {",
-							"    pm.expect(response.finance.result).to.not.eql(null);",
-							"});"
-						],
-						"type": "text/javascript",
-						"packages": {},
-						"requests": {}
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "https://query1.finance.yahoo.com/ws/screeners/v1/finance/calendar-events?countPerDay=25&economicEventsHighImportanceOnly=true&economicEventsRegionFilter=&endDate=1761680408000&modules=economicEvents&startDate=1761404400000&lang=en-US&region=US",
-					"protocol": "https",
-					"host": [
-						"query1",
-						"finance",
-						"yahoo",
-						"com"
-					],
-					"path": [
-						"ws",
-						"screeners",
-						"v1",
-						"finance",
-						"calendar-events"
-					],
-					"query": [
-						{
-							"key": "countPerDay",
-							"value": "25"
-						},
-						{
-							"key": "economicEventsHighImportanceOnly",
-							"value": "true"
-						},
-						{
-							"key": "economicEventsRegionFilter",
-							"value": ""
-						},
-						{
-							"key": "endDate",
-							"value": "1761680408000"
-						},
-						{
-							"key": "modules",
-							"value": "economicEvents"
-						},
-						{
-							"key": "startDate",
-							"value": "1761404400000"
-						},
-						{
-							"key": "lang",
-							"value": "en-US"
-						},
-						{
-							"key": "region",
-							"value": "US"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "xhr ticker analysis",
 			"event": [
 				{
@@ -1706,13 +1722,24 @@
 						"packages": {},
 						"requests": {}
 					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
 				}
 			],
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://finance.yahoo.com/xhr/ticker-analysis?debug=false&symbol=AAPL&lang=en-US&region=US",
+					"raw": "https://finance.yahoo.com/xhr/ticker-analysis?debug=false&symbol=META&lang=en-US&region=US",
 					"protocol": "https",
 					"host": [
 						"finance",
@@ -1730,7 +1757,7 @@
 						},
 						{
 							"key": "symbol",
-							"value": "AAPL"
+							"value": "META"
 						},
 						{
 							"key": "lang",
