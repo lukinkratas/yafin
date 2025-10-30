@@ -1,5 +1,29 @@
 ## TODO
 
+  Concerns:
+  - HTTPError is caught and retried, but the retry logic doesn't distinguish between retryable (5xx, timeouts) and
+  non-retryable errors (4xx)
+  - No exponential backoff in retry logic - could hammer the API
+
+ Suggestion:
+  # Add exponential backoff
+  import asyncio
+  for attempt in range(1, self.max_retries + 1):
+      try:
+          # ... request
+      except HTTPError as e:
+          if e.status_code < 500 or attempt == self.max_retries:
+              raise
+          wait_time = min(2 ** attempt, 60)  # Exponential backoff with cap
+          await asyncio.sleep(wait_time)
+
+- [ ] datetime timezone-aware
+- [ ] consider dependency injection
+- [ ] helper to detect and raise a custom exception when error is present
+- [ ] remove typeguard for PROD
+- [ ] catch connection/timeout errors - curl_cffi network exceptions
+- [ ] restrict retries to retryable status codes (e.g., 429, 500, 503)
+- [ ] AsyncSymbol singleton via _ClientManager + refcount works, but it’s not concurrency-safe if symbols are created/released concurrently. Consider an asyncio.Lock to guard _refcount and the client close path to avoid edge-case races in heavy async code.
 - [ ] example from docs to main or integration tests
 - [ ] unit test symbol / client singleton factory
 - [ ] test_utils - add OTHER types ? -> str | None annotation

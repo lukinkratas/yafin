@@ -24,6 +24,8 @@ jobs:
             REPO: ${{ github.repository }}
             PR NUMBER: ${{ github.event.pull_request.number }}
 
+            This it an unofficial Yahoo Finance API client written in python.
+            
             Perform a comprehensive code review with the following focus areas:
 
             1. **Code Quality**

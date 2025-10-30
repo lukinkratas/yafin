@@ -9,9 +9,6 @@ from .exceptions import TrailingBalanceSheetError
 
 logger = logging.getLogger(__name__)
 
-CHAR_LIMIT = 20
-
-
 def _error(msg: str, err_cls: Type[Exception] = Exception) -> NoReturn:
     """Log error message and raise exception.
 
@@ -106,11 +103,11 @@ def _get_func_name_and_args(
 
 
 def _log_args(func: Callable[..., Any]) -> Callable[..., Any]:
-    """Decorator for logging functions and its' args, kwargs."""
+    """Decorator for logging functions."""
 
     @wraps(func)
     async def async_wrapper(*args: Any, **kwargs: Any) -> Any:
-        func_name, args_copy = _get_func_name_and_args(func, args)
+        func_name, _ = _get_func_name_and_args(func, args)
 
         logger.debug(f'{func_name} was called.')
         result = await func(*args, **kwargs)

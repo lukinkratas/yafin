@@ -1,6 +1,6 @@
 # Yafin
 
-Unofficial [Yahoo!Ⓡ finance](https://finance.yahoo.com) API asynchronous client.
+Unofficial [Yahoo!Ⓡ finance](https://finance.yahoo.com) API client.
 
 - not affiliated with Yahoo, Inc.
 - oss that uses publicly available APIs.
