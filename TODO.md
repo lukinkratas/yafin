@@ -1,40 +1,24 @@
 ## TODO
 
-  Concerns:
-  - HTTPError is caught and retried, but the retry logic doesn't distinguish between retryable (5xx, timeouts) and
-  non-retryable errors (4xx)
-  - No exponential backoff in retry logic - could hammer the API
-
- Suggestion:
-  # Add exponential backoff
-  import asyncio
-  for attempt in range(1, self.max_retries + 1):
-      try:
-          # ... request
-      except HTTPError as e:
-          if e.status_code < 500 or attempt == self.max_retries:
-              raise
-          wait_time = min(2 ** attempt, 60)  # Exponential backoff with cap
-          await asyncio.sleep(wait_time)
-
-- [ ] datetime timezone-aware
-- [ ] consider dependency injection
-- [ ] helper to detect and raise a custom exception when error is present
-- [ ] remove typeguard for PROD
-- [ ] catch connection/timeout errors - curl_cffi network exceptions
-- [ ] restrict retries to retryable status codes (e.g., 429, 500, 503)
-- [ ] AsyncSymbol singleton via _ClientManager + refcount works, but it’s not concurrency-safe if symbols are created/released concurrently. Consider an asyncio.Lock to guard _refcount and the client close path to avoid edge-case races in heavy async code.
-- [ ] example from docs to main or integration tests
-- [ ] unit test symbol / client singleton factory
-- [ ] test_utils - add OTHER types ? -> str | None annotation
 - [ ] get chart not now(), but round to midnight - check yfinance implementation
-- get_chart implement period1 and period2 ?
+- [ ] get_chart implement period1 and period2 ?
 - [ ] client.get_timeseries, symbol.get_income_statement, symbol.get_balance_sheet and symbol.get_cash_flow default period1 and 2 args datetime.datetime.timestamp ?
+- [ ] example from docs to main or integration tests
+
+- [ ] no only meta fixtures
 - [ ] reverse eng the rest API again - check, if all endpoints are present
 - [ ] (sync) client and (sync) symbol ? + pytest-benchmark tests
+- [ ] consider dependency injection
 - [ ] publish to pypi test
 - [ ] publish
 - [ ] mcp
+- ~~[x] TypedDicts types per endpoint~~
+- ~~[x] utils.get_types_with_frequency - add OTHER types ? -> str | None annotation for frequency~~
+- ~~[x] unit test symbol / client singleton factory~~
+- ~~[x] AsyncSymbol singleton via _ClientManager + refcount works, but it’s not concurrency-safe if symbols are created/released concurrently. Consider an asyncio.Lock to guard _refcount and the client close path to avoid edge-case races in heavy async code.~~
+- ~~[x] datetime timezone-aware~~
+- ~~[x] remove typeguard for PROD~~
+- ~~[x] restrict retries to retryable status codes (e.g., 429, 500, 503)~~
 - ~~[x] reverse eng the rest API~~
 - ~~[x] symbol - test other endpoints with multiple symbols~~
   - ~~[x] recommendations~~

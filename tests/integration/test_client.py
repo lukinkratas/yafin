@@ -4,25 +4,28 @@ import pytest
 import pytest_asyncio
 
 from tests._assertions import (
-    _assert_analysis_result,
-    _assert_annual_income_stmt_result,
-    _assert_chart_result,
-    _assert_client_calendar_events_result,
-    _assert_currencies_results,
-    _assert_insights,
-    _assert_market_summary_results,
-    _assert_options_result,
-    _assert_quote_summary_all_modules_result,
-    _assert_quote_types,
-    _assert_quotes,
-    _assert_ratings_result,
-    _assert_recommendations,
-    _assert_response_json,
-    _assert_search_result,
-    _assert_trending_result,
+    _assert_analysis_response_json,
+    _assert_calendar_events_response_json,
+    _assert_chart_response_json,
+    _assert_currencies_response_json,
+    _assert_insights_response_json,
+    _assert_market_summary_response_json,
+    _assert_options_response_json,
+    _assert_quote_response_json,
+    _assert_quote_summary_response_json,
+    _assert_quote_type_response_json,
+    _assert_ratings_response_json,
+    _assert_recommendations_response_json,
+    _assert_search_response_json,
+    _assert_timeseries_response_json,
+    _assert_trending_response_json,
 )
 from yafin import AsyncClient
-from yafin.const import ALL_MODULES, ANNUAL_INCOME_STATEMENT_TYPES
+from yafin.const import (
+    ANNUAL_INCOME_STATEMENT_TYPES,
+    CALENDAR_EVENT_MODULES,
+    QUOTE_SUMMARY_MODULES,
+)
 
 
 class TestIntegrationClient:
@@ -40,8 +43,7 @@ class TestIntegrationClient:
         """Test get_chart method."""
         ticker = 'META'
         chart = await client.get_chart(ticker, period_range='1y', interval='1d')
-        _assert_response_json(chart, 'chart')
-        _assert_chart_result(chart['chart']['result'][0], ticker)
+        _assert_chart_response_json(chart, ticker)
 
     @pytest.mark.integration
     @pytest.mark.asyncio
@@ -49,8 +51,7 @@ class TestIntegrationClient:
         """Test get_quote method."""
         tickers = 'META,AAPL,MSFT,AMZN,GOOGL,NVDA'
         quotes = await client.get_quote(tickers)
-        _assert_response_json(quotes, 'quoteResponse')
-        _assert_quotes(quotes, tickers)
+        _assert_quote_response_json(quotes, tickers)
 
     @pytest.mark.integration
     @pytest.mark.asyncio
@@ -58,30 +59,25 @@ class TestIntegrationClient:
         """Test get_quote_type method."""
         tickers = 'META,AAPL,MSFT,AMZN,GOOGL,NVDA'
         quote_types = await client.get_quote_type(tickers)
-        _assert_response_json(quote_types, 'quoteType')
-        _assert_quote_types(quote_types, tickers)
+        _assert_quote_type_response_json(quote_types, tickers)
 
     @pytest.mark.integration
     @pytest.mark.asyncio
     async def test_get_quote_summary(self, client: AsyncClient) -> None:
         """Test get_quote_summary method."""
         ticker = 'META'
-        modules = ALL_MODULES
+        modules = QUOTE_SUMMARY_MODULES
         quote_summary = await client.get_quote_summary(ticker, modules)
-        _assert_response_json(quote_summary, 'quoteSummary')
-        _assert_quote_summary_all_modules_result(
-            quote_summary['quoteSummary']['result'][0]
-        )
+        _assert_quote_summary_response_json(quote_summary, modules)
 
     @pytest.mark.integration
     @pytest.mark.asyncio
     async def test_get_timeseries(self, client: AsyncClient) -> None:
         """Test get_timeseries method."""
-        timeseries = await client.get_timeseries(
-            ticker='META', types=ANNUAL_INCOME_STATEMENT_TYPES
-        )
-        _assert_response_json(timeseries, 'timeseries')
-        _assert_annual_income_stmt_result(timeseries['timeseries']['result'][0])
+        ticker = 'META'
+        types = ANNUAL_INCOME_STATEMENT_TYPES
+        timeseries = await client.get_timeseries(ticker, types)
+        _assert_timeseries_response_json(timeseries, types, ticker)
 
     @pytest.mark.integration
     @pytest.mark.asyncio
@@ -89,15 +85,14 @@ class TestIntegrationClient:
         """Test get_options method."""
         ticker = 'META'
         options = await client.get_options(ticker)
-        _assert_response_json(options, 'optionChain')
-        _assert_options_result(options['optionChain']['result'][0], ticker)
+        _assert_options_response_json(options, ticker)
 
     @pytest.mark.integration
     @pytest.mark.asyncio
     async def test_get_search(self, client: AsyncClient) -> None:
         """Test get_search method."""
         search = await client.get_search(tickers='META')
-        _assert_search_result(search)
+        _assert_search_response_json(search)
 
     @pytest.mark.integration
     @pytest.mark.asyncio
@@ -105,8 +100,7 @@ class TestIntegrationClient:
         """Test get_recommendations method."""
         tickers = 'META,AAPL,MSFT,AMZN,GOOGL,NVDA'
         recommendations = await client.get_recommendations(tickers)
-        _assert_response_json(recommendations, 'finance')
-        _assert_recommendations(recommendations, tickers)
+        _assert_recommendations_response_json(recommendations, tickers)
 
     @pytest.mark.integration
     @pytest.mark.asyncio
@@ -114,8 +108,7 @@ class TestIntegrationClient:
         """Test get_insights method."""
         tickers = 'META,AAPL,MSFT,AMZN,GOOGL,NVDA'
         insights = await client.get_insights(tickers)
-        _assert_response_json(insights, 'finance')
-        _assert_insights(insights, tickers)
+        _assert_insights_response_json(insights, tickers)
 
     @pytest.mark.integration
     @pytest.mark.asyncio
@@ -123,7 +116,7 @@ class TestIntegrationClient:
         """Test get_ratings method."""
         ticker = 'META'
         ratings = await client.get_ratings(ticker)
-        _assert_ratings_result(ratings)
+        _assert_ratings_response_json(ratings)
 
     @pytest.mark.integration
     @pytest.mark.asyncio
@@ -131,38 +124,33 @@ class TestIntegrationClient:
         """Test get_analysis method."""
         ticker = 'META'
         analysis = await client.get_analysis(ticker)
-        _assert_analysis_result(analysis, ticker)
+        _assert_analysis_response_json(analysis, ticker)
 
     @pytest.mark.integration
     @pytest.mark.asyncio
     async def test_get_market_summaries(self, client: AsyncClient) -> None:
         """Test get_market_summaries method."""
         market_summaries = await client.get_market_summaries()
-        _assert_response_json(market_summaries, 'marketSummaryResponse')
-        _assert_market_summary_results(
-            market_summaries['marketSummaryResponse']['result']
-        )
+        _assert_market_summary_response_json(market_summaries)
 
     @pytest.mark.integration
     @pytest.mark.asyncio
     async def test_get_trending(self, client: AsyncClient) -> None:
         """Test get_trending method."""
         trending = await client.get_trending()
-        _assert_response_json(trending, 'finance')
-        _assert_trending_result(trending['finance']['result'][0])
+        _assert_trending_response_json(trending)
 
     @pytest.mark.integration
     @pytest.mark.asyncio
     async def test_get_currencies(self, client: AsyncClient) -> None:
         """Test get_currencies method."""
         currencies = await client.get_currencies()
-        _assert_response_json(currencies, 'currencies')
-        _assert_currencies_results(currencies['currencies']['result'])
+        _assert_currencies_response_json(currencies)
 
     @pytest.mark.integration
     @pytest.mark.asyncio
     async def test_get_calendar_events(self, client: AsyncClient) -> None:
         """Test get_calendar_events method."""
-        calendar_events = await client.get_calendar_events()
-        _assert_response_json(calendar_events, 'finance')
-        _assert_client_calendar_events_result(calendar_events['finance']['result'])
+        modules = CALENDAR_EVENT_MODULES
+        calendar_events = await client.get_calendar_events(modules)
+        _assert_calendar_events_response_json(calendar_events)

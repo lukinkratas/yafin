@@ -75,7 +75,6 @@ async def main() -> None:
         meta_balance_sheet_history_quarterly = await meta.get_balance_sheet_history_quarterly()
         meta_cashflow_statement_history = await meta.get_cashflow_statement_history()
         meta_cashflow_statement_history_quarterly = await meta.get_cashflow_statement_history_quarterly()
-        meta_esg_scores = await meta.get_esg_scores()
         meta_price = await meta.get_price()
         meta_default_key_statistics = await meta.get_default_key_statistics()
         meta_financial_data = await meta.get_financial_data()

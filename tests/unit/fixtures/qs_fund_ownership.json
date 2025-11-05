@@ -13,8 +13,8 @@
               },
               "organization": "VANGUARD INDEX FUNDS-Vanguard Total Stock Market Index Fund",
               "pctHeld": {
-                "raw": 0.0322,
-                "fmt": "3.22%"
+                "raw": 0.0321,
+                "fmt": "3.21%"
               },
               "position": {
                 "raw": 69815301,
@@ -22,9 +22,9 @@
                 "longFmt": "69,815,301"
               },
               "value": {
-                "raw": 46529801612,
-                "fmt": "46.53B",
-                "longFmt": "46,529,801,612"
+                "raw": 43796535134,
+                "fmt": "43.8B",
+                "longFmt": "43,796,535,134"
               },
               "pctChange": {
                 "raw": 0.0091,
@@ -39,8 +39,8 @@
               },
               "organization": "VANGUARD INDEX FUNDS-Vanguard 500 Index Fund",
               "pctHeld": {
-                "raw": 0.028399998,
-                "fmt": "2.84%"
+                "raw": 0.028299998,
+                "fmt": "2.83%"
               },
               "position": {
                 "raw": 61627857,
@@ -48,9 +48,9 @@
                 "longFmt": "61,627,857"
               },
               "value": {
-                "raw": 41073116049,
-                "fmt": "41.07B",
-                "longFmt": "41,073,116,049"
+                "raw": 38660387704,
+                "fmt": "38.66B",
+                "longFmt": "38,660,387,704"
               },
               "pctChange": {
                 "raw": 0.0128,
@@ -65,8 +65,8 @@
               },
               "organization": "Fidelity Contrafund",
               "pctHeld": {
-                "raw": 0.0177,
-                "fmt": "1.77%"
+                "raw": 0.0176,
+                "fmt": "1.76%"
               },
               "position": {
                 "raw": 38306891,
@@ -74,9 +74,9 @@
                 "longFmt": "38,306,891"
               },
               "value": {
-                "raw": 25530392522,
-                "fmt": "25.53B",
-                "longFmt": "25,530,392,522"
+                "raw": 24030679142,
+                "fmt": "24.03B",
+                "longFmt": "24,030,679,142"
               },
               "pctChange": {
                 "raw": -0.026199998,
@@ -100,9 +100,9 @@
                 "longFmt": "27,567,524"
               },
               "value": {
-                "raw": 18372926912,
-                "fmt": "18.37B",
-                "longFmt": "18,372,926,912"
+                "raw": 17293659357,
+                "fmt": "17.29B",
+                "longFmt": "17,293,659,357"
               },
               "pctChange": {
                 "raw": 0.0017,
@@ -117,8 +117,8 @@
               },
               "organization": "iShares Trust-iShares Core S&P 500 ETF",
               "pctHeld": {
-                "raw": 0.0123000005,
-                "fmt": "1.23%"
+                "raw": 0.012200001,
+                "fmt": "1.22%"
               },
               "position": {
                 "raw": 26603844,
@@ -126,9 +126,9 @@
                 "longFmt": "26,603,844"
               },
               "value": {
-                "raw": 17730663131,
-                "fmt": "17.73B",
-                "longFmt": "17,730,663,131"
+                "raw": 16689123612,
+                "fmt": "16.69B",
+                "longFmt": "16,689,123,612"
               },
               "pctChange": {
                 "raw": 0.0183,
@@ -152,9 +152,9 @@
                 "longFmt": "25,861,535"
               },
               "value": {
-                "raw": 17235936473,
-                "fmt": "17.24B",
-                "longFmt": "17,235,936,473"
+                "raw": 16223458325,
+                "fmt": "16.22B",
+                "longFmt": "16,223,458,325"
               },
               "pctChange": {
                 "raw": -0.0137,
@@ -178,9 +178,9 @@
                 "longFmt": "22,547,548"
               },
               "value": {
-                "raw": 15027263654,
-                "fmt": "15.03B",
-                "longFmt": "15,027,263,654"
+                "raw": 14144527976,
+                "fmt": "14.14B",
+                "longFmt": "14,144,527,976"
               },
               "pctChange": {
                 "raw": -0.050300002,
@@ -204,9 +204,9 @@
                 "longFmt": "19,350,445"
               },
               "value": {
-                "raw": 12896490512,
-                "fmt": "12.9B",
-                "longFmt": "12,896,490,512"
+                "raw": 12138921299,
+                "fmt": "12.14B",
+                "longFmt": "12,138,921,299"
               },
               "pctChange": {
                 "raw": -0.0138,
@@ -230,9 +230,9 @@
                 "longFmt": "18,213,313"
               },
               "value": {
-                "raw": 12138626181,
-                "fmt": "12.14B",
-                "longFmt": "12,138,626,181"
+                "raw": 11425575644,
+                "fmt": "11.43B",
+                "longFmt": "11,425,575,644"
               },
               "pctChange": {
                 "raw": 0.0083,
@@ -256,9 +256,9 @@
                 "longFmt": "13,307,195"
               },
               "value": {
-                "raw": 8868845861,
-                "fmt": "8.87B",
-                "longFmt": "8,868,845,861"
+                "raw": 8347869664,
+                "fmt": "8.35B",
+                "longFmt": "8,347,869,664"
               },
               "pctChange": {
                 "raw": -0.0143,

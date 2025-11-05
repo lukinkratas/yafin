@@ -13,8 +13,8 @@
               },
               "organization": "Vanguard Group Inc",
               "pctHeld": {
-                "raw": 0.0888,
-                "fmt": "8.88%"
+                "raw": 0.0884,
+                "fmt": "8.84%"
               },
               "position": {
                 "raw": 192591101,
@@ -22,9 +22,9 @@
                 "longFmt": "192,591,101"
               },
               "value": {
-                "raw": 128356185441,
-                "fmt": "128.36B",
-                "longFmt": "128,356,185,441"
+                "raw": 120816250889,
+                "fmt": "120.82B",
+                "longFmt": "120,816,250,889"
               },
               "pctChange": {
                 "raw": 0.008,
@@ -39,8 +39,8 @@
               },
               "organization": "Blackrock Inc.",
               "pctHeld": {
-                "raw": 0.0767,
-                "fmt": "7.67%"
+                "raw": 0.0764,
+                "fmt": "7.64%"
               },
               "position": {
                 "raw": 166335987,
@@ -48,9 +48,9 @@
                 "longFmt": "166,335,987"
               },
               "value": {
-                "raw": 110857940382,
-                "fmt": "110.86B",
-                "longFmt": "110,857,940,382"
+                "raw": 104345892583,
+                "fmt": "104.35B",
+                "longFmt": "104,345,892,583"
               },
               "pctChange": {
                 "raw": -0.0002,
@@ -65,8 +65,8 @@
               },
               "organization": "FMR, LLC",
               "pctHeld": {
-                "raw": 0.0627,
-                "fmt": "6.27%"
+                "raw": 0.0624,
+                "fmt": "6.24%"
               },
               "position": {
                 "raw": 135910094,
@@ -74,9 +74,9 @@
                 "longFmt": "135,910,094"
               },
               "value": {
-                "raw": 90579996366,
-                "fmt": "90.58B",
-                "longFmt": "90,579,996,366"
+                "raw": 85259121163,
+                "fmt": "85.26B",
+                "longFmt": "85,259,121,163"
               },
               "pctChange": {
                 "raw": 0.0054,
@@ -91,8 +91,8 @@
               },
               "organization": "State Street Corporation",
               "pctHeld": {
-                "raw": 0.0401,
-                "fmt": "4.01%"
+                "raw": 0.0399,
+                "fmt": "3.99%"
               },
               "position": {
                 "raw": 86925674,
@@ -100,9 +100,9 @@
                 "longFmt": "86,925,674"
               },
               "value": {
-                "raw": 57933351404,
-                "fmt": "57.93B",
-                "longFmt": "57,933,351,404"
+                "raw": 54530214450,
+                "fmt": "54.53B",
+                "longFmt": "54,530,214,450"
               },
               "pctChange": {
                 "raw": 0.0194,
@@ -117,8 +117,8 @@
               },
               "organization": "JPMORGAN CHASE & CO",
               "pctHeld": {
-                "raw": 0.0252,
-                "fmt": "2.52%"
+                "raw": 0.0251,
+                "fmt": "2.51%"
               },
               "position": {
                 "raw": 54721870,
@@ -126,9 +126,9 @@
                 "longFmt": "54,721,870"
               },
               "value": {
-                "raw": 36470483095,
-                "fmt": "36.47B",
-                "longFmt": "36,470,483,095"
+                "raw": 34328123889,
+                "fmt": "34.33B",
+                "longFmt": "34,328,123,889"
               },
               "pctChange": {
                 "raw": -0.059699997,
@@ -143,8 +143,8 @@
               },
               "organization": "Geode Capital Management, LLC",
               "pctHeld": {
-                "raw": 0.0238,
-                "fmt": "2.38%"
+                "raw": 0.023699999,
+                "fmt": "2.37%"
               },
               "position": {
                 "raw": 51575209,
@@ -152,9 +152,9 @@
                 "longFmt": "51,575,209"
               },
               "value": {
-                "raw": 34373328031,
-                "fmt": "34.37B",
-                "longFmt": "34,373,328,031"
+                "raw": 32354160487,
+                "fmt": "32.35B",
+                "longFmt": "32,354,160,487"
               },
               "pctChange": {
                 "raw": 0.0134000005,
@@ -169,8 +169,8 @@
               },
               "organization": "Price (T.Rowe) Associates Inc",
               "pctHeld": {
-                "raw": 0.0189,
-                "fmt": "1.89%"
+                "raw": 0.0188,
+                "fmt": "1.88%"
               },
               "position": {
                 "raw": 40997942,
@@ -178,9 +178,9 @@
                 "longFmt": "40,997,942"
               },
               "value": {
-                "raw": 27323897203,
-                "fmt": "27.32B",
-                "longFmt": "27,323,897,203"
+                "raw": 25718829275,
+                "fmt": "25.72B",
+                "longFmt": "25,718,829,275"
               },
               "pctChange": {
                 "raw": 0.0477,
@@ -195,8 +195,8 @@
               },
               "organization": "Capital World Investors",
               "pctHeld": {
-                "raw": 0.018,
-                "fmt": "1.80%"
+                "raw": 0.0179,
+                "fmt": "1.79%"
               },
               "position": {
                 "raw": 38969510,
@@ -204,9 +204,9 @@
                 "longFmt": "38,969,510"
               },
               "value": {
-                "raw": 25972008188,
-                "fmt": "25.97B",
-                "longFmt": "25,972,008,188"
+                "raw": 24446353298,
+                "fmt": "24.45B",
+                "longFmt": "24,446,353,298"
               },
               "pctChange": {
                 "raw": 0.0233,
@@ -221,8 +221,8 @@
               },
               "organization": "Morgan Stanley",
               "pctHeld": {
-                "raw": 0.0172,
-                "fmt": "1.72%"
+                "raw": 0.0171,
+                "fmt": "1.71%"
               },
               "position": {
                 "raw": 37219287,
@@ -230,9 +230,9 @@
                 "longFmt": "37,219,287"
               },
               "value": {
-                "raw": 24805537116,
-                "fmt": "24.81B",
-                "longFmt": "24,805,537,116"
+                "raw": 23348403393,
+                "fmt": "23.35B",
+                "longFmt": "23,348,403,393"
               },
               "pctChange": {
                 "raw": -0.0177,
@@ -247,8 +247,8 @@
               },
               "organization": "Capital Research Global Investors",
               "pctHeld": {
-                "raw": 0.015,
-                "fmt": "1.50%"
+                "raw": 0.0149,
+                "fmt": "1.49%"
               },
               "position": {
                 "raw": 32458849,
@@ -256,9 +256,9 @@
                 "longFmt": "32,458,849"
               },
               "value": {
-                "raw": 21632848142,
-                "fmt": "21.63B",
-                "longFmt": "21,632,848,142"
+                "raw": 20362085392,
+                "fmt": "20.36B",
+                "longFmt": "20,362,085,392"
               },
               "pctChange": {
                 "raw": -0.0544,

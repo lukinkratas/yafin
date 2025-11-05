@@ -1,14 +1,38 @@
+import asyncio
 import logging
 from datetime import datetime, timedelta
 from types import TracebackType
 from typing import Any, Self, Type
+from zoneinfo import ZoneInfo
 
 from curl_cffi import AsyncSession, Response
-from curl_cffi.requests.exceptions import HTTPError
-from typeguard import typechecked
+from curl_cffi.requests.exceptions import HTTPError, Timeout
 
-from .const import _ALL_TYPES_SET, ALL_MODULES_SET, EVENTS, INTERVALS, RANGES
-from .types import ResponseJson, Result
+from .const import (
+    _ALL_TYPES_SET,
+    CALENDAR_EVENT_MODULES_SET,
+    EVENTS,
+    INTERVALS,
+    QUOTE_SUMMARY_MODULES_SET,
+    RANGES,
+)
+from .types import (
+    AnalysisResponseJson,
+    CalendarEventsResponseJson,
+    ChartResponseJson,
+    CurrenciesResponseJson,
+    InsightsResponseJson,
+    MarketSummaryResponseJson,
+    OptionsResponseJson,
+    QuoteResponseJson,
+    QuoteSummaryResponseJson,
+    QuoteTypeResponseJson,
+    RatingsResponseJson,
+    RecommendationsResponseJson,
+    SearchResponseJson,
+    TimeseriesResponseJson,
+    TrendingResponseJson,
+)
 from .utils import _encode_url, _error, _log_args
 
 logger = logging.getLogger(__name__)
@@ -37,7 +61,6 @@ class AsyncClient(object):
         'corsDomain': 'finance.yahoo.com',
     }
 
-    @typechecked
     def __init__(self, timeout: float = 5.0, max_retries: int = 5) -> None:
         """Create new AsynClient instance.
 
@@ -78,7 +101,6 @@ class AsyncClient(object):
         await self.close()
 
     @_log_args
-    @typechecked
     async def _get_async_request(
         self,
         url: str,
@@ -104,11 +126,21 @@ class AsyncClient(object):
                 logger.debug(f'Request no. {attempt}/{self.max_retries} - succeeded.')
                 return response
 
-            except HTTPError:
+            except (HTTPError, Timeout) as e:
                 logger.warning(f'Request no. {attempt}/{self.max_retries} - failed.')
 
-        # gives RET503 ruff err
-        # _error(msg=f'All {self.max_retries} requests failed.', err_cls=HTTPError)
+                if (
+                    response.status_code >= 400
+                    and response.status_code <= 499
+                    and response.status_code != 429
+                ):
+                    raise e
+
+                wait_time = min(2**attempt, 60)  # Exponential backoff with cap
+                await asyncio.sleep(wait_time)
+
+        # # gives RET503 ruff err
+        # # _error(msg=f'All {self.max_retries} requests failed.', err_cls=HTTPError)
         msg = f'All {self.max_retries} requests failed.'
         logger.error(msg)
         raise HTTPError(msg)
@@ -123,14 +155,13 @@ class AsyncClient(object):
         return self._crumb
 
     @_log_args
-    @typechecked
     async def get_chart(
         self,
         ticker: str,
         period_range: str,
         interval: str,
         events: str | None = 'div,split,earn,capitalGain',
-    ) -> ResponseJson:
+    ) -> ChartResponseJson:
         """Get chart data for the ticker.
 
         Args:
@@ -191,8 +222,7 @@ class AsyncClient(object):
         return response.json()
 
     @_log_args
-    @typechecked
-    async def get_quote(self, tickers: str) -> ResponseJson:
+    async def get_quote(self, tickers: str) -> QuoteResponseJson:
         """Get quote for tickers.
 
         Args:
@@ -212,8 +242,7 @@ class AsyncClient(object):
         return response.json()
 
     @_log_args
-    @typechecked
-    async def get_quote_type(self, tickers: str) -> ResponseJson:
+    async def get_quote_type(self, tickers: str) -> QuoteTypeResponseJson:
         """Get quote type for tickers.
 
         Args:
@@ -232,8 +261,9 @@ class AsyncClient(object):
         return response.json()
 
     @_log_args
-    @typechecked
-    async def get_quote_summary(self, ticker: str, modules: str) -> ResponseJson:
+    async def get_quote_summary(
+        self, ticker: str, modules: str
+    ) -> QuoteSummaryResponseJson:
         """Get quote summary for the ticker.
 
         Args:
@@ -246,11 +276,11 @@ class AsyncClient(object):
 
         parsed_modules = {m.strip() for m in modules.split(',')}
 
-        if not parsed_modules <= ALL_MODULES_SET:
+        if not parsed_modules <= QUOTE_SUMMARY_MODULES_SET:
             _error(
                 msg=(
-                    f'Invalid modules={parsed_modules - ALL_MODULES_SET}. '
-                    f'Valid values: {ALL_MODULES_SET}'
+                    f'Invalid modules={parsed_modules - QUOTE_SUMMARY_MODULES_SET}. '
+                    f'Valid values: {QUOTE_SUMMARY_MODULES_SET}'
                 ),
                 err_cls=ValueError,
             )
@@ -267,14 +297,13 @@ class AsyncClient(object):
         return response.json()
 
     @_log_args
-    @typechecked
     async def get_timeseries(
         self,
         ticker: str,
         types: str,
         period1: int | float | None = None,
         period2: int | float | None = None,
-    ) -> ResponseJson:
+    ) -> TimeseriesResponseJson:
         """Get timeseries for the ticker.
 
         Args:
@@ -305,17 +334,17 @@ class AsyncClient(object):
             )
 
         if period1 is None:
-            period1 = datetime(2020, 1, 1).timestamp()
+            period1 = datetime(2020, 1, 1, tzinfo=ZoneInfo('UTC')).timestamp()
 
         if period2 is None:
-            period2 = datetime.now().timestamp()
+            period2 = datetime.now(tz=ZoneInfo('UTC')).timestamp()
 
         url = (
             f'{self._BASE_URL}/ws/fundamentals-timeseries/'
             f'v1/finance/timeseries/{ticker}'
         )
         params = self._DEFAULT_PARAMS | {
-            'merge': True,
+            'merge': False,
             'padTimeSeries': True,
             'period1': int(period1),
             'period2': int(period2),
@@ -326,8 +355,7 @@ class AsyncClient(object):
         return response.json()
 
     @_log_args
-    @typechecked
-    async def get_options(self, ticker: str) -> ResponseJson:
+    async def get_options(self, ticker: str) -> OptionsResponseJson:
         """Get options for the ticker.
 
         Args:
@@ -347,8 +375,7 @@ class AsyncClient(object):
         return response.json()
 
     @_log_args
-    @typechecked
-    async def get_search(self, tickers: str) -> Result:
+    async def get_search(self, tickers: str) -> SearchResponseJson:
         """Get search results for tickers.
 
         Args:
@@ -364,8 +391,7 @@ class AsyncClient(object):
         return response.json()
 
     @_log_args
-    @typechecked
-    async def get_recommendations(self, tickers: str) -> ResponseJson:
+    async def get_recommendations(self, tickers: str) -> RecommendationsResponseJson:
         """Get analyst recommendations for tickers.
 
         Args:
@@ -381,8 +407,7 @@ class AsyncClient(object):
         return response.json()
 
     @_log_args
-    @typechecked
-    async def get_insights(self, tickers: str) -> ResponseJson:
+    async def get_insights(self, tickers: str) -> InsightsResponseJson:
         """Get insights for tickers.
 
         Args:
@@ -404,8 +429,7 @@ class AsyncClient(object):
         return response.json()
 
     @_log_args
-    @typechecked
-    async def get_ratings(self, ticker: str) -> Result:
+    async def get_ratings(self, ticker: str) -> RatingsResponseJson:
         """Get ratings for the ticker.
 
         Args:
@@ -421,8 +445,7 @@ class AsyncClient(object):
         return response.json()
 
     @_log_args
-    @typechecked
-    async def get_analysis(self, ticker: str) -> Result:
+    async def get_analysis(self, ticker: str) -> AnalysisResponseJson:
         """Get analysis for the ticker.
 
         Args:
@@ -439,7 +462,7 @@ class AsyncClient(object):
         return response.json()
 
     @_log_args
-    async def get_market_summaries(self) -> ResponseJson:
+    async def get_market_summaries(self) -> MarketSummaryResponseJson:
         """Get market summaries.
 
         Returns: Market summaries response json including result and error.
@@ -452,7 +475,7 @@ class AsyncClient(object):
         return response.json()
 
     @_log_args
-    async def get_trending(self) -> ResponseJson:
+    async def get_trending(self) -> TrendingResponseJson:
         """Get trending tickers.
 
         Returns: Trending tickers response json including result and error.
@@ -465,7 +488,7 @@ class AsyncClient(object):
         return response.json()
 
     @_log_args
-    async def get_currencies(self) -> ResponseJson:
+    async def get_currencies(self) -> CurrenciesResponseJson:
         """Get currency exchange rates.
 
         Returns: Currency exchange rates response json including result and error.
@@ -478,13 +501,16 @@ class AsyncClient(object):
         return response.json()
 
     @_log_args
-    @typechecked
     async def get_calendar_events(
-        self, period1: int | float | None = None, period2: int | float | None = None
-    ) -> ResponseJson:
+        self,
+        modules: str | None = None,
+        period1: int | float | None = None,
+        period2: int | float | None = None,
+    ) -> CalendarEventsResponseJson:
         """Get calendar events.
 
         Args:
+            modules: Comma-separated modules to include.
             period1: Start timestamp in miliseconds.
             period2: End timestamp in miliseconds.
 
@@ -495,7 +521,7 @@ class AsyncClient(object):
         logger.debug('Getting finance/calendar-events.')
 
         if period2 is None:
-            period2 = datetime.now().timestamp() * 1000
+            period2 = datetime.now(tz=ZoneInfo('UTC')).timestamp() * 1000
 
         if period1 is None:
             dt = datetime.fromtimestamp(period2 / 1000) - timedelta(days=149)
@@ -506,9 +532,23 @@ class AsyncClient(object):
             'countPerDay': 25,
             'economicEventsHighImportanceOnly': True,
             'economicEventsRegionFilter': '',
-            'modules': 'economicEvents',
             'startDate': int(period1),
             'endDate': int(period2),
         }
+
+        if modules:
+            parsed_modules = {m.strip() for m in modules.split(',')}
+
+            if not parsed_modules <= CALENDAR_EVENT_MODULES_SET:
+                _error(
+                    msg=(
+                        f'Invalid modules={parsed_modules - CALENDAR_EVENT_MODULES_SET}'
+                        f'. Valid values: {CALENDAR_EVENT_MODULES_SET}'
+                    ),
+                    err_cls=ValueError,
+                )
+
+            params['modules'] = ','.join(parsed_modules)
+
         response = await self._get_async_request(url, params)
         return response.json()

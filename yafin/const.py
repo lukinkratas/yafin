@@ -19,7 +19,7 @@ RANGES = {'1d', '5d', '1mo', '3mo', '6mo', '1y', '2y', '5y', '10y', 'ytd', 'max'
 
 EVENTS = {'div', 'split', 'earn', 'capitalGain'}
 
-ALL_MODULES_SET = {
+QUOTE_SUMMARY_MODULES_SET = {
     'quoteType',
     'assetProfile',
     'summaryProfile',
@@ -30,7 +30,7 @@ ALL_MODULES_SET = {
     'balanceSheetHistoryQuarterly',
     'cashflowStatementHistory',
     'cashflowStatementHistoryQuarterly',
-    'esgScores',
+    # 'esgScores',
     'price',
     'defaultKeyStatistics',
     'financialData',
@@ -59,7 +59,11 @@ ALL_MODULES_SET = {
     # 'fundPerformance'
 }
 
-ALL_MODULES = ','.join(ALL_MODULES_SET)
+QUOTE_SUMMARY_MODULES = ','.join(QUOTE_SUMMARY_MODULES_SET)
+
+CALENDAR_EVENT_MODULES_SET = {'ipoEvents', 'secReports', 'earnings', 'economicEvents'}
+
+CALENDAR_EVENT_MODULES = ','.join(CALENDAR_EVENT_MODULES_SET)
 
 FREQUENCIES = {'annual', 'quarterly', 'trailing'}
 

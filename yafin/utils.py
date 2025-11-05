@@ -41,7 +41,7 @@ def _encode_url(url: str, params: dict[str, str] | None = None) -> str:
     return f'{url}?{urlencode(params_copy)}'
 
 
-def get_types_with_frequency(frequency: str, typ: str) -> str:
+def get_types_with_frequency(typ: str, frequency: str | None = None) -> str:
     """Enrich types with frequency.
 
     Args:
@@ -65,9 +65,15 @@ def get_types_with_frequency(frequency: str, typ: str) -> str:
     if typ not in _TYPES.keys():
         _error(msg=f'Invalid {typ=}. Valid values: {_TYPES.keys()}', err_cls=ValueError)
 
-    if frequency not in FREQUENCIES:
+    if typ != 'other' and frequency not in FREQUENCIES:
         _error(
             msg=f'Invalid {frequency=}. Valid values: {FREQUENCIES}', err_cls=ValueError
+        )
+
+    if typ == 'other' and frequency is not None:
+        _error(
+            msg=f'Frequency {frequency=} not allowed for type other.',
+            err_cls=ValueError,
         )
 
     if typ == 'balance_sheet' and frequency == 'trailing':
@@ -77,7 +83,7 @@ def get_types_with_frequency(frequency: str, typ: str) -> str:
         )
 
     types = _TYPES[typ]
-    types_with_frequency = [f'{frequency}{t}' for t in types]
+    types_with_frequency = [f'{frequency}{t}' if frequency else t for t in types]
     return ','.join(types_with_frequency)
 
 

@@ -6,17 +6,17 @@
           "maxAge": 1,
           "earnings": {
             "earningsDate": [
-              1769630400
+              1769634000
             ],
             "earningsCallDate": [
               1761769800
             ],
             "isEarningsDateEstimate": true,
-            "earningsAverage": 8.09122,
+            "earningsAverage": 8.1869,
             "earningsLow": 7.23,
-            "earningsHigh": 8.65,
-            "revenueAverage": 58259278460,
-            "revenueLow": 56127000000,
+            "earningsHigh": 9.79,
+            "revenueAverage": 58191585670,
+            "revenueLow": 53797000000,
             "revenueHigh": 59653000000
           },
           "exDividendDate": 1758499200,

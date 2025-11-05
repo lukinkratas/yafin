@@ -12,7 +12,7 @@ def _mock_200_response(mocker: MockerFixture, response_json: dict[str, Any]) -> 
     mock_response.json.return_value = response_json
     mock_response.raise_for_status = mocker.Mock()
     mocker.patch(
-        'yafin.client.AsyncSession.get',
+        'yafin.client.AsyncSession.request',
         new=mocker.AsyncMock(return_value=mock_response),
     )
 
@@ -26,6 +26,6 @@ def _mock_404_response(mocker: MockerFixture, response_json: dict[str, Any]) -> 
         '404 Client Error: Not Found for url'
     )
     mocker.patch(
-        'yafin.client.AsyncSession.get',
+        'yafin.client.AsyncSession.request',
         new=mocker.AsyncMock(return_value=mock_response),
     )

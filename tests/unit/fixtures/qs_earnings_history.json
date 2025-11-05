@@ -105,6 +105,7 @@
               "period": "-1q"
             }
           ],
+          "defaultMethodology": "gaap",
           "maxAge": 86400
         }
       }

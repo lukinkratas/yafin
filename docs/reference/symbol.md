@@ -16,7 +16,6 @@
         - get_balance_sheet_history_quarterly
         - get_cashflow_statement_history
         - get_cashflow_statement_history_quarterly
-        - get_esg_scores
         - get_price
         - get_default_key_statistics
         - get_financial_data

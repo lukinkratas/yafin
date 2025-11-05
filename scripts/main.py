@@ -5,6 +5,13 @@ from datetime import datetime
 from logging_config import configure_logging
 
 from yafin import AsyncClient, AsyncSymbol
+from yafin.const import (
+    ANNUAL_BALANCE_SHEET_TYPES,
+    ANNUAL_CASH_FLOW_TYPES,
+    ANNUAL_INCOME_STATEMENT_TYPES,
+    CALENDAR_EVENT_MODULES,
+    QUOTE_SUMMARY_MODULES,
+)
 
 
 async def main() -> None:  # noqa: D103
@@ -35,27 +42,25 @@ async def main() -> None:  # noqa: D103
         print(json.dumps(aapl_meta_quote_types, indent=2))
 
         meta_quote_summary = await client.get_quote_summary(
-            ticker='META',
-            modules='assetProfile,price,defaultKeyStatistics,calendarEvents',
+            ticker='META', modules=QUOTE_SUMMARY_MODULES
         )
         print(json.dumps(meta_quote_summary, indent=2))
 
         aapl_ttm_income_stmt = await client.get_timeseries(
-            ticker='AAPL',
-            types='trailingNetIncome,trailingPretaxIncome,trailingEBIT,trailingEBITDA,trailingGrossProfit',
+            ticker='AAPL', types=ANNUAL_INCOME_STATEMENT_TYPES
         )
         print(json.dumps(aapl_ttm_income_stmt, indent=2))
 
         meta_annual_balance_sheet = await client.get_timeseries(
             ticker='META',
-            types='annualNetDebt,annualTotalDebt',
+            types=ANNUAL_BALANCE_SHEET_TYPES,
             period1=datetime(2020, 1, 1).timestamp(),
             period2=datetime.now().timestamp(),
         )
         print(json.dumps(meta_annual_balance_sheet, indent=2))
 
         aapl_quarterly_cash_flow = await client.get_timeseries(
-            ticker='AAPL', types='quarterlyFreeCashFlow,quarterlyOperatingCashFlow'
+            ticker='AAPL', types=ANNUAL_CASH_FLOW_TYPES
         )
         print(json.dumps(aapl_quarterly_cash_flow, indent=2))
 
@@ -88,7 +93,9 @@ async def main() -> None:  # noqa: D103
         currencies = await client.get_currencies()
         print(json.dumps(currencies, indent=2))
 
-        calendar_events = await client.get_calendar_events()
+        calendar_events = await client.get_calendar_events(
+            modules=CALENDAR_EVENT_MODULES
+        )
         print(json.dumps(calendar_events, indent=2))
 
     aapl = AsyncSymbol('AAPL')
@@ -154,9 +161,6 @@ async def main() -> None:  # noqa: D103
             await meta.get_cashflow_statement_history_quarterly()
         )
         print(json.dumps(meta_cashflow_statement_history_quarterly, indent=2))
-
-        meta_esg_scores = await meta.get_esg_scores()
-        print(json.dumps(meta_esg_scores, indent=2))
 
         meta_price = await meta.get_price()
         print(json.dumps(meta_price, indent=2))

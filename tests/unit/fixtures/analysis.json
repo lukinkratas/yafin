@@ -3,16 +3,16 @@
     "debug": {},
     "rtr_summary": {
       "id": "META",
-      "tldr": "Analysts see potential upside for Meta, with Guggenheim's target significantly above current price.",
-      "viewpoint": "Consensus with Variation",
-      "price_target": "Meta's current market price is **$751.67**. Guggenheim's target of **$875** suggests a potential upside, while Wolfe Research's target of **$730** is slightly below current levels.",
-      "ratings_summary": "Analysts are mostly positive on Meta's stock, with ratings ranging from **Outperform** to **Buy**. Guggenheim has the highest price target of **$875**, indicating strong growth expectations.",
-      "recent_upgrades": "There have been no recent upgrades or downgrades, but analysts such as **Baird** and **Guggenheim** maintain their ratings, reflecting stable confidence in Meta's outlook.",
-      "viewpoint_details": "Analysts are generally positive about Meta, though their price targets vary. **Guggenheim** sees significant upside with a target of **$875**, while **Wolfe Research** targets **$730**. **Wolfe Research** is historically strong in price prediction accuracy, scoring **98.5/100**, suggesting reliability in its **$730** target."
+      "tldr": "Analysts are optimistic on Meta's potential, with notable price targets well above the current market price.",
+      "viewpoint": "General Optimism",
+      "price_target": "Meta's current price target from analysts ranges from **$730** by Wolfe Research to **$935** by Tigress Financial, indicating a strong belief in future growth beyond the current market price of **$637.71**.",
+      "ratings_summary": "Analysts express confidence in Meta, with current price targets ranging from **$730** to **$935**, significantly above the current market price of **$637.71**. Wolfe Research and Baird maintain an **Outperform** rating, indicating a belief in the stock's potential growth.",
+      "recent_upgrades": "Recent ratings have been maintained across the board, with no new upgrades or downgrades reported. Analysts like Wolfe Research, Baird, and Citigroup continue to uphold their previous ratings, indicating a steady confidence in Meta's performance.",
+      "viewpoint_details": "Analysts like **Wolfe Research** (with a **high 88.33 overall score**) are optimistic about Meta's future. **TD Cowen** and **Guggenheim** have also set high price targets of **$810** and **$875**, respectively, reflecting their positive outlook. **Tigress Financial** offers the highest target at **$935**, showing strong confidence in Meta's potential upside."
     },
-    "generation_start_time": "2025-10-30T20:18:07.937259+00:00",
-    "created_at": "2025-10-30T20:18:17.184377+00:00",
-    "updated_at": "2025-10-30T20:18:17.184377+00:00"
+    "generation_start_time": "2025-11-04T21:18:08.713537+00:00",
+    "created_at": "2025-11-04T21:18:18.337349+00:00",
+    "updated_at": "2025-11-04T21:18:18.337349+00:00"
   },
   "earningsCallInsights": {
     "earnings_analysis": {
@@ -83,12 +83,12 @@
     "debug": {}
   },
   "earningsInsights": {
-    "tldr": "Meta Platforms Inc's valuation metrics have shown a mixed trend, with the P/E ratio increasing to **31.52x** in Q3 2025, indicating higher investor expectations despite a decline in EV/EBITDA to **17.94x**. Profitability metrics are stable, with operating margins at **43.23%**, reflecting strong operational efficiency, while ROA has decreased to **20.89%**. The company's financial strength remains solid with a low debt-to-equity ratio of **0.26**, suggesting prudent leverage management.",
+    "tldr": "Meta Platforms Inc's valuation metrics have improved slightly, with the P/E ratio rising to **31.52x** in Q3 2025, indicating a higher price investors are willing to pay for earnings. Profitability metrics show a decline in both operating margin to **43.23%** and return on assets (ROA) to **20.89%**, reflecting potential challenges in maintaining efficiency. Financial strength remains stable, with a debt-to-equity ratio of **0.26**, suggesting a conservative leverage approach. Overall, while valuation is becoming more favorable, profitability is under pressure, warranting close attention.",
     "debug": {},
     "categories": {
-      "Valuation": "Meta Platforms Inc's valuation metrics reflect a mixed trend. The **P/E ratio** rose to **31.52x** in Q3 2025 from **25.95x** in Q2 2025, indicating increased investor confidence. However, the **EV/EBITDA** ratio declined to **17.94x** from **18.93x**, suggesting a decrease in market valuation relative to earnings.",
-      "Dividend & Profitability": "Profitability metrics for Meta Platforms Inc are stable, with an **operating margin** of **43.23%** in Q3 2025, slightly down from **44.02%** in Q2 2025, indicating effective cost management. The **ROA** declined to **20.89%** from **27.24%**, reflecting a decrease in asset efficiency, while the **payout ratio** increased to **8.98%**, suggesting a commitment to returning value to shareholders.",
-      "Financial Strength & Stability": "Meta Platforms Inc's financial strength remains robust, with a **debt-to-equity ratio** of **0.26**, stable compared to **0.25** in Q2 2025, indicating low reliance on debt. The **operating cash flow ratio** slightly decreased to **30.01%** from **30.45%**, yet remains strong, showcasing solid liquidity from core operations."
+      "Valuation": "Meta Platforms Inc's valuation metrics have shown improvement, with the **P/E ratio** increasing to **31.52x** in Q3 2025 from **25.95x** in Q2 2025. The **EV/EBITDA** ratio also decreased to **17.94x** from **18.93x**, indicating a more favorable valuation relative to earnings before interest, taxes, depreciation, and amortization (EBITDA).",
+      "Dividend & Profitability": "Profitability metrics for Meta Platforms Inc have shown signs of decline, with the **operating margin** decreasing to **43.23%** in Q3 2025 from **44.02%** in Q2 2025, suggesting potential challenges in cost management. Additionally, the **return on assets (ROA)** fell to **20.89%**, down from **27.24%**, indicating a decrease in efficiency in generating income from assets. The **payout ratio** increased to **8.98%**, reflecting a higher proportion of earnings distributed as dividends.",
+      "Financial Strength & Stability": "Financial strength metrics remain stable, as evidenced by a **debt-to-equity ratio** of **0.26** in Q3 2025, slightly up from **0.25** in Q2 2025, indicating a conservative approach to leverage. The **operating cash flow ratio** is consistent at **30.01%**, reflecting strong liquidity from core operations, although the **cash ratio** has declined to **0.28** from **0.32**, indicating a reduced capacity to cover short-term liabilities with liquid assets."
     },
     "next_earnings_date": null,
     "latest_earnings_metadata": {
@@ -98,18 +98,18 @@
       "period_start_date": "2025-01-01",
       "earnings_disclosed_at": "2025-10-29"
     },
-    "created_at": "2025-10-30T21:03:45.340403+00:00",
-    "updated_at": "2025-10-30T21:03:45.340403+00:00"
+    "created_at": "2025-11-04T23:03:31.343708+00:00",
+    "updated_at": "2025-11-04T23:03:31.343708+00:00"
   },
   "insiderActivity": {
     "debug": {},
     "insiderActivity": {
-      "highlights": "**Meta Platforms Inc insiders** executed **5 stock sale transactions** totaling **$1,843,381.02** between October 14-27, 2025. All transactions involved Class A Common Stock, with no anomalies detected.",
-      "key_takeaways": "- **All 5 transactions** were sales of Class A Common Stock, with a combined value of **$1,843,381.02** and an average transaction size of **$368,676.20**.\n- **Javier Olivan** (Chief Operating Officer) made **2 sales** totaling **$760,439.79** (1,034 shares), while **Jennifer Newstead** (Chief Legal Officer) also executed **2 sales** totaling **$749,550.18** (1,038 shares).\n- **Robert M. Kimmitt** (Director) completed **1 sale** for **$333,391.05** (465 shares).\n- Transaction prices ranged from **$707.85 to $749.57** per share, with share amounts per transaction between **465 and 519**.\n- **No transactions were flagged as anomalies**, and all filings reflect routine sale activity by senior officers and a director during October 2025.",
-      "analysis_update_time": "2025-10-30T13:18:44.572504"
+      "highlights": "**Meta Platforms insiders** executed **5 stock sale transactions** totaling **$1,866,813.87** between October 15 and October 28, 2025. All transactions were sales of Class A Common Stock by officers and one director.",
+      "key_takeaways": "- **All 5 transactions** were classified as **sales**, with a combined value of **$1,866,813.87** and an average transaction size of **$373,362.77**.\n- **Jennifer Newstead** (Chief Legal Officer) completed **2 sales** totaling **$772,983.03** (519 shares each), while **Javier Olivan** (Chief Operating Officer) also executed **2 sales** totaling **$760,439.79** (517 shares each).\n- **Robert M Kimmitt** (Director) conducted **1 sale** for **$333,391.05** (465 shares).\n- **Transaction prices** ranged from **$716.97 to $753.00** per share, with sale values spanning **$333,391.05 to $390,807.00**.\n- **No transactions were marked as anomalies**, and all sales involved Class A Common Stock with direct ownership reported.",
+      "analysis_update_time": "2025-11-04T14:19:11.771222"
     },
-    "created_at": "2025-10-30T13:18:44.575004+00:00",
-    "updated_at": "2025-10-30T13:18:44.575004+00:00"
+    "created_at": "2025-11-04T14:19:11.777980+00:00",
+    "updated_at": "2025-11-04T14:19:11.777980+00:00"
   },
   "newsSummary": {
     "debug": {},
@@ -117,155 +117,171 @@
     "min_score": 0,
     "news_summary": {
       "id": "META",
-      "tldr": "Meta Platforms reported mixed Q3 earnings, missing earnings per share expectations due to a **one-time tax charge** and increased capital expenditures. The company's stock dropped **11%** following the results, raising concerns about its **AI investment strategy**.",
+      "tldr": "Meta Platforms (META) is navigating significant challenges, including a recent **18.7% stock pullback** and rising costs associated with a **$30 billion AI investment**. Despite these hurdles, the company reported a **26.2% year-over-year revenue growth** in Q3, raising discussions about its valuation and long-term profitability amid increasing competition and regulatory scrutiny.",
       "themes": [
         {
-          "theme_name": "AI Investments",
-          "theme_description": "Meta plans to invest **$70-72 billion** in AI initiatives to enhance its advertising and user engagement, which has raised questions about the immediate benefits."
+          "theme_name": "AI Investment Impact",
+          "theme_description": "Meta's aggressive investment in AI, totaling **$30 billion**, raises both growth potential and concerns about profitability."
         },
         {
-          "theme_name": "Market Reaction",
-          "theme_description": "Meta's poor earnings performance triggered a sharp sell-off, leading to a **1% drop** in the S&P 500 and **1.6%** in the Nasdaq."
+          "theme_name": "Valuation Concerns",
+          "theme_description": "Meta's stock is considered **26.1% undervalued**, suggesting a potential upside amidst ongoing market volatility."
         }
       ],
-      "summary": "Meta's Q3 earnings report showed **strong revenue growth** but fell short on earnings per share, primarily due to a **one-time tax charge** and significant capital expenditures for AI. The company's stock suffered an **11% drop** as investors reacted to concerns over increased spending on AI amidst uncertain sales prospects. Despite this downturn, Meta's shares remain up **27% year-to-date**, although this lags behind Google's **43% increase**. Analysts are closely monitoring how these investments will translate into user engagement and advertising effectiveness moving forward.",
+      "summary": "Meta Platforms is currently facing a challenging environment marked by an **18.7% pullback** in stock value over the past three months. Despite this, the company's recent Q3 earnings showcased a strong **26.2% revenue growth** year-over-year. However, increased expenses related to technical hiring and infrastructure expansion have raised concerns about future profitability. Analysts note that Meta's stock could be undervalued by **26.1%**, with a fair value of **$848**, indicating significant upside potential if the company can navigate its rising costs and regulatory pressures effectively.",
       "key_events": [
-        "Q3 Earnings Report (October 29, 2025): Meta's earnings beat revenue expectations but missed earnings per share due to a **$70-72 billion** AI investment plan and a **one-time tax charge**.",
-        "Market Sell-Off (October 30, 2025): Meta's stock fell **11%**, contributing to a broader market decline as concerns over rising AI costs impacted investor sentiment."
+        "Q3 Earnings Report (November 5, 2025): Meta reported **26.2% revenue growth** year-over-year but faced higher expenses, leading to a GAAP earnings shortfall.",
+        "AI Investment Strategy (November 5, 2025): Meta's **$30 billion investment** in AI is a focal point for future growth, despite concerns over rising costs and regulatory challenges."
       ],
       "dynamic_sections": [
         {
-          "section_title": "Earnings Overview",
-          "section_content": "Meta's Q3 earnings beat revenue expectations but missed earnings per share due to a **one-time tax charge** and increased capital expenditures."
+          "section_title": "Market Trends",
+          "section_content": "The tech sector is experiencing volatility, exemplified by a **2% drop** in the Nasdaq Composite, raising concerns over stretched valuations."
         },
         {
-          "section_title": "Market Impact",
-          "section_content": "The stock market declined following Meta's earnings miss, with the Nasdaq falling **1.6%** and the S&P 500 dropping **1%**."
+          "section_title": "Competition for Ad Dollars",
+          "section_content": "Pinterest's weak revenue forecast highlights intense competition for advertising dollars, particularly from larger platforms like Meta, as it enters the holiday season."
         },
         {
-          "section_title": "AI Focus",
-          "section_content": "Meta is directing **$70-72 billion** towards AI initiatives, aiming to enhance its advertising capabilities and user engagement."
+          "section_title": "Analyst Perspectives",
+          "section_content": "Wall Street analysts rate both Meta and Microsoft as 'Strong Buy', with Meta's average price target indicating a **33.1% upside**."
         }
       ]
     },
     "articles_info": [
       {
-        "title": "Earnings live: Amazon stock soars on AWS growth, Apple wavers, Reddit and Coinbase move higher",
-        "yahoo_url": "https://finance.yahoo.com/news/live/earnings-live-amazon-stock-soars-on-aws-growth-apple-wavers-reddit-and-coinbase-move-higher-204131223.html",
-        "article_id": "035a1404-14a9-4292-96b8-08cca27526ee",
-        "provider_url": "http://finance.yahoo.com/",
-        "provider_name": "Yahoo Finance",
-        "thumbnail_url": "https://s.yimg.com/os/creatr-uploaded-images/2025-10/c719b0a0-b5d0-11f0-bf35-a00804fbb2f7",
-        "published_date": "2025-10-30T20:41:31Z"
+        "title": "The list of major companies laying off staff this year includes Amazon, Starbucks, Oracle, American Airlines, and more",
+        "yahoo_url": "https://www.businessinsider.com/recent-company-layoffs-laying-off-workers-2025",
+        "article_id": "f8f81034-6b2a-38d5-9383-76ff55b6955f",
+        "provider_url": "https://www.businessinsider.com/",
+        "provider_name": "Business Insider",
+        "thumbnail_url": "https://media.zenfs.com/en/business_insider_articles_888/d803896b1d6c439f89148c73e8e22380",
+        "published_date": "2025-11-04T23:28:24Z"
       },
       {
-        "title": "Meta stock sinks after tax hit weighs on earnings, company touts &#39;notably larger&#39; AI investments in year ahead",
-        "yahoo_url": "https://finance.yahoo.com/news/meta-stock-sinks-after-tax-hit-weighs-on-earnings-company-touts-notably-larger-ai-investments-in-year-ahead-201015549.html",
-        "article_id": "20c47519-ea08-4294-a932-2b183b8d9688",
-        "provider_url": "http://finance.yahoo.com/",
-        "provider_name": "Yahoo Finance",
-        "thumbnail_url": "https://s.yimg.com/os/creatr-uploaded-images/2024-09/7dc2b5e0-7e0a-11ef-bc4e-8daee8e28f16",
-        "published_date": "2025-10-29T20:10:15Z"
+        "title": "charcha 2025: India&#39;s largest collaborative convening on livelihoods returns to Delhi with its 6th edition",
+        "yahoo_url": "https://finance.yahoo.com/news/charcha-2025-indias-largest-collaborative-071400859.html",
+        "article_id": "f9bad894-e975-3df6-97d2-a09bf8a5d446",
+        "provider_url": "https://www.prnewswire.com/",
+        "provider_name": "PR Newswire",
+        "thumbnail_url": "https://media.zenfs.com/en/prnewswire.com/b1faed83bcfe91816e56a5269ef13594",
+        "published_date": "2025-11-05T07:14:00Z"
       },
       {
-        "title": "Dow Jones Futures Rise On Amazon, Apple Earnings After Meta-Led Market Slide",
-        "yahoo_url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-amazon-apple-earnings-meta-stock-market-slide/?src=A00220&yptr=yahoo",
-        "article_id": "2d355c98-09e2-3efa-8594-955e80da4ff1",
-        "provider_url": "http://www.investors.com/",
-        "provider_name": "Investor's Business Daily",
-        "thumbnail_url": "https://media.zenfs.com/en/ibd.com/ecb5185348bcdaed2d50885f55b9a6a5",
-        "published_date": "2025-10-30T21:32:42Z"
+        "title": "Novo Nordisk&#39;s sales increased by 12% in Danish kroner and by 15% at CER in the first nine months of 2025; R&D pipeline progress continues",
+        "yahoo_url": "https://finance.yahoo.com/news/novo-nordisks-sales-increased-12-063000511.html",
+        "article_id": "43deb858-098c-3357-af1b-c962c9c48511",
+        "provider_url": "https://www.globenewswire.com/",
+        "provider_name": "GlobeNewswire",
+        "thumbnail_url": "https://media.zenfs.com/en/globenewswire.com/390a90dca9ab1da0d2c89c641db85b9e",
+        "published_date": "2025-11-05T06:30:00Z"
       },
       {
-        "title": "Nasdaq Retreats After 4-Day Record Run Amid Tech Selloff",
-        "yahoo_url": "https://finance.yahoo.com/news/nasdaq-retreats-4-day-record-210800651.html",
-        "article_id": "32e85062-e888-3c5f-a8c0-0deb42239830",
+        "title": "Meta Platforms (META): Reassessing Valuation After Q3 Growth and $30B AI Investment Push",
+        "yahoo_url": "https://finance.yahoo.com/news/meta-platforms-meta-reassessing-valuation-061452114.html",
+        "article_id": "8143a99a-1b5c-313c-adc1-af145d16c230",
+        "provider_url": "https://simplywall.st/",
+        "provider_name": "Simply Wall St.",
+        "thumbnail_url": "https://media.zenfs.com/en/simply_wall_st__316/fba9687e0054b528b01bdfa6c56cd20c",
+        "published_date": "2025-11-05T06:14:52Z"
+      },
+      {
+        "title": "Meta\u2019s Q3 Earnings Call: Our Top 5 Analyst Questions",
+        "yahoo_url": "https://finance.yahoo.com/news/meta-q3-earnings-call-top-053541726.html",
+        "article_id": "f60d4e67-a66c-3076-a362-f8048bee3b3d",
+        "provider_url": "https://stockstory.org/",
+        "provider_name": "StockStory",
+        "thumbnail_url": "https://media.zenfs.com/en/stockstory_922/f2216b648a0db93b9cf1e78ef49e6e65",
+        "published_date": "2025-11-05T05:35:41Z"
+      },
+      {
+        "title": "Nasdaq Composite Falls 2% as Tech Loses Ground Amid Valuation Concerns",
+        "yahoo_url": "https://finance.yahoo.com/news/nasdaq-composite-falls-2-tech-220736819.html",
+        "article_id": "e32189e8-a77d-329a-b397-77cbe40fe44c",
         "provider_url": "https://www.mtnewswires.com/",
         "provider_name": "MT Newswires",
         "thumbnail_url": "https://media.zenfs.com/en/mt_newswires_premium_news_706/2475a8618428bf41d7b045240805a142",
-        "published_date": "2025-10-30T21:08:00Z"
+        "published_date": "2025-11-04T22:07:36Z"
       },
       {
-        "title": "Analyst Says Wall Street\u2019s CapEx Expectations For Amazon(AMZN) \u2018Unbelievable\u2019",
-        "yahoo_url": "https://finance.yahoo.com/news/analyst-says-wall-street-capex-210614695.html",
-        "article_id": "1538e316-b033-3ea6-bead-9fe6c70d75eb",
-        "provider_url": "http://www.insidermonkey.com",
-        "provider_name": "Insider Monkey",
-        "thumbnail_url": "https://media.zenfs.com/en/insidermonkey.com/9ab9d43b226731590760a54e378251e5",
-        "published_date": "2025-10-30T21:06:14Z"
+        "title": "AMD Reports Third Quarter 2025 Financial Results",
+        "yahoo_url": "https://finance.yahoo.com/news/amd-reports-third-quarter-2025-211500781.html",
+        "article_id": "9dff9815-f60f-3a26-abcb-a5b156f7d332",
+        "provider_url": "https://www.globenewswire.com/",
+        "provider_name": "GlobeNewswire",
+        "thumbnail_url": "https://media.zenfs.com/en/globenewswire.com/701ad71f57aa227c300d55d9cf75787e",
+        "published_date": "2025-11-04T21:15:00Z"
       },
       {
-        "title": "Stock Market Today: Nasdaq, S&P End Sharply Lower With Meta&#39;s Plunge",
-        "yahoo_url": "https://www.investors.com/market-trend/stock-market-today/stock-market-today-trump-xi-talks-meta-stock/?src=A00220&yptr=yahoo",
-        "article_id": "feaa48e6-1655-3345-8855-6400897140af",
-        "provider_url": "http://www.investors.com/",
-        "provider_name": "Investor's Business Daily",
-        "thumbnail_url": "https://media.zenfs.com/en/ibd.com/55ca4252bd7c66820fc61ce444908e68",
-        "published_date": "2025-10-30T20:52:03Z"
+        "title": "Pinterest&#39;s weak revenue forecast signals intense competition for ad dollars",
+        "yahoo_url": "https://finance.yahoo.com/news/pinterests-weak-revenue-forecast-signals-210741898.html",
+        "article_id": "4c270c1f-f197-3d4b-8ea3-706fcbb26c6a",
+        "provider_url": "http://www.reuters.com/",
+        "provider_name": "Reuters",
+        "thumbnail_url": "https://media.zenfs.com/en/reuters-finance.com/59837d0c7fed607a491e85f3bca1e907",
+        "published_date": "2025-11-04T21:07:41Z"
       },
       {
-        "title": "US Equity Indexes Fall as Sharp Sell-Off in Meta Platforms Pushes Gauges Lower",
-        "yahoo_url": "https://finance.yahoo.com/news/us-equity-indexes-fall-sharp-204226512.html",
-        "article_id": "1f8d9433-f32b-30dd-a579-1c4492da5fe5",
-        "provider_url": "https://www.mtnewswires.com/",
-        "provider_name": "MT Newswires",
+        "title": "How Rising AI Power Demand Is Fueling Utility ETFs",
+        "yahoo_url": "https://finance.yahoo.com/news/rising-ai-power-demand-fueling-194300954.html",
+        "article_id": "e87fb66b-1563-36b7-9b61-d089af880a58",
+        "provider_url": "http://www.zacks.com/",
+        "provider_name": "Zacks",
         "thumbnail_url": "",
-        "published_date": "2025-10-30T20:42:26Z"
+        "published_date": "2025-11-04T19:43:00Z"
       },
       {
-        "title": "S&P 500 Gains and Losses Today: Meta Stock Drops After Earnings; Moderna Surges",
-        "yahoo_url": "https://www.investopedia.com/s-and-p-500-gains-and-losses-today-meta-stock-drops-after-earnings-miss-moderna-surges-11840615",
-        "article_id": "cc89313d-bfda-3703-9de3-9b836605855b",
-        "provider_url": "https://www.investopedia.com/",
-        "provider_name": "Investopedia",
-        "thumbnail_url": "https://media.zenfs.com/en/investopedia_245/cef5d0d236635226338b479d248299ac",
-        "published_date": "2025-10-30T20:39:45Z"
-      },
-      {
-        "title": "How major US stock indexes fared Thursday, 10/30/2025",
-        "yahoo_url": "https://finance.yahoo.com/news/major-us-stock-indexes-fared-201723352.html",
-        "article_id": "c71f4f74-319a-322b-bc21-7f9c5edc12ee",
-        "provider_url": "http://www.ap.org/",
-        "provider_name": "Associated Press Finance",
-        "thumbnail_url": "",
-        "published_date": "2025-10-30T20:17:23Z"
-      },
-      {
-        "title": "Edwards Lifesciences Announces CFO Transition Plan",
-        "yahoo_url": "https://finance.yahoo.com/news/edwards-lifesciences-announces-cfo-transition-201500651.html",
-        "article_id": "23357012-d3c4-389a-91c6-34469f4dd84b",
-        "provider_url": "http://www.businesswire.com/",
-        "provider_name": "Business Wire",
-        "thumbnail_url": "https://media.zenfs.com/en/business-wire.com/009b07e4dcfb939c97939afd185d73d6",
-        "published_date": "2025-10-30T20:15:00Z"
+        "title": "META vs. MSFT: Which Is the Better Stock to Buy for the Next 10 Years?",
+        "yahoo_url": "https://www.barchart.com/story/news/35894300/meta-vs-msft-which-is-the-better-stock-to-buy-for-the-next-10-years",
+        "article_id": "c6e9c55d-41d7-3204-9534-e3394dfe1ed1",
+        "provider_url": "https://www.barchart.com/",
+        "provider_name": "Barchart",
+        "thumbnail_url": "https://media.zenfs.com/en/barchart_com_477/5f81f612d4b225905cde3fd6dfce2095",
+        "published_date": "2025-11-04T16:17:53Z"
       }
     ],
-    "generation_start_time": "2025-10-30T21:37:59.984042+00:00",
-    "created_at": "2025-10-30T21:38:11.458418+00:00",
-    "updated_at": "2025-10-30T21:38:11.458418+00:00"
+    "generation_start_time": "2025-11-05T08:53:02.849843+00:00",
+    "created_at": "2025-11-05T08:53:14.255475+00:00",
+    "updated_at": "2025-11-05T08:53:14.255475+00:00"
   },
   "optionsAnalysis": {
     "pcr": {
-      "pcr_volume": 0.5842751101936257,
-      "quote_date": "2025-10-29 00:00:00",
-      "pcr_notional": 0.4712293101554298,
+      "pcr_volume": 0.5406826793421727,
+      "quote_date": "2025-11-03 00:00:00",
+      "pcr_notional": 0.4953356308986362,
       "underlying_symbol": "META"
     },
-    "date": "2025-10-29 00:00:00",
+    "date": "2025-11-03 00:00:00",
     "ticker": "META",
     "key_takeaways": {
-      "tldr": "The put/call ratio for META indicates a bearish sentiment, with a current value of 0.47 suggesting that investors are leaning towards protective positions. A low put/call ratio typically signals caution among investors.",
-      "teaser": "What does the current put/call ratio for META reveal about investor sentiment? Discover the implications for your investment strategy today!",
+      "tldr": "The current put/call ratio for META is 0.54, suggesting a slightly bullish sentiment among investors. This indicates that there are more call options being traded relative to puts, reflecting optimism in the market.",
+      "teaser": "Discover the latest insights on META's options market sentiment! What does the current put/call ratio reveal about investor expectations? Dive in to find out more!",
       "timeframe_insights": {
-        "one_week": "The recent put/call ratio is low, indicating that investors are adopting a cautious stance, potentially preparing for downward price movements.",
-        "one_year": "The yearly perspective shows a consistent trend of low put/call ratios, reinforcing a long-term cautious outlook among investors.",
-        "one_month": "Over the past month, the low ratio suggests that bearish sentiment is prevalent, as investors are likely buying more puts relative to calls."
+        "one_week": "The current put/call ratio is 0.54, indicating a bullish sentiment as it suggests more calls than puts are being traded, reflecting investor optimism.",
+        "one_year": "Again, lacking long-term data, the current ratio indicates a favorable sentiment, suggesting that investors are generally optimistic about META's future performance.",
+        "one_month": "Without specific historical data for the month, the current ratio suggests a positive outlook as it leans towards more calls than puts."
       }
     },
-    "created_at": "2025-10-30T20:19:17.524317+00:00",
-    "updated_at": "2025-10-30T20:19:17.524317+00:00",
+    "created_at": "2025-11-04T21:19:14.416223+00:00",
+    "updated_at": "2025-11-04T21:19:14.416223+00:00",
     "debug": {},
     "options_data": {
+      "2025-11-03": {
+        "pcr_notional": 0.49533563089863625,
+        "pcr_volume": 0.5406826793421727
+      },
+      "2025-11-02": {
+        "pcr_notional": 0.5475598381660318,
+        "pcr_volume": 0.5666748306933914
+      },
+      "2025-10-31": {
+        "pcr_notional": 0.5721690535799377,
+        "pcr_volume": 0.5916781023148828
+      },
+      "2025-10-30": {
+        "pcr_notional": 0.5328467756494615,
+        "pcr_volume": 0.5960592248978643
+      },
       "2025-10-29": {
         "pcr_notional": 0.47122931015542985,
         "pcr_volume": 0.5842751101936257
@@ -303,56 +319,56 @@
         "pcr_volume": 0.5879226482222185
       },
       "2025-10-16": {
-        "pcr_notional": -0.9919538182550548,
-        "pcr_volume": -0.9298830873532595
+        "pcr_volume": -0.9298830873532595,
+        "pcr_notional": -0.9919538182550548
       },
       "2025-10-15": {
         "pcr_notional": 0.4796191643606844,
         "pcr_volume": 0.6563689381122797
       },
       "2025-10-14": {
-        "pcr_notional": 2.942037704627636,
-        "pcr_volume": 3.477755003776432
+        "pcr_volume": 3.477755003776432,
+        "pcr_notional": 2.942037704627636
       },
       "2025-10-13": {
         "pcr_notional": 0.21754434909833292,
         "pcr_volume": 0.26332709178819097
       },
       "2025-10-10": {
-        "pcr_volume": 0.5134627886538774,
-        "pcr_notional": 0.4967947837980339
+        "pcr_notional": 0.4967947837980339,
+        "pcr_volume": 0.5134627886538774
       },
       "2025-10-09": {
-        "pcr_volume": 0.24558788952063546,
-        "pcr_notional": 0.2557213604694773
+        "pcr_notional": 0.2557213604694773,
+        "pcr_volume": 0.24558788952063546
       },
       "2025-10-08": {
         "pcr_notional": 0.10862615070110197,
         "pcr_volume": 0.12266021382712879
       },
       "2025-10-07": {
-        "pcr_notional": 0.5949192922118748,
-        "pcr_volume": 0.6353215249327042
+        "pcr_volume": 0.6353215249327042,
+        "pcr_notional": 0.5949192922118748
       },
       "2025-10-06": {
         "pcr_notional": 0.3323951940158719,
         "pcr_volume": 0.3528055729621892
       },
       "2025-10-05": {
-        "pcr_volume": 0.5529551879069253,
-        "pcr_notional": 0.5410010284702
+        "pcr_notional": 0.5410010284702,
+        "pcr_volume": 0.5529551879069253
       },
       "2025-10-03": {
-        "pcr_notional": 0.6381898982068399,
-        "pcr_volume": 0.6556595558253584
+        "pcr_volume": 0.6556595558253584,
+        "pcr_notional": 0.6381898982068399
       },
       "2025-10-02": {
         "pcr_notional": 0.5469689989243949,
         "pcr_volume": 0.5741570454741628
       },
       "2025-10-01": {
-        "pcr_volume": 0.7330272750767689,
-        "pcr_notional": 0.7307308266247065
+        "pcr_notional": 0.7307308266247065,
+        "pcr_volume": 0.7330272750767689
       },
       "2025-09-30": {
         "pcr_notional": 0.6782775936185282,
@@ -379,32 +395,32 @@
         "pcr_volume": 1.536358637045889
       },
       "2025-09-23": {
-        "pcr_volume": 2.800901555961885,
-        "pcr_notional": -8.616398370276947
+        "pcr_notional": -8.616398370276947,
+        "pcr_volume": 2.800901555961885
       },
       "2025-09-22": {
         "pcr_volume": 3.2911928737344214,
         "pcr_notional": 2.995698368792753
       },
       "2025-09-21": {
-        "pcr_volume": 0.40124995940588043,
-        "pcr_notional": 0.39245726714237317
+        "pcr_notional": 0.39245726714237317,
+        "pcr_volume": 0.40124995940588043
       },
       "2025-09-19": {
-        "pcr_volume": 0.5434356603363302,
-        "pcr_notional": 0.5296304157713432
+        "pcr_notional": 0.5296304157713432,
+        "pcr_volume": 0.5434356603363302
       },
       "2025-09-18": {
-        "pcr_notional": -1.0346337437440454,
-        "pcr_volume": -1.0737777354734195
+        "pcr_volume": -1.0737777354734195,
+        "pcr_notional": -1.0346337437440454
       },
       "2025-09-17": {
-        "pcr_notional": 0.11541776005795966,
-        "pcr_volume": 0.12465068271893553
+        "pcr_volume": 0.12465068271893553,
+        "pcr_notional": 0.11541776005795966
       },
       "2025-09-16": {
-        "pcr_volume": -4.121881461457464,
-        "pcr_notional": -3.1920665196961253
+        "pcr_notional": -3.1920665196961253,
+        "pcr_volume": -4.121881461457464
       },
       "2025-09-15": {
         "pcr_notional": 0.11249846790695506,
@@ -427,20 +443,20 @@
         "pcr_volume": 0.06500611059977138
       },
       "2025-09-08": {
-        "pcr_volume": 0.3002066615525384,
-        "pcr_notional": 0.2950666472922835
+        "pcr_notional": 0.2950666472922835,
+        "pcr_volume": 0.3002066615525384
       },
       "2025-09-07": {
         "pcr_notional": 0.5723930781795622,
         "pcr_volume": 0.5830834992483792
       },
       "2025-09-05": {
-        "pcr_volume": 0.6655978373268694,
-        "pcr_notional": 0.6534156331348833
+        "pcr_notional": 0.6534156331348833,
+        "pcr_volume": 0.6655978373268694
       },
       "2025-09-04": {
-        "pcr_notional": 0.4748801020188702,
-        "pcr_volume": 0.4872517154448035
+        "pcr_volume": 0.4872517154448035,
+        "pcr_notional": 0.4748801020188702
       },
       "2025-09-03": {
         "pcr_notional": 1.9947822452039015,
@@ -456,140 +472,149 @@
   "overview": {
     "ticker": "META",
     "overview": {
-      "tldr": "Meta Platforms Inc faced significant challenges in its latest earnings report, leading to an **11% stock drop**. Despite beating revenue expectations, rising costs from AI investments and a one-time tax charge have raised concerns about its growth trajectory.",
+      "tldr": "Meta Platforms (META) is currently facing significant challenges with an **18.7% stock pullback** and rising costs from a **$30 billion AI investment**. Despite these hurdles, the company reported a **26.2% year-over-year revenue growth** in Q3, raising discussions about its valuation and long-term profitability.",
       "key_observations": {
-        "AI Investments": "Meta plans to invest **$70-72 billion** in AI by 2025, focusing on enhancing advertising and user engagement, despite concerns about rising costs.",
-        "Analyst Sentiment": "Analysts are mostly positive, with price targets ranging from **$730** to **$875**, suggesting potential upside despite recent challenges.",
-        "Valuation Metrics": "The **P/E ratio** increased to **31.52x** in Q3 2025, indicating higher investor expectations, while **EV/EBITDA** declined to **17.94x**.",
-        "Market Performance": "Meta's stock recently dropped **11%** following its Q3 earnings report, contributing to a broader decline in major indexes like the Nasdaq and S&P 500.",
-        "Insider Transactions": "Insiders executed **5 stock sale transactions** totaling **$1,843,381.02** between October 14-27, 2025, with no anomalies detected."
+        "Analyst Sentiment": "Analysts maintain an optimistic outlook on Meta, with price targets ranging from **$730 to $935**, significantly above the current market price of **$637.71**.",
+        "Market Performance": "Meta's stock has experienced an **18.7% decline** over the past three months, reflecting broader tech sector volatility and competitive pressures.",
+        "Valuation Concerns": "Analysts suggest that Meta's stock is **26.1% undervalued**, indicating potential upside if the company can manage its rising costs effectively.",
+        "AI Investment Impact": "The company's aggressive **$30 billion investment** in AI is pivotal for future growth but raises concerns about profitability due to increased expenses.",
+        "Insider Transactions": "Insiders executed **5 stock sale transactions** totaling **$1,866,813.87** between October 15 and October 28, 2025, with all transactions classified as sales of Class A Common Stock."
       }
     },
-    "analysis_update_time": "2025-10-30T21:34:28.248803",
-    "created_at": "2025-10-30T21:34:28.252111+00:00",
-    "updated_at": "2025-10-30T21:34:28.252111+00:00",
+    "analysis_update_time": "2025-11-05T09:04:30.809640",
+    "created_at": "2025-11-05T09:04:30.820095+00:00",
+    "updated_at": "2025-11-05T09:04:30.820095+00:00",
     "debug": {}
   },
   "priceMovement": {
     "data": {
-      "beta": 1.203,
+      "beta": 1.272,
       "sector": "Communication Services",
       "industry": "Internet Content & Information",
       "stock_ticker": "META",
       "recent_news_articles": [
         {
-          "title": "Earnings live: Amazon stock soars on AWS growth, Apple wavers, Reddit and Coinbase move higher",
-          "summary": "The third quarter earnings season is off to a positive start, with 29% of S&P 500 companies reporting a 9.2% jump in earnings per share, exceeding expectations of 7.9% growth. This week, several big tech companies, including Amazon, Apple, and Microsoft, are reporting their results, along with other notable companies such as Boeing, Visa, and Starbucks. The earnings season is expected to show a deceleration in growth compared to the previous quarter, but still mark the ninth straight quarter of positive earnings growth.",
-          "yahoo_url": "https://finance.yahoo.com/news/live/earnings-live-amazon-stock-soars-on-aws-growth-apple-wavers-reddit-and-coinbase-move-higher-204131223.html",
-          "article_id": "035a1404-14a9-4292-96b8-08cca27526ee",
-          "provider_url": "http://finance.yahoo.com/",
-          "provider_name": "Yahoo Finance",
-          "thumbnail_url": "https://s.yimg.com/os/creatr-uploaded-images/2025-10/c719b0a0-b5d0-11f0-bf35-a00804fbb2f7",
-          "published_date": "2025-10-30T20:41:31Z"
+          "title": "The list of major companies laying off staff this year includes Amazon, Starbucks, Oracle, American Airlines, and more",
+          "summary": "Several major companies, including Amazon, Starbucks, Oracle, American Airlines, and more, have announced layoffs in 2025. The reasons for the layoffs vary, but many are due to cost-cutting measures and technological changes. According to a World Economic Forum survey, 41% of companies worldwide expect to reduce their workforces over the next five years due to the rise of artificial intelligence. Some companies, such as Intel and Microchip Technology, are cutting jobs in their factory divisions, while others, like Nike and Salesforce, are reducing their corporate staff. The layoffs are expected to continue throughout the year, with some companies, like Chevron and ConocoPhillips, planning to cut up to 20% of their global workforce.",
+          "yahoo_url": "https://www.businessinsider.com/recent-company-layoffs-laying-off-workers-2025",
+          "article_id": "f8f81034-6b2a-38d5-9383-76ff55b6955f",
+          "provider_url": "https://www.businessinsider.com/",
+          "provider_name": "Business Insider",
+          "thumbnail_url": "https://media.zenfs.com/en/business_insider_articles_888/d803896b1d6c439f89148c73e8e22380",
+          "published_date": "2025-11-04T23:28:24Z"
         },
         {
-          "title": "Dow Jones Futures Rise On Amazon, Apple Earnings After Meta-Led Market Slide",
-          "summary": "Dow Jones futures rose after hours, driven by strong earnings reports from Apple and Amazon, which beat expectations and sent their stocks higher in extended trading. The stock market rally retreated on Thursday, led by a decline in Meta Platforms and other megacaps, but some stocks, such as MongoDB and Eli Lilly, showed strength. The market's uneven action was also reflected in the performance of various ETFs, with some growth ETFs declining while others, such as the Health Care Select Sector SPDR Fund, advanced.",
-          "yahoo_url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-amazon-apple-earnings-meta-stock-market-slide/?src=A00220&yptr=yahoo",
-          "article_id": "2d355c98-09e2-3efa-8594-955e80da4ff1",
-          "provider_url": "http://www.investors.com/",
-          "provider_name": "Investor's Business Daily",
-          "thumbnail_url": "https://media.zenfs.com/en/ibd.com/ecb5185348bcdaed2d50885f55b9a6a5",
-          "published_date": "2025-10-30T21:12:19Z"
+          "title": "charcha 2025: India&#39;s largest collaborative convening on livelihoods returns to Delhi with its 6th edition",
+          "summary": "The 6th edition of charcha, India's largest collaborative convening on livelihoods, will be held on November 12-14, 2025, at the India Habitat Centre, New Delhi. The event, hosted by the*spark forum, will bring together over 120 speakers, 20+ co-hosts, and 50+ hours of programming to drive dialogue and action for a resilient, inclusive, and future-ready India. The convening will explore seven key themes at the intersection of technology, inclusion, and livelihoods, featuring plenaries, deep-dive discussions, and masterclasses. Distinguished speakers from government, markets, and civil society will participate, including representatives from LinkedIn, Meta, The Gates Foundation, and the Government of India.",
+          "yahoo_url": "https://finance.yahoo.com/news/charcha-2025-indias-largest-collaborative-071400859.html",
+          "article_id": "f9bad894-e975-3df6-97d2-a09bf8a5d446",
+          "provider_url": "https://www.prnewswire.com/",
+          "provider_name": "PR Newswire",
+          "thumbnail_url": "https://media.zenfs.com/en/prnewswire.com/b1faed83bcfe91816e56a5269ef13594",
+          "published_date": "2025-11-05T07:14:00Z"
         },
         {
-          "title": "Nasdaq Retreats After 4-Day Record Run Amid Tech Selloff",
-          "summary": "The Nasdaq Composite fell 1.6% after a four-day record run, led by a selloff in tech heavyweights such as Meta Platforms and Microsoft. The S&P 500 and Dow Jones Industrial Average also declined, with most sectors ending in the red. However, some companies like C.H. Robinson Worldwide and Fox saw significant gains due to strong quarterly results. US Treasury yields were mostly higher, and US President Donald Trump reportedly agreed to lower tariffs on China. Meanwhile, a US federal government shutdown entered its 30th day, and gold and silver prices rose.",
-          "yahoo_url": "https://finance.yahoo.com/news/nasdaq-retreats-4-day-record-210800651.html",
-          "article_id": "32e85062-e888-3c5f-a8c0-0deb42239830",
+          "title": "Novo Nordisk&#39;s sales increased by 12% in Danish kroner and by 15% at CER in the first nine months of 2025; R&D pipeline progress continues",
+          "summary": "Novo Nordisk reported a 12% increase in sales in Danish kroner and 15% at constant exchange rates (CER) for the first nine months of 2025. Operating profit increased by 5% in Danish kroner and 10% at CER, despite one-off restructuring costs of around DKK 9 billion. Sales growth was driven by Obesity care, which increased by 37% in Danish kroner, and GLP-1 diabetes sales, which grew 7% in Danish kroner. The company also made progress in its R&D pipeline, including the approval of Wegovy for the treatment of MASH and the acquisition of Akero Therapeutics. Novo Nordisk narrowed its full-year 2025 guidance, expecting sales growth of 8-11% at CER and operating profit growth of 4-7% at CER.",
+          "yahoo_url": "https://finance.yahoo.com/news/novo-nordisks-sales-increased-12-063000511.html",
+          "article_id": "43deb858-098c-3357-af1b-c962c9c48511",
+          "provider_url": "https://www.globenewswire.com/",
+          "provider_name": "GlobeNewswire",
+          "thumbnail_url": "https://media.zenfs.com/en/globenewswire.com/390a90dca9ab1da0d2c89c641db85b9e",
+          "published_date": "2025-11-05T06:30:00Z"
+        },
+        {
+          "title": "Meta Platforms (META): Reassessing Valuation After Q3 Growth and $30B AI Investment Push",
+          "summary": "Meta Platforms' (META) recent Q3 growth and $30B AI investment push have sparked debate among investors, with the stock experiencing an 18.7% pullback over the last three months. Despite this, the company's one-year total shareholder return stands at nearly 10% and its three-year return is 554%. According to a narrative fair value analysis, Meta's stock is 26.1% undervalued, with a fair value of $848, suggesting significant upside potential. However, surging AI-related investment costs and regulatory uncertainty could impact long-term growth expectations.",
+          "yahoo_url": "https://finance.yahoo.com/news/meta-platforms-meta-reassessing-valuation-061452114.html",
+          "article_id": "8143a99a-1b5c-313c-adc1-af145d16c230",
+          "provider_url": "https://simplywall.st/",
+          "provider_name": "Simply Wall St.",
+          "thumbnail_url": "https://media.zenfs.com/en/simply_wall_st__316/fba9687e0054b528b01bdfa6c56cd20c",
+          "published_date": "2025-11-05T06:14:52Z"
+        },
+        {
+          "title": "Meta\u2019s Q3 Earnings Call: Our Top 5 Analyst Questions",
+          "summary": "Meta's Q3 earnings report showed strong revenue growth of 26.2% year-over-year, but higher expenses led to a shortfall in GAAP earnings. CFO Susan Li attributed the increased expenses to technical hiring, infrastructure expansion, and legal matters. Analysts asked questions about the return on investment for AI capital expenditures, the balance between CapEx growth and earnings, and the profitability path for new AI-driven products. The company's management emphasized the importance of maximizing user value and long-term profitability, and highlighted the potential for large-scale adoption of new AI-powered products. Meta's stock currently trades at $622.97, down from $752 before the earnings report.",
+          "yahoo_url": "https://finance.yahoo.com/news/meta-q3-earnings-call-top-053541726.html",
+          "article_id": "f60d4e67-a66c-3076-a362-f8048bee3b3d",
+          "provider_url": "https://stockstory.org/",
+          "provider_name": "StockStory",
+          "thumbnail_url": "https://media.zenfs.com/en/stockstory_922/f2216b648a0db93b9cf1e78ef49e6e65",
+          "published_date": "2025-11-05T05:35:41Z"
+        },
+        {
+          "title": "Nasdaq Composite Falls 2% as Tech Loses Ground Amid Valuation Concerns",
+          "summary": "The Nasdaq Composite fell 2% on Tuesday, with the technology sector declining 2.3%, amid concerns over stretched valuations. Tech stocks such as Palantir and Nvidia dropped significantly after investor Michael Burry placed bearish bets on them. Other major tech companies, including Amazon, Alphabet, and Microsoft, also closed lower. The decline came despite a positive third-quarter earnings season, with some analysts warning that the AI spending boom may be a bubble. The S&P 500 and Dow Jones Industrial Average also fell, with the S&P 500 losing 1.2% and the Dow losing 0.5%.",
+          "yahoo_url": "https://finance.yahoo.com/news/nasdaq-composite-falls-2-tech-220736819.html",
+          "article_id": "e32189e8-a77d-329a-b397-77cbe40fe44c",
           "provider_url": "https://www.mtnewswires.com/",
           "provider_name": "MT Newswires",
           "thumbnail_url": "https://media.zenfs.com/en/mt_newswires_premium_news_706/2475a8618428bf41d7b045240805a142",
-          "published_date": "2025-10-30T21:08:00Z"
+          "published_date": "2025-11-04T22:07:36Z"
         },
         {
-          "title": "Analyst Says Wall Street\u2019s CapEx Expectations For Amazon(AMZN) \u2018Unbelievable\u2019",
-          "summary": "Analyst Doug Clinton from Deepwater Asset Management believes that Wall Street's expectations for Amazon's capital expenditures (CapEx) are too low, citing high single-digit growth expectations for next year. Clinton thinks Amazon's CapEx will continue to rise, similar to Meta's strong double-digit growth, and that this could be beneficial for companies like Nvidia and TSM. Meanwhile, Mairs & Power Balanced Fund has started a new position in Amazon, citing the company's potential to capture market share in retail and grow its cloud business.",
-          "yahoo_url": "https://finance.yahoo.com/news/analyst-says-wall-street-capex-210614695.html",
-          "article_id": "1538e316-b033-3ea6-bead-9fe6c70d75eb",
-          "provider_url": "http://www.insidermonkey.com",
-          "provider_name": "Insider Monkey",
-          "thumbnail_url": "https://media.zenfs.com/en/insidermonkey.com/9ab9d43b226731590760a54e378251e5",
-          "published_date": "2025-10-30T21:06:14Z"
+          "title": "AMD Reports Third Quarter 2025 Financial Results",
+          "summary": "AMD reported record revenue of $9.2 billion in the third quarter of 2025, up 36% year-over-year, with a gross margin of 52% and net income of $1.2 billion. The company's data center segment revenue grew 22% year-over-year, while client and gaming segment revenue increased 73%. AMD also announced several partnerships and product launches, including a strategic partnership with OpenAI and the release of its Ryzen Threadripper 9000WX and Ryzen Threadripper PRO 9000X Series processors. The company expects revenue to be approximately $9.6 billion in the fourth quarter of 2025, with a non-GAAP gross margin of 54.5%.",
+          "yahoo_url": "https://finance.yahoo.com/news/amd-reports-third-quarter-2025-211500781.html",
+          "article_id": "9dff9815-f60f-3a26-abcb-a5b156f7d332",
+          "provider_url": "https://www.globenewswire.com/",
+          "provider_name": "GlobeNewswire",
+          "thumbnail_url": "https://media.zenfs.com/en/globenewswire.com/701ad71f57aa227c300d55d9cf75787e",
+          "published_date": "2025-11-04T21:15:00Z"
         },
         {
-          "title": "Stock Market Today: Nasdaq, S&P End Sharply Lower With Meta&#39;s Plunge",
-          "summary": "The Nasdaq composite and S&P 500 ended sharply lower on Thursday, with the Nasdaq falling 1.6% and the S&P 500 tumbling 1%, due to concerns about rising costs for artificial intelligence investments, particularly affecting Meta Platforms and Microsoft. Despite this, Eli Lilly jumped 4% after beating earnings expectations. Other notable movers included Carvana, which plunged over 10% after missing earnings expectations, and Roblox, which fell over 10% following mixed results. The Dow Jones Industrial Average also turned lower, declining 0.2%.",
-          "yahoo_url": "https://www.investors.com/market-trend/stock-market-today/stock-market-today-trump-xi-talks-meta-stock/?src=A00220&yptr=yahoo",
-          "article_id": "feaa48e6-1655-3345-8855-6400897140af",
-          "provider_url": "http://www.investors.com/",
-          "provider_name": "Investor's Business Daily",
-          "thumbnail_url": "https://media.zenfs.com/en/ibd.com/55ca4252bd7c66820fc61ce444908e68",
-          "published_date": "2025-10-30T20:52:03Z"
+          "title": "Pinterest&#39;s weak revenue forecast signals intense competition for ad dollars",
+          "summary": "Pinterest's fourth-quarter revenue forecast fell short of Wall Street estimates, citing intense competition for ad dollars from larger platforms like Meta, particularly during the holiday season. The company's CFO attributed the decline to moderating ad spend in the US and Canada, as well as lower spending by Asia-based e-commerce retailers. Despite a 17% revenue increase to $1.05 billion in the third quarter, Pinterest's shares dropped over 20% in extended trading. The company's global monthly active users reached an all-time high of 600 million, but monetizing these new users at the same rate as North American audiences remains a challenge.",
+          "yahoo_url": "https://finance.yahoo.com/news/pinterests-weak-revenue-forecast-signals-210741898.html",
+          "article_id": "4c270c1f-f197-3d4b-8ea3-706fcbb26c6a",
+          "provider_url": "http://www.reuters.com/",
+          "provider_name": "Reuters",
+          "thumbnail_url": "https://media.zenfs.com/en/reuters-finance.com/59837d0c7fed607a491e85f3bca1e907",
+          "published_date": "2025-11-04T21:07:41Z"
         },
         {
-          "title": "US Equity Indexes Fall as Sharp Sell-Off in Meta Platforms Pushes Gauges Lower",
-          "summary": "US equity indexes fell on Thursday, led by a sharp sell-off in Meta Platforms, which declined 11% after its quarterly results showed increased spending on artificial intelligence initiatives despite uncertain sales prospects. The Nasdaq Composite, S&P 500, and Dow Jones Industrial Average all declined, with technology and communication services among the steepest decliners. Investors are also bracing for quarterly results from Apple and Amazon, due to report after the bell on Thursday. Meanwhile, the Federal Reserve's decision to cut interest rates by 25 basis points on Wednesday was overshadowed by Fed Chair Jerome Powell's comments suggesting that another rate cut in December is not guaranteed, leading to a surge in Treasury yields and a shift in market expectations.",
-          "yahoo_url": "https://finance.yahoo.com/news/us-equity-indexes-fall-sharp-204226512.html",
-          "article_id": "1f8d9433-f32b-30dd-a579-1c4492da5fe5",
-          "provider_url": "https://www.mtnewswires.com/",
-          "provider_name": "MT Newswires",
+          "title": "How Rising AI Power Demand Is Fueling Utility ETFs",
+          "summary": "The growing demand for artificial intelligence (AI) is driving a surge in data center capacity, which in turn is fueling a massive increase in electricity demand. As a result, utility ETFs are benefiting, with the sector up almost 18% this year, making it the third best-performing sector. Historically, utilities have been a defensive sector, outperforming the broader market during economic slowdowns, and could also benefit from lower interest rates and increased investment activity. Power producers such as Vistra, Constellation Energy, and NRG Energy are expected to gain from the growth in electricity demand driven by data centers.",
+          "yahoo_url": "https://finance.yahoo.com/news/rising-ai-power-demand-fueling-194300954.html",
+          "article_id": "e87fb66b-1563-36b7-9b61-d089af880a58",
+          "provider_url": "http://www.zacks.com/",
+          "provider_name": "Zacks",
           "thumbnail_url": "",
-          "published_date": "2025-10-30T20:42:26Z"
+          "published_date": "2025-11-04T19:43:00Z"
         },
         {
-          "title": "S&P 500 Gains and Losses Today: Meta Stock Drops After Earnings; Moderna Surges",
-          "summary": "The S&P 500 fell 1% on Thursday, with Meta Platforms' stock dropping 11.3% after reporting lower-than-expected earnings and increased spending on artificial intelligence. In contrast, Moderna's shares surged 13.9% on reports of potential partnership or buyout talks with a large pharmaceutical company. Other notable movers included Chipotle Mexican Grill, which fell 18.2% after reporting lower-than-expected revenue, and C.H. Robinson Worldwide, which rose 19.7% after integrating AI to automate processes and reduce operating expenses.",
-          "yahoo_url": "https://www.investopedia.com/s-and-p-500-gains-and-losses-today-meta-stock-drops-after-earnings-miss-moderna-surges-11840615",
-          "article_id": "cc89313d-bfda-3703-9de3-9b836605855b",
-          "provider_url": "https://www.investopedia.com/",
-          "provider_name": "Investopedia",
-          "thumbnail_url": "https://media.zenfs.com/en/investopedia_245/cef5d0d236635226338b479d248299ac",
-          "published_date": "2025-10-30T20:39:45Z"
-        },
-        {
-          "title": "How major US stock indexes fared Thursday, 10/30/2025",
-          "summary": "The US stock market declined on Thursday, with the S&P 500 falling 1% and the Nasdaq composite dropping 1.6% from its record high set the day before. The Dow Jones Industrial Average slipped 0.2%. The decline came as investors digested mixed news on the US-China trade war and earnings reports from Big Tech companies, including Meta Platforms, Microsoft, and Alphabet. Despite the daily decline, the major indexes are still up for the week and year, with the S&P 500, Dow, and Nasdaq showing gains of 16%, 11.7%, and 22.1% respectively for the year.",
-          "yahoo_url": "https://finance.yahoo.com/news/major-us-stock-indexes-fared-201723352.html",
-          "article_id": "c71f4f74-319a-322b-bc21-7f9c5edc12ee",
-          "provider_url": "http://www.ap.org/",
-          "provider_name": "Associated Press Finance",
-          "thumbnail_url": "",
-          "published_date": "2025-10-30T20:17:23Z"
-        },
-        {
-          "title": "Edwards Lifesciences Announces CFO Transition Plan",
-          "summary": "Edwards Lifesciences announced that its Chief Financial Officer, Scott Ullem, will transition out of his role by mid-2026. The company will initiate a selection process to appoint a new CFO, ensuring a smooth transfer of responsibilities. After the transition, Ullem will continue in an advisory role, allowing for continuity.",
-          "yahoo_url": "https://finance.yahoo.com/news/edwards-lifesciences-announces-cfo-transition-201500651.html",
-          "article_id": "23357012-d3c4-389a-91c6-34469f4dd84b",
-          "provider_url": "http://www.businesswire.com/",
-          "provider_name": "Business Wire",
-          "thumbnail_url": "https://media.zenfs.com/en/business-wire.com/009b07e4dcfb939c97939afd185d73d6",
-          "published_date": "2025-10-30T20:15:00Z"
+          "title": "META vs. MSFT: Which Is the Better Stock to Buy for the Next 10 Years?",
+          "summary": "Meta Platforms (META) and Microsoft (MSFT) are two tech giants with strong growth potential. While Meta is innovating in AI and the metaverse, with a growing user base and increasing revenue, Microsoft's diversified business, including cloud computing, productivity software, and AI integration, provides a more stable growth foundation. Wall Street analysts rate both stocks as 'Strong Buy', with Microsoft's average price target suggesting a 23.1% upside and Meta's average price target indicating a 33.1% upside. However, the author believes that Microsoft's diversified business and strong balance sheet make it the better buy for the next decade.",
+          "yahoo_url": "https://www.barchart.com/story/news/35894300/meta-vs-msft-which-is-the-better-stock-to-buy-for-the-next-10-years",
+          "article_id": "c6e9c55d-41d7-3204-9534-e3394dfe1ed1",
+          "provider_url": "https://www.barchart.com/",
+          "provider_name": "Barchart",
+          "thumbnail_url": "https://media.zenfs.com/en/barchart_com_477/5f81f612d4b225905cde3fd6dfce2095",
+          "published_date": "2025-11-04T16:17:53Z"
         }
       ],
       "market_benchmark_ticker": "SPX",
       "sector_benchmark_ticker": "XLC",
-      "SPX_percentage_price_change": -0.48,
+      "SPX_percentage_price_change": -0.09,
       "recent_insider_transactions": null,
-      "stock_percentage_price_change": -10.47,
-      "sector_percentage_price_change": -1.69,
-      "recent_analyst_upgrades_summary": "There have been no recent upgrades or downgrades, but analysts such as **Baird** and **Guggenheim** maintain their ratings, reflecting stable confidence in Meta's outlook."
+      "stock_percentage_price_change": 0.19,
+      "sector_percentage_price_change": 0,
+      "recent_analyst_upgrades_summary": null
     },
     "debug": {},
     "query": "Explain the price movement in META today",
     "ticker": "META",
     "explanation": {
-      "tldr": "Meta (META) plunged 10.5% after reporting disappointing earnings with higher AI spending, leading to a broader tech selloff as the Nasdaq dropped 1.6%.",
-      "bottom_line": "Meta's steep drop reflects investor concerns over rising costs and disappointing earnings, amplifying the negative sentiment in the tech sector.",
+      "tldr": "Meta (META) rose 0.19% as investors reacted positively to its Q3 growth and a $30B AI investment plan, contrasting a slight dip in the broader market.",
+      "bottom_line": "Meta's small rise reflects investor confidence in its growth strategy, even as the overall market shows signs of weakness.",
       "observations": {
-        "Market context": "The Nasdaq fell 1.6% amid a tech selloff, with Meta's sharp drop contributing significantly to the overall market decline.",
-        "Analyst ratings hold": "Despite the decline, analysts from Baird and Guggenheim maintained their ratings, indicating stable confidence in Meta's long-term outlook.",
-        "Earnings miss and AI costs": "Meta's quarterly results revealed lower-than-expected earnings and a significant increase in spending on AI initiatives, alarming investors about future profitability."
+        "Market backdrop": "While the S&P 500 fell 0.09%, Meta's slight gain highlights its resilience amid broader tech sector concerns.",
+        "Q3 growth and AI investment": "Meta's Q3 earnings showed a 26.2% revenue increase year-over-year, prompting optimism about its future despite recent stock volatility."
       }
     },
-    "created_at": "2025-10-30T21:34:33.574695+00:00",
-    "updated_at": "2025-10-30T21:34:33.574695+00:00"
+    "created_at": "2025-11-05T09:04:35.193131+00:00",
+    "updated_at": "2025-11-05T09:04:35.193131+00:00"
   },
   "symbol": "META"
 }

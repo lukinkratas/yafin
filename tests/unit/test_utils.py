@@ -3,12 +3,12 @@ from typing import Any, Type
 import pytest
 from curl_cffi.requests.exceptions import HTTPError
 
-from tests._assertions import _assert_contains_keys, _assert_keys_are_not_none
 from yafin.const import (
     _TYPES,
     ANNUAL_BALANCE_SHEET_TYPES,
     ANNUAL_CASH_FLOW_TYPES,
     ANNUAL_INCOME_STATEMENT_TYPES,
+    OTHER_TYPES,
     QUARTERLY_BALANCE_SHEET_TYPES,
     QUARTERLY_CASH_FLOW_TYPES,
     QUARTERLY_INCOME_STATEMENT_TYPES,
@@ -83,6 +83,7 @@ class TestUnitUtils:
                 QUARTERLY_CASH_FLOW_TYPES,
             ),
             (dict(frequency='trailing', typ='cash_flow'), TRAILING_CASH_FLOW_TYPES),
+            (dict(frequency=None, typ='other'), OTHER_TYPES),
         ],
     )
     def test_get_types_with_frequency(
@@ -91,8 +92,9 @@ class TestUnitUtils:
         """Test get_types_with_frequency function."""
         types = get_types_with_frequency(**kwargs)
         types_list = types.split(',')
+        frequency = kwargs['frequency']
         expected_types_list = [
-            f'{kwargs["frequency"]}{t}' for t in _TYPES[kwargs['typ']]
+            f'{frequency}{t}' if frequency else t for t in _TYPES[kwargs['typ']]
         ]
         assert sorted(types_list) == sorted(expected_types_list)
 
@@ -105,6 +107,7 @@ class TestUnitUtils:
             ),
             (dict(frequency='xxx', typ='income_statement'), ValueError),
             (dict(frequency='annual', typ='xxx'), ValueError),
+            (dict(frequency='annual', typ='other'), ValueError),
         ],
     )
     def test_get_types_with_frequency_invalid_args(
@@ -121,26 +124,3 @@ class TestUnitUtils:
         func_name, args_copy = _get_func_name_and_args(func, args)
         assert func_name == 'print'
         assert args_copy == ('a', 'b', 'c')
-
-    def test__assert_contains_keys(self) -> None:
-        """Test _assert_contains_keys function."""
-        _assert_contains_keys({'a': 1, 'b': 2}, ['a', 'b'])
-        _assert_contains_keys({'a': 1, 'b': 2}, ['a'])
-        with pytest.raises(AssertionError):
-            _assert_contains_keys({'a': 1}, ['a', 'b'])
-
-    @pytest.mark.parametrize(
-        'kwargs',
-        [
-            dict(data={'a': 0, 'b': 2}, keys=['a', 'b']),
-            dict(data={'a': {}, 'b': 2}, keys=['a', 'b']),
-            dict(data={'a': [], 'b': 2}, keys=['a', 'b']),
-            dict(data={'a': (), 'b': 2}, keys=['a', 'b']),
-            dict(data={'a': '', 'b': 2}, keys=['a', 'b']),
-            dict(data={'a': None, 'b': 2}, keys=['a', 'b']),
-        ],
-    )
-    def test__assert_keys_are_not_none(self, kwargs: dict[str, Any]) -> None:
-        """Test _assert_keys_are_not_none function."""
-        with pytest.raises(AssertionError):
-            _assert_keys_are_not_none(**kwargs)

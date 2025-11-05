@@ -5,31 +5,27 @@
         "secFilings": {
           "filings": [
             {
-              "date": "2025-10-30",
-              "epochDate": 1761782400,
-              "type": "10-Q",
-              "title": "Periodic Financial Reports",
-              "edgarUrl": "https://finance.yahoo.com/sec-filing/META/0001628280-25-047240_1326801",
+              "date": "2025-11-03",
+              "epochDate": 1762128000,
+              "type": "8-K",
+              "title": "Corporate Changes & Voting Matters",
+              "edgarUrl": "https://finance.yahoo.com/sec-filing/META/0001193125-25-262593_1326801",
               "exhibits": [
                 {
-                  "type": "10-Q",
-                  "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001326801/000162828025047240/meta-20250930.htm"
+                  "type": "8-K",
+                  "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001326801/000119312525262593/d75422d8k.htm"
                 },
                 {
-                  "type": "EX-31.1",
-                  "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001326801/000162828025047240/meta09302025-ex311.htm"
+                  "type": "EX-1.1",
+                  "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001326801/000119312525262593/d75422dex11.htm"
                 },
                 {
-                  "type": "EX-31.2",
-                  "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001326801/000162828025047240/meta09302025-ex312.htm"
+                  "type": "EX-4.1",
+                  "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001326801/000119312525262593/d75422dex41.htm"
                 },
                 {
-                  "type": "EX-32.1",
-                  "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001326801/000162828025047240/meta09302025-ex321.htm"
-                },
-                {
-                  "type": "EX-32.2",
-                  "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001326801/000162828025047240/meta09302025-ex322.htm"
+                  "type": "EX-5.1",
+                  "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001326801/000119312525262593/d75422dex51.htm"
                 }
               ],
               "maxAge": 1

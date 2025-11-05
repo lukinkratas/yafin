@@ -8,7 +8,7 @@
       "quoteType": "EQUITY",
       "symbol": "META",
       "index": "quotes",
-      "score": 14010500.0,
+      "score": 12827000.0,
       "typeDisp": "Equity",
       "longname": "Meta Platforms, Inc.",
       "exchDisp": "NASDAQ",
@@ -19,7 +19,25 @@
       "dispSecIndFlag": true,
       "isYahooFinance": true,
       "prevName": "Facebook, Inc.",
-      "nameChangeDate": "2025-10-30"
+      "nameChangeDate": "2025-11-04"
+    },
+    {
+      "exchange": "NYQ",
+      "shortname": "Alpha Metallurgical Resources, ",
+      "quoteType": "EQUITY",
+      "symbol": "AMR",
+      "index": "quotes",
+      "score": 20390.0,
+      "typeDisp": "Equity",
+      "longname": "Alpha Metallurgical Resources, Inc.",
+      "exchDisp": "NYSE",
+      "sector": "Basic Materials",
+      "sectorDisp": "Basic Materials",
+      "industry": "Coking Coal",
+      "industryDisp": "Coking Coal",
+      "isYahooFinance": true,
+      "prevName": "Contura Energy, Inc.",
+      "nameChangeDate": "2025-11-04"
     },
     {
       "exchange": "NYQ",
@@ -27,7 +45,7 @@
       "quoteType": "EQUITY",
       "symbol": "WPM",
       "index": "quotes",
-      "score": 20234.0,
+      "score": 20241.0,
       "typeDisp": "Equity",
       "longname": "Wheaton Precious Metals Corp.",
       "exchDisp": "NYSE",
@@ -38,22 +56,22 @@
       "isYahooFinance": true
     },
     {
-      "exchange": "NYQ",
-      "shortname": "Alpha Metallurgical Resources, ",
+      "exchange": "NMS",
+      "shortname": "TMC the metals company Inc.",
       "quoteType": "EQUITY",
-      "symbol": "AMR",
+      "symbol": "TMC",
       "index": "quotes",
-      "score": 20165.0,
+      "score": 20143.0,
       "typeDisp": "Equity",
-      "longname": "Alpha Metallurgical Resources, Inc.",
-      "exchDisp": "NYSE",
+      "longname": "TMC the metals company Inc.",
+      "exchDisp": "NASDAQ",
       "sector": "Basic Materials",
       "sectorDisp": "Basic Materials",
-      "industry": "Coking Coal",
-      "industryDisp": "Coking Coal",
+      "industry": "Other Industrial Metals & Mining",
+      "industryDisp": "Other Industrial Metals & Mining",
       "isYahooFinance": true,
-      "prevName": "Contura Energy, Inc.",
-      "nameChangeDate": "2025-10-30"
+      "prevName": "Sustainable Opportunities Acquisition Corp.",
+      "nameChangeDate": "2025-11-04"
     },
     {
       "exchange": "NGM",
@@ -61,7 +79,7 @@
       "quoteType": "EQUITY",
       "symbol": "CRML",
       "index": "quotes",
-      "score": 20106.0,
+      "score": 20092.0,
       "typeDisp": "Equity",
       "longname": "Critical Metals Corp.",
       "exchDisp": "NASDAQ",
@@ -72,45 +90,31 @@
       "isYahooFinance": true
     },
     {
-      "exchange": "NMS",
-      "shortname": "TMC the metals company Inc.",
+      "exchange": "NCM",
+      "shortname": "Aqua Metals, Inc.",
       "quoteType": "EQUITY",
-      "symbol": "TMC",
+      "symbol": "AQMS",
       "index": "quotes",
-      "score": 20103.0,
+      "score": 20086.0,
       "typeDisp": "Equity",
-      "longname": "TMC the metals company Inc.",
+      "longname": "Aqua Metals, Inc.",
       "exchDisp": "NASDAQ",
-      "sector": "Basic Materials",
-      "sectorDisp": "Basic Materials",
-      "industry": "Other Industrial Metals & Mining",
-      "industryDisp": "Other Industrial Metals & Mining",
-      "isYahooFinance": true,
-      "prevName": "Sustainable Opportunities Acquisition Corp.",
-      "nameChangeDate": "2025-10-30"
-    },
-    {
-      "exchange": "PCX",
-      "shortname": "VanEck Rare Earth and Strategic",
-      "quoteType": "ETF",
-      "symbol": "REMX",
-      "index": "quotes",
-      "score": 20093.0,
-      "typeDisp": "ETF",
-      "longname": "VanEck Rare Earth and Strategic Metals ETF",
-      "exchDisp": "NYSEArca",
+      "sector": "Industrials",
+      "sectorDisp": "Industrials",
+      "industry": "Waste Management",
+      "industryDisp": "Waste Management",
       "isYahooFinance": true
     },
     {
-      "exchange": "ASE",
-      "shortname": "Trilogy Metals Inc.",
+      "exchange": "VAN",
+      "shortname": "DISTRICT METALS CORP",
       "quoteType": "EQUITY",
-      "symbol": "TMQ",
+      "symbol": "DMX.V",
       "index": "quotes",
-      "score": 20080.0,
+      "score": 20068.0,
       "typeDisp": "Equity",
-      "longname": "Trilogy Metals Inc.",
-      "exchDisp": "NYSE MKT",
+      "longname": "District Metals Corp.",
+      "exchDisp": "CDNX",
       "sector": "Basic Materials",
       "sectorDisp": "Basic Materials",
       "industry": "Other Industrial Metals & Mining",
@@ -120,22 +124,22 @@
   ],
   "news": [
     {
-      "uuid": "2d355c98-09e2-3efa-8594-955e80da4ff1",
-      "title": "Dow Jones Futures Rise On Amazon, Apple Earnings After Meta-Led Market Slide",
-      "publisher": "Investor's Business Daily",
-      "link": "https://finance.yahoo.com/m/2d355c98-09e2-3efa-8594-955e80da4ff1/dow-jones-futures-rise-on.html",
-      "providerPublishTime": 1761859962,
+      "uuid": "f8f81034-6b2a-38d5-9383-76ff55b6955f",
+      "title": "The list of major companies laying off staff this year includes Amazon, Starbucks, Oracle, American Airlines, and more",
+      "publisher": "Business Insider",
+      "link": "https://finance.yahoo.com/m/f8f81034-6b2a-38d5-9383-76ff55b6955f/the-list-of-major-companies.html",
+      "providerPublishTime": 1762327704,
       "type": "STORY",
       "thumbnail": {
         "resolutions": [
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/fR2DQimisQceh6T7_18N7g--~B/aD01NjM7dz0xMDAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/ibd.com/ecb5185348bcdaed2d50885f55b9a6a5",
-            "width": 1000,
-            "height": 563,
+            "url": "https://s.yimg.com/uu/api/res/1.2/Z3gtJCtKMnkI78eKiJjRfQ--~B/aD0yNjUyO3c9MzUzNjthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/business_insider_articles_888/4da92e8d919e27fb0b7421ef3b8cf8f1",
+            "width": 3536,
+            "height": 2652,
             "tag": "original"
           },
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/u0b9tAkkLuHo5nL0.kUX_Q--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/ibd.com/ecb5185348bcdaed2d50885f55b9a6a5",
+            "url": "https://s.yimg.com/uu/api/res/1.2/kqvf91FM1ol9yD7zmagL4w--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/business_insider_articles_888/4da92e8d919e27fb0b7421ef3b8cf8f1",
             "width": 140,
             "height": 140,
             "tag": "140x140"
@@ -143,27 +147,166 @@
         ]
       },
       "relatedTickers": [
-        "^DJI",
-        "MDB",
-        "^SPX",
-        "AAPL",
-        "META",
-        "^NDX",
-        "^IXIC",
-        "EBAY",
         "AMZN",
-        "WDC",
-        "NET",
-        "LLY",
-        "CVNA"
+        "ORCL",
+        "SBUX",
+        "NKE",
+        "META",
+        "MSFT",
+        "UPS",
+        "DBX",
+        "XYZ"
       ]
     },
     {
-      "uuid": "32e85062-e888-3c5f-a8c0-0deb42239830",
-      "title": "Nasdaq Retreats After 4-Day Record Run Amid Tech Selloff",
+      "uuid": "f9bad894-e975-3df6-97d2-a09bf8a5d446",
+      "title": "charcha 2025: India's largest collaborative convening on livelihoods returns to Delhi with its 6th edition",
+      "publisher": "PR Newswire",
+      "link": "https://finance.yahoo.com/news/charcha-2025-indias-largest-collaborative-071400859.html",
+      "providerPublishTime": 1762326840,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/yZahRjFVP3N8090YK8_Aqg--~B/aD0yMjU7dz00MDA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/prnewswire.com/b1faed83bcfe91816e56a5269ef13594",
+            "width": 400,
+            "height": 225,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/FCFEuSl3uhtfAii69gb5WA--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/prnewswire.com/b1faed83bcfe91816e56a5269ef13594",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "META"
+      ]
+    },
+    {
+      "uuid": "43deb858-098c-3357-af1b-c962c9c48511",
+      "title": "Novo Nordisk's sales increased by 12% in Danish kroner and by 15% at CER in the first nine months of 2025; R&D pipeline progress continues",
+      "publisher": "GlobeNewswire",
+      "link": "https://finance.yahoo.com/news/novo-nordisks-sales-increased-12-063000511.html",
+      "providerPublishTime": 1762324200,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/IA8XetXMAbOyKXBpUBGPHw--~B/aD00Mjc7dz02MDA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/globenewswire.com/390a90dca9ab1da0d2c89c641db85b9e",
+            "width": 600,
+            "height": 427,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/9H9FGaLRrg2bdOyiS8KgFQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/globenewswire.com/390a90dca9ab1da0d2c89c641db85b9e",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "NOVO-B.CO",
+        "NONOF",
+        "NVO",
+        "AKRO",
+        "META",
+        "OMER"
+      ]
+    },
+    {
+      "uuid": "8143a99a-1b5c-313c-adc1-af145d16c230",
+      "title": "Meta Platforms (META): Reassessing Valuation After Q3 Growth and $30B AI Investment Push",
+      "publisher": "Simply Wall St.",
+      "link": "https://finance.yahoo.com/news/meta-platforms-meta-reassessing-valuation-061452114.html",
+      "providerPublishTime": 1762323292,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/BrUhbDoJKeNJUavlZ7MvVQ--~B/aD00MzI7dz0xMTk0O2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/simply_wall_st__316/fba9687e0054b528b01bdfa6c56cd20c",
+            "width": 1194,
+            "height": 432,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/ugpo6zQdWTcUD0neJdvYVQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/simply_wall_st__316/fba9687e0054b528b01bdfa6c56cd20c",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "META"
+      ]
+    },
+    {
+      "uuid": "f60d4e67-a66c-3076-a362-f8048bee3b3d",
+      "title": "Meta\u2019s Q3 Earnings Call: Our Top 5 Analyst Questions",
+      "publisher": "StockStory",
+      "link": "https://finance.yahoo.com/news/meta-q3-earnings-call-top-053541726.html",
+      "providerPublishTime": 1762320941,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/Ol.OYXaTLDXSb6x604S3Pw--~B/aD03MDA7dz0xNDAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/stockstory_922/f2216b648a0db93b9cf1e78ef49e6e65",
+            "width": 1400,
+            "height": 700,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/7aPjCAIn4fIyTLcmX_ixvg--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/stockstory_922/f2216b648a0db93b9cf1e78ef49e6e65",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "META"
+      ]
+    },
+    {
+      "uuid": "31e2e4d7-9df9-335c-91b9-70c09644237c",
+      "title": "Simon Yeung of Biel Crystal, was awarded KPMG's \"Excellent Family Business Future Entrepreneur\"",
+      "publisher": "PR Newswire",
+      "link": "https://finance.yahoo.com/news/simon-yeung-biel-crystal-awarded-052500967.html",
+      "providerPublishTime": 1762320300,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/AtYLK0MwmgR4.JN20cY_Mg--~B/aD0yNjc7dz00MDA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/prnewswire.com/f2feb99a7bff8e143b3adecde2adb83f",
+            "width": 400,
+            "height": 267,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/zMzaA8to2dTYzb0s_BcaGw--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/prnewswire.com/f2feb99a7bff8e143b3adecde2adb83f",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "AAPL",
+        "005930.KS",
+        "META",
+        "1810.HK"
+      ]
+    },
+    {
+      "uuid": "e32189e8-a77d-329a-b397-77cbe40fe44c",
+      "title": "Nasdaq Composite Falls 2% as Tech Loses Ground Amid Valuation Concerns",
       "publisher": "MT Newswires",
-      "link": "https://finance.yahoo.com/news/nasdaq-retreats-4-day-record-210800651.html",
-      "providerPublishTime": 1761858480,
+      "link": "https://finance.yahoo.com/news/nasdaq-composite-falls-2-tech-220736819.html",
+      "providerPublishTime": 1762294056,
       "type": "STORY",
       "thumbnail": {
         "resolutions": [
@@ -182,112 +325,30 @@
         ]
       },
       "relatedTickers": [
-        "MSFT",
-        "^IXIC",
-        "META",
-        "^SPX",
-        "^DJI"
-      ]
-    },
-    {
-      "uuid": "1538e316-b033-3ea6-bead-9fe6c70d75eb",
-      "title": "Analyst Says Wall Street\u2019s CapEx Expectations For Amazon(AMZN) \u2018Unbelievable\u2019",
-      "publisher": "Insider Monkey",
-      "link": "https://finance.yahoo.com/news/analyst-says-wall-street-capex-210614695.html",
-      "providerPublishTime": 1761858374,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/hdQi20pzOWu3WwvzUJb7EQ--~B/aD01MTM7dz03Njg7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/insidermonkey.com/9ab9d43b226731590760a54e378251e5",
-            "width": 768,
-            "height": 513,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/Wo5_8pJhZoaSEhfxykV31Q--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/insidermonkey.com/9ab9d43b226731590760a54e378251e5",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "AMZN",
-        "META",
-        "GOOGL",
-        "NVDA",
-        "2330.TW"
-      ]
-    },
-    {
-      "uuid": "feaa48e6-1655-3345-8855-6400897140af",
-      "title": "Stock Market Today: Nasdaq, S&P End Sharply Lower With Meta's Plunge",
-      "publisher": "Investor's Business Daily",
-      "link": "https://finance.yahoo.com/m/feaa48e6-1655-3345-8855-6400897140af/stock-market-today%3A-nasdaq%2C.html",
-      "providerPublishTime": 1761857523,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/4WfxCi9gw5G1l9k1XkSg7g--~B/aD01NjM7dz0xMDAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/ibd.com/55ca4252bd7c66820fc61ce444908e68",
-            "width": 1000,
-            "height": 563,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/osAHvE0hUTUj8GgUic6xfA--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/ibd.com/55ca4252bd7c66820fc61ce444908e68",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "^DJI",
-        "AMZN",
-        "CMG",
-        "NVDA",
-        "META",
-        "^IXIC",
-        "LLY",
-        "MSFT",
-        "^SPX"
-      ]
-    },
-    {
-      "uuid": "1f8d9433-f32b-30dd-a579-1c4492da5fe5",
-      "title": "US Equity Indexes Fall as Sharp Sell-Off in Meta Platforms Pushes Gauges Lower",
-      "publisher": "MT Newswires",
-      "link": "https://finance.yahoo.com/news/us-equity-indexes-fall-sharp-204226512.html",
-      "providerPublishTime": 1761856946,
-      "type": "STORY",
-      "relatedTickers": [
-        "AAPL",
-        "AMZN",
         "^IXIC",
         "^SPX",
         "^DJI",
-        "META"
+        "PLTR",
+        "NVDA"
       ]
     },
     {
-      "uuid": "035a1404-14a9-4292-96b8-08cca27526ee",
-      "title": "Earnings live: Amazon stock soars on AWS growth, Apple wavers, Reddit and Coinbase move higher",
-      "publisher": "Yahoo Finance",
-      "link": "https://finance.yahoo.com/news/live/earnings-live-amazon-stock-soars-on-aws-growth-apple-wavers-reddit-and-coinbase-move-higher-204131223.html",
-      "providerPublishTime": 1761856891,
+      "uuid": "9dff9815-f60f-3a26-abcb-a5b156f7d332",
+      "title": "AMD Reports Third Quarter 2025 Financial Results",
+      "publisher": "GlobeNewswire",
+      "link": "https://finance.yahoo.com/news/amd-reports-third-quarter-2025-211500781.html",
+      "providerPublishTime": 1762290900,
       "type": "STORY",
       "thumbnail": {
         "resolutions": [
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/TFv.LtvA0bqKK4xs28qnFw--~B/aD0yNjY1O3c9Mzk5ODthcHBpZD15dGFjaHlvbg--/https://s.yimg.com/os/creatr-uploaded-images/2025-10/c719b0a0-b5d0-11f0-bf35-a00804fbb2f7",
-            "width": 3998,
-            "height": 2665,
+            "url": "https://s.yimg.com/uu/api/res/1.2/jxl7FQ3l6yh_HPZ2.TtBwg--~B/aD0xOTU7dz01MDg7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/globenewswire.com/701ad71f57aa227c300d55d9cf75787e",
+            "width": 508,
+            "height": 195,
             "tag": "original"
           },
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/UVNckQ1LLfPtkery6O7COw--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://s.yimg.com/os/creatr-uploaded-images/2025-10/c719b0a0-b5d0-11f0-bf35-a00804fbb2f7",
+            "url": "https://s.yimg.com/uu/api/res/1.2/iGZOZKeTKHXG28xzF53cUw--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/globenewswire.com/701ad71f57aa227c300d55d9cf75787e",
             "width": 140,
             "height": 140,
             "tag": "140x140"
@@ -295,90 +356,14 @@
         ]
       },
       "relatedTickers": [
-        "AAPL",
-        "GOOG",
-        "AMZN",
-        "COIN",
-        "^SPX",
-        "MSFT",
-        "GOOGL",
-        "BA",
-        "V",
-        "SBUX",
-        "UNH",
-        "VZ",
-        "MRK",
-        "SHEL.L",
-        "XOM",
-        "CVX",
+        "AMD",
+        "M",
+        "IBM",
+        "OPAI.PVT",
+        "ORCL",
+        "CSCO",
         "META",
-        "NOW",
-        "ABI.BR",
-        "LLY",
-        "MA",
-        "CMG",
-        "CAT"
-      ]
-    },
-    {
-      "uuid": "cc89313d-bfda-3703-9de3-9b836605855b",
-      "title": "S&P 500 Gains and Losses Today: Meta Stock Drops After Earnings; Moderna Surges",
-      "publisher": "Investopedia",
-      "link": "https://finance.yahoo.com/m/cc89313d-bfda-3703-9de3-9b836605855b/s%26p-500-gains-and-losses.html",
-      "providerPublishTime": 1761856785,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/zADA3goupGtGECe6_gMC5g--~B/aD0yNjY2O3c9NDAwMDthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/investopedia_245/cef5d0d236635226338b479d248299ac",
-            "width": 4000,
-            "height": 2666,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/vgI.aYqbxrefxHlXJbAWSA--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/investopedia_245/cef5d0d236635226338b479d248299ac",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "MRNA",
-        "META"
-      ]
-    },
-    {
-      "uuid": "9cb97d05-68eb-32b4-9f9c-d92dd6f0209a",
-      "title": "Tech Earnings Send Nasdaq Lower",
-      "publisher": "The Wall Street Journal",
-      "link": "https://finance.yahoo.com/m/9cb97d05-68eb-32b4-9f9c-d92dd6f0209a/tech-earnings-send-nasdaq.html",
-      "providerPublishTime": 1761856260,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/nalTqwWwUx_IfMEs5zlGhg--~B/aD02NDA7dz0xMjgwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/wsj.com/226ccf89176fc65194c71416873c726c",
-            "width": 1280,
-            "height": 640,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/kd8V9AnOjZilR0VfWVQL8w--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/wsj.com/226ccf89176fc65194c71416873c726c",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "META",
-        "AMZN",
-        "AAPL",
-        "MSFT",
-        "^SPX",
-        "^IXIC",
-        "^DJI"
+        "TECHM.NS"
       ]
     }
   ],
@@ -423,21 +408,21 @@
       "iconUrl": "https://edgecast-img.yahoo.net/mysterio/api/683fd6c45c5d4d5905e2caf5cd56ab1ab1c4e7d168bee45d8047945dc48ab943/finance/resizefill_w96_h96/https://s.yimg.com/cv/apiv2/fin/img/assets/predefined_screeners/theme.png"
     },
     {
-      "index": "62e97ea1-46c8-4e6e-86f2-901a4ffa8b47",
-      "id": "62e97ea1-46c8-4e6e-86f2-901a4ffa8b47",
-      "title": "Other Precious Metals & Mining",
-      "canonicalName": "OTHER_PRECIOUS_METALS_MINING",
+      "index": "05acca9e-1aee-44b6-8224-c92459eb2ed8",
+      "id": "05acca9e-1aee-44b6-8224-c92459eb2ed8",
+      "title": "Metal Fabrication",
+      "canonicalName": "METAL_FABRICATION",
       "score": 1.0,
       "type": "PREDEFINED_SCREENER",
-      "total": 6,
+      "total": 12,
       "isPremium": false,
       "iconUrl": "https://edgecast-img.yahoo.net/mysterio/api/b241f4b88dcc1439d37ed7dd74c3ee884516f53bc29bc8eece9b9fcf5c850fe8/finance/resizefill_w96_h96/https://s.yimg.com/cv/apiv2/fin/img/assets/predefined_screeners/diamond.png"
     }
   ],
   "researchReports": [],
   "screenerFieldResults": [],
-  "totalTime": 35,
-  "timeTakenForQuotes": 427,
+  "totalTime": 47,
+  "timeTakenForQuotes": 439,
   "timeTakenForNews": 700,
   "timeTakenForAlgowatchlist": 400,
   "timeTakenForPredefinedScreener": 400,

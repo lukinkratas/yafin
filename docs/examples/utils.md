@@ -31,6 +31,10 @@ async def main() -> None:
             )
         )
 
+        aapl_other = await client.get_timeseries(
+            ticker='AAPL', types=get_types_with_frequency(typ='other')
+        )
+
 if __name__ == '__main__':
     asyncio.run(main())
 ```

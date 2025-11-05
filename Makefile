@@ -56,6 +56,7 @@ test-int:
 	uv run --group test pytest -m integration -p no:warnings --cov=yafin --cov-report=term-missing --cov-branch
 
 test-all:
+	uv run --group dev scripts/fetch_mocks.py
 	uv pip install -e .
 	uv run --group test pytest --cov=yafin --cov-report=term-missing --cov-branch --cov-fail-under=95 --cov-report=html:htmlcov
 

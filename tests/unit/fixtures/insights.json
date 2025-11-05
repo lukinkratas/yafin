@@ -12,9 +12,9 @@
               "direction": "Neutral",
               "score": 0,
               "scoreDescription": "No Evidence",
-              "sectorDirection": "Bullish",
-              "sectorScore": 3,
-              "sectorScoreDescription": "Strong Bullish Evidence",
+              "sectorDirection": "Bearish",
+              "sectorScore": 4,
+              "sectorScoreDescription": "Very Strong Bearish Evidence",
               "indexDirection": "Bullish",
               "indexScore": 4,
               "indexScoreDescription": "Very Strong Bullish Evidence"
@@ -25,8 +25,8 @@
               "score": 0,
               "scoreDescription": "No Evidence",
               "sectorDirection": "Bearish",
-              "sectorScore": 1,
-              "sectorScoreDescription": "Weak Bearish Evidence",
+              "sectorScore": 3,
+              "sectorScoreDescription": "Strong Bearish Evidence",
               "indexDirection": "Bearish",
               "indexScore": 2,
               "indexScoreDescription": "Bearish Evidence"
@@ -62,8 +62,8 @@
             "innovativeness": 0.8288,
             "sustainability": 0.7643000000000001,
             "insiderSentiments": 0.0,
-            "earningsReports": 0.9177,
-            "dividends": 0.0042
+            "earningsReports": 0.9213,
+            "dividends": 0.0105
           },
           "sector": {
             "innovativeness": 0.5,
@@ -91,168 +91,76 @@
             "Meta has disproportionately benefited from increased ad spending by Chinese retailers including Temu and Shein. A slowdown in spending by these firms could hit Meta's growth."
           ],
           "companyName": "Meta Platforms, Inc.",
-          "msBullishBearishSummariesPublishDate": 1761803003000,
+          "msBullishBearishSummariesPublishDate": 1761865705000,
           "upsellReportType": "MORNINGSTAR_ANALYST"
         },
         "upsellSearchDD": {
           "researchReports": {
-            "reportId": "MS_0P0000W3KZ_AnalystReport_1761803003000",
-            "provider": "Morningstar",
-            "title": "Meta Earnings: Ad Revenue Momentum Is Strong, but an Avalanche of AI Costs Are Coming in 2026",
-            "reportDate": "2025-10-30T05:43:23Z",
-            "summary": "Meta is the largest social media company in the world, boasting close to 4 billion monthly active users worldwide. The firm's \"Family of Apps,\" its core business, consists of Facebook, Instagram, Messenger, and WhatsApp. End users can leverage these applications for a variety of different purposes, from keeping in touch with friends to following celebrities and running digital businesses for free. Meta packages customer data, gleaned from its application ecosystem and sells ads to digital advertisers. While the firm has been investing heavily in its Reality Labs business, it remains a very small part of Meta\u2019s overall sales. ",
-            "investmentRating": "Neutral"
+            "reportId": "ARGUS_3592_AnalystReport_1762174991000",
+            "provider": "Argus",
+            "title": "Capex spending dings Meta's story",
+            "reportDate": "2025-11-03T13:03:11Z",
+            "summary": "Meta Platforms operates the world's largest family of social networking websites, including the flagship Facebook site, Instagram, Facebook Messenger, WhatsApp, Reels, and Threads. The sites enable users to communicate with friends and family by posting content; to comment on the posts of others; to share photographs, website links, and videos; to message; and to play games. The company also partners with application developers to add functionality to the sites, and allows users to pay for virtual goods and services through its Payments function. Meta's Superintelligence Labs is one of the pioneers in generative AI research its and its Reality Labs segment develops and sells new computing form factors like virtual reality headsets and smart glasses. Meta derives about 55% of its revenue from outside the U.S. and Canada.",
+            "investmentRating": "Bullish"
           }
         },
         "events": [
           {
-            "eventType": "Gap Up",
+            "eventType": "Triple Moving Average Crossover",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "U",
+            "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1761312600,
-            "endDate": 1761571800
+            "startDate": 1762180200,
+            "endDate": 1762180200
           }
         ],
         "reports": [
           {
-            "id": "MS_0P0000W3KZ_AnalystReport_1761803003000",
-            "headHtml": "Analyst Report: Meta Platforms, Inc.",
-            "provider": "Morningstar",
-            "reportDate": "2025-10-30T05:43:23Z",
-            "reportTitle": "Meta is the largest social media company in the world, boasting close to 4 billion monthly active users worldwide. The firm's \"Family of Apps,\" its core business, consists of Facebook, Instagram, Messenger, and WhatsApp. End users can leverage these applications for a variety of different purposes, from keeping in touch with friends to following celebrities and running digital businesses for free. Meta packages customer data, gleaned from its application ecosystem and sells ads to digital advertisers. While the firm has been investing heavily in its Reality Labs business, it remains a very small part of Meta\u2019s overall sales. ",
-            "reportType": "Analyst Report",
-            "targetPrice": 850.0,
-            "targetPriceStatus": "Maintained",
-            "investmentRating": "Neutral",
-            "tickers": [
-              "META"
-            ],
-            "title": "Meta Earnings: Ad Revenue Momentum Is Strong, but an Avalanche of AI Costs Are Coming in 2026"
-          },
-          {
-            "id": "ARGUS_45135_ThematicPortfolio_1761597491000",
-            "headHtml": "The Argus Innovation Model Portfolio",
+            "id": "ARGUS_45198_StockPicks_1762179101000",
+            "headHtml": "Weekly Stock List",
             "provider": "Argus Research",
-            "reportDate": "2025-10-27T20:38:11Z",
-            "reportTitle": "The United States economy is full of innovation. It has to be. Manufacturing industries that dominated the economy decades ago - textiles, televisions, even automobiles to a large degree - have moved overseas, where labor and materials costs are lower. Yet the U.S. economy, even during the pandemic and the recent period of high inflation, has expanded to record levels. If U.S. corporations weren't innovating, creating new products (such as AI and vaccines) and services (such as Zoom calls and Netflix), as well as moving into new markets (clean energy, rare drugs), the domestic economy would not be growing, and capital would not be flooding into the country. Consider that U.S. GDP was approximately $1 trillion in 1930 but was almost $30 trillion at the end of 2024. That's growth of 30-times. Meanwhile, the U.S. population has grown less than 3-times during that time span, to 340 million from 120 million. The delta between GDP growth and population growth has been driven, in large part, by innovation.",
-            "reportType": "Thematic Portfolio",
-            "tickers": [
-              "BLK",
-              "TRGP",
-              "AMAT",
-              "AAPL",
-              "ADI",
-              "JPM",
-              "AXON",
-              "DASH",
-              "URI",
-              "COST",
-              "V",
-              "WM",
-              "LLY",
-              "SPGI",
-              "CME",
-              "UBER",
-              "GE",
-              "PANW",
-              "NFLX",
-              "META",
-              "NVDA",
-              "CEG",
-              "SYK",
-              "BSX",
-              "ORCL",
-              "PWR",
-              "NOW",
-              "SCHW",
-              "AMZN",
-              "AJG"
-            ],
-            "title": "The Argus Innovation Model Portfolio"
-          },
-          {
-            "id": "MS_1347393_StockPicks_1760737516000",
-            "headHtml": "Morningstar | A Weekly Summary of Stock Ideas and Developments in the Companies We Cover",
-            "provider": "Morningstar",
-            "reportDate": "2025-10-17T21:45:16Z",
-            "reportTitle": "In this edition, Utility companies' expansion plans may fizzle out; data centers mean a possible surge in buying electrical equipment; the luxury sector still has some dazzle; and Brown-Forman, Prosus, and Pernod Ricard.\n\n   \n\n",
+            "reportDate": "2025-11-03T14:11:41Z",
+            "reportTitle": "The stock market keeps hitting all-time highs. We believe that diversification across sectors is powering this bull market and is wider than discussed in the media and by overall investing commentary. We want to highlight some of the high-flying sectors and individual companies that are having a banner year outside of the strong upward driver of AI. As such, the following is a two-tiered list of companies in Argus' fundamental Universe of Coverage and highlight stocks that are seeing the highest gains from their 52-week lows. We used our Argus screener to find large caps above $250 billion in market cap, and then sorted by sector. We also note our rating and the percentage gains in these stocks. The first list includes non-tech companies, while the second includes the tech companies. Some in this list are technically not categorized as IT companies, but we moved them into this group as IT is their main function.",
             "reportType": "Stock Picks",
             "tickers": [
-              "TT",
-              "CARR",
-              "ETR",
-              "SMAWF",
-              "ABLZF",
-              "EVRG",
-              "HESAF",
-              "NVT",
-              "LNT",
-              "LVMHF",
-              "NJR",
-              "EMA",
-              "PNW",
-              "VRT",
-              "SBGSF",
-              "MGEE",
-              "ED",
-              "HRNNF",
-              "AEE",
-              "META",
-              "CMS",
-              "AEP",
-              "ES",
-              "AES",
-              "JCI",
-              "POR",
-              "DTE",
-              "WEC",
-              "EIX",
-              "PCG",
-              "PNDZF",
-              "NI",
-              "FE",
-              "MONRF",
-              "FTS",
-              "CNP",
-              "SRE",
-              "SFRGF",
-              "PPL",
-              "HUGPF",
+              "GOOGL",
+              "AAPL",
+              "CSCO",
+              "AVGO",
+              "JPM",
+              "JNJ",
+              "UNH",
+              "ASML",
               "MSFT",
-              "AWK",
-              "BCUCF",
-              "TPR",
-              "PRDSF",
-              "DUK",
-              "CFRHF",
-              "SO",
-              "BBRYF",
-              "GOOG",
-              "BF-B",
-              "PDRDF",
-              "OGE",
-              "PPRUF",
-              "NEE",
-              "EXC",
-              "SWGAF",
-              "PEG",
-              "LGRVF",
-              "CPRI",
-              "ATO",
-              "DKILF",
-              "ETN",
-              "XEL"
+              "TSLA",
+              "WFC",
+              "IBM",
+              "LLY",
+              "AMD",
+              "GE",
+              "PLTR",
+              "BABA",
+              "NFLX",
+              "NVDA",
+              "META",
+              "BAC",
+              "MS",
+              "MU",
+              "ORCL",
+              "ABBV",
+              "TSM",
+              "CAT",
+              "AMZN"
             ],
-            "title": "Morningstar | A Weekly Summary of Stock Ideas and Developments in the Companies We Cover"
+            "title": "Argus Quick Note: Weekly Stock List for 11/03/2025: Big-Cap High-Flyers"
           },
           {
-            "id": "ARGUS_3592_AnalystReport_1760462181000",
+            "id": "ARGUS_3592_AnalystReport_1762174991000",
             "headHtml": "Analyst Report: Meta Platforms Inc",
             "provider": "Argus Research",
-            "reportDate": "2025-10-14T17:16:21Z",
-            "reportTitle": "Meta Platforms operates the world's largest family of social networking websites, including the flagship Facebook site, Instagram, Facebook Messenger, WhatsApp, Reels, and Threads. The sites enable users to communicate with friends and family by posting to the site; to comment on others' posts; to share photographs, website links, and videos; to message; and to play games. The company also partners with application developers to add functionality to the sites, and allows users to pay for virtual goods and services through its Payments function. Meta derives about 55% of its revenue from outside the U.S. and Canada.",
+            "reportDate": "2025-11-03T13:03:11Z",
+            "reportTitle": "Meta Platforms operates the world's largest family of social networking websites, including the flagship Facebook site, Instagram, Facebook Messenger, WhatsApp, Reels, and Threads. The sites enable users to communicate with friends and family by posting content; to comment on the posts of others; to share photographs, website links, and videos; to message; and to play games. The company also partners with application developers to add functionality to the sites, and allows users to pay for virtual goods and services through its Payments function. Meta's Superintelligence Labs is one of the pioneers in generative AI research its and its Reality Labs segment develops and sells new computing form factors like virtual reality headsets and smart glasses. Meta derives about 55% of its revenue from outside the U.S. and Canada.",
             "reportType": "Analyst Report",
             "targetPrice": 850.0,
             "targetPriceStatus": "Maintained",
@@ -260,16 +168,59 @@
             "tickers": [
               "META"
             ],
-            "title": "New product introductions"
+            "title": "Capex spending dings Meta's story"
+          },
+          {
+            "id": "ARGUS_45191_MarketSummary_1762174991000",
+            "headHtml": "Market Digest: FHI, IEX, MCO, ORLY, UTHR, VLO, META, MDLZ",
+            "provider": "Argus Research",
+            "reportDate": "2025-11-03T13:03:11Z",
+            "reportTitle": "Earnings Flood Continues The earnings flood continues this week. The October jobs report was supposed to come out on Friday -- but if the U.S. government shutdown continues, that indicator will not be released. Several Federal Reserve officials will be speaking publicly during the week. Last week, the Dow Jones Industrial Average gained 0.9%, the S&P 500 was up 0.8%, and the Nasdaq rose 2.3%. So far this year, the Dow is up 12%, the S&P 500 has gained 16%, and the Nasdaq has popped 23%.  On the earnings calendar, Palantir Technologies reports on Monday; AMD, Uber, Amgen, Pfizer, Spotify, Marriott, and Apollo Global Management on Tuesday; Toyota, Novo Nordisk, McDonald's, and Qualcomm on Wednesday; AstraZeneca, ConocoPhillips Airbnb, and Warner Bros. Discovery on Thursday; and Constellation Energy, Duke Energy, and Honda on Friday. Some 56% of S&P 500 companies have reported so far and earnings are up 13% from the prior-year quarter. That follows 13% growth in 2Q EPS and 14% growth in 1Q EPS, according to LSEG I/B/E/S. For 3Q, Information Technology is the leading sector so far, up 24%, and Energy is at the bottom, down 6%. On the economic calendar, the U.S. federal government shutdown is now the second longest in history, at 34 days. That means no government-issued economic reports will be released, including this week's scheduled October jobs report. Data that will be reported includes ISM Manufacturing on Monday; ADP employment on Wednesday; and Consumer Sentiment on Friday.  Turning to other data, the Atlanta Fed GDPNow measure calls for GDP of 3.9% in the third quarter. That is the same as last week's forecast. The Cleveland Fed Inflation Nowcast forecasts CPI of 3.0% in October, also the same as last week. Mortgage rates inched lower last week, with the average 30-year fixed-rate mortgage now at 6.17%, according to FreddieMac. Gas prices went up two cents last week and now average $3.04 per gallon for regular gas.  Looking ahead, the last Federal Open Market Committee meeting of the year is on December 10. After Chairman Powell's comments last week, odds have dropped to 63% from 92% for another 25-basis-point cut to the fed funds target rate, according to the CME FedWatch rate tool. After that, the first few meetings in 2026 are on January 28 and March 18. Taking a deeper dive into performance, U.S. stocks are lagging global stocks. A leading industrialized global stock-market index, the ETF EFA, has surged 25% year to date, while the leading emerging market ETF EEM has gained 32%. U.S. growth stocks, with a year-to-date gain of 20% (ETF IWF), have taken the edge over value stocks (ETF IWD), which have booked an advance of 11%. In other asset classes for the year to date, AGG bonds are up 4%, gold is up 54%, crude oil is down 14%, and Bitcoin is up 17%. The U.S. dollar is down 8%, tracking DXY. The VIX Volatility Index settled Friday at about 18, down from a high of 29 a few weeks ago. The current level is still in range of a bull market. Looking at leading and lagging sectors so far in 2025, Information Technology (+26%) is the top performer, followed by Communication Services, up 25%, Utilities (+21%) and Industrials (+18%) are outperforming the broader market, while Financials (+10%) is not too far behind. Defensive sectors like Energy, (+3%), Consumer Staples (+3%), Real Estate (+5%), Consumer Discretionary (+4%), Materials (+6%), and Healthcare (+6%) are at the bottom of the performance list.",
+            "reportType": "Market Summary",
+            "tickers": [
+              "META",
+              "MDLZ",
+              "ORLY",
+              "FHI",
+              "VLO",
+              "MCO",
+              "IEX",
+              "UTHR"
+            ],
+            "title": "Earnings Flood Continues\n\nThe earnings flood continues this week. The October"
+          },
+          {
+            "id": "MS_0P0000W3KZ_AnalystReport_1761865705000",
+            "headHtml": "Analyst Report: Meta Platforms, Inc.",
+            "provider": "Morningstar",
+            "reportDate": "2025-10-30T23:08:25Z",
+            "reportTitle": "Meta is the largest social media company in the world, boasting close to 4 billion monthly active users worldwide. The firm's \"Family of Apps,\" its core business, consists of Facebook, Instagram, Messenger, and WhatsApp. End users can leverage these applications for a variety of different purposes, from keeping in touch with friends to following celebrities and running digital businesses for free. Meta packages customer data, gleaned from its application ecosystem and sells ads to digital advertisers. While the firm has been investing heavily in its Reality Labs business, it remains a very small part of Meta\u2019s overall sales. ",
+            "reportType": "Analyst Report",
+            "targetPrice": 850.0,
+            "targetPriceStatus": "Maintained",
+            "investmentRating": "Bullish",
+            "tickers": [
+              "META"
+            ],
+            "title": "Meta Earnings: Ad Revenue Momentum Is Strong, but an Avalanche of AI Costs Are Coming in 2026"
           }
         ],
         "sigDevs": [
           {
-            "headline": "Meta Looks To Raise At Least $25 Billion From Jumbo Bond Sale - Bloomberg News",
-            "date": "2025-10-30"
+            "headline": "WhatsApp Launches A New WhatsApp App For Apple Watch - Blog",
+            "date": "2025-11-04"
           }
         ],
         "secReports": [
+          {
+            "id": "0001193125-25-262593_1326801",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1762128000000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000119312525262593/thumbnail.png",
+            "formType": "8-K"
+          },
           {
             "id": "0001628280-25-047240_1326801",
             "type": "Periodic Financial Reports",
@@ -361,21 +312,21 @@
             "formType": "S-8 POS"
           },
           {
-            "id": "0001326801-25-000092_1326801",
-            "type": "Offering Registrations",
-            "title": "S-8 POS : Offering Registrations",
-            "description": "Post-effective amendment to a S-8 registration statement",
-            "filingDate": 1748563200000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000092/thumbnail.png",
-            "formType": "S-8 POS"
-          },
-          {
             "id": "0001326801-25-000093_1326801",
             "type": "Offering Registrations",
             "title": "S-8 POS : Offering Registrations",
             "description": "Post-effective amendment to a S-8 registration statement",
             "filingDate": 1748563200000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000093/thumbnail.png",
+            "formType": "S-8 POS"
+          },
+          {
+            "id": "0001326801-25-000092_1326801",
+            "type": "Offering Registrations",
+            "title": "S-8 POS : Offering Registrations",
+            "description": "Post-effective amendment to a S-8 registration statement",
+            "filingDate": 1748563200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000092/thumbnail.png",
             "formType": "S-8 POS"
           },
           {
@@ -673,15 +624,6 @@
             "description": "Current report filing",
             "filingDate": 1685664000000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680123000083/thumbnail.png",
-            "formType": "8-K"
-          },
-          {
-            "id": "0001193125-23-134410_1326801",
-            "type": "Corporate Changes & Voting Matters",
-            "title": "8-K : Corporate Changes & Voting Matters",
-            "description": "Current report filing",
-            "filingDate": 1683072000000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000119312523134410/thumbnail.png",
             "formType": "8-K"
           }
         ]

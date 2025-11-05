@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 from typing import Any, AsyncGenerator, Type
 
 import pytest
@@ -8,26 +8,29 @@ from pytest_mock import MockerFixture
 from typeguard import TypeCheckError
 
 from tests._assertions import (
-    _assert_analysis_result,
-    _assert_annual_income_stmt_result,
-    _assert_chart_result,
-    _assert_client_calendar_events_result,
-    _assert_currencies_results,
-    _assert_insights,
-    _assert_market_summary_results,
-    _assert_options_result,
-    _assert_quote_summary_all_modules_result,
-    _assert_quote_types,
-    _assert_quotes,
-    _assert_ratings_result,
-    _assert_recommendations,
-    _assert_response_json,
-    _assert_search_result,
-    _assert_trending_result,
+    _assert_analysis_response_json,
+    _assert_calendar_events_response_json,
+    _assert_chart_response_json,
+    _assert_currencies_response_json,
+    _assert_insights_response_json,
+    _assert_market_summary_response_json,
+    _assert_options_response_json,
+    _assert_quote_response_json,
+    _assert_quote_summary_response_json,
+    _assert_quote_type_response_json,
+    _assert_ratings_response_json,
+    _assert_recommendations_response_json,
+    _assert_search_response_json,
+    _assert_timeseries_response_json,
+    _assert_trending_response_json,
 )
 from tests._utils import _mock_200_response, _mock_404_response
 from yafin import AsyncClient
-from yafin.const import ALL_MODULES, ANNUAL_INCOME_STATEMENT_TYPES
+from yafin.const import (
+    ANNUAL_INCOME_STATEMENT_TYPES,
+    CALENDAR_EVENT_MODULES,
+    QUOTE_SUMMARY_MODULES,
+)
 
 
 class TestUnitClient:
@@ -172,8 +175,7 @@ class TestUnitClient:
         """Test get_chart method."""
         _mock_200_response(mocker, chart_json_mock)
         chart = await client.get_chart(**kwargs)
-        _assert_response_json(chart, 'chart')
-        _assert_chart_result(chart['chart']['result'][0], kwargs['ticker'])
+        _assert_chart_response_json(chart, kwargs['ticker'])
 
     @pytest.mark.parametrize(
         'kwargs, err_cls',
@@ -252,8 +254,7 @@ class TestUnitClient:
         _mock_200_response(mocker, quote_json_mock)
         tickers = 'META'
         quotes = await client.get_quote(tickers)
-        _assert_response_json(quotes, 'quoteResponse')
-        _assert_quotes(quotes, tickers)
+        _assert_quote_response_json(quotes, tickers)
 
     @pytest.mark.asyncio
     async def test_get_quote_invalid_args(self, client: AsyncClient) -> None:
@@ -272,8 +273,7 @@ class TestUnitClient:
         _mock_200_response(mocker, quote_type_json_mock)
         tickers = 'META'
         quote_types = await client.get_quote_type(tickers)
-        _assert_response_json(quote_types, 'quoteType')
-        _assert_quote_types(quote_types, tickers)
+        _assert_quote_type_response_json(quote_types, tickers)
 
     @pytest.mark.asyncio
     async def test_get_quote_type_invalid_args(self, client: AsyncClient) -> None:
@@ -291,17 +291,14 @@ class TestUnitClient:
         """Test get_quote_summary method."""
         _mock_200_response(mocker, quote_summary_all_modules_json_mock)
         ticker = 'META'
-        modules = ALL_MODULES
+        modules = QUOTE_SUMMARY_MODULES
         quote_summary = await client.get_quote_summary(ticker, modules)
-        _assert_response_json(quote_summary, 'quoteSummary')
-        _assert_quote_summary_all_modules_result(
-            quote_summary['quoteSummary']['result'][0]
-        )
+        _assert_quote_summary_response_json(quote_summary, modules)
 
     @pytest.mark.parametrize(
         'kwargs, err_cls',
         [
-            (dict(ticker=1, modules=ALL_MODULES), TypeCheckError),
+            (dict(ticker=1, modules=QUOTE_SUMMARY_MODULES), TypeCheckError),
             (dict(ticker='META', modules='xxx'), ValueError),
             (dict(ticker='META', modules='assetProfil'), ValueError),
             (dict(ticker='META', modules=1), TypeCheckError),
@@ -380,8 +377,7 @@ class TestUnitClient:
         """Test get_timeseries method."""
         _mock_200_response(mocker, timeseries_income_statement_json_mock)
         timeseries = await client.get_timeseries(**kwargs)
-        _assert_response_json(timeseries, 'timeseries')
-        _assert_annual_income_stmt_result(timeseries['timeseries']['result'][0])
+        _assert_timeseries_response_json(timeseries, kwargs['types'], kwargs['ticker'])
 
     @pytest.mark.parametrize(
         'kwargs, err_cls',
@@ -426,8 +422,7 @@ class TestUnitClient:
         _mock_200_response(mocker, options_json_mock)
         ticker = 'META'
         options = await client.get_options(ticker)
-        _assert_response_json(options, 'optionChain')
-        _assert_options_result(options['optionChain']['result'][0], ticker)
+        _assert_options_response_json(options, ticker)
 
     @pytest.mark.asyncio
     async def test_get_options_invalid_args(self, client: AsyncClient) -> None:
@@ -445,7 +440,7 @@ class TestUnitClient:
         """Test get_search method."""
         _mock_200_response(mocker, search_json_mock)
         search = await client.get_search(tickers='META')
-        _assert_search_result(search)
+        _assert_search_response_json(search)
 
     @pytest.mark.asyncio
     async def test_get_search_invalid_args(self, client: AsyncClient) -> None:
@@ -464,8 +459,7 @@ class TestUnitClient:
         _mock_200_response(mocker, recommendations_json_mock)
         tickers = 'META'
         recommendations = await client.get_recommendations(tickers)
-        _assert_response_json(recommendations, 'finance')
-        _assert_recommendations(recommendations, tickers)
+        _assert_recommendations_response_json(recommendations, tickers)
 
     @pytest.mark.asyncio
     async def test_get_recommendations_invalid_args(self, client: AsyncClient) -> None:
@@ -484,8 +478,7 @@ class TestUnitClient:
         _mock_200_response(mocker, insights_json_mock)
         tickers = 'META'
         insights = await client.get_insights(tickers)
-        _assert_response_json(insights, 'finance')
-        _assert_insights(insights, tickers)
+        _assert_insights_response_json(insights, tickers)
 
     @pytest.mark.asyncio
     async def test_get_insights_invalid_args(self, client: AsyncClient) -> None:
@@ -504,7 +497,7 @@ class TestUnitClient:
         _mock_200_response(mocker, ratings_json_mock)
         ticker = 'META'
         ratings = await client.get_ratings(ticker)
-        _assert_ratings_result(ratings)
+        _assert_ratings_response_json(ratings)
 
     @pytest.mark.asyncio
     async def test_get_ratings_invalid_args(self, client: AsyncClient) -> None:
@@ -523,7 +516,7 @@ class TestUnitClient:
         _mock_200_response(mocker, analysis_json_mock)
         ticker = 'META'
         analysis = await client.get_analysis(ticker)
-        _assert_analysis_result(analysis, ticker)
+        _assert_analysis_response_json(analysis, ticker)
 
     @pytest.mark.asyncio
     async def test_get_analysis_invalid_args(self, client: AsyncClient) -> None:
@@ -541,10 +534,7 @@ class TestUnitClient:
         """Test get_market_summaries method."""
         _mock_200_response(mocker, market_summaries_json_mock)
         market_summaries = await client.get_market_summaries()
-        _assert_response_json(market_summaries, 'marketSummaryResponse')
-        _assert_market_summary_results(
-            market_summaries['marketSummaryResponse']['result']
-        )
+        _assert_market_summary_response_json(market_summaries)
 
     @pytest.mark.asyncio
     async def test_get_trending(
@@ -556,8 +546,7 @@ class TestUnitClient:
         """Test get_trending method."""
         _mock_200_response(mocker, trending_json_mock)
         trending = await client.get_trending()
-        _assert_response_json(trending, 'finance')
-        _assert_trending_result(trending['finance']['result'][0])
+        _assert_trending_response_json(trending)
 
     @pytest.mark.asyncio
     async def test_get_currencies(
@@ -569,25 +558,66 @@ class TestUnitClient:
         """Test get_currencies method."""
         _mock_200_response(mocker, currencies_json_mock)
         currencies = await client.get_currencies()
-        _assert_response_json(currencies, 'currencies')
-        _assert_currencies_results(currencies['currencies']['result'])
+        _assert_currencies_response_json(currencies)
 
+    @pytest.mark.parametrize(
+        'kwargs',
+        [
+            dict(
+                modules=CALENDAR_EVENT_MODULES,
+                period1=(datetime.now() - timedelta(days=149)).timestamp() * 1000,
+                period2=datetime.now().timestamp() * 1000,
+            ),
+            dict(
+                modules=CALENDAR_EVENT_MODULES,
+                period1=1749039103420.827,
+                period2=1761916222537.604,
+            ),
+            dict(
+                modules=CALENDAR_EVENT_MODULES,
+                period1=1749039103420,
+                period2=1761916222537.604,
+            ),
+            dict(
+                period1=(datetime.now() - timedelta(days=149)).timestamp() * 1000,
+                period2=datetime.now().timestamp() * 1000,
+            ),
+            dict(period1=1749039103420.827, period2=1761916222537.604),
+            dict(period1=1749039103420, period2=1761916222537.604),
+            dict(
+                modules=CALENDAR_EVENT_MODULES,
+                period1=(datetime.now() - timedelta(days=149)).timestamp() * 1000,
+            ),
+            dict(modules=CALENDAR_EVENT_MODULES, period1=1749039103420.827),
+            dict(modules=CALENDAR_EVENT_MODULES, period1=1749039103420),
+            dict(
+                modules=CALENDAR_EVENT_MODULES,
+                period2=datetime.now().timestamp() * 1000,
+            ),
+            dict(modules=CALENDAR_EVENT_MODULES, period2=1761916222537.604),
+            dict(modules=CALENDAR_EVENT_MODULES, period2=1761916222537.604),
+        ],
+    )
     @pytest.mark.asyncio
     async def test_get_calendar_events(
         self,
         client: AsyncClient,
+        kwargs: dict[str, str],
         mocker: MockerFixture,
         client_calendar_events_json_mock: dict[str, Any],
     ) -> None:
         """Test get_calendar_events method."""
         _mock_200_response(mocker, client_calendar_events_json_mock)
-        calendar_events = await client.get_calendar_events()
-        _assert_response_json(calendar_events, 'finance')
-        _assert_client_calendar_events_result(calendar_events['finance']['result'])
+        calendar_events = await client.get_calendar_events(**kwargs)
+        _assert_calendar_events_response_json(calendar_events)
 
     @pytest.mark.parametrize(
         'kwargs, err_cls',
-        [(dict(period1='xxx'), TypeCheckError), (dict(period2='xxx'), TypeCheckError)],
+        [
+            (dict(modules='xxx'), ValueError),
+            (dict(period1='xxx'), TypeCheckError),
+            (dict(period2='xxx'), TypeCheckError),
+        ],
     )
     @pytest.mark.asyncio
     async def test_get_calendar_events_invalid_args(

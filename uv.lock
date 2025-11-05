@@ -1269,7 +1269,6 @@ version = "0.1.0rc1"
 source = { editable = "." }
 dependencies = [
     { name = "curl-cffi" },
-    { name = "typeguard" },
 ]
 
 [package.dev-dependencies]
@@ -1294,13 +1293,11 @@ test = [
     { name = "pytest-asyncio" },
     { name = "pytest-cov" },
     { name = "pytest-mock" },
+    { name = "typeguard" },
 ]
 
 [package.metadata]
-requires-dist = [
-    { name = "curl-cffi", specifier = ">=0.13.0" },
-    { name = "typeguard", specifier = ">=4.4.4" },
-]
+requires-dist = [{ name = "curl-cffi", specifier = ">=0.13.0" }]
 
 [package.metadata.requires-dev]
 dev = [
@@ -1324,6 +1321,7 @@ test = [
     { name = "pytest-asyncio", specifier = ">=1.1.0" },
     { name = "pytest-cov", specifier = ">=4.0.0" },
     { name = "pytest-mock", specifier = ">=3.15.0" },
+    { name = "typeguard", specifier = ">=4.4.4" },
 ]
 
 [[package]]

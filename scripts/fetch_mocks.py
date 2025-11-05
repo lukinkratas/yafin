@@ -9,11 +9,12 @@ from logging_config import configure_logging
 
 from yafin import AsyncClient
 from yafin.const import (
-    ALL_MODULES,
     ANNUAL_BALANCE_SHEET_TYPES,
     ANNUAL_CASH_FLOW_TYPES,
     ANNUAL_INCOME_STATEMENT_TYPES,
+    CALENDAR_EVENT_MODULES,
     OTHER_TYPES,
+    QUOTE_SUMMARY_MODULES,
 )
 
 logger = logging.getLogger(__name__)
@@ -82,7 +83,7 @@ async def main() -> None:  # noqa: D103
         await process_mock(
             instance=client,
             method_name='get_quote_summary',
-            kwargs=dict(ticker=TICKER, modules=ALL_MODULES),
+            kwargs=dict(ticker=TICKER, modules=QUOTE_SUMMARY_MODULES),
             file_name='qs_all_modules',
         )
         await process_mock(
@@ -144,12 +145,6 @@ async def main() -> None:  # noqa: D103
             method_name='get_quote_summary',
             kwargs=dict(ticker=TICKER, modules='cashflowStatementHistoryQuarterly'),
             file_name='qs_cashflow_statement_history_quarterly',
-        )
-        await process_mock(
-            instance=client,
-            method_name='get_quote_summary',
-            kwargs=dict(ticker=TICKER, modules='esgScores'),
-            file_name='qs_esg_scores',
         )
         await process_mock(
             instance=client,
@@ -371,6 +366,7 @@ async def main() -> None:  # noqa: D103
         await process_mock(
             instance=client,
             method_name='get_calendar_events',
+            kwargs=dict(modules=CALENDAR_EVENT_MODULES),
             file_name='calendar_events',
         )
 
