@@ -8,65 +8,65 @@
             "symbol": "BTC-USD"
           },
           {
-            "symbol": "AMD"
-          },
-          {
-            "symbol": "NVO"
-          },
-          {
-            "symbol": "NOVO-B.CO"
-          },
-          {
-            "symbol": "ETH-USD"
-          },
-          {
-            "symbol": "SMCI"
-          },
-          {
-            "symbol": "VWS.CO"
-          },
-          {
-            "symbol": "AXON"
-          },
-          {
-            "symbol": "XRP-USD"
-          },
-          {
-            "symbol": "UPST"
-          },
-          {
-            "symbol": "PINS"
-          },
-          {
-            "symbol": "HTZ"
-          },
-          {
-            "symbol": "ANET"
+            "symbol": "LMND"
           },
           {
             "symbol": "RIVN"
           },
           {
-            "symbol": "SCNX"
+            "symbol": "PINS"
           },
           {
-            "symbol": "BTC-EUR"
+            "symbol": "SLDP"
           },
           {
-            "symbol": "AMBU-B.CO"
+            "symbol": "ETH-USD"
           },
           {
-            "symbol": "ZETA"
+            "symbol": "AXON"
           },
           {
-            "symbol": "MTSR"
+            "symbol": "TEVA"
           },
           {
-            "symbol": "CMBM"
+            "symbol": "U"
+          },
+          {
+            "symbol": "MCD"
+          },
+          {
+            "symbol": "SEDG"
+          },
+          {
+            "symbol": "TREX"
+          },
+          {
+            "symbol": "APPS"
+          },
+          {
+            "symbol": "CHR"
+          },
+          {
+            "symbol": "SMX"
+          },
+          {
+            "symbol": "KTOS"
+          },
+          {
+            "symbol": "UPST"
+          },
+          {
+            "symbol": "BHVN"
+          },
+          {
+            "symbol": "TDC"
+          },
+          {
+            "symbol": "SMCI"
           }
         ],
-        "jobTimestamp": 1762333542112,
-        "startInterval": 202511050800
+        "jobTimestamp": 1762359292823,
+        "startInterval": 202511051500
       }
     ],
     "error": null

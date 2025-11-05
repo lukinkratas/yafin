@@ -21,7 +21,9 @@
           1762128000,
           1762182000,
           1762214400,
-          1762300800
+          1762300800,
+          1762344000,
+          1762354800
         ],
         "economicEvents": [
           {
@@ -102,6 +104,21 @@
             "eventName": "Employment Trends*",
             "prior": "106.41",
             "period": "Sep"
+          },
+          {
+            "eventTime": 1762344000000,
+            "countryCode": "US",
+            "eventName": "Mortgage Market Index",
+            "prior": "338.7",
+            "actual": "332.3"
+          },
+          {
+            "eventTime": 1762354800000,
+            "countryCode": "US",
+            "eventName": "ISM N-Mfg Employment Idx",
+            "prior": "47.2",
+            "actual": "48.2",
+            "period": "Oct"
           }
         ]
       },
@@ -5856,37 +5873,7 @@
             "META"
           ],
           "type": [
-            "earningsConferenceCallEvents"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
             "otherCorporate"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "mergerAndAcquisitionAnnouncement"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "conferenceEvents"
           ]
         }
       },
@@ -5906,7 +5893,7 @@
             "META"
           ],
           "type": [
-            "conferencePresentation"
+            "conferenceEvents"
           ]
         }
       },
@@ -5927,6 +5914,36 @@
           ],
           "type": [
             "shareHoldersAnnualMeetingsEvents"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "conferencePresentation"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "mergerAndAcquisitionAnnouncement"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "earningsConferenceCallEvents"
           ]
         }
       }

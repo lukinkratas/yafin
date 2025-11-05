@@ -5,7 +5,7 @@
 - [ ] client.get_timeseries, symbol.get_income_statement, symbol.get_balance_sheet and symbol.get_cash_flow default period1 and 2 args datetime.datetime.timestamp ?
 - [ ] example from docs to main or integration tests
 
-- [ ] no only meta fixtures
+- [ ] not only meta fixtures
 - [ ] reverse eng the rest API again - check, if all endpoints are present
 - [ ] (sync) client and (sync) symbol ? + pytest-benchmark tests
 - [ ] consider dependency injection

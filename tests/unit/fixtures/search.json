@@ -8,14 +8,12 @@
       "quoteType": "EQUITY",
       "symbol": "META",
       "index": "quotes",
-      "score": 12827000.0,
+      "score": 12537000.0,
       "typeDisp": "Equity",
       "longname": "Meta Platforms, Inc.",
       "exchDisp": "NASDAQ",
       "sector": "Communication Services",
-      "sectorDisp": "Communication Services",
       "industry": "Internet Content & Information",
-      "industryDisp": "Internet Content & Information",
       "dispSecIndFlag": true,
       "isYahooFinance": true,
       "prevName": "Facebook, Inc.",
@@ -27,14 +25,12 @@
       "quoteType": "EQUITY",
       "symbol": "AMR",
       "index": "quotes",
-      "score": 20390.0,
+      "score": 20371.0,
       "typeDisp": "Equity",
       "longname": "Alpha Metallurgical Resources, Inc.",
       "exchDisp": "NYSE",
       "sector": "Basic Materials",
-      "sectorDisp": "Basic Materials",
       "industry": "Coking Coal",
-      "industryDisp": "Coking Coal",
       "isYahooFinance": true,
       "prevName": "Contura Energy, Inc.",
       "nameChangeDate": "2025-11-04"
@@ -45,14 +41,12 @@
       "quoteType": "EQUITY",
       "symbol": "WPM",
       "index": "quotes",
-      "score": 20241.0,
+      "score": 20225.0,
       "typeDisp": "Equity",
       "longname": "Wheaton Precious Metals Corp.",
       "exchDisp": "NYSE",
       "sector": "Basic Materials",
-      "sectorDisp": "Basic Materials",
       "industry": "Gold",
-      "industryDisp": "Gold",
       "isYahooFinance": true
     },
     {
@@ -61,33 +55,15 @@
       "quoteType": "EQUITY",
       "symbol": "TMC",
       "index": "quotes",
-      "score": 20143.0,
+      "score": 20125.0,
       "typeDisp": "Equity",
       "longname": "TMC the metals company Inc.",
       "exchDisp": "NASDAQ",
       "sector": "Basic Materials",
-      "sectorDisp": "Basic Materials",
       "industry": "Other Industrial Metals & Mining",
-      "industryDisp": "Other Industrial Metals & Mining",
       "isYahooFinance": true,
       "prevName": "Sustainable Opportunities Acquisition Corp.",
       "nameChangeDate": "2025-11-04"
-    },
-    {
-      "exchange": "NGM",
-      "shortname": "Critical Metals Corp.",
-      "quoteType": "EQUITY",
-      "symbol": "CRML",
-      "index": "quotes",
-      "score": 20092.0,
-      "typeDisp": "Equity",
-      "longname": "Critical Metals Corp.",
-      "exchDisp": "NASDAQ",
-      "sector": "Basic Materials",
-      "sectorDisp": "Basic Materials",
-      "industry": "Other Industrial Metals & Mining",
-      "industryDisp": "Other Industrial Metals & Mining",
-      "isYahooFinance": true
     },
     {
       "exchange": "NCM",
@@ -100,9 +76,21 @@
       "longname": "Aqua Metals, Inc.",
       "exchDisp": "NASDAQ",
       "sector": "Industrials",
-      "sectorDisp": "Industrials",
       "industry": "Waste Management",
-      "industryDisp": "Waste Management",
+      "isYahooFinance": true
+    },
+    {
+      "exchange": "NGM",
+      "shortname": "Critical Metals Corp.",
+      "quoteType": "EQUITY",
+      "symbol": "CRML",
+      "index": "quotes",
+      "score": 20076.0,
+      "typeDisp": "Equity",
+      "longname": "Critical Metals Corp.",
+      "exchDisp": "NASDAQ",
+      "sector": "Basic Materials",
+      "industry": "Other Industrial Metals & Mining",
       "isYahooFinance": true
     },
     {
@@ -111,35 +99,33 @@
       "quoteType": "EQUITY",
       "symbol": "DMX.V",
       "index": "quotes",
-      "score": 20068.0,
+      "score": 20066.0,
       "typeDisp": "Equity",
       "longname": "District Metals Corp.",
       "exchDisp": "CDNX",
       "sector": "Basic Materials",
-      "sectorDisp": "Basic Materials",
       "industry": "Other Industrial Metals & Mining",
-      "industryDisp": "Other Industrial Metals & Mining",
       "isYahooFinance": true
     }
   ],
   "news": [
     {
-      "uuid": "f8f81034-6b2a-38d5-9383-76ff55b6955f",
-      "title": "The list of major companies laying off staff this year includes Amazon, Starbucks, Oracle, American Airlines, and more",
-      "publisher": "Business Insider",
-      "link": "https://finance.yahoo.com/m/f8f81034-6b2a-38d5-9383-76ff55b6955f/the-list-of-major-companies.html",
-      "providerPublishTime": 1762327704,
+      "uuid": "ec560799-d99b-38e6-9325-66b9e651fd84",
+      "title": "Why Pinterest Stock Tumbled Today",
+      "publisher": "Motley Fool",
+      "link": "https://finance.yahoo.com/m/ec560799-d99b-38e6-9325-66b9e651fd84/why-pinterest-stock-tumbled.html",
+      "providerPublishTime": 1762357237,
       "type": "STORY",
       "thumbnail": {
         "resolutions": [
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/Z3gtJCtKMnkI78eKiJjRfQ--~B/aD0yNjUyO3c9MzUzNjthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/business_insider_articles_888/4da92e8d919e27fb0b7421ef3b8cf8f1",
-            "width": 3536,
-            "height": 2652,
+            "url": "https://s.yimg.com/uu/api/res/1.2/IPfGjBnNCiPtVTbYO_IT6w--~B/aD00NTA7dz04MDA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/motleyfool.com/1a761fc55e1b38e7d23442941ba6fc0b",
+            "width": 800,
+            "height": 450,
             "tag": "original"
           },
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/kqvf91FM1ol9yD7zmagL4w--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/business_insider_articles_888/4da92e8d919e27fb0b7421ef3b8cf8f1",
+            "url": "https://s.yimg.com/uu/api/res/1.2/4UEASm3NtYnKe9.6oVM4ZQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/1a761fc55e1b38e7d23442941ba6fc0b",
             "width": 140,
             "height": 140,
             "tag": "140x140"
@@ -147,34 +133,44 @@
         ]
       },
       "relatedTickers": [
-        "AMZN",
-        "ORCL",
-        "SBUX",
-        "NKE",
+        "PINS",
+        "META"
+      ]
+    },
+    {
+      "uuid": "8bb2ef8b-e236-329b-8414-388486298cf3",
+      "title": "Capital One, Chainalysis, Meta, Microsoft, and TIAA Join National Elder Fraud Coordination Center (NEFCC)",
+      "publisher": "GlobeNewswire",
+      "link": "https://finance.yahoo.com/news/capital-one-chainalysis-meta-microsoft-153700382.html",
+      "providerPublishTime": 1762357020,
+      "type": "STORY",
+      "relatedTickers": [
+        "COF",
+        "CHAA.PVT",
         "META",
         "MSFT",
-        "UPS",
-        "DBX",
-        "XYZ"
+        "AMZN",
+        "GOOGL",
+        "WMT"
       ]
     },
     {
-      "uuid": "f9bad894-e975-3df6-97d2-a09bf8a5d446",
-      "title": "charcha 2025: India's largest collaborative convening on livelihoods returns to Delhi with its 6th edition",
-      "publisher": "PR Newswire",
-      "link": "https://finance.yahoo.com/news/charcha-2025-indias-largest-collaborative-071400859.html",
-      "providerPublishTime": 1762326840,
+      "uuid": "33b51a11-a38a-330f-b572-e91f98fefc09",
+      "title": "U.S. Markets Stabilize After Tech Rout",
+      "publisher": "The Wall Street Journal",
+      "link": "https://finance.yahoo.com/m/33b51a11-a38a-330f-b572-e91f98fefc09/u.s.-markets-stabilize-after.html",
+      "providerPublishTime": 1762356360,
       "type": "STORY",
       "thumbnail": {
         "resolutions": [
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/yZahRjFVP3N8090YK8_Aqg--~B/aD0yMjU7dz00MDA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/prnewswire.com/b1faed83bcfe91816e56a5269ef13594",
-            "width": 400,
-            "height": 225,
+            "url": "https://s.yimg.com/uu/api/res/1.2/ApJmLANtj4jIFQ_fKQVWrQ--~B/aD02NDA7dz0xMjgwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/wsj.com/fea196a0d88dbba6dadfe7271d24b2a9",
+            "width": 1280,
+            "height": 640,
             "tag": "original"
           },
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/FCFEuSl3uhtfAii69gb5WA--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/prnewswire.com/b1faed83bcfe91816e56a5269ef13594",
+            "url": "https://s.yimg.com/uu/api/res/1.2/n572eU.b5BdUmveWTN9J8w--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/wsj.com/fea196a0d88dbba6dadfe7271d24b2a9",
             "width": 140,
             "height": 140,
             "tag": "140x140"
@@ -182,173 +178,30 @@
         ]
       },
       "relatedTickers": [
-        "META"
-      ]
-    },
-    {
-      "uuid": "43deb858-098c-3357-af1b-c962c9c48511",
-      "title": "Novo Nordisk's sales increased by 12% in Danish kroner and by 15% at CER in the first nine months of 2025; R&D pipeline progress continues",
-      "publisher": "GlobeNewswire",
-      "link": "https://finance.yahoo.com/news/novo-nordisks-sales-increased-12-063000511.html",
-      "providerPublishTime": 1762324200,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/IA8XetXMAbOyKXBpUBGPHw--~B/aD00Mjc7dz02MDA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/globenewswire.com/390a90dca9ab1da0d2c89c641db85b9e",
-            "width": 600,
-            "height": 427,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/9H9FGaLRrg2bdOyiS8KgFQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/globenewswire.com/390a90dca9ab1da0d2c89c641db85b9e",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "NOVO-B.CO",
-        "NONOF",
-        "NVO",
-        "AKRO",
-        "META",
-        "OMER"
-      ]
-    },
-    {
-      "uuid": "8143a99a-1b5c-313c-adc1-af145d16c230",
-      "title": "Meta Platforms (META): Reassessing Valuation After Q3 Growth and $30B AI Investment Push",
-      "publisher": "Simply Wall St.",
-      "link": "https://finance.yahoo.com/news/meta-platforms-meta-reassessing-valuation-061452114.html",
-      "providerPublishTime": 1762323292,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/BrUhbDoJKeNJUavlZ7MvVQ--~B/aD00MzI7dz0xMTk0O2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/simply_wall_st__316/fba9687e0054b528b01bdfa6c56cd20c",
-            "width": 1194,
-            "height": 432,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/ugpo6zQdWTcUD0neJdvYVQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/simply_wall_st__316/fba9687e0054b528b01bdfa6c56cd20c",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "META"
-      ]
-    },
-    {
-      "uuid": "f60d4e67-a66c-3076-a362-f8048bee3b3d",
-      "title": "Meta\u2019s Q3 Earnings Call: Our Top 5 Analyst Questions",
-      "publisher": "StockStory",
-      "link": "https://finance.yahoo.com/news/meta-q3-earnings-call-top-053541726.html",
-      "providerPublishTime": 1762320941,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/Ol.OYXaTLDXSb6x604S3Pw--~B/aD03MDA7dz0xNDAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/stockstory_922/f2216b648a0db93b9cf1e78ef49e6e65",
-            "width": 1400,
-            "height": 700,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/7aPjCAIn4fIyTLcmX_ixvg--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/stockstory_922/f2216b648a0db93b9cf1e78ef49e6e65",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "META"
-      ]
-    },
-    {
-      "uuid": "31e2e4d7-9df9-335c-91b9-70c09644237c",
-      "title": "Simon Yeung of Biel Crystal, was awarded KPMG's \"Excellent Family Business Future Entrepreneur\"",
-      "publisher": "PR Newswire",
-      "link": "https://finance.yahoo.com/news/simon-yeung-biel-crystal-awarded-052500967.html",
-      "providerPublishTime": 1762320300,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/AtYLK0MwmgR4.JN20cY_Mg--~B/aD0yNjc7dz00MDA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/prnewswire.com/f2feb99a7bff8e143b3adecde2adb83f",
-            "width": 400,
-            "height": 267,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/zMzaA8to2dTYzb0s_BcaGw--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/prnewswire.com/f2feb99a7bff8e143b3adecde2adb83f",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "AAPL",
-        "005930.KS",
-        "META",
-        "1810.HK"
-      ]
-    },
-    {
-      "uuid": "e32189e8-a77d-329a-b397-77cbe40fe44c",
-      "title": "Nasdaq Composite Falls 2% as Tech Loses Ground Amid Valuation Concerns",
-      "publisher": "MT Newswires",
-      "link": "https://finance.yahoo.com/news/nasdaq-composite-falls-2-tech-220736819.html",
-      "providerPublishTime": 1762294056,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/eYNqcCgn3G_qEuDD8GI7aw--~B/aD03NTA7dz0xMDAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/mt_newswires_premium_news_706/2475a8618428bf41d7b045240805a142",
-            "width": 1000,
-            "height": 750,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/LrkzM0CxMdNkMTDmn2vSDw--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/mt_newswires_premium_news_706/2475a8618428bf41d7b045240805a142",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "^IXIC",
-        "^SPX",
         "^DJI",
-        "PLTR",
-        "NVDA"
+        "^IXIC",
+        "^VIX",
+        "GC=F",
+        "META"
       ]
     },
     {
-      "uuid": "9dff9815-f60f-3a26-abcb-a5b156f7d332",
-      "title": "AMD Reports Third Quarter 2025 Financial Results",
-      "publisher": "GlobeNewswire",
-      "link": "https://finance.yahoo.com/news/amd-reports-third-quarter-2025-211500781.html",
-      "providerPublishTime": 1762290900,
+      "uuid": "9ac3337b-9118-33a3-9b76-1b7a1d6451b4",
+      "title": "Why \u201cFree\u201d Could Sink The AI Bubble",
+      "publisher": "24/7 Wall St.",
+      "link": "https://finance.yahoo.com/m/9ac3337b-9118-33a3-9b76-1b7a1d6451b4/why-%E2%80%9Cfree%E2%80%9D-could-sink-the-ai.html",
+      "providerPublishTime": 1762356023,
       "type": "STORY",
       "thumbnail": {
         "resolutions": [
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/jxl7FQ3l6yh_HPZ2.TtBwg--~B/aD0xOTU7dz01MDg7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/globenewswire.com/701ad71f57aa227c300d55d9cf75787e",
-            "width": 508,
-            "height": 195,
+            "url": "https://s.yimg.com/uu/api/res/1.2/CqW0HaZoTMg6MjBX9lrpiA--~B/aD0xMDgwO3c9MTkyMDthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/24_7_wall_st__718/78d5d23fc87b0e34d5d0eef9be4a62c9",
+            "width": 1920,
+            "height": 1080,
             "tag": "original"
           },
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/iGZOZKeTKHXG28xzF53cUw--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/globenewswire.com/701ad71f57aa227c300d55d9cf75787e",
+            "url": "https://s.yimg.com/uu/api/res/1.2/FoJCmfTTLYa1mlHN5barFQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/24_7_wall_st__718/78d5d23fc87b0e34d5d0eef9be4a62c9",
             "width": 140,
             "height": 140,
             "tag": "140x140"
@@ -356,14 +209,120 @@
         ]
       },
       "relatedTickers": [
-        "AMD",
-        "M",
-        "IBM",
-        "OPAI.PVT",
-        "ORCL",
-        "CSCO",
+        "MSFT",
         "META",
-        "TECHM.NS"
+        "GOOG"
+      ]
+    },
+    {
+      "uuid": "4a7bdf7e-7be0-3cbd-a719-7396da6ecdf5",
+      "title": "This Social-Media Stock Is Down 20% Today",
+      "publisher": "Investopedia",
+      "link": "https://finance.yahoo.com/m/4a7bdf7e-7be0-3cbd-a719-7396da6ecdf5/this-social-media-stock-is.html",
+      "providerPublishTime": 1762355456,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/CaYnqaRlLMgWRiP4KOQW0A--~B/aD00MDAwO3c9NjAwMDthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/investopedia_245/d0d52025988633adedce5c6a14bcefa1",
+            "width": 6000,
+            "height": 4000,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/NNYeKjqfHVCgcim0nBCoOQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/investopedia_245/d0d52025988633adedce5c6a14bcefa1",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "PINS",
+        "SNAP",
+        "META"
+      ]
+    },
+    {
+      "uuid": "fce18c54-849b-3811-bda5-e290d157a314",
+      "title": "Meta Slumps on AI Spending, Echoing 2022 Metaverse Rout",
+      "publisher": "Bloomberg",
+      "link": "https://finance.yahoo.com/news/meta-slumps-ai-spending-echoing-121501073.html",
+      "providerPublishTime": 1762353436,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/9bwD3313mvs2PmeH_QXlYQ--~B/aD0xNDY3O3c9MjIwMDthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/bloomberg_holding_pen_162/80d1c87ce5422e860df8f8f1e9b748cf",
+            "width": 2200,
+            "height": 1467,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/GRTq7uP44_1buVkNYPIVyA--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/bloomberg_holding_pen_162/80d1c87ce5422e860df8f8f1e9b748cf",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "META"
+      ]
+    },
+    {
+      "uuid": "28348442-097d-34f1-b57a-baee798fa846",
+      "title": "Buy 2 AI-Focused Stocks on Robust Spending and Solid Demand Outlook",
+      "publisher": "Zacks",
+      "link": "https://finance.yahoo.com/news/buy-2-ai-focused-stocks-143300147.html",
+      "providerPublishTime": 1762353180,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/R0mah28mWR5GQstipLyi0w--~B/aD0zODI7dz02MjA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/zacks.com/9eb778d01f68d33947cb279d99e17e68",
+            "width": 620,
+            "height": 382,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/mszDuc0yGz.b7opzA7YIzg--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/zacks.com/9eb778d01f68d33947cb279d99e17e68",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "MU",
+        "ASML.AS"
+      ]
+    },
+    {
+      "uuid": "e6dabff6-88cf-3f6b-b99c-3c80c2ee9c9f",
+      "title": "Motion Picture Trade Group Pans Instagram\u2019s Use of \u2018PG-13\u2019 With Cease and Desist",
+      "publisher": "The Wall Street Journal",
+      "link": "https://finance.yahoo.com/m/e6dabff6-88cf-3f6b-b99c-3c80c2ee9c9f/motion-picture-trade-group.html",
+      "providerPublishTime": 1762347600,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/..VLckKEJavP5yogCXVvdw--~B/aD02NDA7dz0xMjgwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/the_wall_street_journal_hosted_996/2a7f4b3717bfd773c8fb900de2d6c4b6",
+            "width": 1280,
+            "height": 640,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/d70vMfTBBG5awFhoROPNGA--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/the_wall_street_journal_hosted_996/2a7f4b3717bfd773c8fb900de2d6c4b6",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "META"
       ]
     }
   ],
@@ -421,8 +380,8 @@
   ],
   "researchReports": [],
   "screenerFieldResults": [],
-  "totalTime": 47,
-  "timeTakenForQuotes": 439,
+  "totalTime": 75,
+  "timeTakenForQuotes": 431,
   "timeTakenForNews": 700,
   "timeTakenForAlgowatchlist": 400,
   "timeTakenForPredefinedScreener": 400,

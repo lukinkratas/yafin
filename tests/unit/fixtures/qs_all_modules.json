@@ -361,7 +361,7 @@
           "maxAge": 1,
           "priceHint": 2,
           "enterpriseValue": 1587789430784,
-          "forwardPE": 20.67395,
+          "forwardPE": 21.109135,
           "profitMargins": 0.30892,
           "floatShares": 2173400536,
           "sharesOutstanding": 2177889269,
@@ -371,14 +371,14 @@
           "dateShortInterest": 1760486400,
           "sharesPercentSharesOut": 0.0097,
           "heldPercentInsiders": 0.00078,
-          "heldPercentInstitutions": 0.79537004,
+          "heldPercentInstitutions": 0.79542,
           "shortRatio": 1.92,
           "shortPercentOfFloat": 0.0113,
           "beta": 1.272,
           "impliedSharesOutstanding": 2520527597,
           "category": null,
           "bookValue": 76.98,
-          "priceToBook": 8.149129,
+          "priceToBook": 8.320667,
           "fundFamily": null,
           "legalType": null,
           "lastFiscalYearEnd": 1735603200,
@@ -391,8 +391,8 @@
           "lastSplitFactor": null,
           "enterpriseToRevenue": 8.381,
           "enterpriseToEbitda": 16.136,
-          "52WeekChange": 0.11478019,
-          "SandP52WeekChange": 0.15566266,
+          "52WeekChange": 0.09661746,
+          "SandP52WeekChange": 0.1420989,
           "lastDividendValue": 0.525,
           "lastDividendDate": 1758499200,
           "latestShareClass": null,
@@ -671,9 +671,9 @@
                 "longFmt": "69,815,301"
               },
               "value": {
-                "raw": 43796535134,
-                "fmt": "43.8B",
-                "longFmt": "43,796,535,134"
+                "raw": 44718447377,
+                "fmt": "44.72B",
+                "longFmt": "44,718,447,377"
               },
               "pctChange": {
                 "raw": 0.0091,
@@ -697,9 +697,9 @@
                 "longFmt": "61,627,857"
               },
               "value": {
-                "raw": 38660387704,
-                "fmt": "38.66B",
-                "longFmt": "38,660,387,704"
+                "raw": 39474184609,
+                "fmt": "39.47B",
+                "longFmt": "39,474,184,609"
               },
               "pctChange": {
                 "raw": 0.0128,
@@ -723,9 +723,9 @@
                 "longFmt": "38,306,891"
               },
               "value": {
-                "raw": 24030679142,
-                "fmt": "24.03B",
-                "longFmt": "24,030,679,142"
+                "raw": 24536522293,
+                "fmt": "24.54B",
+                "longFmt": "24,536,522,293"
               },
               "pctChange": {
                 "raw": -0.026199998,
@@ -749,9 +749,9 @@
                 "longFmt": "27,567,524"
               },
               "value": {
-                "raw": 17293659357,
-                "fmt": "17.29B",
-                "longFmt": "17,293,659,357"
+                "raw": 17657688983,
+                "fmt": "17.66B",
+                "longFmt": "17,657,688,983"
               },
               "pctChange": {
                 "raw": 0.0017,
@@ -775,9 +775,9 @@
                 "longFmt": "26,603,844"
               },
               "value": {
-                "raw": 16689123612,
-                "fmt": "16.69B",
-                "longFmt": "16,689,123,612"
+                "raw": 17040427827,
+                "fmt": "17.04B",
+                "longFmt": "17,040,427,827"
               },
               "pctChange": {
                 "raw": 0.0183,
@@ -801,9 +801,9 @@
                 "longFmt": "25,861,535"
               },
               "value": {
-                "raw": 16223458325,
-                "fmt": "16.22B",
-                "longFmt": "16,223,458,325"
+                "raw": 16564960337,
+                "fmt": "16.56B",
+                "longFmt": "16,564,960,337"
               },
               "pctChange": {
                 "raw": -0.0137,
@@ -827,9 +827,9 @@
                 "longFmt": "22,547,548"
               },
               "value": {
-                "raw": 14144527976,
-                "fmt": "14.14B",
-                "longFmt": "14,144,527,976"
+                "raw": 14442268733,
+                "fmt": "14.44B",
+                "longFmt": "14,442,268,733"
               },
               "pctChange": {
                 "raw": -0.050300002,
@@ -853,9 +853,9 @@
                 "longFmt": "19,350,445"
               },
               "value": {
-                "raw": 12138921299,
-                "fmt": "12.14B",
-                "longFmt": "12,138,921,299"
+                "raw": 12394444256,
+                "fmt": "12.39B",
+                "longFmt": "12,394,444,256"
               },
               "pctChange": {
                 "raw": -0.0138,
@@ -879,9 +879,9 @@
                 "longFmt": "18,213,313"
               },
               "value": {
-                "raw": 11425575644,
-                "fmt": "11.43B",
-                "longFmt": "11,425,575,644"
+                "raw": 11666082753,
+                "fmt": "11.67B",
+                "longFmt": "11,666,082,753"
               },
               "pctChange": {
                 "raw": 0.0083,
@@ -905,9 +905,9 @@
                 "longFmt": "13,307,195"
               },
               "value": {
-                "raw": 8347869664,
-                "fmt": "8.35B",
-                "longFmt": "8,347,869,664"
+                "raw": 8523591402,
+                "fmt": "8.52B",
+                "longFmt": "8,523,591,402"
               },
               "pctChange": {
                 "raw": -0.0143,
@@ -919,40 +919,40 @@
         "summaryDetail": {
           "maxAge": 1,
           "priceHint": 2,
-          "previousClose": 637.71,
-          "open": 628.04,
-          "dayLow": 626.2801,
-          "dayHigh": 641.7399,
-          "regularMarketPreviousClose": 637.71,
-          "regularMarketOpen": 628.04,
-          "regularMarketDayLow": 626.2801,
-          "regularMarketDayHigh": 641.7399,
+          "previousClose": 627.32,
+          "open": 632.26,
+          "dayLow": 626.5375,
+          "dayHigh": 640.73,
+          "regularMarketPreviousClose": 627.32,
+          "regularMarketOpen": 632.26,
+          "regularMarketDayLow": 626.5375,
+          "regularMarketDayHigh": 640.73,
           "dividendRate": 2.1,
           "dividendYield": 0.0033000002,
           "exDividendDate": 1758499200,
           "payoutRatio": 0.091800004,
           "beta": 1.272,
-          "trailingPE": 27.782108,
-          "forwardPE": 24.795258,
-          "volume": 26567322,
-          "regularMarketVolume": 26567322,
-          "averageVolume": 13607571,
-          "averageVolume10days": 26411950,
-          "averageDailyVolume10Day": 26411950,
-          "bid": 626.0,
-          "ask": 627.15,
-          "bidSize": 800,
-          "askSize": 200,
-          "marketCap": 1581177372672,
+          "trailingPE": 28.366919,
+          "forwardPE": 25.317196,
+          "volume": 11584700,
+          "regularMarketVolume": 11584700,
+          "averageVolume": 13819304,
+          "averageVolume10days": 28363070,
+          "averageDailyVolume10Day": 28363070,
+          "bid": 637.15,
+          "ask": 639.89,
+          "bidSize": 300,
+          "askSize": 100,
+          "marketCap": 1614461009920,
           "fiftyTwoWeekLow": 479.8,
           "fiftyTwoWeekHigh": 796.25,
           "allTimeHigh": 796.25,
           "allTimeLow": 17.55,
-          "priceToSalesTrailing12Months": 8.345794,
-          "fiftyDayAverage": 736.2586,
-          "twoHundredDayAverage": 678.67377,
+          "priceToSalesTrailing12Months": 8.521472,
+          "fiftyDayAverage": 733.739,
+          "twoHundredDayAverage": 678.7465,
           "trailingAnnualDividendRate": 2.075,
-          "trailingAnnualDividendYield": 0.0032538301,
+          "trailingAnnualDividendYield": 0.0033077218,
           "currency": "USD",
           "fromCurrency": null,
           "toCurrency": null,
@@ -963,6 +963,26 @@
         },
         "insiderHolders": {
           "holders": [
+            {
+              "maxAge": 1,
+              "name": "ALFORD PEGGY",
+              "relation": "Director",
+              "url": "",
+              "transactionDescription": "Sale",
+              "latestTransDate": {
+                "raw": 1761868800,
+                "fmt": "2025-10-31"
+              },
+              "positionIndirect": {
+                "raw": 3505,
+                "fmt": "3.5k",
+                "longFmt": "3,505"
+              },
+              "positionIndirectDate": {
+                "raw": 1761868800,
+                "fmt": "2025-10-31"
+              }
+            },
             {
               "maxAge": 1,
               "name": "ANDERSON AARON",
@@ -1021,26 +1041,6 @@
               "positionDirectDate": {
                 "raw": 1755475200,
                 "fmt": "2025-08-18"
-              }
-            },
-            {
-              "maxAge": 1,
-              "name": "COLLISON PATRICK",
-              "relation": "Director",
-              "url": "",
-              "transactionDescription": "Conversion of Exercise of derivative security",
-              "latestTransDate": {
-                "raw": 1755216000,
-                "fmt": "2025-08-15"
-              },
-              "positionDirect": {
-                "raw": 155,
-                "fmt": "155",
-                "longFmt": "155"
-              },
-              "positionDirectDate": {
-                "raw": 1755216000,
-                "fmt": "2025-08-15"
               }
             },
             {
@@ -5323,30 +5323,24 @@
         },
         "price": {
           "maxAge": 1,
-          "preMarketChangePercent": 0.002104201,
-          "preMarketChange": 1.3200073,
-          "preMarketTime": 1762334282,
-          "preMarketPrice": 628.64,
           "preMarketSource": "FREE_REALTIME",
-          "postMarketSource": "FREE_REALTIME",
-          "regularMarketChangePercent": -0.016292699,
-          "regularMarketChange": -10.39,
-          "regularMarketTime": 1762290000,
+          "regularMarketChangePercent": 0.02104989,
+          "regularMarketChange": 13.205017,
+          "regularMarketTime": 1762362088,
           "priceHint": 2,
-          "regularMarketPrice": 627.32,
-          "regularMarketDayHigh": 641.7399,
-          "regularMarketDayLow": 626.2801,
-          "regularMarketVolume": 26567322,
-          "averageDailyVolume10Day": 26411950,
-          "averageDailyVolume3Month": 13607571,
-          "regularMarketPreviousClose": 637.71,
+          "regularMarketPrice": 640.525,
+          "regularMarketDayHigh": 640.73,
+          "regularMarketDayLow": 626.5375,
+          "regularMarketVolume": 11584700,
+          "averageDailyVolume10Day": 28363070,
+          "averageDailyVolume3Month": 13819304,
+          "regularMarketPreviousClose": 627.32,
           "regularMarketSource": "FREE_REALTIME",
-          "regularMarketOpen": 628.04,
-          "overnightMarketSource": "BOATS Real Time Price",
+          "regularMarketOpen": 632.26,
           "exchange": "NMS",
           "exchangeName": "NasdaqGS",
           "exchangeDataDelayedBy": 0,
-          "marketState": "PRE",
+          "marketState": "REGULAR",
           "quoteType": "EQUITY",
           "symbol": "META",
           "underlyingSymbol": null,
@@ -5358,7 +5352,7 @@
           "fromCurrency": null,
           "toCurrency": null,
           "lastMarket": null,
-          "marketCap": 1581177372672
+          "marketCap": 1614461009920
         },
         "balanceSheetHistory": {
           "balanceSheetStatements": [
@@ -5604,24 +5598,24 @@
               },
               "epsRevisions": {
                 "upLast7days": {
-                  "raw": 3,
-                  "fmt": "3",
-                  "longFmt": "3"
+                  "raw": 4,
+                  "fmt": "4",
+                  "longFmt": "4"
                 },
                 "upLast30days": {
-                  "raw": 5,
-                  "fmt": "5",
-                  "longFmt": "5"
+                  "raw": 6,
+                  "fmt": "6",
+                  "longFmt": "6"
                 },
                 "downLast30days": {
-                  "raw": 11,
-                  "fmt": "11",
-                  "longFmt": "11"
+                  "raw": 12,
+                  "fmt": "12",
+                  "longFmt": "12"
                 },
                 "downLast7Days": {
-                  "raw": 13,
-                  "fmt": "13",
-                  "longFmt": "13"
+                  "raw": 15,
+                  "fmt": "15",
+                  "longFmt": "15"
                 },
                 "downLast90days": {},
                 "epsRevisionsCurrency": "USD"
@@ -5632,13 +5626,13 @@
               "period": "0y",
               "endDate": "2025-12-31",
               "growth": {
-                "raw": 0.103,
-                "fmt": "10.30%"
+                "raw": 0.100200005,
+                "fmt": "10.02%"
               },
               "earningsEstimate": {
                 "avg": {
-                  "raw": 24.25,
-                  "fmt": "24.25"
+                  "raw": 24.17238,
+                  "fmt": "24.17"
                 },
                 "low": {
                   "raw": 21.85,
@@ -5653,21 +5647,21 @@
                   "fmt": "23.86"
                 },
                 "numberOfAnalysts": {
-                  "raw": 60,
-                  "fmt": "60",
-                  "longFmt": "60"
+                  "raw": 59,
+                  "fmt": "59",
+                  "longFmt": "59"
                 },
                 "growth": {
-                  "raw": 0.0163,
-                  "fmt": "1.63%"
+                  "raw": 0.013099999,
+                  "fmt": "1.31%"
                 },
                 "earningsCurrency": "USD"
               },
               "revenueEstimate": {
                 "avg": {
-                  "raw": 199221634290,
+                  "raw": 199217877780,
                   "fmt": "199.22B",
-                  "longFmt": "199,221,634,290"
+                  "longFmt": "199,217,877,780"
                 },
                 "low": {
                   "raw": 194663000000,
@@ -5680,9 +5674,9 @@
                   "longFmt": "200,725,000,000"
                 },
                 "numberOfAnalysts": {
-                  "raw": 58,
-                  "fmt": "58",
-                  "longFmt": "58"
+                  "raw": 59,
+                  "fmt": "59",
+                  "longFmt": "59"
                 },
                 "yearAgoRevenue": {
                   "raw": 164501000000,
@@ -5690,15 +5684,15 @@
                   "longFmt": "164,501,000,000"
                 },
                 "growth": {
-                  "raw": 0.21110001,
-                  "fmt": "21.11%"
+                  "raw": 0.21100001,
+                  "fmt": "21.10%"
                 },
                 "revenueCurrency": "USD"
               },
               "epsTrend": {
                 "current": {
-                  "raw": 24.25,
-                  "fmt": "24.25"
+                  "raw": 24.17238,
+                  "fmt": "24.17"
                 },
                 "7daysAgo": {
                   "raw": 28.20131,
@@ -5748,8 +5742,8 @@
               "period": "+1y",
               "endDate": "2026-12-31",
               "growth": {
-                "raw": 0.153,
-                "fmt": "15.30%"
+                "raw": 0.1559,
+                "fmt": "15.59%"
               },
               "earningsEstimate": {
                 "avg": {
@@ -5765,8 +5759,8 @@
                   "fmt": "34.85"
                 },
                 "yearAgoEps": {
-                  "raw": 24.25,
-                  "fmt": "24.25"
+                  "raw": 24.17238,
+                  "fmt": "24.17"
                 },
                 "numberOfAnalysts": {
                   "raw": 57,
@@ -5774,16 +5768,16 @@
                   "longFmt": "57"
                 },
                 "growth": {
-                  "raw": 0.2301,
-                  "fmt": "23.01%"
+                  "raw": 0.234,
+                  "fmt": "23.40%"
                 },
                 "earningsCurrency": "USD"
               },
               "revenueEstimate": {
                 "avg": {
-                  "raw": 234565763530,
+                  "raw": 234572548480,
                   "fmt": "234.57B",
-                  "longFmt": "234,565,763,530"
+                  "longFmt": "234,572,548,480"
                 },
                 "low": {
                   "raw": 213000000000,
@@ -5796,18 +5790,18 @@
                   "longFmt": "258,431,000,000"
                 },
                 "numberOfAnalysts": {
-                  "raw": 63,
-                  "fmt": "63",
-                  "longFmt": "63"
+                  "raw": 64,
+                  "fmt": "64",
+                  "longFmt": "64"
                 },
                 "yearAgoRevenue": {
-                  "raw": 199221634290,
+                  "raw": 199217877780,
                   "fmt": "199.22B",
-                  "longFmt": "199,221,634,290"
+                  "longFmt": "199,217,877,780"
                 },
                 "growth": {
-                  "raw": 0.1774,
-                  "fmt": "17.74%"
+                  "raw": 0.1775,
+                  "fmt": "17.75%"
                 },
                 "revenueCurrency": "USD"
               },
@@ -5836,9 +5830,9 @@
               },
               "epsRevisions": {
                 "upLast7days": {
-                  "raw": 17,
-                  "fmt": "17",
-                  "longFmt": "17"
+                  "raw": 18,
+                  "fmt": "18",
+                  "longFmt": "18"
                 },
                 "upLast30days": {
                   "raw": 20,
@@ -5851,9 +5845,9 @@
                   "longFmt": "26"
                 },
                 "downLast7Days": {
-                  "raw": 21,
-                  "fmt": "21",
-                  "longFmt": "21"
+                  "raw": 26,
+                  "fmt": "26",
+                  "longFmt": "26"
                 },
                 "downLast90days": {},
                 "epsRevisionsCurrency": "USD"
@@ -8122,9 +8116,9 @@
                 "longFmt": "192,591,101"
               },
               "value": {
-                "raw": 120816250889,
-                "fmt": "120.82B",
-                "longFmt": "120,816,250,889"
+                "raw": 123359419669,
+                "fmt": "123.36B",
+                "longFmt": "123,359,419,669"
               },
               "pctChange": {
                 "raw": 0.008,
@@ -8148,9 +8142,9 @@
                 "longFmt": "166,335,987"
               },
               "value": {
-                "raw": 104345892583,
-                "fmt": "104.35B",
-                "longFmt": "104,345,892,583"
+                "raw": 106542362134,
+                "fmt": "106.54B",
+                "longFmt": "106,542,362,134"
               },
               "pctChange": {
                 "raw": -0.0002,
@@ -8174,9 +8168,9 @@
                 "longFmt": "135,910,094"
               },
               "value": {
-                "raw": 85259121163,
-                "fmt": "85.26B",
-                "longFmt": "85,259,121,163"
+                "raw": 87053816277,
+                "fmt": "87.05B",
+                "longFmt": "87,053,816,277"
               },
               "pctChange": {
                 "raw": 0.0054,
@@ -8200,9 +8194,9 @@
                 "longFmt": "86,925,674"
               },
               "value": {
-                "raw": 54530214450,
-                "fmt": "54.53B",
-                "longFmt": "54,530,214,450"
+                "raw": 55678069461,
+                "fmt": "55.68B",
+                "longFmt": "55,678,069,461"
               },
               "pctChange": {
                 "raw": 0.0194,
@@ -8226,9 +8220,9 @@
                 "longFmt": "54,721,870"
               },
               "value": {
-                "raw": 34328123889,
-                "fmt": "34.33B",
-                "longFmt": "34,328,123,889"
+                "raw": 35050727117,
+                "fmt": "35.05B",
+                "longFmt": "35,050,727,117"
               },
               "pctChange": {
                 "raw": -0.059699997,
@@ -8252,9 +8246,9 @@
                 "longFmt": "51,575,209"
               },
               "value": {
-                "raw": 32354160487,
-                "fmt": "32.35B",
-                "longFmt": "32,354,160,487"
+                "raw": 33035212003,
+                "fmt": "33.04B",
+                "longFmt": "33,035,212,003"
               },
               "pctChange": {
                 "raw": 0.0134000005,
@@ -8278,9 +8272,9 @@
                 "longFmt": "40,997,942"
               },
               "value": {
-                "raw": 25718829275,
-                "fmt": "25.72B",
-                "longFmt": "25,718,829,275"
+                "raw": 26260207800,
+                "fmt": "26.26B",
+                "longFmt": "26,260,207,800"
               },
               "pctChange": {
                 "raw": 0.0477,
@@ -8304,9 +8298,9 @@
                 "longFmt": "38,969,510"
               },
               "value": {
-                "raw": 24446353298,
-                "fmt": "24.45B",
-                "longFmt": "24,446,353,298"
+                "raw": 24960946344,
+                "fmt": "24.96B",
+                "longFmt": "24,960,946,344"
               },
               "pctChange": {
                 "raw": 0.0233,
@@ -8330,9 +8324,9 @@
                 "longFmt": "37,219,287"
               },
               "value": {
-                "raw": 23348403393,
-                "fmt": "23.35B",
-                "longFmt": "23,348,403,393"
+                "raw": 23839884714,
+                "fmt": "23.84B",
+                "longFmt": "23,839,884,714"
               },
               "pctChange": {
                 "raw": -0.0177,
@@ -8356,9 +8350,9 @@
                 "longFmt": "32,458,849"
               },
               "value": {
-                "raw": 20362085392,
-                "fmt": "20.36B",
-                "longFmt": "20,362,085,392"
+                "raw": 20790705048,
+                "fmt": "20.79B",
+                "longFmt": "20,790,705,048"
               },
               "pctChange": {
                 "raw": -0.0544,
@@ -8370,8 +8364,8 @@
         "majorHoldersBreakdown": {
           "maxAge": 1,
           "insidersPercentHeld": 0.00078,
-          "institutionsPercentHeld": 0.79537004,
-          "institutionsFloatPercentHeld": 0.796,
+          "institutionsPercentHeld": 0.79542,
+          "institutionsFloatPercentHeld": 0.79603994,
           "institutionsCount": 6192
         },
         "balanceSheetHistoryQuarterly": {
@@ -8549,6 +8543,29 @@
         },
         "insiderTransactions": {
           "transactions": [
+            {
+              "maxAge": 1,
+              "shares": {
+                "raw": 601,
+                "fmt": "601",
+                "longFmt": "601"
+              },
+              "value": {
+                "raw": 405314,
+                "fmt": "405.31k",
+                "longFmt": "405,314"
+              },
+              "filerUrl": "",
+              "transactionText": "Sale at price 674.40 per share.",
+              "filerName": "ALFORD PEGGY",
+              "filerRelation": "Director",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1761868800,
+                "fmt": "2025-10-31"
+              },
+              "ownership": "I"
+            },
             {
               "maxAge": 1,
               "shares": {
@@ -8874,29 +8891,6 @@
             {
               "maxAge": 1,
               "shares": {
-                "raw": 465,
-                "fmt": "465",
-                "longFmt": "465"
-              },
-              "value": {
-                "raw": 352224,
-                "fmt": "352.22k",
-                "longFmt": "352,224"
-              },
-              "filerUrl": "",
-              "transactionText": "Sale at price 757.47 per share.",
-              "filerName": "KIMMITT ROBERT M",
-              "filerRelation": "Director",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1757894400,
-                "fmt": "2025-09-15"
-              },
-              "ownership": "D"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
                 "raw": 517,
                 "fmt": "517",
                 "longFmt": "517"
@@ -8910,6 +8904,29 @@
               "transactionText": "Sale at price 757.47 per share.",
               "filerName": "OLIVAN JAVIER",
               "filerRelation": "Chief Operating Officer",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1757894400,
+                "fmt": "2025-09-15"
+              },
+              "ownership": "D"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
+                "raw": 465,
+                "fmt": "465",
+                "longFmt": "465"
+              },
+              "value": {
+                "raw": 352224,
+                "fmt": "352.22k",
+                "longFmt": "352,224"
+              },
+              "filerUrl": "",
+              "transactionText": "Sale at price 757.47 per share.",
+              "filerName": "KIMMITT ROBERT M",
+              "filerRelation": "Director",
               "moneyText": "",
               "startDate": {
                 "raw": 1757894400,
@@ -8966,29 +8983,6 @@
             {
               "maxAge": 1,
               "shares": {
-                "raw": 519,
-                "fmt": "519",
-                "longFmt": "519"
-              },
-              "value": {
-                "raw": 376924,
-                "fmt": "376.92k",
-                "longFmt": "376,924"
-              },
-              "filerUrl": "",
-              "transactionText": "Sale at price 726.25 per share.",
-              "filerName": "NEWSTEAD JENNIFER",
-              "filerRelation": "Officer",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1756771200,
-                "fmt": "2025-09-02"
-              },
-              "ownership": "D"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
                 "raw": 517,
                 "fmt": "517",
                 "longFmt": "517"
@@ -9002,6 +8996,29 @@
               "transactionText": "Sale at price 726.25 per share.",
               "filerName": "OLIVAN JAVIER",
               "filerRelation": "Chief Operating Officer",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1756771200,
+                "fmt": "2025-09-02"
+              },
+              "ownership": "D"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
+                "raw": 519,
+                "fmt": "519",
+                "longFmt": "519"
+              },
+              "value": {
+                "raw": 376924,
+                "fmt": "376.92k",
+                "longFmt": "376,924"
+              },
+              "filerUrl": "",
+              "transactionText": "Sale at price 726.25 per share.",
+              "filerName": "NEWSTEAD JENNIFER",
+              "filerRelation": "Officer",
               "moneyText": "",
               "startDate": {
                 "raw": 1756771200,
@@ -9081,6 +9098,52 @@
             {
               "maxAge": 1,
               "shares": {
+                "raw": 3129,
+                "fmt": "3.13k",
+                "longFmt": "3,129"
+              },
+              "value": {
+                "raw": 2443599,
+                "fmt": "2.44M",
+                "longFmt": "2,443,599"
+              },
+              "filerUrl": "",
+              "transactionText": "Sale at price 775.00 - 782.13 per share.",
+              "filerName": "OLIVAN JAVIER",
+              "filerRelation": "Chief Operating Officer",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1755475200,
+                "fmt": "2025-08-18"
+              },
+              "ownership": "D"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
+                "raw": 25207,
+                "fmt": "25.21k",
+                "longFmt": "25,207"
+              },
+              "value": {
+                "raw": 19395767,
+                "fmt": "19.4M",
+                "longFmt": "19,395,767"
+              },
+              "filerUrl": "",
+              "transactionText": "Sale at price 759.15 - 782.13 per share.",
+              "filerName": "LI SUSAN J.",
+              "filerRelation": "Chief Financial Officer",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1755475200,
+                "fmt": "2025-08-18"
+              },
+              "ownership": "I"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
                 "raw": 519,
                 "fmt": "519",
                 "longFmt": "519"
@@ -9127,48 +9190,20 @@
             {
               "maxAge": 1,
               "shares": {
-                "raw": 25207,
-                "fmt": "25.21k",
-                "longFmt": "25,207"
-              },
-              "value": {
-                "raw": 19395767,
-                "fmt": "19.4M",
-                "longFmt": "19,395,767"
+                "raw": 36367,
+                "fmt": "36.37k",
+                "longFmt": "36,367"
               },
               "filerUrl": "",
-              "transactionText": "Sale at price 759.15 - 782.13 per share.",
+              "transactionText": "",
               "filerName": "LI SUSAN J.",
               "filerRelation": "Chief Financial Officer",
               "moneyText": "",
               "startDate": {
-                "raw": 1755475200,
-                "fmt": "2025-08-18"
+                "raw": 1755216000,
+                "fmt": "2025-08-15"
               },
               "ownership": "I"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
-                "raw": 3129,
-                "fmt": "3.13k",
-                "longFmt": "3,129"
-              },
-              "value": {
-                "raw": 2443599,
-                "fmt": "2.44M",
-                "longFmt": "2,443,599"
-              },
-              "filerUrl": "",
-              "transactionText": "Sale at price 775.00 - 782.13 per share.",
-              "filerName": "OLIVAN JAVIER",
-              "filerRelation": "Chief Operating Officer",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1755475200,
-                "fmt": "2025-08-18"
-              },
-              "ownership": "D"
             },
             {
               "maxAge": 1,
@@ -9245,14 +9280,14 @@
             {
               "maxAge": 1,
               "shares": {
-                "raw": 189,
-                "fmt": "189",
-                "longFmt": "189"
+                "raw": 16723,
+                "fmt": "16.72k",
+                "longFmt": "16,723"
               },
               "filerUrl": "",
               "transactionText": "",
-              "filerName": "XU TONY",
-              "filerRelation": "Director",
+              "filerName": "NEWSTEAD JENNIFER",
+              "filerRelation": "Officer",
               "moneyText": "",
               "startDate": {
                 "raw": 1755216000,
@@ -9263,14 +9298,14 @@
             {
               "maxAge": 1,
               "shares": {
-                "raw": 16723,
-                "fmt": "16.72k",
-                "longFmt": "16,723"
+                "raw": 189,
+                "fmt": "189",
+                "longFmt": "189"
               },
               "filerUrl": "",
               "transactionText": "",
-              "filerName": "NEWSTEAD JENNIFER",
-              "filerRelation": "Officer",
+              "filerName": "XU TONY",
+              "filerRelation": "Director",
               "moneyText": "",
               "startDate": {
                 "raw": 1755216000,
@@ -9299,14 +9334,14 @@
             {
               "maxAge": 1,
               "shares": {
-                "raw": 36367,
-                "fmt": "36.37k",
-                "longFmt": "36,367"
+                "raw": 16902,
+                "fmt": "16.9k",
+                "longFmt": "16,902"
               },
               "filerUrl": "",
               "transactionText": "",
-              "filerName": "LI SUSAN J.",
-              "filerRelation": "Chief Financial Officer",
+              "filerName": "COX CHRISTOPHER K",
+              "filerRelation": "Officer",
               "moneyText": "",
               "startDate": {
                 "raw": 1755216000,
@@ -9335,24 +9370,6 @@
             {
               "maxAge": 1,
               "shares": {
-                "raw": 16902,
-                "fmt": "16.9k",
-                "longFmt": "16,902"
-              },
-              "filerUrl": "",
-              "transactionText": "",
-              "filerName": "COX CHRISTOPHER K",
-              "filerRelation": "Officer",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1755216000,
-                "fmt": "2025-08-15"
-              },
-              "ownership": "I"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
                 "raw": 168,
                 "fmt": "168",
                 "longFmt": "168"
@@ -9360,24 +9377,6 @@
               "filerUrl": "",
               "transactionText": "",
               "filerName": "TAN HOCK E",
-              "filerRelation": "Director",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1755216000,
-                "fmt": "2025-08-15"
-              },
-              "ownership": "D"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
-                "raw": 110,
-                "fmt": "110",
-                "longFmt": "110"
-              },
-              "filerUrl": "",
-              "transactionText": "",
-              "filerName": "ELKANN JOHN PHILIPP",
               "filerRelation": "Director",
               "moneyText": "",
               "startDate": {
@@ -9397,6 +9396,24 @@
               "transactionText": "",
               "filerName": "OLIVAN JAVIER",
               "filerRelation": "Chief Operating Officer",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1755216000,
+                "fmt": "2025-08-15"
+              },
+              "ownership": "D"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
+                "raw": 110,
+                "fmt": "110",
+                "longFmt": "110"
+              },
+              "filerUrl": "",
+              "transactionText": "",
+              "filerName": "ELKANN JOHN PHILIPP",
+              "filerRelation": "Director",
               "moneyText": "",
               "startDate": {
                 "raw": 1755216000,
@@ -9530,29 +9547,6 @@
             {
               "maxAge": 1,
               "shares": {
-                "raw": 517,
-                "fmt": "517",
-                "longFmt": "517"
-              },
-              "value": {
-                "raw": 398090,
-                "fmt": "398.09k",
-                "longFmt": "398,090"
-              },
-              "filerUrl": "",
-              "transactionText": "Sale at price 770.00 per share.",
-              "filerName": "OLIVAN JAVIER",
-              "filerRelation": "Chief Operating Officer",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1754870400,
-                "fmt": "2025-08-11"
-              },
-              "ownership": "D"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
                 "raw": 15847,
                 "fmt": "15.85k",
                 "longFmt": "15,847"
@@ -9572,6 +9566,29 @@
                 "fmt": "2025-08-11"
               },
               "ownership": "I"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
+                "raw": 517,
+                "fmt": "517",
+                "longFmt": "517"
+              },
+              "value": {
+                "raw": 398090,
+                "fmt": "398.09k",
+                "longFmt": "398,090"
+              },
+              "filerUrl": "",
+              "transactionText": "Sale at price 770.00 per share.",
+              "filerName": "OLIVAN JAVIER",
+              "filerRelation": "Chief Operating Officer",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1754870400,
+                "fmt": "2025-08-11"
+              },
+              "ownership": "D"
             },
             {
               "maxAge": 1,
@@ -9676,6 +9693,29 @@
             {
               "maxAge": 1,
               "shares": {
+                "raw": 15847,
+                "fmt": "15.85k",
+                "longFmt": "15,847"
+              },
+              "value": {
+                "raw": 12181036,
+                "fmt": "12.18M",
+                "longFmt": "12,181,036"
+              },
+              "filerUrl": "",
+              "transactionText": "Sale at price 761.28 - 773.45 per share.",
+              "filerName": "ZUCKERBERG MARK",
+              "filerRelation": "Chief Executive Officer",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1754438400,
+                "fmt": "2025-08-06"
+              },
+              "ownership": "I"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
                 "raw": 15000,
                 "fmt": "15k",
                 "longFmt": "15,000"
@@ -9703,79 +9743,10 @@
                 "fmt": "15.85k",
                 "longFmt": "15,847"
               },
-              "value": {
-                "raw": 12181036,
-                "fmt": "12.18M",
-                "longFmt": "12,181,036"
-              },
-              "filerUrl": "",
-              "transactionText": "Sale at price 761.28 - 773.45 per share.",
-              "filerName": "ZUCKERBERG MARK",
-              "filerRelation": "Chief Executive Officer",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1754438400,
-                "fmt": "2025-08-06"
-              },
-              "ownership": "I"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
-                "raw": 15847,
-                "fmt": "15.85k",
-                "longFmt": "15,847"
-              },
               "filerUrl": "",
               "transactionText": "",
               "filerName": "ZUCKERBERG MARK",
               "filerRelation": "Chief Executive Officer",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1754352000,
-                "fmt": "2025-08-05"
-              },
-              "ownership": "I"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
-                "raw": 515,
-                "fmt": "515",
-                "longFmt": "515"
-              },
-              "value": {
-                "raw": 399836,
-                "fmt": "399.84k",
-                "longFmt": "399,836"
-              },
-              "filerUrl": "",
-              "transactionText": "Sale at price 776.38 per share.",
-              "filerName": "NEWSTEAD JENNIFER",
-              "filerRelation": "Officer",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1754352000,
-                "fmt": "2025-08-05"
-              },
-              "ownership": "D"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
-                "raw": 60000,
-                "fmt": "60k",
-                "longFmt": "60,000"
-              },
-              "value": {
-                "raw": 46557091,
-                "fmt": "46.56M",
-                "longFmt": "46,557,091"
-              },
-              "filerUrl": "",
-              "transactionText": "Sale at price 774.17 - 779.29 per share.",
-              "filerName": "COX CHRISTOPHER K",
-              "filerRelation": "Officer",
               "moneyText": "",
               "startDate": {
                 "raw": 1754352000,
@@ -9805,6 +9776,52 @@
                 "fmt": "2025-08-05"
               },
               "ownership": "I"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
+                "raw": 60000,
+                "fmt": "60k",
+                "longFmt": "60,000"
+              },
+              "value": {
+                "raw": 46557091,
+                "fmt": "46.56M",
+                "longFmt": "46,557,091"
+              },
+              "filerUrl": "",
+              "transactionText": "Sale at price 774.17 - 779.29 per share.",
+              "filerName": "COX CHRISTOPHER K",
+              "filerRelation": "Officer",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1754352000,
+                "fmt": "2025-08-05"
+              },
+              "ownership": "I"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
+                "raw": 515,
+                "fmt": "515",
+                "longFmt": "515"
+              },
+              "value": {
+                "raw": 399836,
+                "fmt": "399.84k",
+                "longFmt": "399,836"
+              },
+              "filerUrl": "",
+              "transactionText": "Sale at price 776.38 per share.",
+              "filerName": "NEWSTEAD JENNIFER",
+              "filerRelation": "Officer",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1754352000,
+                "fmt": "2025-08-05"
+              },
+              "ownership": "D"
             },
             {
               "maxAge": 1,
@@ -9850,29 +9867,6 @@
             {
               "maxAge": 1,
               "shares": {
-                "raw": 517,
-                "fmt": "517",
-                "longFmt": "517"
-              },
-              "value": {
-                "raw": 393054,
-                "fmt": "393.05k",
-                "longFmt": "393,054"
-              },
-              "filerUrl": "",
-              "transactionText": "Sale at price 760.26 per share.",
-              "filerName": "OLIVAN JAVIER",
-              "filerRelation": "Chief Operating Officer",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1754265600,
-                "fmt": "2025-08-04"
-              },
-              "ownership": "D"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
                 "raw": 15847,
                 "fmt": "15.85k",
                 "longFmt": "15,847"
@@ -9892,6 +9886,29 @@
                 "fmt": "2025-08-04"
               },
               "ownership": "I"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
+                "raw": 517,
+                "fmt": "517",
+                "longFmt": "517"
+              },
+              "value": {
+                "raw": 393054,
+                "fmt": "393.05k",
+                "longFmt": "393,054"
+              },
+              "filerUrl": "",
+              "transactionText": "Sale at price 760.26 per share.",
+              "filerName": "OLIVAN JAVIER",
+              "filerRelation": "Chief Operating Officer",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1754265600,
+                "fmt": "2025-08-04"
+              },
+              "ownership": "D"
             },
             {
               "maxAge": 1,
@@ -9937,29 +9954,6 @@
             {
               "maxAge": 1,
               "shares": {
-                "raw": 518,
-                "fmt": "518",
-                "longFmt": "518"
-              },
-              "value": {
-                "raw": 394094,
-                "fmt": "394.09k",
-                "longFmt": "394,094"
-              },
-              "filerUrl": "",
-              "transactionText": "Sale at price 760.80 per share.",
-              "filerName": "ALFORD PEGGY",
-              "filerRelation": "Director",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1754006400,
-                "fmt": "2025-08-01"
-              },
-              "ownership": "I"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
                 "raw": 15847,
                 "fmt": "15.85k",
                 "longFmt": "15,847"
@@ -9973,6 +9967,29 @@
               "transactionText": "Sale at price 750.37 - 764.14 per share.",
               "filerName": "ZUCKERBERG MARK",
               "filerRelation": "Chief Executive Officer",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1754006400,
+                "fmt": "2025-08-01"
+              },
+              "ownership": "I"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
+                "raw": 518,
+                "fmt": "518",
+                "longFmt": "518"
+              },
+              "value": {
+                "raw": 394094,
+                "fmt": "394.09k",
+                "longFmt": "394,094"
+              },
+              "filerUrl": "",
+              "transactionText": "Sale at price 760.80 per share.",
+              "filerName": "ALFORD PEGGY",
+              "filerRelation": "Director",
               "moneyText": "",
               "startDate": {
                 "raw": 1754006400,
@@ -10254,29 +10271,6 @@
             {
               "maxAge": 1,
               "shares": {
-                "raw": 519,
-                "fmt": "519",
-                "longFmt": "519"
-              },
-              "value": {
-                "raw": 382503,
-                "fmt": "382.5k",
-                "longFmt": "382,503"
-              },
-              "filerUrl": "",
-              "transactionText": "Sale at price 737.00 per share.",
-              "filerName": "NEWSTEAD JENNIFER",
-              "filerRelation": "Officer",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1751328000,
-                "fmt": "2025-07-01"
-              },
-              "ownership": "D"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
                 "raw": 13793,
                 "fmt": "13.79k",
                 "longFmt": "13,793"
@@ -10296,6 +10290,29 @@
                 "fmt": "2025-07-01"
               },
               "ownership": "I"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
+                "raw": 519,
+                "fmt": "519",
+                "longFmt": "519"
+              },
+              "value": {
+                "raw": 382503,
+                "fmt": "382.5k",
+                "longFmt": "382,503"
+              },
+              "filerUrl": "",
+              "transactionText": "Sale at price 737.00 per share.",
+              "filerName": "NEWSTEAD JENNIFER",
+              "filerRelation": "Officer",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1751328000,
+                "fmt": "2025-07-01"
+              },
+              "ownership": "D"
             },
             {
               "maxAge": 1,
@@ -10415,29 +10432,6 @@
             {
               "maxAge": 1,
               "shares": {
-                "raw": 519,
-                "fmt": "519",
-                "longFmt": "519"
-              },
-              "value": {
-                "raw": 365838,
-                "fmt": "365.84k",
-                "longFmt": "365,838"
-              },
-              "filerUrl": "",
-              "transactionText": "Sale at price 704.89 per share.",
-              "filerName": "NEWSTEAD JENNIFER",
-              "filerRelation": "Officer",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1750723200,
-                "fmt": "2025-06-24"
-              },
-              "ownership": "D"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
                 "raw": 13793,
                 "fmt": "13.79k",
                 "longFmt": "13,793"
@@ -10457,6 +10451,29 @@
                 "fmt": "2025-06-24"
               },
               "ownership": "I"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
+                "raw": 519,
+                "fmt": "519",
+                "longFmt": "519"
+              },
+              "value": {
+                "raw": 365838,
+                "fmt": "365.84k",
+                "longFmt": "365,838"
+              },
+              "filerUrl": "",
+              "transactionText": "Sale at price 704.89 per share.",
+              "filerName": "NEWSTEAD JENNIFER",
+              "filerRelation": "Officer",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1750723200,
+                "fmt": "2025-06-24"
+              },
+              "ownership": "D"
             },
             {
               "maxAge": 1,
@@ -10530,29 +10547,6 @@
             {
               "maxAge": 1,
               "shares": {
-                "raw": 519,
-                "fmt": "519",
-                "longFmt": "519"
-              },
-              "value": {
-                "raw": 364333,
-                "fmt": "364.33k",
-                "longFmt": "364,333"
-              },
-              "filerUrl": "",
-              "transactionText": "Sale at price 701.99 per share.",
-              "filerName": "NEWSTEAD JENNIFER",
-              "filerRelation": "Officer",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1750118400,
-                "fmt": "2025-06-17"
-              },
-              "ownership": "D"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
                 "raw": 8312,
                 "fmt": "8.31k",
                 "longFmt": "8,312"
@@ -10576,23 +10570,23 @@
             {
               "maxAge": 1,
               "shares": {
-                "raw": 465,
-                "fmt": "465",
-                "longFmt": "465"
+                "raw": 519,
+                "fmt": "519",
+                "longFmt": "519"
               },
               "value": {
-                "raw": 325161,
-                "fmt": "325.16k",
-                "longFmt": "325,161"
+                "raw": 364333,
+                "fmt": "364.33k",
+                "longFmt": "364,333"
               },
               "filerUrl": "",
-              "transactionText": "Sale at price 699.27 per share.",
-              "filerName": "KIMMITT ROBERT M",
-              "filerRelation": "Director",
+              "transactionText": "Sale at price 701.99 per share.",
+              "filerName": "NEWSTEAD JENNIFER",
+              "filerRelation": "Officer",
               "moneyText": "",
               "startDate": {
-                "raw": 1750032000,
-                "fmt": "2025-06-16"
+                "raw": 1750118400,
+                "fmt": "2025-06-17"
               },
               "ownership": "D"
             },
@@ -10645,6 +10639,29 @@
             {
               "maxAge": 1,
               "shares": {
+                "raw": 465,
+                "fmt": "465",
+                "longFmt": "465"
+              },
+              "value": {
+                "raw": 325161,
+                "fmt": "325.16k",
+                "longFmt": "325,161"
+              },
+              "filerUrl": "",
+              "transactionText": "Sale at price 699.27 per share.",
+              "filerName": "KIMMITT ROBERT M",
+              "filerRelation": "Director",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1750032000,
+                "fmt": "2025-06-16"
+              },
+              "ownership": "D"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
                 "raw": 7802,
                 "fmt": "7.8k",
                 "longFmt": "7,802"
@@ -10662,6 +10679,29 @@
               "startDate": {
                 "raw": 1749600000,
                 "fmt": "2025-06-11"
+              },
+              "ownership": "I"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
+                "raw": 13793,
+                "fmt": "13.79k",
+                "longFmt": "13,793"
+              },
+              "value": {
+                "raw": 9670677,
+                "fmt": "9.67M",
+                "longFmt": "9,670,677"
+              },
+              "filerUrl": "",
+              "transactionText": "Sale at price 700.55 - 702.32 per share.",
+              "filerName": "ZUCKERBERG MARK",
+              "filerRelation": "Chief Executive Officer",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1749513600,
+                "fmt": "2025-06-10"
               },
               "ownership": "I"
             },
@@ -10687,29 +10727,6 @@
                 "fmt": "2025-06-10"
               },
               "ownership": "D"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
-                "raw": 13793,
-                "fmt": "13.79k",
-                "longFmt": "13,793"
-              },
-              "value": {
-                "raw": 9670677,
-                "fmt": "9.67M",
-                "longFmt": "9,670,677"
-              },
-              "filerUrl": "",
-              "transactionText": "Sale at price 700.55 - 702.32 per share.",
-              "filerName": "ZUCKERBERG MARK",
-              "filerRelation": "Chief Executive Officer",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1749513600,
-                "fmt": "2025-06-10"
-              },
-              "ownership": "I"
             },
             {
               "maxAge": 1,
@@ -10829,29 +10846,6 @@
             {
               "maxAge": 1,
               "shares": {
-                "raw": 519,
-                "fmt": "519",
-                "longFmt": "519"
-              },
-              "value": {
-                "raw": 329778,
-                "fmt": "329.78k",
-                "longFmt": "329,778"
-              },
-              "filerUrl": "",
-              "transactionText": "Sale at price 635.41 per share.",
-              "filerName": "NEWSTEAD JENNIFER",
-              "filerRelation": "Officer",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1748304000,
-                "fmt": "2025-05-27"
-              },
-              "ownership": "D"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
                 "raw": 517,
                 "fmt": "517",
                 "longFmt": "517"
@@ -10865,6 +10859,29 @@
               "transactionText": "Sale at price 635.41 per share.",
               "filerName": "OLIVAN JAVIER",
               "filerRelation": "Chief Operating Officer",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1748304000,
+                "fmt": "2025-05-27"
+              },
+              "ownership": "D"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
+                "raw": 519,
+                "fmt": "519",
+                "longFmt": "519"
+              },
+              "value": {
+                "raw": 329778,
+                "fmt": "329.78k",
+                "longFmt": "329,778"
+              },
+              "filerUrl": "",
+              "transactionText": "Sale at price 635.41 per share.",
+              "filerName": "NEWSTEAD JENNIFER",
+              "filerRelation": "Officer",
               "moneyText": "",
               "startDate": {
                 "raw": 1748304000,
@@ -10898,29 +10915,6 @@
             {
               "maxAge": 1,
               "shares": {
-                "raw": 475,
-                "fmt": "475",
-                "longFmt": "475"
-              },
-              "value": {
-                "raw": 298419,
-                "fmt": "298.42k",
-                "longFmt": "298,419"
-              },
-              "filerUrl": "",
-              "transactionText": "Sale at price 628.25 per share.",
-              "filerName": "KIMMITT ROBERT M",
-              "filerRelation": "Director",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1747612800,
-                "fmt": "2025-05-19"
-              },
-              "ownership": "D"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
                 "raw": 517,
                 "fmt": "517",
                 "longFmt": "517"
@@ -10944,23 +10938,23 @@
             {
               "maxAge": 1,
               "shares": {
-                "raw": 519,
-                "fmt": "519",
-                "longFmt": "519"
+                "raw": 475,
+                "fmt": "475",
+                "longFmt": "475"
               },
               "value": {
-                "raw": 330460,
-                "fmt": "330.46k",
-                "longFmt": "330,460"
+                "raw": 298419,
+                "fmt": "298.42k",
+                "longFmt": "298,419"
               },
               "filerUrl": "",
-              "transactionText": "Sale at price 633.54 - 639.32 per share.",
-              "filerName": "NEWSTEAD JENNIFER",
-              "filerRelation": "Officer",
+              "transactionText": "Sale at price 628.25 per share.",
+              "filerName": "KIMMITT ROBERT M",
+              "filerRelation": "Director",
               "moneyText": "",
               "startDate": {
-                "raw": 1747353600,
-                "fmt": "2025-05-16"
+                "raw": 1747612800,
+                "fmt": "2025-05-19"
               },
               "ownership": "D"
             },
@@ -10980,6 +10974,29 @@
               "transactionText": "Sale at price 633.62 - 659.36 per share.",
               "filerName": "BOSWORTH ANDREW",
               "filerRelation": "Chief Technology Officer",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1747353600,
+                "fmt": "2025-05-16"
+              },
+              "ownership": "D"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
+                "raw": 519,
+                "fmt": "519",
+                "longFmt": "519"
+              },
+              "value": {
+                "raw": 330460,
+                "fmt": "330.46k",
+                "longFmt": "330,460"
+              },
+              "filerUrl": "",
+              "transactionText": "Sale at price 633.54 - 639.32 per share.",
+              "filerName": "NEWSTEAD JENNIFER",
+              "filerRelation": "Officer",
               "moneyText": "",
               "startDate": {
                 "raw": 1747353600,
@@ -11059,6 +11076,24 @@
             {
               "maxAge": 1,
               "shares": {
+                "raw": 36363,
+                "fmt": "36.36k",
+                "longFmt": "36,363"
+              },
+              "filerUrl": "",
+              "transactionText": "",
+              "filerName": "LI SUSAN J.",
+              "filerRelation": "Chief Financial Officer",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1747267200,
+                "fmt": "2025-05-15"
+              },
+              "ownership": "I"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
                 "raw": 969,
                 "fmt": "969",
                 "longFmt": "969"
@@ -11109,42 +11144,6 @@
                 "fmt": "2025-05-15"
               },
               "ownership": "D"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
-                "raw": 802,
-                "fmt": "802",
-                "longFmt": "802"
-              },
-              "filerUrl": "",
-              "transactionText": "",
-              "filerName": "HOUSTON ANDREW W",
-              "filerRelation": "Director",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1747267200,
-                "fmt": "2025-05-15"
-              },
-              "ownership": "D"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
-                "raw": 802,
-                "fmt": "802",
-                "longFmt": "802"
-              },
-              "filerUrl": "",
-              "transactionText": "",
-              "filerName": "ALFORD PEGGY",
-              "filerRelation": "Director",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1747267200,
-                "fmt": "2025-05-15"
-              },
-              "ownership": "I"
             },
             {
               "maxAge": 1,
@@ -11203,14 +11202,50 @@
             {
               "maxAge": 1,
               "shares": {
-                "raw": 36363,
-                "fmt": "36.36k",
-                "longFmt": "36,363"
+                "raw": 802,
+                "fmt": "802",
+                "longFmt": "802"
               },
               "filerUrl": "",
               "transactionText": "",
-              "filerName": "LI SUSAN J.",
-              "filerRelation": "Chief Financial Officer",
+              "filerName": "HOUSTON ANDREW W",
+              "filerRelation": "Director",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1747267200,
+                "fmt": "2025-05-15"
+              },
+              "ownership": "D"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
+                "raw": 802,
+                "fmt": "802",
+                "longFmt": "802"
+              },
+              "filerUrl": "",
+              "transactionText": "",
+              "filerName": "ALFORD PEGGY",
+              "filerRelation": "Director",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1747267200,
+                "fmt": "2025-05-15"
+              },
+              "ownership": "I"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
+                "raw": 16900,
+                "fmt": "16.9k",
+                "longFmt": "16,900"
+              },
+              "filerUrl": "",
+              "transactionText": "",
+              "filerName": "COX CHRISTOPHER K",
+              "filerRelation": "Officer",
               "moneyText": "",
               "startDate": {
                 "raw": 1747267200,
@@ -11235,24 +11270,6 @@
                 "fmt": "2025-05-15"
               },
               "ownership": "D"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
-                "raw": 16900,
-                "fmt": "16.9k",
-                "longFmt": "16,900"
-              },
-              "filerUrl": "",
-              "transactionText": "",
-              "filerName": "COX CHRISTOPHER K",
-              "filerRelation": "Officer",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1747267200,
-                "fmt": "2025-05-15"
-              },
-              "ownership": "I"
             },
             {
               "maxAge": 1,
@@ -11383,29 +11400,6 @@
             {
               "maxAge": 1,
               "shares": {
-                "raw": 6874,
-                "fmt": "6.87k",
-                "longFmt": "6,874"
-              },
-              "value": {
-                "raw": 4532441,
-                "fmt": "4.53M",
-                "longFmt": "4,532,441"
-              },
-              "filerUrl": "",
-              "transactionText": "Sale at price 659.36 per share.",
-              "filerName": "LI SUSAN J.",
-              "filerRelation": "Chief Financial Officer",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1747267200,
-                "fmt": "2025-05-15"
-              },
-              "ownership": "I"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
                 "raw": 2615,
                 "fmt": "2.62k",
                 "longFmt": "2,615"
@@ -11425,6 +11419,29 @@
                 "fmt": "2025-05-15"
               },
               "ownership": "D"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
+                "raw": 6874,
+                "fmt": "6.87k",
+                "longFmt": "6,874"
+              },
+              "value": {
+                "raw": 4532441,
+                "fmt": "4.53M",
+                "longFmt": "4,532,441"
+              },
+              "filerUrl": "",
+              "transactionText": "Sale at price 659.36 per share.",
+              "filerName": "LI SUSAN J.",
+              "filerRelation": "Chief Financial Officer",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1747267200,
+                "fmt": "2025-05-15"
+              },
+              "ownership": "I"
             },
             {
               "maxAge": 1,
@@ -11590,29 +11607,6 @@
             {
               "maxAge": 1,
               "shares": {
-                "raw": 921,
-                "fmt": "921",
-                "longFmt": "921"
-              },
-              "value": {
-                "raw": 453012,
-                "fmt": "453.01k",
-                "longFmt": "453,012"
-              },
-              "filerUrl": "",
-              "transactionText": "Sale at price 491.87 per share.",
-              "filerName": "NEWSTEAD JENNIFER",
-              "filerRelation": "Officer",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1745280000,
-                "fmt": "2025-04-22"
-              },
-              "ownership": "D"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
                 "raw": 608,
                 "fmt": "608",
                 "longFmt": "608"
@@ -11626,6 +11620,29 @@
               "transactionText": "Sale at price 491.69 - 500.00 per share.",
               "filerName": "OLIVAN JAVIER",
               "filerRelation": "Chief Operating Officer",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1745280000,
+                "fmt": "2025-04-22"
+              },
+              "ownership": "D"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
+                "raw": 921,
+                "fmt": "921",
+                "longFmt": "921"
+              },
+              "value": {
+                "raw": 453012,
+                "fmt": "453.01k",
+                "longFmt": "453,012"
+              },
+              "filerUrl": "",
+              "transactionText": "Sale at price 491.87 per share.",
+              "filerName": "NEWSTEAD JENNIFER",
+              "filerRelation": "Officer",
               "moneyText": "",
               "startDate": {
                 "raw": 1745280000,
@@ -11768,29 +11785,6 @@
               "startDate": {
                 "raw": 1743379200,
                 "fmt": "2025-03-31"
-              },
-              "ownership": "D"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
-                "raw": 921,
-                "fmt": "921",
-                "longFmt": "921"
-              },
-              "value": {
-                "raw": 577513,
-                "fmt": "577.51k",
-                "longFmt": "577,513"
-              },
-              "filerUrl": "",
-              "transactionText": "Sale at price 627.05 per share.",
-              "filerName": "NEWSTEAD JENNIFER",
-              "filerRelation": "Officer",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1742860800,
-                "fmt": "2025-03-25"
               },
               "ownership": "D"
             }
@@ -12200,7 +12194,7 @@
         },
         "financialData": {
           "maxAge": 86400,
-          "currentPrice": 627.32,
+          "currentPrice": 640.525,
           "targetHighPrice": 1117.0,
           "targetLowPrice": 560.0,
           "targetMeanPrice": 843.08215,

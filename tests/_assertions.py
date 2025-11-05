@@ -1,4 +1,4 @@
-from typing import Any
+from typing import Any, Type, TypeVar
 
 from typeguard import check_type
 
@@ -48,6 +48,7 @@ from yafin.types import (
     RecommendationsFinanceResult,
     RecommendationsResponseJson,
     RecommendationTrendItem,
+    ResponseJson,
     SearchResponseJson,
     SecFilings,
     SectorTrend,
@@ -60,6 +61,29 @@ from yafin.types import (
     UpgradeDowngradeHistoryItem,
 )
 
+T = TypeVar('T', bound=ResponseJson)
+
+
+def _assert_response_json(response_json: ResponseJson, typ: Type[T]) -> None:
+    key_map = {
+        ChartResponseJson: 'chart',
+        QuoteResponseJson: 'quoteResponse',
+        QuoteTypeResponseJson: 'quoteType',
+        QuoteSummaryResponseJson: 'quoteSummary',
+        TimeseriesResponseJson: 'timeseries',
+        OptionsResponseJson: 'optionChain',
+        RecommendationsResponseJson: 'finance',
+        InsightsResponseJson: 'finance',
+        MarketSummaryResponseJson: 'marketSummaryResponse',
+        TrendingResponseJson: 'finance',
+        CurrenciesResponseJson: 'currencies',
+        CalendarEventsResponseJson: 'finance',
+    }
+    assert response_json
+    assert check_type(response_json, typ)
+    key = key_map[typ]
+    assert response_json[key]['error'] is None  # type: ignore[literal-required]
+
 
 def _assert_chart_result(chart_result: ChartResult, ticker: str) -> None:
     assert chart_result
@@ -68,9 +92,7 @@ def _assert_chart_result(chart_result: ChartResult, ticker: str) -> None:
 
 
 def _assert_chart_response_json(chart: ChartResponseJson, ticker: str) -> None:
-    assert chart
-    assert check_type(chart, ChartResponseJson)
-    assert chart['chart']['error'] is None
+    _assert_response_json(chart, ChartResponseJson)
     _assert_chart_result(chart['chart']['result'][0], ticker)
 
 
@@ -81,9 +103,7 @@ def _assert_quote_result(quote_result: QuoteResult, ticker: str) -> None:
 
 
 def _assert_quote_response_json(quotes: QuoteResponseJson, tickers: str) -> None:
-    assert quotes
-    assert check_type(quotes, QuoteResponseJson)
-    assert quotes['quoteResponse']['error'] is None
+    _assert_response_json(quotes, QuoteResponseJson)
     tickers_list = tickers.split(',')
     quotes_list = quotes['quoteResponse']['result']
     assert len(quotes_list) == len(tickers_list)
@@ -102,9 +122,7 @@ def _assert_quote_type_result(quote_type_result: QuoteTypeResult, ticker: str) -
 def _assert_quote_type_response_json(
     quote_types: QuoteTypeResponseJson, tickers: str
 ) -> None:
-    assert quote_types
-    assert check_type(quote_types, QuoteTypeResponseJson)
-    assert quote_types['quoteType']['error'] is None
+    _assert_response_json(quote_types, QuoteTypeResponseJson)
     tickers_list = tickers.split(',')
     quote_types_list = quote_types['quoteType']['result']
     assert len(quote_types_list) == len(tickers_list)
@@ -167,9 +185,7 @@ def _assert_quote_summary_result(
 def _assert_quote_summary_response_json(
     quote_summary: QuoteSummaryResponseJson, modules: str
 ) -> None:
-    assert quote_summary
-    assert check_type(quote_summary, QuoteSummaryResponseJson)
-    assert quote_summary['quoteSummary']['error'] is None
+    _assert_response_json(quote_summary, QuoteSummaryResponseJson)
     _assert_quote_summary_result(quote_summary['quoteSummary']['result'][0], modules)
 
 
@@ -191,9 +207,7 @@ def _assert_timeseries_result(
 def _assert_timeseries_response_json(
     timeseries: TimeseriesResponseJson, types: str, ticker: str
 ) -> None:
-    assert timeseries
-    assert check_type(timeseries, TimeseriesResponseJson)
-    assert timeseries['timeseries']['error'] is None
+    _assert_response_json(timeseries, TimeseriesResponseJson)
     _assert_timeseries_result(timeseries['timeseries']['result'], types, ticker)
 
 
@@ -205,9 +219,7 @@ def _assert_options_result(options_result: OptionChainResult, ticker: str) -> No
 
 
 def _assert_options_response_json(options: OptionsResponseJson, ticker: str) -> None:
-    assert options
-    assert check_type(options, OptionsResponseJson)
-    assert options['optionChain']['error'] is None
+    _assert_response_json(options, OptionsResponseJson)
     _assert_options_result(options['optionChain']['result'][0], ticker)
 
 
@@ -227,9 +239,7 @@ def _assert_recommendation_result(
 def _assert_recommendations_response_json(
     recommendations: RecommendationsResponseJson, tickers: str
 ) -> None:
-    assert recommendations
-    assert check_type(recommendations, RecommendationsResponseJson)
-    assert recommendations['finance']['error'] is None
+    _assert_response_json(recommendations, RecommendationsResponseJson)
     tickers_list = tickers.split(',')
     recommendations_list = recommendations['finance']['result']
     assert len(recommendations_list) == len(tickers_list)
@@ -249,9 +259,7 @@ def _assert_insight_result(insights_result: InsightsFinanceResult, ticker: str) 
 def _assert_insights_response_json(
     insights: InsightsResponseJson, tickers: str
 ) -> None:
-    assert insights
-    assert check_type(insights, InsightsResponseJson)
-    assert insights['finance']['error'] is None
+    _assert_response_json(insights, InsightsResponseJson)
     tickers_list = tickers.split(',')
     insights_list = insights['finance']['result']
     assert len(insights_list) == len(tickers_list)
@@ -283,9 +291,7 @@ def _assert_market_summary_results(
 def _assert_market_summary_response_json(
     market_summaries: MarketSummaryResponseJson,
 ) -> None:
-    assert market_summaries
-    assert check_type(market_summaries, MarketSummaryResponseJson)
-    assert market_summaries['marketSummaryResponse']['error'] is None
+    _assert_response_json(market_summaries, MarketSummaryResponseJson)
     _assert_market_summary_results(market_summaries['marketSummaryResponse']['result'])
 
 
@@ -295,9 +301,7 @@ def _assert_trending_result(trending_result: TrendingFinanceResult) -> None:
 
 
 def _assert_trending_response_json(trending: TrendingResponseJson) -> None:
-    assert trending
-    assert check_type(trending, TrendingResponseJson)
-    assert trending['finance']['error'] is None
+    _assert_response_json(trending, TrendingResponseJson)
     _assert_trending_result(trending['finance']['result'][0])
 
 
@@ -308,9 +312,7 @@ def _assert_currencies_results(currencies_results: list[CurrenciesResult]) -> No
 
 
 def _assert_currencies_response_json(currencies: CurrenciesResponseJson) -> None:
-    assert currencies
-    assert check_type(currencies, CurrenciesResponseJson)
-    assert currencies['currencies']['error'] is None
+    _assert_response_json(currencies, CurrenciesResponseJson)
     _assert_currencies_results(currencies['currencies']['result'])
 
 
@@ -324,7 +326,5 @@ def _assert_calendar_events_result(
 def _assert_calendar_events_response_json(
     calendar_events: CalendarEventsResponseJson,
 ) -> None:
-    assert calendar_events
-    assert check_type(calendar_events, CalendarEventsResponseJson)
-    assert calendar_events['finance']['error'] is None
+    _assert_response_json(calendar_events, CalendarEventsResponseJson)
     _assert_calendar_events_result(calendar_events['finance']['result'])

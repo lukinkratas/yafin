@@ -478,8 +478,10 @@ class InsiderHolderItem(TypedDict):
     url: str
     transactionDescription: str
     latestTransDate: Format
-    positionDirect: Format
-    positionDirectDate: Format
+    positionDirect: NotRequired[Format]
+    positionDirectDate: NotRequired[Format]
+    positionIndirect: NotRequired[Format]
+    positionIndirectDate: NotRequired[Format]
 
 
 class InsiderHolders(TypedDict):
@@ -524,17 +526,16 @@ class UpgradeDowngradeHistory(TypedDict):
 
 class Price(TypedDict):
     maxAge: int
-    preMarketSource: str
+    preMarketSource: NotRequired[str]
     preMarketChangePercent: NotRequired[float]
     preMarketChange: NotRequired[float]
     preMarketTime: NotRequired[int]
     preMarketPrice: NotRequired[float]
-    preMarketSource: str
     postMarketChangePercent: NotRequired[float]
     postMarketChange: NotRequired[float]
     postMarketTime: NotRequired[int]
     postMarketPrice: NotRequired[float]
-    postMarketSource: str
+    postMarketSource: NotRequired[str]
     regularMarketChangePercent: float
     regularMarketChange: float
     regularMarketTime: int
@@ -548,7 +549,7 @@ class Price(TypedDict):
     regularMarketPreviousClose: float
     regularMarketSource: str
     regularMarketOpen: float
-    overnightMarketSource: str
+    overnightMarketSource: NotRequired[str]
     overnightMarketChangePercent: NotRequired[float]
     overnightMarketChange: NotRequired[float]
     overnightMarketTime: NotRequired[int]
@@ -2229,11 +2230,11 @@ class InsightsFinanceResultCompanySnapshot(TypedDict):
 
 
 class InsightsFinanceResultUpsell(TypedDict):
-    msBullishSummary: list[str]
-    msBearishSummary: list[str]
+    msBullishSummary: NotRequired[list[str]]
+    msBearishSummary: NotRequired[list[str]]
     companyName: str
-    msBullishBearishSummariesPublishDate: int
-    upsellReportType: str
+    msBullishBearishSummariesPublishDate: NotRequired[int]
+    upsellReportType: NotRequired[str]
 
 
 class InsightsFinanceResultUpselSearchDD(TypedDict):

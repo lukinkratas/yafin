@@ -6,6 +6,26 @@
           "holders": [
             {
               "maxAge": 1,
+              "name": "ALFORD PEGGY",
+              "relation": "Director",
+              "url": "",
+              "transactionDescription": "Sale",
+              "latestTransDate": {
+                "raw": 1761868800,
+                "fmt": "2025-10-31"
+              },
+              "positionIndirect": {
+                "raw": 3505,
+                "fmt": "3.5k",
+                "longFmt": "3,505"
+              },
+              "positionIndirectDate": {
+                "raw": 1761868800,
+                "fmt": "2025-10-31"
+              }
+            },
+            {
+              "maxAge": 1,
               "name": "ANDERSON AARON",
               "relation": "Officer",
               "url": "",
@@ -62,26 +82,6 @@
               "positionDirectDate": {
                 "raw": 1755475200,
                 "fmt": "2025-08-18"
-              }
-            },
-            {
-              "maxAge": 1,
-              "name": "COLLISON PATRICK",
-              "relation": "Director",
-              "url": "",
-              "transactionDescription": "Conversion of Exercise of derivative security",
-              "latestTransDate": {
-                "raw": 1755216000,
-                "fmt": "2025-08-15"
-              },
-              "positionDirect": {
-                "raw": 155,
-                "fmt": "155",
-                "longFmt": "155"
-              },
-              "positionDirectDate": {
-                "raw": 1755216000,
-                "fmt": "2025-08-15"
               }
             },
             {
