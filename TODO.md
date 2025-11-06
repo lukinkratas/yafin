@@ -1,10 +1,11 @@
 ## TODO
 
-- [ ] Use pydantic for model validation?
-- [ ] get chart not now(), but round to midnight - check yfinance implementation
+- [ ] symbol get_quote_summary_quote_type x get_quote_type
+- [ ] get_income_statement get_balance_sheet get_cash_flow x get_income_statement_history get_income_statement_history_quarterly get_balance_sheet_history get_balance_sheet_history_quarterly get_cashflow_statement_history get_cashflow_statement_history_quarterly
+
 - [ ] get_chart implement period1 and period2 ?
-- [ ] client.get_timeseries, symbol.get_income_statement, symbol.get_balance_sheet and symbol.get_cash_flow default period1 and 2 args datetime.datetime.timestamp ?
 - [ ] example from docs to main or integration tests
+- [ ] get chart not now(), but round to midnight - check yfinance implementation
 
 - [ ] not only meta fixtures - other stocks, btc, gold, bonds
 - [ ] reverse eng the rest API again - check, if all endpoints are present
@@ -13,6 +14,8 @@
 - [ ] publish to pypi test
 - [ ] publish
 - [ ] mcp
+- ~~[x] caching~~
+- ~~[x] client.get_timeseries, symbol.get_income_statement, symbol.get_balance_sheet and symbol.get_cash_flow default period1 and 2 args datetime.datetime.timestamp ? -> Noe, bcs default will not be set on runtime, but on import~~
 - ~~[x] TypedDicts types per endpoint~~
 - ~~[x] utils.get_types_with_frequency - add OTHER types ? -> str | None annotation for frequency~~
 - ~~[x] unit test symbol / client singleton factory~~

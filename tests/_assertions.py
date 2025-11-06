@@ -1,4 +1,4 @@
-from typing import Any, Type, TypeVar
+from typing import Type, TypeVar
 
 from typeguard import check_type
 
@@ -39,6 +39,7 @@ from yafin.types import (
     Price,
     QuoteResponseJson,
     QuoteResult,
+    QuoteSummaryModuleReturnValue,
     QuoteSummaryResponseJson,
     QuoteSummaryResult,
     QuoteTypeItem,
@@ -134,7 +135,7 @@ def _assert_quote_type_response_json(
 
 
 def _assert_quote_summary_single_module_result(
-    quote_summary_single_module_result: dict[str, Any] | list[dict[str, Any]],
+    quote_summary_single_module_result: QuoteSummaryModuleReturnValue,
     module: str,
 ) -> None:
     type_map = {

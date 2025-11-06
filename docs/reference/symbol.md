@@ -5,8 +5,9 @@
         - close
         - get_chart
         - get_quote
-        - get_quote_summary_all_modules
         - get_quote_type
+        - get_quote_summary_all_modules
+        - get_quote_summary_quote_type
         - get_asset_profile
         - get_summary_profile
         - get_summary_detail
@@ -44,3 +45,5 @@
         - get_search
         - get_recommendations
         - get_insights
+        - get_ratings
+        - get_analysis

@@ -5,6 +5,7 @@ from types import TracebackType
 from typing import Any, Self, Type
 from zoneinfo import ZoneInfo
 
+from async_lru import alru_cache
 from curl_cffi import AsyncSession, Response
 from curl_cffi.requests.exceptions import HTTPError, Timeout
 
@@ -146,6 +147,7 @@ class AsyncClient(object):
         raise HTTPError(msg)
 
     @_log_args
+    @alru_cache(maxsize=128)
     async def _get_crumb(self) -> str | None:
         if not self._crumb:
             url = f'{self._BASE_URL}/v1/test/getcrumb'
@@ -155,6 +157,7 @@ class AsyncClient(object):
         return self._crumb
 
     @_log_args
+    @alru_cache(maxsize=128)
     async def get_chart(
         self,
         ticker: str,
@@ -222,6 +225,7 @@ class AsyncClient(object):
         return response.json()
 
     @_log_args
+    @alru_cache(maxsize=128)
     async def get_quote(self, tickers: str) -> QuoteResponseJson:
         """Get quote for tickers.
 
@@ -242,6 +246,7 @@ class AsyncClient(object):
         return response.json()
 
     @_log_args
+    @alru_cache(maxsize=128)
     async def get_quote_type(self, tickers: str) -> QuoteTypeResponseJson:
         """Get quote type for tickers.
 
@@ -261,6 +266,7 @@ class AsyncClient(object):
         return response.json()
 
     @_log_args
+    @alru_cache(maxsize=128)
     async def get_quote_summary(
         self, ticker: str, modules: str
     ) -> QuoteSummaryResponseJson:
@@ -309,8 +315,9 @@ class AsyncClient(object):
         Args:
             ticker: Ticker symbol.
             types: Comma-separated types (incl. frequency) to include.
-            period1: Start timestamp in seconds.
-            period2: End timestamp in seconds.
+            period1:
+                Start timestamp in seconds. (optional, default: 1st Jan 2020 timestamp)
+            period2: End timestamp in seconds. (optional, default: now timestamp)
 
         Returns: Timeseries response json including result and error.
 
@@ -355,6 +362,7 @@ class AsyncClient(object):
         return response.json()
 
     @_log_args
+    @alru_cache(maxsize=128)
     async def get_options(self, ticker: str) -> OptionsResponseJson:
         """Get options for the ticker.
 
@@ -375,6 +383,7 @@ class AsyncClient(object):
         return response.json()
 
     @_log_args
+    @alru_cache(maxsize=128)
     async def get_search(self, tickers: str) -> SearchResponseJson:
         """Get search results for tickers.
 
@@ -391,6 +400,7 @@ class AsyncClient(object):
         return response.json()
 
     @_log_args
+    @alru_cache(maxsize=128)
     async def get_recommendations(self, tickers: str) -> RecommendationsResponseJson:
         """Get analyst recommendations for tickers.
 
@@ -407,6 +417,7 @@ class AsyncClient(object):
         return response.json()
 
     @_log_args
+    @alru_cache(maxsize=128)
     async def get_insights(self, tickers: str) -> InsightsResponseJson:
         """Get insights for tickers.
 
@@ -429,6 +440,7 @@ class AsyncClient(object):
         return response.json()
 
     @_log_args
+    @alru_cache(maxsize=128)
     async def get_ratings(self, ticker: str) -> RatingsResponseJson:
         """Get ratings for the ticker.
 
@@ -445,6 +457,7 @@ class AsyncClient(object):
         return response.json()
 
     @_log_args
+    @alru_cache(maxsize=128)
     async def get_analysis(self, ticker: str) -> AnalysisResponseJson:
         """Get analysis for the ticker.
 
@@ -462,6 +475,7 @@ class AsyncClient(object):
         return response.json()
 
     @_log_args
+    @alru_cache(maxsize=128)
     async def get_market_summaries(self) -> MarketSummaryResponseJson:
         """Get market summaries.
 
@@ -475,6 +489,7 @@ class AsyncClient(object):
         return response.json()
 
     @_log_args
+    @alru_cache(maxsize=128)
     async def get_trending(self) -> TrendingResponseJson:
         """Get trending tickers.
 
@@ -488,6 +503,7 @@ class AsyncClient(object):
         return response.json()
 
     @_log_args
+    @alru_cache(maxsize=128)
     async def get_currencies(self) -> CurrenciesResponseJson:
         """Get currency exchange rates.
 
@@ -511,8 +527,10 @@ class AsyncClient(object):
 
         Args:
             modules: Comma-separated modules to include.
-            period1: Start timestamp in miliseconds.
-            period2: End timestamp in miliseconds.
+            period1:
+                Start timestamp in miliseconds.
+                (optional, default: (period2 - 149days) timestamp)
+            period2: End timestamp in miliseconds. (optional, default: now timestamp)
 
         Returns: Calendar events response json including result and error.
 

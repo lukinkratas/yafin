@@ -525,8 +525,9 @@ class AsyncSymbol(object):
 
         Args:
             frequency: annual, quarterly or trailing.
-            period1: Start timestamp in seconds.
-            period2: End timestamp in seconds.
+            period1:
+                Start timestamp in seconds. (optional, default: 1st Jan 2020 timestamp)
+            period2: End timestamp in seconds. (optional, default: now timestamp)
 
         Returns: Income statement response results json.
         """
@@ -545,8 +546,9 @@ class AsyncSymbol(object):
 
         Args:
             frequency: annual, quarterly or trailing.
-            period1: Start timestamp in seconds.
-            period2: End timestamp in seconds.
+            period1:
+                Start timestamp in seconds. (optional, default: 1st Jan 2020 timestamp)
+            period2: End timestamp in seconds. (optional, default: now timestamp)
 
         Returns: Balance sheet response results json.
         """
@@ -563,8 +565,9 @@ class AsyncSymbol(object):
 
         Args:
             frequency: annual, quarterly or trailing.
-            period1: Start timestamp in seconds.
-            period2: End timestamp in seconds.
+            period1:
+                Start timestamp in seconds. (optional, default: 1st Jan 2020 timestamp)
+            period2: End timestamp in seconds. (optional, default: now timestamp)
 
         Returns: Cash flow response results json.
         """

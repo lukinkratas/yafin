@@ -8,7 +8,7 @@ _Note: Market Summary, Trending, Currencies and Calendar Events endpoints are on
 
 ### Query multiple symbols
 
-Using client.get_quote, get_quote_type, client.get_search, client.get_insights and client.get_recommendations you can quote multiple tickers at once.
+Using client.get_quote, get_quote_type, client.get_search, client.get_insights and client.get_recommendations you can quote multiple tickers at once natively.
 
 ### Quote Summary Endpoint Modules
 
@@ -44,12 +44,12 @@ Cash flow data is available in symbol.get_cash_flow (Timeseries Endpoint) and in
 
 ### Calendar Events x Quote Summary Endpoints
 
-Calendar events data is available both in client.get_calendar_events (Calendar Events Endpoint) and in client.get_quote_summary (Quote Summary Endpoint) with calendarEvents module, but each endpoint provides different data.
+Calendar events data is available in client.get_calendar_events (Calendar Events Endpoint) and in client.get_quote_summary (Quote Summary Endpoint) with calendarEvents module, but each endpoint provides different data.
 
-Calendar events data is available both in symbol.get_calendar_events (Quote Summary Endpoint).
+Calendar events data is available in symbol.get_calendar_events (Quote Summary Endpoint).
 
 ### Response JSON
 
 Most of the client endpoints return response json with result and error fields.
 
-Exception to that are client.get_search and client.get_ratings, which return the direct search / ratings (respectively) results.
+Exception to that are client.get_search, client.get_ratings and client.get_ratings, which return the direct search / ratings / analysis (respectively) results.
