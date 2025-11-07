@@ -7,6 +7,8 @@ Unofficial [Yahoo!Ⓡ finance](https://finance.yahoo.com) API client.
 - intended for research, educational purposes and personal use only.
 - asynchronous.
 - not returning pandas dataframes (because why?).
+- uses caching and utilizes singleton
+- build on [curl-cffi](https://github.com/lexiforest/curl_cffi)
 
 **Documentation**: [https://lukinkratas.github.io/yafin/](https://lukinkratas.github.io/yafin/)
 

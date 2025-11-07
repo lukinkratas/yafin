@@ -3,8 +3,8 @@
 - [ ] get_chart implement period1 and period2 ?
 - [ ] example from docs to main or integration tests
 - [ ] get chart not now(), but round to midnight - check yfinance implementation
-
 - [ ] not only meta fixtures - other stocks, btc, gold, bonds
+
 - [ ] reverse eng the rest API again - check, if all endpoints are present
 - [ ] (sync) client and (sync) symbol ? + pytest-benchmark tests
 - [ ] consider dependency injection
