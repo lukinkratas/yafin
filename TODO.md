@@ -1,8 +1,5 @@
 ## TODO
 
-- [ ] symbol get_quote_summary_quote_type x get_quote_type
-- [ ] get_income_statement get_balance_sheet get_cash_flow x get_income_statement_history get_income_statement_history_quarterly get_balance_sheet_history get_balance_sheet_history_quarterly get_cashflow_statement_history get_cashflow_statement_history_quarterly
-
 - [ ] get_chart implement period1 and period2 ?
 - [ ] example from docs to main or integration tests
 - [ ] get chart not now(), but round to midnight - check yfinance implementation
@@ -14,6 +11,8 @@
 - [ ] publish to pypi test
 - [ ] publish
 - [ ] mcp
+- ~~[x] symbol get_quote_summary_quote_type x get_quote_type~~
+- ~~[x] symbol get_income_statement get_balance_sheet get_cash_flow x get_income_statement_history get_income_statement_history_quarterly get_balance_sheet_history get_balance_sheet_history_quarterly get_cashflow_statement_history get_cashflow_statement_history_quarterly~~
 - ~~[x] caching~~
 - ~~[x] client.get_timeseries, symbol.get_income_statement, symbol.get_balance_sheet and symbol.get_cash_flow default period1 and 2 args datetime.datetime.timestamp ? -> Noe, bcs default will not be set on runtime, but on import~~
 - ~~[x] TypedDicts types per endpoint~~

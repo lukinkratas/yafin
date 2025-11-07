@@ -334,18 +334,6 @@ class TestUnitSymbol:
             await symbol._get_quote_summary_single_module(**kwargs)
 
     @pytest.mark.asyncio
-    async def test_get_quote_summary_quote_type(
-        self,
-        symbol: AsyncSymbol,
-        mocker: MockerFixture,
-        quote_summary_quote_type_json_mock: dict[str, Any],
-    ) -> None:
-        """Test get_quote_type method."""
-        _mock_200_response(mocker, quote_summary_quote_type_json_mock)
-        quote_type = await symbol.get_quote_summary_quote_type()
-        _assert_quote_summary_single_module_result(quote_type, 'quoteType')
-
-    @pytest.mark.asyncio
     async def test_get_asset_profile(
         self,
         symbol: AsyncSymbol,
@@ -380,96 +368,6 @@ class TestUnitSymbol:
         _mock_200_response(mocker, summary_detail_json_mock)
         summary_detail = await symbol.get_summary_detail()
         _assert_quote_summary_single_module_result(summary_detail, 'summaryDetail')
-
-    @pytest.mark.asyncio
-    async def test_get_income_statement_history(
-        self,
-        symbol: AsyncSymbol,
-        mocker: MockerFixture,
-        income_statement_history_json_mock: dict[str, Any],
-    ) -> None:
-        """Test get_income_statement_history method."""
-        _mock_200_response(mocker, income_statement_history_json_mock)
-        income_statement_history = await symbol.get_income_statement_history()
-        _assert_quote_summary_single_module_result(
-            income_statement_history, 'incomeStatementHistory'
-        )
-
-    @pytest.mark.asyncio
-    async def test_get_income_statement_history_quarterly(
-        self,
-        symbol: AsyncSymbol,
-        mocker: MockerFixture,
-        income_statement_history_quarterly_json_mock: dict[str, Any],
-    ) -> None:
-        """Test get_income_statement_history_quarterly method."""
-        _mock_200_response(mocker, income_statement_history_quarterly_json_mock)
-        income_statement_history_quarterly = (
-            await symbol.get_income_statement_history_quarterly()
-        )
-        _assert_quote_summary_single_module_result(
-            income_statement_history_quarterly, 'incomeStatementHistoryQuarterly'
-        )
-
-    @pytest.mark.asyncio
-    async def test_get_balance_sheet_history(
-        self,
-        symbol: AsyncSymbol,
-        mocker: MockerFixture,
-        balance_sheet_history_json_mock: dict[str, Any],
-    ) -> None:
-        """Test get_balance_sheet_history method."""
-        _mock_200_response(mocker, balance_sheet_history_json_mock)
-        balance_sheet_history = await symbol.get_balance_sheet_history()
-        _assert_quote_summary_single_module_result(
-            balance_sheet_history, 'balanceSheetHistory'
-        )
-
-    @pytest.mark.asyncio
-    async def test_get_balance_sheet_history_quarterly(
-        self,
-        symbol: AsyncSymbol,
-        mocker: MockerFixture,
-        balance_sheet_history_quarterly_json_mock: dict[str, Any],
-    ) -> None:
-        """Test get_balance_sheet_history_quarterly method."""
-        _mock_200_response(mocker, balance_sheet_history_quarterly_json_mock)
-        balance_sheet_history_quarterly = (
-            await symbol.get_balance_sheet_history_quarterly()
-        )
-        _assert_quote_summary_single_module_result(
-            balance_sheet_history_quarterly, 'balanceSheetHistoryQuarterly'
-        )
-
-    @pytest.mark.asyncio
-    async def test_get_cashflow_statement_history(
-        self,
-        symbol: AsyncSymbol,
-        mocker: MockerFixture,
-        cashflow_statement_history_json_mock: dict[str, Any],
-    ) -> None:
-        """Test get_cashflow_statement_history method."""
-        _mock_200_response(mocker, cashflow_statement_history_json_mock)
-        cashflow_statement_history = await symbol.get_cashflow_statement_history()
-        _assert_quote_summary_single_module_result(
-            cashflow_statement_history, 'cashflowStatementHistory'
-        )
-
-    @pytest.mark.asyncio
-    async def test_get_cashflow_statement_history_quarterly(
-        self,
-        symbol: AsyncSymbol,
-        mocker: MockerFixture,
-        cashflow_statement_history_quarterly_json_mock: dict[str, Any],
-    ) -> None:
-        """Test get_cashflow_statement_history_quarterly method."""
-        _mock_200_response(mocker, cashflow_statement_history_quarterly_json_mock)
-        cashflow_statement_history_quarterly = (
-            await symbol.get_cashflow_statement_history_quarterly()
-        )
-        _assert_quote_summary_single_module_result(
-            cashflow_statement_history_quarterly, 'cashflowStatementHistoryQuarterly'
-        )
 
     @pytest.mark.asyncio
     async def test_get_price(

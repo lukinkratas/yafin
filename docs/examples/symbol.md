@@ -65,16 +65,9 @@ async def main() -> None:
 
     async with AsyncSymbol('META') as meta:
         meta_quote_summary_all_modules = await meta.get_quote_summary_all_modules()
-        meta_quote_type = await meta.get_quote_type()
         meta_asset_profile = await meta.get_asset_profile()
         meta_summary_profile = await meta.get_summary_profile()
         meta_summary_detail = await meta.get_summary_detail()
-        meta_income_statement_history = await meta.get_income_statement_history()
-        meta_income_statement_history_quarterly = await meta.get_income_statement_history_quarterly()
-        meta_balance_sheet_history = await meta.get_balance_sheet_history()
-        meta_balance_sheet_history_quarterly = await meta.get_balance_sheet_history_quarterly()
-        meta_cashflow_statement_history = await meta.get_cashflow_statement_history()
-        meta_cashflow_statement_history_quarterly = await meta.get_cashflow_statement_history_quarterly()
         meta_price = await meta.get_price()
         meta_default_key_statistics = await meta.get_default_key_statistics()
         meta_financial_data = await meta.get_financial_data()

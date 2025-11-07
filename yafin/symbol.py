@@ -8,9 +8,7 @@ from .const import QUOTE_SUMMARY_MODULES
 from .types import (
     AnalysisResponseJson,
     AssetProfile,
-    BalanceSheetItem,
     CalendarEvents,
-    CashflowItem,
     ChartResult,
     DefaultKeyStatistics,
     Earnings,
@@ -18,7 +16,6 @@ from .types import (
     EarningsTrendItem,
     FinancialData,
     FundOwnershipItem,
-    IncomeStatementItem,
     IndexTrend,
     IndustryTrend,
     InsiderHolderItem,
@@ -34,7 +31,6 @@ from .types import (
     QuoteResult,
     QuoteSummaryModuleResult,
     QuoteSummaryResult,
-    QuoteTypeItem,
     QuoteTypeResult,
     RatingsResponseJson,
     RecommendationsFinanceResult,
@@ -218,14 +214,6 @@ class AsyncSymbol(object):
         return quote_summary_json['quoteSummary']['result'][0][module]
 
     @_log_args
-    async def get_quote_summary_quote_type(self) -> QuoteTypeItem:
-        """Get quote type for the ticker.
-
-        Returns: Quote summary with quote type module response result json.
-        """
-        return await self._get_quote_summary_single_module('quoteType')
-
-    @_log_args
     async def get_asset_profile(self) -> AssetProfile:
         """Get asset profile for the ticker.
 
@@ -248,76 +236,6 @@ class AsyncSymbol(object):
         Returns: Quote summary with summary detail module response result json.
         """
         return await self._get_quote_summary_single_module('summaryDetail')
-
-    @_log_args
-    async def get_income_statement_history(self) -> list[IncomeStatementItem]:
-        """Get income statement history for the ticker.
-
-        Returns:
-            Quote summary with income statement history module response results
-                json.
-        """
-        result = await self._get_quote_summary_single_module('incomeStatementHistory')
-        return result['incomeStatementHistory']
-
-    @_log_args
-    async def get_income_statement_history_quarterly(self) -> list[IncomeStatementItem]:
-        """Get income statement history quarterly for the ticker.
-
-        Returns:
-            Quote summary with income statement history quarterly module response
-                results json.
-        """
-        result = await self._get_quote_summary_single_module(
-            'incomeStatementHistoryQuarterly'
-        )
-        return result['incomeStatementHistory']
-
-    @_log_args
-    async def get_balance_sheet_history(self) -> list[BalanceSheetItem]:
-        """Get balance sheet history for the ticker.
-
-        Returns: Quote summary with balance sheet history module response results json.
-        """
-        result = await self._get_quote_summary_single_module('balanceSheetHistory')
-        return result['balanceSheetStatements']
-
-    @_log_args
-    async def get_balance_sheet_history_quarterly(self) -> list[BalanceSheetItem]:
-        """Get balance sheet history quarterly for the ticker.
-
-        Returns:
-            Quote summary with balance sheet history quarterly module response
-                results json.
-        """
-        result = await self._get_quote_summary_single_module(
-            'balanceSheetHistoryQuarterly'
-        )
-        return result['balanceSheetStatements']
-
-    @_log_args
-    async def get_cashflow_statement_history(self) -> list[CashflowItem]:
-        """Get cashflow statement history for the ticker.
-
-        Returns:
-            Quote summary with cashflow statement history module response results
-                json.
-        """
-        result = await self._get_quote_summary_single_module('cashflowStatementHistory')
-        return result['cashflowStatements']
-
-    @_log_args
-    async def get_cashflow_statement_history_quarterly(self) -> list[CashflowItem]:
-        """Get cashflow statement history quarterly for the ticker.
-
-        Returns:
-            Quote summary with cashflow statement history quarterly module response
-                results json.
-        """
-        result = await self._get_quote_summary_single_module(
-            'cashflowStatementHistoryQuarterly'
-        )
-        return result['cashflowStatements']
 
     @_log_args
     async def get_price(self) -> Price:

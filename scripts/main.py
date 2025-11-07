@@ -126,9 +126,6 @@ async def main() -> None:  # noqa: D103
         meta_quote_summary_all_modules = await meta.get_quote_summary_all_modules()
         print(json.dumps(meta_quote_summary_all_modules, indent=2))
 
-        meta_quote_summary_quote_type = await meta.get_quote_summary_quote_type()
-        print(json.dumps(meta_quote_summary_quote_type, indent=2))
-
         meta_asset_profile = await meta.get_asset_profile()
         print(json.dumps(meta_asset_profile, indent=2))
 
@@ -137,30 +134,6 @@ async def main() -> None:  # noqa: D103
 
         meta_summary_detail = await meta.get_summary_detail()
         print(json.dumps(meta_summary_detail, indent=2))
-
-        meta_income_statement_history = await meta.get_income_statement_history()
-        print(json.dumps(meta_income_statement_history, indent=2))
-
-        meta_income_statement_history_quarterly = (
-            await meta.get_income_statement_history_quarterly()
-        )
-        print(json.dumps(meta_income_statement_history_quarterly, indent=2))
-
-        meta_balance_sheet_history = await meta.get_balance_sheet_history()
-        print(json.dumps(meta_balance_sheet_history, indent=2))
-
-        meta_balance_sheet_history_quarterly = (
-            await meta.get_balance_sheet_history_quarterly()
-        )
-        print(json.dumps(meta_balance_sheet_history_quarterly, indent=2))
-
-        meta_cashflow_statement_history = await meta.get_cashflow_statement_history()
-        print(json.dumps(meta_cashflow_statement_history, indent=2))
-
-        meta_cashflow_statement_history_quarterly = (
-            await meta.get_cashflow_statement_history_quarterly()
-        )
-        print(json.dumps(meta_cashflow_statement_history_quarterly, indent=2))
 
         meta_price = await meta.get_price()
         print(json.dumps(meta_price, indent=2))
