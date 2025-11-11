@@ -1,12 +1,11 @@
 import asyncio
 import logging
 from types import TracebackType
-from typing import Self, Type
+from typing import Any, Self, Type
 
 from .client import AsyncClient
 from .const import QUOTE_SUMMARY_MODULES
 from .types import (
-    AnalysisResponseJson,
     AssetProfile,
     CalendarEvents,
     ChartResult,
@@ -132,8 +131,10 @@ class AsyncSymbol(object):
     @_log_args
     async def get_chart(
         self,
-        period_range: str,
         interval: str,
+        period_range: str | None = None,
+        period1: int | float | None = None,
+        period2: int | float | None = None,
         include_div: bool = True,
         include_split: bool = True,
         include_earn: bool = True,
@@ -142,8 +143,12 @@ class AsyncSymbol(object):
         """Get chart data for the ticker.
 
         Args:
-            period_range: Range of the period.
             interval: Data interval.
+            period_range:
+                Range of the period. (Not named range due to collision with python
+                built-in method name)
+            period1: Start timestamp in seconds. (optional, default: None)
+            period2: End timestamp in seconds. (optional, default: None)
             include_div: Whether to include dividends.
             include_split: Whether to include stock splits.
             include_earn: Whether to include earnings.
@@ -151,6 +156,8 @@ class AsyncSymbol(object):
 
         Returns: Chart response result json.
         """
+        kwargs: dict[str, Any] = {'ticker': self.ticker, 'interval': interval}
+
         events_list = []
 
         if include_div:
@@ -165,12 +172,20 @@ class AsyncSymbol(object):
         if include_capital_gain:
             events_list.append('capitalGain')
 
-        events = ','.join(events_list) if events_list else None
+        if events_list:
+            kwargs['events'] = ','.join(events_list)
+
+        if period_range is not None:
+            kwargs['period_range'] = period_range
+
+        if period1 is not None:
+            kwargs['period1'] = int(period1)
+
+        if period2 is not None:
+            kwargs['period2'] = int(period2)
 
         await self._get_client()
-        chart_json = await self._client.get_chart(
-            self.ticker, period_range, interval, events
-        )
+        chart_json = await self._client.get_chart(**kwargs)
         return chart_json['chart']['result'][0]
 
     @_log_args
@@ -538,12 +553,3 @@ class AsyncSymbol(object):
         """
         await self._get_client()
         return await self._client.get_ratings(self.ticker)
-
-    @_log_args
-    async def get_analysis(self) -> AnalysisResponseJson:
-        """Get analysis for the ticker.
-
-        Returns: Analysis response result json.
-        """
-        await self._get_client()
-        return await self._client.get_analysis(self.ticker)

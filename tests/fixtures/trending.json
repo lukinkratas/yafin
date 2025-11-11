@@ -1,0 +1,74 @@
+{
+  "finance": {
+    "result": [
+      {
+        "count": 20,
+        "quotes": [
+          {
+            "symbol": "CRWV"
+          },
+          {
+            "symbol": "BBAI"
+          },
+          {
+            "symbol": "AI"
+          },
+          {
+            "symbol": "GLTO"
+          },
+          {
+            "symbol": "RKLB"
+          },
+          {
+            "symbol": "RIVN"
+          },
+          {
+            "symbol": "HSAI"
+          },
+          {
+            "symbol": "XPEV"
+          },
+          {
+            "symbol": "ENPH"
+          },
+          {
+            "symbol": "INT.ST"
+          },
+          {
+            "symbol": "VOD.L"
+          },
+          {
+            "symbol": "MSPR"
+          },
+          {
+            "symbol": "LYFT"
+          },
+          {
+            "symbol": "OPEN"
+          },
+          {
+            "symbol": "COGT"
+          },
+          {
+            "symbol": "NIO"
+          },
+          {
+            "symbol": "SEDG"
+          },
+          {
+            "symbol": "SE"
+          },
+          {
+            "symbol": "SONY"
+          },
+          {
+            "symbol": "NVTS"
+          }
+        ],
+        "jobTimestamp": 1762852593689,
+        "startInterval": 202511110800
+      }
+    ],
+    "error": null
+  }
+}

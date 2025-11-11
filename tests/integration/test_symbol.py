@@ -4,7 +4,6 @@ import pytest
 import pytest_asyncio
 
 from tests._assertions import (
-    _assert_analysis_response_json,
     _assert_chart_result,
     _assert_insight_result,
     _assert_options_result,
@@ -29,16 +28,16 @@ class TestUnitSymbol:
     """Integration tests for yafin.symbol module."""
 
     @pytest_asyncio.fixture
-    async def symbol(self) -> AsyncGenerator[AsyncSymbol, None]:
+    async def symbol(self, ticker: str) -> AsyncGenerator[AsyncSymbol, None]:
         """Fixture for AsyncSymbol."""
-        async with AsyncSymbol('META') as symbol:
+        async with AsyncSymbol(ticker) as symbol:
             yield symbol
 
     @pytest.mark.integration
     @pytest.mark.asyncio
     async def test_get_chart(self, symbol: AsyncSymbol) -> None:
         """Test get_chart method."""
-        chart_result = await symbol.get_chart(period_range='1y', interval='1d')
+        chart_result = await symbol.get_chart(interval='1d', period_range='1y')
         _assert_chart_result(chart_result, symbol.ticker)
 
     @pytest.mark.integration
@@ -130,10 +129,3 @@ class TestUnitSymbol:
         """Test get_ratings method."""
         ratings = await symbol.get_ratings()
         _assert_ratings_response_json(ratings)
-
-    @pytest.mark.integration
-    @pytest.mark.asyncio
-    async def test_get_analysis(self, symbol: AsyncSymbol) -> None:
-        """Test get_analysis method."""
-        analysis = await symbol.get_analysis()
-        _assert_analysis_response_json(analysis, symbol.ticker)

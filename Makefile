@@ -1,24 +1,26 @@
-.PHONY: install install-all install-dev install-test install-doc format format lint lint-fix typecheck test test-int test-all build doc doc-serve
+.PHONY: install install-all install-dev install-test install-doc install-editable format format lint lint-fix typecheck fetch-mocks test test-int test-all build doc doc-serve
 
 help:
 	@echo "Available targets:"
-	@echo "  install        - Install the package and its dependencies"
-	@echo "  install-all    - Install the package with all extras"
-	@echo "  install-dev    - Install the package with dev dependencies"
-	@echo "  install-test   - Install the package with test dependencies"
-	@echo "  install-doc    - Install the package with doc dependencies"
-	@echo "  format         - Format the code using ruff"
-	@echo "  lint           - Check linting of the code using ruff"
-	@echo "  lint-fix       - Check and fix linting of the code using ruff"
-	@echo "  typecheck      - Type check the code using mypy"
-	@echo "  test           - Run unit tests"
-	@echo "  test-int       - Run integration tests"
-	@echo "  test-all       - Run all tests with html coverage"
-	@echo "  clean          - Removes htmlcov, __pycache__, pytest mypy and ruff cache dirs"
-	@echo "  build          - Build package - bdist wheel and sdist"
-	@echo "  doc            - build documentation html"
-	@echo "  doc-serve      - serve documentation html"
-	@echo "  help           - Show this help message"
+	@echo "  install          - Install the package and its dependencies"
+	@echo "  install-all      - Install the package with all extras"
+	@echo "  install-dev      - Install the package with dev dependencies"
+	@echo "  install-test     - Install the package with test dependencies"
+	@echo "  install-doc      - Install the package with doc dependencies"
+	@echo "  install-editable - Make the package installation editable"
+	@echo "  format           - Format the code using ruff"
+	@echo "  lint             - Check linting of the code using ruff"
+	@echo "  lint-fix         - Check and fix linting of the code using ruff"
+	@echo "  typecheck        - Type check the code using mypy"
+	@echo "  fetch-mocks      - Run script to fetch json mocks for fixtures"
+	@echo "  test             - Run unit tests"
+	@echo "  test-int         - Run integration tests"
+	@echo "  test-all         - Run all tests with html coverage"
+	@echo "  clean            - Clean up - remove htmlcov, __pycache__, pytest mypy and ruff cache dirs"
+	@echo "  build            - Build package - bdist wheel and sdist"
+	@echo "  doc              - build documentation html"
+	@echo "  doc-serve        - serve documentation html"
+	@echo "  help             - Show this help message"
 
 install:
 	uv sync
@@ -35,6 +37,9 @@ install-test:
 install-doc:
 	uv sync --group doc
 
+install-editable:
+	uv pip install -e .
+
 format:
 	uv run --group dev ruff format
 
@@ -47,27 +52,29 @@ lint-fix:
 typecheck:
 	uv run --group dev mypy .
 
+fetch-mocks:
+	uv run --group dev python -m scripts.fetch_mocks
+
 test:
-	uv pip install -e .
+	$(MAKE) install-editable
 	uv run --group test pytest -m "not integration and not performance and not baseline" -p no:warnings --cov=yafin --cov-report=term-missing --cov-branch
 
 test-int:
-	uv pip install -e .
+	$(MAKE) install-editable
 	uv run --group test pytest -m integration -p no:warnings --cov=yafin --cov-report=term-missing --cov-branch
 
 test-all:
-	uv run --group dev scripts/fetch_mocks.py
-	uv pip install -e .
+	$(MAKE) install-editable
 	uv run --group test pytest --cov=yafin --cov-report=term-missing --cov-branch --cov-fail-under=95 --cov-report=html:htmlcov
 
 clean:
-	rm -rf __pycache__ .pytest_cache .mypy_cache .ruff_cache .coverage htmlcov main.log dist src/yafin.egg-info .benchmarks site
+	rm -rvf __pycache__ scripts/__pycache__ tests/__pycache__ tests/integration/__pycache__ tests/unit/__pycache__ yafin/__pycache__ .pytest_cache .mypy_cache .ruff_cache .coverage htmlcov main.log dist yafin.egg-info site tests/fixtures/*.json tests/fixtures/*/*.json
 
 build:
 	uv build
 
 doc:
-	uv pip install -e .
+	$(MAKE) install-editable
 	uv run --group doc mkdocs build
 
 doc-serve:

@@ -9,11 +9,11 @@ async def main() -> None:
 
     # opt. 1 use context manager (recommended)
     async with AsyncClient() as client:
-        aapl_5d_chart = await client.get_chart(ticker='AAPL', period_range='5d', interval='1h', events='div,split')
+        aapl_5d_chart = await client.get_chart(ticker='AAPL', interval='1h', period_range='5d', events='div,split')
 
     # opt. 2 use close to avoid resource leakage
     client = AsyncClient()
-    meta_1y_chart = await client.get_chart(ticker='META', period_range='1y', interval='1d')
+    meta_1y_chart = await client.get_chart(ticker='META', interval='1d', period_range='1y')
     await client.close()
 
 if __name__ == '__main__':
@@ -173,22 +173,6 @@ async def main() -> None:
 
     async with AsyncClient() as client:
         meta_ratings = await client.get_ratings(ticker='META')
-
-if __name__ == '__main__':
-    asyncio.run(main())
-```
-
-### Analysis Endpoint
-
-```python
-import asyncio
-
-from yafin import AsyncClient
-
-async def main() -> None:
-
-    async with AsyncClient() as client:
-        meta_analysis = await client.get_analysis(ticker='META')
 
 if __name__ == '__main__':
     asyncio.run(main())

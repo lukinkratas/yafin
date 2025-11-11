@@ -4,7 +4,6 @@ import pytest
 import pytest_asyncio
 
 from tests._assertions import (
-    _assert_analysis_response_json,
     _assert_calendar_events_response_json,
     _assert_chart_response_json,
     _assert_currencies_response_json,
@@ -39,92 +38,75 @@ class TestIntegrationClient:
 
     @pytest.mark.integration
     @pytest.mark.asyncio
-    async def test_get_chart(self, client: AsyncClient) -> None:
+    async def test_get_chart(self, client: AsyncClient, ticker: str) -> None:
         """Test get_chart method."""
-        ticker = 'META'
-        chart = await client.get_chart(ticker, period_range='1y', interval='1d')
+        chart = await client.get_chart(ticker, interval='1d', period_range='1y')
         _assert_chart_response_json(chart, ticker)
 
     @pytest.mark.integration
     @pytest.mark.asyncio
-    async def test_get_quote(self, client: AsyncClient) -> None:
+    async def test_get_quote(self, client: AsyncClient, tickers: str) -> None:
         """Test get_quote method."""
-        tickers = 'META,AAPL,MSFT,AMZN,GOOGL,NVDA'
         quotes = await client.get_quote(tickers)
         _assert_quote_response_json(quotes, tickers)
 
     @pytest.mark.integration
     @pytest.mark.asyncio
-    async def test_get_quote_type(self, client: AsyncClient) -> None:
+    async def test_get_quote_type(self, client: AsyncClient, tickers: str) -> None:
         """Test get_quote_type method."""
-        tickers = 'META,AAPL,MSFT,AMZN,GOOGL,NVDA'
         quote_types = await client.get_quote_type(tickers)
         _assert_quote_type_response_json(quote_types, tickers)
 
     @pytest.mark.integration
     @pytest.mark.asyncio
-    async def test_get_quote_summary(self, client: AsyncClient) -> None:
+    async def test_get_quote_summary(self, client: AsyncClient, ticker: str) -> None:
         """Test get_quote_summary method."""
-        ticker = 'META'
         modules = QUOTE_SUMMARY_MODULES
         quote_summary = await client.get_quote_summary(ticker, modules)
         _assert_quote_summary_response_json(quote_summary, modules)
 
     @pytest.mark.integration
     @pytest.mark.asyncio
-    async def test_get_timeseries(self, client: AsyncClient) -> None:
+    async def test_get_timeseries(self, client: AsyncClient, ticker: str) -> None:
         """Test get_timeseries method."""
-        ticker = 'META'
         types = ANNUAL_INCOME_STATEMENT_TYPES
         timeseries = await client.get_timeseries(ticker, types)
         _assert_timeseries_response_json(timeseries, types, ticker)
 
     @pytest.mark.integration
     @pytest.mark.asyncio
-    async def test_get_options(self, client: AsyncClient) -> None:
+    async def test_get_options(self, client: AsyncClient, ticker: str) -> None:
         """Test get_options method."""
-        ticker = 'META'
         options = await client.get_options(ticker)
         _assert_options_response_json(options, ticker)
 
     @pytest.mark.integration
     @pytest.mark.asyncio
-    async def test_get_search(self, client: AsyncClient) -> None:
+    async def test_get_search(self, client: AsyncClient, tickers: str) -> None:
         """Test get_search method."""
-        search = await client.get_search(tickers='META')
+        search = await client.get_search(tickers)
         _assert_search_response_json(search)
 
     @pytest.mark.integration
     @pytest.mark.asyncio
-    async def test_get_recommendations(self, client: AsyncClient) -> None:
+    async def test_get_recommendations(self, client: AsyncClient, tickers: str) -> None:
         """Test get_recommendations method."""
-        tickers = 'META,AAPL,MSFT,AMZN,GOOGL,NVDA'
         recommendations = await client.get_recommendations(tickers)
         _assert_recommendations_response_json(recommendations, tickers)
 
     @pytest.mark.integration
     @pytest.mark.asyncio
-    async def test_get_insights(self, client: AsyncClient) -> None:
+    async def test_get_insights(self, client: AsyncClient, tickers: str) -> None:
         """Test get_insights method."""
-        tickers = 'META,AAPL,MSFT,AMZN,GOOGL,NVDA'
         insights = await client.get_insights(tickers)
         _assert_insights_response_json(insights, tickers)
 
     @pytest.mark.integration
     @pytest.mark.asyncio
-    async def test_get_ratings(self, client: AsyncClient) -> None:
+    async def test_get_ratings(self, client: AsyncClient, ticker: str) -> None:
         """Test get_ratings method."""
-        ticker = 'META'
         ratings = await client.get_ratings(ticker)
         _assert_ratings_response_json(ratings)
-
-    @pytest.mark.integration
-    @pytest.mark.asyncio
-    async def test_get_analysis(self, client: AsyncClient) -> None:
-        """Test get_analysis method."""
-        ticker = 'META'
-        analysis = await client.get_analysis(ticker)
-        _assert_analysis_response_json(analysis, ticker)
 
     @pytest.mark.integration
     @pytest.mark.asyncio

@@ -2104,7 +2104,7 @@ class CallPutItem(TypedDict):
     lastPrice: float
     change: float
     percentChange: float
-    volume: int
+    volume: NotRequired[int]
     openInterest: int
     bid: float
     ask: float
@@ -2167,13 +2167,15 @@ class SearchNew(TypedDict):
     link: str
     providerPublishTime: int
     type: str
-    thumbnail: dict[str, Any]
+    thumbnail: NotRequired[dict[str, Any]]
     relatedTickers: list[str]
 
 
 class SearchNav(TypedDict):
-    navName: str
-    navUrl: str
+    navName: NotRequired[str]
+    navUrl: NotRequired[str]
+    navType: NotRequired[str]
+    symbols: NotRequired[list[str]]
 
 
 class SearchResponseJson(TypedDict):
@@ -2326,18 +2328,6 @@ class RatingsResponseJson(TypedDict):
     mm: RatingsItem
     pt: RatingsItem
     fin_score: RatingsItem
-
-
-class AnalysisResponseJson(TypedDict):
-    analystRatings: dict[str, Any]
-    earningsCallInsights: dict[str, Any]
-    earningsInsights: dict[str, Any]
-    insiderActivity: dict[str, Any]
-    newsSummary: dict[str, Any]
-    optionsAnalysis: dict[str, Any]
-    overview: dict[str, Any]
-    priceMovement: dict[str, Any]
-    symbol: str
 
 
 class MarketSummaryResponseResult(TypedDict):
@@ -2493,7 +2483,7 @@ class CalendarEventsFinanceResultEconomicEventsItemRecord(TypedDict):
     period: str
     actual: str
     prior: str
-    revisedFrom: str
+    revisedFrom: NotRequired[str]
     description: str
 
 
@@ -2525,16 +2515,9 @@ class CalendarEventsResponseJson(TypedDict):
 QuoteSummaryModuleResult: TypeAlias = (
     AssetProfile
     | RecommendationTrend
-    | IncomeStatementHistory
-    | IncomeStatementHistoryQuarterly
-    | BalanceSheetHistory
-    | BalanceSheetHistoryQuarterly
-    | CashflowStatementHistory
-    | CashflowStatementHistoryQuarterly
     | IndexTrend
     | DefaultKeyStatistics
     | IndustryTrend
-    | QuoteTypeItem
     | FundOwnership
     | SummaryDetail
     | InsiderHolders
@@ -2559,13 +2542,9 @@ QuoteSummaryModuleResult: TypeAlias = (
 QuoteSummaryModuleReturnValue: TypeAlias = (
     AssetProfile
     | list[RecommendationTrendItem]
-    | list[IncomeStatementItem]
-    | list[BalanceSheetItem]
-    | list[CashflowItem]
     | IndexTrend
     | DefaultKeyStatistics
     | IndustryTrend
-    | QuoteTypeItem
     | list[FundOwnershipItem]
     | SummaryDetail
     | list[InsiderHolderItem]
@@ -2598,7 +2577,6 @@ ResponseJson: TypeAlias = (
     | RecommendationsResponseJson
     | InsightsResponseJson
     | RatingsResponseJson
-    | AnalysisResponseJson
     | MarketSummaryResponseJson
     | TrendingResponseJson
     | CurrenciesResponseJson

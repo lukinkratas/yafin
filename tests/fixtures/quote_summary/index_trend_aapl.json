@@ -1,0 +1,35 @@
+{
+  "quoteSummary": {
+    "result": [
+      {
+        "indexTrend": {
+          "maxAge": 1,
+          "symbol": "SP5",
+          "estimates": [
+            {
+              "period": "0q",
+              "growth": 0.1463
+            },
+            {
+              "period": "+1q",
+              "growth": 0.0651
+            },
+            {
+              "period": "0y",
+              "growth": 0.107700005
+            },
+            {
+              "period": "+1y",
+              "growth": 0.1388
+            },
+            {
+              "period": "LTG",
+              "growth": 0.122
+            }
+          ]
+        }
+      }
+    ],
+    "error": null
+  }
+}

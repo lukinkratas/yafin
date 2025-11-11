@@ -1,0 +1,288 @@
+{
+  "explains": [],
+  "count": 11,
+  "quotes": [
+    {
+      "exchange": "NMS",
+      "shortname": "Meta Platforms, Inc.",
+      "quoteType": "EQUITY",
+      "symbol": "META",
+      "index": "quotes",
+      "score": 11704500.0,
+      "typeDisp": "Equity",
+      "longname": "Meta Platforms, Inc.",
+      "exchDisp": "NASDAQ",
+      "sector": "Communication Services",
+      "sectorDisp": "Communication Services",
+      "industry": "Internet Content & Information",
+      "industryDisp": "Internet Content & Information",
+      "dispSecIndFlag": false,
+      "isYahooFinance": true,
+      "prevName": "Facebook, Inc.",
+      "nameChangeDate": "2025-11-10"
+    },
+    {
+      "exchange": "NMS",
+      "shortname": "Apple Inc.",
+      "quoteType": "EQUITY",
+      "symbol": "AAPL",
+      "index": "quotes",
+      "score": 15709000.0,
+      "typeDisp": "Equity",
+      "longname": "Apple Inc.",
+      "exchDisp": "NASDAQ",
+      "sector": "Technology",
+      "sectorDisp": "Technology",
+      "industry": "Consumer Electronics",
+      "industryDisp": "Consumer Electronics",
+      "isYahooFinance": true
+    }
+  ],
+  "news": [
+    {
+      "uuid": "0102c8ba-4095-3cb6-88c7-8d10f13b7e0f",
+      "title": "Meta's,Tesla's, Alphabet's and Amazon are part of Zacks Earnings Preview",
+      "publisher": "Zacks",
+      "link": "https://finance.yahoo.com/news/metas-teslas-alphabets-amazon-part-074500249.html",
+      "providerPublishTime": 1762847100,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/SlqJfx4XpAvRjkWK4aXy4Q--~B/aD00MTM7dz02MjA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/zacks.com/17cc0333095b09f772bd2f43476ed240",
+            "width": 620,
+            "height": 413,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/mfg.Fi.zjgRltcD0pQeSJA--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/zacks.com/17cc0333095b09f772bd2f43476ed240",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "TSLA",
+        "GOOGL",
+        "AMZN",
+        "META"
+      ]
+    },
+    {
+      "uuid": "7435c13a-2225-3234-ad97-b14a202ecee1",
+      "title": "Xinhua Silk Road: Conference exploring future paths of asset management held in E. China urban district",
+      "publisher": "PR Newswire",
+      "link": "https://finance.yahoo.com/news/xinhua-silk-road-conference-exploring-064500870.html",
+      "providerPublishTime": 1762843500,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/zP.rrFIaAK5hMQYn.lsrPw--~B/aD0xNjt3PTE2O2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/prnewswire.com/620d758c422ba1a37bb28e404bdb97ac",
+            "width": 16,
+            "height": 16,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/kyznl9MJplSu_0DzlAQbtA--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/prnewswire.com/620d758c422ba1a37bb28e404bdb97ac",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "AAPL"
+      ]
+    },
+    {
+      "uuid": "c84679b8-1c45-3ed9-bd56-fe112caeabd6",
+      "title": "CoreWeave Inc (CRWV) Q3 2025 Earnings Call Highlights: Record Revenue Growth Amid ...",
+      "publisher": "GuruFocus.com",
+      "link": "https://finance.yahoo.com/news/coreweave-inc-crwv-q3-2025-050636392.html",
+      "providerPublishTime": 1762837596,
+      "type": "STORY",
+      "relatedTickers": [
+        "CRWV",
+        "META",
+        "OPAI.PVT"
+      ]
+    },
+    {
+      "uuid": "f131dbbc-2879-3210-be46-1a79bffc1e9e",
+      "title": "5 Warren Buffett Stocks to Hold Forever",
+      "publisher": "Motley Fool",
+      "link": "https://finance.yahoo.com/m/f131dbbc-2879-3210-be46-1a79bffc1e9e/5-warren-buffett-stocks-to.html",
+      "providerPublishTime": 1762826520,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/Z_bSfNwGrhTt0AJB7moNtg--~B/aD05MzM7dz0xNDAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/c89be63ad33e430766942cf111a72026",
+            "width": 1400,
+            "height": 933,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/xQc3HfGI9v2TDNJXPVLogQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/c89be63ad33e430766942cf111a72026",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "KR",
+        "AAPL",
+        "AXP",
+        "CVX",
+        "^SPX"
+      ]
+    },
+    {
+      "uuid": "9bd29221-8a18-3c86-9da8-020626568580",
+      "title": "Taiwan Semiconductor Manufacturing Company Limited (TSM) Posts Slowest Monthly Growth Since Early Last Year",
+      "publisher": "Insider Monkey",
+      "link": "https://finance.yahoo.com/news/taiwan-semiconductor-manufacturing-company-limited-015824260.html",
+      "providerPublishTime": 1762826304,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/DxYQcvd_gWJWaXO.7PRDtw--~B/aD04MTY7dz0xNDU2O2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/insidermonkey.com/f90919c411d1aa5d89e5e74b1fb5e45e",
+            "width": 1456,
+            "height": 816,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/zY1Q_oGVBoH1dWjNGMJQ4Q--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/insidermonkey.com/f90919c411d1aa5d89e5e74b1fb5e45e",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "2330.TW",
+        "TSM",
+        "TSMWF",
+        "035420.KS",
+        "AAPL"
+      ]
+    },
+    {
+      "uuid": "8f116ed3-f909-3d70-abc8-24091197117c",
+      "title": "CoreWeave\u2019s earnings report highlights $56 billion in contracted revenue, but its guidance and share price tick down amid AI infrastructure bubble fears",
+      "publisher": "Fortune",
+      "link": "https://finance.yahoo.com/news/coreweave-earnings-report-highlights-56-012249708.html",
+      "providerPublishTime": 1762824169,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/wZm91SRApDme_jdIuVyRwQ--~B/aD0xMzY1O3c9MjA0ODthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/fortune_175/acf8cde30b1d84d7bbac4ebb684f4c28",
+            "width": 2048,
+            "height": 1365,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/r4uwM.rbITnZNkISGpF3lg--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/fortune_175/acf8cde30b1d84d7bbac4ebb684f4c28",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "CRWV",
+        "META",
+        "OPAI.PVT",
+        "NVDA"
+      ]
+    },
+    {
+      "uuid": "e6a4f657-08d3-33ab-b40b-f30bd8f7d57f",
+      "title": "Netflix Just Announced a 10-for-1 Stock Split -- Here's Why the Stock Looks Like a No-Brainer Buy Right Now",
+      "publisher": "Motley Fool",
+      "link": "https://finance.yahoo.com/m/e6a4f657-08d3-33ab-b40b-f30bd8f7d57f/netflix-just-announced-a.html",
+      "providerPublishTime": 1762816500,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/RtzBRL9Xia.VgiB4CwsAtQ--~B/aD05MzM7dz0xNDAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/a1f977c168ca9fd75aa2dda27f7b071f",
+            "width": 1400,
+            "height": 933,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/MHX4g87OhBYhE7hCQhcPxQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/a1f977c168ca9fd75aa2dda27f7b071f",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "NFLX",
+        "DIS",
+        "GOOGL",
+        "AAPL"
+      ]
+    },
+    {
+      "uuid": "825bcc6e-3d1e-328c-9fdc-741d374901e8",
+      "title": "Bernstein Remains Bullish on Dollar General (DG), Maintains Buy Call",
+      "publisher": "Insider Monkey",
+      "link": "https://finance.yahoo.com/news/bernstein-remains-bullish-dollar-general-231326445.html",
+      "providerPublishTime": 1762816406,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/.bzqlaCEEG0TSoXKzHWZxw--~B/aD0xNDQwO3c9MTkyMDthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/insidermonkey.com/457d2a21b4e2344046e946737984550c",
+            "width": 1920,
+            "height": 1440,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/uEKWe1chvAY4jEkDVOEO3A--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/insidermonkey.com/457d2a21b4e2344046e946737984550c",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "DG",
+        "DBX",
+        "META",
+        "MSFT"
+      ]
+    }
+  ],
+  "nav": [
+    {
+      "navType": "MULTIQUOTE",
+      "symbols": [
+        "META",
+        "AAPL"
+      ]
+    }
+  ],
+  "lists": [],
+  "researchReports": [],
+  "screenerFieldResults": [],
+  "totalTime": 65,
+  "timeTakenForQuotes": 443,
+  "timeTakenForNews": 700,
+  "timeTakenForAlgowatchlist": 400,
+  "timeTakenForPredefinedScreener": 400,
+  "timeTakenForCrunchbase": 0,
+  "timeTakenForNav": 400,
+  "timeTakenForResearchReports": 0,
+  "timeTakenForScreenerField": 0,
+  "timeTakenForCulturalAssets": 0,
+  "timeTakenForSearchLists": 0
+}

@@ -1,0 +1,397 @@
+{
+  "explains": [],
+  "count": 20,
+  "quotes": [
+    {
+      "exchange": "NMS",
+      "shortname": "Meta Platforms, Inc.",
+      "quoteType": "EQUITY",
+      "symbol": "META",
+      "index": "quotes",
+      "score": 11704500.0,
+      "typeDisp": "Equity",
+      "longname": "Meta Platforms, Inc.",
+      "exchDisp": "NASDAQ",
+      "sector": "Communication Services",
+      "industry": "Internet Content & Information",
+      "dispSecIndFlag": true,
+      "isYahooFinance": true,
+      "prevName": "Facebook, Inc.",
+      "nameChangeDate": "2025-11-10"
+    },
+    {
+      "exchange": "NYQ",
+      "shortname": "Wheaton Precious Metals Corp",
+      "quoteType": "EQUITY",
+      "symbol": "WPM",
+      "index": "quotes",
+      "score": 20261.0,
+      "typeDisp": "Equity",
+      "longname": "Wheaton Precious Metals Corp.",
+      "exchDisp": "NYSE",
+      "sector": "Basic Materials",
+      "industry": "Gold",
+      "isYahooFinance": true
+    },
+    {
+      "exchange": "ASE",
+      "shortname": "Silvercorp Metals Inc.",
+      "quoteType": "EQUITY",
+      "symbol": "SVM",
+      "index": "quotes",
+      "score": 20061.0,
+      "typeDisp": "Equity",
+      "longname": "Silvercorp Metals Inc.",
+      "exchDisp": "NYSE MKT",
+      "sector": "Basic Materials",
+      "industry": "Silver",
+      "isYahooFinance": true
+    },
+    {
+      "exchange": "NMS",
+      "shortname": "TMC the metals company Inc.",
+      "quoteType": "EQUITY",
+      "symbol": "TMC",
+      "index": "quotes",
+      "score": 20054.0,
+      "typeDisp": "Equity",
+      "longname": "TMC the metals company Inc.",
+      "exchDisp": "NASDAQ",
+      "sector": "Basic Materials",
+      "industry": "Other Industrial Metals & Mining",
+      "isYahooFinance": true,
+      "prevName": "Sustainable Opportunities Acquisition Corp.",
+      "nameChangeDate": "2025-11-10"
+    },
+    {
+      "exchange": "NGM",
+      "shortname": "Critical Metals Corp.",
+      "quoteType": "EQUITY",
+      "symbol": "CRML",
+      "index": "quotes",
+      "score": 20052.0,
+      "typeDisp": "Equity",
+      "longname": "Critical Metals Corp.",
+      "exchDisp": "NASDAQ",
+      "sector": "Basic Materials",
+      "industry": "Other Industrial Metals & Mining",
+      "isYahooFinance": true
+    },
+    {
+      "exchange": "VAN",
+      "shortname": "DISTRICT METALS CORP",
+      "quoteType": "EQUITY",
+      "symbol": "DMX.V",
+      "index": "quotes",
+      "score": 20045.0,
+      "typeDisp": "Equity",
+      "longname": "District Metals Corp.",
+      "exchDisp": "CDNX",
+      "sector": "Basic Materials",
+      "industry": "Other Industrial Metals & Mining",
+      "isYahooFinance": true
+    },
+    {
+      "exchange": "PCX",
+      "shortname": "VanEck Rare Earth and Strategic",
+      "quoteType": "ETF",
+      "symbol": "REMX",
+      "index": "quotes",
+      "score": 20044.0,
+      "typeDisp": "ETF",
+      "longname": "VanEck Rare Earth and Strategic Metals ETF",
+      "exchDisp": "NYSEArca",
+      "isYahooFinance": true
+    }
+  ],
+  "news": [
+    {
+      "uuid": "0102c8ba-4095-3cb6-88c7-8d10f13b7e0f",
+      "title": "Meta's,Tesla's, Alphabet's and Amazon are part of Zacks Earnings Preview",
+      "publisher": "Zacks",
+      "link": "https://finance.yahoo.com/news/metas-teslas-alphabets-amazon-part-074500249.html",
+      "providerPublishTime": 1762847100,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/SlqJfx4XpAvRjkWK4aXy4Q--~B/aD00MTM7dz02MjA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/zacks.com/17cc0333095b09f772bd2f43476ed240",
+            "width": 620,
+            "height": 413,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/mfg.Fi.zjgRltcD0pQeSJA--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/zacks.com/17cc0333095b09f772bd2f43476ed240",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "TSLA",
+        "GOOGL",
+        "AMZN",
+        "META"
+      ]
+    },
+    {
+      "uuid": "c84679b8-1c45-3ed9-bd56-fe112caeabd6",
+      "title": "CoreWeave Inc (CRWV) Q3 2025 Earnings Call Highlights: Record Revenue Growth Amid ...",
+      "publisher": "GuruFocus.com",
+      "link": "https://finance.yahoo.com/news/coreweave-inc-crwv-q3-2025-050636392.html",
+      "providerPublishTime": 1762837596,
+      "type": "STORY",
+      "relatedTickers": [
+        "CRWV",
+        "META",
+        "OPAI.PVT"
+      ]
+    },
+    {
+      "uuid": "8f116ed3-f909-3d70-abc8-24091197117c",
+      "title": "CoreWeave\u2019s earnings report highlights $56 billion in contracted revenue, but its guidance and share price tick down amid AI infrastructure bubble fears",
+      "publisher": "Fortune",
+      "link": "https://finance.yahoo.com/news/coreweave-earnings-report-highlights-56-012249708.html",
+      "providerPublishTime": 1762824169,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/wZm91SRApDme_jdIuVyRwQ--~B/aD0xMzY1O3c9MjA0ODthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/fortune_175/acf8cde30b1d84d7bbac4ebb684f4c28",
+            "width": 2048,
+            "height": 1365,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/r4uwM.rbITnZNkISGpF3lg--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/fortune_175/acf8cde30b1d84d7bbac4ebb684f4c28",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "CRWV",
+        "META",
+        "OPAI.PVT",
+        "NVDA"
+      ]
+    },
+    {
+      "uuid": "825bcc6e-3d1e-328c-9fdc-741d374901e8",
+      "title": "Bernstein Remains Bullish on Dollar General (DG), Maintains Buy Call",
+      "publisher": "Insider Monkey",
+      "link": "https://finance.yahoo.com/news/bernstein-remains-bullish-dollar-general-231326445.html",
+      "providerPublishTime": 1762816406,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/.bzqlaCEEG0TSoXKzHWZxw--~B/aD0xNDQwO3c9MTkyMDthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/insidermonkey.com/457d2a21b4e2344046e946737984550c",
+            "width": 1920,
+            "height": 1440,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/uEKWe1chvAY4jEkDVOEO3A--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/insidermonkey.com/457d2a21b4e2344046e946737984550c",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "DG",
+        "DBX",
+        "META",
+        "MSFT"
+      ]
+    },
+    {
+      "uuid": "9dbaf505-ac6b-37b4-a453-50dab5e37888",
+      "title": "Goldman Sachs Says AI Boom Will Supercharge Energy Demand",
+      "publisher": "Oilprice.com",
+      "link": "https://finance.yahoo.com/news/goldman-sachs-says-ai-boom-230000443.html",
+      "providerPublishTime": 1762815600,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/TX9xIybRCuuHWoLMA.uQ.A--~B/aD0zMDA7dz03MTg7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/oilprice.com/02852c07f62519976560eed38e034998",
+            "width": 718,
+            "height": 300,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/_NWIZUVzzgud6dfV3ZHzIw--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/oilprice.com/02852c07f62519976560eed38e034998",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "META",
+        "NVDA",
+        "AMZN",
+        "AAPL",
+        "OPAI.PVT"
+      ]
+    },
+    {
+      "uuid": "4205eaa9-f620-3a0b-a81a-0e82c7c9fd0b",
+      "title": "Magnificent Seven Stocks: Nvidia, Tesla, Amazon, Meta Rally",
+      "publisher": "Investor's Business Daily",
+      "link": "https://finance.yahoo.com/m/4205eaa9-f620-3a0b-a81a-0e82c7c9fd0b/magnificent-seven-stocks%3A.html",
+      "providerPublishTime": 1762813166,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/dH2T4UlHg7A40njz2aVZLw--~B/aD01NjM7dz0xMDAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/ibd.com/0682fdd5dad13df00d702863d79378a1",
+            "width": 1000,
+            "height": 563,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/jlpxz0owXM2yWj9DtnTWIQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/ibd.com/0682fdd5dad13df00d702863d79378a1",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "NVDA",
+        "TSLA",
+        "AMZN",
+        "AAPL",
+        "MSFT",
+        "GOOGL",
+        "META"
+      ]
+    },
+    {
+      "uuid": "1752a21e-8a11-383a-b2ef-20ab513c621e",
+      "title": "AI\u2019s $5 Trillion Data-Center Boom Will Dip Into Every Debt Market, JPMorgan Says",
+      "publisher": "Bloomberg",
+      "link": "https://finance.yahoo.com/news/ai-5-trillion-data-center-165808446.html",
+      "providerPublishTime": 1762812273,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/vedl6twMhBXmX0v3H5sW6g--~B/aD0zNDEwO3c9NTAyNTthcHBpZD15dGFjaHlvbg--/https://s.yimg.com/os/creatr-uploaded-images/2025-11/04b0f520-be5c-11f0-b5dd-7e9f6a826f7b",
+            "width": 5025,
+            "height": 3410,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/CFL8AFeSnL1T9b.URxkssQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://s.yimg.com/os/creatr-uploaded-images/2025-11/04b0f520-be5c-11f0-b5dd-7e9f6a826f7b",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "META",
+        "ORCL"
+      ]
+    },
+    {
+      "uuid": "4b3caeb5-c394-304a-a422-cd7e39c56707",
+      "title": "CoreWeave flags hit from data center delay, shares fall",
+      "publisher": "Reuters",
+      "link": "https://finance.yahoo.com/news/coreweave-beats-third-quarter-revenue-211211858.html",
+      "providerPublishTime": 1762809131,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/3.kvJm_hKzn1325eDRL4wA--~B/aD01MzM7dz04MDA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/reuters-finance.com/91bf6d2a66c015a63bd4df11123370b6",
+            "width": 800,
+            "height": 533,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/hRX3krF4K9HQ73YXNwEZDQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/reuters-finance.com/91bf6d2a66c015a63bd4df11123370b6",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "CRWV",
+        "META"
+      ]
+    }
+  ],
+  "nav": [
+    {
+      "navName": "Metal Fabrication",
+      "navUrl": "https://finance.yahoo.com/sectors/industrials/metal-fabrication"
+    }
+  ],
+  "lists": [
+    {
+      "index": "2b0f0d69-53ad-4a85-bcd6-8b6c1035bd33",
+      "id": "2b0f0d69-53ad-4a85-bcd6-8b6c1035bd33",
+      "title": "Precious Metal Mutual Funds",
+      "canonicalName": "PRECIOUS_METAL_MUTUAL_FUNDS",
+      "score": 1.0,
+      "type": "PREDEFINED_SCREENER",
+      "total": 53,
+      "isPremium": false,
+      "iconUrl": "https://edgecast-img.yahoo.net/mysterio/api/b241f4b88dcc1439d37ed7dd74c3ee884516f53bc29bc8eece9b9fcf5c850fe8/finance/resizefill_w96_h96/https://s.yimg.com/cv/apiv2/fin/img/assets/predefined_screeners/diamond.png"
+    },
+    {
+      "index": "ca67a1b3-572c-433c-b1a4-a0da3738fc14",
+      "id": "ca67a1b3-572c-433c-b1a4-a0da3738fc14",
+      "title": "Commodity Metal Mutual Funds",
+      "canonicalName": "COMMODITY_MUTUAL_FUNDS",
+      "score": 1.0,
+      "type": "PREDEFINED_SCREENER",
+      "total": 82,
+      "isPremium": false,
+      "iconUrl": "https://edgecast-img.yahoo.net/mysterio/api/683fd6c45c5d4d5905e2caf5cd56ab1ab1c4e7d168bee45d8047945dc48ab943/finance/resizefill_w96_h96/https://s.yimg.com/cv/apiv2/fin/img/assets/predefined_screeners/theme.png"
+    },
+    {
+      "index": "05acca9e-1aee-44b6-8224-c92459eb2ed8",
+      "id": "05acca9e-1aee-44b6-8224-c92459eb2ed8",
+      "title": "Metal Fabrication",
+      "canonicalName": "METAL_FABRICATION",
+      "score": 1.0,
+      "type": "PREDEFINED_SCREENER",
+      "total": 12,
+      "isPremium": false,
+      "iconUrl": "https://edgecast-img.yahoo.net/mysterio/api/b241f4b88dcc1439d37ed7dd74c3ee884516f53bc29bc8eece9b9fcf5c850fe8/finance/resizefill_w96_h96/https://s.yimg.com/cv/apiv2/fin/img/assets/predefined_screeners/diamond.png"
+    },
+    {
+      "index": "63e7f272-cd8d-4307-9002-eb98746a036a",
+      "id": "63e7f272-cd8d-4307-9002-eb98746a036a",
+      "title": "Precious Metal ETFs",
+      "canonicalName": "PRECIOUS_METAL_ETFS",
+      "score": 1.0,
+      "type": "PREDEFINED_SCREENER",
+      "total": 14,
+      "isPremium": false,
+      "iconUrl": "https://edgecast-img.yahoo.net/mysterio/api/b241f4b88dcc1439d37ed7dd74c3ee884516f53bc29bc8eece9b9fcf5c850fe8/finance/resizefill_w96_h96/https://s.yimg.com/cv/apiv2/fin/img/assets/predefined_screeners/diamond.png"
+    }
+  ],
+  "researchReports": [],
+  "screenerFieldResults": [],
+  "totalTime": 76,
+  "timeTakenForQuotes": 448,
+  "timeTakenForNews": 700,
+  "timeTakenForAlgowatchlist": 400,
+  "timeTakenForPredefinedScreener": 400,
+  "timeTakenForCrunchbase": 0,
+  "timeTakenForNav": 400,
+  "timeTakenForResearchReports": 0,
+  "timeTakenForScreenerField": 0,
+  "timeTakenForCulturalAssets": 0,
+  "timeTakenForSearchLists": 0
+}

@@ -1,4 +1,3 @@
-from datetime import datetime
 from typing import Any, AsyncGenerator, Type
 
 import pytest
@@ -7,7 +6,6 @@ from pytest_mock import MockerFixture
 from typeguard import TypeCheckError
 
 from tests._assertions import (
-    _assert_analysis_response_json,
     _assert_chart_result,
     _assert_insight_result,
     _assert_options_result,
@@ -20,7 +18,7 @@ from tests._assertions import (
     _assert_search_response_json,
     _assert_timeseries_result,
 )
-from tests._utils import _mock_200_response
+from tests._utils import _get_json_fixture, _mock_200_response
 from yafin import AsyncSymbol
 from yafin.const import (
     ANNUAL_BALANCE_SHEET_TYPES,
@@ -37,7 +35,7 @@ class TestUnitClientManager:
 
     @pytest_asyncio.fixture
     async def client_manager(self) -> _ClientManager:
-        """Fixture for _ClientManager."""
+        """Fresh new instance of _ClientManager for each tests."""
         return _ClientManager()
 
     @pytest.mark.asyncio
@@ -130,27 +128,74 @@ class TestUnitSymbol:
         assert aapl._client is None
 
     @pytest_asyncio.fixture
-    async def symbol(self) -> AsyncGenerator[AsyncSymbol, None]:
-        """Fixture for AsyncSymbol."""
-        async with AsyncSymbol('META') as symbol:
+    async def symbol(self, ticker: str) -> AsyncGenerator[AsyncSymbol, None]:
+        """Fresh new instance of AsyncSymbol for each tests."""
+        async with AsyncSymbol(ticker) as symbol:
             yield symbol
+
+    @pytest.fixture(scope='session')
+    def quote_json_mock(self, ticker: str) -> dict[str, Any]:
+        """Mock get_quote response json with data."""
+        return _get_json_fixture(
+            file_name=f'{ticker.lower()}.json', folder_name='quote'
+        )
+
+    @pytest.fixture(scope='session')
+    def quote_type_json_mock(self, ticker: str) -> dict[str, Any]:
+        """Mock get_quote_type response json with data."""
+        return _get_json_fixture(
+            file_name=f'{ticker.lower()}.json', folder_name='quote_type'
+        )
+
+    @pytest.fixture(scope='session')
+    def search_json_mock(self, ticker: str) -> dict[str, Any]:
+        """Mock search response json with data."""
+        return _get_json_fixture(
+            file_name=f'{ticker.lower()}.json', folder_name='search'
+        )
+
+    @pytest.fixture(scope='session')
+    def recommendations_json_mock(self, ticker: str) -> dict[str, Any]:
+        """Mock recommendations response json with data."""
+        return _get_json_fixture(
+            file_name=f'{ticker.lower()}.json', folder_name='recommendations'
+        )
+
+    @pytest.fixture(scope='session')
+    def insights_json_mock(self, ticker: str) -> dict[str, Any]:
+        """Mock insights response json with data."""
+        return _get_json_fixture(
+            file_name=f'{ticker.lower()}.json', folder_name='insights'
+        )
 
     @pytest.mark.parametrize(
         'kwargs',
         [
-            dict(period_range='1y', interval='1d'),
+            dict(interval='1d'),
+            dict(interval='1d', period_range='1y'),
             dict(
+                interval='1d',
                 period_range='1y',
+                include_div=True,
+                include_split=True,
+                include_earn=True,
+                include_capital_gain=True,
+            ),
+            dict(
                 interval='1d',
                 include_div=True,
                 include_split=True,
                 include_earn=True,
                 include_capital_gain=True,
             ),
-            dict(period_range='1y', interval='1d', include_div=True),
-            dict(period_range='1y', interval='1d', include_split=True),
-            dict(period_range='1y', interval='1d', include_earn=True),
-            dict(period_range='1y', interval='1d', include_capital_gain=True),
+            dict(interval='1d', period_range='1y', include_div=True),
+            dict(interval='1d', include_div=True),
+            dict(interval='1d', period_range='1y', include_split=True),
+            dict(interval='1d', include_split=True),
+            dict(interval='1d', period_range='1y', include_earn=True),
+            dict(interval='1d', include_earn=True),
+            dict(interval='1d', period_range='1y', include_capital_gain=True),
+            dict(interval='1d', include_capital_gain=True),
         ],
     )
     @pytest.mark.asyncio
@@ -160,10 +205,14 @@ class TestUnitSymbol:
         kwargs: dict[str, Any],
         mocker: MockerFixture,
         chart_json_mock: dict[str, Any],
+        period1: int | float | None,
+        period2: int | float | None,
     ) -> None:
         """Test get_chart method."""
-        _mock_200_response(mocker, chart_json_mock)
-        chart_result = await symbol.get_chart(**kwargs)
+        _mock_200_response(mocker, response_json=chart_json_mock)
+        chart_result = await symbol.get_chart(
+            **kwargs, period1=period1, period2=period2
+        )
         _assert_chart_result(chart_result, symbol.ticker)
 
     @pytest.mark.parametrize(
@@ -275,7 +324,7 @@ class TestUnitSymbol:
         quote_json_mock: dict[str, Any],
     ) -> None:
         """Test get_quote method."""
-        _mock_200_response(mocker, quote_json_mock)
+        _mock_200_response(mocker, response_json=quote_json_mock)
         quote_result = await symbol.get_quote()
         _assert_quote_result(quote_result, symbol.ticker)
 
@@ -287,7 +336,7 @@ class TestUnitSymbol:
         quote_type_json_mock: dict[str, Any],
     ) -> None:
         """Test get_quote_type method."""
-        _mock_200_response(mocker, quote_type_json_mock)
+        _mock_200_response(mocker, response_json=quote_type_json_mock)
         quote_type_result = await symbol.get_quote_type()
         _assert_quote_type_result(quote_type_result, symbol.ticker)
 
@@ -299,7 +348,7 @@ class TestUnitSymbol:
         quote_summary_all_modules_json_mock: dict[str, Any],
     ) -> None:
         """Test get_quote_summary_all_modules method."""
-        _mock_200_response(mocker, quote_summary_all_modules_json_mock)
+        _mock_200_response(mocker, response_json=quote_summary_all_modules_json_mock)
         quote_summary_all_modules = await symbol.get_quote_summary_all_modules()
         _assert_quote_summary_result(
             quote_summary_all_modules, modules=QUOTE_SUMMARY_MODULES
@@ -313,7 +362,7 @@ class TestUnitSymbol:
         asset_profile_json_mock: dict[str, Any],
     ) -> None:
         """Test _get_quote_summary_single_module method."""
-        _mock_200_response(mocker, asset_profile_json_mock)
+        _mock_200_response(mocker, response_json=asset_profile_json_mock)
         module = 'assetProfile'
         asset_profile = await symbol._get_quote_summary_single_module(module)
         _assert_quote_summary_single_module_result(asset_profile, module)
@@ -341,7 +390,7 @@ class TestUnitSymbol:
         asset_profile_json_mock: dict[str, Any],
     ) -> None:
         """Test get_asset_profile method."""
-        _mock_200_response(mocker, asset_profile_json_mock)
+        _mock_200_response(mocker, response_json=asset_profile_json_mock)
         asset_profile = await symbol.get_asset_profile()
         _assert_quote_summary_single_module_result(asset_profile, 'assetProfile')
 
@@ -353,7 +402,7 @@ class TestUnitSymbol:
         summary_profile_json_mock: dict[str, Any],
     ) -> None:
         """Test get_summary_profile method."""
-        _mock_200_response(mocker, summary_profile_json_mock)
+        _mock_200_response(mocker, response_json=summary_profile_json_mock)
         summary_profile = await symbol.get_summary_profile()
         _assert_quote_summary_single_module_result(summary_profile, 'summaryProfile')
 
@@ -365,7 +414,7 @@ class TestUnitSymbol:
         summary_detail_json_mock: dict[str, Any],
     ) -> None:
         """Test get_summary_detail method."""
-        _mock_200_response(mocker, summary_detail_json_mock)
+        _mock_200_response(mocker, response_json=summary_detail_json_mock)
         summary_detail = await symbol.get_summary_detail()
         _assert_quote_summary_single_module_result(summary_detail, 'summaryDetail')
 
@@ -377,7 +426,7 @@ class TestUnitSymbol:
         price_json_mock: dict[str, Any],
     ) -> None:
         """Test get_price method."""
-        _mock_200_response(mocker, price_json_mock)
+        _mock_200_response(mocker, response_json=price_json_mock)
         price = await symbol.get_price()
         _assert_quote_summary_single_module_result(price, 'price')
 
@@ -389,7 +438,7 @@ class TestUnitSymbol:
         default_key_statistics_json_mock: dict[str, Any],
     ) -> None:
         """Test get_default_key_statistics method."""
-        _mock_200_response(mocker, default_key_statistics_json_mock)
+        _mock_200_response(mocker, response_json=default_key_statistics_json_mock)
         default_key_statistics = await symbol.get_default_key_statistics()
         _assert_quote_summary_single_module_result(
             default_key_statistics, 'defaultKeyStatistics'
@@ -403,7 +452,7 @@ class TestUnitSymbol:
         financial_data_json_mock: dict[str, Any],
     ) -> None:
         """Test get_financial_data method."""
-        _mock_200_response(mocker, financial_data_json_mock)
+        _mock_200_response(mocker, response_json=financial_data_json_mock)
         financial_data = await symbol.get_financial_data()
         _assert_quote_summary_single_module_result(financial_data, 'financialData')
 
@@ -415,7 +464,7 @@ class TestUnitSymbol:
         symbol_calendar_events_json_mock: dict[str, Any],
     ) -> None:
         """Test get_calendar_events method."""
-        _mock_200_response(mocker, symbol_calendar_events_json_mock)
+        _mock_200_response(mocker, response_json=symbol_calendar_events_json_mock)
         calendar_events = await symbol.get_calendar_events()
         _assert_quote_summary_single_module_result(calendar_events, 'calendarEvents')
 
@@ -427,7 +476,7 @@ class TestUnitSymbol:
         sec_filings_json_mock: dict[str, Any],
     ) -> None:
         """Test get_sec_filings method."""
-        _mock_200_response(mocker, sec_filings_json_mock)
+        _mock_200_response(mocker, response_json=sec_filings_json_mock)
         sec_filings = await symbol.get_sec_filings()
         _assert_quote_summary_single_module_result(sec_filings, 'secFilings')
 
@@ -439,7 +488,7 @@ class TestUnitSymbol:
         upgrade_downgrade_history_json_mock: dict[str, Any],
     ) -> None:
         """Test get_upgrade_downgrade_history method."""
-        _mock_200_response(mocker, upgrade_downgrade_history_json_mock)
+        _mock_200_response(mocker, response_json=upgrade_downgrade_history_json_mock)
         upgrade_downgrade_history = await symbol.get_upgrade_downgrade_history()
         _assert_quote_summary_single_module_result(
             upgrade_downgrade_history, 'upgradeDowngradeHistory'
@@ -453,7 +502,7 @@ class TestUnitSymbol:
         institution_ownership_json_mock: dict[str, Any],
     ) -> None:
         """Test get_institution_ownership method."""
-        _mock_200_response(mocker, institution_ownership_json_mock)
+        _mock_200_response(mocker, response_json=institution_ownership_json_mock)
         institution_ownership = await symbol.get_institution_ownership()
         _assert_quote_summary_single_module_result(
             institution_ownership, 'institutionOwnership'
@@ -467,7 +516,7 @@ class TestUnitSymbol:
         fund_ownership_json_mock: dict[str, Any],
     ) -> None:
         """Test get_fund_ownership method."""
-        _mock_200_response(mocker, fund_ownership_json_mock)
+        _mock_200_response(mocker, response_json=fund_ownership_json_mock)
         fund_ownership = await symbol.get_fund_ownership()
         _assert_quote_summary_single_module_result(fund_ownership, 'fundOwnership')
 
@@ -479,7 +528,7 @@ class TestUnitSymbol:
         major_direct_holders_json_mock: dict[str, Any],
     ) -> None:
         """Test get_major_direct_holders method."""
-        _mock_200_response(mocker, major_direct_holders_json_mock)
+        _mock_200_response(mocker, response_json=major_direct_holders_json_mock)
         major_direct_holders = await symbol.get_major_direct_holders()
         _assert_quote_summary_single_module_result(
             major_direct_holders, 'majorDirectHolders'
@@ -493,7 +542,7 @@ class TestUnitSymbol:
         major_holders_breakdown_json_mock: dict[str, Any],
     ) -> None:
         """Test get_major_holders_breakdown method."""
-        _mock_200_response(mocker, major_holders_breakdown_json_mock)
+        _mock_200_response(mocker, response_json=major_holders_breakdown_json_mock)
         major_holders_breakdown = await symbol.get_major_holders_breakdown()
         _assert_quote_summary_single_module_result(
             major_holders_breakdown, 'majorHoldersBreakdown'
@@ -507,7 +556,7 @@ class TestUnitSymbol:
         insider_transactions_json_mock: dict[str, Any],
     ) -> None:
         """Test get_insider_transactions method."""
-        _mock_200_response(mocker, insider_transactions_json_mock)
+        _mock_200_response(mocker, response_json=insider_transactions_json_mock)
         insider_transactions = await symbol.get_insider_transactions()
         _assert_quote_summary_single_module_result(
             insider_transactions, 'insiderTransactions'
@@ -521,7 +570,7 @@ class TestUnitSymbol:
         insider_holders_json_mock: dict[str, Any],
     ) -> None:
         """Test get_insider_holders method."""
-        _mock_200_response(mocker, insider_holders_json_mock)
+        _mock_200_response(mocker, response_json=insider_holders_json_mock)
         insider_holders = await symbol.get_insider_holders()
         _assert_quote_summary_single_module_result(insider_holders, 'insiderHolders')
 
@@ -533,7 +582,7 @@ class TestUnitSymbol:
         net_share_purchase_activity_json_mock: dict[str, Any],
     ) -> None:
         """Test get_net_share_purchase_activity method."""
-        _mock_200_response(mocker, net_share_purchase_activity_json_mock)
+        _mock_200_response(mocker, response_json=net_share_purchase_activity_json_mock)
         net_share_purchase_activity = await symbol.get_net_share_purchase_activity()
         _assert_quote_summary_single_module_result(
             net_share_purchase_activity, 'netSharePurchaseActivity'
@@ -547,7 +596,7 @@ class TestUnitSymbol:
         earnings_json_mock: dict[str, Any],
     ) -> None:
         """Test get_earnings method."""
-        _mock_200_response(mocker, earnings_json_mock)
+        _mock_200_response(mocker, response_json=earnings_json_mock)
         earnings = await symbol.get_earnings()
         _assert_quote_summary_single_module_result(earnings, 'earnings')
 
@@ -559,7 +608,7 @@ class TestUnitSymbol:
         earnings_history_json_mock: dict[str, Any],
     ) -> None:
         """Test get_earnings_history method."""
-        _mock_200_response(mocker, earnings_history_json_mock)
+        _mock_200_response(mocker, response_json=earnings_history_json_mock)
         earnings_history = await symbol.get_earnings_history()
         _assert_quote_summary_single_module_result(earnings_history, 'earningsHistory')
 
@@ -571,7 +620,7 @@ class TestUnitSymbol:
         earnings_trend_json_mock: dict[str, Any],
     ) -> None:
         """Test get_earnings_trend method."""
-        _mock_200_response(mocker, earnings_trend_json_mock)
+        _mock_200_response(mocker, response_json=earnings_trend_json_mock)
         earnings_trend = await symbol.get_earnings_trend()
         _assert_quote_summary_single_module_result(earnings_trend, 'earningsTrend')
 
@@ -583,7 +632,7 @@ class TestUnitSymbol:
         industry_trend_json_mock: dict[str, Any],
     ) -> None:
         """Test get_industry_trend method."""
-        _mock_200_response(mocker, industry_trend_json_mock)
+        _mock_200_response(mocker, response_json=industry_trend_json_mock)
         industry_trend = await symbol.get_industry_trend()
         _assert_quote_summary_single_module_result(industry_trend, 'industryTrend')
 
@@ -595,7 +644,7 @@ class TestUnitSymbol:
         index_trend_json_mock: dict[str, Any],
     ) -> None:
         """Test get_index_trend method."""
-        _mock_200_response(mocker, index_trend_json_mock)
+        _mock_200_response(mocker, response_json=index_trend_json_mock)
         index_trend = await symbol.get_index_trend()
         _assert_quote_summary_single_module_result(index_trend, 'indexTrend')
 
@@ -607,7 +656,7 @@ class TestUnitSymbol:
         sector_trend_json_mock: dict[str, Any],
     ) -> None:
         """Test get_sector_trend method."""
-        _mock_200_response(mocker, sector_trend_json_mock)
+        _mock_200_response(mocker, response_json=sector_trend_json_mock)
         sector_trend = await symbol.get_sector_trend()
         _assert_quote_summary_single_module_result(sector_trend, 'sectorTrend')
 
@@ -619,7 +668,7 @@ class TestUnitSymbol:
         recommendation_trend_json_mock: dict[str, Any],
     ) -> None:
         """Test get_recommendation_trend method."""
-        _mock_200_response(mocker, recommendation_trend_json_mock)
+        _mock_200_response(mocker, response_json=recommendation_trend_json_mock)
         recommendation_trend = await symbol.get_recommendation_trend()
         _assert_quote_summary_single_module_result(
             recommendation_trend, 'recommendationTrend'
@@ -633,59 +682,24 @@ class TestUnitSymbol:
         page_views_json_mock: dict[str, Any],
     ) -> None:
         """Test get_page_views method."""
-        _mock_200_response(mocker, page_views_json_mock)
+        _mock_200_response(mocker, response_json=page_views_json_mock)
         page_views = await symbol.get_page_views()
         _assert_quote_summary_single_module_result(page_views, 'pageViews')
 
-    @pytest.mark.parametrize(
-        'kwargs',
-        [
-            dict(frequency='annual', typ='income_statement'),
-            dict(
-                frequency='annual',
-                typ='income_statement',
-                period1=datetime(2020, 1, 1).timestamp(),
-                period2=datetime.now().timestamp(),
-            ),
-            dict(
-                frequency='annual',
-                typ='income_statement',
-                period1=1577833200.0,
-                period2=1760857217.66133,
-            ),
-            dict(
-                frequency='annual',
-                typ='income_statement',
-                period1=1577833200,
-                period2=1760857217,
-            ),
-            dict(
-                frequency='annual',
-                typ='income_statement',
-                period1=datetime(2020, 1, 1).timestamp(),
-            ),
-            dict(frequency='annual', typ='income_statement', period1=1577833200.0),
-            dict(frequency='annual', typ='income_statement', period1=1577833200),
-            dict(
-                frequency='annual',
-                typ='income_statement',
-                period2=datetime.now().timestamp(),
-            ),
-            dict(frequency='annual', typ='income_statement', period2=1760857217.66133),
-            dict(frequency='annual', typ='income_statement', period2=1760857217),
-        ],
-    )
     @pytest.mark.asyncio
     async def test_get_financials(
         self,
         symbol: AsyncSymbol,
-        kwargs: dict[str, Any],
         mocker: MockerFixture,
         timeseries_income_statement_json_mock: dict[str, Any],
+        period1: int | float | None,
+        period2: int | float | None,
     ) -> None:
         """Test _get_financials method."""
-        _mock_200_response(mocker, timeseries_income_statement_json_mock)
-        annual_income_stmt = await symbol._get_financials(**kwargs)
+        _mock_200_response(mocker, response_json=timeseries_income_statement_json_mock)
+        annual_income_stmt = await symbol._get_financials(
+            frequency='annual', typ='income_statement', period1=period1, period2=period2
+        )
         _assert_timeseries_result(
             annual_income_stmt,
             types=ANNUAL_INCOME_STATEMENT_TYPES,
@@ -715,36 +729,20 @@ class TestUnitSymbol:
         with pytest.raises(err_cls):
             await symbol._get_financials(**kwargs)
 
-    @pytest.mark.parametrize(
-        'kwargs',
-        [
-            dict(frequency='annual'),
-            dict(
-                frequency='annual',
-                period1=datetime(2020, 1, 1).timestamp(),
-                period2=datetime.now().timestamp(),
-            ),
-            dict(frequency='annual', period1=1577833200.0, period2=1760857217.66133),
-            dict(frequency='annual', period1=1577833200, period2=1760857217),
-            dict(frequency='annual', period1=datetime(2020, 1, 1).timestamp()),
-            dict(frequency='annual', period1=1577833200.0),
-            dict(frequency='annual', period1=1577833200),
-            dict(frequency='annual', period2=datetime.now().timestamp()),
-            dict(frequency='annual', period2=1760857217.66133),
-            dict(frequency='annual', period2=1760857217),
-        ],
-    )
     @pytest.mark.asyncio
     async def test_get_income_statement(
         self,
         symbol: AsyncSymbol,
-        kwargs: dict[str, Any],
         mocker: MockerFixture,
         timeseries_income_statement_json_mock: dict[str, Any],
+        period1: int | float | None,
+        period2: int | float | None,
     ) -> None:
         """Test get_income_statement method."""
-        _mock_200_response(mocker, timeseries_income_statement_json_mock)
-        annual_income_stmt = await symbol.get_income_statement(**kwargs)
+        _mock_200_response(mocker, response_json=timeseries_income_statement_json_mock)
+        annual_income_stmt = await symbol.get_income_statement(
+            frequency='annual', period1=period1, period2=period2
+        )
         _assert_timeseries_result(
             annual_income_stmt,
             types=ANNUAL_INCOME_STATEMENT_TYPES,
@@ -768,36 +766,20 @@ class TestUnitSymbol:
         with pytest.raises(err_cls):
             await symbol.get_income_statement(**kwargs)
 
-    @pytest.mark.parametrize(
-        'kwargs',
-        [
-            dict(frequency='annual'),
-            dict(
-                frequency='annual',
-                period1=datetime(2020, 1, 1).timestamp(),
-                period2=datetime.now().timestamp(),
-            ),
-            dict(frequency='annual', period1=1577833200.0, period2=1760857217.66133),
-            dict(frequency='annual', period1=1577833200, period2=1760857217),
-            dict(frequency='annual', period1=datetime(2020, 1, 1).timestamp()),
-            dict(frequency='annual', period1=1577833200.0),
-            dict(frequency='annual', period1=1577833200),
-            dict(frequency='annual', period2=datetime.now().timestamp()),
-            dict(frequency='annual', period2=1760857217.66133),
-            dict(frequency='annual', period2=1760857217),
-        ],
-    )
     @pytest.mark.asyncio
     async def test_get_balance_sheet(
         self,
         symbol: AsyncSymbol,
-        kwargs: dict[str, Any],
         mocker: MockerFixture,
         timeseries_balance_sheet_json_mock: dict[str, Any],
+        period1: int | float | None,
+        period2: int | float | None,
     ) -> None:
         """Test get_balance_sheet method."""
-        _mock_200_response(mocker, timeseries_balance_sheet_json_mock)
-        annual_balance_sheet = await symbol.get_balance_sheet(**kwargs)
+        _mock_200_response(mocker, response_json=timeseries_balance_sheet_json_mock)
+        annual_balance_sheet = await symbol.get_balance_sheet(
+            frequency='annual', period1=period1, period2=period2
+        )
         _assert_timeseries_result(
             annual_balance_sheet, types=ANNUAL_BALANCE_SHEET_TYPES, ticker=symbol.ticker
         )
@@ -820,36 +802,20 @@ class TestUnitSymbol:
         with pytest.raises(err_cls):
             await symbol.get_balance_sheet(**kwargs)
 
-    @pytest.mark.parametrize(
-        'kwargs',
-        [
-            dict(frequency='annual'),
-            dict(
-                frequency='annual',
-                period1=datetime(2020, 1, 1).timestamp(),
-                period2=datetime.now().timestamp(),
-            ),
-            dict(frequency='annual', period1=1577833200.0, period2=1760857217.66133),
-            dict(frequency='annual', period1=1577833200, period2=1760857217),
-            dict(frequency='annual', period1=datetime(2020, 1, 1).timestamp()),
-            dict(frequency='annual', period1=1577833200.0),
-            dict(frequency='annual', period1=1577833200),
-            dict(frequency='annual', period2=datetime.now().timestamp()),
-            dict(frequency='annual', period2=1760857217.66133),
-            dict(frequency='annual', period2=1760857217),
-        ],
-    )
     @pytest.mark.asyncio
     async def test_get_cash_flow(
         self,
         symbol: AsyncSymbol,
-        kwargs: dict[str, Any],
         mocker: MockerFixture,
         timeseries_cash_flow_json_mock: dict[str, Any],
+        period1: int | float | None,
+        period2: int | float | None,
     ) -> None:
         """Test get_cash_flow method."""
-        _mock_200_response(mocker, timeseries_cash_flow_json_mock)
-        annual_cash_flow = await symbol.get_cash_flow(**kwargs)
+        _mock_200_response(mocker, response_json=timeseries_cash_flow_json_mock)
+        annual_cash_flow = await symbol.get_cash_flow(
+            frequency='annual', period1=period1, period2=period2
+        )
         _assert_timeseries_result(
             annual_cash_flow, types=ANNUAL_CASH_FLOW_TYPES, ticker=symbol.ticker
         )
@@ -879,7 +845,7 @@ class TestUnitSymbol:
         options_json_mock: dict[str, Any],
     ) -> None:
         """Test get_options method."""
-        _mock_200_response(mocker, options_json_mock)
+        _mock_200_response(mocker, response_json=options_json_mock)
         options = await symbol.get_options()
         _assert_options_result(options, symbol.ticker)
 
@@ -891,7 +857,7 @@ class TestUnitSymbol:
         search_json_mock: dict[str, Any],
     ) -> None:
         """Test get_search method."""
-        _mock_200_response(mocker, search_json_mock)
+        _mock_200_response(mocker, response_json=search_json_mock)
         search = await symbol.get_search()
         _assert_search_response_json(search)
 
@@ -903,7 +869,7 @@ class TestUnitSymbol:
         recommendations_json_mock: dict[str, Any],
     ) -> None:
         """Test get_recommendations method."""
-        _mock_200_response(mocker, recommendations_json_mock)
+        _mock_200_response(mocker, response_json=recommendations_json_mock)
         recommendations = await symbol.get_recommendations()
         _assert_recommendation_result(recommendations, symbol.ticker)
 
@@ -915,7 +881,7 @@ class TestUnitSymbol:
         insights_json_mock: dict[str, Any],
     ) -> None:
         """Test get_insights method."""
-        _mock_200_response(mocker, insights_json_mock)
+        _mock_200_response(mocker, response_json=insights_json_mock)
         insights = await symbol.get_insights()
         _assert_insight_result(insights, symbol.ticker)
 
@@ -927,18 +893,6 @@ class TestUnitSymbol:
         ratings_json_mock: dict[str, Any],
     ) -> None:
         """Test get_ratings method."""
-        _mock_200_response(mocker, ratings_json_mock)
+        _mock_200_response(mocker, response_json=ratings_json_mock)
         ratings = await symbol.get_ratings()
         _assert_ratings_response_json(ratings)
-
-    @pytest.mark.asyncio
-    async def test_get_analysis(
-        self,
-        symbol: AsyncSymbol,
-        mocker: MockerFixture,
-        analysis_json_mock: dict[str, Any],
-    ) -> None:
-        """Test get_analysis method."""
-        _mock_200_response(mocker, analysis_json_mock)
-        analysis = await symbol.get_analysis()
-        _assert_analysis_response_json(analysis, symbol.ticker)

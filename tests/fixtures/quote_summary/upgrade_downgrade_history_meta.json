@@ -1,0 +1,4144 @@
+{
+  "quoteSummary": {
+    "result": [
+      {
+        "upgradeDowngradeHistory": {
+          "history": [
+            {
+              "epochGradeDate": 1727713524,
+              "firm": "Cantor Fitzgerald",
+              "toGrade": "Overweight",
+              "fromGrade": "Overweight",
+              "action": "reit",
+              "priceTargetAction": "Maintains",
+              "currentPriceTarget": 660.0,
+              "priorPriceTarget": 660.0
+            },
+            {
+              "epochGradeDate": 1727697125,
+              "firm": "Monness, Crespi, Hardt",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 620.0,
+              "priorPriceTarget": 570.0
+            },
+            {
+              "epochGradeDate": 1727374176,
+              "firm": "Rosenblatt",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 811.0,
+              "priorPriceTarget": 643.0
+            },
+            {
+              "epochGradeDate": 1727366272,
+              "firm": "B of A Securities",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 630.0,
+              "priorPriceTarget": 563.0
+            },
+            {
+              "epochGradeDate": 1727364955,
+              "firm": "JP Morgan",
+              "toGrade": "Overweight",
+              "fromGrade": "Overweight",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 640.0,
+              "priorPriceTarget": 610.0
+            },
+            {
+              "epochGradeDate": 1727356102,
+              "firm": "Wedbush",
+              "toGrade": "Outperform",
+              "fromGrade": "Outperform",
+              "action": "reit",
+              "priceTargetAction": "Maintains",
+              "currentPriceTarget": 600.0,
+              "priorPriceTarget": 600.0
+            },
+            {
+              "epochGradeDate": 1727349602,
+              "firm": "Baird",
+              "toGrade": "Outperform",
+              "fromGrade": "Outperform",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 605.0,
+              "priorPriceTarget": 530.0
+            },
+            {
+              "epochGradeDate": 1727348998,
+              "firm": "JMP Securities",
+              "toGrade": "Market Outperform",
+              "fromGrade": "Market Outperform",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 635.0,
+              "priorPriceTarget": 550.0
+            },
+            {
+              "epochGradeDate": 1727102518,
+              "firm": "Cantor Fitzgerald",
+              "toGrade": "Overweight",
+              "fromGrade": "Overweight",
+              "action": "reit",
+              "priceTargetAction": "Maintains",
+              "currentPriceTarget": 660.0,
+              "priorPriceTarget": 660.0
+            },
+            {
+              "epochGradeDate": 1727101438,
+              "firm": "Citigroup",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 645.0,
+              "priorPriceTarget": 580.0
+            },
+            {
+              "epochGradeDate": 1725970713,
+              "firm": "DA Davidson",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "init",
+              "priceTargetAction": "Announces",
+              "currentPriceTarget": 600.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1725546784,
+              "firm": "Cantor Fitzgerald",
+              "toGrade": "Overweight",
+              "fromGrade": "",
+              "action": "init",
+              "priceTargetAction": "Announces",
+              "currentPriceTarget": 660.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1725444919,
+              "firm": "Needham",
+              "toGrade": "Underperform",
+              "fromGrade": "",
+              "action": "reit",
+              "priceTargetAction": "",
+              "currentPriceTarget": 0.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1723817197,
+              "firm": "Tigress Financial",
+              "toGrade": "Strong Buy",
+              "fromGrade": "Strong Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 645.0,
+              "priorPriceTarget": 575.0
+            },
+            {
+              "epochGradeDate": 1722954392,
+              "firm": "Loop Capital",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 575.0,
+              "priorPriceTarget": 550.0
+            },
+            {
+              "epochGradeDate": 1722540627,
+              "firm": "JMP Securities",
+              "toGrade": "Market Outperform",
+              "fromGrade": "Market Outperform",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 550.0,
+              "priorPriceTarget": 525.0
+            },
+            {
+              "epochGradeDate": 1722538833,
+              "firm": "Guggenheim",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 600.0,
+              "priorPriceTarget": 500.0
+            },
+            {
+              "epochGradeDate": 1722535646,
+              "firm": "Deutsche Bank",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 585.0,
+              "priorPriceTarget": 525.0
+            },
+            {
+              "epochGradeDate": 1722533494,
+              "firm": "Keybanc",
+              "toGrade": "Overweight",
+              "fromGrade": "Overweight",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 560.0,
+              "priorPriceTarget": 540.0
+            },
+            {
+              "epochGradeDate": 1722530883,
+              "firm": "Roth MKM",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 550.0,
+              "priorPriceTarget": 510.0
+            },
+            {
+              "epochGradeDate": 1722530039,
+              "firm": "Barclays",
+              "toGrade": "Overweight",
+              "fromGrade": "Overweight",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 550.0,
+              "priorPriceTarget": 520.0
+            },
+            {
+              "epochGradeDate": 1722529783,
+              "firm": "BMO Capital",
+              "toGrade": "Market Perform",
+              "fromGrade": "Market Perform",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 475.0,
+              "priorPriceTarget": 450.0
+            },
+            {
+              "epochGradeDate": 1722526856,
+              "firm": "RBC Capital",
+              "toGrade": "Outperform",
+              "fromGrade": "Outperform",
+              "action": "reit",
+              "priceTargetAction": "Maintains",
+              "currentPriceTarget": 570.0,
+              "priorPriceTarget": 570.0
+            },
+            {
+              "epochGradeDate": 1722525384,
+              "firm": "Stifel",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 590.0,
+              "priorPriceTarget": 550.0
+            },
+            {
+              "epochGradeDate": 1722518726,
+              "firm": "Truist Securities",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 570.0,
+              "priorPriceTarget": 535.0
+            },
+            {
+              "epochGradeDate": 1722517760,
+              "firm": "Susquehanna",
+              "toGrade": "Positive",
+              "fromGrade": "Positive",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 600.0,
+              "priorPriceTarget": 550.0
+            },
+            {
+              "epochGradeDate": 1722517425,
+              "firm": "JP Morgan",
+              "toGrade": "Overweight",
+              "fromGrade": "Overweight",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 610.0,
+              "priorPriceTarget": 480.0
+            },
+            {
+              "epochGradeDate": 1722516222,
+              "firm": "Evercore ISI Group",
+              "toGrade": "Outperform",
+              "fromGrade": "Outperform",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 600.0,
+              "priorPriceTarget": 550.0
+            },
+            {
+              "epochGradeDate": 1722515478,
+              "firm": "Wells Fargo",
+              "toGrade": "Overweight",
+              "fromGrade": "Overweight",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 647.0,
+              "priorPriceTarget": 625.0
+            },
+            {
+              "epochGradeDate": 1722515033,
+              "firm": "UBS",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 635.0,
+              "priorPriceTarget": 630.0
+            },
+            {
+              "epochGradeDate": 1722514965,
+              "firm": "Baird",
+              "toGrade": "Outperform",
+              "fromGrade": "Outperform",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 530.0,
+              "priorPriceTarget": 500.0
+            },
+            {
+              "epochGradeDate": 1722514186,
+              "firm": "Citigroup",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 580.0,
+              "priorPriceTarget": 550.0
+            },
+            {
+              "epochGradeDate": 1722513065,
+              "firm": "Jefferies",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 600.0,
+              "priorPriceTarget": 565.0
+            },
+            {
+              "epochGradeDate": 1722511647,
+              "firm": "Needham",
+              "toGrade": "Underperform",
+              "fromGrade": "",
+              "action": "reit",
+              "priceTargetAction": "",
+              "currentPriceTarget": 0.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1722510880,
+              "firm": "Rosenblatt",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 643.0,
+              "priorPriceTarget": 562.0
+            },
+            {
+              "epochGradeDate": 1722510657,
+              "firm": "Morgan Stanley",
+              "toGrade": "Overweight",
+              "fromGrade": "Overweight",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 575.0,
+              "priorPriceTarget": 550.0
+            },
+            {
+              "epochGradeDate": 1722510187,
+              "firm": "B of A Securities",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 563.0,
+              "priorPriceTarget": 550.0
+            },
+            {
+              "epochGradeDate": 1722508561,
+              "firm": "Oppenheimer",
+              "toGrade": "Outperform",
+              "fromGrade": "Outperform",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 615.0,
+              "priorPriceTarget": 525.0
+            },
+            {
+              "epochGradeDate": 1722508159,
+              "firm": "Goldman Sachs",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 555.0,
+              "priorPriceTarget": 522.0
+            },
+            {
+              "epochGradeDate": 1722361880,
+              "firm": "JMP Securities",
+              "toGrade": "Market Outperform",
+              "fromGrade": "Market Outperform",
+              "action": "reit",
+              "priceTargetAction": "Maintains",
+              "currentPriceTarget": 525.0,
+              "priorPriceTarget": 525.0
+            },
+            {
+              "epochGradeDate": 1721991096,
+              "firm": "Needham",
+              "toGrade": "Underperform",
+              "fromGrade": "",
+              "action": "reit",
+              "priceTargetAction": "",
+              "currentPriceTarget": 0.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1721928061,
+              "firm": "Benchmark",
+              "toGrade": "Hold",
+              "fromGrade": "",
+              "action": "reit",
+              "priceTargetAction": "",
+              "currentPriceTarget": 0.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1721846029,
+              "firm": "Wedbush",
+              "toGrade": "Outperform",
+              "fromGrade": "Outperform",
+              "action": "reit",
+              "priceTargetAction": "Maintains",
+              "currentPriceTarget": 570.0,
+              "priorPriceTarget": 570.0
+            },
+            {
+              "epochGradeDate": 1721818593,
+              "firm": "Needham",
+              "toGrade": "Underperform",
+              "fromGrade": "",
+              "action": "reit",
+              "priceTargetAction": "",
+              "currentPriceTarget": 0.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1721674497,
+              "firm": "Bernstein",
+              "toGrade": "Outperform",
+              "fromGrade": "Outperform",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 575.0,
+              "priorPriceTarget": 565.0
+            },
+            {
+              "epochGradeDate": 1721380877,
+              "firm": "Oppenheimer",
+              "toGrade": "Outperform",
+              "fromGrade": "Outperform",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 525.0,
+              "priorPriceTarget": 500.0
+            },
+            {
+              "epochGradeDate": 1721125731,
+              "firm": "Wolfe Research",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "init",
+              "priceTargetAction": "Announces",
+              "currentPriceTarget": 620.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1720611576,
+              "firm": "TD Cowen",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 600.0,
+              "priorPriceTarget": 530.0
+            },
+            {
+              "epochGradeDate": 1720446519,
+              "firm": "Wells Fargo",
+              "toGrade": "Overweight",
+              "fromGrade": "Overweight",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 625.0,
+              "priorPriceTarget": 593.0
+            },
+            {
+              "epochGradeDate": 1720001319,
+              "firm": "Loop Capital",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "reit",
+              "priceTargetAction": "Maintains",
+              "currentPriceTarget": 550.0,
+              "priorPriceTarget": 550.0
+            },
+            {
+              "epochGradeDate": 1719830636,
+              "firm": "Needham",
+              "toGrade": "Underperform",
+              "fromGrade": "",
+              "action": "reit",
+              "priceTargetAction": "",
+              "currentPriceTarget": 0.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1718884016,
+              "firm": "Keybanc",
+              "toGrade": "Overweight",
+              "fromGrade": "Overweight",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 540.0,
+              "priorPriceTarget": 475.0
+            },
+            {
+              "epochGradeDate": 1718196937,
+              "firm": "BMO Capital",
+              "toGrade": "Market Perform",
+              "fromGrade": "Market Perform",
+              "action": "reit",
+              "priceTargetAction": "Maintains",
+              "currentPriceTarget": 450.0,
+              "priorPriceTarget": 450.0
+            },
+            {
+              "epochGradeDate": 1717592840,
+              "firm": "Raymond James",
+              "toGrade": "Strong Buy",
+              "fromGrade": "Strong Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 550.0,
+              "priorPriceTarget": 525.0
+            },
+            {
+              "epochGradeDate": 1714648609,
+              "firm": "Exane BNP Paribas",
+              "toGrade": "Underperform",
+              "fromGrade": "",
+              "action": "init",
+              "priceTargetAction": "Announces",
+              "currentPriceTarget": 360.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1714592358,
+              "firm": "Loop Capital",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 550.0,
+              "priorPriceTarget": 555.0
+            },
+            {
+              "epochGradeDate": 1714083119,
+              "firm": "Citigroup",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 550.0,
+              "priorPriceTarget": 590.0
+            },
+            {
+              "epochGradeDate": 1714069390,
+              "firm": "Barclays",
+              "toGrade": "Overweight",
+              "fromGrade": "Overweight",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 520.0,
+              "priorPriceTarget": 550.0
+            },
+            {
+              "epochGradeDate": 1714068644,
+              "firm": "Guggenheim",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 500.0,
+              "priorPriceTarget": 520.0
+            },
+            {
+              "epochGradeDate": 1714066921,
+              "firm": "TD Cowen",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 530.0,
+              "priorPriceTarget": 590.0
+            },
+            {
+              "epochGradeDate": 1714066534,
+              "firm": "Truist Securities",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 535.0,
+              "priorPriceTarget": 550.0
+            },
+            {
+              "epochGradeDate": 1714064328,
+              "firm": "Keybanc",
+              "toGrade": "Overweight",
+              "fromGrade": "Overweight",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 475.0,
+              "priorPriceTarget": 555.0
+            },
+            {
+              "epochGradeDate": 1714064187,
+              "firm": "Deutsche Bank",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 500.0,
+              "priorPriceTarget": 540.0
+            },
+            {
+              "epochGradeDate": 1714063190,
+              "firm": "JMP Securities",
+              "toGrade": "Market Outperform",
+              "fromGrade": "Market Outperform",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 525.0,
+              "priorPriceTarget": 550.0
+            },
+            {
+              "epochGradeDate": 1714063067,
+              "firm": "Bernstein",
+              "toGrade": "Outperform",
+              "fromGrade": "Outperform",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 565.0,
+              "priorPriceTarget": 590.0
+            },
+            {
+              "epochGradeDate": 1714062332,
+              "firm": "RBC Capital",
+              "toGrade": "Outperform",
+              "fromGrade": "Outperform",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 570.0,
+              "priorPriceTarget": 600.0
+            },
+            {
+              "epochGradeDate": 1714060291,
+              "firm": "Raymond James",
+              "toGrade": "Strong Buy",
+              "fromGrade": "Strong Buy",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 525.0,
+              "priorPriceTarget": 550.0
+            },
+            {
+              "epochGradeDate": 1714056475,
+              "firm": "Roth MKM",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 510.0,
+              "priorPriceTarget": 500.0
+            },
+            {
+              "epochGradeDate": 1714056159,
+              "firm": "Benchmark",
+              "toGrade": "Hold",
+              "fromGrade": "",
+              "action": "reit",
+              "priceTargetAction": "",
+              "currentPriceTarget": 0.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1714055803,
+              "firm": "UBS",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 575.0,
+              "priorPriceTarget": 610.0
+            },
+            {
+              "epochGradeDate": 1714049660,
+              "firm": "JP Morgan",
+              "toGrade": "Overweight",
+              "fromGrade": "Overweight",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 480.0,
+              "priorPriceTarget": 535.0
+            },
+            {
+              "epochGradeDate": 1714048892,
+              "firm": "Jefferies",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 540.0,
+              "priorPriceTarget": 585.0
+            },
+            {
+              "epochGradeDate": 1714048381,
+              "firm": "Piper Sandler",
+              "toGrade": "Overweight",
+              "fromGrade": "Overweight",
+              "action": "reit",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 545.0,
+              "priorPriceTarget": 600.0
+            },
+            {
+              "epochGradeDate": 1714047948,
+              "firm": "Canaccord Genuity",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 575.0,
+              "priorPriceTarget": 610.0
+            },
+            {
+              "epochGradeDate": 1714047321,
+              "firm": "Oppenheimer",
+              "toGrade": "Outperform",
+              "fromGrade": "Outperform",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 500.0,
+              "priorPriceTarget": 585.0
+            },
+            {
+              "epochGradeDate": 1714045870,
+              "firm": "Rosenblatt",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 562.0,
+              "priorPriceTarget": 520.0
+            },
+            {
+              "epochGradeDate": 1714043554,
+              "firm": "Baird",
+              "toGrade": "Outperform",
+              "fromGrade": "Outperform",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 500.0,
+              "priorPriceTarget": 525.0
+            },
+            {
+              "epochGradeDate": 1714042742,
+              "firm": "Needham",
+              "toGrade": "Underperform",
+              "fromGrade": "",
+              "action": "reit",
+              "priceTargetAction": "",
+              "currentPriceTarget": 0.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1714039194,
+              "firm": "Wolfe Research",
+              "toGrade": "Outperform",
+              "fromGrade": "Outperform",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 500.0,
+              "priorPriceTarget": 530.0
+            },
+            {
+              "epochGradeDate": 1714037040,
+              "firm": "Goldman Sachs",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 500.0,
+              "priorPriceTarget": 555.0
+            },
+            {
+              "epochGradeDate": 1713803295,
+              "firm": "JMP Securities",
+              "toGrade": "Market Outperform",
+              "fromGrade": "Market Outperform",
+              "action": "reit",
+              "priceTargetAction": "Maintains",
+              "currentPriceTarget": 550.0,
+              "priorPriceTarget": 550.0
+            },
+            {
+              "epochGradeDate": 1713791702,
+              "firm": "Benchmark",
+              "toGrade": "Hold",
+              "fromGrade": "",
+              "action": "reit",
+              "priceTargetAction": "",
+              "currentPriceTarget": 0.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1713785765,
+              "firm": "Keybanc",
+              "toGrade": "Overweight",
+              "fromGrade": "Overweight",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 555.0,
+              "priorPriceTarget": 575.0
+            },
+            {
+              "epochGradeDate": 1713450326,
+              "firm": "Bernstein",
+              "toGrade": "Outperform",
+              "fromGrade": "Outperform",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 590.0,
+              "priorPriceTarget": 535.0
+            },
+            {
+              "epochGradeDate": 1713356485,
+              "firm": "Truist Securities",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 550.0,
+              "priorPriceTarget": 525.0
+            },
+            {
+              "epochGradeDate": 1713349779,
+              "firm": "Canaccord Genuity",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 610.0,
+              "priorPriceTarget": 580.0
+            },
+            {
+              "epochGradeDate": 1713271854,
+              "firm": "UBS",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 610.0,
+              "priorPriceTarget": 530.0
+            },
+            {
+              "epochGradeDate": 1713269591,
+              "firm": "Stifel",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 588.0,
+              "priorPriceTarget": 527.0
+            },
+            {
+              "epochGradeDate": 1713192454,
+              "firm": "Citigroup",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 590.0,
+              "priorPriceTarget": 525.0
+            },
+            {
+              "epochGradeDate": 1713191164,
+              "firm": "Goldman Sachs",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 555.0,
+              "priorPriceTarget": 500.0
+            },
+            {
+              "epochGradeDate": 1712838493,
+              "firm": "Piper Sandler",
+              "toGrade": "Overweight",
+              "fromGrade": "Overweight",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 600.0,
+              "priorPriceTarget": 525.0
+            },
+            {
+              "epochGradeDate": 1712595812,
+              "firm": "Oppenheimer",
+              "toGrade": "Outperform",
+              "fromGrade": "Outperform",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 585.0,
+              "priorPriceTarget": 525.0
+            },
+            {
+              "epochGradeDate": 1712248476,
+              "firm": "Jefferies",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 585.0,
+              "priorPriceTarget": 550.0
+            },
+            {
+              "epochGradeDate": 1712162349,
+              "firm": "Wells Fargo",
+              "toGrade": "Overweight",
+              "fromGrade": "Overweight",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 600.0,
+              "priorPriceTarget": 609.0
+            },
+            {
+              "epochGradeDate": 1710779253,
+              "firm": "Roth MKM",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Maintains",
+              "currentPriceTarget": 500.0,
+              "priorPriceTarget": 500.0
+            },
+            {
+              "epochGradeDate": 1710772010,
+              "firm": "Wells Fargo",
+              "toGrade": "Overweight",
+              "fromGrade": "Overweight",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 609.0,
+              "priorPriceTarget": 536.0
+            },
+            {
+              "epochGradeDate": 1707504261,
+              "firm": "Tigress Financial",
+              "toGrade": "Strong Buy",
+              "fromGrade": "Strong Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 575.0,
+              "priorPriceTarget": 435.0
+            },
+            {
+              "epochGradeDate": 1707143151,
+              "firm": "Goldman Sachs",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 500.0,
+              "priorPriceTarget": 414.0
+            },
+            {
+              "epochGradeDate": 1706906194,
+              "firm": "JP Morgan",
+              "toGrade": "Overweight",
+              "fromGrade": "Overweight",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 535.0,
+              "priorPriceTarget": 420.0
+            },
+            {
+              "epochGradeDate": 1706903855,
+              "firm": "Truist Securities",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 525.0,
+              "priorPriceTarget": 405.0
+            },
+            {
+              "epochGradeDate": 1706902505,
+              "firm": "Stifel",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 527.0,
+              "priorPriceTarget": 405.0
+            },
+            {
+              "epochGradeDate": 1706899943,
+              "firm": "UBS",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 530.0,
+              "priorPriceTarget": 425.0
+            },
+            {
+              "epochGradeDate": 1706897950,
+              "firm": "Oppenheimer",
+              "toGrade": "Outperform",
+              "fromGrade": "Outperform",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 525.0,
+              "priorPriceTarget": 385.0
+            },
+            {
+              "epochGradeDate": 1706896270,
+              "firm": "JMP Securities",
+              "toGrade": "Market Outperform",
+              "fromGrade": "Market Outperform",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 500.0,
+              "priorPriceTarget": 410.0
+            },
+            {
+              "epochGradeDate": 1706892355,
+              "firm": "RBC Capital",
+              "toGrade": "Outperform",
+              "fromGrade": "Outperform",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 565.0,
+              "priorPriceTarget": 400.0
+            },
+            {
+              "epochGradeDate": 1706891413,
+              "firm": "Roth MKM",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 500.0,
+              "priorPriceTarget": 365.0
+            },
+            {
+              "epochGradeDate": 1706888067,
+              "firm": "Goldman Sachs",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 500.0,
+              "priorPriceTarget": 414.0
+            },
+            {
+              "epochGradeDate": 1706884213,
+              "firm": "Keybanc",
+              "toGrade": "Overweight",
+              "fromGrade": "Overweight",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 575.0,
+              "priorPriceTarget": 465.0
+            },
+            {
+              "epochGradeDate": 1706882564,
+              "firm": "Raymond James",
+              "toGrade": "Strong Buy",
+              "fromGrade": "Strong Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 550.0,
+              "priorPriceTarget": 450.0
+            },
+            {
+              "epochGradeDate": 1706881440,
+              "firm": "Wedbush",
+              "toGrade": "Outperform",
+              "fromGrade": "Outperform",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 520.0,
+              "priorPriceTarget": 420.0
+            },
+            {
+              "epochGradeDate": 1706881114,
+              "firm": "Susquehanna",
+              "toGrade": "Positive",
+              "fromGrade": "Positive",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 550.0,
+              "priorPriceTarget": 400.0
+            },
+            {
+              "epochGradeDate": 1706880197,
+              "firm": "Barclays",
+              "toGrade": "Overweight",
+              "fromGrade": "Overweight",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 550.0,
+              "priorPriceTarget": 400.0
+            },
+            {
+              "epochGradeDate": 1706877173,
+              "firm": "Citigroup",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 525.0,
+              "priorPriceTarget": 440.0
+            },
+            {
+              "epochGradeDate": 1706608938,
+              "firm": "Keybanc",
+              "toGrade": "Overweight",
+              "fromGrade": "Overweight",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 465.0,
+              "priorPriceTarget": 380.0
+            },
+            {
+              "epochGradeDate": 1706553131,
+              "firm": "Jefferies",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 455.0,
+              "priorPriceTarget": 425.0
+            },
+            {
+              "epochGradeDate": 1706128214,
+              "firm": "Raymond James",
+              "toGrade": "Strong Buy",
+              "fromGrade": "Strong Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 450.0,
+              "priorPriceTarget": 425.0
+            },
+            {
+              "epochGradeDate": 1705945252,
+              "firm": "RBC Capital",
+              "toGrade": "Outperform",
+              "fromGrade": "Outperform",
+              "action": "reit",
+              "priceTargetAction": "Maintains",
+              "currentPriceTarget": 400.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1705682914,
+              "firm": "JMP Securities",
+              "toGrade": "Market Outperform",
+              "fromGrade": "Market Outperform",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 410.0,
+              "priorPriceTarget": 380.0
+            },
+            {
+              "epochGradeDate": 1705505729,
+              "firm": "Piper Sandler",
+              "toGrade": "Overweight",
+              "fromGrade": "Overweight",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 415.0,
+              "priorPriceTarget": 355.0
+            },
+            {
+              "epochGradeDate": 1704991287,
+              "firm": "Mizuho",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 470.0,
+              "priorPriceTarget": 400.0
+            },
+            {
+              "epochGradeDate": 1704904861,
+              "firm": "Mizuho",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 470.0,
+              "priorPriceTarget": 400.0
+            },
+            {
+              "epochGradeDate": 1704799341,
+              "firm": "BMO Capital",
+              "toGrade": "Market Perform",
+              "fromGrade": "",
+              "action": "init",
+              "priceTargetAction": "Announces",
+              "currentPriceTarget": 397.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1703684959,
+              "firm": "Wedbush",
+              "toGrade": "Outperform",
+              "fromGrade": "Outperform",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 420.0,
+              "priorPriceTarget": 350.0
+            },
+            {
+              "epochGradeDate": 1700670364,
+              "firm": "Tigress Financial",
+              "toGrade": "Strong Buy",
+              "fromGrade": "Strong Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 435.0,
+              "priorPriceTarget": 380.0
+            },
+            {
+              "epochGradeDate": 1699985825,
+              "firm": "Stifel",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "reit",
+              "priceTargetAction": "Maintains",
+              "currentPriceTarget": 405.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1698344254,
+              "firm": "Truist Securities",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 405.0,
+              "priorPriceTarget": 390.0
+            },
+            {
+              "epochGradeDate": 1698341101,
+              "firm": "RBC Capital",
+              "toGrade": "Outperform",
+              "fromGrade": "Outperform",
+              "action": "reit",
+              "priceTargetAction": "Maintains",
+              "currentPriceTarget": 400.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1698338145,
+              "firm": "Piper Sandler",
+              "toGrade": "Overweight",
+              "fromGrade": "Overweight",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 355.0,
+              "priorPriceTarget": 365.0
+            },
+            {
+              "epochGradeDate": 1698326266,
+              "firm": "Roth MKM",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 365.0,
+              "priorPriceTarget": 360.0
+            },
+            {
+              "epochGradeDate": 1698326263,
+              "firm": "Wedbush",
+              "toGrade": "Outperform",
+              "fromGrade": "Outperform",
+              "action": "reit",
+              "priceTargetAction": "Maintains",
+              "currentPriceTarget": 350.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1698325684,
+              "firm": "Wells Fargo",
+              "toGrade": "Overweight",
+              "fromGrade": "Overweight",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 380.0,
+              "priorPriceTarget": 372.0
+            },
+            {
+              "epochGradeDate": 1698321058,
+              "firm": "Barclays",
+              "toGrade": "Overweight",
+              "fromGrade": "Overweight",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 400.0,
+              "priorPriceTarget": 410.0
+            },
+            {
+              "epochGradeDate": 1698318243,
+              "firm": "Rosenblatt",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 411.0,
+              "priorPriceTarget": 372.0
+            },
+            {
+              "epochGradeDate": 1698309471,
+              "firm": "Keybanc",
+              "toGrade": "Overweight",
+              "fromGrade": "Overweight",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 380.0,
+              "priorPriceTarget": 356.0
+            },
+            {
+              "epochGradeDate": 1698147239,
+              "firm": "Seaport Global",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "init",
+              "priceTargetAction": "Announces",
+              "currentPriceTarget": 365.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1696847314,
+              "firm": "Wells Fargo",
+              "toGrade": "Overweight",
+              "fromGrade": "Overweight",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 372.0,
+              "priorPriceTarget": 389.0
+            },
+            {
+              "epochGradeDate": 1696417130,
+              "firm": "JP Morgan",
+              "toGrade": "Overweight",
+              "fromGrade": "Overweight",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 400.0,
+              "priorPriceTarget": 425.0
+            },
+            {
+              "epochGradeDate": 1696262764,
+              "firm": "Truist Securities",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "reit",
+              "priceTargetAction": "Maintains",
+              "currentPriceTarget": 390.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1695928028,
+              "firm": "JP Morgan",
+              "toGrade": "Overweight",
+              "fromGrade": "Overweight",
+              "action": "reit",
+              "priceTargetAction": "Maintains",
+              "currentPriceTarget": 425.0,
+              "priorPriceTarget": 425.0
+            },
+            {
+              "epochGradeDate": 1695912636,
+              "firm": "Oppenheimer",
+              "toGrade": "Outperform",
+              "fromGrade": "Outperform",
+              "action": "reit",
+              "priceTargetAction": "Maintains",
+              "currentPriceTarget": 385.0,
+              "priorPriceTarget": 385.0
+            },
+            {
+              "epochGradeDate": 1695906674,
+              "firm": "Morgan Stanley",
+              "toGrade": "Overweight",
+              "fromGrade": "Overweight",
+              "action": "reit",
+              "priceTargetAction": "Maintains",
+              "currentPriceTarget": 375.0,
+              "priorPriceTarget": 375.0
+            },
+            {
+              "epochGradeDate": 1695905403,
+              "firm": "JMP Securities",
+              "toGrade": "Market Outperform",
+              "fromGrade": "Market Outperform",
+              "action": "reit",
+              "priceTargetAction": "Maintains",
+              "currentPriceTarget": 380.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1695900363,
+              "firm": "Keybanc",
+              "toGrade": "Overweight",
+              "fromGrade": "Overweight",
+              "action": "reit",
+              "priceTargetAction": "Maintains",
+              "currentPriceTarget": 356.0,
+              "priorPriceTarget": 356.0
+            },
+            {
+              "epochGradeDate": 1695829705,
+              "firm": "Guggenheim",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 380.0,
+              "priorPriceTarget": 375.0
+            },
+            {
+              "epochGradeDate": 1695391004,
+              "firm": "Citigroup",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "reit",
+              "priceTargetAction": "Maintains",
+              "currentPriceTarget": 385.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1692692463,
+              "firm": "Wedbush",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "init",
+              "priceTargetAction": "Announces",
+              "currentPriceTarget": 350.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1692374454,
+              "firm": "Loop Capital",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 375.0,
+              "priorPriceTarget": 365.0
+            },
+            {
+              "epochGradeDate": 1692367848,
+              "firm": "RBC Capital",
+              "toGrade": "Outperform",
+              "fromGrade": "Outperform",
+              "action": "reit",
+              "priceTargetAction": "Maintains",
+              "currentPriceTarget": 400.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1690980385,
+              "firm": "Needham",
+              "toGrade": "Underperform",
+              "fromGrade": "",
+              "action": "reit",
+              "priceTargetAction": "",
+              "currentPriceTarget": 0.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1690917314,
+              "firm": "Argus Research",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 375.0,
+              "priorPriceTarget": 353.0
+            },
+            {
+              "epochGradeDate": 1690897447,
+              "firm": "JMP Securities",
+              "toGrade": "Market Outperform",
+              "fromGrade": "Market Outperform",
+              "action": "reit",
+              "priceTargetAction": "Maintains",
+              "currentPriceTarget": 380.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1690543164,
+              "firm": "China Renaissance",
+              "toGrade": "Buy",
+              "fromGrade": "Hold",
+              "action": "up",
+              "priceTargetAction": "Announces",
+              "currentPriceTarget": 380.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1690486462,
+              "firm": "Truist Securities",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 390.0,
+              "priorPriceTarget": 340.0
+            },
+            {
+              "epochGradeDate": 1690472984,
+              "firm": "RBC Capital",
+              "toGrade": "Outperform",
+              "fromGrade": "Outperform",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 400.0,
+              "priorPriceTarget": 330.0
+            },
+            {
+              "epochGradeDate": 1690469314,
+              "firm": "HSBC",
+              "toGrade": "Hold",
+              "fromGrade": "Reduce",
+              "action": "up",
+              "priceTargetAction": "Announces",
+              "currentPriceTarget": 285.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1690468594,
+              "firm": "Guggenheim",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 375.0,
+              "priorPriceTarget": 320.0
+            },
+            {
+              "epochGradeDate": 1690467262,
+              "firm": "Oppenheimer",
+              "toGrade": "Outperform",
+              "fromGrade": "Outperform",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 385.0,
+              "priorPriceTarget": 350.0
+            },
+            {
+              "epochGradeDate": 1690464744,
+              "firm": "UBS",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 400.0,
+              "priorPriceTarget": 335.0
+            },
+            {
+              "epochGradeDate": 1690463432,
+              "firm": "Morgan Stanley",
+              "toGrade": "Overweight",
+              "fromGrade": "Overweight",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 375.0,
+              "priorPriceTarget": 350.0
+            },
+            {
+              "epochGradeDate": 1690463244,
+              "firm": "Goldman Sachs",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 384.0,
+              "priorPriceTarget": 335.0
+            },
+            {
+              "epochGradeDate": 1690461866,
+              "firm": "Credit Suisse",
+              "toGrade": "Outperform",
+              "fromGrade": "Outperform",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 407.0,
+              "priorPriceTarget": 361.0
+            },
+            {
+              "epochGradeDate": 1690461658,
+              "firm": "JMP Securities",
+              "toGrade": "Market Outperform",
+              "fromGrade": "Market Outperform",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 380.0,
+              "priorPriceTarget": 350.0
+            },
+            {
+              "epochGradeDate": 1690460969,
+              "firm": "Citigroup",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 385.0,
+              "priorPriceTarget": 360.0
+            },
+            {
+              "epochGradeDate": 1690459631,
+              "firm": "Barclays",
+              "toGrade": "Overweight",
+              "fromGrade": "Overweight",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 410.0,
+              "priorPriceTarget": 320.0
+            },
+            {
+              "epochGradeDate": 1690454762,
+              "firm": "Needham",
+              "toGrade": "Underperform",
+              "fromGrade": "",
+              "action": "reit",
+              "priceTargetAction": "",
+              "currentPriceTarget": 0.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1690454282,
+              "firm": "Wells Fargo",
+              "toGrade": "Overweight",
+              "fromGrade": "Equal-Weight",
+              "action": "up",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 389.0,
+              "priorPriceTarget": 313.0
+            },
+            {
+              "epochGradeDate": 1690294939,
+              "firm": "Mizuho",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 350.0,
+              "priorPriceTarget": 280.0
+            },
+            {
+              "epochGradeDate": 1690290365,
+              "firm": "New Street Research",
+              "toGrade": "Buy",
+              "fromGrade": "Neutral",
+              "action": "up",
+              "priceTargetAction": "Announces",
+              "currentPriceTarget": 350.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1689775219,
+              "firm": "Truist Securities",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 340.0,
+              "priorPriceTarget": 265.0
+            },
+            {
+              "epochGradeDate": 1689685571,
+              "firm": "Goldman Sachs",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 335.0,
+              "priorPriceTarget": 300.0
+            },
+            {
+              "epochGradeDate": 1689600042,
+              "firm": "JMP Securities",
+              "toGrade": "Market Outperform",
+              "fromGrade": "Market Outperform",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 350.0,
+              "priorPriceTarget": 300.0
+            },
+            {
+              "epochGradeDate": 1689595922,
+              "firm": "Goldman Sachs",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 335.0,
+              "priorPriceTarget": 300.0
+            },
+            {
+              "epochGradeDate": 1689594668,
+              "firm": "Credit Suisse",
+              "toGrade": "Outperform",
+              "fromGrade": "Outperform",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 361.0,
+              "priorPriceTarget": 277.0
+            },
+            {
+              "epochGradeDate": 1689256159,
+              "firm": "Morgan Stanley",
+              "toGrade": "Overweight",
+              "fromGrade": "Overweight",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 350.0,
+              "priorPriceTarget": 300.0
+            },
+            {
+              "epochGradeDate": 1689241743,
+              "firm": "TD Cowen",
+              "toGrade": "Outperform",
+              "fromGrade": "Market Perform",
+              "action": "up",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 345.0,
+              "priorPriceTarget": 220.0
+            },
+            {
+              "epochGradeDate": 1689176205,
+              "firm": "Deutsche Bank",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 350.0,
+              "priorPriceTarget": 290.0
+            },
+            {
+              "epochGradeDate": 1688728419,
+              "firm": "Rosenblatt",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 333.0,
+              "priorPriceTarget": 263.0
+            },
+            {
+              "epochGradeDate": 1688651386,
+              "firm": "Tigress Financial",
+              "toGrade": "Strong Buy",
+              "fromGrade": "Strong Buy",
+              "action": "reit",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 380.0,
+              "priorPriceTarget": 285.0
+            },
+            {
+              "epochGradeDate": 1688631937,
+              "firm": "Keybanc",
+              "toGrade": "Overweight",
+              "fromGrade": "Overweight",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 335.0,
+              "priorPriceTarget": 280.0
+            },
+            {
+              "epochGradeDate": 1687957779,
+              "firm": "Citigroup",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 360.0,
+              "priorPriceTarget": 315.0
+            },
+            {
+              "epochGradeDate": 1687873056,
+              "firm": "Citigroup",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 360.0,
+              "priorPriceTarget": 315.0
+            },
+            {
+              "epochGradeDate": 1687788005,
+              "firm": "UBS",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 335.0,
+              "priorPriceTarget": 300.0
+            },
+            {
+              "epochGradeDate": 1687531591,
+              "firm": "Roth MKM",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 315.0,
+              "priorPriceTarget": 255.0
+            },
+            {
+              "epochGradeDate": 1686240030,
+              "firm": "Wells Fargo",
+              "toGrade": "Equal-Weight",
+              "fromGrade": "Equal-Weight",
+              "action": "init",
+              "priceTargetAction": "Announces",
+              "currentPriceTarget": 276.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1685962271,
+              "firm": "JMP Securities",
+              "toGrade": "Market Outperform",
+              "fromGrade": "Market Outperform",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 300.0,
+              "priorPriceTarget": 270.0
+            },
+            {
+              "epochGradeDate": 1685957848,
+              "firm": "Oppenheimer",
+              "toGrade": "Outperform",
+              "fromGrade": "Outperform",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 350.0,
+              "priorPriceTarget": 285.0
+            },
+            {
+              "epochGradeDate": 1684151845,
+              "firm": "Loop Capital",
+              "toGrade": "Buy",
+              "fromGrade": "Hold",
+              "action": "up",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 320.0,
+              "priorPriceTarget": 220.0
+            },
+            {
+              "epochGradeDate": 1682683823,
+              "firm": "Goldman Sachs",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 300.0,
+              "priorPriceTarget": 245.0
+            },
+            {
+              "epochGradeDate": 1682613655,
+              "firm": "Citigroup",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 315.0,
+              "priorPriceTarget": 260.0
+            },
+            {
+              "epochGradeDate": 1682612781,
+              "firm": "Roth Capital",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "reit",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 255.0,
+              "priorPriceTarget": 230.0
+            },
+            {
+              "epochGradeDate": 1682606697,
+              "firm": "Truist Securities",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 265.0,
+              "priorPriceTarget": 230.0
+            },
+            {
+              "epochGradeDate": 1682606237,
+              "firm": "Guggenheim",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 320.0,
+              "priorPriceTarget": 240.0
+            },
+            {
+              "epochGradeDate": 1682604439,
+              "firm": "Deutsche Bank",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 290.0,
+              "priorPriceTarget": 260.0
+            },
+            {
+              "epochGradeDate": 1682602927,
+              "firm": "Huber Research",
+              "toGrade": "Overweight",
+              "fromGrade": "Neutral",
+              "action": "up",
+              "priceTargetAction": "Announces",
+              "currentPriceTarget": 290.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1682601760,
+              "firm": "RBC Capital",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 285.0,
+              "priorPriceTarget": 225.0
+            },
+            {
+              "epochGradeDate": 1682595992,
+              "firm": "Oppenheimer",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 285.0,
+              "priorPriceTarget": 260.0
+            },
+            {
+              "epochGradeDate": 1682595250,
+              "firm": "TD Cowen",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 220.0,
+              "priorPriceTarget": 195.0
+            },
+            {
+              "epochGradeDate": 1682594614,
+              "firm": "Baird",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 260.0,
+              "priorPriceTarget": 220.0
+            },
+            {
+              "epochGradeDate": 1682593987,
+              "firm": "JP Morgan",
+              "toGrade": "Overweight",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 305.0,
+              "priorPriceTarget": 270.0
+            },
+            {
+              "epochGradeDate": 1682593818,
+              "firm": "Morgan Stanley",
+              "toGrade": "Overweight",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 300.0,
+              "priorPriceTarget": 250.0
+            },
+            {
+              "epochGradeDate": 1682593376,
+              "firm": "Rosenblatt",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 263.0,
+              "priorPriceTarget": 257.0
+            },
+            {
+              "epochGradeDate": 1682593269,
+              "firm": "Mizuho",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 280.0,
+              "priorPriceTarget": 235.0
+            },
+            {
+              "epochGradeDate": 1682593083,
+              "firm": "Credit Suisse",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 277.0,
+              "priorPriceTarget": 251.0
+            },
+            {
+              "epochGradeDate": 1682592940,
+              "firm": "B of A Securities",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 300.0,
+              "priorPriceTarget": 250.0
+            },
+            {
+              "epochGradeDate": 1682592201,
+              "firm": "Bernstein",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 275.0,
+              "priorPriceTarget": 250.0
+            },
+            {
+              "epochGradeDate": 1682591989,
+              "firm": "JMP Securities",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 270.0,
+              "priorPriceTarget": 240.0
+            },
+            {
+              "epochGradeDate": 1682589821,
+              "firm": "Stifel",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 280.0,
+              "priorPriceTarget": 230.0
+            },
+            {
+              "epochGradeDate": 1682589779,
+              "firm": "Raymond James",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 287.0,
+              "priorPriceTarget": 238.0
+            },
+            {
+              "epochGradeDate": 1682589102,
+              "firm": "Barclays",
+              "toGrade": "Overweight",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 320.0,
+              "priorPriceTarget": 270.0
+            },
+            {
+              "epochGradeDate": 1682588586,
+              "firm": "Wolfe Research",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 300.0,
+              "priorPriceTarget": 260.0
+            },
+            {
+              "epochGradeDate": 1682588395,
+              "firm": "Evercore ISI Group",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 350.0,
+              "priorPriceTarget": 305.0
+            },
+            {
+              "epochGradeDate": 1682588349,
+              "firm": "Goldman Sachs",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 300.0,
+              "priorPriceTarget": 245.0
+            },
+            {
+              "epochGradeDate": 1682588271,
+              "firm": "Piper Sandler",
+              "toGrade": "Overweight",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 270.0,
+              "priorPriceTarget": 250.0
+            },
+            {
+              "epochGradeDate": 1682584610,
+              "firm": "Keybanc",
+              "toGrade": "Overweight",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 280.0,
+              "priorPriceTarget": 240.0
+            },
+            {
+              "epochGradeDate": 1682081416,
+              "firm": "RBC Capital",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "reit",
+              "priceTargetAction": "Maintains",
+              "currentPriceTarget": 225.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1681898704,
+              "firm": "Wolfe Research",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 260.0,
+              "priorPriceTarget": 230.0
+            },
+            {
+              "epochGradeDate": 1681898327,
+              "firm": "B of A Securities",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 250.0,
+              "priorPriceTarget": 230.0
+            },
+            {
+              "epochGradeDate": 1681723752,
+              "firm": "New Street Research",
+              "toGrade": "Neutral",
+              "fromGrade": "Buy",
+              "action": "down",
+              "priceTargetAction": "Announces",
+              "currentPriceTarget": 220.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1681472782,
+              "firm": "TD Cowen",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 195.0,
+              "priorPriceTarget": 190.0
+            },
+            {
+              "epochGradeDate": 1681392521,
+              "firm": "Piper Sandler",
+              "toGrade": "Overweight",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 250.0,
+              "priorPriceTarget": 215.0
+            },
+            {
+              "epochGradeDate": 1681388815,
+              "firm": "Goldman Sachs",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 245.0,
+              "priorPriceTarget": 215.0
+            },
+            {
+              "epochGradeDate": 1681219955,
+              "firm": "OTR Global",
+              "toGrade": "Positive",
+              "fromGrade": "Mixed",
+              "action": "up",
+              "priceTargetAction": "",
+              "currentPriceTarget": 0.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1680788649,
+              "firm": "Argus Research",
+              "toGrade": "Hold",
+              "fromGrade": "Hold",
+              "action": "main",
+              "priceTargetAction": "Announces",
+              "currentPriceTarget": 270.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1680786874,
+              "firm": "UBS",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 280.0,
+              "priorPriceTarget": 235.0
+            },
+            {
+              "epochGradeDate": 1680690046,
+              "firm": "Jefferies",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 250.0,
+              "priorPriceTarget": 225.0
+            },
+            {
+              "epochGradeDate": 1680174919,
+              "firm": "Credit Suisse",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 251.0,
+              "priorPriceTarget": 220.0
+            },
+            {
+              "epochGradeDate": 1679922362,
+              "firm": "Guggenheim",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 240.0,
+              "priorPriceTarget": 210.0
+            },
+            {
+              "epochGradeDate": 1679672687,
+              "firm": "JP Morgan",
+              "toGrade": "Overweight",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 270.0,
+              "priorPriceTarget": 225.0
+            },
+            {
+              "epochGradeDate": 1679653527,
+              "firm": "Barclays",
+              "toGrade": "Overweight",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 270.0,
+              "priorPriceTarget": 260.0
+            },
+            {
+              "epochGradeDate": 1679473745,
+              "firm": "Keybanc",
+              "toGrade": "Overweight",
+              "fromGrade": "Sector Weight",
+              "action": "up",
+              "priceTargetAction": "Announces",
+              "currentPriceTarget": 240.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1679387680,
+              "firm": "Morgan Stanley",
+              "toGrade": "Overweight",
+              "fromGrade": "Equal-Weight",
+              "action": "up",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 250.0,
+              "priorPriceTarget": 190.0
+            },
+            {
+              "epochGradeDate": 1679312078,
+              "firm": "Edward Jones",
+              "toGrade": "Buy",
+              "fromGrade": "Hold",
+              "action": "up",
+              "priceTargetAction": "",
+              "currentPriceTarget": 0.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1678968024,
+              "firm": "JMP Securities",
+              "toGrade": "Market Outperform",
+              "fromGrade": "",
+              "action": "reit",
+              "priceTargetAction": "Maintains",
+              "currentPriceTarget": 240.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1678884662,
+              "firm": "Wolfe Research",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 230.0,
+              "priorPriceTarget": 220.0
+            },
+            {
+              "epochGradeDate": 1678879116,
+              "firm": "Raymond James",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 238.0,
+              "priorPriceTarget": 220.0
+            },
+            {
+              "epochGradeDate": 1678875669,
+              "firm": "Citigroup",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 260.0,
+              "priorPriceTarget": 228.0
+            },
+            {
+              "epochGradeDate": 1678875223,
+              "firm": "Oppenheimer",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 260.0,
+              "priorPriceTarget": 235.0
+            },
+            {
+              "epochGradeDate": 1678818046,
+              "firm": "Evercore ISI Group",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 305.0,
+              "priorPriceTarget": 275.0
+            },
+            {
+              "epochGradeDate": 1678361071,
+              "firm": "Oppenheimer",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 235.0,
+              "priorPriceTarget": 220.0
+            },
+            {
+              "epochGradeDate": 1678273225,
+              "firm": "Needham",
+              "toGrade": "Underperform",
+              "fromGrade": "",
+              "action": "reit",
+              "priceTargetAction": "",
+              "currentPriceTarget": 0.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1678119146,
+              "firm": "Arete Research",
+              "toGrade": "Sell",
+              "fromGrade": "Neutral",
+              "action": "down",
+              "priceTargetAction": "",
+              "currentPriceTarget": 0.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1676037816,
+              "firm": "Tigress Financial",
+              "toGrade": "Strong Buy",
+              "fromGrade": "",
+              "action": "reit",
+              "priceTargetAction": "Maintains",
+              "currentPriceTarget": 285.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1675864940,
+              "firm": "Loop Capital",
+              "toGrade": "Hold",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 188.0,
+              "priorPriceTarget": 165.0
+            },
+            {
+              "epochGradeDate": 1675431802,
+              "firm": "Citigroup",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 228.0,
+              "priorPriceTarget": 168.0
+            },
+            {
+              "epochGradeDate": 1675423579,
+              "firm": "HSBC",
+              "toGrade": "Reduce",
+              "fromGrade": "Hold",
+              "action": "down",
+              "priceTargetAction": "Announces",
+              "currentPriceTarget": 110.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1675352564,
+              "firm": "Deutsche Bank",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 200.0,
+              "priorPriceTarget": 125.0
+            },
+            {
+              "epochGradeDate": 1675351386,
+              "firm": "RBC Capital",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 225.0,
+              "priorPriceTarget": 160.0
+            },
+            {
+              "epochGradeDate": 1675345702,
+              "firm": "Guggenheim",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 210.0,
+              "priorPriceTarget": 130.0
+            },
+            {
+              "epochGradeDate": 1675345604,
+              "firm": "Jefferies",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 225.0,
+              "priorPriceTarget": 175.0
+            },
+            {
+              "epochGradeDate": 1675344085,
+              "firm": "Susquehanna",
+              "toGrade": "Positive",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 225.0,
+              "priorPriceTarget": 140.0
+            },
+            {
+              "epochGradeDate": 1675343962,
+              "firm": "Cowen & Co.",
+              "toGrade": "Market Perform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 175.0,
+              "priorPriceTarget": 135.0
+            },
+            {
+              "epochGradeDate": 1675343828,
+              "firm": "Truist Securities",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 215.0,
+              "priorPriceTarget": 160.0
+            },
+            {
+              "epochGradeDate": 1675343689,
+              "firm": "Wells Fargo",
+              "toGrade": "Overweight",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 250.0,
+              "priorPriceTarget": 165.0
+            },
+            {
+              "epochGradeDate": 1675342857,
+              "firm": "Canaccord Genuity",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 220.0,
+              "priorPriceTarget": 170.0
+            },
+            {
+              "epochGradeDate": 1675342385,
+              "firm": "JMP Securities",
+              "toGrade": "Market Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 210.0,
+              "priorPriceTarget": 150.0
+            },
+            {
+              "epochGradeDate": 1675342151,
+              "firm": "Oppenheimer",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 220.0,
+              "priorPriceTarget": 145.0
+            },
+            {
+              "epochGradeDate": 1675340169,
+              "firm": "Morgan Stanley",
+              "toGrade": "Equal-Weight",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 190.0,
+              "priorPriceTarget": 130.0
+            },
+            {
+              "epochGradeDate": 1675339995,
+              "firm": "Baird",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 205.0,
+              "priorPriceTarget": 145.0
+            },
+            {
+              "epochGradeDate": 1675339845,
+              "firm": "Credit Suisse",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 220.0,
+              "priorPriceTarget": 180.0
+            },
+            {
+              "epochGradeDate": 1675339709,
+              "firm": "Rosenblatt",
+              "toGrade": "Buy",
+              "fromGrade": "Neutral",
+              "action": "up",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 220.0,
+              "priorPriceTarget": 104.0
+            },
+            {
+              "epochGradeDate": 1675339503,
+              "firm": "Mizuho",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 210.0,
+              "priorPriceTarget": 170.0
+            },
+            {
+              "epochGradeDate": 1675339372,
+              "firm": "JP Morgan",
+              "toGrade": "Overweight",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 225.0,
+              "priorPriceTarget": 150.0
+            },
+            {
+              "epochGradeDate": 1675339352,
+              "firm": "UBS",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 235.0,
+              "priorPriceTarget": 158.0
+            },
+            {
+              "epochGradeDate": 1675339218,
+              "firm": "Barclays",
+              "toGrade": "Overweight",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 260.0,
+              "priorPriceTarget": 165.0
+            },
+            {
+              "epochGradeDate": 1675338555,
+              "firm": "B of A Securities",
+              "toGrade": "Buy",
+              "fromGrade": "Neutral",
+              "action": "up",
+              "priceTargetAction": "Announces",
+              "currentPriceTarget": 220.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1675337501,
+              "firm": "Raymond James",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 220.0,
+              "priorPriceTarget": 171.0
+            },
+            {
+              "epochGradeDate": 1675337325,
+              "firm": "Bernstein",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 210.0,
+              "priorPriceTarget": 170.0
+            },
+            {
+              "epochGradeDate": 1675336830,
+              "firm": "Stifel",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 210.0,
+              "priorPriceTarget": 180.0
+            },
+            {
+              "epochGradeDate": 1675336733,
+              "firm": "Evercore ISI Group",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 275.0,
+              "priorPriceTarget": 170.0
+            },
+            {
+              "epochGradeDate": 1675336641,
+              "firm": "Wolfe Research",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 220.0,
+              "priorPriceTarget": 150.0
+            },
+            {
+              "epochGradeDate": 1675331002,
+              "firm": "Piper Sandler",
+              "toGrade": "Overweight",
+              "fromGrade": "Neutral",
+              "action": "up",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 215.0,
+              "priorPriceTarget": 136.0
+            },
+            {
+              "epochGradeDate": 1675180365,
+              "firm": "LightShed Partners",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "init",
+              "priceTargetAction": "Announces",
+              "currentPriceTarget": 200.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1674731551,
+              "firm": "Piper Sandler",
+              "toGrade": "Neutral",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 136.0,
+              "priorPriceTarget": 116.0
+            },
+            {
+              "epochGradeDate": 1674649917,
+              "firm": "Credit Suisse",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 180.0,
+              "priorPriceTarget": 145.0
+            },
+            {
+              "epochGradeDate": 1674225835,
+              "firm": "MKM Partners",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 155.0,
+              "priorPriceTarget": 140.0
+            },
+            {
+              "epochGradeDate": 1674051468,
+              "firm": "Morgan Stanley",
+              "toGrade": "Equal-Weight",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 130.0,
+              "priorPriceTarget": 100.0
+            },
+            {
+              "epochGradeDate": 1672922140,
+              "firm": "Mizuho",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 170.0,
+              "priorPriceTarget": 160.0
+            },
+            {
+              "epochGradeDate": 1672825629,
+              "firm": "New Street Research",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "init",
+              "priceTargetAction": "Announces",
+              "currentPriceTarget": 145.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1671188137,
+              "firm": "JP Morgan",
+              "toGrade": "Overweight",
+              "fromGrade": "Neutral",
+              "action": "up",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 150.0,
+              "priorPriceTarget": 115.0
+            },
+            {
+              "epochGradeDate": 1668519484,
+              "firm": "Morgan Stanley",
+              "toGrade": "Equal-Weight",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 100.0,
+              "priorPriceTarget": 105.0
+            },
+            {
+              "epochGradeDate": 1668430249,
+              "firm": "Oppenheimer",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 145.0,
+              "priorPriceTarget": 140.0
+            },
+            {
+              "epochGradeDate": 1668081965,
+              "firm": "Rosenblatt",
+              "toGrade": "Neutral",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 104.0,
+              "priorPriceTarget": 114.0
+            },
+            {
+              "epochGradeDate": 1667819612,
+              "firm": "Itau BBA",
+              "toGrade": "Outperform",
+              "fromGrade": "Market Perform",
+              "action": "up",
+              "priceTargetAction": "",
+              "currentPriceTarget": 0.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1667409834,
+              "firm": "Tigress Financial",
+              "toGrade": "Strong Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 260.0,
+              "priorPriceTarget": 466.0
+            },
+            {
+              "epochGradeDate": 1666952264,
+              "firm": "Edward Jones",
+              "toGrade": "Hold",
+              "fromGrade": "Buy",
+              "action": "down",
+              "priceTargetAction": "",
+              "currentPriceTarget": 0.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1666881001,
+              "firm": "Goldman Sachs",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 165.0,
+              "priorPriceTarget": 200.0
+            },
+            {
+              "epochGradeDate": 1666879383,
+              "firm": "MKM Partners",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 140.0,
+              "priorPriceTarget": 195.0
+            },
+            {
+              "epochGradeDate": 1666879213,
+              "firm": "Stifel",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 185.0,
+              "priorPriceTarget": 230.0
+            },
+            {
+              "epochGradeDate": 1666879003,
+              "firm": "Deutsche Bank",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 125.0,
+              "priorPriceTarget": 170.0
+            },
+            {
+              "epochGradeDate": 1666878803,
+              "firm": "Canaccord Genuity",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 200.0,
+              "priorPriceTarget": 250.0
+            },
+            {
+              "epochGradeDate": 1666878472,
+              "firm": "Truist Securities",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 160.0,
+              "priorPriceTarget": 240.0
+            },
+            {
+              "epochGradeDate": 1666878338,
+              "firm": "JP Morgan",
+              "toGrade": "Neutral",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 115.0,
+              "priorPriceTarget": 180.0
+            },
+            {
+              "epochGradeDate": 1666878133,
+              "firm": "B of A Securities",
+              "toGrade": "Neutral",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 136.0,
+              "priorPriceTarget": 150.0
+            },
+            {
+              "epochGradeDate": 1666869779,
+              "firm": "UBS",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 121.0,
+              "priorPriceTarget": 157.0
+            },
+            {
+              "epochGradeDate": 1666869609,
+              "firm": "Guggenheim",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 125.0,
+              "priorPriceTarget": 180.0
+            },
+            {
+              "epochGradeDate": 1666869461,
+              "firm": "Raymond James",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 171.0,
+              "priorPriceTarget": 215.0
+            },
+            {
+              "epochGradeDate": 1666869386,
+              "firm": "Citigroup",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 168.0,
+              "priorPriceTarget": 222.0
+            },
+            {
+              "epochGradeDate": 1666869330,
+              "firm": "Rosenblatt",
+              "toGrade": "Neutral",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 114.0,
+              "priorPriceTarget": 154.0
+            },
+            {
+              "epochGradeDate": 1666869218,
+              "firm": "JMP Securities",
+              "toGrade": "Market Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 150.0,
+              "priorPriceTarget": 215.0
+            },
+            {
+              "epochGradeDate": 1666868957,
+              "firm": "Oppenheimer",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 140.0,
+              "priorPriceTarget": 190.0
+            },
+            {
+              "epochGradeDate": 1666868722,
+              "firm": "Bernstein",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 135.0,
+              "priorPriceTarget": 195.0
+            },
+            {
+              "epochGradeDate": 1666868604,
+              "firm": "Credit Suisse",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 145.0,
+              "priorPriceTarget": 174.0
+            },
+            {
+              "epochGradeDate": 1666868343,
+              "firm": "Wolfe Research",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 140.0,
+              "priorPriceTarget": 170.0
+            },
+            {
+              "epochGradeDate": 1666868163,
+              "firm": "Mizuho",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 160.0,
+              "priorPriceTarget": 180.0
+            },
+            {
+              "epochGradeDate": 1666867790,
+              "firm": "Barclays",
+              "toGrade": "Overweight",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 165.0,
+              "priorPriceTarget": 250.0
+            },
+            {
+              "epochGradeDate": 1666867455,
+              "firm": "Piper Sandler",
+              "toGrade": "Neutral",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 116.0,
+              "priorPriceTarget": 175.0
+            },
+            {
+              "epochGradeDate": 1666866663,
+              "firm": "Morgan Stanley",
+              "toGrade": "Equal-Weight",
+              "fromGrade": "Overweight",
+              "action": "down",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 105.0,
+              "priorPriceTarget": 205.0
+            },
+            {
+              "epochGradeDate": 1666866324,
+              "firm": "Cowen & Co.",
+              "toGrade": "Market Perform",
+              "fromGrade": "Outperform",
+              "action": "down",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 135.0,
+              "priorPriceTarget": 205.0
+            },
+            {
+              "epochGradeDate": 1666859556,
+              "firm": "Keybanc",
+              "toGrade": "Sector Weight",
+              "fromGrade": "Overweight",
+              "action": "down",
+              "priceTargetAction": "",
+              "currentPriceTarget": 0.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1666699159,
+              "firm": "Jefferies",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 200.0,
+              "priorPriceTarget": 225.0
+            },
+            {
+              "epochGradeDate": 1666686073,
+              "firm": "Keybanc",
+              "toGrade": "Overweight",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 175.0,
+              "priorPriceTarget": 196.0
+            },
+            {
+              "epochGradeDate": 1666611588,
+              "firm": "Mizuho",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 180.0,
+              "priorPriceTarget": 225.0
+            },
+            {
+              "epochGradeDate": 1666610817,
+              "firm": "B of A Securities",
+              "toGrade": "Neutral",
+              "fromGrade": "Buy",
+              "action": "down",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 150.0,
+              "priorPriceTarget": 196.0
+            },
+            {
+              "epochGradeDate": 1666355564,
+              "firm": "Deutsche Bank",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 170.0,
+              "priorPriceTarget": 200.0
+            },
+            {
+              "epochGradeDate": 1666352497,
+              "firm": "JP Morgan",
+              "toGrade": "Neutral",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 180.0,
+              "priorPriceTarget": 200.0
+            },
+            {
+              "epochGradeDate": 1666188335,
+              "firm": "MKM Partners",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 195.0,
+              "priorPriceTarget": 240.0
+            },
+            {
+              "epochGradeDate": 1665667977,
+              "firm": "Cowen & Co.",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 205.0,
+              "priorPriceTarget": 250.0
+            },
+            {
+              "epochGradeDate": 1665489301,
+              "firm": "Credit Suisse",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 174.0,
+              "priorPriceTarget": 214.0
+            },
+            {
+              "epochGradeDate": 1665483255,
+              "firm": "Atlantic Equities",
+              "toGrade": "Neutral",
+              "fromGrade": "Overweight",
+              "action": "down",
+              "priceTargetAction": "Announces",
+              "currentPriceTarget": 160.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1665406073,
+              "firm": "Morgan Stanley",
+              "toGrade": "Overweight",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 205.0,
+              "priorPriceTarget": 225.0
+            },
+            {
+              "epochGradeDate": 1665057969,
+              "firm": "Goldman Sachs",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 200.0,
+              "priorPriceTarget": 255.0
+            },
+            {
+              "epochGradeDate": 1664881680,
+              "firm": "B of A Securities",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 196.0,
+              "priorPriceTarget": 218.0
+            },
+            {
+              "epochGradeDate": 1664370225,
+              "firm": "Truist Securities",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 240.0,
+              "priorPriceTarget": 260.0
+            },
+            {
+              "epochGradeDate": 1662978618,
+              "firm": "Piper Sandler",
+              "toGrade": "Neutral",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 175.0,
+              "priorPriceTarget": 190.0
+            },
+            {
+              "epochGradeDate": 1662552205,
+              "firm": "Rosenblatt",
+              "toGrade": "Neutral",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 154.0,
+              "priorPriceTarget": 156.0
+            },
+            {
+              "epochGradeDate": 1661174763,
+              "firm": "Loop Capital",
+              "toGrade": "Hold",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 165.0,
+              "priorPriceTarget": 180.0
+            },
+            {
+              "epochGradeDate": 1660908092,
+              "firm": "Morgan Stanley",
+              "toGrade": "Overweight",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 225.0,
+              "priorPriceTarget": 280.0
+            },
+            {
+              "epochGradeDate": 1659090247,
+              "firm": "DZ Bank",
+              "toGrade": "Sell",
+              "fromGrade": "Hold",
+              "action": "down",
+              "priceTargetAction": "Announces",
+              "currentPriceTarget": 140.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1659020286,
+              "firm": "RBC Capital",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 190.0,
+              "priorPriceTarget": 200.0
+            },
+            {
+              "epochGradeDate": 1659016253,
+              "firm": "UBS",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 195.0,
+              "priorPriceTarget": 215.0
+            },
+            {
+              "epochGradeDate": 1659015614,
+              "firm": "Evercore ISI Group",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 240.0,
+              "priorPriceTarget": 280.0
+            },
+            {
+              "epochGradeDate": 1659015435,
+              "firm": "MKM Partners",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 240.0,
+              "priorPriceTarget": 295.0
+            },
+            {
+              "epochGradeDate": 1659015187,
+              "firm": "Stifel",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 230.0,
+              "priorPriceTarget": 260.0
+            },
+            {
+              "epochGradeDate": 1659015056,
+              "firm": "Truist Securities",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 260.0,
+              "priorPriceTarget": 320.0
+            },
+            {
+              "epochGradeDate": 1659014921,
+              "firm": "B of A Securities",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 218.0,
+              "priorPriceTarget": 233.0
+            },
+            {
+              "epochGradeDate": 1659014804,
+              "firm": "Deutsche Bank",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 200.0,
+              "priorPriceTarget": 235.0
+            },
+            {
+              "epochGradeDate": 1659012274,
+              "firm": "Wells Fargo",
+              "toGrade": "Overweight",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 275.0,
+              "priorPriceTarget": 325.0
+            },
+            {
+              "epochGradeDate": 1659011966,
+              "firm": "Barclays",
+              "toGrade": "Overweight",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 250.0,
+              "priorPriceTarget": 280.0
+            },
+            {
+              "epochGradeDate": 1659009496,
+              "firm": "Rosenblatt",
+              "toGrade": "Neutral",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 156.0,
+              "priorPriceTarget": 181.0
+            },
+            {
+              "epochGradeDate": 1659008029,
+              "firm": "Goldman Sachs",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 255.0,
+              "priorPriceTarget": 290.0
+            },
+            {
+              "epochGradeDate": 1659007813,
+              "firm": "Wolfe Research",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 200.0,
+              "priorPriceTarget": 240.0
+            },
+            {
+              "epochGradeDate": 1659007679,
+              "firm": "JP Morgan",
+              "toGrade": "Neutral",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 200.0,
+              "priorPriceTarget": 225.0
+            },
+            {
+              "epochGradeDate": 1659007471,
+              "firm": "Mizuho",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 225.0,
+              "priorPriceTarget": 250.0
+            },
+            {
+              "epochGradeDate": 1659007314,
+              "firm": "Credit Suisse",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 214.0,
+              "priorPriceTarget": 245.0
+            },
+            {
+              "epochGradeDate": 1659007071,
+              "firm": "JMP Securities",
+              "toGrade": "Market Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 215.0,
+              "priorPriceTarget": 240.0
+            },
+            {
+              "epochGradeDate": 1659004606,
+              "firm": "Raymond James",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 215.0,
+              "priorPriceTarget": 290.0
+            },
+            {
+              "epochGradeDate": 1659004474,
+              "firm": "Citigroup",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 222.0,
+              "priorPriceTarget": 270.0
+            },
+            {
+              "epochGradeDate": 1659004310,
+              "firm": "Oppenheimer",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 190.0,
+              "priorPriceTarget": 305.0
+            },
+            {
+              "epochGradeDate": 1659004080,
+              "firm": "Piper Sandler",
+              "toGrade": "Neutral",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 190.0,
+              "priorPriceTarget": 220.0
+            },
+            {
+              "epochGradeDate": 1659000073,
+              "firm": "Keybanc",
+              "toGrade": "Overweight",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 196.0,
+              "priorPriceTarget": 190.0
+            },
+            {
+              "epochGradeDate": 1658824364,
+              "firm": "Keybanc",
+              "toGrade": "Overweight",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 190.0,
+              "priorPriceTarget": 280.0
+            },
+            {
+              "epochGradeDate": 1658751899,
+              "firm": "Mizuho",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 250.0,
+              "priorPriceTarget": 325.0
+            },
+            {
+              "epochGradeDate": 1658748982,
+              "firm": "Rosenblatt",
+              "toGrade": "Neutral",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 181.0,
+              "priorPriceTarget": 212.0
+            },
+            {
+              "epochGradeDate": 1658408619,
+              "firm": "Deutsche Bank",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 235.0,
+              "priorPriceTarget": 265.0
+            },
+            {
+              "epochGradeDate": 1658241385,
+              "firm": "Morgan Stanley",
+              "toGrade": "Overweight",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 280.0,
+              "priorPriceTarget": 300.0
+            },
+            {
+              "epochGradeDate": 1658232299,
+              "firm": "Credit Suisse",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 245.0,
+              "priorPriceTarget": 273.0
+            },
+            {
+              "epochGradeDate": 1657810392,
+              "firm": "Citigroup",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 270.0,
+              "priorPriceTarget": 300.0
+            },
+            {
+              "epochGradeDate": 1657730353,
+              "firm": "Cowen & Co.",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 275.0,
+              "priorPriceTarget": 300.0
+            },
+            {
+              "epochGradeDate": 1657535355,
+              "firm": "Needham",
+              "toGrade": "Underperform",
+              "fromGrade": "Hold",
+              "action": "down",
+              "priceTargetAction": "",
+              "currentPriceTarget": 0.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1657203877,
+              "firm": "Evercore ISI Group",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 280.0,
+              "priorPriceTarget": 325.0
+            },
+            {
+              "epochGradeDate": 1657018669,
+              "firm": "Barclays",
+              "toGrade": "Overweight",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 280.0,
+              "priorPriceTarget": 370.0
+            },
+            {
+              "epochGradeDate": 1656587208,
+              "firm": "JMP Securities",
+              "toGrade": "Market Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 240.0,
+              "priorPriceTarget": 265.0
+            },
+            {
+              "epochGradeDate": 1656510045,
+              "firm": "JP Morgan",
+              "toGrade": "Neutral",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 225.0,
+              "priorPriceTarget": 275.0
+            },
+            {
+              "epochGradeDate": 1655381657,
+              "firm": "UBS",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 215.0,
+              "priorPriceTarget": 310.0
+            },
+            {
+              "epochGradeDate": 1654860091,
+              "firm": "Goldman Sachs",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 290.0,
+              "priorPriceTarget": 300.0
+            },
+            {
+              "epochGradeDate": 1654164766,
+              "firm": "Piper Sandler",
+              "toGrade": "Neutral",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 220.0,
+              "priorPriceTarget": 230.0
+            },
+            {
+              "epochGradeDate": 1654080076,
+              "firm": "Morgan Stanley",
+              "toGrade": "Overweight",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 300.0,
+              "priorPriceTarget": 330.0
+            },
+            {
+              "epochGradeDate": 1653398037,
+              "firm": "Jefferies",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 310.0,
+              "priorPriceTarget": 330.0
+            },
+            {
+              "epochGradeDate": 1652880018,
+              "firm": "Guggenheim",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 250.0,
+              "priorPriceTarget": 275.0
+            },
+            {
+              "epochGradeDate": 1651149817,
+              "firm": "Evercore ISI Group",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 325.0,
+              "priorPriceTarget": 350.0
+            },
+            {
+              "epochGradeDate": 1651149574,
+              "firm": "Canaccord Genuity",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 330.0,
+              "priorPriceTarget": 360.0
+            },
+            {
+              "epochGradeDate": 1651149438,
+              "firm": "Rosenblatt",
+              "toGrade": "Neutral",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 212.0,
+              "priorPriceTarget": 228.0
+            },
+            {
+              "epochGradeDate": 1651149372,
+              "firm": "Wedbush",
+              "toGrade": "Neutral",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 220.0,
+              "priorPriceTarget": 270.0
+            },
+            {
+              "epochGradeDate": 1651148138,
+              "firm": "Credit Suisse",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 273.0,
+              "priorPriceTarget": 272.0
+            },
+            {
+              "epochGradeDate": 1651147586,
+              "firm": "Truist Securities",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 320.0,
+              "priorPriceTarget": 350.0
+            },
+            {
+              "epochGradeDate": 1651146320,
+              "firm": "BMO Capital",
+              "toGrade": "Market Perform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 222.0,
+              "priorPriceTarget": 225.0
+            },
+            {
+              "epochGradeDate": 1651144920,
+              "firm": "Susquehanna",
+              "toGrade": "Positive",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 290.0,
+              "priorPriceTarget": 375.0
+            },
+            {
+              "epochGradeDate": 1651144724,
+              "firm": "Raymond James",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 290.0,
+              "priorPriceTarget": 340.0
+            },
+            {
+              "epochGradeDate": 1651144548,
+              "firm": "Morgan Stanley",
+              "toGrade": "Overweight",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 330.0,
+              "priorPriceTarget": 325.0
+            },
+            {
+              "epochGradeDate": 1651140949,
+              "firm": "Piper Sandler",
+              "toGrade": "Neutral",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 230.0,
+              "priorPriceTarget": 240.0
+            },
+            {
+              "epochGradeDate": 1650886892,
+              "firm": "Mizuho",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 325.0,
+              "priorPriceTarget": 425.0
+            },
+            {
+              "epochGradeDate": 1650539483,
+              "firm": "Credit Suisse",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 272.0,
+              "priorPriceTarget": 336.0
+            },
+            {
+              "epochGradeDate": 1650445453,
+              "firm": "Citigroup",
+              "toGrade": "Buy",
+              "fromGrade": "Neutral",
+              "action": "up",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 300.0,
+              "priorPriceTarget": 258.0
+            },
+            {
+              "epochGradeDate": 1650373852,
+              "firm": "JMP Securities",
+              "toGrade": "Market Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 265.0,
+              "priorPriceTarget": 350.0
+            },
+            {
+              "epochGradeDate": 1650371959,
+              "firm": "Rosenblatt",
+              "toGrade": "Neutral",
+              "fromGrade": "",
+              "action": "init",
+              "priceTargetAction": "Announces",
+              "currentPriceTarget": 228.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1649846700,
+              "firm": "RBC Capital",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 240.0,
+              "priorPriceTarget": 245.0
+            },
+            {
+              "epochGradeDate": 1649164097,
+              "firm": "UBS",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 300.0,
+              "priorPriceTarget": 280.0
+            },
+            {
+              "epochGradeDate": 1646993416,
+              "firm": "Deutsche Bank",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "init",
+              "priceTargetAction": "Announces",
+              "currentPriceTarget": 265.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1646747828,
+              "firm": "Piper Sandler",
+              "toGrade": "Neutral",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 240.0,
+              "priorPriceTarget": 301.0
+            },
+            {
+              "epochGradeDate": 1646231249,
+              "firm": "Morgan Stanley",
+              "toGrade": "Overweight",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 325.0,
+              "priorPriceTarget": 360.0
+            },
+            {
+              "epochGradeDate": 1646138748,
+              "firm": "Benchmark",
+              "toGrade": "Hold",
+              "fromGrade": "",
+              "action": "init",
+              "priceTargetAction": "",
+              "currentPriceTarget": 0.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1644328392,
+              "firm": "KGI Securities",
+              "toGrade": "Neutral",
+              "fromGrade": "Outperform",
+              "action": "down",
+              "priceTargetAction": "Announces",
+              "currentPriceTarget": 270.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1643983098,
+              "firm": "Argus Research",
+              "toGrade": "Hold",
+              "fromGrade": "Buy",
+              "action": "down",
+              "priceTargetAction": "",
+              "currentPriceTarget": 0.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1643977967,
+              "firm": "Rosenblatt",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 300.0,
+              "priorPriceTarget": 400.0
+            },
+            {
+              "epochGradeDate": 1643974771,
+              "firm": "China Renaissance",
+              "toGrade": "Hold",
+              "fromGrade": "Buy",
+              "action": "down",
+              "priceTargetAction": "Announces",
+              "currentPriceTarget": 280.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1643971565,
+              "firm": "DZ Bank",
+              "toGrade": "Sell",
+              "fromGrade": "Hold",
+              "action": "down",
+              "priceTargetAction": "Announces",
+              "currentPriceTarget": 225.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1643901991,
+              "firm": "Loop Capital",
+              "toGrade": "Hold",
+              "fromGrade": "Buy",
+              "action": "down",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 230.0,
+              "priorPriceTarget": 380.0
+            },
+            {
+              "epochGradeDate": 1643896988,
+              "firm": "Credit Suisse",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 336.0,
+              "priorPriceTarget": 430.0
+            },
+            {
+              "epochGradeDate": 1643892696,
+              "firm": "Morgan Stanley",
+              "toGrade": "Overweight",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 360.0,
+              "priorPriceTarget": 395.0
+            },
+            {
+              "epochGradeDate": 1643890886,
+              "firm": "JP Morgan",
+              "toGrade": "Neutral",
+              "fromGrade": "Overweight",
+              "action": "down",
+              "priceTargetAction": "Announces",
+              "currentPriceTarget": 284.0,
+              "priorPriceTarget": 0.0
+            },
+            {
+              "epochGradeDate": 1643889217,
+              "firm": "UBS",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 280.0,
+              "priorPriceTarget": 400.0
+            },
+            {
+              "epochGradeDate": 1643889000,
+              "firm": "Truist Securities",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 350.0,
+              "priorPriceTarget": 400.0
+            },
+            {
+              "epochGradeDate": 1643888956,
+              "firm": "Piper Sandler",
+              "toGrade": "Neutral",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 301.0,
+              "priorPriceTarget": 385.0
+            },
+            {
+              "epochGradeDate": 1643888825,
+              "firm": "Goldman Sachs",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 355.0,
+              "priorPriceTarget": 445.0
+            },
+            {
+              "epochGradeDate": 1643888796,
+              "firm": "Barclays",
+              "toGrade": "Overweight",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 350.0,
+              "priorPriceTarget": 420.0
+            },
+            {
+              "epochGradeDate": 1643888585,
+              "firm": "JMP Securities",
+              "toGrade": "Market Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 350.0,
+              "priorPriceTarget": 400.0
+            },
+            {
+              "epochGradeDate": 1643888173,
+              "firm": "Mizuho",
+              "toGrade": "Buy",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 425.0,
+              "priorPriceTarget": 450.0
+            },
+            {
+              "epochGradeDate": 1643883817,
+              "firm": "BMO Capital",
+              "toGrade": "Market Perform",
+              "fromGrade": "Outperform",
+              "action": "down",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 290.0,
+              "priorPriceTarget": 425.0
+            },
+            {
+              "epochGradeDate": 1643883723,
+              "firm": "Raymond James",
+              "toGrade": "Outperform",
+              "fromGrade": "Strong Buy",
+              "action": "down",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 340.0,
+              "priorPriceTarget": 410.0
+            },
+            {
+              "epochGradeDate": 1643880952,
+              "firm": "Keybanc",
+              "toGrade": "Overweight",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 280.0,
+              "priorPriceTarget": 420.0
+            },
+            {
+              "epochGradeDate": 1643197867,
+              "firm": "RBC Capital",
+              "toGrade": "Outperform",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Lowers",
+              "currentPriceTarget": 400.0,
+              "priorPriceTarget": 415.0
+            },
+            {
+              "epochGradeDate": 1642600938,
+              "firm": "Morgan Stanley",
+              "toGrade": "Overweight",
+              "fromGrade": "",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 395.0,
+              "priorPriceTarget": 365.0
+            },
+            {
+              "epochGradeDate": 1620049745,
+              "firm": "Argus Research",
+              "toGrade": "Buy",
+              "fromGrade": "Buy",
+              "action": "main",
+              "priceTargetAction": "Raises",
+              "currentPriceTarget": 385.0,
+              "priorPriceTarget": 347.0
+            }
+          ],
+          "maxAge": 86400
+        }
+      }
+    ],
+    "error": null
+  }
+}

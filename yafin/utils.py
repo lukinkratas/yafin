@@ -4,21 +4,19 @@ from functools import wraps
 from typing import Any, NoReturn, Type
 from urllib.parse import urlencode
 
-from .const import _TYPES, FREQUENCIES
+from .const import (
+    _ALL_TYPES_SET,
+    _TYPES,
+    CALENDAR_EVENT_MODULES_SET,
+    EVENTS_SET,
+    FREQUENCIES,
+    INTERVALS,
+    PERIOD_RANGES,
+    QUOTE_SUMMARY_MODULES_SET,
+)
 from .exceptions import TrailingBalanceSheetError
 
 logger = logging.getLogger(__name__)
-
-
-def _error(msg: str, err_cls: Type[Exception] = Exception) -> NoReturn:
-    """Log error message and raise exception.
-
-    Args:
-        msg: error message (hint), that will be logged and raised.
-        err_cls: class of the raised error, default Exception.
-    """
-    logger.error(msg)
-    raise err_cls(msg)
 
 
 def _encode_url(url: str, params: dict[str, str] | None = None) -> str:
@@ -39,6 +37,98 @@ def _encode_url(url: str, params: dict[str, str] | None = None) -> str:
         params_copy['crumb'] = 'REDACTED'
 
     return f'{url}?{urlencode(params_copy)}'
+
+
+def _error(msg: str, err_cls: Type[Exception] = Exception) -> NoReturn:
+    """Log error message and raise exception.
+
+    Args:
+        msg: error message (hint), that will be logged and raised.
+        err_cls: class of the raised error, default Exception.
+    """
+    logger.error(msg)
+    raise err_cls(msg)
+
+
+def _check_interval(interval: str) -> None:
+    if interval not in INTERVALS:
+        _error(
+            msg=f'Invalid {interval=}. Valid values: {INTERVALS}',
+            err_cls=ValueError,
+        )
+
+
+def _check_period_range(period_range: str) -> None:
+    if period_range not in PERIOD_RANGES:
+        _error(
+            msg=f'Invalid {period_range=}. Valid values: {PERIOD_RANGES}',
+            err_cls=ValueError,
+        )
+
+
+def _check_events(events: set[str]) -> None:
+    if not events <= EVENTS_SET:
+        _error(
+            msg=(f'Invalid events: {events - EVENTS_SET}. Valid values: {EVENTS_SET}'),
+            err_cls=ValueError,
+        )
+
+
+def _check_quote_summary_modules(quote_summary_modules: set[str]) -> None:
+    if not quote_summary_modules <= QUOTE_SUMMARY_MODULES_SET:
+        _error(
+            msg=(
+                f'Invalid modules: {quote_summary_modules - QUOTE_SUMMARY_MODULES_SET}. '  # noqa: E501
+                f'Valid values: {QUOTE_SUMMARY_MODULES_SET}'
+            ),
+            err_cls=ValueError,
+        )
+
+
+def _check_calendar_event_modules(calendar_event_modules: set[str]) -> None:
+    if not calendar_event_modules <= CALENDAR_EVENT_MODULES_SET:
+        _error(
+            msg=(
+                f'Invalid modules: {calendar_event_modules - CALENDAR_EVENT_MODULES_SET}. '  # noqa: E501
+                f'Valid values: {CALENDAR_EVENT_MODULES_SET}'
+            ),
+            err_cls=ValueError,
+        )
+
+
+def _check_types(types: set[str]) -> None:
+    if not types <= _ALL_TYPES_SET:
+        _error(
+            msg=(
+                f'Invalid types: {types - _ALL_TYPES_SET}. '
+                f'Valid values: {_ALL_TYPES_SET}'
+            ),
+            err_cls=ValueError,
+        )
+
+
+def _check_typ(typ: str) -> None:
+    if typ not in _TYPES.keys():
+        _error(msg=f'Invalid {typ=}. Valid values: {_TYPES.keys()}', err_cls=ValueError)
+
+
+def _check_frequency(typ: str, frequency: str | None) -> None:
+    if typ != 'other' and frequency not in FREQUENCIES:
+        _error(
+            msg=f'Invalid {frequency=}. Valid values: {FREQUENCIES}', err_cls=ValueError
+        )
+
+    elif typ == 'other' and frequency is not None:
+        _error(
+            msg=f'Frequency {frequency=} not allowed for type other.',
+            err_cls=ValueError,
+        )
+
+    if typ == 'balance_sheet' and frequency == 'trailing':
+        _error(
+            msg=f'{frequency=} not allowed for balance sheet.',
+            err_cls=TrailingBalanceSheetError,
+        )
 
 
 def get_types_with_frequency(typ: str, frequency: str | None = None) -> str:
@@ -62,51 +152,28 @@ def get_types_with_frequency(typ: str, frequency: str | None = None) -> str:
             If attempting to request balance sheet with trailing
                 frequency.
     """
-    if typ not in _TYPES.keys():
-        _error(msg=f'Invalid {typ=}. Valid values: {_TYPES.keys()}', err_cls=ValueError)
-
-    if typ != 'other' and frequency not in FREQUENCIES:
-        _error(
-            msg=f'Invalid {frequency=}. Valid values: {FREQUENCIES}', err_cls=ValueError
-        )
-
-    if typ == 'other' and frequency is not None:
-        _error(
-            msg=f'Frequency {frequency=} not allowed for type other.',
-            err_cls=ValueError,
-        )
-
-    if typ == 'balance_sheet' and frequency == 'trailing':
-        _error(
-            msg=f'{frequency=} not allowed for balance sheet.',
-            err_cls=TrailingBalanceSheetError,
-        )
+    _check_typ(typ)
+    _check_frequency(typ, frequency)
 
     types = _TYPES[typ]
     types_with_frequency = [f'{frequency}{t}' if frequency else t for t in types]
     return ','.join(types_with_frequency)
 
 
-def _get_func_name_and_args(
-    func: Callable[..., Any], args: tuple[Any, ...]
-) -> tuple[str, tuple[Any, ...]]:
-    """Helper function, that takes function and its' arguments.
-    It then checks, whether the first argument is a class instance.
-    If so, then it returns class_name.method_name and arguments exclusing the first one.
-    If not, then it returns function_name and arguments in unchaged form.
+def _get_func_name_and_args(func: Callable[..., Any], args: tuple[Any, ...]) -> str:
+    """Helper function for function name logging.
 
     Args:
         func: python function
         args: arguments to the function
 
-    Returns: function name and arguments
+    Returns: function name
     """
     # check if first argument is class instance (self)
     if args and hasattr(args[0], func.__name__):
-        func_name = f'{args[0].__class__.__name__}.{func.__name__}'
-        return func_name, args[1:]
+        return f'{args[0].__class__.__name__}.{func.__name__}'
 
-    return func.__name__, args
+    return func.__name__
 
 
 def _log_args(func: Callable[..., Any]) -> Callable[..., Any]:
@@ -114,7 +181,7 @@ def _log_args(func: Callable[..., Any]) -> Callable[..., Any]:
 
     @wraps(func)
     async def async_wrapper(*args: Any, **kwargs: Any) -> Any:
-        func_name, _ = _get_func_name_and_args(func, args)
+        func_name = _get_func_name_and_args(func, args)
 
         logger.debug(f'{func_name} was called.')
         result = await func(*args, **kwargs)

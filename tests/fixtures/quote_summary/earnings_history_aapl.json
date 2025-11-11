@@ -1,0 +1,115 @@
+{
+  "quoteSummary": {
+    "result": [
+      {
+        "earningsHistory": {
+          "history": [
+            {
+              "maxAge": 1,
+              "epsActual": {
+                "raw": 2.4,
+                "fmt": "2.4"
+              },
+              "epsEstimate": {
+                "raw": 2.34102,
+                "fmt": "2.34"
+              },
+              "epsDifference": {
+                "raw": 0.06,
+                "fmt": "0.06"
+              },
+              "surprisePercent": {
+                "raw": 0.0252,
+                "fmt": "2.52%"
+              },
+              "quarter": {
+                "raw": 1735603200,
+                "fmt": "2024-12-31"
+              },
+              "currency": "USD",
+              "period": "-4q"
+            },
+            {
+              "maxAge": 1,
+              "epsActual": {
+                "raw": 1.65,
+                "fmt": "1.65"
+              },
+              "epsEstimate": {
+                "raw": 1.62253,
+                "fmt": "1.62"
+              },
+              "epsDifference": {
+                "raw": 0.03,
+                "fmt": "0.03"
+              },
+              "surprisePercent": {
+                "raw": 0.016900001,
+                "fmt": "1.69%"
+              },
+              "quarter": {
+                "raw": 1743379200,
+                "fmt": "2025-03-31"
+              },
+              "currency": "USD",
+              "period": "-3q"
+            },
+            {
+              "maxAge": 1,
+              "epsActual": {
+                "raw": 1.57,
+                "fmt": "1.57"
+              },
+              "epsEstimate": {
+                "raw": 1.42572,
+                "fmt": "1.43"
+              },
+              "epsDifference": {
+                "raw": 0.14,
+                "fmt": "0.14"
+              },
+              "surprisePercent": {
+                "raw": 0.1012,
+                "fmt": "10.12%"
+              },
+              "quarter": {
+                "raw": 1751241600,
+                "fmt": "2025-06-30"
+              },
+              "currency": "USD",
+              "period": "-2q"
+            },
+            {
+              "maxAge": 1,
+              "epsActual": {
+                "raw": 1.85,
+                "fmt": "1.85"
+              },
+              "epsEstimate": {
+                "raw": 1.76993,
+                "fmt": "1.77"
+              },
+              "epsDifference": {
+                "raw": 0.08,
+                "fmt": "0.08"
+              },
+              "surprisePercent": {
+                "raw": 0.0452,
+                "fmt": "4.52%"
+              },
+              "quarter": {
+                "raw": 1759190400,
+                "fmt": "2025-09-30"
+              },
+              "currency": "USD",
+              "period": "-1q"
+            }
+          ],
+          "defaultMethodology": "gaap",
+          "maxAge": 86400
+        }
+      }
+    ],
+    "error": null
+  }
+}

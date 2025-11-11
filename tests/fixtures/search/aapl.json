@@ -1,0 +1,363 @@
+{
+  "explains": [],
+  "count": 15,
+  "quotes": [
+    {
+      "exchange": "NMS",
+      "shortname": "Apple Inc.",
+      "quoteType": "EQUITY",
+      "symbol": "AAPL",
+      "index": "quotes",
+      "score": 15709000.0,
+      "typeDisp": "Equity",
+      "longname": "Apple Inc.",
+      "exchDisp": "NASDAQ",
+      "sector": "Technology",
+      "sectorDisp": "Technology",
+      "industry": "Consumer Electronics",
+      "industryDisp": "Consumer Electronics",
+      "dispSecIndFlag": true,
+      "isYahooFinance": true
+    },
+    {
+      "exchange": "NGM",
+      "shortname": "Direxion Daily AAPL Bull 2X Sha",
+      "quoteType": "ETF",
+      "symbol": "AAPU",
+      "index": "quotes",
+      "score": 20008.0,
+      "typeDisp": "ETF",
+      "longname": "Direxion Daily AAPL Bull 2X Shares",
+      "exchDisp": "NASDAQ",
+      "isYahooFinance": true
+    },
+    {
+      "exchange": "OPR",
+      "shortname": "AAPL Nov 2025 270.000 put",
+      "quoteType": "OPTION",
+      "symbol": "AAPL251107P00270000",
+      "index": "quotes",
+      "score": 20008.0,
+      "typeDisp": "Option",
+      "longname": "AAPL Nov 2025 270.000 put",
+      "exchDisp": "OPR",
+      "isYahooFinance": true
+    },
+    {
+      "exchange": "VIE",
+      "shortname": "APPLE INC",
+      "quoteType": "EQUITY",
+      "symbol": "AAPL.VI",
+      "index": "quotes",
+      "score": 20008.0,
+      "typeDisp": "Equity",
+      "longname": "Apple Inc.",
+      "exchDisp": "Vienna",
+      "sector": "Technology",
+      "sectorDisp": "Technology",
+      "industry": "Consumer Electronics",
+      "industryDisp": "Consumer Electronics",
+      "isYahooFinance": true
+    },
+    {
+      "exchange": "BUE",
+      "shortname": "APPLE INC CEDEAR(REPR 1/20 SHR)",
+      "quoteType": "EQUITY",
+      "symbol": "AAPL.BA",
+      "index": "quotes",
+      "score": 20006.0,
+      "typeDisp": "Equity",
+      "longname": "Apple Inc.",
+      "exchDisp": "Buenos Aires",
+      "sector": "Technology",
+      "sectorDisp": "Technology",
+      "industry": "Consumer Electronics",
+      "industryDisp": "Consumer Electronics",
+      "isYahooFinance": true
+    },
+    {
+      "exchange": "OPR",
+      "shortname": "AAPL Nov 2025 270.000 put",
+      "quoteType": "OPTION",
+      "symbol": "AAPL251121P00270000",
+      "index": "quotes",
+      "score": 20004.0,
+      "typeDisp": "Option",
+      "longname": "AAPL Nov 2025 270.000 put",
+      "exchDisp": "OPR",
+      "isYahooFinance": true
+    },
+    {
+      "exchange": "OPR",
+      "shortname": "AAPL Nov 2025 265.000 put",
+      "quoteType": "OPTION",
+      "symbol": "AAPL251114P00265000",
+      "index": "quotes",
+      "score": 20004.0,
+      "typeDisp": "Option",
+      "longname": "AAPL Nov 2025 265.000 put",
+      "exchDisp": "OPR",
+      "isYahooFinance": true
+    }
+  ],
+  "news": [
+    {
+      "uuid": "7435c13a-2225-3234-ad97-b14a202ecee1",
+      "title": "Xinhua Silk Road: Conference exploring future paths of asset management held in E. China urban district",
+      "publisher": "PR Newswire",
+      "link": "https://finance.yahoo.com/news/xinhua-silk-road-conference-exploring-064500870.html",
+      "providerPublishTime": 1762843500,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/zP.rrFIaAK5hMQYn.lsrPw--~B/aD0xNjt3PTE2O2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/prnewswire.com/620d758c422ba1a37bb28e404bdb97ac",
+            "width": 16,
+            "height": 16,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/kyznl9MJplSu_0DzlAQbtA--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/prnewswire.com/620d758c422ba1a37bb28e404bdb97ac",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "AAPL"
+      ]
+    },
+    {
+      "uuid": "f131dbbc-2879-3210-be46-1a79bffc1e9e",
+      "title": "5 Warren Buffett Stocks to Hold Forever",
+      "publisher": "Motley Fool",
+      "link": "https://finance.yahoo.com/m/f131dbbc-2879-3210-be46-1a79bffc1e9e/5-warren-buffett-stocks-to.html",
+      "providerPublishTime": 1762826520,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/Z_bSfNwGrhTt0AJB7moNtg--~B/aD05MzM7dz0xNDAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/c89be63ad33e430766942cf111a72026",
+            "width": 1400,
+            "height": 933,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/xQc3HfGI9v2TDNJXPVLogQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/c89be63ad33e430766942cf111a72026",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "KR",
+        "AAPL",
+        "AXP",
+        "CVX",
+        "^SPX"
+      ]
+    },
+    {
+      "uuid": "9bd29221-8a18-3c86-9da8-020626568580",
+      "title": "Taiwan Semiconductor Manufacturing Company Limited (TSM) Posts Slowest Monthly Growth Since Early Last Year",
+      "publisher": "Insider Monkey",
+      "link": "https://finance.yahoo.com/news/taiwan-semiconductor-manufacturing-company-limited-015824260.html",
+      "providerPublishTime": 1762826304,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/DxYQcvd_gWJWaXO.7PRDtw--~B/aD04MTY7dz0xNDU2O2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/insidermonkey.com/f90919c411d1aa5d89e5e74b1fb5e45e",
+            "width": 1456,
+            "height": 816,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/zY1Q_oGVBoH1dWjNGMJQ4Q--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/insidermonkey.com/f90919c411d1aa5d89e5e74b1fb5e45e",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "2330.TW",
+        "TSM",
+        "TSMWF",
+        "035420.KS",
+        "AAPL"
+      ]
+    },
+    {
+      "uuid": "e6a4f657-08d3-33ab-b40b-f30bd8f7d57f",
+      "title": "Netflix Just Announced a 10-for-1 Stock Split -- Here's Why the Stock Looks Like a No-Brainer Buy Right Now",
+      "publisher": "Motley Fool",
+      "link": "https://finance.yahoo.com/m/e6a4f657-08d3-33ab-b40b-f30bd8f7d57f/netflix-just-announced-a.html",
+      "providerPublishTime": 1762816500,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/RtzBRL9Xia.VgiB4CwsAtQ--~B/aD05MzM7dz0xNDAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/a1f977c168ca9fd75aa2dda27f7b071f",
+            "width": 1400,
+            "height": 933,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/MHX4g87OhBYhE7hCQhcPxQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/a1f977c168ca9fd75aa2dda27f7b071f",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "NFLX",
+        "DIS",
+        "GOOGL",
+        "AAPL"
+      ]
+    },
+    {
+      "uuid": "9dbaf505-ac6b-37b4-a453-50dab5e37888",
+      "title": "Goldman Sachs Says AI Boom Will Supercharge Energy Demand",
+      "publisher": "Oilprice.com",
+      "link": "https://finance.yahoo.com/news/goldman-sachs-says-ai-boom-230000443.html",
+      "providerPublishTime": 1762815600,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/TX9xIybRCuuHWoLMA.uQ.A--~B/aD0zMDA7dz03MTg7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/oilprice.com/02852c07f62519976560eed38e034998",
+            "width": 718,
+            "height": 300,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/_NWIZUVzzgud6dfV3ZHzIw--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/oilprice.com/02852c07f62519976560eed38e034998",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "META",
+        "NVDA",
+        "AMZN",
+        "AAPL",
+        "OPAI.PVT"
+      ]
+    },
+    {
+      "uuid": "4205eaa9-f620-3a0b-a81a-0e82c7c9fd0b",
+      "title": "Magnificent Seven Stocks: Nvidia, Tesla, Amazon, Meta Rally",
+      "publisher": "Investor's Business Daily",
+      "link": "https://finance.yahoo.com/m/4205eaa9-f620-3a0b-a81a-0e82c7c9fd0b/magnificent-seven-stocks%3A.html",
+      "providerPublishTime": 1762813166,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/dH2T4UlHg7A40njz2aVZLw--~B/aD01NjM7dz0xMDAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/ibd.com/0682fdd5dad13df00d702863d79378a1",
+            "width": 1000,
+            "height": 563,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/jlpxz0owXM2yWj9DtnTWIQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/ibd.com/0682fdd5dad13df00d702863d79378a1",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "NVDA",
+        "TSLA",
+        "AMZN",
+        "AAPL",
+        "MSFT",
+        "GOOGL",
+        "META"
+      ]
+    },
+    {
+      "uuid": "6bea0d8d-6064-3298-aa4d-9eebcc8996fb",
+      "title": "Jamf\u2019s (NASDAQ:JAMF) Q3: Strong Sales",
+      "publisher": "StockStory",
+      "link": "https://finance.yahoo.com/news/jamf-nasdaq-jamf-q3-strong-214517170.html",
+      "providerPublishTime": 1762811117,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/E2cOufU8neZrNu7mLY6obg--~B/aD0yNjEzO3c9NDYzNzthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/stockstory_922/419b5b99c438c89b284dddba4d14e2f5",
+            "width": 4637,
+            "height": 2613,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/HXKZvXsU3Zn0j30Aym996g--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/stockstory_922/419b5b99c438c89b284dddba4d14e2f5",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "JAMF",
+        "AAPL"
+      ]
+    },
+    {
+      "uuid": "ea9fc53b-eb52-3804-a312-9c4c78968714",
+      "title": "Nvidia Rival Weathering AI Storm, Looks To Reclaim Buy Point",
+      "publisher": "Investor's Business Daily",
+      "link": "https://finance.yahoo.com/m/ea9fc53b-eb52-3804-a312-9c4c78968714/nvidia-rival-weathering-ai.html",
+      "providerPublishTime": 1762809622,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/QN0hYIZq3M7nWVQTDntQcg--~B/aD01NjM7dz0xMDAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/ibd.com/2d5611089a5d71cf5065021f286f2489",
+            "width": 1000,
+            "height": 563,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/sYYjJsGiNJloiJPKqbUgpg--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/ibd.com/2d5611089a5d71cf5065021f286f2489",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "AVGO",
+        "NVDA",
+        "PLTR",
+        "GOOGL",
+        "^IXIC",
+        "AAPL"
+      ]
+    }
+  ],
+  "nav": [],
+  "lists": [],
+  "researchReports": [],
+  "screenerFieldResults": [],
+  "totalTime": 45,
+  "timeTakenForQuotes": 436,
+  "timeTakenForNews": 700,
+  "timeTakenForAlgowatchlist": 400,
+  "timeTakenForPredefinedScreener": 400,
+  "timeTakenForCrunchbase": 0,
+  "timeTakenForNav": 400,
+  "timeTakenForResearchReports": 0,
+  "timeTakenForScreenerField": 0,
+  "timeTakenForCulturalAssets": 0,
+  "timeTakenForSearchLists": 0
+}

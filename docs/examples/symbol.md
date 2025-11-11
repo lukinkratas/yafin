@@ -9,12 +9,12 @@ async def main() -> None:
 
     # opt. 1 use context manager (recommended)
     async with AsyncSymbol('META') as meta:
-        meta_1y_chart = await meta.get_chart(period_range='1y', interval='1d')
+        meta_1y_chart = await meta.get_chart(interval='1d', period_range='1y')
 
     # opt. 2 use close to avoid resource leakage
     aapl = AsyncSymbol('AAPL')
     aapl_5d_chart = await aapl.get_chart(
-        period_range='5d', interval='1h', include_div=True, include_split=False
+        interval='1h', period_range='5d', include_div=True, include_split=False
     )
     await aapl.close()
 
@@ -193,22 +193,6 @@ async def main() -> None:
 
     async with AsyncSymbol('META') as meta:
         meta_ratings = await meta.get_ratings()
-
-if __name__ == '__main__':
-    asyncio.run(main())
-```
-
-### Analysis Endpoint
-
-```python
-import asyncio
-
-from yafin import AsyncSymbol
-
-async def main() -> None:
-
-    async with AsyncSymbol('META') as meta:
-        meta_analysis = await meta.get_analysis()
 
 if __name__ == '__main__':
     asyncio.run(main())

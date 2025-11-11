@@ -1,16 +1,17 @@
 ## TODO
 
-- [ ] get_chart implement period1 and period2 ?
-- [ ] example from docs to main or integration tests
 - [ ] get chart not now(), but round to midnight - check yfinance implementation
-- [ ] not only meta fixtures - other stocks, btc, gold, bonds
 
-- [ ] reverse eng the rest API again - check, if all endpoints are present
 - [ ] (sync) client and (sync) symbol ? + pytest-benchmark tests
-- [ ] consider dependency injection
+- [ ] multi symbols
+
 - [ ] publish to pypi test
 - [ ] publish
 - [ ] mcp
+
+- ~~[x] run unit tests w/o internet~~
+- ~~[x] tests - timestamp fixtures?~~
+- ~~[x] get_chart implement period1 and period2 ?~~
 - ~~[x] symbol get_quote_summary_quote_type x get_quote_type~~
 - ~~[x] symbol get_income_statement get_balance_sheet get_cash_flow x get_income_statement_history get_income_statement_history_quarterly get_balance_sheet_history get_balance_sheet_history_quarterly get_cashflow_statement_history get_cashflow_statement_history_quarterly~~
 - ~~[x] caching~~

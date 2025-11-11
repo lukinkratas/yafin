@@ -15,9 +15,11 @@ INTERVALS = {
     '3mo',
 }
 
-RANGES = {'1d', '5d', '1mo', '3mo', '6mo', '1y', '2y', '5y', '10y', 'ytd', 'max'}
+PERIOD_RANGES = {'1d', '5d', '1mo', '3mo', '6mo', '1y', '2y', '5y', '10y', 'ytd', 'max'}
 
-EVENTS = {'div', 'split', 'earn', 'capitalGain'}
+EVENTS_SET = {'div', 'split', 'earn', 'capitalGain'}
+
+EVENTS = ','.join(EVENTS_SET)
 
 QUOTE_SUMMARY_MODULES_SET = {
     'quoteType',

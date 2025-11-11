@@ -2,7 +2,7 @@
     options:
         members:
         - INTERVALS
-        - RANGES
+        - PERIOD_RANGES
         - EVENTS
         - FREQUENCIES
         - QUOTE_SUMMARY_MODULES_SET

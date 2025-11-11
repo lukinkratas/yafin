@@ -9,16 +9,8 @@ from async_lru import alru_cache
 from curl_cffi import AsyncSession, Response
 from curl_cffi.requests.exceptions import HTTPError, Timeout
 
-from .const import (
-    _ALL_TYPES_SET,
-    CALENDAR_EVENT_MODULES_SET,
-    EVENTS,
-    INTERVALS,
-    QUOTE_SUMMARY_MODULES_SET,
-    RANGES,
-)
+from .const import EVENTS
 from .types import (
-    AnalysisResponseJson,
     CalendarEventsResponseJson,
     ChartResponseJson,
     CurrenciesResponseJson,
@@ -34,7 +26,16 @@ from .types import (
     TimeseriesResponseJson,
     TrendingResponseJson,
 )
-from .utils import _encode_url, _error, _log_args
+from .utils import (
+    _check_calendar_event_modules,
+    _check_events,
+    _check_interval,
+    _check_period_range,
+    _check_quote_summary_modules,
+    _check_types,
+    _encode_url,
+    _log_args,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -148,29 +149,33 @@ class AsyncClient(object):
 
     @_log_args
     @alru_cache(maxsize=128)
-    async def _get_crumb(self) -> str | None:
-        if not self._crumb:
+    async def _get_crumb(self) -> None:
+        if self._crumb is None:
             url = f'{self._BASE_URL}/v1/test/getcrumb'
             response = await self._get_async_request(url)
             self._crumb = response.text
-
-        return self._crumb
 
     @_log_args
     @alru_cache(maxsize=128)
     async def get_chart(
         self,
         ticker: str,
-        period_range: str,
         interval: str,
-        events: str | None = 'div,split,earn,capitalGain',
+        period_range: str | None = None,
+        period1: int | float | None = None,
+        period2: int | float | None = None,
+        events: str | None = EVENTS,
     ) -> ChartResponseJson:
         """Get chart data for the ticker.
 
         Args:
             ticker: Ticker symbol.
-            period_range: Range of the period.
             interval: Data interval.
+            period_range:
+                Range of the period. (Not named range due to collision with python
+                built-in method name)
+            period1: Start timestamp in seconds. (optional, default: None)
+            period2: End timestamp in seconds. (optional, default: None)
             events: Comma-separated events to include.
 
         Returns: Chart response json including result and error.
@@ -181,45 +186,35 @@ class AsyncClient(object):
         """
         logger.debug(
             f'Getting finance/chart for {ticker=}, '
-            f'{period_range=}, {interval=}, {events=}.'
+            f'{period_range=}, {interval=}, {events=}, {period1=}, {period2=}.'
         )
-
-        if period_range not in RANGES:
-            _error(
-                msg=f'Invalid {period_range=}. Valid values: {RANGES}',
-                err_cls=ValueError,
-            )
-
-        if interval not in INTERVALS:
-            _error(
-                msg=f'Invalid {interval=}. Valid values: {INTERVALS}',
-                err_cls=ValueError,
-            )
-
-        if events:
-            parsed_events = {e.strip() for e in events.split(',')}
-
-            if not parsed_events <= EVENTS:
-                _error(
-                    msg=(
-                        f'Invalid events={parsed_events - EVENTS}. '
-                        f'Valid values: {EVENTS}'
-                    ),
-                    err_cls=ValueError,
-                )
 
         url = f'{self._BASE_URL}/v8/finance/chart/{ticker}'
         params = self._DEFAULT_PARAMS | {
-            'range': period_range,
-            'interval': interval,
             'includePrePost': True,
             'source': 'cosaic',
             'includeAdjustedClose': True,
             'userYfid': True,
         }
 
-        if events:
+        _check_interval(interval)
+        params['interval'] = interval
+
+        if events is not None:
+            parsed_events = {e.strip() for e in events.split(',')}
+            _check_events(parsed_events)
+            # join parsed events, bcs they can be stripped
             params['events'] = ','.join(parsed_events)
+
+        if period_range is not None:
+            _check_period_range(period_range)
+            params['range'] = period_range
+
+        if period1 is not None:
+            params['period1'] = int(period1)
+
+        if period2 is not None:
+            params['period2'] = int(period2)
 
         response = await self._get_async_request(url, params)
         return response.json()
@@ -236,11 +231,12 @@ class AsyncClient(object):
         """
         logger.debug(f'Getting finance/quote for {tickers=}.')
 
+        await self._get_crumb()
         url = f'{self._BASE_URL}/v7/finance/quote'
         params = self._DEFAULT_PARAMS | {
             'symbols': tickers,
             'includePrePost': True,
-            'crumb': await self._get_crumb(),
+            'crumb': self._crumb,
         }
         response = await self._get_async_request(url, params)
         return response.json()
@@ -277,28 +273,25 @@ class AsyncClient(object):
             modules: Comma-separated modules to include.
 
         Returns: Quote summary response json including result and error.
+
+        Raises: ValueError: If modules are not in list of valid values.
         """
         logger.debug(f'Getting finance/quoteSummary for {ticker=}.')
 
         parsed_modules = {m.strip() for m in modules.split(',')}
+        _check_quote_summary_modules(parsed_modules)
 
-        if not parsed_modules <= QUOTE_SUMMARY_MODULES_SET:
-            _error(
-                msg=(
-                    f'Invalid modules={parsed_modules - QUOTE_SUMMARY_MODULES_SET}. '
-                    f'Valid values: {QUOTE_SUMMARY_MODULES_SET}'
-                ),
-                err_cls=ValueError,
-            )
-
+        await self._get_crumb()
         url = f'{self._BASE_URL}/v10/finance/quoteSummary/{ticker}'
         params = self._DEFAULT_PARAMS | {
-            'modules': ','.join(parsed_modules),
             'enablePrivateCompany': True,
             'enableQSPExpandedEarnings': True,
             'overnightPrice': True,
-            'crumb': await self._get_crumb(),
+            'crumb': self._crumb,
+            # join parsed modules, bcs they can be stripped
+            'modules': ','.join(parsed_modules),
         }
+
         response = await self._get_async_request(url, params)
         return response.json()
 
@@ -321,8 +314,7 @@ class AsyncClient(object):
 
         Returns: Timeseries response json including result and error.
 
-        Raises:
-            ValueError: If types are not in list of valid values.
+        Raises: ValueError: If types are not in list of valid values.
         """
         logger.debug(
             f'Getting finance/timeseries for {ticker=}, '
@@ -330,21 +322,7 @@ class AsyncClient(object):
         )
 
         parsed_types = {t.strip() for t in types.split(',')}
-
-        if not parsed_types <= _ALL_TYPES_SET:
-            _error(
-                msg=(
-                    f'Invalid types={parsed_types - _ALL_TYPES_SET}. '
-                    f'Valid values: {_ALL_TYPES_SET}'
-                ),
-                err_cls=ValueError,
-            )
-
-        if period1 is None:
-            period1 = datetime(2020, 1, 1, tzinfo=ZoneInfo('UTC')).timestamp()
-
-        if period2 is None:
-            period2 = datetime.now(tz=ZoneInfo('UTC')).timestamp()
+        _check_types(parsed_types)
 
         url = (
             f'{self._BASE_URL}/ws/fundamentals-timeseries/'
@@ -353,10 +331,19 @@ class AsyncClient(object):
         params = self._DEFAULT_PARAMS | {
             'merge': False,
             'padTimeSeries': True,
-            'period1': int(period1),
-            'period2': int(period2),
+            # join parsed types, bcs they can be stripped
             'type': ','.join(parsed_types),
         }
+
+        if period1 is None:
+            period1 = datetime(2020, 1, 1, tzinfo=ZoneInfo('UTC')).timestamp()
+
+        params['period1'] = int(period1)
+
+        if period2 is None:
+            period2 = datetime.now(tz=ZoneInfo('UTC')).timestamp()
+
+        params['period2'] = int(period2)
 
         response = await self._get_async_request(url, params)
         return response.json()
@@ -373,11 +360,12 @@ class AsyncClient(object):
         """
         logger.debug(f'Getting finance/options for {ticker=}.')
 
+        await self._get_crumb()
         url = f'{self._BASE_URL}/v7/finance/options/{ticker}'
         params = self._DEFAULT_PARAMS | {
             'date': -1,
             'straddle': False,
-            'crumb': await self._get_crumb(),
+            'crumb': self._crumb,
         }
         response = await self._get_async_request(url, params)
         return response.json()
@@ -458,24 +446,6 @@ class AsyncClient(object):
 
     @_log_args
     @alru_cache(maxsize=128)
-    async def get_analysis(self, ticker: str) -> AnalysisResponseJson:
-        """Get analysis for the ticker.
-
-        Args:
-            ticker: Ticker symbol.
-
-        Returns: Analysis response json.
-        """
-        logger.debug(f'Getting analysis for {ticker=}.')
-
-        url = 'https://finance.yahoo.com/xhr/ticker-analysis'
-        params = self._DEFAULT_PARAMS | {'debug': False, 'symbol': ticker}
-        headers = {'Accept': 'application/json'}
-        response = await self._get_async_request(url, params, headers)
-        return response.json()
-
-    @_log_args
-    @alru_cache(maxsize=128)
     async def get_market_summaries(self) -> MarketSummaryResponseJson:
         """Get market summaries.
 
@@ -520,17 +490,17 @@ class AsyncClient(object):
     async def get_calendar_events(
         self,
         modules: str | None = None,
-        period1: int | float | None = None,
-        period2: int | float | None = None,
+        start_date: int | float | None = None,
+        end_date: int | float | None = None,
     ) -> CalendarEventsResponseJson:
         """Get calendar events.
 
         Args:
             modules: Comma-separated modules to include.
-            period1:
+            start_date:
                 Start timestamp in miliseconds.
                 (optional, default: (period2 - 149days) timestamp)
-            period2: End timestamp in miliseconds. (optional, default: now timestamp)
+            end_date: End timestamp in miliseconds. (optional, default: now timestamp)
 
         Returns: Calendar events response json including result and error.
 
@@ -538,35 +508,30 @@ class AsyncClient(object):
         """
         logger.debug('Getting finance/calendar-events.')
 
-        if period2 is None:
-            period2 = datetime.now(tz=ZoneInfo('UTC')).timestamp() * 1000
-
-        if period1 is None:
-            dt = datetime.fromtimestamp(period2 / 1000) - timedelta(days=149)
-            period1 = dt.timestamp() * 1000
-
         url = f'{self._BASE_URL}/ws/screeners/v1/finance/calendar-events'
         params = self._DEFAULT_PARAMS | {
             'countPerDay': 25,
             'economicEventsHighImportanceOnly': True,
             'economicEventsRegionFilter': '',
-            'startDate': int(period1),
-            'endDate': int(period2),
         }
 
         if modules:
             parsed_modules = {m.strip() for m in modules.split(',')}
-
-            if not parsed_modules <= CALENDAR_EVENT_MODULES_SET:
-                _error(
-                    msg=(
-                        f'Invalid modules={parsed_modules - CALENDAR_EVENT_MODULES_SET}'
-                        f'. Valid values: {CALENDAR_EVENT_MODULES_SET}'
-                    ),
-                    err_cls=ValueError,
-                )
-
+            _check_calendar_event_modules(parsed_modules)
+            # join parsed modules, bcs they can be stripped
             params['modules'] = ','.join(parsed_modules)
+
+        if end_date is None:
+            end_date = datetime.now(tz=ZoneInfo('UTC')).timestamp() * 1000
+
+        params['endDate'] = int(end_date)
+
+        if start_date is None:
+            end_date_dt = datetime.fromtimestamp(end_date / 1000)
+            start_dt = end_date_dt - timedelta(days=149)
+            start_date = start_dt.timestamp() * 1000
+
+        params['startDate'] = int(start_date)
 
         response = await self._get_async_request(url, params)
         return response.json()

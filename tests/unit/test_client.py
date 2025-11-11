@@ -8,7 +8,6 @@ from pytest_mock import MockerFixture
 from typeguard import TypeCheckError
 
 from tests._assertions import (
-    _assert_analysis_response_json,
     _assert_calendar_events_response_json,
     _assert_chart_response_json,
     _assert_currencies_response_json,
@@ -24,7 +23,7 @@ from tests._assertions import (
     _assert_timeseries_response_json,
     _assert_trending_response_json,
 )
-from tests._utils import _mock_200_response, _mock_404_response
+from tests._utils import _get_json_fixture, _mock_200_response, _mock_404_response
 from yafin import AsyncClient
 from yafin.const import (
     ANNUAL_INCOME_STATEMENT_TYPES,
@@ -55,9 +54,58 @@ class TestUnitClient:
 
     @pytest_asyncio.fixture
     async def client(self) -> AsyncGenerator[AsyncClient, None]:
-        """Fixture for AsyncClient."""
+        """Fresh new instance of AsyncClient for each tests."""
         async with AsyncClient() as client:
             yield client
+
+    @pytest.fixture(scope='session')
+    def end_date(self, period2: int | float | None) -> int | float | None:
+        """Fresh new instance of end_date for each tests."""
+        if period2 is None:
+            return None
+
+        return period2 + 1000
+
+    @pytest.fixture(scope='session')
+    def start_date(self, end_date: int | float | None) -> int | float | None:
+        """Fresh new instance of start_date for each tests."""
+        if end_date is None:
+            return None
+
+        end_type = type(end_date)
+        end_date_dt = datetime.fromtimestamp(end_date / 1000)
+        start_dt = end_date_dt - timedelta(days=149)
+        return end_type(start_dt.timestamp() * 1000)
+
+    @pytest.fixture(scope='session')
+    def quote_json_mock(self, tickers: str) -> dict[str, Any]:
+        """Mock get_quote response json with data."""
+        file_name = '_'.join(tickers.lower().split(',')) + '.json'
+        return _get_json_fixture(file_name, folder_name='quote')
+
+    @pytest.fixture(scope='session')
+    def quote_type_json_mock(self, tickers: str) -> dict[str, Any]:
+        """Mock get_quote_type response json with data."""
+        file_name = '_'.join(tickers.lower().split(',')) + '.json'
+        return _get_json_fixture(file_name, folder_name='quote_type')
+
+    @pytest.fixture(scope='session')
+    def search_json_mock(self, tickers: str) -> dict[str, Any]:
+        """Mock search response json with data."""
+        file_name = '_'.join(tickers.lower().split(',')) + '.json'
+        return _get_json_fixture(file_name, folder_name='search')
+
+    @pytest.fixture(scope='session')
+    def recommendations_json_mock(self, tickers: str) -> dict[str, Any]:
+        """Mock recommendations response json with data."""
+        file_name = '_'.join(tickers.lower().split(',')) + '.json'
+        return _get_json_fixture(file_name, folder_name='recommendations')
+
+    @pytest.fixture(scope='session')
+    def insights_json_mock(self, tickers: str) -> dict[str, Any]:
+        """Mock insights response json with data."""
+        file_name = '_'.join(tickers.lower().split(',')) + '.json'
+        return _get_json_fixture(file_name, folder_name='insights')
 
     @pytest.mark.asyncio
     async def test_get_async_request(
@@ -65,10 +113,11 @@ class TestUnitClient:
         client: AsyncClient,
         mocker: MockerFixture,
         chart_json_mock: dict[str, Any],
+        ticker: str,
     ) -> None:
         """Test _get_async_request method."""
-        _mock_200_response(mocker, chart_json_mock)
-        url = 'https://query2.finance.yahoo.com/v8/finance/chart/META'
+        _mock_200_response(mocker, response_json=chart_json_mock)
+        url = f'https://query2.finance.yahoo.com/v8/finance/chart/{ticker}'
         params = {
             'formatted': 'false',
             'region': 'US',
@@ -135,13 +184,14 @@ class TestUnitClient:
             await client._get_async_request(**kwargs)
 
     @pytest.mark.asyncio
-    async def test_get_crumb(self) -> None:
+    async def test_get_crumb(self, client: AsyncClient, mocker: MockerFixture) -> None:
         """Test _get_crumb method."""
-        client = AsyncClient()
+        _mock_200_response(mocker, text='test_crumb')
+
         assert client._crumb is None
 
         await client._get_crumb()
-        assert client._crumb
+        assert client._crumb == 'test_crumb'
 
         await client.close()
         assert client._crumb is None
@@ -149,17 +199,12 @@ class TestUnitClient:
     @pytest.mark.parametrize(
         'kwargs',
         [
-            dict(ticker='META', period_range='1y', interval='1d'),
+            dict(interval='1d'),
+            dict(interval='1d', period_range='1y'),
+            dict(interval='1d', period_range='1y', events='div,split,earn,capitalGain'),
             dict(
-                ticker='META',
-                period_range='1y',
                 interval='1d',
-                events='div,split,earn,capitalGain',
-            ),
-            dict(
-                ticker='META',
                 period_range='1y',
-                interval='1d',
                 events=' div , split , earn , capitalGain ',
             ),
         ],
@@ -171,11 +216,16 @@ class TestUnitClient:
         kwargs: dict[str, str],
         mocker: MockerFixture,
         chart_json_mock: dict[str, Any],
+        ticker: str,
+        period1: int | float | None,
+        period2: int | float | None,
     ) -> None:
         """Test get_chart method."""
-        _mock_200_response(mocker, chart_json_mock)
-        chart = await client.get_chart(**kwargs)
-        _assert_chart_response_json(chart, kwargs['ticker'])
+        _mock_200_response(mocker, response_json=chart_json_mock)
+        chart = await client.get_chart(
+            ticker=ticker, **kwargs, period1=period1, period2=period2
+        )
+        _assert_chart_response_json(chart, ticker)
 
     @pytest.mark.parametrize(
         'kwargs, err_cls',
@@ -249,16 +299,19 @@ class TestUnitClient:
         client: AsyncClient,
         mocker: MockerFixture,
         quote_json_mock: dict[str, Any],
+        tickers: str,
     ) -> None:
         """Test get_quote method."""
-        _mock_200_response(mocker, quote_json_mock)
-        tickers = 'META'
+        _mock_200_response(mocker, response_json=quote_json_mock, text='test_crumb')
         quotes = await client.get_quote(tickers)
         _assert_quote_response_json(quotes, tickers)
 
     @pytest.mark.asyncio
-    async def test_get_quote_invalid_args(self, client: AsyncClient) -> None:
+    async def test_get_quote_invalid_args(
+        self, client: AsyncClient, mocker: MockerFixture
+    ) -> None:
         """Test get_quote method with invalid arguments."""
+        _mock_200_response(mocker, text='test_crumb')
         with pytest.raises(TypeCheckError):
             await client.get_quote(tickers=1)
 
@@ -268,10 +321,10 @@ class TestUnitClient:
         client: AsyncClient,
         mocker: MockerFixture,
         quote_type_json_mock: dict[str, Any],
+        tickers: str,
     ) -> None:
         """Test get_quote_type method."""
-        _mock_200_response(mocker, quote_type_json_mock)
-        tickers = 'META'
+        _mock_200_response(mocker, response_json=quote_type_json_mock)
         quote_types = await client.get_quote_type(tickers)
         _assert_quote_type_response_json(quote_types, tickers)
 
@@ -287,10 +340,12 @@ class TestUnitClient:
         client: AsyncClient,
         mocker: MockerFixture,
         quote_summary_all_modules_json_mock: dict[str, Any],
+        ticker: str,
     ) -> None:
         """Test get_quote_summary method."""
-        _mock_200_response(mocker, quote_summary_all_modules_json_mock)
-        ticker = 'META'
+        _mock_200_response(
+            mocker, response_json=quote_summary_all_modules_json_mock, text='test_crumb'
+        )
         modules = QUOTE_SUMMARY_MODULES
         quote_summary = await client.get_quote_summary(ticker, modules)
         _assert_quote_summary_response_json(quote_summary, modules)
@@ -306,78 +361,34 @@ class TestUnitClient:
     )
     @pytest.mark.asyncio
     async def test_get_quote_summary_invalid_args(
-        self, client: AsyncClient, kwargs: dict[str, Any], err_cls: Type[Exception]
+        self,
+        client: AsyncClient,
+        mocker: MockerFixture,
+        kwargs: dict[str, Any],
+        err_cls: Type[Exception],
     ) -> None:
         """Test get_quote_summary method with invalid arguments."""
+        _mock_200_response(mocker, text='test_crumb')
         with pytest.raises(err_cls):
             await client.get_quote_summary(**kwargs)
 
-    @pytest.mark.parametrize(
-        'kwargs',
-        [
-            dict(ticker='META', types=ANNUAL_INCOME_STATEMENT_TYPES),
-            dict(
-                ticker='META',
-                types=ANNUAL_INCOME_STATEMENT_TYPES,
-                period1=datetime(2020, 1, 1).timestamp(),
-                period2=datetime.now().timestamp(),
-            ),
-            dict(
-                ticker='META',
-                types=ANNUAL_INCOME_STATEMENT_TYPES,
-                period1=1577833200.0,
-                period2=1760857217.66133,
-            ),
-            dict(
-                ticker='META',
-                types=ANNUAL_INCOME_STATEMENT_TYPES,
-                period1=1577833200,
-                period2=1760857217,
-            ),
-            dict(
-                ticker='META',
-                types=ANNUAL_INCOME_STATEMENT_TYPES,
-                period1=datetime(2020, 1, 1).timestamp(),
-            ),
-            dict(
-                ticker='META',
-                types=ANNUAL_INCOME_STATEMENT_TYPES,
-                period1=1577833200.0,
-            ),
-            dict(
-                ticker='META',
-                types=ANNUAL_INCOME_STATEMENT_TYPES,
-                period1=1577833200,
-            ),
-            dict(
-                ticker='META',
-                types=ANNUAL_INCOME_STATEMENT_TYPES,
-                period2=datetime.now().timestamp(),
-            ),
-            dict(
-                ticker='META',
-                types=ANNUAL_INCOME_STATEMENT_TYPES,
-                period2=1760857217.66133,
-            ),
-            dict(
-                ticker='META',
-                types=ANNUAL_INCOME_STATEMENT_TYPES,
-                period2=1760857217,
-            ),
-        ],
-    )
     @pytest.mark.asyncio
     async def test_get_timeseries(
         self,
         client: AsyncClient,
-        kwargs: dict[str, Any],
         mocker: MockerFixture,
         timeseries_income_statement_json_mock: dict[str, Any],
+        period1: int | float | None,
+        period2: int | float | None,
+        ticker: str,
     ) -> None:
         """Test get_timeseries method."""
-        _mock_200_response(mocker, timeseries_income_statement_json_mock)
-        timeseries = await client.get_timeseries(**kwargs)
-        _assert_timeseries_response_json(timeseries, kwargs['types'], kwargs['ticker'])
+        types = ANNUAL_INCOME_STATEMENT_TYPES
+        _mock_200_response(mocker, response_json=timeseries_income_statement_json_mock)
+        timeseries = await client.get_timeseries(
+            ticker, types, period1=period1, period2=period2
+        )
+        _assert_timeseries_response_json(timeseries, types, ticker)
 
     @pytest.mark.parametrize(
         'kwargs, err_cls',
@@ -417,16 +428,19 @@ class TestUnitClient:
         client: AsyncClient,
         mocker: MockerFixture,
         options_json_mock: dict[str, Any],
+        ticker: str,
     ) -> None:
         """Test get_options method."""
-        _mock_200_response(mocker, options_json_mock)
-        ticker = 'META'
+        _mock_200_response(mocker, response_json=options_json_mock, text='test_crumb')
         options = await client.get_options(ticker)
         _assert_options_response_json(options, ticker)
 
     @pytest.mark.asyncio
-    async def test_get_options_invalid_args(self, client: AsyncClient) -> None:
+    async def test_get_options_invalid_args(
+        self, client: AsyncClient, mocker: MockerFixture
+    ) -> None:
         """Test get_options method with invalid arguments."""
+        _mock_200_response(mocker, text='test_crumb')
         with pytest.raises(TypeCheckError):
             await client.get_options(ticker=1)
 
@@ -436,10 +450,11 @@ class TestUnitClient:
         client: AsyncClient,
         mocker: MockerFixture,
         search_json_mock: dict[str, Any],
+        tickers: str,
     ) -> None:
         """Test get_search method."""
-        _mock_200_response(mocker, search_json_mock)
-        search = await client.get_search(tickers='META')
+        _mock_200_response(mocker, response_json=search_json_mock)
+        search = await client.get_search(tickers)
         _assert_search_response_json(search)
 
     @pytest.mark.asyncio
@@ -454,10 +469,10 @@ class TestUnitClient:
         client: AsyncClient,
         recommendations_json_mock: dict[str, Any],
         mocker: MockerFixture,
+        tickers: str,
     ) -> None:
         """Test get_recommendations method."""
-        _mock_200_response(mocker, recommendations_json_mock)
-        tickers = 'META'
+        _mock_200_response(mocker, response_json=recommendations_json_mock)
         recommendations = await client.get_recommendations(tickers)
         _assert_recommendations_response_json(recommendations, tickers)
 
@@ -473,10 +488,10 @@ class TestUnitClient:
         client: AsyncClient,
         mocker: MockerFixture,
         insights_json_mock: dict[str, Any],
+        tickers: str,
     ) -> None:
         """Test get_insights method."""
-        _mock_200_response(mocker, insights_json_mock)
-        tickers = 'META'
+        _mock_200_response(mocker, response_json=insights_json_mock)
         insights = await client.get_insights(tickers)
         _assert_insights_response_json(insights, tickers)
 
@@ -492,10 +507,10 @@ class TestUnitClient:
         client: AsyncClient,
         mocker: MockerFixture,
         ratings_json_mock: dict[str, Any],
+        ticker: str,
     ) -> None:
         """Test get_ratings method."""
-        _mock_200_response(mocker, ratings_json_mock)
-        ticker = 'META'
+        _mock_200_response(mocker, response_json=ratings_json_mock)
         ratings = await client.get_ratings(ticker)
         _assert_ratings_response_json(ratings)
 
@@ -506,25 +521,6 @@ class TestUnitClient:
             await client.get_ratings(ticker=1)
 
     @pytest.mark.asyncio
-    async def test_get_analysis(
-        self,
-        client: AsyncClient,
-        mocker: MockerFixture,
-        analysis_json_mock: dict[str, Any],
-    ) -> None:
-        """Test get_analysis method."""
-        _mock_200_response(mocker, analysis_json_mock)
-        ticker = 'META'
-        analysis = await client.get_analysis(ticker)
-        _assert_analysis_response_json(analysis, ticker)
-
-    @pytest.mark.asyncio
-    async def test_get_analysis_invalid_args(self, client: AsyncClient) -> None:
-        """Test get_analysis method with invalid arguments."""
-        with pytest.raises(TypeCheckError):
-            await client.get_analysis(ticker=1)
-
-    @pytest.mark.asyncio
     async def test_get_market_summaries(
         self,
         client: AsyncClient,
@@ -532,7 +528,7 @@ class TestUnitClient:
         market_summaries_json_mock: dict[str, Any],
     ) -> None:
         """Test get_market_summaries method."""
-        _mock_200_response(mocker, market_summaries_json_mock)
+        _mock_200_response(mocker, response_json=market_summaries_json_mock)
         market_summaries = await client.get_market_summaries()
         _assert_market_summary_response_json(market_summaries)
 
@@ -544,7 +540,7 @@ class TestUnitClient:
         trending_json_mock: dict[str, Any],
     ) -> None:
         """Test get_trending method."""
-        _mock_200_response(mocker, trending_json_mock)
+        _mock_200_response(mocker, response_json=trending_json_mock)
         trending = await client.get_trending()
         _assert_trending_response_json(trending)
 
@@ -556,46 +552,15 @@ class TestUnitClient:
         currencies_json_mock: dict[str, Any],
     ) -> None:
         """Test get_currencies method."""
-        _mock_200_response(mocker, currencies_json_mock)
+        _mock_200_response(mocker, response_json=currencies_json_mock)
         currencies = await client.get_currencies()
         _assert_currencies_response_json(currencies)
 
     @pytest.mark.parametrize(
         'kwargs',
         [
-            dict(
-                modules=CALENDAR_EVENT_MODULES,
-                period1=(datetime.now() - timedelta(days=149)).timestamp() * 1000,
-                period2=datetime.now().timestamp() * 1000,
-            ),
-            dict(
-                modules=CALENDAR_EVENT_MODULES,
-                period1=1749039103420.827,
-                period2=1761916222537.604,
-            ),
-            dict(
-                modules=CALENDAR_EVENT_MODULES,
-                period1=1749039103420,
-                period2=1761916222537.604,
-            ),
-            dict(
-                period1=(datetime.now() - timedelta(days=149)).timestamp() * 1000,
-                period2=datetime.now().timestamp() * 1000,
-            ),
-            dict(period1=1749039103420.827, period2=1761916222537.604),
-            dict(period1=1749039103420, period2=1761916222537.604),
-            dict(
-                modules=CALENDAR_EVENT_MODULES,
-                period1=(datetime.now() - timedelta(days=149)).timestamp() * 1000,
-            ),
-            dict(modules=CALENDAR_EVENT_MODULES, period1=1749039103420.827),
-            dict(modules=CALENDAR_EVENT_MODULES, period1=1749039103420),
-            dict(
-                modules=CALENDAR_EVENT_MODULES,
-                period2=datetime.now().timestamp() * 1000,
-            ),
-            dict(modules=CALENDAR_EVENT_MODULES, period2=1761916222537.604),
-            dict(modules=CALENDAR_EVENT_MODULES, period2=1761916222537.604),
+            dict(),
+            dict(modules=CALENDAR_EVENT_MODULES),
         ],
     )
     @pytest.mark.asyncio
@@ -605,18 +570,22 @@ class TestUnitClient:
         kwargs: dict[str, str],
         mocker: MockerFixture,
         client_calendar_events_json_mock: dict[str, Any],
+        start_date: int | float | None,
+        end_date: int | float | None,
     ) -> None:
         """Test get_calendar_events method."""
-        _mock_200_response(mocker, client_calendar_events_json_mock)
-        calendar_events = await client.get_calendar_events(**kwargs)
+        _mock_200_response(mocker, response_json=client_calendar_events_json_mock)
+        calendar_events = await client.get_calendar_events(
+            **kwargs, start_date=start_date, end_date=end_date
+        )
         _assert_calendar_events_response_json(calendar_events)
 
     @pytest.mark.parametrize(
         'kwargs, err_cls',
         [
             (dict(modules='xxx'), ValueError),
-            (dict(period1='xxx'), TypeCheckError),
-            (dict(period2='xxx'), TypeCheckError),
+            (dict(start_date='xxx'), TypeCheckError),
+            (dict(end_date='xxx'), TypeCheckError),
         ],
     )
     @pytest.mark.asyncio

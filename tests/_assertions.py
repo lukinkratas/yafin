@@ -3,13 +3,10 @@ from typing import Type, TypeVar
 from typeguard import check_type
 
 from yafin.types import (
-    AnalysisResponseJson,
     AssetProfile,
-    BalanceSheetItem,
     CalendarEvents,
     CalendarEventsFinanceResult,
     CalendarEventsResponseJson,
-    CashflowItem,
     ChartResponseJson,
     ChartResult,
     CurrenciesResponseJson,
@@ -20,7 +17,6 @@ from yafin.types import (
     EarningsTrendItem,
     FinancialData,
     FundOwnershipItem,
-    IncomeStatementItem,
     IndexTrend,
     IndustryTrend,
     InsiderHolderItem,
@@ -42,7 +38,6 @@ from yafin.types import (
     QuoteSummaryModuleReturnValue,
     QuoteSummaryResponseJson,
     QuoteSummaryResult,
-    QuoteTypeItem,
     QuoteTypeResponseJson,
     QuoteTypeResult,
     RatingsResponseJson,
@@ -141,16 +136,9 @@ def _assert_quote_summary_single_module_result(
     type_map = {
         'assetProfile': AssetProfile,
         'recommendationTrend': list[RecommendationTrendItem],
-        'incomeStatementHistory': list[IncomeStatementItem],
-        'incomeStatementHistoryQuarterly': list[IncomeStatementItem],
-        'balanceSheetHistory': list[BalanceSheetItem],
-        'balanceSheetHistoryQuarterly': list[BalanceSheetItem],
-        'cashflowStatementHistory': list[CashflowItem],
-        'cashflowStatementHistoryQuarterly': list[CashflowItem],
         'indexTrend': IndexTrend,
         'defaultKeyStatistics': DefaultKeyStatistics,
         'industryTrend': IndustryTrend,
-        'quoteType': QuoteTypeItem,
         'fundOwnership': list[FundOwnershipItem],
         'summaryDetail': SummaryDetail,
         'insiderHolders': list[InsiderHolderItem],
@@ -273,12 +261,6 @@ def _assert_insights_response_json(
 def _assert_ratings_response_json(ratings: RatingsResponseJson) -> None:
     assert ratings
     assert check_type(ratings, RatingsResponseJson)
-
-
-def _assert_analysis_response_json(analysis: AnalysisResponseJson, ticker: str) -> None:
-    assert analysis
-    assert check_type(analysis, AnalysisResponseJson)
-    assert analysis['symbol'] == ticker
 
 
 def _assert_market_summary_results(

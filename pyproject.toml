@@ -74,7 +74,7 @@ ignore = [
     "D205"  # one blank line required between summary line and description
 ]
 
-per-file-ignores = { "yafin/types.py" = ["D101"] }
+per-file-ignores = { "yafin/types.py" = ["D101"]} # missing docstring in public class
 
 [tool.ruff.lint.pydocstyle]
 convention = "google"
