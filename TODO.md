@@ -1,14 +1,13 @@
 ## TODO
 
-- [ ] get chart not now(), but round to midnight - check yfinance implementation
-
-- [ ] (sync) client and (sync) symbol ? + pytest-benchmark tests
+- [ ] pytest-benchmark sync symbol vs yfinance
 - [ ] multi symbols
 
 - [ ] publish to pypi test
 - [ ] publish
 - [ ] mcp
 
+- ~~[x] (sync) client and (sync) symbol ?~~
 - ~~[x] run unit tests w/o internet~~
 - ~~[x] tests - timestamp fixtures?~~
 - ~~[x] get_chart implement period1 and period2 ?~~

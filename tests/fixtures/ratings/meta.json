@@ -2,24 +2,24 @@
   "dir": {
     "analyst": "Wolfe Research",
     "dir": {
-      "raw": 89.4021462604515,
+      "raw": 89.364602192535,
       "fmt": 89.0
     },
     "mm": {
-      "raw": 79.3399190424582,
+      "raw": 79.32589981370555,
       "fmt": 79.0
     },
     "pt": {
-      "raw": 98.53072909302249,
+      "raw": 98.5319524659675,
       "fmt": 99.0
     },
     "fin_score": {
-      "raw": 88.20919466156771,
+      "raw": 88.18646153357267,
       "fmt": 88.0
     },
     "datapoints": 9,
     "ticker": "META",
-    "uuid": "0b859d75-82f2-54a5-9e84-4f54414a663e",
+    "uuid": "1a45d8c7-2f68-52db-8138-df2045af88f8",
     "rating_current": "Outperform",
     "rating_sentiment": 1,
     "pt_current": 730.0,
@@ -29,24 +29,24 @@
   "mm": {
     "analyst": "Wolfe Research",
     "dir": {
-      "raw": 89.4021462604515,
+      "raw": 89.364602192535,
       "fmt": 89.0
     },
     "mm": {
-      "raw": 79.3399190424582,
+      "raw": 79.32589981370555,
       "fmt": 79.0
     },
     "pt": {
-      "raw": 98.53072909302249,
+      "raw": 98.5319524659675,
       "fmt": 99.0
     },
     "fin_score": {
-      "raw": 88.20919466156771,
+      "raw": 88.18646153357267,
       "fmt": 88.0
     },
     "datapoints": 9,
     "ticker": "META",
-    "uuid": "0b859d75-82f2-54a5-9e84-4f54414a663e",
+    "uuid": "1a45d8c7-2f68-52db-8138-df2045af88f8",
     "rating_current": "Outperform",
     "rating_sentiment": 1,
     "pt_current": 730.0,
@@ -56,7 +56,7 @@
   "pt": {
     "analyst": "Evercore ISI Group",
     "dir": {
-      "raw": 74.25905405672208,
+      "raw": 74.26369476060063,
       "fmt": 74.0
     },
     "mm": {
@@ -64,16 +64,16 @@
       "fmt": 53.0
     },
     "pt": {
-      "raw": 99.60249891048672,
+      "raw": 99.60337455137068,
       "fmt": 100.0
     },
     "fin_score": {
-      "raw": 72.92351261571442,
+      "raw": 72.92600809583047,
       "fmt": 73.0
     },
     "datapoints": 19,
     "ticker": "META",
-    "uuid": "00484e2a-ccb9-52e5-98b9-906a4ba5f5ca",
+    "uuid": "14ba50bb-4b35-5cbe-b3e2-97490a2ac39e",
     "rating_current": "Outperform",
     "rating_sentiment": 1,
     "pt_current": 750.0,
@@ -83,24 +83,24 @@
   "fin_score": {
     "analyst": "Wolfe Research",
     "dir": {
-      "raw": 89.4021462604515,
+      "raw": 89.364602192535,
       "fmt": 89.0
     },
     "mm": {
-      "raw": 79.3399190424582,
+      "raw": 79.32589981370555,
       "fmt": 79.0
     },
     "pt": {
-      "raw": 98.53072909302249,
+      "raw": 98.5319524659675,
       "fmt": 99.0
     },
     "fin_score": {
-      "raw": 88.20919466156771,
+      "raw": 88.18646153357267,
       "fmt": 88.0
     },
     "datapoints": 9,
     "ticker": "META",
-    "uuid": "0b859d75-82f2-54a5-9e84-4f54414a663e",
+    "uuid": "1a45d8c7-2f68-52db-8138-df2045af88f8",
     "rating_current": "Outperform",
     "rating_sentiment": 1,
     "pt_current": 730.0,

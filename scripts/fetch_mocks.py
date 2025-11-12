@@ -20,9 +20,9 @@ from .logging_config import configure_logging
 
 logger = logging.getLogger(__name__)
 
-TICKER_LIST = ['META', 'AAPL']
-TICKERS = ','.join(TICKER_LIST)
+TICKERS = 'META,AAPL'
 TICKERS_NAME = TICKERS.replace(',', '_').lower()
+TICKER_LIST = TICKERS.split(',')
 PERIOD1 = datetime(2020, 1, 1).timestamp()
 PERIOD2 = datetime.now().timestamp()
 
@@ -55,7 +55,9 @@ async def process_mock(
 async def main() -> None:  # noqa: D103
     configure_logging()
 
-    params = dict(ticker_list=TICKER_LIST, period1=PERIOD1, period2=PERIOD2)
+    params = dict(
+        tickers=TICKERS, ticker_list=TICKER_LIST, period1=PERIOD1, period2=PERIOD2
+    )
     params_path = _get_fixture_path('params.json')
     write_json(params, params_path)
     logger.debug(f'Params and stored {params_path}.')

@@ -2,6 +2,7 @@ from typing import Any, Type
 
 import pytest
 from curl_cffi.requests.exceptions import HTTPError
+from typeguard import TypeCheckError
 
 from yafin.const import (
     _TYPES,
@@ -222,3 +223,17 @@ class TestUnitUtils:
         types_list = types.split(',')
         # have to compare sorted iterables, bcs of the order.
         assert sorted(types_list) == sorted(expected_set)
+
+    @pytest.mark.parametrize(
+        'kwargs, err_cls',
+        [
+            (dict(frequency=1, typ='income_statement'), TypeCheckError),
+            (dict(frequency='annual', typ=1), TypeCheckError),
+        ],
+    )
+    def test_get_types_with_frequency_invalid_args(
+        self, kwargs: dict[str, Any], err_cls: Type[Exception]
+    ) -> None:
+        """Test get_types_with_frequency function with invalid arguments."""
+        with pytest.raises(err_cls):
+            get_types_with_frequency(**kwargs)

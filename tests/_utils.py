@@ -24,6 +24,7 @@ def _mock_200_response(
     mocker: MockerFixture,
     response_json: dict[str, Any] | None = None,
     text: str | None = None,
+    async_mock: bool = False,
 ) -> None:
     """Mock response with status code 200."""
     mock_response = mocker.Mock(spec=Response)
@@ -36,21 +37,38 @@ def _mock_200_response(
     if text:
         mock_response.text = text
 
-    mocker.patch(
-        'yafin.client.AsyncSession.request',
-        new=mocker.AsyncMock(return_value=mock_response),
+    mock_class = mocker.AsyncMock if async_mock else mocker.Mock
+    target = (
+        'yafin.client.AsyncSession.request'
+        if async_mock
+        else 'yafin.client.Session.request'
     )
+    mocker.patch(target, new=mock_class(return_value=mock_response))
 
 
-def _mock_404_response(mocker: MockerFixture, response_json: dict[str, Any]) -> None:
+def _mock_404_response(
+    mocker: MockerFixture,
+    response_json: dict[str, Any] | None = None,
+    text: str | None = None,
+    async_mock: bool = False,
+) -> None:
     """Mock response with status code 404."""
     mock_response = mocker.Mock(spec=Response)
     mock_response.status_code = 404
-    mock_response.json.return_value = response_json
     mock_response.raise_for_status.side_effect = HTTPError(
         '404 Client Error: Not Found for url'
     )
-    mocker.patch(
-        'yafin.client.AsyncSession.request',
-        new=mocker.AsyncMock(return_value=mock_response),
+
+    if response_json:
+        mock_response.json.return_value = response_json
+
+    if text:
+        mock_response.text = text
+
+    mock_class = mocker.AsyncMock if async_mock else mocker.Mock
+    target = (
+        'yafin.client.AsyncSession.request'
+        if async_mock
+        else 'yafin.client.Session.request'
     )
+    mocker.patch(target, new=mock_class(return_value=mock_response))

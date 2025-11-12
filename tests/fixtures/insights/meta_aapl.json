@@ -12,9 +12,9 @@
               "direction": "Neutral",
               "score": 0,
               "scoreDescription": "No Evidence",
-              "sectorDirection": "Bearish",
-              "sectorScore": 4,
-              "sectorScoreDescription": "Very Strong Bearish Evidence",
+              "sectorDirection": "Bullish",
+              "sectorScore": 1,
+              "sectorScoreDescription": "Weak Bullish Evidence",
               "indexDirection": "Neutral",
               "indexScore": 0,
               "indexScoreDescription": "Neutral Evidence"
@@ -62,8 +62,8 @@
             "innovativeness": 0.8288,
             "sustainability": 0.7643000000000001,
             "insiderSentiments": 0.0,
-            "earningsReports": 0.9076000000000001,
-            "dividends": 0.0169
+            "earningsReports": 0.9093000000000001,
+            "dividends": 0.0128
           },
           "sector": {
             "innovativeness": 0.5,
@@ -106,13 +106,13 @@
         },
         "events": [
           {
-            "eventType": "Hammer",
+            "eventType": "Relative Strength Index (RSI)",
             "pricePeriod": "D",
             "tradingHorizon": "S",
             "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1762525800,
-            "endDate": 1762525800
+            "startDate": 1762785000,
+            "endDate": 1762785000
           }
         ],
         "reports": [
@@ -142,8 +142,8 @@
               "PLTR",
               "BABA",
               "NFLX",
-              "NVDA",
               "META",
+              "NVDA",
               "BAC",
               "MS",
               "MU",
@@ -167,8 +167,8 @@
               "MDLZ",
               "ORLY",
               "FHI",
-              "VLO",
               "MCO",
+              "VLO",
               "IEX",
               "UTHR"
             ],
@@ -207,8 +207,8 @@
         ],
         "sigDevs": [
           {
-            "headline": "Meta Says Co Is Committing Over $600 Bln In U.S. By 2028",
-            "date": "2025-11-07"
+            "headline": "Nebius Group Announces New Agreement To Deliver AI Infrastructure To Meta For $3 Billion Over 5 Years",
+            "date": "2025-11-11"
           }
         ],
         "secReports": [
@@ -312,21 +312,21 @@
             "formType": "S-8 POS"
           },
           {
-            "id": "0001326801-25-000092_1326801",
-            "type": "Offering Registrations",
-            "title": "S-8 POS : Offering Registrations",
-            "description": "Post-effective amendment to a S-8 registration statement",
-            "filingDate": 1748563200000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000092/thumbnail.png",
-            "formType": "S-8 POS"
-          },
-          {
             "id": "0001326801-25-000093_1326801",
             "type": "Offering Registrations",
             "title": "S-8 POS : Offering Registrations",
             "description": "Post-effective amendment to a S-8 registration statement",
             "filingDate": 1748563200000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000093/thumbnail.png",
+            "formType": "S-8 POS"
+          },
+          {
+            "id": "0001326801-25-000092_1326801",
+            "type": "Offering Registrations",
+            "title": "S-8 POS : Offering Registrations",
+            "description": "Post-effective amendment to a S-8 registration statement",
+            "filingDate": 1748563200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000092/thumbnail.png",
             "formType": "S-8 POS"
           },
           {
@@ -635,13 +635,13 @@
             "provider": "Trading Central",
             "sector": "Technology",
             "shortTermOutlook": {
-              "stateDescription": "Recent bearish events outweigh bullish events.",
-              "direction": "Bearish",
-              "score": 1,
-              "scoreDescription": "Weak Bearish Evidence",
+              "stateDescription": "The bullish and bearish events are balanced.",
+              "direction": "Neutral",
+              "score": 0,
+              "scoreDescription": "Neutral Evidence",
               "sectorDirection": "Bearish",
-              "sectorScore": 4,
-              "sectorScoreDescription": "Very Strong Bearish Evidence",
+              "sectorScore": 2,
+              "sectorScoreDescription": "Bearish Evidence",
               "indexDirection": "Neutral",
               "indexScore": 0,
               "indexScoreDescription": "Neutral Evidence"
@@ -674,8 +674,8 @@
           "keyTechnicals": {
             "provider": "Trading Central",
             "support": 229.4,
-            "resistance": 268.81,
-            "stopLoss": 259.576024
+            "resistance": 277.32,
+            "stopLoss": 258.344843
           },
           "valuation": {
             "color": 0.0,
@@ -692,7 +692,7 @@
             "hiring": 0.9512999999999999,
             "sustainability": 0.16519999999999999,
             "insiderSentiments": 0.3289,
-            "earningsReports": 0.88,
+            "earningsReports": 0.8794,
             "dividends": 0.06309999999999999
           },
           "sector": {
@@ -736,13 +736,13 @@
         },
         "events": [
           {
-            "eventType": "Inside Bar (Bearish)",
-            "pricePeriod": "W",
-            "tradingHorizon": "I",
-            "tradeType": "S",
-            "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
+            "eventType": "Pennant (Bullish)",
+            "pricePeriod": "D",
+            "tradingHorizon": "S",
+            "tradeType": "L",
+            "imageUrl": "https://s.yimg.com/uc/fin/img/assets/bullish-pennant.svg",
             "startDate": 1761917400,
-            "endDate": 1762525800
+            "endDate": 1762871400
           }
         ],
         "reports": [
@@ -785,8 +785,8 @@
               "PLTR",
               "BABA",
               "NFLX",
-              "NVDA",
               "META",
+              "NVDA",
               "BAC",
               "MS",
               "MU",

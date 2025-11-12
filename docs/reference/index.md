@@ -1,10 +1,10 @@
-### AsyncSymbol x AsyncClient
+### (Async)Symbol x (Async)Client
 
-`AsyncSymbol` class is high level and more user convenient than `AsyncClient`, because it uses predefined modules for quote summary endpoint and predefined types for timeseries endpoints. It uses `AsyncClient` as a singleton (multiple symbols use shared AsyncClient instance) to save resources. Methods return result field of http response json.
+`(Async)Symbol` class is high level and more user convenient than `(Async)Client`, because it uses predefined modules for quote summary endpoint and predefined types for timeseries endpoints. It uses `(Async)Client` as a singleton (multiple symbols use shared AsyncClient instance) to save resources. Methods return result field of http response json.
 
-`AsyncClient` class is low level http client class, which has methods defined according to the API endpoints. It uses `curl_cffi.requests.AsyncSession` under the hood. Methods return full http response json including result and error fields.
+`(Async)Client` class is low level http client class, which has methods defined according to the API endpoints. It uses `curl_cffi.requests.AsyncSession` under the hood. Methods return full http response json including result and error fields.
 
-_Note: Market Summary, Trending, Currencies and Calendar Events endpoints are only available in the `AsyncClient` class._
+_Note: Market Summary, Trending, Currencies and Calendar Events endpoints are only available in the `(Async)Client` class._
 
 ### Query multiple symbols
 

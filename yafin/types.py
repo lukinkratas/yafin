@@ -252,6 +252,7 @@ class AssetProfile(TypedDict):
     compensationAsOfEpochDate: int
     executiveTeam: list[Any]
     maxAge: int
+    irWebsite: NotRequired[str]
 
 
 class RecommendationTrendItem(TypedDict):
@@ -342,50 +343,49 @@ class IndexTrend(TypedDict):
     estimates: list[dict[str, Any]]
 
 
-DefaultKeyStatistics = TypedDict(
-    'DefaultKeyStatistics',
-    {
-        'maxAge': int,
-        'priceHint': int,
-        'enterpriseValue': int,
-        'forwardPE': float,
-        'profitMargins': float,
-        'floatShares': int,
-        'sharesOutstanding': int,
-        'sharesShort': int,
-        'sharesShortPriorMonth': int,
-        'sharesShortPreviousMonthDate': int,
-        'dateShortInterest': int,
-        'sharesPercentSharesOut': float,
-        'heldPercentInsiders': float,
-        'heldPercentInstitutions': float,
-        'shortRatio': float,
-        'shortPercentOfFloat': float,
-        'beta': float,
-        'impliedSharesOutstanding': int,
-        'category': None,
-        'bookValue': float,
-        'priceToBook': float,
-        'fundFamily': None,
-        'legalType': None,
-        'lastFiscalYearEnd': int,
-        'nextFiscalYearEnd': int,
-        'mostRecentQuarter': int,
-        'earningsQuarterlyGrowth': float,
-        'netIncomeToCommon': int,
-        'trailingEps': float,
-        'forwardEps': float,
-        'lastSplitFactor': None,
-        'enterpriseToRevenue': float,
-        'enterpriseToEbitda': float,
-        '52WeekChange': float,
-        'SandP52WeekChange': float,
-        'lastDividendValue': float,
-        'lastDividendDate': int,
-        'latestShareClass': None,
-        'leadInvestor': None,
-    },
-)
+class DefaultKeyStatistics(TypedDict):
+    maxAge: int
+    priceHint: int
+    enterpriseValue: int
+    forwardPE: float
+    profitMargins: float
+    floatShares: int
+    sharesOutstanding: int
+    sharesShort: int
+    sharesShortPriorMonth: int
+    sharesShortPreviousMonthDate: int
+    dateShortInterest: int
+    sharesPercentSharesOut: float
+    heldPercentInsiders: float
+    heldPercentInstitutions: float
+    shortRatio: float
+    shortPercentOfFloat: float
+    beta: float
+    impliedSharesOutstanding: int
+    category: None
+    bookValue: float
+    priceToBook: float
+    fundFamily: None
+    legalType: None
+    lastFiscalYearEnd: int
+    nextFiscalYearEnd: int
+    mostRecentQuarter: int
+    earningsQuarterlyGrowth: float
+    netIncomeToCommon: int
+    trailingEps: float
+    forwardEps: float
+    lastSplitFactor: str | None
+    enterpriseToRevenue: float
+    enterpriseToEbitda: float
+    SandP52WeekChange: float
+    lastDividendValue: float
+    lastDividendDate: int
+    latestShareClass: None
+    leadInvestor: None
+    lastSplitDate: NotRequired[int]
+
+
+DefaultKeyStatistics.__annotations__['52WeekChange'] = float
 
 
 class IndustryTrend(TypedDict):
@@ -469,6 +469,7 @@ class SummaryDetail(TypedDict):
     coinMarketCapLink: None
     algorithm: None
     tradeable: bool
+    fiveYearAvgDividendYield: NotRequired[float]
 
 
 class InsiderHolderItem(TypedDict):
@@ -668,6 +669,7 @@ class SummaryProfile(TypedDict):
     companyOfficers: list[Any]
     executiveTeam: list[Any]
     maxAge: int
+    irWebsite: NotRequired[str]
 
 
 class NetSharePurchaseActivity(TypedDict):
@@ -679,6 +681,10 @@ class NetSharePurchaseActivity(TypedDict):
     netInfoCount: int
     netInfoShares: int
     totalInsiderShares: int
+    sellPercentInsiderShares: NotRequired[float]
+    sellInfoShares: NotRequired[int]
+    netPercentInsiderShares: NotRequired[float]
+    buyPercentInsiderShares: NotRequired[float]
 
 
 class InsiderTransactionItem(TypedDict):
@@ -2087,9 +2093,9 @@ class OptionChainResultQuote(TypedDict):
     priceToBook: float
     sourceInterval: int
     exchangeDataDelayedBy: int
-    ipoExpectedDate: str
-    prevName: str
-    nameChangeDate: str
+    ipoExpectedDate: NotRequired[str]
+    prevName: NotRequired[str]
+    nameChangeDate: NotRequired[str]
     averageAnalystRating: str
     priceHint: int
     marketState: str
@@ -2156,8 +2162,8 @@ class SearchQuote(TypedDict):
     industryDisp: NotRequired[str]
     dispSecIndFlag: bool
     isYahooFinance: bool
-    prevName: str
-    nameChangeDate: str
+    prevName: NotRequired[str]
+    nameChangeDate: NotRequired[str]
 
 
 class SearchNew(TypedDict):

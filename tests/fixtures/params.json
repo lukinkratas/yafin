@@ -1,8 +1,9 @@
 {
+  "tickers": "META,AAPL",
   "ticker_list": [
     "META",
     "AAPL"
   ],
   "period1": 1577833200.0,
-  "period2": 1762855485.281601
+  "period2": 1762963290.992965
 }

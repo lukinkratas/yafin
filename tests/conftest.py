@@ -13,15 +13,21 @@ def params() -> dict[str, Any]:
 
 
 @pytest.fixture(scope='session')
-def ticker(params: dict[str, Any]) -> str:
-    """Fresh new instance of ticker for each tests."""
-    return params.get('ticker', 'META')
+def tickers(params: dict[str, Any]) -> str:
+    """Fresh new instance of tickers for each tests."""
+    return params.get('tickers', 'META,AAPL')
 
 
 @pytest.fixture(scope='session')
-def tickers() -> str:
+def tickers_name(tickers: str) -> str:
     """Fresh new instance of tickers for each tests."""
-    return 'META,AAPL'
+    return tickers.replace(',', '_').lower()
+
+
+@pytest.fixture(params=['META', 'AAPL'], scope='session')
+def ticker(request: pytest.FixtureRequest) -> str:
+    """Fresh new instance of ticker for each tests."""
+    return request.param
 
 
 @pytest.fixture(params=[None, int, float], scope='session')
@@ -60,13 +66,13 @@ def chart_json_mock(ticker: str) -> dict[str, Any]:
 
 @pytest.fixture(scope='session')
 def options_json_mock(ticker: str) -> dict[str, Any]:
-    """Mock options response json with data."""
+    """Mock options response json."""
     return _get_json_fixture(file_name=f'{ticker.lower()}.json', folder_name='options')
 
 
 @pytest.fixture(scope='session')
 def ratings_json_mock(ticker: str) -> dict[str, Any]:
-    """Mock ratings response json with data."""
+    """Mock ratings response json."""
     return _get_json_fixture(file_name=f'{ticker.lower()}.json', folder_name='ratings')
 
 
@@ -86,12 +92,6 @@ def trending_json_mock() -> dict[str, Any]:
 def currencies_json_mock() -> dict[str, Any]:
     """Mock currencies response json."""
     return _get_json_fixture(file_name='currencies.json')
-
-
-@pytest.fixture(scope='session')
-def client_calendar_events_json_mock() -> dict[str, Any]:
-    """Mock currencies response json."""
-    return _get_json_fixture(file_name='calendar_events.json')
 
 
 @pytest.fixture(scope='session')
@@ -180,14 +180,6 @@ def financial_data_json_mock(ticker: str) -> dict[str, Any]:
     """Mock quote summary response json with financial data."""
     return _get_json_fixture(
         file_name=f'financial_data_{ticker.lower()}.json', folder_name='quote_summary'
-    )
-
-
-@pytest.fixture(scope='session')
-def symbol_calendar_events_json_mock(ticker: str) -> dict[str, Any]:
-    """Mock quote summary response json with calendar events data."""
-    return _get_json_fixture(
-        file_name=f'calendar_events_{ticker.lower()}.json', folder_name='quote_summary'
     )
 
 

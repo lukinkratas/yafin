@@ -5,68 +5,68 @@
         "count": 20,
         "quotes": [
           {
-            "symbol": "CRWV"
+            "symbol": "AMD"
           },
           {
-            "symbol": "BBAI"
+            "symbol": "ONON"
           },
           {
-            "symbol": "AI"
+            "symbol": "CRCL"
           },
           {
-            "symbol": "GLTO"
+            "symbol": "BTC-USD"
           },
           {
-            "symbol": "RKLB"
+            "symbol": "CRWD"
           },
           {
-            "symbol": "RIVN"
+            "symbol": "CMCT"
           },
           {
-            "symbol": "HSAI"
+            "symbol": "ETH-USD"
           },
           {
-            "symbol": "XPEV"
+            "symbol": "AMZE"
           },
           {
-            "symbol": "ENPH"
+            "symbol": "MRK"
           },
           {
-            "symbol": "INT.ST"
+            "symbol": "XRP-USD"
           },
           {
-            "symbol": "VOD.L"
+            "symbol": "LPTX"
           },
           {
-            "symbol": "MSPR"
+            "symbol": "LFS"
           },
           {
-            "symbol": "LYFT"
+            "symbol": "MKC"
           },
           {
-            "symbol": "OPEN"
+            "symbol": "MRNA"
           },
           {
-            "symbol": "COGT"
+            "symbol": "SLRX"
           },
           {
-            "symbol": "NIO"
+            "symbol": "CRMD"
           },
           {
-            "symbol": "SEDG"
+            "symbol": "IBM"
           },
           {
-            "symbol": "SE"
+            "symbol": "BTE.TO"
           },
           {
-            "symbol": "SONY"
+            "symbol": "VKTX"
           },
           {
-            "symbol": "NVTS"
+            "symbol": "VIK"
           }
         ],
-        "jobTimestamp": 1762852593689,
-        "startInterval": 202511110800
+        "jobTimestamp": 1762960490657,
+        "startInterval": 202511121400
       }
     ],
     "error": null

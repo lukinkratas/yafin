@@ -8,7 +8,7 @@
       "quoteType": "EQUITY",
       "symbol": "META",
       "index": "quotes",
-      "score": 11704500.0,
+      "score": 12129500.0,
       "typeDisp": "Equity",
       "longname": "Meta Platforms, Inc.",
       "exchDisp": "NASDAQ",
@@ -19,7 +19,7 @@
       "dispSecIndFlag": false,
       "isYahooFinance": true,
       "prevName": "Facebook, Inc.",
-      "nameChangeDate": "2025-11-10"
+      "nameChangeDate": "2025-11-11"
     },
     {
       "exchange": "NMS",
@@ -27,7 +27,7 @@
       "quoteType": "EQUITY",
       "symbol": "AAPL",
       "index": "quotes",
-      "score": 15709000.0,
+      "score": 19444500.0,
       "typeDisp": "Equity",
       "longname": "Apple Inc.",
       "exchDisp": "NASDAQ",
@@ -40,22 +40,22 @@
   ],
   "news": [
     {
-      "uuid": "0102c8ba-4095-3cb6-88c7-8d10f13b7e0f",
-      "title": "Meta's,Tesla's, Alphabet's and Amazon are part of Zacks Earnings Preview",
-      "publisher": "Zacks",
-      "link": "https://finance.yahoo.com/news/metas-teslas-alphabets-amazon-part-074500249.html",
-      "providerPublishTime": 1762847100,
+      "uuid": "cbb87852-02a5-396f-afcc-e37a6029d134",
+      "title": "This Pandemic Darling Is Down 40% This Year. Now the Stock Is Rising Sharply.",
+      "publisher": "Barrons.com",
+      "link": "https://finance.yahoo.com/m/cbb87852-02a5-396f-afcc-e37a6029d134/this-pandemic-darling-is-down.html",
+      "providerPublishTime": 1762959960,
       "type": "STORY",
       "thumbnail": {
         "resolutions": [
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/SlqJfx4XpAvRjkWK4aXy4Q--~B/aD00MTM7dz02MjA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/zacks.com/17cc0333095b09f772bd2f43476ed240",
-            "width": 620,
-            "height": 413,
+            "url": "https://s.yimg.com/uu/api/res/1.2/488nltge_HJFI6yyv8zsAw--~B/aD02NDA7dz0xMjc5O2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/Barrons.com/4a277bdffe6bd7f5e65ba0335f5cd5d7",
+            "width": 1279,
+            "height": 640,
             "tag": "original"
           },
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/mfg.Fi.zjgRltcD0pQeSJA--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/zacks.com/17cc0333095b09f772bd2f43476ed240",
+            "url": "https://s.yimg.com/uu/api/res/1.2/5X5QF6c_LasNlAo42QSxKA--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/Barrons.com/4a277bdffe6bd7f5e65ba0335f5cd5d7",
             "width": 140,
             "height": 140,
             "tag": "140x140"
@@ -63,29 +63,124 @@
         ]
       },
       "relatedTickers": [
-        "TSLA",
+        "BILL",
+        "AAPL",
+        "TRIP",
+        "^GSPC",
+        "QRVO"
+      ]
+    },
+    {
+      "uuid": "45e60972-12d3-3dbe-a1f0-6591352e48e4",
+      "title": "Nasdaq Loses Early Gains",
+      "publisher": "Barrons.com",
+      "link": "https://finance.yahoo.com/m/45e60972-12d3-3dbe-a1f0-6591352e48e4/nasdaq-loses-early-gains.html",
+      "providerPublishTime": 1762959719,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/_kc6REYMS1JrAuV5bYtjfA--~B/aD02NTt3PTMyMDthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/Barrons.com/12ea0f43d8f8307249a68d1cb2e0587e",
+            "width": 320,
+            "height": 65,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/5waH37HKuL3X52B3V2GWrw--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/Barrons.com/12ea0f43d8f8307249a68d1cb2e0587e",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "^IXIC",
+        "^SPX",
+        "NVDA",
+        "MSFT",
+        "AAPL",
+        "AMZN",
+        "GOOGL",
+        "META",
+        "TSLA"
+      ]
+    },
+    {
+      "uuid": "b63dd1f9-7c44-3cb9-b4bf-0a8f8cc0ad5e",
+      "title": "What Tesla Stock Would Look Like in 10 Years If Musk Hits Pay Targets",
+      "publisher": "Barrons.com",
+      "link": "https://finance.yahoo.com/m/b63dd1f9-7c44-3cb9-b4bf-0a8f8cc0ad5e/what-tesla-stock-would-look.html",
+      "providerPublishTime": 1762959660,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/ERDV9d_xxtGVl5MyZHGYwQ--~B/aD02NDA7dz0xMjgwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/Barrons.com/97c5f015ef7e1da2fb60fb823d412fac",
+            "width": 1280,
+            "height": 640,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/aMH7VPFjlOHJoD0Lcb7Hrw--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/Barrons.com/97c5f015ef7e1da2fb60fb823d412fac",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "TSLA"
+      ]
+    },
+    {
+      "uuid": "a48e7a84-bfc1-381b-b096-9baa72322c75",
+      "title": "Arm Stock Delivered a Smashing Quarter. It Wasn't Enough.",
+      "publisher": "Motley Fool",
+      "link": "https://finance.yahoo.com/m/a48e7a84-bfc1-381b-b096-9baa72322c75/arm-stock-delivered-a.html",
+      "providerPublishTime": 1762959180,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/BWhsf6J3SwhrBADxtPfjuw--~B/aD02NzU7dz0xMjAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/85d3726d6eac3b4725e41896ac3c66f6",
+            "width": 1200,
+            "height": 675,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/.oLe_5S_O7AjuW4LwtLB4g--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/85d3726d6eac3b4725e41896ac3c66f6",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "ARM",
+        "NVDA",
         "GOOGL",
         "AMZN",
+        "MSFT",
         "META"
       ]
     },
     {
-      "uuid": "7435c13a-2225-3234-ad97-b14a202ecee1",
-      "title": "Xinhua Silk Road: Conference exploring future paths of asset management held in E. China urban district",
-      "publisher": "PR Newswire",
-      "link": "https://finance.yahoo.com/news/xinhua-silk-road-conference-exploring-064500870.html",
-      "providerPublishTime": 1762843500,
+      "uuid": "927c325d-d8a8-3c22-aec9-731edd0be87e",
+      "title": "Whoop Is Considering Going Public in the Next Two Years, CEO Says",
+      "publisher": "Bloomberg",
+      "link": "https://finance.yahoo.com/news/whoop-considering-going-public-next-130009946.html",
+      "providerPublishTime": 1762958904,
       "type": "STORY",
       "thumbnail": {
         "resolutions": [
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/zP.rrFIaAK5hMQYn.lsrPw--~B/aD0xNjt3PTE2O2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/prnewswire.com/620d758c422ba1a37bb28e404bdb97ac",
-            "width": 16,
-            "height": 16,
+            "url": "https://s.yimg.com/uu/api/res/1.2/92QYrw4D5VB9ur19sIUr2Q--~B/aD0xNDY3O3c9MjIwMDthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/bloomberg_holding_pen_162/75f7aef99d782e65a8f14fa891496650",
+            "width": 2200,
+            "height": 1467,
             "tag": "original"
           },
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/kyznl9MJplSu_0DzlAQbtA--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/prnewswire.com/620d758c422ba1a37bb28e404bdb97ac",
+            "url": "https://s.yimg.com/uu/api/res/1.2/owcmVMTd42KwPoKEH8zPxg--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/bloomberg_holding_pen_162/75f7aef99d782e65a8f14fa891496650",
             "width": 140,
             "height": 140,
             "tag": "140x140"
@@ -93,131 +188,30 @@
         ]
       },
       "relatedTickers": [
-        "AAPL"
-      ]
-    },
-    {
-      "uuid": "c84679b8-1c45-3ed9-bd56-fe112caeabd6",
-      "title": "CoreWeave Inc (CRWV) Q3 2025 Earnings Call Highlights: Record Revenue Growth Amid ...",
-      "publisher": "GuruFocus.com",
-      "link": "https://finance.yahoo.com/news/coreweave-inc-crwv-q3-2025-050636392.html",
-      "providerPublishTime": 1762837596,
-      "type": "STORY",
-      "relatedTickers": [
-        "CRWV",
-        "META",
-        "OPAI.PVT"
-      ]
-    },
-    {
-      "uuid": "f131dbbc-2879-3210-be46-1a79bffc1e9e",
-      "title": "5 Warren Buffett Stocks to Hold Forever",
-      "publisher": "Motley Fool",
-      "link": "https://finance.yahoo.com/m/f131dbbc-2879-3210-be46-1a79bffc1e9e/5-warren-buffett-stocks-to.html",
-      "providerPublishTime": 1762826520,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/Z_bSfNwGrhTt0AJB7moNtg--~B/aD05MzM7dz0xNDAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/c89be63ad33e430766942cf111a72026",
-            "width": 1400,
-            "height": 933,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/xQc3HfGI9v2TDNJXPVLogQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/c89be63ad33e430766942cf111a72026",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "KR",
+        "WHOO.PVT",
+        "005930.KS",
+        "ABT",
         "AAPL",
-        "AXP",
-        "CVX",
-        "^SPX"
+        "DXCM"
       ]
     },
     {
-      "uuid": "9bd29221-8a18-3c86-9da8-020626568580",
-      "title": "Taiwan Semiconductor Manufacturing Company Limited (TSM) Posts Slowest Monthly Growth Since Early Last Year",
-      "publisher": "Insider Monkey",
-      "link": "https://finance.yahoo.com/news/taiwan-semiconductor-manufacturing-company-limited-015824260.html",
-      "providerPublishTime": 1762826304,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/DxYQcvd_gWJWaXO.7PRDtw--~B/aD04MTY7dz0xNDU2O2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/insidermonkey.com/f90919c411d1aa5d89e5e74b1fb5e45e",
-            "width": 1456,
-            "height": 816,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/zY1Q_oGVBoH1dWjNGMJQ4Q--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/insidermonkey.com/f90919c411d1aa5d89e5e74b1fb5e45e",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "2330.TW",
-        "TSM",
-        "TSMWF",
-        "035420.KS",
-        "AAPL"
-      ]
-    },
-    {
-      "uuid": "8f116ed3-f909-3d70-abc8-24091197117c",
-      "title": "CoreWeave\u2019s earnings report highlights $56 billion in contracted revenue, but its guidance and share price tick down amid AI infrastructure bubble fears",
-      "publisher": "Fortune",
-      "link": "https://finance.yahoo.com/news/coreweave-earnings-report-highlights-56-012249708.html",
-      "providerPublishTime": 1762824169,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/wZm91SRApDme_jdIuVyRwQ--~B/aD0xMzY1O3c9MjA0ODthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/fortune_175/acf8cde30b1d84d7bbac4ebb684f4c28",
-            "width": 2048,
-            "height": 1365,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/r4uwM.rbITnZNkISGpF3lg--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/fortune_175/acf8cde30b1d84d7bbac4ebb684f4c28",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "CRWV",
-        "META",
-        "OPAI.PVT",
-        "NVDA"
-      ]
-    },
-    {
-      "uuid": "e6a4f657-08d3-33ab-b40b-f30bd8f7d57f",
-      "title": "Netflix Just Announced a 10-for-1 Stock Split -- Here's Why the Stock Looks Like a No-Brainer Buy Right Now",
+      "uuid": "12f1e779-6246-3ca0-bda6-4e7dae5ab4d0",
+      "title": "How Does Meta Make Money?",
       "publisher": "Motley Fool",
-      "link": "https://finance.yahoo.com/m/e6a4f657-08d3-33ab-b40b-f30bd8f7d57f/netflix-just-announced-a.html",
-      "providerPublishTime": 1762816500,
+      "link": "https://finance.yahoo.com/m/12f1e779-6246-3ca0-bda6-4e7dae5ab4d0/how-does-meta-make-money%3F.html",
+      "providerPublishTime": 1762957800,
       "type": "STORY",
       "thumbnail": {
         "resolutions": [
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/RtzBRL9Xia.VgiB4CwsAtQ--~B/aD05MzM7dz0xNDAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/a1f977c168ca9fd75aa2dda27f7b071f",
+            "url": "https://s.yimg.com/uu/api/res/1.2/_ssnCOo4p9DQH81Fg7VCHw--~B/aD05MzM7dz0xNDAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/7fde42993d20f045334f19e559a8aa16",
             "width": 1400,
             "height": 933,
             "tag": "original"
           },
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/MHX4g87OhBYhE7hCQhcPxQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/a1f977c168ca9fd75aa2dda27f7b071f",
+            "url": "https://s.yimg.com/uu/api/res/1.2/8aQMC8f.UhbHJiijLa.9Zw--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/7fde42993d20f045334f19e559a8aa16",
             "width": 140,
             "height": 140,
             "tag": "140x140"
@@ -225,29 +219,26 @@
         ]
       },
       "relatedTickers": [
-        "NFLX",
-        "DIS",
-        "GOOGL",
-        "AAPL"
+        "META"
       ]
     },
     {
-      "uuid": "825bcc6e-3d1e-328c-9fdc-741d374901e8",
-      "title": "Bernstein Remains Bullish on Dollar General (DG), Maintains Buy Call",
-      "publisher": "Insider Monkey",
-      "link": "https://finance.yahoo.com/news/bernstein-remains-bullish-dollar-general-231326445.html",
-      "providerPublishTime": 1762816406,
+      "uuid": "dcad3adf-7ef8-3a61-834a-b664bbac6c58",
+      "title": "If You'd Invested $500 in Nvidia Stock 1 Year Ago, Here's How Much You'd Have Today",
+      "publisher": "Motley Fool",
+      "link": "https://finance.yahoo.com/m/dcad3adf-7ef8-3a61-834a-b664bbac6c58/if-you%27d-invested-%24500-in.html",
+      "providerPublishTime": 1762957200,
       "type": "STORY",
       "thumbnail": {
         "resolutions": [
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/.bzqlaCEEG0TSoXKzHWZxw--~B/aD0xNDQwO3c9MTkyMDthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/insidermonkey.com/457d2a21b4e2344046e946737984550c",
-            "width": 1920,
-            "height": 1440,
+            "url": "https://s.yimg.com/uu/api/res/1.2/Fjs1Zfn_lfO5ksnGH66Wow--~B/aD04NDA7dz0xNDAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/df0fa248ea9b68e3a88a0f28eacc8b2c",
+            "width": 1400,
+            "height": 840,
             "tag": "original"
           },
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/uEKWe1chvAY4jEkDVOEO3A--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/insidermonkey.com/457d2a21b4e2344046e946737984550c",
+            "url": "https://s.yimg.com/uu/api/res/1.2/R20Ll6H2e4OTmte94_7HeQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/df0fa248ea9b68e3a88a0f28eacc8b2c",
             "width": 140,
             "height": 140,
             "tag": "140x140"
@@ -255,10 +246,44 @@
         ]
       },
       "relatedTickers": [
-        "DG",
-        "DBX",
-        "META",
-        "MSFT"
+        "NVDA",
+        "^SPX",
+        "AAPL"
+      ]
+    },
+    {
+      "uuid": "b02a2c67-bf9b-3d30-b942-ed859a29b714",
+      "title": "Why Nvidia Stock Is Rebounding Today After SoftBank Shed Its Stake in the Chip Maker",
+      "publisher": "Barrons.com",
+      "link": "https://finance.yahoo.com/m/b02a2c67-bf9b-3d30-b942-ed859a29b714/why-nvidia-stock-is.html",
+      "providerPublishTime": 1762955820,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/ZVO9V9_cXefK3xg0Do_RUg--~B/aD02NDA7dz0xMjgwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/Barrons.com/f0391d9ff5b7c08cfe842f20fe50ede3",
+            "width": 1280,
+            "height": 640,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/evqVhaogMU.Ze0QxyD5x_A--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/Barrons.com/f0391d9ff5b7c08cfe842f20fe50ede3",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "601138.SS",
+        "AAPL",
+        "AMD",
+        "SFTBF",
+        "SFTBY",
+        "AVGO",
+        "NVDA",
+        "9984.T",
+        "2317.TW"
       ]
     }
   ],
@@ -274,8 +299,8 @@
   "lists": [],
   "researchReports": [],
   "screenerFieldResults": [],
-  "totalTime": 65,
-  "timeTakenForQuotes": 443,
+  "totalTime": 111,
+  "timeTakenForQuotes": 439,
   "timeTakenForNews": 700,
   "timeTakenForAlgowatchlist": 400,
   "timeTakenForPredefinedScreener": 400,

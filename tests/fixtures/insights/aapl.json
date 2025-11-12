@@ -8,13 +8,13 @@
             "provider": "Trading Central",
             "sector": "Technology",
             "shortTermOutlook": {
-              "stateDescription": "Recent bearish events outweigh bullish events.",
-              "direction": "Bearish",
-              "score": 1,
-              "scoreDescription": "Weak Bearish Evidence",
+              "stateDescription": "The bullish and bearish events are balanced.",
+              "direction": "Neutral",
+              "score": 0,
+              "scoreDescription": "Neutral Evidence",
               "sectorDirection": "Bearish",
-              "sectorScore": 4,
-              "sectorScoreDescription": "Very Strong Bearish Evidence",
+              "sectorScore": 2,
+              "sectorScoreDescription": "Bearish Evidence",
               "indexDirection": "Neutral",
               "indexScore": 0,
               "indexScoreDescription": "Neutral Evidence"
@@ -47,8 +47,8 @@
           "keyTechnicals": {
             "provider": "Trading Central",
             "support": 229.4,
-            "resistance": 268.81,
-            "stopLoss": 259.576024
+            "resistance": 277.32,
+            "stopLoss": 258.344843
           },
           "valuation": {
             "color": 0.0,
@@ -65,7 +65,7 @@
             "hiring": 0.9512999999999999,
             "sustainability": 0.16519999999999999,
             "insiderSentiments": 0.3289,
-            "earningsReports": 0.88,
+            "earningsReports": 0.8794,
             "dividends": 0.06309999999999999
           },
           "sector": {
@@ -109,13 +109,13 @@
         },
         "events": [
           {
-            "eventType": "Inside Bar (Bearish)",
-            "pricePeriod": "W",
-            "tradingHorizon": "I",
-            "tradeType": "S",
-            "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
+            "eventType": "Pennant (Bullish)",
+            "pricePeriod": "D",
+            "tradingHorizon": "S",
+            "tradeType": "L",
+            "imageUrl": "https://s.yimg.com/uc/fin/img/assets/bullish-pennant.svg",
             "startDate": 1761917400,
-            "endDate": 1762525800
+            "endDate": 1762871400
           }
         ],
         "reports": [
@@ -158,8 +158,8 @@
               "PLTR",
               "BABA",
               "NFLX",
-              "NVDA",
               "META",
+              "NVDA",
               "BAC",
               "MS",
               "MU",
@@ -360,15 +360,6 @@
             "formType": "8-K"
           },
           {
-            "id": "0000320193-24-000123_320193",
-            "type": "Periodic Financial Reports",
-            "title": "10-K : Periodic Financial Reports",
-            "description": "Annual report pursuant to Section 13 and 15(d)",
-            "filingDate": 1730419200000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000032019324000123/thumbnail.png",
-            "formType": "10-K"
-          },
-          {
             "id": "0001140361-24-044880_320193",
             "type": "Offering Registrations",
             "title": "S-3ASR : Offering Registrations",
@@ -376,6 +367,15 @@
             "filingDate": 1730419200000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000114036124044880/thumbnail.png",
             "formType": "S-3ASR"
+          },
+          {
+            "id": "0000320193-24-000123_320193",
+            "type": "Periodic Financial Reports",
+            "title": "10-K : Periodic Financial Reports",
+            "description": "Annual report pursuant to Section 13 and 15(d)",
+            "filingDate": 1730419200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000032019324000123/thumbnail.png",
+            "formType": "10-K"
           },
           {
             "id": "0000320193-24-000120_320193",

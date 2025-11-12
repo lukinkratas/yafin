@@ -21,14 +21,15 @@
           1762128000,
           1762214400,
           1762300800,
-          1762354800,
           1762387200,
           1762473600,
           1762527600,
           1762560000,
           1762646400,
           1762732800,
-          1762819200
+          1762819200,
+          1762905600,
+          1762948800
         ],
         "economicEvents": [
           {
@@ -103,14 +104,6 @@
             "period": "Sep"
           },
           {
-            "eventTime": 1762354800000,
-            "countryCode": "US",
-            "eventName": "ISM N-Mfg Employment Idx",
-            "prior": "47.2",
-            "actual": "48.2",
-            "period": "Oct"
-          },
-          {
             "eventTime": 1762387200000,
             "countryCode": "US",
             "eventName": "Core PCE Price Index YY*",
@@ -159,6 +152,20 @@
             "eventName": "Unemployment Rate",
             "prior": "4.3",
             "period": "Sep"
+          },
+          {
+            "eventTime": 1762905600000,
+            "countryCode": "US",
+            "eventName": "Unemployment Rate",
+            "prior": "4.3",
+            "period": "Sep"
+          },
+          {
+            "eventTime": 1762948800000,
+            "countryCode": "US",
+            "eventName": "Mortgage Market Index",
+            "prior": "332.3",
+            "actual": "334.2"
           }
         ]
       },
@@ -10177,26 +10184,6 @@
             "AAPL"
           ],
           "type": [
-            "corporateAnalystMeeting"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "shareHoldersAnnualMeetingsEvents"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
             "mergerAndAcquisitionAnnouncement"
           ]
         }
@@ -10217,7 +10204,7 @@
             "AAPL"
           ],
           "type": [
-            "earningsConferenceCallEvents"
+            "otherCorporate"
           ]
         }
       },
@@ -10227,7 +10214,7 @@
             "AAPL"
           ],
           "type": [
-            "otherCorporate"
+            "shareHoldersAnnualMeetingsEvents"
           ]
         }
       },
@@ -10247,7 +10234,27 @@
             "AAPL"
           ],
           "type": [
+            "earningsConferenceCallEvents"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
             "corporateConferenceCallEvents"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "corporateAnalystMeeting"
           ]
         }
       }

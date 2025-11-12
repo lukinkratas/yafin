@@ -1,4 +1,4 @@
-:::yafin.AsyncClient
+:::yafin.Client
     options:
         members:
         - __init__

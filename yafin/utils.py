@@ -160,7 +160,7 @@ def get_types_with_frequency(typ: str, frequency: str | None = None) -> str:
     return ','.join(types_with_frequency)
 
 
-def _get_func_name_and_args(func: Callable[..., Any], args: tuple[Any, ...]) -> str:
+def _get_func_name(func: Callable[..., Any], args: tuple[Any, ...]) -> str:
     """Helper function for function name logging.
 
     Args:
@@ -176,12 +176,12 @@ def _get_func_name_and_args(func: Callable[..., Any], args: tuple[Any, ...]) -> 
     return func.__name__
 
 
-def _log_args(func: Callable[..., Any]) -> Callable[..., Any]:
+def _async_log_args(func: Callable[..., Any]) -> Callable[..., Any]:
     """Decorator for logging functions."""
 
     @wraps(func)
     async def async_wrapper(*args: Any, **kwargs: Any) -> Any:
-        func_name = _get_func_name_and_args(func, args)
+        func_name = _get_func_name(func, args)
 
         logger.debug(f'{func_name} was called.')
         result = await func(*args, **kwargs)
@@ -190,3 +190,19 @@ def _log_args(func: Callable[..., Any]) -> Callable[..., Any]:
         return result
 
     return async_wrapper
+
+
+def _log_args(func: Callable[..., Any]) -> Callable[..., Any]:
+    """Decorator for logging functions."""
+
+    @wraps(func)
+    def wrapper(*args: Any, **kwargs: Any) -> Any:
+        func_name = _get_func_name(func, args)
+
+        logger.debug(f'{func_name} was called.')
+        result = func(*args, **kwargs)
+        logger.debug(f'{func_name} finished.')
+
+        return result
+
+    return wrapper

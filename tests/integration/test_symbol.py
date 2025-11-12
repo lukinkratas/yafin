@@ -1,4 +1,4 @@
-from typing import AsyncGenerator
+from typing import AsyncGenerator, Generator
 
 import pytest
 import pytest_asyncio
@@ -15,7 +15,7 @@ from tests._assertions import (
     _assert_search_response_json,
     _assert_timeseries_result,
 )
-from yafin import AsyncSymbol
+from yafin import AsyncSymbol, Symbol
 from yafin.const import (
     ANNUAL_BALANCE_SHEET_TYPES,
     ANNUAL_CASH_FLOW_TYPES,
@@ -25,50 +25,45 @@ from yafin.const import (
 
 
 class TestUnitSymbol:
-    """Integration tests for yafin.symbol module."""
+    """Integration tests for yafin.Symbol."""
 
-    @pytest_asyncio.fixture
-    async def symbol(self, ticker: str) -> AsyncGenerator[AsyncSymbol, None]:
-        """Fixture for AsyncSymbol."""
-        async with AsyncSymbol(ticker) as symbol:
+    @pytest.fixture
+    def symbol(self, ticker: str) -> Generator[Symbol, None, None]:
+        """Fixture for Symbol."""
+        with Symbol(ticker) as symbol:
             yield symbol
 
     @pytest.mark.integration
-    @pytest.mark.asyncio
-    async def test_get_chart(self, symbol: AsyncSymbol) -> None:
+    def test_get_chart(self, symbol: Symbol) -> None:
         """Test get_chart method."""
-        chart_result = await symbol.get_chart(interval='1d', period_range='1y')
+        chart_result = symbol.get_chart(interval='1d', period_range='1y')
         _assert_chart_result(chart_result, symbol.ticker)
 
     @pytest.mark.integration
-    @pytest.mark.asyncio
-    async def test_get_quote(self, symbol: AsyncSymbol) -> None:
+    def test_get_quote(self, symbol: Symbol) -> None:
         """Test get_quote method."""
-        quote_result = await symbol.get_quote()
+        quote_result = symbol.get_quote()
         _assert_quote_result(quote_result, symbol.ticker)
 
     @pytest.mark.integration
-    @pytest.mark.asyncio
-    async def test_get_quote_type(self, symbol: AsyncSymbol) -> None:
+    def test_get_quote_type(self, symbol: Symbol) -> None:
         """Test get_quote_type method."""
-        quote_type_result = await symbol.get_quote_type()
+        quote_type_result = symbol.get_quote_type()
         _assert_quote_type_result(quote_type_result, symbol.ticker)
 
     @pytest.mark.integration
-    @pytest.mark.asyncio
-    async def test_get_quote_summary_all_modules(self, symbol: AsyncSymbol) -> None:
+    def test_get_quote_summary_all_modules(self, symbol: Symbol) -> None:
         """Test get_quote_summary_all_modules method."""
-        quote_summary_all_modules = await symbol.get_quote_summary_all_modules()
+        quote_summary_all_modules = symbol.get_quote_summary_all_modules()
         _assert_quote_summary_result(
             quote_summary_all_modules, modules=QUOTE_SUMMARY_MODULES
         )
 
     @pytest.mark.integration
-    @pytest.mark.asyncio
-    async def test_get_income_statement(self, symbol: AsyncSymbol) -> None:
+    def test_get_income_statement(self, symbol: Symbol) -> None:
         """Test get_income_statement method."""
         frequency = 'annual'
-        annual_income_stmt = await symbol.get_income_statement(frequency)
+        annual_income_stmt = symbol.get_income_statement(frequency)
         _assert_timeseries_result(
             annual_income_stmt,
             types=ANNUAL_INCOME_STATEMENT_TYPES,
@@ -76,56 +71,160 @@ class TestUnitSymbol:
         )
 
     @pytest.mark.integration
-    @pytest.mark.asyncio
-    async def test_get_balance_sheet(self, symbol: AsyncSymbol) -> None:
+    def test_get_balance_sheet(self, symbol: Symbol) -> None:
         """Test get_balance_sheet method."""
         frequency = 'annual'
-        annual_balance_sheet = await symbol.get_balance_sheet(frequency)
+        annual_balance_sheet = symbol.get_balance_sheet(frequency)
         _assert_timeseries_result(
             annual_balance_sheet, types=ANNUAL_BALANCE_SHEET_TYPES, ticker=symbol.ticker
         )
 
     @pytest.mark.integration
-    @pytest.mark.asyncio
-    async def test_get_cash_flow(self, symbol: AsyncSymbol) -> None:
+    def test_get_cash_flow(self, symbol: Symbol) -> None:
         """Test get_cash_flow method."""
         frequency = 'annual'
-        annual_cash_flow = await symbol.get_cash_flow(frequency)
+        annual_cash_flow = symbol.get_cash_flow(frequency)
         _assert_timeseries_result(
             annual_cash_flow, types=ANNUAL_CASH_FLOW_TYPES, ticker=symbol.ticker
         )
 
     @pytest.mark.integration
-    @pytest.mark.asyncio
-    async def test_get_options(self, symbol: AsyncSymbol) -> None:
+    def test_get_options(self, symbol: Symbol) -> None:
         """Test get_options method."""
-        options = await symbol.get_options()
+        options = symbol.get_options()
         _assert_options_result(options, symbol.ticker)
 
     @pytest.mark.integration
-    @pytest.mark.asyncio
-    async def test_get_search(self, symbol: AsyncSymbol) -> None:
+    def test_get_search(self, symbol: Symbol) -> None:
         """Test get_search method."""
-        search = await symbol.get_search()
+        search = symbol.get_search()
+        _assert_search_response_json(search)
+
+    @pytest.mark.integration
+    def test_get_recommendations(self, symbol: Symbol) -> None:
+        """Test get_recommendations method."""
+        recommendations = symbol.get_recommendations()
+        _assert_recommendation_result(recommendations, symbol.ticker)
+
+    @pytest.mark.integration
+    def test_get_insights(self, symbol: Symbol) -> None:
+        """Test get_insights method."""
+        insights = symbol.get_insights()
+        _assert_insight_result(insights, symbol.ticker)
+
+    @pytest.mark.integration
+    def test_get_ratings(self, symbol: Symbol) -> None:
+        """Test get_ratings method."""
+        ratings = symbol.get_ratings()
+        _assert_ratings_response_json(ratings)
+
+
+class TestUnitAsyncSymbol:
+    """Integration tests for yafin.AsyncSymbol."""
+
+    @pytest_asyncio.fixture
+    async def async_symbol(self, ticker: str) -> AsyncGenerator[AsyncSymbol, None]:
+        """Fixture for AsyncSymbol."""
+        async with AsyncSymbol(ticker) as async_symbol:
+            yield async_symbol
+
+    @pytest.mark.integration
+    @pytest.mark.asyncio
+    async def test_get_chart(self, async_symbol: AsyncSymbol) -> None:
+        """Test get_chart method."""
+        chart_result = await async_symbol.get_chart(interval='1d', period_range='1y')
+        _assert_chart_result(chart_result, async_symbol.ticker)
+
+    @pytest.mark.integration
+    @pytest.mark.asyncio
+    async def test_get_quote(self, async_symbol: AsyncSymbol) -> None:
+        """Test get_quote method."""
+        quote_result = await async_symbol.get_quote()
+        _assert_quote_result(quote_result, async_symbol.ticker)
+
+    @pytest.mark.integration
+    @pytest.mark.asyncio
+    async def test_get_quote_type(self, async_symbol: AsyncSymbol) -> None:
+        """Test get_quote_type method."""
+        quote_type_result = await async_symbol.get_quote_type()
+        _assert_quote_type_result(quote_type_result, async_symbol.ticker)
+
+    @pytest.mark.integration
+    @pytest.mark.asyncio
+    async def test_get_quote_summary_all_modules(
+        self, async_symbol: AsyncSymbol
+    ) -> None:
+        """Test get_quote_summary_all_modules method."""
+        quote_summary_all_modules = await async_symbol.get_quote_summary_all_modules()
+        _assert_quote_summary_result(
+            quote_summary_all_modules, modules=QUOTE_SUMMARY_MODULES
+        )
+
+    @pytest.mark.integration
+    @pytest.mark.asyncio
+    async def test_get_income_statement(self, async_symbol: AsyncSymbol) -> None:
+        """Test get_income_statement method."""
+        frequency = 'annual'
+        annual_income_stmt = await async_symbol.get_income_statement(frequency)
+        _assert_timeseries_result(
+            annual_income_stmt,
+            types=ANNUAL_INCOME_STATEMENT_TYPES,
+            ticker=async_symbol.ticker,
+        )
+
+    @pytest.mark.integration
+    @pytest.mark.asyncio
+    async def test_get_balance_sheet(self, async_symbol: AsyncSymbol) -> None:
+        """Test get_balance_sheet method."""
+        frequency = 'annual'
+        annual_balance_sheet = await async_symbol.get_balance_sheet(frequency)
+        _assert_timeseries_result(
+            annual_balance_sheet,
+            types=ANNUAL_BALANCE_SHEET_TYPES,
+            ticker=async_symbol.ticker,
+        )
+
+    @pytest.mark.integration
+    @pytest.mark.asyncio
+    async def test_get_cash_flow(self, async_symbol: AsyncSymbol) -> None:
+        """Test get_cash_flow method."""
+        frequency = 'annual'
+        annual_cash_flow = await async_symbol.get_cash_flow(frequency)
+        _assert_timeseries_result(
+            annual_cash_flow, types=ANNUAL_CASH_FLOW_TYPES, ticker=async_symbol.ticker
+        )
+
+    @pytest.mark.integration
+    @pytest.mark.asyncio
+    async def test_get_options(self, async_symbol: AsyncSymbol) -> None:
+        """Test get_options method."""
+        options = await async_symbol.get_options()
+        _assert_options_result(options, async_symbol.ticker)
+
+    @pytest.mark.integration
+    @pytest.mark.asyncio
+    async def test_get_search(self, async_symbol: AsyncSymbol) -> None:
+        """Test get_search method."""
+        search = await async_symbol.get_search()
         _assert_search_response_json(search)
 
     @pytest.mark.integration
     @pytest.mark.asyncio
-    async def test_get_recommendations(self, symbol: AsyncSymbol) -> None:
+    async def test_get_recommendations(self, async_symbol: AsyncSymbol) -> None:
         """Test get_recommendations method."""
-        recommendations = await symbol.get_recommendations()
-        _assert_recommendation_result(recommendations, symbol.ticker)
+        recommendations = await async_symbol.get_recommendations()
+        _assert_recommendation_result(recommendations, async_symbol.ticker)
 
     @pytest.mark.integration
     @pytest.mark.asyncio
-    async def test_get_insights(self, symbol: AsyncSymbol) -> None:
+    async def test_get_insights(self, async_symbol: AsyncSymbol) -> None:
         """Test get_insights method."""
-        insights = await symbol.get_insights()
-        _assert_insight_result(insights, symbol.ticker)
+        insights = await async_symbol.get_insights()
+        _assert_insight_result(insights, async_symbol.ticker)
 
     @pytest.mark.integration
     @pytest.mark.asyncio
-    async def test_get_ratings(self, symbol: AsyncSymbol) -> None:
+    async def test_get_ratings(self, async_symbol: AsyncSymbol) -> None:
         """Test get_ratings method."""
-        ratings = await symbol.get_ratings()
+        ratings = await async_symbol.get_ratings()
         _assert_ratings_response_json(ratings)

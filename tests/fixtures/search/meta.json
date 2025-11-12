@@ -1,6 +1,6 @@
 {
   "explains": [],
-  "count": 20,
+  "count": 16,
   "quotes": [
     {
       "exchange": "NMS",
@@ -8,16 +8,18 @@
       "quoteType": "EQUITY",
       "symbol": "META",
       "index": "quotes",
-      "score": 11704500.0,
+      "score": 12129500.0,
       "typeDisp": "Equity",
       "longname": "Meta Platforms, Inc.",
       "exchDisp": "NASDAQ",
       "sector": "Communication Services",
+      "sectorDisp": "Communication Services",
       "industry": "Internet Content & Information",
+      "industryDisp": "Internet Content & Information",
       "dispSecIndFlag": true,
       "isYahooFinance": true,
       "prevName": "Facebook, Inc.",
-      "nameChangeDate": "2025-11-10"
+      "nameChangeDate": "2025-11-11"
     },
     {
       "exchange": "NYQ",
@@ -25,12 +27,14 @@
       "quoteType": "EQUITY",
       "symbol": "WPM",
       "index": "quotes",
-      "score": 20261.0,
+      "score": 20342.0,
       "typeDisp": "Equity",
       "longname": "Wheaton Precious Metals Corp.",
       "exchDisp": "NYSE",
       "sector": "Basic Materials",
+      "sectorDisp": "Basic Materials",
       "industry": "Gold",
+      "industryDisp": "Gold",
       "isYahooFinance": true
     },
     {
@@ -39,12 +43,14 @@
       "quoteType": "EQUITY",
       "symbol": "SVM",
       "index": "quotes",
-      "score": 20061.0,
+      "score": 20104.0,
       "typeDisp": "Equity",
       "longname": "Silvercorp Metals Inc.",
       "exchDisp": "NYSE MKT",
       "sector": "Basic Materials",
+      "sectorDisp": "Basic Materials",
       "industry": "Silver",
+      "industryDisp": "Silver",
       "isYahooFinance": true
     },
     {
@@ -53,15 +59,33 @@
       "quoteType": "EQUITY",
       "symbol": "TMC",
       "index": "quotes",
-      "score": 20054.0,
+      "score": 20094.0,
       "typeDisp": "Equity",
       "longname": "TMC the metals company Inc.",
       "exchDisp": "NASDAQ",
       "sector": "Basic Materials",
+      "sectorDisp": "Basic Materials",
       "industry": "Other Industrial Metals & Mining",
+      "industryDisp": "Other Industrial Metals & Mining",
       "isYahooFinance": true,
       "prevName": "Sustainable Opportunities Acquisition Corp.",
-      "nameChangeDate": "2025-11-10"
+      "nameChangeDate": "2025-11-11"
+    },
+    {
+      "exchange": "VAN",
+      "shortname": "SILVER TIGER METALS INC",
+      "quoteType": "EQUITY",
+      "symbol": "SLVR.V",
+      "index": "quotes",
+      "score": 20081.0,
+      "typeDisp": "Equity",
+      "longname": "Silver Tiger Metals Inc.",
+      "exchDisp": "CDNX",
+      "sector": "Basic Materials",
+      "sectorDisp": "Basic Materials",
+      "industry": "Other Precious Metals & Mining",
+      "industryDisp": "Other Precious Metals & Mining",
+      "isYahooFinance": true
     },
     {
       "exchange": "NGM",
@@ -69,12 +93,14 @@
       "quoteType": "EQUITY",
       "symbol": "CRML",
       "index": "quotes",
-      "score": 20052.0,
+      "score": 20061.0,
       "typeDisp": "Equity",
       "longname": "Critical Metals Corp.",
       "exchDisp": "NASDAQ",
       "sector": "Basic Materials",
+      "sectorDisp": "Basic Materials",
       "industry": "Other Industrial Metals & Mining",
+      "industryDisp": "Other Industrial Metals & Mining",
       "isYahooFinance": true
     },
     {
@@ -83,45 +109,35 @@
       "quoteType": "EQUITY",
       "symbol": "DMX.V",
       "index": "quotes",
-      "score": 20045.0,
+      "score": 20058.0,
       "typeDisp": "Equity",
       "longname": "District Metals Corp.",
       "exchDisp": "CDNX",
       "sector": "Basic Materials",
+      "sectorDisp": "Basic Materials",
       "industry": "Other Industrial Metals & Mining",
-      "isYahooFinance": true
-    },
-    {
-      "exchange": "PCX",
-      "shortname": "VanEck Rare Earth and Strategic",
-      "quoteType": "ETF",
-      "symbol": "REMX",
-      "index": "quotes",
-      "score": 20044.0,
-      "typeDisp": "ETF",
-      "longname": "VanEck Rare Earth and Strategic Metals ETF",
-      "exchDisp": "NYSEArca",
+      "industryDisp": "Other Industrial Metals & Mining",
       "isYahooFinance": true
     }
   ],
   "news": [
     {
-      "uuid": "0102c8ba-4095-3cb6-88c7-8d10f13b7e0f",
-      "title": "Meta's,Tesla's, Alphabet's and Amazon are part of Zacks Earnings Preview",
-      "publisher": "Zacks",
-      "link": "https://finance.yahoo.com/news/metas-teslas-alphabets-amazon-part-074500249.html",
-      "providerPublishTime": 1762847100,
+      "uuid": "45e60972-12d3-3dbe-a1f0-6591352e48e4",
+      "title": "Nasdaq Loses Early Gains",
+      "publisher": "Barrons.com",
+      "link": "https://finance.yahoo.com/m/45e60972-12d3-3dbe-a1f0-6591352e48e4/nasdaq-loses-early-gains.html",
+      "providerPublishTime": 1762959719,
       "type": "STORY",
       "thumbnail": {
         "resolutions": [
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/SlqJfx4XpAvRjkWK4aXy4Q--~B/aD00MTM7dz02MjA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/zacks.com/17cc0333095b09f772bd2f43476ed240",
-            "width": 620,
-            "height": 413,
+            "url": "https://s.yimg.com/uu/api/res/1.2/_kc6REYMS1JrAuV5bYtjfA--~B/aD02NTt3PTMyMDthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/Barrons.com/12ea0f43d8f8307249a68d1cb2e0587e",
+            "width": 320,
+            "height": 65,
             "tag": "original"
           },
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/mfg.Fi.zjgRltcD0pQeSJA--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/zacks.com/17cc0333095b09f772bd2f43476ed240",
+            "url": "https://s.yimg.com/uu/api/res/1.2/5waH37HKuL3X52B3V2GWrw--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/Barrons.com/12ea0f43d8f8307249a68d1cb2e0587e",
             "width": 140,
             "height": 140,
             "tag": "140x140"
@@ -129,166 +145,122 @@
         ]
       },
       "relatedTickers": [
-        "TSLA",
-        "GOOGL",
-        "AMZN",
-        "META"
-      ]
-    },
-    {
-      "uuid": "c84679b8-1c45-3ed9-bd56-fe112caeabd6",
-      "title": "CoreWeave Inc (CRWV) Q3 2025 Earnings Call Highlights: Record Revenue Growth Amid ...",
-      "publisher": "GuruFocus.com",
-      "link": "https://finance.yahoo.com/news/coreweave-inc-crwv-q3-2025-050636392.html",
-      "providerPublishTime": 1762837596,
-      "type": "STORY",
-      "relatedTickers": [
-        "CRWV",
-        "META",
-        "OPAI.PVT"
-      ]
-    },
-    {
-      "uuid": "8f116ed3-f909-3d70-abc8-24091197117c",
-      "title": "CoreWeave\u2019s earnings report highlights $56 billion in contracted revenue, but its guidance and share price tick down amid AI infrastructure bubble fears",
-      "publisher": "Fortune",
-      "link": "https://finance.yahoo.com/news/coreweave-earnings-report-highlights-56-012249708.html",
-      "providerPublishTime": 1762824169,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/wZm91SRApDme_jdIuVyRwQ--~B/aD0xMzY1O3c9MjA0ODthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/fortune_175/acf8cde30b1d84d7bbac4ebb684f4c28",
-            "width": 2048,
-            "height": 1365,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/r4uwM.rbITnZNkISGpF3lg--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/fortune_175/acf8cde30b1d84d7bbac4ebb684f4c28",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "CRWV",
-        "META",
-        "OPAI.PVT",
-        "NVDA"
-      ]
-    },
-    {
-      "uuid": "825bcc6e-3d1e-328c-9fdc-741d374901e8",
-      "title": "Bernstein Remains Bullish on Dollar General (DG), Maintains Buy Call",
-      "publisher": "Insider Monkey",
-      "link": "https://finance.yahoo.com/news/bernstein-remains-bullish-dollar-general-231326445.html",
-      "providerPublishTime": 1762816406,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/.bzqlaCEEG0TSoXKzHWZxw--~B/aD0xNDQwO3c9MTkyMDthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/insidermonkey.com/457d2a21b4e2344046e946737984550c",
-            "width": 1920,
-            "height": 1440,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/uEKWe1chvAY4jEkDVOEO3A--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/insidermonkey.com/457d2a21b4e2344046e946737984550c",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "DG",
-        "DBX",
-        "META",
-        "MSFT"
-      ]
-    },
-    {
-      "uuid": "9dbaf505-ac6b-37b4-a453-50dab5e37888",
-      "title": "Goldman Sachs Says AI Boom Will Supercharge Energy Demand",
-      "publisher": "Oilprice.com",
-      "link": "https://finance.yahoo.com/news/goldman-sachs-says-ai-boom-230000443.html",
-      "providerPublishTime": 1762815600,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/TX9xIybRCuuHWoLMA.uQ.A--~B/aD0zMDA7dz03MTg7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/oilprice.com/02852c07f62519976560eed38e034998",
-            "width": 718,
-            "height": 300,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/_NWIZUVzzgud6dfV3ZHzIw--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/oilprice.com/02852c07f62519976560eed38e034998",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "META",
+        "^IXIC",
+        "^SPX",
         "NVDA",
-        "AMZN",
-        "AAPL",
-        "OPAI.PVT"
-      ]
-    },
-    {
-      "uuid": "4205eaa9-f620-3a0b-a81a-0e82c7c9fd0b",
-      "title": "Magnificent Seven Stocks: Nvidia, Tesla, Amazon, Meta Rally",
-      "publisher": "Investor's Business Daily",
-      "link": "https://finance.yahoo.com/m/4205eaa9-f620-3a0b-a81a-0e82c7c9fd0b/magnificent-seven-stocks%3A.html",
-      "providerPublishTime": 1762813166,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/dH2T4UlHg7A40njz2aVZLw--~B/aD01NjM7dz0xMDAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/ibd.com/0682fdd5dad13df00d702863d79378a1",
-            "width": 1000,
-            "height": 563,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/jlpxz0owXM2yWj9DtnTWIQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/ibd.com/0682fdd5dad13df00d702863d79378a1",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "NVDA",
-        "TSLA",
-        "AMZN",
-        "AAPL",
         "MSFT",
+        "AAPL",
+        "AMZN",
         "GOOGL",
-        "META"
+        "META",
+        "TSLA"
       ]
     },
     {
-      "uuid": "1752a21e-8a11-383a-b2ef-20ab513c621e",
-      "title": "AI\u2019s $5 Trillion Data-Center Boom Will Dip Into Every Debt Market, JPMorgan Says",
-      "publisher": "Bloomberg",
-      "link": "https://finance.yahoo.com/news/ai-5-trillion-data-center-165808446.html",
-      "providerPublishTime": 1762812273,
+      "uuid": "a48e7a84-bfc1-381b-b096-9baa72322c75",
+      "title": "Arm Stock Delivered a Smashing Quarter. It Wasn't Enough.",
+      "publisher": "Motley Fool",
+      "link": "https://finance.yahoo.com/m/a48e7a84-bfc1-381b-b096-9baa72322c75/arm-stock-delivered-a.html",
+      "providerPublishTime": 1762959180,
       "type": "STORY",
       "thumbnail": {
         "resolutions": [
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/vedl6twMhBXmX0v3H5sW6g--~B/aD0zNDEwO3c9NTAyNTthcHBpZD15dGFjaHlvbg--/https://s.yimg.com/os/creatr-uploaded-images/2025-11/04b0f520-be5c-11f0-b5dd-7e9f6a826f7b",
-            "width": 5025,
-            "height": 3410,
+            "url": "https://s.yimg.com/uu/api/res/1.2/BWhsf6J3SwhrBADxtPfjuw--~B/aD02NzU7dz0xMjAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/85d3726d6eac3b4725e41896ac3c66f6",
+            "width": 1200,
+            "height": 675,
             "tag": "original"
           },
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/CFL8AFeSnL1T9b.URxkssQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://s.yimg.com/os/creatr-uploaded-images/2025-11/04b0f520-be5c-11f0-b5dd-7e9f6a826f7b",
+            "url": "https://s.yimg.com/uu/api/res/1.2/.oLe_5S_O7AjuW4LwtLB4g--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/85d3726d6eac3b4725e41896ac3c66f6",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "ARM",
+        "NVDA",
+        "GOOGL",
+        "AMZN",
+        "MSFT",
+        "META"
+      ]
+    },
+    {
+      "uuid": "12f1e779-6246-3ca0-bda6-4e7dae5ab4d0",
+      "title": "How Does Meta Make Money?",
+      "publisher": "Motley Fool",
+      "link": "https://finance.yahoo.com/m/12f1e779-6246-3ca0-bda6-4e7dae5ab4d0/how-does-meta-make-money%3F.html",
+      "providerPublishTime": 1762957800,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/_ssnCOo4p9DQH81Fg7VCHw--~B/aD05MzM7dz0xNDAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/7fde42993d20f045334f19e559a8aa16",
+            "width": 1400,
+            "height": 933,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/8aQMC8f.UhbHJiijLa.9Zw--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/7fde42993d20f045334f19e559a8aa16",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "META"
+      ]
+    },
+    {
+      "uuid": "f732aa79-c016-39af-a475-71a469c34d30",
+      "title": "Can The Trade Desk Dominate the Open Internet With its AI Advantage?",
+      "publisher": "Zacks",
+      "link": "https://finance.yahoo.com/news/trade-desk-dominate-open-internet-124200220.html",
+      "providerPublishTime": 1762951320,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/STlhBEowCv.XyuBUVAeTcg--~B/aD0zNzI7dz02MjA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/zacks.com/f5b08f0077edcfd61649451d63d1ed39",
+            "width": 620,
+            "height": 372,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/U_4fgvQPWa02QZFrrSBibA--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/zacks.com/f5b08f0077edcfd61649451d63d1ed39",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "GOOGL",
+        "AMZN",
+        "META"
+      ]
+    },
+    {
+      "uuid": "d3e2c4c4-d4da-31a7-9c50-6c174293c7a0",
+      "title": "Meta's AI Pioneer Yann LeCun Leaves to Build His Own Startup",
+      "publisher": "GuruFocus.com",
+      "link": "https://finance.yahoo.com/news/metas-ai-pioneer-yann-lecun-121358965.html",
+      "providerPublishTime": 1762949638,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/l4RQ9ctGoVJ.pATDH._65Q--~B/aD0xOTIwO3c9MTkyMDthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/us.finance.gurufocus/0a1fabbe0615fb9205b4c17d7c6011e3",
+            "width": 1920,
+            "height": 1920,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/VUt4xocHBmNOSFpKPnmsyA--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/us.finance.gurufocus/0a1fabbe0615fb9205b4c17d7c6011e3",
             "width": 140,
             "height": 140,
             "tag": "140x140"
@@ -297,26 +269,26 @@
       },
       "relatedTickers": [
         "META",
-        "ORCL"
+        "FCHDF"
       ]
     },
     {
-      "uuid": "4b3caeb5-c394-304a-a422-cd7e39c56707",
-      "title": "CoreWeave flags hit from data center delay, shares fall",
-      "publisher": "Reuters",
-      "link": "https://finance.yahoo.com/news/coreweave-beats-third-quarter-revenue-211211858.html",
-      "providerPublishTime": 1762809131,
+      "uuid": "91528dae-622c-3044-978a-925ab164d5b8",
+      "title": "Pinterest Down 16.6% in 6 Months: Should it Be in Your Portfolio?",
+      "publisher": "Zacks",
+      "link": "https://finance.yahoo.com/news/pinterest-down-16-6-6-120200171.html",
+      "providerPublishTime": 1762948920,
       "type": "STORY",
       "thumbnail": {
         "resolutions": [
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/3.kvJm_hKzn1325eDRL4wA--~B/aD01MzM7dz04MDA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/reuters-finance.com/91bf6d2a66c015a63bd4df11123370b6",
-            "width": 800,
-            "height": 533,
+            "url": "https://s.yimg.com/uu/api/res/1.2/GUeNuMH1fIAzTqnG5Y.EpA--~B/aD00MDA7dz02MzU7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/zacks.com/6f95cc3c9f25e35e63789244ef74fa5f",
+            "width": 635,
+            "height": 400,
             "tag": "original"
           },
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/hRX3krF4K9HQ73YXNwEZDQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/reuters-finance.com/91bf6d2a66c015a63bd4df11123370b6",
+            "url": "https://s.yimg.com/uu/api/res/1.2/Ou5ZhQ5S0FcYRexodU3w5w--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/zacks.com/6f95cc3c9f25e35e63789244ef74fa5f",
             "width": 140,
             "height": 140,
             "tag": "140x140"
@@ -324,7 +296,67 @@
         ]
       },
       "relatedTickers": [
-        "CRWV",
+        "PINS",
+        "SNAP",
+        "META"
+      ]
+    },
+    {
+      "uuid": "f5e6f9fd-26d3-3136-a8d7-706dedb3440f",
+      "title": "S&P 500 May Break 7,000 Barrier Before Year-End, Wells Fargo Predicts",
+      "publisher": "GuruFocus.com",
+      "link": "https://finance.yahoo.com/news/p-500-may-break-7-120049178.html",
+      "providerPublishTime": 1762948849,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/A3YulXBFdbJzddzlniIeTw--~B/aD0zMDI0O3c9NDAzMjthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/us.finance.gurufocus/3f0fadc03766c37610f4c25591e85beb",
+            "width": 4032,
+            "height": 3024,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/BV.1uSg_f4EvO.4Na6CNDg--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/us.finance.gurufocus/3f0fadc03766c37610f4c25591e85beb",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "WFC",
+        "^SPX",
+        "META",
+        "GOOGL"
+      ]
+    },
+    {
+      "uuid": "4e9fff1e-0918-3dfe-8736-26f770203209",
+      "title": "Innoviz Reports Third Quarter 2025 Results",
+      "publisher": "PR Newswire",
+      "link": "https://finance.yahoo.com/news/innoviz-reports-third-quarter-2025-120000252.html",
+      "providerPublishTime": 1762948800,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/gluUp5gl8hx8zCqEQ7K6aA--~B/aD0xMjY7dz00MDA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/prnewswire.com/05329d4489b9744620a914cde822ca22",
+            "width": 400,
+            "height": 126,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/.2UjpJgSkDRv2NBhZHyCCA--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/prnewswire.com/05329d4489b9744620a914cde822ca22",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "INVZW",
+        "INVZ",
         "META"
       ]
     }
@@ -335,56 +367,11 @@
       "navUrl": "https://finance.yahoo.com/sectors/industrials/metal-fabrication"
     }
   ],
-  "lists": [
-    {
-      "index": "2b0f0d69-53ad-4a85-bcd6-8b6c1035bd33",
-      "id": "2b0f0d69-53ad-4a85-bcd6-8b6c1035bd33",
-      "title": "Precious Metal Mutual Funds",
-      "canonicalName": "PRECIOUS_METAL_MUTUAL_FUNDS",
-      "score": 1.0,
-      "type": "PREDEFINED_SCREENER",
-      "total": 53,
-      "isPremium": false,
-      "iconUrl": "https://edgecast-img.yahoo.net/mysterio/api/b241f4b88dcc1439d37ed7dd74c3ee884516f53bc29bc8eece9b9fcf5c850fe8/finance/resizefill_w96_h96/https://s.yimg.com/cv/apiv2/fin/img/assets/predefined_screeners/diamond.png"
-    },
-    {
-      "index": "ca67a1b3-572c-433c-b1a4-a0da3738fc14",
-      "id": "ca67a1b3-572c-433c-b1a4-a0da3738fc14",
-      "title": "Commodity Metal Mutual Funds",
-      "canonicalName": "COMMODITY_MUTUAL_FUNDS",
-      "score": 1.0,
-      "type": "PREDEFINED_SCREENER",
-      "total": 82,
-      "isPremium": false,
-      "iconUrl": "https://edgecast-img.yahoo.net/mysterio/api/683fd6c45c5d4d5905e2caf5cd56ab1ab1c4e7d168bee45d8047945dc48ab943/finance/resizefill_w96_h96/https://s.yimg.com/cv/apiv2/fin/img/assets/predefined_screeners/theme.png"
-    },
-    {
-      "index": "05acca9e-1aee-44b6-8224-c92459eb2ed8",
-      "id": "05acca9e-1aee-44b6-8224-c92459eb2ed8",
-      "title": "Metal Fabrication",
-      "canonicalName": "METAL_FABRICATION",
-      "score": 1.0,
-      "type": "PREDEFINED_SCREENER",
-      "total": 12,
-      "isPremium": false,
-      "iconUrl": "https://edgecast-img.yahoo.net/mysterio/api/b241f4b88dcc1439d37ed7dd74c3ee884516f53bc29bc8eece9b9fcf5c850fe8/finance/resizefill_w96_h96/https://s.yimg.com/cv/apiv2/fin/img/assets/predefined_screeners/diamond.png"
-    },
-    {
-      "index": "63e7f272-cd8d-4307-9002-eb98746a036a",
-      "id": "63e7f272-cd8d-4307-9002-eb98746a036a",
-      "title": "Precious Metal ETFs",
-      "canonicalName": "PRECIOUS_METAL_ETFS",
-      "score": 1.0,
-      "type": "PREDEFINED_SCREENER",
-      "total": 14,
-      "isPremium": false,
-      "iconUrl": "https://edgecast-img.yahoo.net/mysterio/api/b241f4b88dcc1439d37ed7dd74c3ee884516f53bc29bc8eece9b9fcf5c850fe8/finance/resizefill_w96_h96/https://s.yimg.com/cv/apiv2/fin/img/assets/predefined_screeners/diamond.png"
-    }
-  ],
+  "lists": [],
   "researchReports": [],
   "screenerFieldResults": [],
-  "totalTime": 76,
-  "timeTakenForQuotes": 448,
+  "totalTime": 49,
+  "timeTakenForQuotes": 425,
   "timeTakenForNews": 700,
   "timeTakenForAlgowatchlist": 400,
   "timeTakenForPredefinedScreener": 400,
