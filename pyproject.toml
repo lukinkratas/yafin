@@ -39,6 +39,11 @@ test = [
     "pytest-cov>=4.0.0",
     "typeguard>=4.4.4",
 ]
+performance = [
+    "pytest-benchmark>=5.2.3",
+    "yfinance>=0.2.66",
+    "pandas>=2.3.3",
+]
 doc = [
     "mkdocs>=1.6.1",
     "mkdocs-material>=9.6.22",

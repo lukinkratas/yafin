@@ -22,6 +22,7 @@ def _get_json_fixture(file_name: str, folder_name: str | None = None) -> dict[st
 
 def _mock_200_response(
     mocker: MockerFixture,
+    patched_method: str,
     response_json: dict[str, Any] | None = None,
     text: str | None = None,
     async_mock: bool = False,
@@ -38,16 +39,12 @@ def _mock_200_response(
         mock_response.text = text
 
     mock_class = mocker.AsyncMock if async_mock else mocker.Mock
-    target = (
-        'yafin.client.AsyncSession.request'
-        if async_mock
-        else 'yafin.client.Session.request'
-    )
-    mocker.patch(target, new=mock_class(return_value=mock_response))
+    mocker.patch(patched_method, new=mock_class(return_value=mock_response))
 
 
 def _mock_404_response(
     mocker: MockerFixture,
+    patched_method: str,
     response_json: dict[str, Any] | None = None,
     text: str | None = None,
     async_mock: bool = False,
@@ -66,9 +63,4 @@ def _mock_404_response(
         mock_response.text = text
 
     mock_class = mocker.AsyncMock if async_mock else mocker.Mock
-    target = (
-        'yafin.client.AsyncSession.request'
-        if async_mock
-        else 'yafin.client.Session.request'
-    )
-    mocker.patch(target, new=mock_class(return_value=mock_response))
+    mocker.patch(patched_method, new=mock_class(return_value=mock_response))

@@ -1,4 +1,4 @@
-.PHONY: install install-all install-dev install-test install-doc install-editable format format lint lint-fix typecheck fetch-mocks test test-int test-all build doc doc-serve
+.PHONY: install install-all install-dev install-test install-doc install-editable format format lint lint-fix typecheck fetch-mocks test test-int test-perf test-all build doc doc-serve
 
 help:
 	@echo "Available targets:"
@@ -15,6 +15,7 @@ help:
 	@echo "  fetch-mocks      - Run script to fetch json mocks for fixtures"
 	@echo "  test             - Run unit tests"
 	@echo "  test-int         - Run integration tests"
+	@echo "  test-perf        - Run performance tests"
 	@echo "  test-all         - Run all tests with html coverage"
 	@echo "  clean            - Clean up - remove htmlcov, __pycache__, pytest mypy and ruff cache dirs"
 	@echo "  build            - Build package - bdist wheel and sdist"
@@ -57,11 +58,15 @@ fetch-mocks:
 
 test:
 	$(MAKE) install-editable
-	uv run --group test pytest -m "not integration and not performance and not baseline" -p no:warnings --cov=yafin --cov-report=term-missing --cov-branch
+	uv run --group test pytest -m "not integration and not performance" -p no:warnings --cov=yafin --cov-report=term-missing --cov-branch
 
 test-int:
 	$(MAKE) install-editable
 	uv run --group test pytest -m integration -p no:warnings --cov=yafin --cov-report=term-missing --cov-branch
+
+test-perf:
+	$(MAKE) install-editable
+	uv run --group performance pytest -m performance --benchmark-autosave -p no:warnings
 
 test-all:
 	$(MAKE) install-editable

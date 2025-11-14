@@ -162,7 +162,7 @@ class Client(ClientBase):
             try:
                 logger.debug(f'Request no. {attempt}/{self.max_retries} - started.')
                 self._get_session()
-                response = self._session.request(method='GET', **kwargs)
+                response = self._session.get(**kwargs)
                 response.raise_for_status()
                 logger.debug(f'Request no. {attempt}/{self.max_retries} - succeeded.')
                 return response
@@ -664,7 +664,7 @@ class AsyncClient(ClientBase):
             try:
                 logger.debug(f'Request no. {attempt}/{self.max_retries} - started.')
                 self._get_session()
-                response = await self._session.request(method='GET', **kwargs)
+                response = await self._session.get(**kwargs)
                 response.raise_for_status()
                 logger.debug(f'Request no. {attempt}/{self.max_retries} - succeeded.')
                 return response

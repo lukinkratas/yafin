@@ -2,10 +2,8 @@
 
 - [ ] pytest-benchmark sync symbol vs yfinance
 - [ ] multi symbols
-
 - [ ] publish to pypi test
 - [ ] publish
-- [ ] mcp
 
 - ~~[x] (sync) client and (sync) symbol ?~~
 - ~~[x] run unit tests w/o internet~~
