@@ -55,25 +55,25 @@ def start_date(end_date: int | float | None) -> int | float | None:
 
 @pytest.fixture(scope='session')
 def quote_json_mock(tickers_name: str) -> dict[str, Any]:
-    """Mock get_quote response json."""
+    """Quote response json mock."""
     return _get_json_fixture(file_name=f'{tickers_name}.json', folder_name='quote')
 
 
 @pytest.fixture(scope='session')
 def quote_type_json_mock(tickers_name: str) -> dict[str, Any]:
-    """Mock get_quote_type response json."""
+    """Quote_type response json mock."""
     return _get_json_fixture(file_name=f'{tickers_name}.json', folder_name='quote_type')
 
 
 @pytest.fixture(scope='session')
 def search_json_mock(tickers_name: str) -> dict[str, Any]:
-    """Mock search response json."""
+    """Search response json mock."""
     return _get_json_fixture(file_name=f'{tickers_name}.json', folder_name='search')
 
 
 @pytest.fixture(scope='session')
 def recommendations_json_mock(tickers_name: str) -> dict[str, Any]:
-    """Mock recommendations response json."""
+    """Recommendations response json mock."""
     return _get_json_fixture(
         file_name=f'{tickers_name}.json', folder_name='recommendations'
     )
@@ -81,13 +81,13 @@ def recommendations_json_mock(tickers_name: str) -> dict[str, Any]:
 
 @pytest.fixture(scope='session')
 def insights_json_mock(tickers_name: str) -> dict[str, Any]:
-    """Mock insights response json."""
+    """Insights response json mock."""
     return _get_json_fixture(file_name=f'{tickers_name}.json', folder_name='insights')
 
 
 @pytest.fixture(scope='session')
 def calendar_events_json_mock() -> dict[str, Any]:
-    """Mock currencies response json."""
+    """Currencies response json mock."""
     return _get_json_fixture(file_name='calendar_events.json')
 
 

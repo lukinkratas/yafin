@@ -32,13 +32,13 @@ from yafin.symbol import _AsyncClientManager, _ClientManager
 
 @pytest.fixture(scope='session')
 def quote_json_mock(ticker: str) -> dict[str, Any]:
-    """Mock get_quote response json."""
+    """Quote response json mock."""
     return _get_json_fixture(file_name=f'{ticker.lower()}.json', folder_name='quote')
 
 
 @pytest.fixture(scope='session')
 def quote_type_json_mock(ticker: str) -> dict[str, Any]:
-    """Mock get_quote_type response json."""
+    """Quote_type response json mock."""
     return _get_json_fixture(
         file_name=f'{ticker.lower()}.json', folder_name='quote_type'
     )
@@ -46,13 +46,13 @@ def quote_type_json_mock(ticker: str) -> dict[str, Any]:
 
 @pytest.fixture(scope='session')
 def search_json_mock(ticker: str) -> dict[str, Any]:
-    """Mock search response json."""
+    """Search response json mock."""
     return _get_json_fixture(file_name=f'{ticker.lower()}.json', folder_name='search')
 
 
 @pytest.fixture(scope='session')
 def recommendations_json_mock(ticker: str) -> dict[str, Any]:
-    """Mock recommendations response json."""
+    """Recommendations response json mock."""
     return _get_json_fixture(
         file_name=f'{ticker.lower()}.json', folder_name='recommendations'
     )
@@ -60,13 +60,13 @@ def recommendations_json_mock(ticker: str) -> dict[str, Any]:
 
 @pytest.fixture(scope='session')
 def insights_json_mock(ticker: str) -> dict[str, Any]:
-    """Mock insights response json."""
+    """Insights response json mock."""
     return _get_json_fixture(file_name=f'{ticker.lower()}.json', folder_name='insights')
 
 
 @pytest.fixture(scope='session')
 def calendar_events_json_mock(ticker: str) -> dict[str, Any]:
-    """Mock quote summary response json with calendar events data."""
+    """Quote summary response json mock with calendar events data."""
     return _get_json_fixture(
         file_name=f'calendar_events_{ticker.lower()}.json', folder_name='quote_summary'
     )

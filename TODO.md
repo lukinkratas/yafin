@@ -1,7 +1,7 @@
 ## TODO
 
 - [ ] pytest-benchmark sync symbol vs yfinance
-- [ ] multi symbols
+- [ ] multi symbols support
 - [ ] publish to pypi test
 - [ ] publish
 

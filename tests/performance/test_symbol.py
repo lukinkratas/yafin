@@ -9,7 +9,7 @@ from pytest_benchmark.fixture import BenchmarkFixture
 from pytest_mock import MockerFixture
 from yfinance import Ticker
 
-from tests._utils import _mock_200_response
+from tests._utils import _mock_200_response, _get_json_fixture, _get_fixture_path
 from yafin import Symbol
 
 
@@ -61,15 +61,14 @@ def process_chart_like_yfinance(chart: dict[str, Any]) -> pd.DataFrame:
 
 @pytest.fixture(scope='session')
 def chart_json_mock() -> dict[str, Any]:
-    """Mock chart response json."""
-    json_path = pathlib.Path(__file__).resolve().parent.joinpath('meta.json')
-    return json.loads(json_path.read_text())
+    """Chart response json mock."""
+    return _get_json_fixture(file_name='meta.json', folder_name='performance')
 
 
 @pytest.fixture(scope='session')
 def expected_chart_df() -> pd.DataFrame:
-    """Mock chart response json."""
-    csv_path = pathlib.Path(__file__).resolve().parent.joinpath('meta.csv')
+    """Expected Chart DataFrame ficture."""
+    csv_path = _get_fixture_path(file_name='meta.csv', folder_name='performance')
     return pd.read_csv(csv_path)
 
 
