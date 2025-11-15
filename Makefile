@@ -62,7 +62,7 @@ test:
 
 test-int:
 	$(MAKE) install-editable
-	uv run --group test pytest -m integration -p no:warnings --cov=yafin --cov-report=term-missing --cov-branch
+	uv run --group test pytest -m integration -p no:warnings
 
 test-perf:
 	$(MAKE) install-editable
