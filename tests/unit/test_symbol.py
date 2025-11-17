@@ -18,7 +18,7 @@ from tests._assertions import (
     _assert_search_response_json,
     _assert_timeseries_result,
 )
-from tests._utils import _get_json_fixture, _mock_200_response
+from tests._utils import _get_json_fixture, _mock_response
 from yafin import AsyncSymbol, Symbol
 from yafin.const import (
     ANNUAL_BALANCE_SHEET_TYPES,
@@ -210,11 +210,7 @@ class TestUnitSymbol:
         period2: int | float | None,
     ) -> None:
         """Test get_chart method."""
-        _mock_200_response(
-            mocker,
-            patched_method='yafin.client.Session.get',
-            response_json=chart_json_mock,
-        )
+        _mock_response(mocker, response_json=chart_json_mock)
         chart_result = symbol.get_chart(**kwargs, period1=period1, period2=period2)
         _assert_chart_result(chart_result, symbol.ticker)
 
@@ -325,11 +321,7 @@ class TestUnitSymbol:
         quote_json_mock: dict[str, Any],
     ) -> None:
         """Test get_quote method."""
-        _mock_200_response(
-            mocker,
-            patched_method='yafin.client.Session.get',
-            response_json=quote_json_mock,
-        )
+        _mock_response(mocker, response_json=quote_json_mock)
         quote_result = symbol.get_quote()
         _assert_quote_result(quote_result, symbol.ticker)
 
@@ -340,11 +332,7 @@ class TestUnitSymbol:
         quote_type_json_mock: dict[str, Any],
     ) -> None:
         """Test get_quote_type method."""
-        _mock_200_response(
-            mocker,
-            patched_method='yafin.client.Session.get',
-            response_json=quote_type_json_mock,
-        )
+        _mock_response(mocker, response_json=quote_type_json_mock)
         quote_type_result = symbol.get_quote_type()
         _assert_quote_type_result(quote_type_result, symbol.ticker)
 
@@ -355,11 +343,7 @@ class TestUnitSymbol:
         quote_summary_all_modules_json_mock: dict[str, Any],
     ) -> None:
         """Test get_quote_summary_all_modules method."""
-        _mock_200_response(
-            mocker,
-            patched_method='yafin.client.Session.get',
-            response_json=quote_summary_all_modules_json_mock,
-        )
+        _mock_response(mocker, response_json=quote_summary_all_modules_json_mock)
         quote_summary_all_modules = symbol.get_quote_summary_all_modules()
         _assert_quote_summary_result(
             quote_summary_all_modules, modules=QUOTE_SUMMARY_MODULES
@@ -372,11 +356,7 @@ class TestUnitSymbol:
         asset_profile_json_mock: dict[str, Any],
     ) -> None:
         """Test _get_quote_summary_single_module method."""
-        _mock_200_response(
-            mocker,
-            patched_method='yafin.client.Session.get',
-            response_json=asset_profile_json_mock,
-        )
+        _mock_response(mocker, response_json=asset_profile_json_mock)
         module = 'assetProfile'
         asset_profile = symbol._get_quote_summary_single_module(module)
         _assert_quote_summary_single_module_result(asset_profile, module)
@@ -402,11 +382,7 @@ class TestUnitSymbol:
         asset_profile_json_mock: dict[str, Any],
     ) -> None:
         """Test get_asset_profile method."""
-        _mock_200_response(
-            mocker,
-            patched_method='yafin.client.Session.get',
-            response_json=asset_profile_json_mock,
-        )
+        _mock_response(mocker, response_json=asset_profile_json_mock)
         asset_profile = symbol.get_asset_profile()
         _assert_quote_summary_single_module_result(asset_profile, 'assetProfile')
 
@@ -417,11 +393,7 @@ class TestUnitSymbol:
         summary_profile_json_mock: dict[str, Any],
     ) -> None:
         """Test get_summary_profile method."""
-        _mock_200_response(
-            mocker,
-            patched_method='yafin.client.Session.get',
-            response_json=summary_profile_json_mock,
-        )
+        _mock_response(mocker, response_json=summary_profile_json_mock)
         summary_profile = symbol.get_summary_profile()
         _assert_quote_summary_single_module_result(summary_profile, 'summaryProfile')
 
@@ -432,11 +404,7 @@ class TestUnitSymbol:
         summary_detail_json_mock: dict[str, Any],
     ) -> None:
         """Test get_summary_detail method."""
-        _mock_200_response(
-            mocker,
-            patched_method='yafin.client.Session.get',
-            response_json=summary_detail_json_mock,
-        )
+        _mock_response(mocker, response_json=summary_detail_json_mock)
         summary_detail = symbol.get_summary_detail()
         _assert_quote_summary_single_module_result(summary_detail, 'summaryDetail')
 
@@ -447,11 +415,7 @@ class TestUnitSymbol:
         price_json_mock: dict[str, Any],
     ) -> None:
         """Test get_price method."""
-        _mock_200_response(
-            mocker,
-            patched_method='yafin.client.Session.get',
-            response_json=price_json_mock,
-        )
+        _mock_response(mocker, response_json=price_json_mock)
         price = symbol.get_price()
         _assert_quote_summary_single_module_result(price, 'price')
 
@@ -462,11 +426,7 @@ class TestUnitSymbol:
         default_key_statistics_json_mock: dict[str, Any],
     ) -> None:
         """Test get_default_key_statistics method."""
-        _mock_200_response(
-            mocker,
-            patched_method='yafin.client.Session.get',
-            response_json=default_key_statistics_json_mock,
-        )
+        _mock_response(mocker, response_json=default_key_statistics_json_mock)
         default_key_statistics = symbol.get_default_key_statistics()
         _assert_quote_summary_single_module_result(
             default_key_statistics, 'defaultKeyStatistics'
@@ -479,11 +439,7 @@ class TestUnitSymbol:
         financial_data_json_mock: dict[str, Any],
     ) -> None:
         """Test get_financial_data method."""
-        _mock_200_response(
-            mocker,
-            patched_method='yafin.client.Session.get',
-            response_json=financial_data_json_mock,
-        )
+        _mock_response(mocker, response_json=financial_data_json_mock)
         financial_data = symbol.get_financial_data()
         _assert_quote_summary_single_module_result(financial_data, 'financialData')
 
@@ -494,11 +450,7 @@ class TestUnitSymbol:
         calendar_events_json_mock: dict[str, Any],
     ) -> None:
         """Test get_calendar_events method."""
-        _mock_200_response(
-            mocker,
-            patched_method='yafin.client.Session.get',
-            response_json=calendar_events_json_mock,
-        )
+        _mock_response(mocker, response_json=calendar_events_json_mock)
         calendar_events = symbol.get_calendar_events()
         _assert_quote_summary_single_module_result(calendar_events, 'calendarEvents')
 
@@ -509,11 +461,7 @@ class TestUnitSymbol:
         sec_filings_json_mock: dict[str, Any],
     ) -> None:
         """Test get_sec_filings method."""
-        _mock_200_response(
-            mocker,
-            patched_method='yafin.client.Session.get',
-            response_json=sec_filings_json_mock,
-        )
+        _mock_response(mocker, response_json=sec_filings_json_mock)
         sec_filings = symbol.get_sec_filings()
         _assert_quote_summary_single_module_result(sec_filings, 'secFilings')
 
@@ -524,11 +472,7 @@ class TestUnitSymbol:
         upgrade_downgrade_history_json_mock: dict[str, Any],
     ) -> None:
         """Test get_upgrade_downgrade_history method."""
-        _mock_200_response(
-            mocker,
-            patched_method='yafin.client.Session.get',
-            response_json=upgrade_downgrade_history_json_mock,
-        )
+        _mock_response(mocker, response_json=upgrade_downgrade_history_json_mock)
         upgrade_downgrade_history = symbol.get_upgrade_downgrade_history()
         _assert_quote_summary_single_module_result(
             upgrade_downgrade_history, 'upgradeDowngradeHistory'
@@ -541,11 +485,7 @@ class TestUnitSymbol:
         institution_ownership_json_mock: dict[str, Any],
     ) -> None:
         """Test get_institution_ownership method."""
-        _mock_200_response(
-            mocker,
-            patched_method='yafin.client.Session.get',
-            response_json=institution_ownership_json_mock,
-        )
+        _mock_response(mocker, response_json=institution_ownership_json_mock)
         institution_ownership = symbol.get_institution_ownership()
         _assert_quote_summary_single_module_result(
             institution_ownership, 'institutionOwnership'
@@ -558,11 +498,7 @@ class TestUnitSymbol:
         fund_ownership_json_mock: dict[str, Any],
     ) -> None:
         """Test get_fund_ownership method."""
-        _mock_200_response(
-            mocker,
-            patched_method='yafin.client.Session.get',
-            response_json=fund_ownership_json_mock,
-        )
+        _mock_response(mocker, response_json=fund_ownership_json_mock)
         fund_ownership = symbol.get_fund_ownership()
         _assert_quote_summary_single_module_result(fund_ownership, 'fundOwnership')
 
@@ -573,11 +509,7 @@ class TestUnitSymbol:
         major_direct_holders_json_mock: dict[str, Any],
     ) -> None:
         """Test get_major_direct_holders method."""
-        _mock_200_response(
-            mocker,
-            patched_method='yafin.client.Session.get',
-            response_json=major_direct_holders_json_mock,
-        )
+        _mock_response(mocker, response_json=major_direct_holders_json_mock)
         major_direct_holders = symbol.get_major_direct_holders()
         _assert_quote_summary_single_module_result(
             major_direct_holders, 'majorDirectHolders'
@@ -590,11 +522,7 @@ class TestUnitSymbol:
         major_holders_breakdown_json_mock: dict[str, Any],
     ) -> None:
         """Test get_major_holders_breakdown method."""
-        _mock_200_response(
-            mocker,
-            patched_method='yafin.client.Session.get',
-            response_json=major_holders_breakdown_json_mock,
-        )
+        _mock_response(mocker, response_json=major_holders_breakdown_json_mock)
         major_holders_breakdown = symbol.get_major_holders_breakdown()
         _assert_quote_summary_single_module_result(
             major_holders_breakdown, 'majorHoldersBreakdown'
@@ -607,11 +535,7 @@ class TestUnitSymbol:
         insider_transactions_json_mock: dict[str, Any],
     ) -> None:
         """Test get_insider_transactions method."""
-        _mock_200_response(
-            mocker,
-            patched_method='yafin.client.Session.get',
-            response_json=insider_transactions_json_mock,
-        )
+        _mock_response(mocker, response_json=insider_transactions_json_mock)
         insider_transactions = symbol.get_insider_transactions()
         _assert_quote_summary_single_module_result(
             insider_transactions, 'insiderTransactions'
@@ -624,11 +548,7 @@ class TestUnitSymbol:
         insider_holders_json_mock: dict[str, Any],
     ) -> None:
         """Test get_insider_holders method."""
-        _mock_200_response(
-            mocker,
-            patched_method='yafin.client.Session.get',
-            response_json=insider_holders_json_mock,
-        )
+        _mock_response(mocker, response_json=insider_holders_json_mock)
         insider_holders = symbol.get_insider_holders()
         _assert_quote_summary_single_module_result(insider_holders, 'insiderHolders')
 
@@ -639,11 +559,7 @@ class TestUnitSymbol:
         net_share_purchase_activity_json_mock: dict[str, Any],
     ) -> None:
         """Test get_net_share_purchase_activity method."""
-        _mock_200_response(
-            mocker,
-            patched_method='yafin.client.Session.get',
-            response_json=net_share_purchase_activity_json_mock,
-        )
+        _mock_response(mocker, response_json=net_share_purchase_activity_json_mock)
         net_share_purchase_activity = symbol.get_net_share_purchase_activity()
         _assert_quote_summary_single_module_result(
             net_share_purchase_activity, 'netSharePurchaseActivity'
@@ -656,11 +572,7 @@ class TestUnitSymbol:
         earnings_json_mock: dict[str, Any],
     ) -> None:
         """Test get_earnings method."""
-        _mock_200_response(
-            mocker,
-            patched_method='yafin.client.Session.get',
-            response_json=earnings_json_mock,
-        )
+        _mock_response(mocker, response_json=earnings_json_mock)
         earnings = symbol.get_earnings()
         _assert_quote_summary_single_module_result(earnings, 'earnings')
 
@@ -671,11 +583,7 @@ class TestUnitSymbol:
         earnings_history_json_mock: dict[str, Any],
     ) -> None:
         """Test get_earnings_history method."""
-        _mock_200_response(
-            mocker,
-            patched_method='yafin.client.Session.get',
-            response_json=earnings_history_json_mock,
-        )
+        _mock_response(mocker, response_json=earnings_history_json_mock)
         earnings_history = symbol.get_earnings_history()
         _assert_quote_summary_single_module_result(earnings_history, 'earningsHistory')
 
@@ -686,11 +594,7 @@ class TestUnitSymbol:
         earnings_trend_json_mock: dict[str, Any],
     ) -> None:
         """Test get_earnings_trend method."""
-        _mock_200_response(
-            mocker,
-            patched_method='yafin.client.Session.get',
-            response_json=earnings_trend_json_mock,
-        )
+        _mock_response(mocker, response_json=earnings_trend_json_mock)
         earnings_trend = symbol.get_earnings_trend()
         _assert_quote_summary_single_module_result(earnings_trend, 'earningsTrend')
 
@@ -701,11 +605,7 @@ class TestUnitSymbol:
         industry_trend_json_mock: dict[str, Any],
     ) -> None:
         """Test get_industry_trend method."""
-        _mock_200_response(
-            mocker,
-            patched_method='yafin.client.Session.get',
-            response_json=industry_trend_json_mock,
-        )
+        _mock_response(mocker, response_json=industry_trend_json_mock)
         industry_trend = symbol.get_industry_trend()
         _assert_quote_summary_single_module_result(industry_trend, 'industryTrend')
 
@@ -716,11 +616,7 @@ class TestUnitSymbol:
         index_trend_json_mock: dict[str, Any],
     ) -> None:
         """Test get_index_trend method."""
-        _mock_200_response(
-            mocker,
-            patched_method='yafin.client.Session.get',
-            response_json=index_trend_json_mock,
-        )
+        _mock_response(mocker, response_json=index_trend_json_mock)
         index_trend = symbol.get_index_trend()
         _assert_quote_summary_single_module_result(index_trend, 'indexTrend')
 
@@ -731,11 +627,7 @@ class TestUnitSymbol:
         sector_trend_json_mock: dict[str, Any],
     ) -> None:
         """Test get_sector_trend method."""
-        _mock_200_response(
-            mocker,
-            patched_method='yafin.client.Session.get',
-            response_json=sector_trend_json_mock,
-        )
+        _mock_response(mocker, response_json=sector_trend_json_mock)
         sector_trend = symbol.get_sector_trend()
         _assert_quote_summary_single_module_result(sector_trend, 'sectorTrend')
 
@@ -746,11 +638,7 @@ class TestUnitSymbol:
         recommendation_trend_json_mock: dict[str, Any],
     ) -> None:
         """Test get_recommendation_trend method."""
-        _mock_200_response(
-            mocker,
-            patched_method='yafin.client.Session.get',
-            response_json=recommendation_trend_json_mock,
-        )
+        _mock_response(mocker, response_json=recommendation_trend_json_mock)
         recommendation_trend = symbol.get_recommendation_trend()
         _assert_quote_summary_single_module_result(
             recommendation_trend, 'recommendationTrend'
@@ -763,11 +651,7 @@ class TestUnitSymbol:
         page_views_json_mock: dict[str, Any],
     ) -> None:
         """Test get_page_views method."""
-        _mock_200_response(
-            mocker,
-            patched_method='yafin.client.Session.get',
-            response_json=page_views_json_mock,
-        )
+        _mock_response(mocker, response_json=page_views_json_mock)
         page_views = symbol.get_page_views()
         _assert_quote_summary_single_module_result(page_views, 'pageViews')
 
@@ -780,11 +664,7 @@ class TestUnitSymbol:
         period2: int | float | None,
     ) -> None:
         """Test _get_financials method."""
-        _mock_200_response(
-            mocker,
-            patched_method='yafin.client.Session.get',
-            response_json=timeseries_income_statement_json_mock,
-        )
+        _mock_response(mocker, response_json=timeseries_income_statement_json_mock)
         annual_income_stmt = symbol._get_financials(
             frequency='annual', typ='income_statement', period1=period1, period2=period2
         )
@@ -825,11 +705,7 @@ class TestUnitSymbol:
         period2: int | float | None,
     ) -> None:
         """Test get_income_statement method."""
-        _mock_200_response(
-            mocker,
-            patched_method='yafin.client.Session.get',
-            response_json=timeseries_income_statement_json_mock,
-        )
+        _mock_response(mocker, response_json=timeseries_income_statement_json_mock)
         annual_income_stmt = symbol.get_income_statement(
             frequency='annual', period1=period1, period2=period2
         )
@@ -864,11 +740,7 @@ class TestUnitSymbol:
         period2: int | float | None,
     ) -> None:
         """Test get_balance_sheet method."""
-        _mock_200_response(
-            mocker,
-            patched_method='yafin.client.Session.get',
-            response_json=timeseries_balance_sheet_json_mock,
-        )
+        _mock_response(mocker, response_json=timeseries_balance_sheet_json_mock)
         annual_balance_sheet = symbol.get_balance_sheet(
             frequency='annual', period1=period1, period2=period2
         )
@@ -902,11 +774,7 @@ class TestUnitSymbol:
         period2: int | float | None,
     ) -> None:
         """Test get_cash_flow method."""
-        _mock_200_response(
-            mocker,
-            patched_method='yafin.client.Session.get',
-            response_json=timeseries_cash_flow_json_mock,
-        )
+        _mock_response(mocker, response_json=timeseries_cash_flow_json_mock)
         annual_cash_flow = symbol.get_cash_flow(
             frequency='annual', period1=period1, period2=period2
         )
@@ -937,11 +805,7 @@ class TestUnitSymbol:
         options_json_mock: dict[str, Any],
     ) -> None:
         """Test get_options method."""
-        _mock_200_response(
-            mocker,
-            patched_method='yafin.client.Session.get',
-            response_json=options_json_mock,
-        )
+        _mock_response(mocker, response_json=options_json_mock)
         options = symbol.get_options()
         _assert_options_result(options, symbol.ticker)
 
@@ -952,11 +816,7 @@ class TestUnitSymbol:
         search_json_mock: dict[str, Any],
     ) -> None:
         """Test get_search method."""
-        _mock_200_response(
-            mocker,
-            patched_method='yafin.client.Session.get',
-            response_json=search_json_mock,
-        )
+        _mock_response(mocker, response_json=search_json_mock)
         search = symbol.get_search()
         _assert_search_response_json(search)
 
@@ -967,11 +827,7 @@ class TestUnitSymbol:
         recommendations_json_mock: dict[str, Any],
     ) -> None:
         """Test get_recommendations method."""
-        _mock_200_response(
-            mocker,
-            patched_method='yafin.client.Session.get',
-            response_json=recommendations_json_mock,
-        )
+        _mock_response(mocker, response_json=recommendations_json_mock)
         recommendations = symbol.get_recommendations()
         _assert_recommendation_result(recommendations, symbol.ticker)
 
@@ -982,11 +838,7 @@ class TestUnitSymbol:
         insights_json_mock: dict[str, Any],
     ) -> None:
         """Test get_insights method."""
-        _mock_200_response(
-            mocker,
-            patched_method='yafin.client.Session.get',
-            response_json=insights_json_mock,
-        )
+        _mock_response(mocker, response_json=insights_json_mock)
         insights = symbol.get_insights()
         _assert_insight_result(insights, symbol.ticker)
 
@@ -997,11 +849,7 @@ class TestUnitSymbol:
         ratings_json_mock: dict[str, Any],
     ) -> None:
         """Test get_ratings method."""
-        _mock_200_response(
-            mocker,
-            patched_method='yafin.client.Session.get',
-            response_json=ratings_json_mock,
-        )
+        _mock_response(mocker, response_json=ratings_json_mock)
         ratings = symbol.get_ratings()
         _assert_ratings_response_json(ratings)
 
@@ -1152,9 +1000,8 @@ class TestUnitAsyncSymbol:
         period2: int | float | None,
     ) -> None:
         """Test get_chart method."""
-        _mock_200_response(
+        _mock_response(
             mocker,
-            patched_method='yafin.client.AsyncSession.get',
             response_json=chart_json_mock,
             async_mock=True,
         )
@@ -1275,9 +1122,8 @@ class TestUnitAsyncSymbol:
         quote_json_mock: dict[str, Any],
     ) -> None:
         """Test get_quote method."""
-        _mock_200_response(
+        _mock_response(
             mocker,
-            patched_method='yafin.client.AsyncSession.get',
             response_json=quote_json_mock,
             async_mock=True,
         )
@@ -1292,9 +1138,8 @@ class TestUnitAsyncSymbol:
         quote_type_json_mock: dict[str, Any],
     ) -> None:
         """Test get_quote_type method."""
-        _mock_200_response(
+        _mock_response(
             mocker,
-            patched_method='yafin.client.AsyncSession.get',
             response_json=quote_type_json_mock,
             async_mock=True,
         )
@@ -1309,9 +1154,8 @@ class TestUnitAsyncSymbol:
         quote_summary_all_modules_json_mock: dict[str, Any],
     ) -> None:
         """Test get_quote_summary_all_modules method."""
-        _mock_200_response(
+        _mock_response(
             mocker,
-            patched_method='yafin.client.AsyncSession.get',
             response_json=quote_summary_all_modules_json_mock,
             async_mock=True,
         )
@@ -1328,9 +1172,8 @@ class TestUnitAsyncSymbol:
         asset_profile_json_mock: dict[str, Any],
     ) -> None:
         """Test _get_quote_summary_single_module method."""
-        _mock_200_response(
+        _mock_response(
             mocker,
-            patched_method='yafin.client.AsyncSession.get',
             response_json=asset_profile_json_mock,
             async_mock=True,
         )
@@ -1364,9 +1207,8 @@ class TestUnitAsyncSymbol:
         asset_profile_json_mock: dict[str, Any],
     ) -> None:
         """Test get_asset_profile method."""
-        _mock_200_response(
+        _mock_response(
             mocker,
-            patched_method='yafin.client.AsyncSession.get',
             response_json=asset_profile_json_mock,
             async_mock=True,
         )
@@ -1381,9 +1223,8 @@ class TestUnitAsyncSymbol:
         summary_profile_json_mock: dict[str, Any],
     ) -> None:
         """Test get_summary_profile method."""
-        _mock_200_response(
+        _mock_response(
             mocker,
-            patched_method='yafin.client.AsyncSession.get',
             response_json=summary_profile_json_mock,
             async_mock=True,
         )
@@ -1398,9 +1239,8 @@ class TestUnitAsyncSymbol:
         summary_detail_json_mock: dict[str, Any],
     ) -> None:
         """Test get_summary_detail method."""
-        _mock_200_response(
+        _mock_response(
             mocker,
-            patched_method='yafin.client.AsyncSession.get',
             response_json=summary_detail_json_mock,
             async_mock=True,
         )
@@ -1415,9 +1255,8 @@ class TestUnitAsyncSymbol:
         price_json_mock: dict[str, Any],
     ) -> None:
         """Test get_price method."""
-        _mock_200_response(
+        _mock_response(
             mocker,
-            patched_method='yafin.client.AsyncSession.get',
             response_json=price_json_mock,
             async_mock=True,
         )
@@ -1432,9 +1271,8 @@ class TestUnitAsyncSymbol:
         default_key_statistics_json_mock: dict[str, Any],
     ) -> None:
         """Test get_default_key_statistics method."""
-        _mock_200_response(
+        _mock_response(
             mocker,
-            patched_method='yafin.client.AsyncSession.get',
             response_json=default_key_statistics_json_mock,
             async_mock=True,
         )
@@ -1451,9 +1289,8 @@ class TestUnitAsyncSymbol:
         financial_data_json_mock: dict[str, Any],
     ) -> None:
         """Test get_financial_data method."""
-        _mock_200_response(
+        _mock_response(
             mocker,
-            patched_method='yafin.client.AsyncSession.get',
             response_json=financial_data_json_mock,
             async_mock=True,
         )
@@ -1468,9 +1305,8 @@ class TestUnitAsyncSymbol:
         calendar_events_json_mock: dict[str, Any],
     ) -> None:
         """Test get_calendar_events method."""
-        _mock_200_response(
+        _mock_response(
             mocker,
-            patched_method='yafin.client.AsyncSession.get',
             response_json=calendar_events_json_mock,
             async_mock=True,
         )
@@ -1485,9 +1321,8 @@ class TestUnitAsyncSymbol:
         sec_filings_json_mock: dict[str, Any],
     ) -> None:
         """Test get_sec_filings method."""
-        _mock_200_response(
+        _mock_response(
             mocker,
-            patched_method='yafin.client.AsyncSession.get',
             response_json=sec_filings_json_mock,
             async_mock=True,
         )
@@ -1502,9 +1337,8 @@ class TestUnitAsyncSymbol:
         upgrade_downgrade_history_json_mock: dict[str, Any],
     ) -> None:
         """Test get_upgrade_downgrade_history method."""
-        _mock_200_response(
+        _mock_response(
             mocker,
-            patched_method='yafin.client.AsyncSession.get',
             response_json=upgrade_downgrade_history_json_mock,
             async_mock=True,
         )
@@ -1521,9 +1355,8 @@ class TestUnitAsyncSymbol:
         institution_ownership_json_mock: dict[str, Any],
     ) -> None:
         """Test get_institution_ownership method."""
-        _mock_200_response(
+        _mock_response(
             mocker,
-            patched_method='yafin.client.AsyncSession.get',
             response_json=institution_ownership_json_mock,
             async_mock=True,
         )
@@ -1540,9 +1373,8 @@ class TestUnitAsyncSymbol:
         fund_ownership_json_mock: dict[str, Any],
     ) -> None:
         """Test get_fund_ownership method."""
-        _mock_200_response(
+        _mock_response(
             mocker,
-            patched_method='yafin.client.AsyncSession.get',
             response_json=fund_ownership_json_mock,
             async_mock=True,
         )
@@ -1557,9 +1389,8 @@ class TestUnitAsyncSymbol:
         major_direct_holders_json_mock: dict[str, Any],
     ) -> None:
         """Test get_major_direct_holders method."""
-        _mock_200_response(
+        _mock_response(
             mocker,
-            patched_method='yafin.client.AsyncSession.get',
             response_json=major_direct_holders_json_mock,
             async_mock=True,
         )
@@ -1576,9 +1407,8 @@ class TestUnitAsyncSymbol:
         major_holders_breakdown_json_mock: dict[str, Any],
     ) -> None:
         """Test get_major_holders_breakdown method."""
-        _mock_200_response(
+        _mock_response(
             mocker,
-            patched_method='yafin.client.AsyncSession.get',
             response_json=major_holders_breakdown_json_mock,
             async_mock=True,
         )
@@ -1595,9 +1425,8 @@ class TestUnitAsyncSymbol:
         insider_transactions_json_mock: dict[str, Any],
     ) -> None:
         """Test get_insider_transactions method."""
-        _mock_200_response(
+        _mock_response(
             mocker,
-            patched_method='yafin.client.AsyncSession.get',
             response_json=insider_transactions_json_mock,
             async_mock=True,
         )
@@ -1614,9 +1443,8 @@ class TestUnitAsyncSymbol:
         insider_holders_json_mock: dict[str, Any],
     ) -> None:
         """Test get_insider_holders method."""
-        _mock_200_response(
+        _mock_response(
             mocker,
-            patched_method='yafin.client.AsyncSession.get',
             response_json=insider_holders_json_mock,
             async_mock=True,
         )
@@ -1631,9 +1459,8 @@ class TestUnitAsyncSymbol:
         net_share_purchase_activity_json_mock: dict[str, Any],
     ) -> None:
         """Test get_net_share_purchase_activity method."""
-        _mock_200_response(
+        _mock_response(
             mocker,
-            patched_method='yafin.client.AsyncSession.get',
             response_json=net_share_purchase_activity_json_mock,
             async_mock=True,
         )
@@ -1652,9 +1479,8 @@ class TestUnitAsyncSymbol:
         earnings_json_mock: dict[str, Any],
     ) -> None:
         """Test get_earnings method."""
-        _mock_200_response(
+        _mock_response(
             mocker,
-            patched_method='yafin.client.AsyncSession.get',
             response_json=earnings_json_mock,
             async_mock=True,
         )
@@ -1669,9 +1495,8 @@ class TestUnitAsyncSymbol:
         earnings_history_json_mock: dict[str, Any],
     ) -> None:
         """Test get_earnings_history method."""
-        _mock_200_response(
+        _mock_response(
             mocker,
-            patched_method='yafin.client.AsyncSession.get',
             response_json=earnings_history_json_mock,
             async_mock=True,
         )
@@ -1686,9 +1511,8 @@ class TestUnitAsyncSymbol:
         earnings_trend_json_mock: dict[str, Any],
     ) -> None:
         """Test get_earnings_trend method."""
-        _mock_200_response(
+        _mock_response(
             mocker,
-            patched_method='yafin.client.AsyncSession.get',
             response_json=earnings_trend_json_mock,
             async_mock=True,
         )
@@ -1703,9 +1527,8 @@ class TestUnitAsyncSymbol:
         industry_trend_json_mock: dict[str, Any],
     ) -> None:
         """Test get_industry_trend method."""
-        _mock_200_response(
+        _mock_response(
             mocker,
-            patched_method='yafin.client.AsyncSession.get',
             response_json=industry_trend_json_mock,
             async_mock=True,
         )
@@ -1720,9 +1543,8 @@ class TestUnitAsyncSymbol:
         index_trend_json_mock: dict[str, Any],
     ) -> None:
         """Test get_index_trend method."""
-        _mock_200_response(
+        _mock_response(
             mocker,
-            patched_method='yafin.client.AsyncSession.get',
             response_json=index_trend_json_mock,
             async_mock=True,
         )
@@ -1737,9 +1559,8 @@ class TestUnitAsyncSymbol:
         sector_trend_json_mock: dict[str, Any],
     ) -> None:
         """Test get_sector_trend method."""
-        _mock_200_response(
+        _mock_response(
             mocker,
-            patched_method='yafin.client.AsyncSession.get',
             response_json=sector_trend_json_mock,
             async_mock=True,
         )
@@ -1754,9 +1575,8 @@ class TestUnitAsyncSymbol:
         recommendation_trend_json_mock: dict[str, Any],
     ) -> None:
         """Test get_recommendation_trend method."""
-        _mock_200_response(
+        _mock_response(
             mocker,
-            patched_method='yafin.client.AsyncSession.get',
             response_json=recommendation_trend_json_mock,
             async_mock=True,
         )
@@ -1773,9 +1593,8 @@ class TestUnitAsyncSymbol:
         page_views_json_mock: dict[str, Any],
     ) -> None:
         """Test get_page_views method."""
-        _mock_200_response(
+        _mock_response(
             mocker,
-            patched_method='yafin.client.AsyncSession.get',
             response_json=page_views_json_mock,
             async_mock=True,
         )
@@ -1792,9 +1611,8 @@ class TestUnitAsyncSymbol:
         period2: int | float | None,
     ) -> None:
         """Test _get_financials method."""
-        _mock_200_response(
+        _mock_response(
             mocker,
-            patched_method='yafin.client.AsyncSession.get',
             response_json=timeseries_income_statement_json_mock,
             async_mock=True,
         )
@@ -1843,9 +1661,8 @@ class TestUnitAsyncSymbol:
         period2: int | float | None,
     ) -> None:
         """Test get_income_statement method."""
-        _mock_200_response(
+        _mock_response(
             mocker,
-            patched_method='yafin.client.AsyncSession.get',
             response_json=timeseries_income_statement_json_mock,
             async_mock=True,
         )
@@ -1888,9 +1705,8 @@ class TestUnitAsyncSymbol:
         period2: int | float | None,
     ) -> None:
         """Test get_balance_sheet method."""
-        _mock_200_response(
+        _mock_response(
             mocker,
-            patched_method='yafin.client.AsyncSession.get',
             response_json=timeseries_balance_sheet_json_mock,
             async_mock=True,
         )
@@ -1934,9 +1750,8 @@ class TestUnitAsyncSymbol:
         period2: int | float | None,
     ) -> None:
         """Test get_cash_flow method."""
-        _mock_200_response(
+        _mock_response(
             mocker,
-            patched_method='yafin.client.AsyncSession.get',
             response_json=timeseries_cash_flow_json_mock,
             async_mock=True,
         )
@@ -1975,9 +1790,8 @@ class TestUnitAsyncSymbol:
         options_json_mock: dict[str, Any],
     ) -> None:
         """Test get_options method."""
-        _mock_200_response(
+        _mock_response(
             mocker,
-            patched_method='yafin.client.AsyncSession.get',
             response_json=options_json_mock,
             async_mock=True,
         )
@@ -1992,9 +1806,8 @@ class TestUnitAsyncSymbol:
         search_json_mock: dict[str, Any],
     ) -> None:
         """Test get_search method."""
-        _mock_200_response(
+        _mock_response(
             mocker,
-            patched_method='yafin.client.AsyncSession.get',
             response_json=search_json_mock,
             async_mock=True,
         )
@@ -2009,9 +1822,8 @@ class TestUnitAsyncSymbol:
         recommendations_json_mock: dict[str, Any],
     ) -> None:
         """Test get_recommendations method."""
-        _mock_200_response(
+        _mock_response(
             mocker,
-            patched_method='yafin.client.AsyncSession.get',
             response_json=recommendations_json_mock,
             async_mock=True,
         )
@@ -2026,9 +1838,8 @@ class TestUnitAsyncSymbol:
         insights_json_mock: dict[str, Any],
     ) -> None:
         """Test get_insights method."""
-        _mock_200_response(
+        _mock_response(
             mocker,
-            patched_method='yafin.client.AsyncSession.get',
             response_json=insights_json_mock,
             async_mock=True,
         )
@@ -2043,9 +1854,8 @@ class TestUnitAsyncSymbol:
         ratings_json_mock: dict[str, Any],
     ) -> None:
         """Test get_ratings method."""
-        _mock_200_response(
+        _mock_response(
             mocker,
-            patched_method='yafin.client.AsyncSession.get',
             response_json=ratings_json_mock,
             async_mock=True,
         )

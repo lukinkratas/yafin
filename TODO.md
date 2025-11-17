@@ -1,6 +1,7 @@
 ## TODO
 
 - [ ] pytest-benchmark sync symbol vs yfinance
+- [ ] timezone
 - [ ] multi symbols support
 - [ ] publish to pypi test
 - [ ] publish

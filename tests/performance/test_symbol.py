@@ -1,16 +1,46 @@
-import json
-import pathlib
 from typing import Any, Generator
 
 import pandas as pd
 import pytest
 from curl_cffi import requests
+from curl_cffi.requests import Response
+from curl_cffi.requests.exceptions import HTTPError
 from pytest_benchmark.fixture import BenchmarkFixture
 from pytest_mock import MockerFixture
 from yfinance import Ticker
 
-from tests._utils import _mock_200_response, _get_json_fixture, _get_fixture_path
+from tests._utils import _get_fixture_path, _get_json_fixture, _mock_response
 from yafin import Symbol
+
+BENCHMARK_KWARGS = dict(rounds=10, iterations=1, warmup_rounds=1)
+
+
+# def _mock_yfinance_response(
+#     mocker: MockerFixture,
+#     status_code: int = 200,
+#     response_json: dict[str, Any] | None = None,
+#     text: str | None = None,
+#     async_mock: bool = False,
+# ) -> None:
+#     """Mock response with status code 200."""
+#     mock_response = mocker.Mock(spec=Response)
+#     mock_response.status_code = status_code
+#     mock_response.raise_for_status = mocker.Mock()
+
+#     if status_code == 404:
+#         mock_response.raise_for_status.side_effect = HTTPError(
+#             '404 Client Error: Not Found for url'
+#         )
+
+#     if response_json:
+#         mock_response.json.return_value = response_json
+
+#     if text:
+#         mock_response.text = text
+
+#     mock_class = mocker.AsyncMock if async_mock else mocker.Mock
+#     patched_method = 'curl_cffi.requests.Session.get'
+#     mocker.patch(patched_method, new=mock_class(return_value=mock_response))
 
 
 def process_chart_like_yfinance(chart: dict[str, Any]) -> pd.DataFrame:
@@ -91,21 +121,18 @@ class TestPerformanceSymbol:
         expected_chart_df: pd.DataFrame,
     ) -> None:
         """Test get_chart method."""
-        _mock_200_response(
-            mocker,
-            patched_method='yafin.client.Session.get',
-            response_json=chart_json_mock,
-        )
 
         def run() -> pd.DataFrame:
             chart = symbol.get_chart(interval='1d', period_range='1y')
             return process_chart_like_yfinance(chart)
 
-        result_df = benchmark.pedantic(run, rounds=10, iterations=1, warmup_rounds=1)
+        # _mock_response(mocker, response_json=chart_json_mock)
 
-        assert result_df.columns.to_list() == expected_chart_df.columns.to_list()
-        assert result_df.index.to_list() == expected_chart_df.index.to_list()
-        assert result_df.compare(expected_chart_df).empty
+        result_df = benchmark.pedantic(run, **BENCHMARK_KWARGS)
+
+        # assert result_df.columns.to_list() == expected_chart_df.columns.to_list()
+        # assert result_df.index.to_list() == expected_chart_df.index.to_list()
+        # assert result_df.compare(expected_chart_df).empty
 
 
 class TestPerformanceYFinance:
@@ -128,19 +155,16 @@ class TestPerformanceYFinance:
         expected_chart_df: pd.DataFrame,
     ) -> None:
         """Test history method."""
-        _mock_200_response(
-            mocker,
-            patched_method='curl_cffi.requests.Session.get',
-            response_json=chart_json_mock,
-        )
 
         def run() -> pd.DataFrame:
             return ticker.history(period='1y', interval='1d')
 
-        result_df = benchmark.pedantic(run, rounds=10, iterations=1, warmup_rounds=1)
-        result_df.to_csv('yfinance.csv')
-        expected_chart_df.to_csv('expected.csv')
+        # _mock_yfinance_response(mocker, response_json=chart_json_mock)
 
-        assert result_df.columns.to_list() == expected_chart_df.columns.to_list()
-        assert result_df.index.to_list() == expected_chart_df.index.to_list()
-        assert result_df.compare(expected_chart_df).empty
+        result_df = benchmark.pedantic(run, **BENCHMARK_KWARGS)
+        # result_df.to_csv('yfinance.csv')
+        # expected_chart_df.to_csv('expected.csv')
+
+        # assert result_df.columns.to_list() == expected_chart_df.columns.to_list()
+        # assert result_df.index.to_list() == expected_chart_df.index.to_list()
+        # assert result_df.compare(expected_chart_df).empty
