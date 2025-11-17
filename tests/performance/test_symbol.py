@@ -7,10 +7,11 @@ from curl_cffi.requests import Response
 from curl_cffi.requests.exceptions import HTTPError
 from pytest_benchmark.fixture import BenchmarkFixture
 from pytest_mock import MockerFixture
-from yfinance import Ticker
+import yfinance as yf
+import yahooquery as yq
 
 from tests._utils import _get_fixture_path, _get_json_fixture, _mock_response
-from yafin import Symbol
+import yafin
 
 BENCHMARK_KWARGS = dict(rounds=10, iterations=1, warmup_rounds=1)
 
@@ -106,15 +107,15 @@ class TestPerformanceSymbol:
     """Unit tests for yafin.Symbol."""
 
     @pytest.fixture
-    def symbol(self) -> Generator[Symbol, None, None]:
+    def symbol(self) -> Generator[yafin.Symbol, None, None]:
         """Fresh new instance of Symbol for each tests."""
-        with Symbol('META') as symbol:
+        with yafin.Symbol('META') as symbol:
             yield symbol
 
     @pytest.mark.performance
     def test_get_chart(
         self,
-        symbol: Symbol,
+        symbol: yafin.Symbol,
         mocker: MockerFixture,
         benchmark: BenchmarkFixture,
         chart_json_mock: dict[str, Any],
@@ -139,16 +140,16 @@ class TestPerformanceYFinance:
     """Performance tests for yafin.stonk module."""
 
     @pytest.fixture
-    def ticker(self) -> Generator[Ticker, None, None]:
+    def ticker(self) -> Generator[yf.Ticker, None, None]:
         """Fixture for Ticker."""
         session = requests.Session(impersonate='chrome')
-        yield Ticker('META', session=session)
+        yield yf.Ticker('META', session=session)
         session.close()
 
     @pytest.mark.performance
     def test_get_chart_yfinance(
         self,
-        ticker: Ticker,
+        ticker: yf.Ticker,
         mocker: MockerFixture,
         benchmark: BenchmarkFixture,
         chart_json_mock: dict[str, Any],
@@ -164,6 +165,35 @@ class TestPerformanceYFinance:
         result_df = benchmark.pedantic(run, **BENCHMARK_KWARGS)
         # result_df.to_csv('yfinance.csv')
         # expected_chart_df.to_csv('expected.csv')
+
+        # assert result_df.columns.to_list() == expected_chart_df.columns.to_list()
+        # assert result_df.index.to_list() == expected_chart_df.index.to_list()
+        # assert result_df.compare(expected_chart_df).empty
+
+class TestPerformanceYahooQuery:
+    """Performance tests for yafin.stonk module."""
+
+    @pytest.fixture
+    def ticker(self) -> Generator[yq.Ticker, None, None]:
+        """Fixture for Ticker."""
+        yield yq.Ticker('META')
+
+    @pytest.mark.performance
+    def test_get_chart_yahooquery(
+        self,
+        ticker: yq.Ticker,
+        mocker: MockerFixture,
+        benchmark: BenchmarkFixture,
+        chart_json_mock: dict[str, Any],
+        expected_chart_df: pd.DataFrame,
+    ) -> None:
+        """Test history method."""
+
+        def run() -> pd.DataFrame:
+            return ticker.history(period='1y', interval='1d')
+
+        result_df = benchmark.pedantic(run, **BENCHMARK_KWARGS)
+        # result_df.to_csv('yahooquery.csv')
 
         # assert result_df.columns.to_list() == expected_chart_df.columns.to_list()
         # assert result_df.index.to_list() == expected_chart_df.index.to_list()
