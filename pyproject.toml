@@ -83,17 +83,14 @@ quote-style = "single"
 indent-style = "space"
 
 [tool.mypy]
-# mypy_path = ["yafin"]
 strict = true
 explicit_package_bases = true
-check_untyped_defs = true
 ignore_missing_imports = true
-disable_error_code = ["no-any-return", "misc", "union-attr"]
+disable_error_code = ["no-any-return", "union-attr", "misc", "unused-ignore"]
 exclude = ["scripts"]
 
 [tool.pytest.ini_options]
 addopts = "--typeguard-packages=yafin"
-# pythonpath = "."
 markers = [
     "integration: marks tests that hit real external services or APIs",
     "performance: marks tests as performance benchmarks",

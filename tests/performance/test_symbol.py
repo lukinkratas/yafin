@@ -127,7 +127,7 @@ class TestPerformanceSymbol:
 
         # _mock_response(mocker, response_json=chart_json_mock)
 
-        result_df = benchmark.pedantic(run, **BENCHMARK_KWARGS)
+        result_df = benchmark.pedantic(run, **BENCHMARK_KWARGS)  # type: ignore[no-untyped-call]
         assert not result_df.empty
 
         # assert result_df.columns.to_list() == expected_chart_df.columns.to_list()
@@ -141,7 +141,7 @@ class TestPerformanceYFinance:
     @pytest.fixture
     def ticker(self) -> Generator[yf.Ticker, None, None]:
         """Fixture for Ticker."""
-        session = requests.Session(impersonate='chrome')
+        session: requests.Session[Any] = requests.Session(impersonate='chrome')
         yield yf.Ticker('META', session=session)
         session.close()
 
@@ -161,7 +161,7 @@ class TestPerformanceYFinance:
 
         # _mock_yfinance_response(mocker, response_json=chart_json_mock)
 
-        result_df = benchmark.pedantic(run, **BENCHMARK_KWARGS)
+        result_df = benchmark.pedantic(run, **BENCHMARK_KWARGS)  # type: ignore[no-untyped-call]
         assert not result_df.empty
         # result_df.to_csv('yfinance.csv')
         # expected_chart_df.to_csv('expected.csv')
@@ -193,7 +193,7 @@ class TestPerformanceYahooQuery:
         def run() -> pd.DataFrame:
             return ticker.history(period='1y', interval='1d')
 
-        result_df = benchmark.pedantic(run, **BENCHMARK_KWARGS)
+        result_df = benchmark.pedantic(run, **BENCHMARK_KWARGS)  # type: ignore[no-untyped-call]
         assert not result_df.empty
         # result_df.to_csv('yahooquery.csv')
 

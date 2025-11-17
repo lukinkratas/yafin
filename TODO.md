@@ -1,5 +1,7 @@
 ## TODO
 
+- [ ] mypy errs
+- [ ] mock yfinance response
 - [ ] pytest-benchmark sync symbol vs yfinance
 - [ ] timezone
 - [ ] multi symbols support
