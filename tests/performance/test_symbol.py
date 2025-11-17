@@ -2,16 +2,14 @@ from typing import Any, Generator
 
 import pandas as pd
 import pytest
+import yahooquery as yq
+import yfinance as yf
 from curl_cffi import requests
-from curl_cffi.requests import Response
-from curl_cffi.requests.exceptions import HTTPError
 from pytest_benchmark.fixture import BenchmarkFixture
 from pytest_mock import MockerFixture
-import yfinance as yf
-import yahooquery as yq
 
-from tests._utils import _get_fixture_path, _get_json_fixture, _mock_response
 import yafin
+from tests._utils import _get_fixture_path, _get_json_fixture
 
 BENCHMARK_KWARGS = dict(rounds=10, iterations=1, warmup_rounds=1)
 
@@ -130,6 +128,7 @@ class TestPerformanceSymbol:
         # _mock_response(mocker, response_json=chart_json_mock)
 
         result_df = benchmark.pedantic(run, **BENCHMARK_KWARGS)
+        assert not result_df.empty
 
         # assert result_df.columns.to_list() == expected_chart_df.columns.to_list()
         # assert result_df.index.to_list() == expected_chart_df.index.to_list()
@@ -163,12 +162,14 @@ class TestPerformanceYFinance:
         # _mock_yfinance_response(mocker, response_json=chart_json_mock)
 
         result_df = benchmark.pedantic(run, **BENCHMARK_KWARGS)
+        assert not result_df.empty
         # result_df.to_csv('yfinance.csv')
         # expected_chart_df.to_csv('expected.csv')
 
         # assert result_df.columns.to_list() == expected_chart_df.columns.to_list()
         # assert result_df.index.to_list() == expected_chart_df.index.to_list()
         # assert result_df.compare(expected_chart_df).empty
+
 
 class TestPerformanceYahooQuery:
     """Performance tests for yafin.stonk module."""
@@ -193,6 +194,7 @@ class TestPerformanceYahooQuery:
             return ticker.history(period='1y', interval='1d')
 
         result_df = benchmark.pedantic(run, **BENCHMARK_KWARGS)
+        assert not result_df.empty
         # result_df.to_csv('yahooquery.csv')
 
         # assert result_df.columns.to_list() == expected_chart_df.columns.to_list()
