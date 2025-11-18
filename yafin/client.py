@@ -71,6 +71,35 @@ class ClientBase(object):
         'includeAdjustedClose': True,
         'userYfid': True,
     }
+    _QUOTE_PARAMS = {'includePrePost': True}
+    _QUOTE_TYPE_PARAMS = {
+        'enablePrivateCompany': True,
+    }
+    _QUOTE_SUMMARY_PARAMS = {
+        'enablePrivateCompany': True,
+        'enableQSPExpandedEarnings': True,
+        'overnightPrice': True,
+    }
+    _TIMESERIES_PARAMS = {
+        'merge': False,
+        'padTimeSeries': True,
+    }
+    _OPTIONS_PARAMS = {
+        'date': -1,
+        'straddle': False,
+    }
+    _INSIGHTS_PARAMS = {
+        'disableRelatedReports': True,
+        'getAllResearchReports': True,
+        'reportsCount': 4,
+        'ssl': True,
+    }
+    _RATINGS_PARAMS = {'exclude_noncurrent': True}
+    _CALENDAR_EVENTS_PARAMS = {
+        'countPerDay': 25,
+        'economicEventsHighImportanceOnly': True,
+        'economicEventsRegionFilter': '',
+    }
 
     def __init__(self, timeout: float = 5.0, max_retries: int = 5) -> None:
         self.timeout = timeout
@@ -276,11 +305,7 @@ class Client(ClientBase):
 
         self._get_crumb()
         url = f'{self._BASE_URL}/v7/finance/quote'
-        params = self._DEFAULT_PARAMS | {
-            'symbols': tickers,
-            'includePrePost': True,
-            'crumb': self._crumb,
-        }
+        params = self._DEFAULT_PARAMS | self._QUOTE_PARAMS | {'symbols': tickers, 'crumb': self._crumb}
         response = self._get_request(url, params)
         return response.json()
 
@@ -297,10 +322,7 @@ class Client(ClientBase):
         logger.debug(f'Getting finance/quoteType for {tickers=}.')
 
         url = f'{self._BASE_URL}/v1/finance/quoteType/'
-        params = self._DEFAULT_PARAMS | {
-            'symbol': tickers,
-            'enablePrivateCompany': True,
-        }
+        params = self._DEFAULT_PARAMS | self._QUOTE_TYPE_PARAMS | {'symbol': tickers}
         response = self._get_request(url, params)
         return response.json()
 
@@ -324,10 +346,7 @@ class Client(ClientBase):
 
         self._get_crumb()
         url = f'{self._BASE_URL}/v10/finance/quoteSummary/{ticker}'
-        params = self._DEFAULT_PARAMS | {
-            'enablePrivateCompany': True,
-            'enableQSPExpandedEarnings': True,
-            'overnightPrice': True,
+        params = self._DEFAULT_PARAMS | self._QUOTE_SUMMARY_PARAMS | {
             'crumb': self._crumb,
             # join parsed modules, bcs they can be stripped
             'modules': ','.join(parsed_modules),
@@ -369,11 +388,9 @@ class Client(ClientBase):
             f'{self._BASE_URL}/ws/fundamentals-timeseries/'
             f'v1/finance/timeseries/{ticker}'
         )
-        params = self._DEFAULT_PARAMS | {
-            'merge': False,
-            'padTimeSeries': True,
+        params = self._DEFAULT_PARAMS | self._TIMESERIES_PARAMS | {
             # join parsed types, bcs they can be stripped
-            'type': ','.join(parsed_types),
+            'type': ','.join(parsed_types)
         }
 
         if period1 is None:
@@ -403,11 +420,7 @@ class Client(ClientBase):
 
         self._get_crumb()
         url = f'{self._BASE_URL}/v7/finance/options/{ticker}'
-        params = self._DEFAULT_PARAMS | {
-            'date': -1,
-            'straddle': False,
-            'crumb': self._crumb,
-        }
+        params = self._DEFAULT_PARAMS | self._OPTIONS_PARAMS | {'crumb': self._crumb}
         response = self._get_request(url, params)
         return response.json()
 
@@ -458,13 +471,7 @@ class Client(ClientBase):
         logger.debug(f'Getting finance/insights for {tickers=}.')
 
         url = f'{self._BASE_URL}/ws/insights/v3/finance/insights'
-        params = self._DEFAULT_PARAMS | {
-            'symbols': tickers,
-            'disableRelatedReports': True,
-            'getAllResearchReports': True,
-            'reportsCount': 4,
-            'ssl': True,
-        }
+        params = self._DEFAULT_PARAMS | self._INSIGHTS_PARAMS | {'symbols': tickers}
         response = self._get_request(url, params)
         return response.json()
 
@@ -481,7 +488,7 @@ class Client(ClientBase):
         logger.debug(f'Getting ratings for {ticker=}.')
 
         url = f'{self._BASE_URL}/v2/ratings/top/{ticker}'
-        params = self._DEFAULT_PARAMS | {'exclude_noncurrent': True}
+        params = self._DEFAULT_PARAMS | self._RATINGS_PARAMS
         response = self._get_request(url, params)
         return response.json()
 
@@ -550,11 +557,7 @@ class Client(ClientBase):
         logger.debug('Getting finance/calendar-events.')
 
         url = f'{self._BASE_URL}/ws/screeners/v1/finance/calendar-events'
-        params = self._DEFAULT_PARAMS | {
-            'countPerDay': 25,
-            'economicEventsHighImportanceOnly': True,
-            'economicEventsRegionFilter': '',
-        }
+        params = self._DEFAULT_PARAMS | self._CALENDAR_EVENTS_PARAMS
 
         if modules:
             parsed_modules = {m.strip() for m in modules.split(',')}
@@ -773,9 +776,8 @@ class AsyncClient(ClientBase):
 
         await self._get_crumb()
         url = f'{self._BASE_URL}/v7/finance/quote'
-        params = self._DEFAULT_PARAMS | {
+        params = self._DEFAULT_PARAMS | self._QUOTE_PARAMS | {
             'symbols': tickers,
-            'includePrePost': True,
             'crumb': self._crumb,
         }
         response = await self._get_request(url, params)
@@ -794,10 +796,7 @@ class AsyncClient(ClientBase):
         logger.debug(f'Getting finance/quoteType for {tickers=}.')
 
         url = f'{self._BASE_URL}/v1/finance/quoteType/'
-        params = self._DEFAULT_PARAMS | {
-            'symbol': tickers,
-            'enablePrivateCompany': True,
-        }
+        params = self._DEFAULT_PARAMS | self._QUOTE_TYPE_PARAMS | {'symbol': tickers}
         response = await self._get_request(url, params)
         return response.json()
 
@@ -823,10 +822,7 @@ class AsyncClient(ClientBase):
 
         await self._get_crumb()
         url = f'{self._BASE_URL}/v10/finance/quoteSummary/{ticker}'
-        params = self._DEFAULT_PARAMS | {
-            'enablePrivateCompany': True,
-            'enableQSPExpandedEarnings': True,
-            'overnightPrice': True,
+        params = self._DEFAULT_PARAMS | self._QUOTE_SUMMARY_PARAMS | {
             'crumb': self._crumb,
             # join parsed modules, bcs they can be stripped
             'modules': ','.join(parsed_modules),
@@ -868,11 +864,9 @@ class AsyncClient(ClientBase):
             f'{self._BASE_URL}/ws/fundamentals-timeseries/'
             f'v1/finance/timeseries/{ticker}'
         )
-        params = self._DEFAULT_PARAMS | {
-            'merge': False,
-            'padTimeSeries': True,
+        params = self._DEFAULT_PARAMS | self._TIMESERIES_PARAMS | {
             # join parsed types, bcs they can be stripped
-            'type': ','.join(parsed_types),
+            'type': ','.join(parsed_types)
         }
 
         if period1 is None:
@@ -902,11 +896,7 @@ class AsyncClient(ClientBase):
 
         await self._get_crumb()
         url = f'{self._BASE_URL}/v7/finance/options/{ticker}'
-        params = self._DEFAULT_PARAMS | {
-            'date': -1,
-            'straddle': False,
-            'crumb': self._crumb,
-        }
+        params = self._DEFAULT_PARAMS | self._OPTIONS_PARAMS | {'crumb': self._crumb}
         response = await self._get_request(url, params)
         return response.json()
 
@@ -957,13 +947,7 @@ class AsyncClient(ClientBase):
         logger.debug(f'Getting finance/insights for {tickers=}.')
 
         url = f'{self._BASE_URL}/ws/insights/v3/finance/insights'
-        params = self._DEFAULT_PARAMS | {
-            'symbols': tickers,
-            'disableRelatedReports': True,
-            'getAllResearchReports': True,
-            'reportsCount': 4,
-            'ssl': True,
-        }
+        params = self._DEFAULT_PARAMS | self._INSIGHTS_PARAMS | {'symbols': tickers}
         response = await self._get_request(url, params)
         return response.json()
 
@@ -980,7 +964,7 @@ class AsyncClient(ClientBase):
         logger.debug(f'Getting ratings for {ticker=}.')
 
         url = f'{self._BASE_URL}/v2/ratings/top/{ticker}'
-        params = self._DEFAULT_PARAMS | {'exclude_noncurrent': True}
+        params = self._DEFAULT_PARAMS | self._RATINGS_PARAMS
         response = await self._get_request(url, params)
         return response.json()
 
@@ -1049,11 +1033,7 @@ class AsyncClient(ClientBase):
         logger.debug('Getting finance/calendar-events.')
 
         url = f'{self._BASE_URL}/ws/screeners/v1/finance/calendar-events'
-        params = self._DEFAULT_PARAMS | {
-            'countPerDay': 25,
-            'economicEventsHighImportanceOnly': True,
-            'economicEventsRegionFilter': '',
-        }
+        params = self._DEFAULT_PARAMS | self._CALENDAR_EVENTS_PARAMS
 
         if modules:
             parsed_modules = {m.strip() for m in modules.split(',')}

@@ -1,14 +1,14 @@
 ## TODO
 
 - [ ] sync + async fixtures, e.g. chart interval, period_range
-- [ ] CHART_KWARGS const?
-- [ ] mock yfinance response
-- [ ] pytest-benchmark sync symbol vs yfinance
 - [ ] timezone
 - [ ] multi symbols support
 - [ ] publish to pypi test
 - [ ] publish
 
+- ~~[x] pytest-benchmark sync symbol vs yfinance~~
+- ~~[x] _CHART_KWARGS class attr?~~
+- ~~[x] mock yfinance response~~
 - ~~[x] (sync) client and (sync) symbol ?~~
 - ~~[x] run unit tests w/o internet~~
 - ~~[x] tests - timestamp fixtures?~~

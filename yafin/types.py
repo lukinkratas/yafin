@@ -2442,7 +2442,7 @@ class CalendarEventsFinanceResultSecReportsItemRecord(TypedDict):
     filingDate: int
     ticker: str
     companyName: str
-    category: str
+    category: NotRequired[str]
     thumbnailUrl: str
     exhibits: list[dict[str, str]]
 
