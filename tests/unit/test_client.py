@@ -124,7 +124,11 @@ class TestUnitClient:
         ticker: str,
     ) -> None:
         """Test _get_request method."""
-        _mock_response(mocker, response_json=chart_json_mock)
+        _mock_response(
+            mocker,
+            patched_method='yafin.client.Session.get',
+            response_json=chart_json_mock,
+        )
         url = f'https://query2.finance.yahoo.com/v8/finance/chart/{ticker}'
         params = {
             'formatted': 'false',
@@ -142,6 +146,7 @@ class TestUnitClient:
         """Test _get_request method."""
         _mock_response(
             mocker,
+            patched_method='yafin.client.Session.get',
             status_code=404,
             response_json={
                 'quoteSummary': {
@@ -182,7 +187,9 @@ class TestUnitClient:
 
     def test_get_crumb(self, client: Client, mocker: MockerFixture) -> None:
         """Test _get_crumb method."""
-        _mock_response(mocker, text='test_crumb')
+        _mock_response(
+            mocker, patched_method='yafin.client.Session.get', text='test_crumb'
+        )
 
         assert client._crumb is None
 
@@ -216,7 +223,11 @@ class TestUnitClient:
         period2: int | float | None,
     ) -> None:
         """Test get_chart method."""
-        _mock_response(mocker, response_json=chart_json_mock)
+        _mock_response(
+            mocker,
+            patched_method='yafin.client.Session.get',
+            response_json=chart_json_mock,
+        )
         chart = client.get_chart(
             ticker=ticker, **kwargs, period1=period1, period2=period2
         )
@@ -295,7 +306,12 @@ class TestUnitClient:
         tickers: str,
     ) -> None:
         """Test get_quote method."""
-        _mock_response(mocker, response_json=quote_json_mock, text='test_crumb')
+        _mock_response(
+            mocker,
+            patched_method='yafin.client.Session.get',
+            response_json=quote_json_mock,
+            text='test_crumb',
+        )
         quotes = client.get_quote(tickers)
         _assert_quote_response_json(quotes, tickers)
 
@@ -303,7 +319,9 @@ class TestUnitClient:
         self, client: Client, mocker: MockerFixture
     ) -> None:
         """Test get_quote method with invalid arguments."""
-        _mock_response(mocker, text='test_crumb')
+        _mock_response(
+            mocker, patched_method='yafin.client.Session.get', text='test_crumb'
+        )
         with pytest.raises(TypeCheckError):
             client.get_quote(tickers=1)
 
@@ -315,7 +333,11 @@ class TestUnitClient:
         tickers: str,
     ) -> None:
         """Test get_quote_type method."""
-        _mock_response(mocker, response_json=quote_type_json_mock)
+        _mock_response(
+            mocker,
+            patched_method='yafin.client.Session.get',
+            response_json=quote_type_json_mock,
+        )
         quote_types = client.get_quote_type(tickers)
         _assert_quote_type_response_json(quote_types, tickers)
 
@@ -333,7 +355,10 @@ class TestUnitClient:
     ) -> None:
         """Test get_quote_summary method."""
         _mock_response(
-            mocker, response_json=quote_summary_all_modules_json_mock, text='test_crumb'
+            mocker,
+            patched_method='yafin.client.Session.get',
+            response_json=quote_summary_all_modules_json_mock,
+            text='test_crumb',
         )
         modules = QUOTE_SUMMARY_MODULES
         quote_summary = client.get_quote_summary(ticker, modules)
@@ -356,7 +381,9 @@ class TestUnitClient:
         err_cls: Type[Exception],
     ) -> None:
         """Test get_quote_summary method with invalid arguments."""
-        _mock_response(mocker, text='test_crumb')
+        _mock_response(
+            mocker, patched_method='yafin.client.Session.get', text='test_crumb'
+        )
         with pytest.raises(err_cls):
             client.get_quote_summary(**kwargs)
 
@@ -371,7 +398,11 @@ class TestUnitClient:
     ) -> None:
         """Test get_timeseries method."""
         types = ANNUAL_INCOME_STATEMENT_TYPES
-        _mock_response(mocker, response_json=timeseries_income_statement_json_mock)
+        _mock_response(
+            mocker,
+            patched_method='yafin.client.Session.get',
+            response_json=timeseries_income_statement_json_mock,
+        )
         timeseries = client.get_timeseries(
             ticker, types, period1=period1, period2=period2
         )
@@ -419,7 +450,12 @@ class TestUnitClient:
         ticker: str,
     ) -> None:
         """Test get_options method."""
-        _mock_response(mocker, response_json=options_json_mock, text='test_crumb')
+        _mock_response(
+            mocker,
+            patched_method='yafin.client.Session.get',
+            response_json=options_json_mock,
+            text='test_crumb',
+        )
         options = client.get_options(ticker)
         _assert_options_response_json(options, ticker)
 
@@ -427,7 +463,9 @@ class TestUnitClient:
         self, client: Client, mocker: MockerFixture
     ) -> None:
         """Test get_options method with invalid arguments."""
-        _mock_response(mocker, text='test_crumb')
+        _mock_response(
+            mocker, patched_method='yafin.client.Session.get', text='test_crumb'
+        )
         with pytest.raises(TypeCheckError):
             client.get_options(ticker=1)
 
@@ -439,7 +477,11 @@ class TestUnitClient:
         tickers: str,
     ) -> None:
         """Test get_search method."""
-        _mock_response(mocker, response_json=search_json_mock)
+        _mock_response(
+            mocker,
+            patched_method='yafin.client.Session.get',
+            response_json=search_json_mock,
+        )
         search = client.get_search(tickers)
         _assert_search_response_json(search)
 
@@ -456,7 +498,11 @@ class TestUnitClient:
         tickers: str,
     ) -> None:
         """Test get_recommendations method."""
-        _mock_response(mocker, response_json=recommendations_json_mock)
+        _mock_response(
+            mocker,
+            patched_method='yafin.client.Session.get',
+            response_json=recommendations_json_mock,
+        )
         recommendations = client.get_recommendations(tickers)
         _assert_recommendations_response_json(recommendations, tickers)
 
@@ -473,7 +519,11 @@ class TestUnitClient:
         tickers: str,
     ) -> None:
         """Test get_insights method."""
-        _mock_response(mocker, response_json=insights_json_mock)
+        _mock_response(
+            mocker,
+            patched_method='yafin.client.Session.get',
+            response_json=insights_json_mock,
+        )
         insights = client.get_insights(tickers)
         _assert_insights_response_json(insights, tickers)
 
@@ -490,7 +540,11 @@ class TestUnitClient:
         ticker: str,
     ) -> None:
         """Test get_ratings method."""
-        _mock_response(mocker, response_json=ratings_json_mock)
+        _mock_response(
+            mocker,
+            patched_method='yafin.client.Session.get',
+            response_json=ratings_json_mock,
+        )
         ratings = client.get_ratings(ticker)
         _assert_ratings_response_json(ratings)
 
@@ -506,7 +560,11 @@ class TestUnitClient:
         market_summaries_json_mock: dict[str, Any],
     ) -> None:
         """Test get_market_summaries method."""
-        _mock_response(mocker, response_json=market_summaries_json_mock)
+        _mock_response(
+            mocker,
+            patched_method='yafin.client.Session.get',
+            response_json=market_summaries_json_mock,
+        )
         market_summaries = client.get_market_summaries()
         _assert_market_summary_response_json(market_summaries)
 
@@ -517,7 +575,11 @@ class TestUnitClient:
         trending_json_mock: dict[str, Any],
     ) -> None:
         """Test get_trending method."""
-        _mock_response(mocker, response_json=trending_json_mock)
+        _mock_response(
+            mocker,
+            patched_method='yafin.client.Session.get',
+            response_json=trending_json_mock,
+        )
         trending = client.get_trending()
         _assert_trending_response_json(trending)
 
@@ -528,7 +590,11 @@ class TestUnitClient:
         currencies_json_mock: dict[str, Any],
     ) -> None:
         """Test get_currencies method."""
-        _mock_response(mocker, response_json=currencies_json_mock)
+        _mock_response(
+            mocker,
+            patched_method='yafin.client.Session.get',
+            response_json=currencies_json_mock,
+        )
         currencies = client.get_currencies()
         _assert_currencies_response_json(currencies)
 
@@ -549,7 +615,11 @@ class TestUnitClient:
         end_date: int | float | None,
     ) -> None:
         """Test get_calendar_events method."""
-        _mock_response(mocker, response_json=calendar_events_json_mock)
+        _mock_response(
+            mocker,
+            patched_method='yafin.client.Session.get',
+            response_json=calendar_events_json_mock,
+        )
         calendar_events = client.get_calendar_events(
             **kwargs, start_date=start_date, end_date=end_date
         )
@@ -611,6 +681,7 @@ class TestUnitAsyncClient:
         """Test _get_request method."""
         _mock_response(
             mocker,
+            patched_method='yafin.client.AsyncSession.get',
             response_json=chart_json_mock,
             async_mock=True,
         )
@@ -634,6 +705,7 @@ class TestUnitAsyncClient:
         """Test _get_request method."""
         _mock_response(
             mocker,
+            patched_method='yafin.client.AsyncSession.get',
             status_code=404,
             response_json={
                 'quoteSummary': {
@@ -684,6 +756,7 @@ class TestUnitAsyncClient:
         """Test _get_crumb method."""
         _mock_response(
             mocker,
+            patched_method='yafin.client.AsyncSession.get',
             text='test_crumb',
             async_mock=True,
         )
@@ -723,6 +796,7 @@ class TestUnitAsyncClient:
         """Test get_chart method."""
         _mock_response(
             mocker,
+            patched_method='yafin.client.AsyncSession.get',
             response_json=chart_json_mock,
             async_mock=True,
         )
@@ -811,6 +885,7 @@ class TestUnitAsyncClient:
         """Test get_quote method."""
         _mock_response(
             mocker,
+            patched_method='yafin.client.AsyncSession.get',
             response_json=quote_json_mock,
             text='test_crumb',
             async_mock=True,
@@ -825,6 +900,7 @@ class TestUnitAsyncClient:
         """Test get_quote method with invalid arguments."""
         _mock_response(
             mocker,
+            patched_method='yafin.client.AsyncSession.get',
             text='test_crumb',
             async_mock=True,
         )
@@ -842,6 +918,7 @@ class TestUnitAsyncClient:
         """Test get_quote_type method."""
         _mock_response(
             mocker,
+            patched_method='yafin.client.AsyncSession.get',
             response_json=quote_type_json_mock,
             async_mock=True,
         )
@@ -865,6 +942,7 @@ class TestUnitAsyncClient:
         """Test get_quote_summary method."""
         _mock_response(
             mocker,
+            patched_method='yafin.client.AsyncSession.get',
             response_json=quote_summary_all_modules_json_mock,
             text='test_crumb',
             async_mock=True,
@@ -893,6 +971,7 @@ class TestUnitAsyncClient:
         """Test get_quote_summary method with invalid arguments."""
         _mock_response(
             mocker,
+            patched_method='yafin.client.AsyncSession.get',
             text='test_crumb',
             async_mock=True,
         )
@@ -913,6 +992,7 @@ class TestUnitAsyncClient:
         types = ANNUAL_INCOME_STATEMENT_TYPES
         _mock_response(
             mocker,
+            patched_method='yafin.client.AsyncSession.get',
             response_json=timeseries_income_statement_json_mock,
             async_mock=True,
         )
@@ -967,6 +1047,7 @@ class TestUnitAsyncClient:
         """Test get_options method."""
         _mock_response(
             mocker,
+            patched_method='yafin.client.AsyncSession.get',
             response_json=options_json_mock,
             text='test_crumb',
             async_mock=True,
@@ -981,6 +1062,7 @@ class TestUnitAsyncClient:
         """Test get_options method with invalid arguments."""
         _mock_response(
             mocker,
+            patched_method='yafin.client.AsyncSession.get',
             text='test_crumb',
             async_mock=True,
         )
@@ -998,6 +1080,7 @@ class TestUnitAsyncClient:
         """Test get_search method."""
         _mock_response(
             mocker,
+            patched_method='yafin.client.AsyncSession.get',
             response_json=search_json_mock,
             async_mock=True,
         )
@@ -1021,6 +1104,7 @@ class TestUnitAsyncClient:
         """Test get_recommendations method."""
         _mock_response(
             mocker,
+            patched_method='yafin.client.AsyncSession.get',
             response_json=recommendations_json_mock,
             async_mock=True,
         )
@@ -1046,6 +1130,7 @@ class TestUnitAsyncClient:
         """Test get_insights method."""
         _mock_response(
             mocker,
+            patched_method='yafin.client.AsyncSession.get',
             response_json=insights_json_mock,
             async_mock=True,
         )
@@ -1069,6 +1154,7 @@ class TestUnitAsyncClient:
         """Test get_ratings method."""
         _mock_response(
             mocker,
+            patched_method='yafin.client.AsyncSession.get',
             response_json=ratings_json_mock,
             async_mock=True,
         )
@@ -1091,6 +1177,7 @@ class TestUnitAsyncClient:
         """Test get_market_summaries method."""
         _mock_response(
             mocker,
+            patched_method='yafin.client.AsyncSession.get',
             response_json=market_summaries_json_mock,
             async_mock=True,
         )
@@ -1107,6 +1194,7 @@ class TestUnitAsyncClient:
         """Test get_trending method."""
         _mock_response(
             mocker,
+            patched_method='yafin.client.AsyncSession.get',
             response_json=trending_json_mock,
             async_mock=True,
         )
@@ -1123,6 +1211,7 @@ class TestUnitAsyncClient:
         """Test get_currencies method."""
         _mock_response(
             mocker,
+            patched_method='yafin.client.AsyncSession.get',
             response_json=currencies_json_mock,
             async_mock=True,
         )
@@ -1149,6 +1238,7 @@ class TestUnitAsyncClient:
         """Test get_calendar_events method."""
         _mock_response(
             mocker,
+            patched_method='yafin.client.AsyncSession.get',
             response_json=calendar_events_json_mock,
             async_mock=True,
         )

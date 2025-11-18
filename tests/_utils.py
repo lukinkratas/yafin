@@ -22,9 +22,11 @@ def _get_json_fixture(file_name: str, folder_name: str | None = None) -> dict[st
 
 def _mock_response(
     mocker: MockerFixture,
+    patched_method: str,
     status_code: int = 200,
     response_json: dict[str, Any] | None = None,
     text: str | None = None,
+    url: str | None = None,
     async_mock: bool = False,
 ) -> None:
     """Mock response with status code 200."""
@@ -37,14 +39,14 @@ def _mock_response(
             '404 Client Error: Not Found for url'
         )
 
-    if response_json:
+    if response_json is not None:
         mock_response.json.return_value = response_json
 
-    if text:
+    if text is not None:
         mock_response.text = text
 
+    if url is not None:
+        mock_response.url = url
+
     mock_class = mocker.AsyncMock if async_mock else mocker.Mock
-    patched_method = (
-        'yafin.client.AsyncSession.get' if async_mock else 'yafin.client.Session.get'
-    )
     mocker.patch(patched_method, new=mock_class(return_value=mock_response))

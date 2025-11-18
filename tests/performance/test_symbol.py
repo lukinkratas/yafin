@@ -9,44 +9,18 @@ from pytest_benchmark.fixture import BenchmarkFixture
 from pytest_mock import MockerFixture
 
 import yafin
-from tests._utils import _get_fixture_path, _get_json_fixture
+from tests._utils import _get_fixture_path, _get_json_fixture, _mock_response
 
-BENCHMARK_KWARGS = dict(rounds=10, iterations=1, warmup_rounds=1)
-
-
-# def _mock_yfinance_response(
-#     mocker: MockerFixture,
-#     status_code: int = 200,
-#     response_json: dict[str, Any] | None = None,
-#     text: str | None = None,
-#     async_mock: bool = False,
-# ) -> None:
-#     """Mock response with status code 200."""
-#     mock_response = mocker.Mock(spec=Response)
-#     mock_response.status_code = status_code
-#     mock_response.raise_for_status = mocker.Mock()
-
-#     if status_code == 404:
-#         mock_response.raise_for_status.side_effect = HTTPError(
-#             '404 Client Error: Not Found for url'
-#         )
-
-#     if response_json:
-#         mock_response.json.return_value = response_json
-
-#     if text:
-#         mock_response.text = text
-
-#     mock_class = mocker.AsyncMock if async_mock else mocker.Mock
-#     patched_method = 'curl_cffi.requests.Session.get'
-#     mocker.patch(patched_method, new=mock_class(return_value=mock_response))
+BENCHMARK_KWARGS = dict(rounds=100, iterations=1, warmup_rounds=1)
 
 
-def process_chart_like_yfinance(chart: dict[str, Any]) -> pd.DataFrame:
+def _process_chart_like_yfinance(chart: dict[str, Any]) -> pd.DataFrame:
     """Process chart response json into pandas dataframe, exact as yfinance."""
-    chart_df = pd.DataFrame(
-        {**chart['indicators']['quote'][0]}, index=chart['timestamp']
-    ).rename(
+    timestamps = chart['timestamp']
+    ohlcvs = chart['indicators']['quote'][0]
+    # adjcloses = chart['indicators']['adjclose'][0]['adjclose']
+
+    chart_df = pd.DataFrame({**ohlcvs}, index=timestamps).rename(
         columns={
             'open': 'Open',
             'volume': 'Volume',
@@ -82,11 +56,20 @@ def process_chart_like_yfinance(chart: dict[str, Any]) -> pd.DataFrame:
         value={'Stock Splits': 0}
     )
 
-    return chart_df.reset_index().loc[
+    return chart_df.set_index('Date').loc[
         :,
-        ['Date', 'Open', 'High', 'Low', 'Close', 'Volume', 'Dividends', 'Stock Splits'],
+        ['Open', 'High', 'Low', 'Close', 'Volume', 'Dividends', 'Stock Splits'],
     ]
 
+
+def _assert_chart_df(chart_df: pd.DataFrame, expected_df: pd.DataFrame) -> None:
+    """Assertions for chart dataframe."""
+    assert not chart_df.empty
+
+    assert chart_df.columns.to_list() == expected_df.columns.to_list()
+    assert len(chart_df) == len(expected_df)
+    # for col in chart_df.columns:
+    #     assert chart_df[col].to_list() == expected_df[col].to_list()
 
 @pytest.fixture(scope='session')
 def chart_json_mock() -> dict[str, Any]:
@@ -98,8 +81,7 @@ def chart_json_mock() -> dict[str, Any]:
 def expected_chart_df() -> pd.DataFrame:
     """Expected Chart DataFrame ficture."""
     csv_path = _get_fixture_path(file_name='meta.csv', folder_name='performance')
-    return pd.read_csv(csv_path)
-
+    return pd.read_csv(csv_path).set_index('Date')
 
 class TestPerformanceSymbol:
     """Unit tests for yafin.Symbol."""
@@ -109,6 +91,17 @@ class TestPerformanceSymbol:
         """Fresh new instance of Symbol for each tests."""
         with yafin.Symbol('META') as symbol:
             yield symbol
+
+    def run_get_chart(self, symbol: yafin.Symbol) -> pd.DataFrame:
+        """Run get_chart method."""
+        chart = symbol.get_chart(period_range='1y', interval='1d')
+        return _process_chart_like_yfinance(chart)
+
+    def benchmark_chart(
+        self, symbol: yafin.Symbol, benchmark: BenchmarkFixture
+    ) -> pd.DataFrame:
+        """Benchmark get_chart method."""
+        return benchmark.pedantic(self.run_get_chart, args=[symbol], **BENCHMARK_KWARGS)  # type: ignore[no-untyped-call, unused-ignore]
 
     @pytest.mark.performance
     def test_get_chart(
@@ -120,23 +113,17 @@ class TestPerformanceSymbol:
         expected_chart_df: pd.DataFrame,
     ) -> None:
         """Test get_chart method."""
-
-        def run() -> pd.DataFrame:
-            chart = symbol.get_chart(interval='1d', period_range='1y')
-            return process_chart_like_yfinance(chart)
-
-        # _mock_response(mocker, response_json=chart_json_mock)
-
-        result_df = benchmark.pedantic(run, **BENCHMARK_KWARGS)  # type: ignore[no-untyped-call]
-        assert not result_df.empty
-
-        # assert result_df.columns.to_list() == expected_chart_df.columns.to_list()
-        # assert result_df.index.to_list() == expected_chart_df.index.to_list()
-        # assert result_df.compare(expected_chart_df).empty
+        _mock_response(
+            mocker,
+            patched_method='yafin.client.Session.get',
+            response_json=chart_json_mock,
+        )
+        chart_df = self.benchmark_chart(symbol, benchmark)
+        _assert_chart_df(chart_df, expected_chart_df)
 
 
-class TestPerformanceYFinance:
-    """Performance tests for yafin.stonk module."""
+class TestPerformanceYfinance:
+    """Performance tests for yfinance.Ticker."""
 
     @pytest.fixture
     def ticker(self) -> Generator[yf.Ticker, None, None]:
@@ -144,6 +131,20 @@ class TestPerformanceYFinance:
         session: requests.Session[Any] = requests.Session(impersonate='chrome')
         yield yf.Ticker('META', session=session)
         session.close()
+
+    def run_get_chart(self, ticker: yf.Ticker) -> pd.DataFrame:
+        """Run history method."""
+        return ticker.history(period='1y', interval='1d')
+
+    def benchmark_chart(
+        self,
+        ticker: yf.Ticker,
+        benchmark: BenchmarkFixture,
+    ) -> pd.DataFrame:
+        """Benchmark history method."""
+        return benchmark.pedantic(
+            self.run_get_chart, args=[ticker], **BENCHMARK_KWARGS
+        )  # type: ignore[no-untyped-call, unused-ignore]
 
     @pytest.mark.performance
     def test_get_chart_yfinance(
@@ -155,48 +156,11 @@ class TestPerformanceYFinance:
         expected_chart_df: pd.DataFrame,
     ) -> None:
         """Test history method."""
-
-        def run() -> pd.DataFrame:
-            return ticker.history(period='1y', interval='1d')
-
-        # _mock_yfinance_response(mocker, response_json=chart_json_mock)
-
-        result_df = benchmark.pedantic(run, **BENCHMARK_KWARGS)  # type: ignore[no-untyped-call]
-        assert not result_df.empty
-        # result_df.to_csv('yfinance.csv')
-        # expected_chart_df.to_csv('expected.csv')
-
-        # assert result_df.columns.to_list() == expected_chart_df.columns.to_list()
-        # assert result_df.index.to_list() == expected_chart_df.index.to_list()
-        # assert result_df.compare(expected_chart_df).empty
-
-
-class TestPerformanceYahooQuery:
-    """Performance tests for yafin.stonk module."""
-
-    @pytest.fixture
-    def ticker(self) -> Generator[yq.Ticker, None, None]:
-        """Fixture for Ticker."""
-        yield yq.Ticker('META')
-
-    @pytest.mark.performance
-    def test_get_chart_yahooquery(
-        self,
-        ticker: yq.Ticker,
-        mocker: MockerFixture,
-        benchmark: BenchmarkFixture,
-        chart_json_mock: dict[str, Any],
-        expected_chart_df: pd.DataFrame,
-    ) -> None:
-        """Test history method."""
-
-        def run() -> pd.DataFrame:
-            return ticker.history(period='1y', interval='1d')
-
-        result_df = benchmark.pedantic(run, **BENCHMARK_KWARGS)  # type: ignore[no-untyped-call]
-        assert not result_df.empty
-        # result_df.to_csv('yahooquery.csv')
-
-        # assert result_df.columns.to_list() == expected_chart_df.columns.to_list()
-        # assert result_df.index.to_list() == expected_chart_df.index.to_list()
-        # assert result_df.compare(expected_chart_df).empty
+        _mock_response(
+            mocker,
+            patched_method='yfinance.data.YfData.get',
+            response_json=chart_json_mock,
+            text='',
+        )
+        chart_df = self.benchmark_chart(ticker, benchmark)
+        _assert_chart_df(chart_df, expected_chart_df)

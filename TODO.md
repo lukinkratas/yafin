@@ -1,6 +1,7 @@
 ## TODO
 
-- [ ] mypy errs
+- [ ] sync + async fixtures, e.g. chart interval, period_range
+- [ ] CHART_KWARGS const?
 - [ ] mock yfinance response
 - [ ] pytest-benchmark sync symbol vs yfinance
 - [ ] timezone

@@ -65,6 +65,12 @@ class ClientBase(object):
         'formatted': False,
         'corsDomain': 'finance.yahoo.com',
     }
+    _CHART_PARAMS = {
+        'includePrePost': True,
+        'source': 'cosaic',
+        'includeAdjustedClose': True,
+        'userYfid': True,
+    }
 
     def __init__(self, timeout: float = 5.0, max_retries: int = 5) -> None:
         self.timeout = timeout
@@ -210,9 +216,7 @@ class Client(ClientBase):
         Args:
             ticker: Ticker symbol.
             interval: Data interval.
-            period_range:
-                Range of the period. (Not named range due to collision with python
-                built-in method name)
+            period_range: Range of the period.
             period1: Start timestamp in seconds. (optional, default: None)
             period2: End timestamp in seconds. (optional, default: None)
             events: Comma-separated events to include.
@@ -222,6 +226,11 @@ class Client(ClientBase):
         Raises:
             ValueError: If any of period_range, interval or parsed_events are not in
                 list of valid values.
+
+        Note:
+            period_range:
+                Even though the the endpoint param name is range, period_range was
+                chosen to avoid collision with python built-in method name.
         """
         logger.debug(
             f'Getting finance/chart for {ticker=}, '
@@ -229,12 +238,7 @@ class Client(ClientBase):
         )
 
         url = f'{self._BASE_URL}/v8/finance/chart/{ticker}'
-        params = self._DEFAULT_PARAMS | {
-            'includePrePost': True,
-            'source': 'cosaic',
-            'includeAdjustedClose': True,
-            'userYfid': True,
-        }
+        params = self._DEFAULT_PARAMS | self._CHART_PARAMS
 
         _check_interval(interval)
         params['interval'] = interval
@@ -731,12 +735,7 @@ class AsyncClient(ClientBase):
         )
 
         url = f'{self._BASE_URL}/v8/finance/chart/{ticker}'
-        params = self._DEFAULT_PARAMS | {
-            'includePrePost': True,
-            'source': 'cosaic',
-            'includeAdjustedClose': True,
-            'userYfid': True,
-        }
+        params = self._DEFAULT_PARAMS | self._CHART_PARAMS
 
         _check_interval(interval)
         params['interval'] = interval

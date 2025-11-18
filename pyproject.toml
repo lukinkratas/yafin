@@ -37,6 +37,7 @@ performance = [
     "yfinance>=0.2.66",
     "pandas>=2.3.3",
     "yahooquery>=2.4.1",
+    "numpy>=2.3.5",
 ]
 doc = [
     "mkdocs>=1.6.1",
@@ -86,7 +87,7 @@ indent-style = "space"
 strict = true
 explicit_package_bases = true
 ignore_missing_imports = true
-disable_error_code = ["no-any-return", "union-attr", "misc", "unused-ignore"]
+disable_error_code = ["no-any-return", "union-attr", "misc"]
 exclude = ["scripts"]
 
 [tool.pytest.ini_options]

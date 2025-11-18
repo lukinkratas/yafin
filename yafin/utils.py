@@ -19,7 +19,7 @@ from .exceptions import TrailingBalanceSheetError
 logger = logging.getLogger(__name__)
 
 
-def _encode_url(url: str, params: dict[str, str] | None = None) -> str:
+def _encode_url(url: str, params: dict[str, Any] | None = None) -> str:
     """Print URL with parameters.
 
     Args:
