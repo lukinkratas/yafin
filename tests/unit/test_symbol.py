@@ -30,13 +30,13 @@ from yafin.exceptions import TrailingBalanceSheetError
 from yafin.symbol import _AsyncClientManager, _ClientManager
 
 
-@pytest.fixture(scope='session')
+@pytest.fixture
 def quote_json_mock(ticker: str) -> dict[str, Any]:
     """Quote response json mock."""
     return _get_json_fixture(file_name=f'{ticker.lower()}.json', folder_name='quote')
 
 
-@pytest.fixture(scope='session')
+@pytest.fixture
 def quote_type_json_mock(ticker: str) -> dict[str, Any]:
     """Quote_type response json mock."""
     return _get_json_fixture(
@@ -44,13 +44,13 @@ def quote_type_json_mock(ticker: str) -> dict[str, Any]:
     )
 
 
-@pytest.fixture(scope='session')
+@pytest.fixture
 def search_json_mock(ticker: str) -> dict[str, Any]:
     """Search response json mock."""
     return _get_json_fixture(file_name=f'{ticker.lower()}.json', folder_name='search')
 
 
-@pytest.fixture(scope='session')
+@pytest.fixture
 def recommendations_json_mock(ticker: str) -> dict[str, Any]:
     """Recommendations response json mock."""
     return _get_json_fixture(
@@ -58,13 +58,13 @@ def recommendations_json_mock(ticker: str) -> dict[str, Any]:
     )
 
 
-@pytest.fixture(scope='session')
+@pytest.fixture
 def insights_json_mock(ticker: str) -> dict[str, Any]:
     """Insights response json mock."""
     return _get_json_fixture(file_name=f'{ticker.lower()}.json', folder_name='insights')
 
 
-@pytest.fixture(scope='session')
+@pytest.fixture
 def calendar_events_json_mock(ticker: str) -> dict[str, Any]:
     """Quote summary response json mock with calendar events data."""
     return _get_json_fixture(

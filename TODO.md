@@ -6,6 +6,7 @@
 - [ ] publish to pypi test
 - [ ] publish
 
+- ~~[x] urls class attrs?~~
 - ~~[x] pytest-benchmark sync symbol vs yfinance~~
 - ~~[x] _CHART_KWARGS class attr?~~
 - ~~[x] mock yfinance response~~

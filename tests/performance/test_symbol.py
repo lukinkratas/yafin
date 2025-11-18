@@ -2,7 +2,6 @@ from typing import Any, Generator
 
 import pandas as pd
 import pytest
-import yahooquery as yq
 import yfinance as yf
 from curl_cffi import requests
 from pytest_benchmark.fixture import BenchmarkFixture
@@ -71,6 +70,7 @@ def _assert_chart_df(chart_df: pd.DataFrame, expected_df: pd.DataFrame) -> None:
     # for col in chart_df.columns:
     #     assert chart_df[col].to_list() == expected_df[col].to_list()
 
+
 @pytest.fixture(scope='session')
 def chart_json_mock() -> dict[str, Any]:
     """Chart response json mock."""
@@ -82,6 +82,7 @@ def expected_chart_df() -> pd.DataFrame:
     """Expected Chart DataFrame ficture."""
     csv_path = _get_fixture_path(file_name='meta.csv', folder_name='performance')
     return pd.read_csv(csv_path).set_index('Date')
+
 
 class TestPerformanceSymbol:
     """Unit tests for yafin.Symbol."""
@@ -142,9 +143,7 @@ class TestPerformanceYfinance:
         benchmark: BenchmarkFixture,
     ) -> pd.DataFrame:
         """Benchmark history method."""
-        return benchmark.pedantic(
-            self.run_get_chart, args=[ticker], **BENCHMARK_KWARGS
-        )  # type: ignore[no-untyped-call, unused-ignore]
+        return benchmark.pedantic(self.run_get_chart, args=[ticker], **BENCHMARK_KWARGS)  # type: ignore[no-untyped-call, unused-ignore]
 
     @pytest.mark.performance
     def test_get_chart_yfinance(

@@ -32,7 +32,7 @@ from yafin.const import (
 )
 
 
-@pytest.fixture(scope='session')
+@pytest.fixture
 def end_date(period2: int | float | None) -> int | float | None:
     """Fresh new instance of end_date for each tests."""
     if period2 is None:
@@ -41,7 +41,7 @@ def end_date(period2: int | float | None) -> int | float | None:
     return period2 * 1000
 
 
-@pytest.fixture(scope='session')
+@pytest.fixture
 def start_date(end_date: int | float | None) -> int | float | None:
     """Fresh new instance of start_date for each tests."""
     if end_date is None:
@@ -53,25 +53,25 @@ def start_date(end_date: int | float | None) -> int | float | None:
     return end_type(start_dt.timestamp() * 1000)
 
 
-@pytest.fixture(scope='session')
+@pytest.fixture
 def quote_json_mock(tickers_name: str) -> dict[str, Any]:
     """Quote response json mock."""
     return _get_json_fixture(file_name=f'{tickers_name}.json', folder_name='quote')
 
 
-@pytest.fixture(scope='session')
+@pytest.fixture
 def quote_type_json_mock(tickers_name: str) -> dict[str, Any]:
     """Quote_type response json mock."""
     return _get_json_fixture(file_name=f'{tickers_name}.json', folder_name='quote_type')
 
 
-@pytest.fixture(scope='session')
+@pytest.fixture
 def search_json_mock(tickers_name: str) -> dict[str, Any]:
     """Search response json mock."""
     return _get_json_fixture(file_name=f'{tickers_name}.json', folder_name='search')
 
 
-@pytest.fixture(scope='session')
+@pytest.fixture
 def recommendations_json_mock(tickers_name: str) -> dict[str, Any]:
     """Recommendations response json mock."""
     return _get_json_fixture(
@@ -79,13 +79,13 @@ def recommendations_json_mock(tickers_name: str) -> dict[str, Any]:
     )
 
 
-@pytest.fixture(scope='session')
+@pytest.fixture
 def insights_json_mock(tickers_name: str) -> dict[str, Any]:
     """Insights response json mock."""
     return _get_json_fixture(file_name=f'{tickers_name}.json', folder_name='insights')
 
 
-@pytest.fixture(scope='session')
+@pytest.fixture
 def calendar_events_json_mock() -> dict[str, Any]:
     """Currencies response json mock."""
     return _get_json_fixture(file_name='calendar_events.json')
@@ -129,17 +129,16 @@ class TestUnitClient:
             patched_method='yafin.client.Session.get',
             response_json=chart_json_mock,
         )
-        url = f'https://query2.finance.yahoo.com/v8/finance/chart/{ticker}'
-        params = {
-            'formatted': 'false',
-            'region': 'US',
-            'lang': 'en-US',
-            'corsDomain': 'finance.yahoo.com',
-            'range': '1y',
-            'interval': '1d',
-            'events': 'div,split',
-        }
-        response = client._get_request(url, params)
+        params = (
+            client._DEFAULT_PARAMS
+            | client._CHART_PARAMS
+            | {
+                'range': '1y',
+                'interval': '1d',
+                'events': 'div,split',
+            }
+        )
+        response = client._get_request(client._CHART_URL.format(ticker=ticker), params)
         assert response
 
     def test_get_request_http_err(self, client: Client, mocker: MockerFixture) -> None:
@@ -158,18 +157,17 @@ class TestUnitClient:
                 }
             },
         )
-        url = 'https://query2.finance.yahoo.com/v8/finance/chart/xxxxxxxx'
-        params = {
-            'formatted': 'false',
-            'region': 'US',
-            'lang': 'en-US',
-            'corsDomain': 'finance.yahoo.com',
-            'range': '1y',
-            'interval': '1d',
-            'events': 'div,split',
-        }
+        params = (
+            client._DEFAULT_PARAMS
+            | client._CHART_PARAMS
+            | {
+                'range': '1y',
+                'interval': '1d',
+                'events': 'div,split',
+            }
+        )
         with pytest.raises(HTTPError):
-            client._get_request(url, params)
+            client._get_request(client._CHART_URL.format(ticker='xxxxxxxx'), params)
 
     @pytest.mark.parametrize(
         'kwargs, err_cls',

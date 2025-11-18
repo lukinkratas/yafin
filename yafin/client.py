@@ -59,6 +59,23 @@ class ClientBase(object):
     """
 
     _BASE_URL = r'https://query2.finance.yahoo.com'
+    _CRUMB_URL = f'{_BASE_URL}/v1/test/getcrumb'
+    _CHART_URL = f'{_BASE_URL}/v8/finance/chart/{{ticker}}'
+    _QUOTE_URL = f'{_BASE_URL}/v7/finance/quote'
+    _QUOTE_TYPE_URL = f'{_BASE_URL}/v1/finance/quoteType/'
+    _QUOTE_SUMMARY_URL = f'{_BASE_URL}/v10/finance/quoteSummary/{{ticker}}'
+    _TIMESERIES_URL = (
+        f'{_BASE_URL}/ws/fundamentals-timeseries/v1/finance/timeseries/{{ticker}}'
+    )
+    _OPTIONS_URL = f'{_BASE_URL}/v7/finance/options/{{ticker}}'
+    _SEARCH_URL = f'{_BASE_URL}/v1/finance/search'
+    _RECOMMENDATIONS_URL = f'{_BASE_URL}/v6/finance/recommendationsbysymbol/{{tickers}}'
+    _INSIGHTS_URL = f'{_BASE_URL}/ws/insights/v3/finance/insights'
+    _RATINGS_URL = f'{_BASE_URL}/v2/ratings/top/{{ticker}}'
+    _MARKET_SUMMARIES_URL = f'{_BASE_URL}/v6/finance/quote/marketSummary'
+    _TRENDING_URL = f'{_BASE_URL}/v1/finance/trending/US'
+    _CURRENCIES_URL = f'{_BASE_URL}/v1/finance/currencies'
+    _CALENDAR_EVENTS_URL = f'{_BASE_URL}/ws/screeners/v1/finance/calendar-events'
     _DEFAULT_PARAMS = {
         'region': 'US',
         'lang': 'en-US',
@@ -225,8 +242,7 @@ class Client(ClientBase):
     @lru_cache(maxsize=128)
     def _get_crumb(self) -> None:
         if self._crumb is None:
-            url = f'{self._BASE_URL}/v1/test/getcrumb'
-            response = self._get_request(url)
+            response = self._get_request(self._CRUMB_URL)
             self._crumb = response.text
 
     @_log_args
@@ -266,7 +282,6 @@ class Client(ClientBase):
             f'{period_range=}, {interval=}, {events=}, {period1=}, {period2=}.'
         )
 
-        url = f'{self._BASE_URL}/v8/finance/chart/{ticker}'
         params = self._DEFAULT_PARAMS | self._CHART_PARAMS
 
         _check_interval(interval)
@@ -288,7 +303,7 @@ class Client(ClientBase):
         if period2 is not None:
             params['period2'] = int(period2)
 
-        response = self._get_request(url, params)
+        response = self._get_request(self._CHART_URL.format(ticker=ticker), params)
         return response.json()
 
     @_log_args
@@ -304,9 +319,12 @@ class Client(ClientBase):
         logger.debug(f'Getting finance/quote for {tickers=}.')
 
         self._get_crumb()
-        url = f'{self._BASE_URL}/v7/finance/quote'
-        params = self._DEFAULT_PARAMS | self._QUOTE_PARAMS | {'symbols': tickers, 'crumb': self._crumb}
-        response = self._get_request(url, params)
+        params = (
+            self._DEFAULT_PARAMS
+            | self._QUOTE_PARAMS
+            | {'symbols': tickers, 'crumb': self._crumb}
+        )
+        response = self._get_request(self._QUOTE_URL, params)
         return response.json()
 
     @_log_args
@@ -321,9 +339,8 @@ class Client(ClientBase):
         """
         logger.debug(f'Getting finance/quoteType for {tickers=}.')
 
-        url = f'{self._BASE_URL}/v1/finance/quoteType/'
         params = self._DEFAULT_PARAMS | self._QUOTE_TYPE_PARAMS | {'symbol': tickers}
-        response = self._get_request(url, params)
+        response = self._get_request(self._QUOTE_TYPE_URL, params)
         return response.json()
 
     @_log_args
@@ -345,14 +362,19 @@ class Client(ClientBase):
         _check_quote_summary_modules(parsed_modules)
 
         self._get_crumb()
-        url = f'{self._BASE_URL}/v10/finance/quoteSummary/{ticker}'
-        params = self._DEFAULT_PARAMS | self._QUOTE_SUMMARY_PARAMS | {
-            'crumb': self._crumb,
-            # join parsed modules, bcs they can be stripped
-            'modules': ','.join(parsed_modules),
-        }
+        params = (
+            self._DEFAULT_PARAMS
+            | self._QUOTE_SUMMARY_PARAMS
+            | {
+                'crumb': self._crumb,
+                # join parsed modules, bcs they can be stripped
+                'modules': ','.join(parsed_modules),
+            }
+        )
 
-        response = self._get_request(url, params)
+        response = self._get_request(
+            self._QUOTE_SUMMARY_URL.format(ticker=ticker), params
+        )
         return response.json()
 
     @_log_args
@@ -384,14 +406,14 @@ class Client(ClientBase):
         parsed_types = {t.strip() for t in types.split(',')}
         _check_types(parsed_types)
 
-        url = (
-            f'{self._BASE_URL}/ws/fundamentals-timeseries/'
-            f'v1/finance/timeseries/{ticker}'
+        params = (
+            self._DEFAULT_PARAMS
+            | self._TIMESERIES_PARAMS
+            | {
+                # join parsed types, bcs they can be stripped
+                'type': ','.join(parsed_types)
+            }
         )
-        params = self._DEFAULT_PARAMS | self._TIMESERIES_PARAMS | {
-            # join parsed types, bcs they can be stripped
-            'type': ','.join(parsed_types)
-        }
 
         if period1 is None:
             period1 = datetime(2020, 1, 1, tzinfo=ZoneInfo('UTC')).timestamp()
@@ -403,7 +425,7 @@ class Client(ClientBase):
 
         params['period2'] = int(period2)
 
-        response = self._get_request(url, params)
+        response = self._get_request(self._TIMESERIES_URL.format(ticker=ticker), params)
         return response.json()
 
     @_log_args
@@ -419,9 +441,8 @@ class Client(ClientBase):
         logger.debug(f'Getting finance/options for {ticker=}.')
 
         self._get_crumb()
-        url = f'{self._BASE_URL}/v7/finance/options/{ticker}'
         params = self._DEFAULT_PARAMS | self._OPTIONS_PARAMS | {'crumb': self._crumb}
-        response = self._get_request(url, params)
+        response = self._get_request(self._OPTIONS_URL.format(ticker=ticker), params)
         return response.json()
 
     @_log_args
@@ -436,9 +457,8 @@ class Client(ClientBase):
         """
         logger.debug(f'Getting finance/search for {tickers=}.')
 
-        url = f'{self._BASE_URL}/v1/finance/search'
         params = self._DEFAULT_PARAMS | {'q': tickers}
-        response = self._get_request(url, params)
+        response = self._get_request(self._SEARCH_URL, params)
         return response.json()
 
     @_log_args
@@ -453,9 +473,10 @@ class Client(ClientBase):
         """
         logger.debug(f'Getting finance/recommendations for {tickers=}.')
 
-        url = f'{self._BASE_URL}/v6/finance/recommendationsbysymbol/{tickers}'
         params = self._DEFAULT_PARAMS
-        response = self._get_request(url, params)
+        response = self._get_request(
+            self._RECOMMENDATIONS_URL.format(tickers=tickers), params
+        )
         return response.json()
 
     @_log_args
@@ -470,9 +491,8 @@ class Client(ClientBase):
         """
         logger.debug(f'Getting finance/insights for {tickers=}.')
 
-        url = f'{self._BASE_URL}/ws/insights/v3/finance/insights'
         params = self._DEFAULT_PARAMS | self._INSIGHTS_PARAMS | {'symbols': tickers}
-        response = self._get_request(url, params)
+        response = self._get_request(self._INSIGHTS_URL, params)
         return response.json()
 
     @_log_args
@@ -487,9 +507,8 @@ class Client(ClientBase):
         """
         logger.debug(f'Getting ratings for {ticker=}.')
 
-        url = f'{self._BASE_URL}/v2/ratings/top/{ticker}'
         params = self._DEFAULT_PARAMS | self._RATINGS_PARAMS
-        response = self._get_request(url, params)
+        response = self._get_request(self._RATINGS_URL.format(ticker=ticker), params)
         return response.json()
 
     @_log_args
@@ -501,9 +520,8 @@ class Client(ClientBase):
         """
         logger.debug('Getting finance/quote/marketSummary.')
 
-        url = f'{self._BASE_URL}/v6/finance/quote/marketSummary'
         params = self._DEFAULT_PARAMS
-        response = self._get_request(url, params)
+        response = self._get_request(self._MARKET_SUMMARIES_URL, params)
         return response.json()
 
     @_log_args
@@ -515,9 +533,8 @@ class Client(ClientBase):
         """
         logger.debug('Getting finance/trending.')
 
-        url = f'{self._BASE_URL}/v1/finance/trending/US'
         params = self._DEFAULT_PARAMS
-        response = self._get_request(url, params)
+        response = self._get_request(self._TRENDING_URL, params)
         return response.json()
 
     @_log_args
@@ -529,9 +546,8 @@ class Client(ClientBase):
         """
         logger.debug('Getting finance/currencies.')
 
-        url = f'{self._BASE_URL}/v1/finance/currencies'
         params = self._DEFAULT_PARAMS
-        response = self._get_request(url, params)
+        response = self._get_request(self._CURRENCIES_URL, params)
         return response.json()
 
     @_log_args
@@ -556,7 +572,6 @@ class Client(ClientBase):
         """
         logger.debug('Getting finance/calendar-events.')
 
-        url = f'{self._BASE_URL}/ws/screeners/v1/finance/calendar-events'
         params = self._DEFAULT_PARAMS | self._CALENDAR_EVENTS_PARAMS
 
         if modules:
@@ -577,7 +592,7 @@ class Client(ClientBase):
 
         params['startDate'] = int(start_date)
 
-        response = self._get_request(url, params)
+        response = self._get_request(self._CALENDAR_EVENTS_URL, params)
         return response.json()
 
 
@@ -699,8 +714,7 @@ class AsyncClient(ClientBase):
     @alru_cache(maxsize=128)
     async def _get_crumb(self) -> None:
         if self._crumb is None:
-            url = f'{self._BASE_URL}/v1/test/getcrumb'
-            response = await self._get_request(url)
+            response = await self._get_request(self._CRUMB_URL)
             self._crumb = response.text
 
     @_async_log_args
@@ -737,7 +751,6 @@ class AsyncClient(ClientBase):
             f'{period_range=}, {interval=}, {events=}, {period1=}, {period2=}.'
         )
 
-        url = f'{self._BASE_URL}/v8/finance/chart/{ticker}'
         params = self._DEFAULT_PARAMS | self._CHART_PARAMS
 
         _check_interval(interval)
@@ -759,7 +772,9 @@ class AsyncClient(ClientBase):
         if period2 is not None:
             params['period2'] = int(period2)
 
-        response = await self._get_request(url, params)
+        response = await self._get_request(
+            self._CHART_URL.format(ticker=ticker), params
+        )
         return response.json()
 
     @_async_log_args
@@ -775,12 +790,12 @@ class AsyncClient(ClientBase):
         logger.debug(f'Getting finance/quote for {tickers=}.')
 
         await self._get_crumb()
-        url = f'{self._BASE_URL}/v7/finance/quote'
-        params = self._DEFAULT_PARAMS | self._QUOTE_PARAMS | {
-            'symbols': tickers,
-            'crumb': self._crumb,
-        }
-        response = await self._get_request(url, params)
+        params = (
+            self._DEFAULT_PARAMS
+            | self._QUOTE_PARAMS
+            | {'symbols': tickers, 'crumb': self._crumb}
+        )
+        response = await self._get_request(self._QUOTE_URL, params)
         return response.json()
 
     @_async_log_args
@@ -795,9 +810,8 @@ class AsyncClient(ClientBase):
         """
         logger.debug(f'Getting finance/quoteType for {tickers=}.')
 
-        url = f'{self._BASE_URL}/v1/finance/quoteType/'
         params = self._DEFAULT_PARAMS | self._QUOTE_TYPE_PARAMS | {'symbol': tickers}
-        response = await self._get_request(url, params)
+        response = await self._get_request(self._QUOTE_TYPE_URL, params)
         return response.json()
 
     @_async_log_args
@@ -821,14 +835,19 @@ class AsyncClient(ClientBase):
         _check_quote_summary_modules(parsed_modules)
 
         await self._get_crumb()
-        url = f'{self._BASE_URL}/v10/finance/quoteSummary/{ticker}'
-        params = self._DEFAULT_PARAMS | self._QUOTE_SUMMARY_PARAMS | {
-            'crumb': self._crumb,
-            # join parsed modules, bcs they can be stripped
-            'modules': ','.join(parsed_modules),
-        }
+        params = (
+            self._DEFAULT_PARAMS
+            | self._QUOTE_SUMMARY_PARAMS
+            | {
+                'crumb': self._crumb,
+                # join parsed modules, bcs they can be stripped
+                'modules': ','.join(parsed_modules),
+            }
+        )
 
-        response = await self._get_request(url, params)
+        response = await self._get_request(
+            self._QUOTE_SUMMARY_URL.format(ticker=ticker), params
+        )
         return response.json()
 
     @_async_log_args
@@ -860,14 +879,14 @@ class AsyncClient(ClientBase):
         parsed_types = {t.strip() for t in types.split(',')}
         _check_types(parsed_types)
 
-        url = (
-            f'{self._BASE_URL}/ws/fundamentals-timeseries/'
-            f'v1/finance/timeseries/{ticker}'
+        params = (
+            self._DEFAULT_PARAMS
+            | self._TIMESERIES_PARAMS
+            | {
+                # join parsed types, bcs they can be stripped
+                'type': ','.join(parsed_types)
+            }
         )
-        params = self._DEFAULT_PARAMS | self._TIMESERIES_PARAMS | {
-            # join parsed types, bcs they can be stripped
-            'type': ','.join(parsed_types)
-        }
 
         if period1 is None:
             period1 = datetime(2020, 1, 1, tzinfo=ZoneInfo('UTC')).timestamp()
@@ -879,7 +898,9 @@ class AsyncClient(ClientBase):
 
         params['period2'] = int(period2)
 
-        response = await self._get_request(url, params)
+        response = await self._get_request(
+            self._TIMESERIES_URL.format(ticker=ticker), params
+        )
         return response.json()
 
     @_async_log_args
@@ -895,9 +916,10 @@ class AsyncClient(ClientBase):
         logger.debug(f'Getting finance/options for {ticker=}.')
 
         await self._get_crumb()
-        url = f'{self._BASE_URL}/v7/finance/options/{ticker}'
         params = self._DEFAULT_PARAMS | self._OPTIONS_PARAMS | {'crumb': self._crumb}
-        response = await self._get_request(url, params)
+        response = await self._get_request(
+            self._OPTIONS_URL.format(ticker=ticker), params
+        )
         return response.json()
 
     @_async_log_args
@@ -912,9 +934,8 @@ class AsyncClient(ClientBase):
         """
         logger.debug(f'Getting finance/search for {tickers=}.')
 
-        url = f'{self._BASE_URL}/v1/finance/search'
         params = self._DEFAULT_PARAMS | {'q': tickers}
-        response = await self._get_request(url, params)
+        response = await self._get_request(self._SEARCH_URL, params)
         return response.json()
 
     @_async_log_args
@@ -929,9 +950,10 @@ class AsyncClient(ClientBase):
         """
         logger.debug(f'Getting finance/recommendations for {tickers=}.')
 
-        url = f'{self._BASE_URL}/v6/finance/recommendationsbysymbol/{tickers}'
         params = self._DEFAULT_PARAMS
-        response = await self._get_request(url, params)
+        response = await self._get_request(
+            self._RECOMMENDATIONS_URL.format(tickers=tickers), params
+        )
         return response.json()
 
     @_async_log_args
@@ -946,9 +968,8 @@ class AsyncClient(ClientBase):
         """
         logger.debug(f'Getting finance/insights for {tickers=}.')
 
-        url = f'{self._BASE_URL}/ws/insights/v3/finance/insights'
         params = self._DEFAULT_PARAMS | self._INSIGHTS_PARAMS | {'symbols': tickers}
-        response = await self._get_request(url, params)
+        response = await self._get_request(self._INSIGHTS_URL, params)
         return response.json()
 
     @_async_log_args
@@ -963,9 +984,10 @@ class AsyncClient(ClientBase):
         """
         logger.debug(f'Getting ratings for {ticker=}.')
 
-        url = f'{self._BASE_URL}/v2/ratings/top/{ticker}'
         params = self._DEFAULT_PARAMS | self._RATINGS_PARAMS
-        response = await self._get_request(url, params)
+        response = await self._get_request(
+            self._RATINGS_URL.format(ticker=ticker), params
+        )
         return response.json()
 
     @_async_log_args
@@ -977,9 +999,8 @@ class AsyncClient(ClientBase):
         """
         logger.debug('Getting finance/quote/marketSummary.')
 
-        url = f'{self._BASE_URL}/v6/finance/quote/marketSummary'
         params = self._DEFAULT_PARAMS
-        response = await self._get_request(url, params)
+        response = await self._get_request(self._MARKET_SUMMARIES_URL, params)
         return response.json()
 
     @_async_log_args
@@ -991,9 +1012,8 @@ class AsyncClient(ClientBase):
         """
         logger.debug('Getting finance/trending.')
 
-        url = f'{self._BASE_URL}/v1/finance/trending/US'
         params = self._DEFAULT_PARAMS
-        response = await self._get_request(url, params)
+        response = await self._get_request(self._TRENDING_URL, params)
         return response.json()
 
     @_async_log_args
@@ -1005,9 +1025,8 @@ class AsyncClient(ClientBase):
         """
         logger.debug('Getting finance/currencies.')
 
-        url = f'{self._BASE_URL}/v1/finance/currencies'
         params = self._DEFAULT_PARAMS
-        response = await self._get_request(url, params)
+        response = await self._get_request(self._CURRENCIES_URL, params)
         return response.json()
 
     @_async_log_args
@@ -1032,7 +1051,6 @@ class AsyncClient(ClientBase):
         """
         logger.debug('Getting finance/calendar-events.')
 
-        url = f'{self._BASE_URL}/ws/screeners/v1/finance/calendar-events'
         params = self._DEFAULT_PARAMS | self._CALENDAR_EVENTS_PARAMS
 
         if modules:
@@ -1053,5 +1071,5 @@ class AsyncClient(ClientBase):
 
         params['startDate'] = int(start_date)
 
-        response = await self._get_request(url, params)
+        response = await self._get_request(self._CALENDAR_EVENTS_URL, params)
         return response.json()
