@@ -2,7 +2,6 @@
 
 ```python
 import asyncio
-
 from yafin import AsyncSymbol
 
 async def main() -> None:
@@ -26,7 +25,6 @@ if __name__ == '__main__':
 
 ```python
 import asyncio
-
 from yafin import AsyncSymbol
 
 async def main() -> None:
@@ -42,7 +40,6 @@ if __name__ == '__main__':
 
 ```python
 import asyncio
-
 from yafin import AsyncSymbol
 
 async def main() -> None:
@@ -58,7 +55,6 @@ if __name__ == '__main__':
 
 ```python
 import asyncio
-
 from yafin import AsyncSymbol
 
 async def main() -> None:
@@ -98,7 +94,6 @@ if __name__ == '__main__':
 
 ```python
 import asyncio
-
 from yafin import AsyncSymbol
 
 async def main() -> None:
@@ -122,7 +117,6 @@ if __name__ == '__main__':
 
 ```python
 import asyncio
-
 from yafin import AsyncSymbol
 
 async def main() -> None:
@@ -138,7 +132,6 @@ if __name__ == '__main__':
 
 ```python
 import asyncio
-
 from yafin import AsyncSymbol
 
 async def main() -> None:
@@ -154,7 +147,6 @@ if __name__ == '__main__':
 
 ```python
 import asyncio
-
 from yafin import AsyncSymbol
 
 async def main() -> None:
@@ -170,7 +162,6 @@ if __name__ == '__main__':
 
 ```python
 import asyncio
-
 from yafin import AsyncSymbol
 
 async def main() -> None:
@@ -186,7 +177,6 @@ if __name__ == '__main__':
 
 ```python
 import asyncio
-
 from yafin import AsyncSymbol
 
 async def main() -> None:

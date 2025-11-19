@@ -2,7 +2,6 @@
 
 ```python
 import asyncio
-
 from yafin import AsyncClient
 from yafin.utils import get_types_with_frequency
 

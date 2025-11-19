@@ -2,7 +2,6 @@
 
 ```python
 import asyncio
-
 from yafin import AsyncClient
 
 async def main() -> None:
@@ -24,7 +23,6 @@ if __name__ == '__main__':
 
 ```python
 import asyncio
-
 from yafin import AsyncClient
 
 async def main() -> None:
@@ -40,7 +38,6 @@ if __name__ == '__main__':
 
 ```python
 import asyncio
-
 from yafin import AsyncClient
 
 async def main() -> None:
@@ -56,7 +53,6 @@ if __name__ == '__main__':
 
 ```python
 import asyncio
-
 from yafin import AsyncClient
 
 async def main() -> None:
@@ -74,7 +70,6 @@ if __name__ == '__main__':
 
 ```python
 import asyncio
-
 from yafin import AsyncClient
 
 async def main() -> None:
@@ -134,7 +129,6 @@ if __name__ == '__main__':
 
 ```python
 import asyncio
-
 from yafin import AsyncClient
 
 async def main() -> None:
@@ -150,7 +144,6 @@ if __name__ == '__main__':
 
 ```python
 import asyncio
-
 from yafin import AsyncClient
 
 async def main() -> None:
@@ -166,7 +159,6 @@ if __name__ == '__main__':
 
 ```python
 import asyncio
-
 from yafin import AsyncClient
 
 async def main() -> None:
@@ -182,7 +174,6 @@ if __name__ == '__main__':
 
 ```python
 import asyncio
-
 from yafin import AsyncClient
 
 async def main() -> None:
@@ -198,7 +189,6 @@ if __name__ == '__main__':
 
 ```python
 import asyncio
-
 from yafin import AsyncClient
 
 async def main() -> None:
@@ -214,7 +204,6 @@ if __name__ == '__main__':
 
 ```python
 import asyncio
-
 from yafin import AsyncClient
 
 async def main() -> None:
@@ -230,7 +219,6 @@ if __name__ == '__main__':
 
 ```python
 import asyncio
-
 from yafin import AsyncClient
 
 async def main() -> None:

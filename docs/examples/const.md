@@ -2,7 +2,6 @@
 
 ```python
 import asyncio
-
 from yafin import AsyncClient
 from yafin.const import QUOTE_SUMMARY_MODULES
 
@@ -21,7 +20,6 @@ if __name__ == '__main__':
 
 ```python
 import asyncio
-
 from yafin import AsyncClient
 from yafin.const import (
     ANNUAL_INCOME_STATEMENT_TYPES,
@@ -58,7 +56,6 @@ if __name__ == '__main__':
 
 ```python
 import asyncio
-
 from yafin import AsyncClient
 from yafin.const import CALENDAR_EVENT_MODULES
 
