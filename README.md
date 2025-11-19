@@ -13,15 +13,15 @@ Unofficial [Yahoo!Ⓡ finance](https://finance.yahoo.com) API client.
 
 ![test-perf](docs/test-perf.png)
 
-## Installation
+## Installation {.tabset}
 
-=== "pip"
+### pip
 
     ```bash
     pip install yafin
     ```
 
-=== "uv"
+### uv
 
     ```bash
     uv add yafin

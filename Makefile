@@ -66,7 +66,7 @@ test-int:
 
 test-perf:
 	$(MAKE) install-editable
-	uv run --group performance pytest tests/performance --benchmark-autosave -p no:warnings
+	uv run --group test pytest tests/performance --benchmark-autosave -p no:warnings
 
 test-all:
 	$(MAKE) install-editable
