@@ -51,14 +51,16 @@ nav:
   - Reference:
     - reference/index.md
     - reference/symbol.md
-    - AsyncClient: reference/async_client.md
+    - AsyncSymbol: reference/async_symbol.md
     - reference/client.md
+    - AsyncClient: reference/async_client.md
     - reference/utils.md
     - reference/const.md
     - reference/exceptions.md
   - Examples:
     - examples/index.md
     - examples/symbol.md
+    - AsyncSymbol: examples/async_symbol.md
     - examples/client.md
     - AsyncClient: examples/async_client.md
     - examples/utils.md
