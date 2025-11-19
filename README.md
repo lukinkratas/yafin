@@ -9,7 +9,7 @@ Unofficial [Yahoo!Ⓡ finance](https://finance.yahoo.com) API client.
 - Not returning pandas dataframes (because why?).
 - Uses caching and utilizes singleton pattern in symbol class to save resources.
 - Minimal and build on [curl-cffi](https://github.com/lexiforest/curl_cffi)
-- Approx. 2x faster, than other Yahoo finance clients. Run the tests yourself - `make test-perf` (All tests running synchronously, returning pandas DataFrame, with http mocked responses)
+- Approx. 2x faster, than other Yahoo finance clients. Run the tests yourself - `make test-perf` (All tests running synchronously, returning pandas DataFrame and http responses are mocked.)
 
 ![test-perf](docs/test-perf.png)
 

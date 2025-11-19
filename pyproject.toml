@@ -33,6 +33,7 @@ test = [
     "typeguard>=4.4.4",
 ]
 performance = [
+    {include-group = "test"},
     "pytest-benchmark>=5.2.3",
     "yfinance>=0.2.66",
     "pandas>=2.3.3",
