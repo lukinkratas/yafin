@@ -13,8 +13,23 @@ Unofficial [Yahoo!Ⓡ finance](https://finance.yahoo.com) API client.
 
 ![test-perf](docs/test-perf.png)
 
-**Documentation**: [https://lukinkratas.github.io/yafin/](https://lukinkratas.github.io/yafin/)
+**Installation**: `pip install yafin` for more details, see the [Documentation](https://lukinkratas.github.io/yafin/)
 
-**Installation**: `pip install yafin` for more details, see the [Documentation](https://lukinkratas.github.io/yafin/) section in the documentation.
+**Documentation and Examples**: [https://lukinkratas.github.io/yafin/](https://lukinkratas.github.io/yafin/)
 
-[**Examples**](https://lukinkratas.github.io/yafin/examples/symbol/)
+**Quick Example**: for more details, see the [Examples](https://lukinkratas.github.io/yafin/examples/symbol/) section in documentation.
+
+```python
+from yafin import Symbol
+
+# opt. 1 use context manager (recommended)
+with Symbol('META') as meta:
+    meta_1y_chart = meta.get_chart(interval='1d', period_range='1y')
+
+# opt. 2 use close to avoid resource leakage
+aapl = Symbol('AAPL')
+aapl_5d_chart = aapl.get_chart(
+    interval='1h', period_range='5d', include_div=True, include_split=False
+)
+aapl.close()
+```
