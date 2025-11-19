@@ -1407,7 +1407,6 @@ doc = [
     { name = "mkdocstrings-python" },
 ]
 performance = [
-    { name = "numpy" },
     { name = "pandas" },
     { name = "pytest" },
     { name = "pytest-asyncio" },
@@ -1444,7 +1443,6 @@ doc = [
     { name = "mkdocstrings-python", specifier = ">=1.18.2" },
 ]
 performance = [
-    { name = "numpy", specifier = ">=2.3.5" },
     { name = "pandas", specifier = ">=2.3.3" },
     { name = "pytest", specifier = ">=7.0.0" },
     { name = "pytest-asyncio", specifier = ">=1.1.0" },

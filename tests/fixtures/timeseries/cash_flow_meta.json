@@ -3156,6 +3156,36 @@
             "META"
           ],
           "type": [
+            "annualChangeInInventory"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualPreferredStockIssuance"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualClassesofCashReceiptsfromOperatingActivities"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
             "annualDividendsReceivedDirect"
           ]
         }
@@ -3166,17 +3196,7 @@
             "META"
           ],
           "type": [
-            "annualEarningsLossesFromEquityInvestments"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualProceedsFromStockOptionExercised"
+            "annualShortTermDebtPayments"
           ]
         }
       },
@@ -3196,7 +3216,7 @@
             "META"
           ],
           "type": [
-            "annualInterestPaidDirect"
+            "annualAmortizationOfSecurities"
           ]
         }
       },
@@ -3206,37 +3226,7 @@
             "META"
           ],
           "type": [
-            "annualChangeInDividendPayable"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualChangeInIncomeTaxPayable"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualDividendsReceivedCFI"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualDividendsPaidDirect"
+            "annualPaymentstoSuppliersforGoodsandServices"
           ]
         }
       },
@@ -3266,177 +3256,7 @@
             "META"
           ],
           "type": [
-            "annualAmortizationOfIntangibles"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualGainLossOnInvestmentSecurities"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualCapitalExpenditureReported"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualExcessTaxBenefitFromStockBasedCompensation"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualPaymentstoSuppliersforGoodsandServices"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualReceiptsfromCustomers"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualDividendPaidCFO"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualGainLossOnSaleOfPPE"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualAmortizationCashFlow"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
             "annualSaleOfInvestmentProperties"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualPurchaseOfIntangibles"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualChangeInInventory"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualAmortizationOfSecurities"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualInterestReceivedCFO"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualClassesofCashPayments"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualGainLossOnSaleOfBusiness"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualProvisionandWriteOffofAssets"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualShortTermDebtPayments"
           ]
         }
       },
@@ -3456,117 +3276,7 @@
             "META"
           ],
           "type": [
-            "annualInterestReceivedDirect"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualIssuanceOfCapitalStock"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualInterestPaidCFO"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualCashFromDiscontinuedInvestingActivities"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualNetPreferredStockIssuance"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualPreferredStockPayments"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualOtherCashAdjustmentOutsideChangeinCash"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualNetInvestmentPropertiesPurchaseAndSale"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualOperatingGainsLosses"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualPreferredStockIssuance"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualChangeInInterestPayable"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualCashFlowsfromusedinOperatingActivitiesDirect"
+            "annualTaxesRefundPaid"
           ]
         }
       },
@@ -3586,7 +3296,137 @@
             "META"
           ],
           "type": [
-            "annualChangeInTaxPayable"
+            "annualProvisionandWriteOffofAssets"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualForeignSales"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualClassesofCashPayments"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualDepletion"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualOperatingGainsLosses"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualSaleOfIntangibles"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualOtherCashAdjustmentInsideChangeinCash"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualInterestReceivedCFO"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualPurchaseOfIntangibles"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualGainLossOnSaleOfPPE"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualTaxesRefundPaidDirect"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualReceiptsfromCustomers"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualDepreciation"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualInterestPaidCFO"
           ]
         }
       },
@@ -3606,6 +3446,16 @@
             "META"
           ],
           "type": [
+            "annualCapitalExpenditureReported"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
             "annualInterestPaidCFF"
           ]
         }
@@ -3616,7 +3466,7 @@
             "META"
           ],
           "type": [
-            "annualDividendReceivedCFO"
+            "annualPaymentsonBehalfofEmployees"
           ]
         }
       },
@@ -3626,7 +3476,7 @@
             "META"
           ],
           "type": [
-            "annualOtherCashReceiptsfromOperatingActivities"
+            "annualReceiptsfromGovernmentGrants"
           ]
         }
       },
@@ -3636,7 +3486,247 @@
             "META"
           ],
           "type": [
-            "annualForeignSales"
+            "annualPreferredStockDividendPaid"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualDividendPaidCFO"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualEarningsLossesFromEquityInvestments"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualProceedsFromStockOptionExercised"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualGainLossOnInvestmentSecurities"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualNetPreferredStockIssuance"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualInterestPaidDirect"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualGainLossOnSaleOfBusiness"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualChangeInDividendPayable"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualNetInvestmentPropertiesPurchaseAndSale"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualNetIntangiblesPurchaseAndSale"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualShortTermDebtIssuance"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualChangeInInterestPayable"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualChangeInTaxPayable"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualCommonStockIssuance"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualCashFromDiscontinuedOperatingActivities"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualExcessTaxBenefitFromStockBasedCompensation"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualOtherCashAdjustmentOutsideChangeinCash"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualPreferredStockPayments"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualAmortizationOfIntangibles"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualAmortizationCashFlow"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualCashFlowFromDiscontinuedOperation"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualInterestReceivedDirect"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualPurchaseOfInvestmentProperties"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualCashFlowsfromusedinOperatingActivitiesDirect"
           ]
         }
       },
@@ -3666,7 +3756,7 @@
             "META"
           ],
           "type": [
-            "annualDepreciation"
+            "annualDividendReceivedCFO"
           ]
         }
       },
@@ -3676,7 +3766,7 @@
             "META"
           ],
           "type": [
-            "annualShortTermDebtIssuance"
+            "annualDividendsPaidDirect"
           ]
         }
       },
@@ -3686,7 +3776,7 @@
             "META"
           ],
           "type": [
-            "annualClassesofCashReceiptsfromOperatingActivities"
+            "annualOtherCashReceiptsfromOperatingActivities"
           ]
         }
       },
@@ -3696,7 +3786,7 @@
             "META"
           ],
           "type": [
-            "annualCashFlowFromDiscontinuedOperation"
+            "annualChangeInIncomeTaxPayable"
           ]
         }
       },
@@ -3706,7 +3796,7 @@
             "META"
           ],
           "type": [
-            "annualSaleOfIntangibles"
+            "annualIssuanceOfCapitalStock"
           ]
         }
       },
@@ -3716,7 +3806,7 @@
             "META"
           ],
           "type": [
-            "annualCommonStockIssuance"
+            "annualCashFromDiscontinuedInvestingActivities"
           ]
         }
       },
@@ -3726,97 +3816,7 @@
             "META"
           ],
           "type": [
-            "annualTaxesRefundPaidDirect"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualOtherCashAdjustmentInsideChangeinCash"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualPreferredStockDividendPaid"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualPaymentsonBehalfofEmployees"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualTaxesRefundPaid"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualReceiptsfromGovernmentGrants"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualDepletion"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualCashFromDiscontinuedOperatingActivities"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualPurchaseOfInvestmentProperties"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualNetIntangiblesPurchaseAndSale"
+            "annualDividendsReceivedCFI"
           ]
         }
       }

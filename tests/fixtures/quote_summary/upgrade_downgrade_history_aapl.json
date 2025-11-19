@@ -9665,26 +9665,6 @@
               "priorPriceTarget": 33.25
             },
             {
-              "epochGradeDate": 1485255450,
-              "firm": "Barclays",
-              "toGrade": "Equal-Weight",
-              "fromGrade": "Overweight",
-              "action": "down",
-              "priceTargetAction": "Lowers",
-              "currentPriceTarget": 117.0,
-              "priorPriceTarget": 119.0
-            },
-            {
-              "epochGradeDate": 1484834717,
-              "firm": "OTR Global",
-              "toGrade": "Negative",
-              "fromGrade": "",
-              "action": "down",
-              "priceTargetAction": "",
-              "currentPriceTarget": 0.0,
-              "priorPriceTarget": 0.0
-            },
-            {
               "epochGradeDate": 1347450660,
               "firm": "Hudson Square",
               "toGrade": "Buy",

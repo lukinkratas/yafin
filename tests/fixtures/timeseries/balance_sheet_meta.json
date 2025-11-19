@@ -359,6 +359,28 @@
             "META"
           ],
           "type": [
+            "annualGrossAccountsReceivable"
+          ]
+        },
+        "timestamp": [
+          1640908800,
+          1672444800,
+          1703980800,
+          1735603200
+        ],
+        "annualGrossAccountsReceivable": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
             "annualShareIssued"
           ]
         },
@@ -409,28 +431,6 @@
               "fmt": "2.53B"
             }
           }
-        ]
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualGrossAccountsReceivable"
-          ]
-        },
-        "timestamp": [
-          1640908800,
-          1672444800,
-          1703980800,
-          1735603200
-        ],
-        "annualGrossAccountsReceivable": [
-          null,
-          null,
-          null,
-          null
         ]
       },
       {
@@ -2128,64 +2128,6 @@
             "META"
           ],
           "type": [
-            "annualCurrentAssets"
-          ]
-        },
-        "timestamp": [
-          1640908800,
-          1672444800,
-          1703980800,
-          1735603200
-        ],
-        "annualCurrentAssets": [
-          {
-            "dataId": 23044,
-            "asOfDate": "2021-12-31",
-            "periodType": "12M",
-            "currencyCode": "USD",
-            "reportedValue": {
-              "raw": 66666000000.0,
-              "fmt": "66.67B"
-            }
-          },
-          {
-            "dataId": 23044,
-            "asOfDate": "2022-12-31",
-            "periodType": "12M",
-            "currencyCode": "USD",
-            "reportedValue": {
-              "raw": 59549000000.0,
-              "fmt": "59.55B"
-            }
-          },
-          {
-            "dataId": 23044,
-            "asOfDate": "2023-12-31",
-            "periodType": "12M",
-            "currencyCode": "USD",
-            "reportedValue": {
-              "raw": 85365000000.0,
-              "fmt": "85.36B"
-            }
-          },
-          {
-            "dataId": 23044,
-            "asOfDate": "2024-12-31",
-            "periodType": "12M",
-            "currencyCode": "USD",
-            "reportedValue": {
-              "raw": 100045000000.0,
-              "fmt": "100.05B"
-            }
-          }
-        ]
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
             "annualAccountsReceivable"
           ]
         },
@@ -2234,6 +2176,64 @@
             "reportedValue": {
               "raw": 16994000000.0,
               "fmt": "16.99B"
+            }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualCurrentAssets"
+          ]
+        },
+        "timestamp": [
+          1640908800,
+          1672444800,
+          1703980800,
+          1735603200
+        ],
+        "annualCurrentAssets": [
+          {
+            "dataId": 23044,
+            "asOfDate": "2021-12-31",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": {
+              "raw": 66666000000.0,
+              "fmt": "66.67B"
+            }
+          },
+          {
+            "dataId": 23044,
+            "asOfDate": "2022-12-31",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": {
+              "raw": 59549000000.0,
+              "fmt": "59.55B"
+            }
+          },
+          {
+            "dataId": 23044,
+            "asOfDate": "2023-12-31",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": {
+              "raw": 85365000000.0,
+              "fmt": "85.36B"
+            }
+          },
+          {
+            "dataId": 23044,
+            "asOfDate": "2024-12-31",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": {
+              "raw": 100045000000.0,
+              "fmt": "100.05B"
             }
           }
         ]
@@ -3354,64 +3354,6 @@
             "META"
           ],
           "type": [
-            "annualCommonStock"
-          ]
-        },
-        "timestamp": [
-          1640908800,
-          1672444800,
-          1703980800,
-          1735603200
-        ],
-        "annualCommonStock": [
-          {
-            "dataId": 23038,
-            "asOfDate": "2021-12-31",
-            "periodType": "12M",
-            "currencyCode": "USD",
-            "reportedValue": {
-              "raw": 0.0,
-              "fmt": "0.00"
-            }
-          },
-          {
-            "dataId": 23038,
-            "asOfDate": "2022-12-31",
-            "periodType": "12M",
-            "currencyCode": "USD",
-            "reportedValue": {
-              "raw": 0.0,
-              "fmt": "0.00"
-            }
-          },
-          {
-            "dataId": 23038,
-            "asOfDate": "2023-12-31",
-            "periodType": "12M",
-            "currencyCode": "USD",
-            "reportedValue": {
-              "raw": 0.0,
-              "fmt": "0.00"
-            }
-          },
-          {
-            "dataId": 23038,
-            "asOfDate": "2024-12-31",
-            "periodType": "12M",
-            "currencyCode": "USD",
-            "reportedValue": {
-              "raw": 0.0,
-              "fmt": "0.00"
-            }
-          }
-        ]
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
             "annualRetainedEarnings"
           ]
         },
@@ -3460,6 +3402,64 @@
             "reportedValue": {
               "raw": 102506000000.0,
               "fmt": "102.51B"
+            }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualCommonStock"
+          ]
+        },
+        "timestamp": [
+          1640908800,
+          1672444800,
+          1703980800,
+          1735603200
+        ],
+        "annualCommonStock": [
+          {
+            "dataId": 23038,
+            "asOfDate": "2021-12-31",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": {
+              "raw": 0.0,
+              "fmt": "0.00"
+            }
+          },
+          {
+            "dataId": 23038,
+            "asOfDate": "2022-12-31",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": {
+              "raw": 0.0,
+              "fmt": "0.00"
+            }
+          },
+          {
+            "dataId": 23038,
+            "asOfDate": "2023-12-31",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": {
+              "raw": 0.0,
+              "fmt": "0.00"
+            }
+          },
+          {
+            "dataId": 23038,
+            "asOfDate": "2024-12-31",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": {
+              "raw": 0.0,
+              "fmt": "0.00"
             }
           }
         ]
@@ -4050,7 +4050,7 @@
             "META"
           ],
           "type": [
-            "annualTaxesReceivable"
+            "annualInvestmentProperties"
           ]
         }
       },
@@ -4060,7 +4060,17 @@
             "META"
           ],
           "type": [
-            "annualInvestmentsInOtherVenturesUnderEquityMethod"
+            "annualFinancialAssets"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualMinorityInterest"
           ]
         }
       },
@@ -4080,7 +4090,7 @@
             "META"
           ],
           "type": [
-            "annualLiabilitiesHeldforSaleNonCurrent"
+            "annualNonCurrentPensionAndOtherPostretirementBenefitPlans"
           ]
         }
       },
@@ -4090,7 +4100,167 @@
             "META"
           ],
           "type": [
-            "annualOtherCurrentBorrowings"
+            "annualOtherInvestments"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualDuetoRelatedPartiesNonCurrent"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualCurrentDeferredAssets"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualInvestmentsinSubsidiariesatCost"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualDefinedPensionBenefit"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualInventoriesAdjustmentsAllowances"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualPreferredStock"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualTreasuryStock"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualTaxesReceivable"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualIncomeTaxPayable"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualCommercialPaper"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualLongTermProvisions"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualHeldToMaturitySecurities"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualPreferredStockEquity"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualCashCashEquivalentsAndFederalFundsSold"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualDerivativeProductLiabilities"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualInvestmentsInOtherVenturesUnderEquityMethod"
           ]
         }
       },
@@ -4110,7 +4280,7 @@
             "META"
           ],
           "type": [
-            "annualInventory"
+            "annualGeneralPartnershipCapital"
           ]
         }
       },
@@ -4130,6 +4300,276 @@
             "META"
           ],
           "type": [
+            "annualForeignCurrencyTranslationAdjustments"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualUnrealizedGainLoss"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualNonCurrentDeferredTaxesAssets"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualInventory"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualCurrentDeferredTaxesAssets"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualOtherCurrentBorrowings"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualInvestmentsinJointVenturesatCost"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualFinancialAssetsDesignatedasFairValueThroughProfitorLossTotal"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualInvestmentsinAssociatesatCost"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualReceivablesAdjustmentsAllowances"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualOtherInventories"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualCurrentProvisions"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualNotesReceivable"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualLiabilitiesHeldforSaleNonCurrent"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualCurrentNotesPayable"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualNonCurrentNoteReceivables"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualEmployeeBenefits"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualInterestPayable"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualHedgingAssetsCurrent"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualNonCurrentAccountsReceivable"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualLoansReceivable"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualFinishedGoods"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualDuefromRelatedPartiesCurrent"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualNonCurrentDeferredAssets"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualNonCurrentAccruedExpenses"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualNetDebt"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualPreferredSecuritiesOutsideStockEquity"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
             "annualOtherEquityInterest"
           ]
         }
@@ -4140,7 +4580,7 @@
             "META"
           ],
           "type": [
-            "annualCurrentDeferredTaxesLiabilities"
+            "annualMinimumPensionLiabilities"
           ]
         }
       },
@@ -4150,7 +4590,97 @@
             "META"
           ],
           "type": [
-            "annualMinimumPensionLiabilities"
+            "annualAssetsHeldForSaleCurrent"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualTradingSecurities"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualLineOfCredit"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualOtherCapitalStock"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualAccruedInterestReceivable"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualWorkInProcess"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualLimitedPartnershipCapital"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualRestrictedCash"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualNonCurrentDeferredRevenue"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualCurrentDebt"
           ]
         }
       },
@@ -4180,497 +4710,7 @@
             "META"
           ],
           "type": [
-            "annualInvestmentsinSubsidiariesatCost"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualCurrentDeferredAssets"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualInterestPayable"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualNonCurrentDeferredAssets"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualRestrictedCash"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualCurrentNotesPayable"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualAssetsHeldForSaleCurrent"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualHedgingAssetsCurrent"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualPreferredStockEquity"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualNonCurrentAccruedExpenses"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualEmployeeBenefits"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualReceivablesAdjustmentsAllowances"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualFinishedGoods"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualLoansReceivable"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualDuetoRelatedPartiesNonCurrent"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualTreasuryStock"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualNonCurrentDeferredTaxesLiabilities"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualOtherInventories"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualDerivativeProductLiabilities"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualHeldToMaturitySecurities"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualInvestmentsinJointVenturesatCost"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualNetDebt"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualGeneralPartnershipCapital"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualDuefromRelatedPartiesCurrent"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualCashCashEquivalentsAndFederalFundsSold"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualNonCurrentAccountsReceivable"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualPreferredSharesNumber"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualNonCurrentPrepaidAssets"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualMinorityInterest"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualWorkInProcess"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualOtherCapitalStock"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualDuefromRelatedPartiesNonCurrent"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualCurrentDebt"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualInvestmentsinAssociatesatCost"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualUnrealizedGainLoss"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualFinancialAssets"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualNonCurrentPensionAndOtherPostretirementBenefitPlans"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualAccruedInterestReceivable"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualCurrentProvisions"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualCommercialPaper"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualRestrictedCommonStock"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualFinancialAssetsDesignatedasFairValueThroughProfitorLossTotal"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualInvestmentProperties"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualNonCurrentDeferredRevenue"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualLineOfCredit"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualOtherInvestments"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualInventoriesAdjustmentsAllowances"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualNonCurrentNoteReceivables"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualLongTermProvisions"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualNotesReceivable"
+            "annualCurrentDeferredTaxesLiabilities"
           ]
         }
       },
@@ -4690,7 +4730,7 @@
             "META"
           ],
           "type": [
-            "annualNonCurrentDeferredTaxesAssets"
+            "annualNonCurrentPrepaidAssets"
           ]
         }
       },
@@ -4700,7 +4740,7 @@
             "META"
           ],
           "type": [
-            "annualLimitedPartnershipCapital"
+            "annualPreferredSharesNumber"
           ]
         }
       },
@@ -4710,7 +4750,7 @@
             "META"
           ],
           "type": [
-            "annualPreferredStock"
+            "annualRestrictedCommonStock"
           ]
         }
       },
@@ -4720,7 +4760,7 @@
             "META"
           ],
           "type": [
-            "annualPreferredSecuritiesOutsideStockEquity"
+            "annualDuefromRelatedPartiesNonCurrent"
           ]
         }
       },
@@ -4730,47 +4770,7 @@
             "META"
           ],
           "type": [
-            "annualIncomeTaxPayable"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualDefinedPensionBenefit"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualForeignCurrencyTranslationAdjustments"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualTradingSecurities"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualCurrentDeferredTaxesAssets"
+            "annualNonCurrentDeferredTaxesLiabilities"
           ]
         }
       }

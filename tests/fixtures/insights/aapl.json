@@ -8,28 +8,28 @@
             "provider": "Trading Central",
             "sector": "Technology",
             "shortTermOutlook": {
-              "stateDescription": "The bullish and bearish events are balanced.",
-              "direction": "Neutral",
-              "score": 0,
-              "scoreDescription": "Neutral Evidence",
+              "stateDescription": "Recent bearish events outweigh bullish events.",
+              "direction": "Bearish",
+              "score": 4,
+              "scoreDescription": "Very Strong Bearish Evidence",
+              "sectorDirection": "Bearish",
+              "sectorScore": 4,
+              "sectorScoreDescription": "Very Strong Bearish Evidence",
+              "indexDirection": "Bearish",
+              "indexScore": 3,
+              "indexScoreDescription": "Strong Bearish Evidence"
+            },
+            "intermediateTermOutlook": {
+              "stateDescription": "Bullish events outweigh bearish events.",
+              "direction": "Bullish",
+              "score": 1,
+              "scoreDescription": "Weak Bullish Evidence",
               "sectorDirection": "Bearish",
               "sectorScore": 2,
               "sectorScoreDescription": "Bearish Evidence",
-              "indexDirection": "Neutral",
-              "indexScore": 0,
-              "indexScoreDescription": "Neutral Evidence"
-            },
-            "intermediateTermOutlook": {
-              "stateDescription": "Recent bullish events outweigh bearish events.",
-              "direction": "Bullish",
-              "score": 2,
-              "scoreDescription": "Bullish Evidence",
-              "sectorDirection": "Bearish",
-              "sectorScore": 1,
-              "sectorScoreDescription": "Weak Bearish Evidence",
               "indexDirection": "Bearish",
-              "indexScore": 1,
-              "indexScoreDescription": "Weak Bearish Evidence"
+              "indexScore": 3,
+              "indexScoreDescription": "Strong Bearish Evidence"
             },
             "longTermOutlook": {
               "stateDescription": "All events are bullish.",
@@ -39,21 +39,21 @@
               "sectorDirection": "Bullish",
               "sectorScore": 1,
               "sectorScoreDescription": "Weak Bullish Evidence",
-              "indexDirection": "Bullish",
-              "indexScore": 1,
-              "indexScoreDescription": "Weak Bullish Evidence"
+              "indexDirection": "Neutral",
+              "indexScore": 0,
+              "indexScoreDescription": "No Evidence"
             }
           },
           "keyTechnicals": {
             "provider": "Trading Central",
             "support": 229.4,
-            "resistance": 277.32,
-            "stopLoss": 258.344843
+            "resistance": 268.81,
+            "stopLoss": 253.441019
           },
           "valuation": {
             "color": 0.0,
             "description": "Overvalued",
-            "discount": "-10%",
+            "discount": "-9%",
             "relativeValue": "Premium",
             "provider": "Trading Central"
           }
@@ -64,9 +64,9 @@
             "innovativeness": 0.9981,
             "hiring": 0.9512999999999999,
             "sustainability": 0.16519999999999999,
-            "insiderSentiments": 0.3289,
-            "earningsReports": 0.8794,
-            "dividends": 0.06309999999999999
+            "insiderSentiments": 0.3273,
+            "earningsReports": 0.8828,
+            "dividends": 0.06269999999999999
           },
           "sector": {
             "innovativeness": 0.5,
@@ -109,13 +109,13 @@
         },
         "events": [
           {
-            "eventType": "Pennant (Bullish)",
+            "eventType": "Price Crosses Moving Average",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "L",
-            "imageUrl": "https://s.yimg.com/uc/fin/img/assets/bullish-pennant.svg",
-            "startDate": 1761917400,
-            "endDate": 1762871400
+            "tradeType": "S",
+            "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
+            "startDate": 1763389800,
+            "endDate": 1763389800
           }
         ],
         "reports": [
@@ -142,22 +142,22 @@
             "tickers": [
               "GOOGL",
               "AAPL",
-              "AVGO",
               "CSCO",
+              "AVGO",
               "JPM",
               "JNJ",
               "UNH",
               "ASML",
               "MSFT",
               "TSLA",
-              "IBM",
               "WFC",
-              "AMD",
+              "IBM",
               "LLY",
+              "AMD",
               "GE",
               "PLTR",
-              "BABA",
               "NFLX",
+              "BABA",
               "META",
               "NVDA",
               "BAC",
@@ -201,8 +201,8 @@
         ],
         "sigDevs": [
           {
-            "headline": "Downdetector Says User Reports Indicate Apple TV Down For 14,907 Users In The US As Of 10:34 Pm ET",
-            "date": "2025-11-07"
+            "headline": "Abidur Chowdhury, The Apple Designer Who Introduced The iPhone Air, Leaves The Company - Bloomberg News",
+            "date": "2025-11-17"
           }
         ],
         "secReports": [

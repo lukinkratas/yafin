@@ -1,6 +1,6 @@
 {
   "explains": [],
-  "count": 11,
+  "count": 15,
   "quotes": [
     {
       "exchange": "NMS",
@@ -8,7 +8,7 @@
       "quoteType": "EQUITY",
       "symbol": "META",
       "index": "quotes",
-      "score": 12129500.0,
+      "score": 11893000.0,
       "typeDisp": "Equity",
       "longname": "Meta Platforms, Inc.",
       "exchDisp": "NASDAQ",
@@ -19,7 +19,7 @@
       "dispSecIndFlag": false,
       "isYahooFinance": true,
       "prevName": "Facebook, Inc.",
-      "nameChangeDate": "2025-11-11"
+      "nameChangeDate": "2025-11-18"
     },
     {
       "exchange": "NMS",
@@ -27,7 +27,7 @@
       "quoteType": "EQUITY",
       "symbol": "AAPL",
       "index": "quotes",
-      "score": 19444500.0,
+      "score": 17520500.0,
       "typeDisp": "Equity",
       "longname": "Apple Inc.",
       "exchDisp": "NASDAQ",
@@ -40,88 +40,22 @@
   ],
   "news": [
     {
-      "uuid": "cbb87852-02a5-396f-afcc-e37a6029d134",
-      "title": "This Pandemic Darling Is Down 40% This Year. Now the Stock Is Rising Sharply.",
+      "uuid": "2c4e4273-ca14-3de6-9888-c6dcdff9ff22",
+      "title": "Oracle and Other AI Stocks Are Spending Too Much Cash. These Companies Are Returning It in Spades.",
       "publisher": "Barrons.com",
-      "link": "https://finance.yahoo.com/m/cbb87852-02a5-396f-afcc-e37a6029d134/this-pandemic-darling-is-down.html",
-      "providerPublishTime": 1762959960,
+      "link": "https://finance.yahoo.com/m/2c4e4273-ca14-3de6-9888-c6dcdff9ff22/oracle-and-other-ai-stocks.html",
+      "providerPublishTime": 1763533800,
       "type": "STORY",
       "thumbnail": {
         "resolutions": [
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/488nltge_HJFI6yyv8zsAw--~B/aD02NDA7dz0xMjc5O2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/Barrons.com/4a277bdffe6bd7f5e65ba0335f5cd5d7",
-            "width": 1279,
-            "height": 640,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/5X5QF6c_LasNlAo42QSxKA--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/Barrons.com/4a277bdffe6bd7f5e65ba0335f5cd5d7",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "BILL",
-        "AAPL",
-        "TRIP",
-        "^GSPC",
-        "QRVO"
-      ]
-    },
-    {
-      "uuid": "45e60972-12d3-3dbe-a1f0-6591352e48e4",
-      "title": "Nasdaq Loses Early Gains",
-      "publisher": "Barrons.com",
-      "link": "https://finance.yahoo.com/m/45e60972-12d3-3dbe-a1f0-6591352e48e4/nasdaq-loses-early-gains.html",
-      "providerPublishTime": 1762959719,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/_kc6REYMS1JrAuV5bYtjfA--~B/aD02NTt3PTMyMDthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/Barrons.com/12ea0f43d8f8307249a68d1cb2e0587e",
-            "width": 320,
-            "height": 65,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/5waH37HKuL3X52B3V2GWrw--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/Barrons.com/12ea0f43d8f8307249a68d1cb2e0587e",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "^IXIC",
-        "^SPX",
-        "NVDA",
-        "MSFT",
-        "AAPL",
-        "AMZN",
-        "GOOGL",
-        "META",
-        "TSLA"
-      ]
-    },
-    {
-      "uuid": "b63dd1f9-7c44-3cb9-b4bf-0a8f8cc0ad5e",
-      "title": "What Tesla Stock Would Look Like in 10 Years If Musk Hits Pay Targets",
-      "publisher": "Barrons.com",
-      "link": "https://finance.yahoo.com/m/b63dd1f9-7c44-3cb9-b4bf-0a8f8cc0ad5e/what-tesla-stock-would-look.html",
-      "providerPublishTime": 1762959660,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/ERDV9d_xxtGVl5MyZHGYwQ--~B/aD02NDA7dz0xMjgwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/Barrons.com/97c5f015ef7e1da2fb60fb823d412fac",
+            "url": "https://s.yimg.com/uu/api/res/1.2/5sq7mem5sw8FLhHhzGbgsg--~B/aD02NDA7dz0xMjgwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/Barrons.com/afcec953d15a95d85727bcecf26c18d3",
             "width": 1280,
             "height": 640,
             "tag": "original"
           },
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/aMH7VPFjlOHJoD0Lcb7Hrw--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/Barrons.com/97c5f015ef7e1da2fb60fb823d412fac",
+            "url": "https://s.yimg.com/uu/api/res/1.2/dPDbm4ySmTF0vDUXuLydmQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/Barrons.com/afcec953d15a95d85727bcecf26c18d3",
             "width": 140,
             "height": 140,
             "tag": "140x140"
@@ -129,58 +63,36 @@
         ]
       },
       "relatedTickers": [
-        "TSLA"
-      ]
-    },
-    {
-      "uuid": "a48e7a84-bfc1-381b-b096-9baa72322c75",
-      "title": "Arm Stock Delivered a Smashing Quarter. It Wasn't Enough.",
-      "publisher": "Motley Fool",
-      "link": "https://finance.yahoo.com/m/a48e7a84-bfc1-381b-b096-9baa72322c75/arm-stock-delivered-a.html",
-      "providerPublishTime": 1762959180,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/BWhsf6J3SwhrBADxtPfjuw--~B/aD02NzU7dz0xMjAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/85d3726d6eac3b4725e41896ac3c66f6",
-            "width": 1200,
-            "height": 675,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/.oLe_5S_O7AjuW4LwtLB4g--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/85d3726d6eac3b4725e41896ac3c66f6",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "ARM",
-        "NVDA",
-        "GOOGL",
+        "ORCL",
+        "^IXIC",
         "AMZN",
+        "AEO",
+        "META",
         "MSFT",
-        "META"
+        "GOOGL",
+        "TSLA",
+        "PLTR",
+        "NVDA",
+        "AMD"
       ]
     },
     {
-      "uuid": "927c325d-d8a8-3c22-aec9-731edd0be87e",
-      "title": "Whoop Is Considering Going Public in the Next Two Years, CEO Says",
-      "publisher": "Bloomberg",
-      "link": "https://finance.yahoo.com/news/whoop-considering-going-public-next-130009946.html",
-      "providerPublishTime": 1762958904,
+      "uuid": "04570c6b-3fd6-37f7-b1bb-bdbb92751f20",
+      "title": "the*spark forum's charcha 2025 charts pathways for resilient livelihoods and collaborative action towards Viksit Bharat @ 2047",
+      "publisher": "PR Newswire",
+      "link": "https://finance.yahoo.com/news/spark-forums-charcha-2025-charts-061200450.html",
+      "providerPublishTime": 1763532720,
       "type": "STORY",
       "thumbnail": {
         "resolutions": [
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/92QYrw4D5VB9ur19sIUr2Q--~B/aD0xNDY3O3c9MjIwMDthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/bloomberg_holding_pen_162/75f7aef99d782e65a8f14fa891496650",
-            "width": 2200,
-            "height": 1467,
+            "url": "https://s.yimg.com/uu/api/res/1.2/6efsUPYOJu8mZO8oN0J21w--~B/aD0yNjc7dz00MDA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/prnewswire.com/fd9d093ea2a442dab7fb6b46386260f7",
+            "width": 400,
+            "height": 267,
             "tag": "original"
           },
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/owcmVMTd42KwPoKEH8zPxg--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/bloomberg_holding_pen_162/75f7aef99d782e65a8f14fa891496650",
+            "url": "https://s.yimg.com/uu/api/res/1.2/CVh749CecGFPS7dqPLp4cg--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/prnewswire.com/fd9d093ea2a442dab7fb6b46386260f7",
             "width": 140,
             "height": 140,
             "tag": "140x140"
@@ -188,30 +100,184 @@
         ]
       },
       "relatedTickers": [
-        "WHOO.PVT",
-        "005930.KS",
-        "ABT",
-        "AAPL",
-        "DXCM"
+        "META",
+        "MPHASIS.BO"
       ]
     },
     {
-      "uuid": "12f1e779-6246-3ca0-bda6-4e7dae5ab4d0",
-      "title": "How Does Meta Make Money?",
-      "publisher": "Motley Fool",
-      "link": "https://finance.yahoo.com/m/12f1e779-6246-3ca0-bda6-4e7dae5ab4d0/how-does-meta-make-money%3F.html",
-      "providerPublishTime": 1762957800,
+      "uuid": "238196cf-477f-3707-aca8-109cf1468012",
+      "title": "Dow Jones Futures: Nvidia Earnings Key For Market; Google Holds Strong",
+      "publisher": "Investor's Business Daily",
+      "link": "https://finance.yahoo.com/m/238196cf-477f-3707-aca8-109cf1468012/dow-jones-futures%3A-nvidia.html",
+      "providerPublishTime": 1763531809,
       "type": "STORY",
       "thumbnail": {
         "resolutions": [
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/_ssnCOo4p9DQH81Fg7VCHw--~B/aD05MzM7dz0xNDAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/7fde42993d20f045334f19e559a8aa16",
+            "url": "https://s.yimg.com/uu/api/res/1.2/aterTpLM91cTmONfVut1OQ--~B/aD01NjM7dz0xMDAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/ibd.com/d87b81127b1d78f7b81e03c51dbe90c0",
+            "width": 1000,
+            "height": 563,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/BU9BCWVnAayTOP670h3giA--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/ibd.com/d87b81127b1d78f7b81e03c51dbe90c0",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "GOOGL",
+        "NVDA",
+        "^DJI",
+        "BTC-USD",
+        "^SPX",
+        "^IXIC",
+        "RTX",
+        "META",
+        "AVGO",
+        "MSFT",
+        "AMZN",
+        "AMD",
+        "2330.TW"
+      ]
+    },
+    {
+      "uuid": "57e06870-1187-395a-bc0f-bea8ef30eb3f",
+      "title": "Asian markets bounce as Nvidia takes centre stage amid AI bubble fears",
+      "publisher": "AFP",
+      "link": "https://finance.yahoo.com/news/asian-markets-bounce-nvidia-takes-025415956.html",
+      "providerPublishTime": 1763520855,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/0pBPCOlKTqvuFh6JDDrrMQ--~B/aD01MTI7dz03Njg7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/afp.com/c6803932ba21e5c11b6cb55fe32a7ca1",
+            "width": 768,
+            "height": 512,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/veG4dTgtGU.6_IDUIleZvQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/afp.com/c6803932ba21e5c11b6cb55fe32a7ca1",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "NVDA",
+        "AMZN",
+        "META",
+        "GOOGL",
+        "AAPL"
+      ]
+    },
+    {
+      "uuid": "6891b76c-cb72-33c6-9215-90e051a68b6b",
+      "title": "Warren Buffett Keeps Selling His Apple Stock: Should You?",
+      "publisher": "Motley Fool",
+      "link": "https://finance.yahoo.com/m/6891b76c-cb72-33c6-9215-90e051a68b6b/warren-buffett-keeps-selling.html",
+      "providerPublishTime": 1763514300,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/j7EMTpFKkl0fCNvG0__r_Q--~B/aD05MzM7dz0xNDAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/406095e46b01f46be5388bf6d4d7177e",
             "width": 1400,
             "height": 933,
             "tag": "original"
           },
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/8aQMC8f.UhbHJiijLa.9Zw--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/7fde42993d20f045334f19e559a8aa16",
+            "url": "https://s.yimg.com/uu/api/res/1.2/Lo3LnCZKIFL75iooUgiWHw--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/406095e46b01f46be5388bf6d4d7177e",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "AAPL",
+        "GOOGL",
+        "AXP"
+      ]
+    },
+    {
+      "uuid": "22718a9b-1884-3ecc-b9e1-110357f0bcc8",
+      "title": "Purpose Investments Inc. Announces November 2025 Distributions",
+      "publisher": "GlobeNewswire",
+      "link": "https://finance.yahoo.com/news/purpose-investments-inc-announces-november-000000080.html",
+      "providerPublishTime": 1763510400,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/YgQMiH9QwTaoJUmp3tIYqg--~B/aD03NTAwO3c9MTE1ODQ7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/globenewswire.com/ca68d7c660d4a63860be9c2e8901c158",
+            "width": 11584,
+            "height": 7500,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/Oi3lV.kAkWEnh5IwBrBcOQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/globenewswire.com/ca68d7c660d4a63860be9c2e8901c158",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "AAPL"
+      ]
+    },
+    {
+      "uuid": "148d420a-194d-313e-9234-635f97927405",
+      "title": "Heard on the Street Recap: Stocks Continue Losing Streak",
+      "publisher": "The Wall Street Journal",
+      "link": "https://finance.yahoo.com/m/148d420a-194d-313e-9234-635f97927405/heard-on-the-street-recap%3A.html",
+      "providerPublishTime": 1763503771,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/Fwf5HL4GsEGPbDfR3MJBPg--~B/aD02MzA7dz0xMjAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/wsj.com/7b2c285183be07ca3c4e8242b25a59a8",
+            "width": 1200,
+            "height": 630,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/zIJaagDuCJitt1Cvcwyc7A--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/wsj.com/7b2c285183be07ca3c4e8242b25a59a8",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "NVDA",
+        "META",
+        "HD",
+        "MSFT",
+        "ANTH.PVT"
+      ]
+    },
+    {
+      "uuid": "c7d41227-b62c-36fe-9016-7f95a52f6d13",
+      "title": "Meta Defeats FTC\u2019s Antitrust Case Alleging Social-Media Monopoly",
+      "publisher": "The Wall Street Journal",
+      "link": "https://finance.yahoo.com/m/c7d41227-b62c-36fe-9016-7f95a52f6d13/meta-defeats-ftc%E2%80%99s-antitrust.html",
+      "providerPublishTime": 1763503680,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/Gup5KmBZ7Iv3DzZzlOMMpQ--~B/aD02NDA7dz0xMjgwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/wsj.com/4d99e12ef35715eac058d2e9eba30972",
+            "width": 1280,
+            "height": 640,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/gGnW_iUYJlImAT904U2xbA--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/wsj.com/4d99e12ef35715eac058d2e9eba30972",
             "width": 140,
             "height": 140,
             "tag": "140x140"
@@ -220,70 +286,6 @@
       },
       "relatedTickers": [
         "META"
-      ]
-    },
-    {
-      "uuid": "dcad3adf-7ef8-3a61-834a-b664bbac6c58",
-      "title": "If You'd Invested $500 in Nvidia Stock 1 Year Ago, Here's How Much You'd Have Today",
-      "publisher": "Motley Fool",
-      "link": "https://finance.yahoo.com/m/dcad3adf-7ef8-3a61-834a-b664bbac6c58/if-you%27d-invested-%24500-in.html",
-      "providerPublishTime": 1762957200,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/Fjs1Zfn_lfO5ksnGH66Wow--~B/aD04NDA7dz0xNDAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/df0fa248ea9b68e3a88a0f28eacc8b2c",
-            "width": 1400,
-            "height": 840,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/R20Ll6H2e4OTmte94_7HeQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/df0fa248ea9b68e3a88a0f28eacc8b2c",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "NVDA",
-        "^SPX",
-        "AAPL"
-      ]
-    },
-    {
-      "uuid": "b02a2c67-bf9b-3d30-b942-ed859a29b714",
-      "title": "Why Nvidia Stock Is Rebounding Today After SoftBank Shed Its Stake in the Chip Maker",
-      "publisher": "Barrons.com",
-      "link": "https://finance.yahoo.com/m/b02a2c67-bf9b-3d30-b942-ed859a29b714/why-nvidia-stock-is.html",
-      "providerPublishTime": 1762955820,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/ZVO9V9_cXefK3xg0Do_RUg--~B/aD02NDA7dz0xMjgwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/Barrons.com/f0391d9ff5b7c08cfe842f20fe50ede3",
-            "width": 1280,
-            "height": 640,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/evqVhaogMU.Ze0QxyD5x_A--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/Barrons.com/f0391d9ff5b7c08cfe842f20fe50ede3",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "601138.SS",
-        "AAPL",
-        "AMD",
-        "SFTBF",
-        "SFTBY",
-        "AVGO",
-        "NVDA",
-        "9984.T",
-        "2317.TW"
       ]
     }
   ],
@@ -296,11 +298,56 @@
       ]
     }
   ],
-  "lists": [],
+  "lists": [
+    {
+      "index": "2e1dd2f6-189b-4fb0-857d-79aec8ecef15",
+      "id": "2e1dd2f6-189b-4fb0-857d-79aec8ecef15",
+      "title": "Other Industrial Metals & Mining",
+      "canonicalName": "OTHER_INDUSTRIAL_METALS_MINING",
+      "score": 1.0,
+      "type": "PREDEFINED_SCREENER",
+      "total": 10,
+      "isPremium": false,
+      "iconUrl": "https://edgecast-img.yahoo.net/mysterio/api/b241f4b88dcc1439d37ed7dd74c3ee884516f53bc29bc8eece9b9fcf5c850fe8/finance/resizefill_w96_h96/https://s.yimg.com/cv/apiv2/fin/img/assets/predefined_screeners/diamond.png"
+    },
+    {
+      "index": "ca67a1b3-572c-433c-b1a4-a0da3738fc14",
+      "id": "ca67a1b3-572c-433c-b1a4-a0da3738fc14",
+      "title": "Commodity Metal Mutual Funds",
+      "canonicalName": "COMMODITY_MUTUAL_FUNDS",
+      "score": 1.0,
+      "type": "PREDEFINED_SCREENER",
+      "total": 82,
+      "isPremium": false,
+      "iconUrl": "https://edgecast-img.yahoo.net/mysterio/api/683fd6c45c5d4d5905e2caf5cd56ab1ab1c4e7d168bee45d8047945dc48ab943/finance/resizefill_w96_h96/https://s.yimg.com/cv/apiv2/fin/img/assets/predefined_screeners/theme.png"
+    },
+    {
+      "index": "05acca9e-1aee-44b6-8224-c92459eb2ed8",
+      "id": "05acca9e-1aee-44b6-8224-c92459eb2ed8",
+      "title": "Metal Fabrication",
+      "canonicalName": "METAL_FABRICATION",
+      "score": 1.0,
+      "type": "PREDEFINED_SCREENER",
+      "total": 12,
+      "isPremium": false,
+      "iconUrl": "https://edgecast-img.yahoo.net/mysterio/api/b241f4b88dcc1439d37ed7dd74c3ee884516f53bc29bc8eece9b9fcf5c850fe8/finance/resizefill_w96_h96/https://s.yimg.com/cv/apiv2/fin/img/assets/predefined_screeners/diamond.png"
+    },
+    {
+      "index": "63e7f272-cd8d-4307-9002-eb98746a036a",
+      "id": "63e7f272-cd8d-4307-9002-eb98746a036a",
+      "title": "Precious Metal ETFs",
+      "canonicalName": "PRECIOUS_METAL_ETFS",
+      "score": 1.0,
+      "type": "PREDEFINED_SCREENER",
+      "total": 14,
+      "isPremium": false,
+      "iconUrl": "https://edgecast-img.yahoo.net/mysterio/api/b241f4b88dcc1439d37ed7dd74c3ee884516f53bc29bc8eece9b9fcf5c850fe8/finance/resizefill_w96_h96/https://s.yimg.com/cv/apiv2/fin/img/assets/predefined_screeners/diamond.png"
+    }
+  ],
   "researchReports": [],
   "screenerFieldResults": [],
-  "totalTime": 111,
-  "timeTakenForQuotes": 439,
+  "totalTime": 52,
+  "timeTakenForQuotes": 443,
   "timeTakenForNews": 700,
   "timeTakenForAlgowatchlist": 400,
   "timeTakenForPredefinedScreener": 400,

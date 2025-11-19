@@ -5,68 +5,68 @@
         "count": 20,
         "quotes": [
           {
-            "symbol": "AMD"
+            "symbol": "PLUG"
           },
           {
-            "symbol": "ONON"
+            "symbol": "TMC"
           },
           {
-            "symbol": "CRCL"
+            "symbol": "OLMA"
           },
           {
-            "symbol": "BTC-USD"
+            "symbol": "NET"
           },
           {
-            "symbol": "CRWD"
-          },
-          {
-            "symbol": "CMCT"
-          },
-          {
-            "symbol": "ETH-USD"
-          },
-          {
-            "symbol": "AMZE"
+            "symbol": "HD"
           },
           {
             "symbol": "MRK"
           },
           {
-            "symbol": "XRP-USD"
+            "symbol": "WBD"
           },
           {
-            "symbol": "LPTX"
+            "symbol": "XRP-CAD"
           },
           {
-            "symbol": "LFS"
+            "symbol": "1810.HK"
           },
           {
-            "symbol": "MKC"
+            "symbol": "NVDA"
           },
           {
-            "symbol": "MRNA"
+            "symbol": "CEG"
           },
           {
-            "symbol": "SLRX"
+            "symbol": "T.TO"
           },
           {
-            "symbol": "CRMD"
+            "symbol": "ANTH.PVT"
           },
           {
-            "symbol": "IBM"
+            "symbol": "SGBX"
           },
           {
-            "symbol": "BTE.TO"
+            "symbol": "KULR"
           },
           {
-            "symbol": "VKTX"
+            "symbol": "EOSE"
           },
           {
-            "symbol": "VIK"
+            "symbol": "KLAR"
+          },
+          {
+            "symbol": "PDD"
+          },
+          {
+            "symbol": "WIX"
+          },
+          {
+            "symbol": "COST"
           }
         ],
-        "jobTimestamp": 1762960490657,
-        "startInterval": 202511121400
+        "jobTimestamp": 1763536436681,
+        "startInterval": 202511190600
       }
     ],
     "error": null

@@ -9,19 +9,39 @@
               "name": "ADAMS KATHERINE L",
               "relation": "General Counsel",
               "url": "",
-              "transactionDescription": "Sale",
+              "transactionDescription": "Stock Gift",
               "latestTransDate": {
-                "raw": 1759363200,
-                "fmt": "2025-10-02"
+                "raw": 1762905600,
+                "fmt": "2025-11-12"
               },
               "positionDirect": {
-                "raw": 179158,
-                "fmt": "179.16k",
-                "longFmt": "179,158"
+                "raw": 175408,
+                "fmt": "175.41k",
+                "longFmt": "175,408"
               },
               "positionDirectDate": {
-                "raw": 1759363200,
-                "fmt": "2025-10-02"
+                "raw": 1762905600,
+                "fmt": "2025-11-12"
+              }
+            },
+            {
+              "maxAge": 1,
+              "name": "AUSTIN WANDA M",
+              "relation": "Director",
+              "url": "",
+              "transactionDescription": "Conversion of Exercise of derivative security",
+              "latestTransDate": {
+                "raw": 1738281600,
+                "fmt": "2025-01-31"
+              },
+              "positionDirect": {
+                "raw": 1588,
+                "fmt": "1.59k",
+                "longFmt": "1,588"
+              },
+              "positionDirectDate": {
+                "raw": 1738281600,
+                "fmt": "2025-01-31"
               }
             },
             {
@@ -69,19 +89,19 @@
               "name": "KONDO CHRISTOPHER",
               "relation": "Officer",
               "url": "",
-              "transactionDescription": "Conversion of Exercise of derivative security",
+              "transactionDescription": "Sale",
               "latestTransDate": {
-                "raw": 1760486400,
-                "fmt": "2025-10-15"
+                "raw": 1762473600,
+                "fmt": "2025-11-07"
               },
               "positionDirect": {
-                "raw": 18850,
-                "fmt": "18.85k",
-                "longFmt": "18,850"
+                "raw": 15098,
+                "fmt": "15.1k",
+                "longFmt": "15,098"
               },
               "positionDirectDate": {
-                "raw": 1760486400,
-                "fmt": "2025-10-15"
+                "raw": 1762473600,
+                "fmt": "2025-11-07"
               }
             },
             {
@@ -158,26 +178,6 @@
                 "raw": 109311,
                 "fmt": "109.31k",
                 "longFmt": "109,311"
-              },
-              "positionDirectDate": {
-                "raw": 1738281600,
-                "fmt": "2025-01-31"
-              }
-            },
-            {
-              "maxAge": 1,
-              "name": "WAGNER SUSAN L",
-              "relation": "Director",
-              "url": "",
-              "transactionDescription": "Conversion of Exercise of derivative security",
-              "latestTransDate": {
-                "raw": 1738281600,
-                "fmt": "2025-01-31"
-              },
-              "positionDirect": {
-                "raw": 68533,
-                "fmt": "68.53k",
-                "longFmt": "68,533"
               },
               "positionDirectDate": {
                 "raw": 1738281600,

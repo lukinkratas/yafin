@@ -58,19 +58,19 @@ fetch-mocks:
 
 test:
 	$(MAKE) install-editable
-	uv run --group test pytest -m "not integration and not performance" -p no:warnings --cov=yafin --cov-report=term-missing --cov-branch
+	uv run --group test pytest tests/unit -p no:warnings --cov=yafin --cov-report=term-missing --cov-branch
 
 test-int:
 	$(MAKE) install-editable
-	uv run --group test pytest -m integration -p no:warnings
+	uv run --group test pytest tests/integration -p no:warnings
 
 test-perf:
 	$(MAKE) install-editable
-	uv run --group performance pytest -m performance --benchmark-autosave -p no:warnings
+	uv run --group performance pytest tests/performance --benchmark-autosave -p no:warnings
 
 test-all:
 	$(MAKE) install-editable
-	uv run --group test pytest -m "not performance" --cov=yafin --cov-report=term-missing --cov-branch --cov-fail-under=95 --cov-report=html:htmlcov
+	uv run --group test pytest tests/ -m "not performance" --cov=yafin --cov-report=term-missing --cov-branch --cov-fail-under=95 --cov-report=html:htmlcov
 
 clean:
 	rm -rvf __pycache__ scripts/__pycache__ tests/__pycache__ tests/integration/__pycache__ tests/unit/__pycache__ yafin/__pycache__ .pytest_cache .mypy_cache .ruff_cache .coverage htmlcov main.log dist yafin.egg-info site tests/fixtures/*.json tests/fixtures/*/*.json *.csv

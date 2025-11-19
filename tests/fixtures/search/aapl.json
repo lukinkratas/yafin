@@ -8,7 +8,7 @@
       "quoteType": "EQUITY",
       "symbol": "AAPL",
       "index": "quotes",
-      "score": 19444500.0,
+      "score": 17520500.0,
       "typeDisp": "Equity",
       "longname": "Apple Inc.",
       "exchDisp": "NASDAQ",
@@ -25,38 +25,34 @@
       "quoteType": "ETF",
       "symbol": "AAPU",
       "index": "quotes",
-      "score": 20016.0,
+      "score": 20005.0,
       "typeDisp": "ETF",
       "longname": "Direxion Daily AAPL Bull 2X Shares",
       "exchDisp": "NASDAQ",
       "isYahooFinance": true
     },
     {
-      "exchange": "OPR",
-      "shortname": "AAPL Nov 2025 265.000 put",
-      "quoteType": "OPTION",
-      "symbol": "AAPL251114P00265000",
+      "exchange": "NGM",
+      "shortname": "Direxion Daily AAPL Bear 1X Sha",
+      "quoteType": "ETF",
+      "symbol": "AAPD",
       "index": "quotes",
-      "score": 20014.0,
-      "typeDisp": "Option",
-      "longname": "AAPL Nov 2025 265.000 put",
-      "exchDisp": "OPR",
+      "score": 20004.0,
+      "typeDisp": "ETF",
+      "longname": "Direxion Daily AAPL Bear 1X Shares",
+      "exchDisp": "NASDAQ",
       "isYahooFinance": true
     },
     {
-      "exchange": "VIE",
-      "shortname": "APPLE INC",
-      "quoteType": "EQUITY",
-      "symbol": "AAPL.VI",
+      "exchange": "OPR",
+      "shortname": "AAPL Nov 2025 270.000 put",
+      "quoteType": "OPTION",
+      "symbol": "AAPL251114P00270000",
       "index": "quotes",
-      "score": 20013.0,
-      "typeDisp": "Equity",
-      "longname": "Apple Inc.",
-      "exchDisp": "Vienna",
-      "sector": "Technology",
-      "sectorDisp": "Technology",
-      "industry": "Consumer Electronics",
-      "industryDisp": "Consumer Electronics",
+      "score": 20004.0,
+      "typeDisp": "Option",
+      "longname": "AAPL Nov 2025 270.000 put",
+      "exchDisp": "OPR",
       "isYahooFinance": true
     },
     {
@@ -65,7 +61,7 @@
       "quoteType": "EQUITY",
       "symbol": "AAPL.BA",
       "index": "quotes",
-      "score": 20013.0,
+      "score": 20003.0,
       "typeDisp": "Equity",
       "longname": "Apple Inc.",
       "exchDisp": "Buenos Aires",
@@ -79,9 +75,9 @@
       "exchange": "OPR",
       "shortname": "AAPL Nov 2025 270.000 put",
       "quoteType": "OPTION",
-      "symbol": "AAPL251107P00270000",
+      "symbol": "AAPL251121P00270000",
       "index": "quotes",
-      "score": 20011.0,
+      "score": 20002.0,
       "typeDisp": "Option",
       "longname": "AAPL Nov 2025 270.000 put",
       "exchDisp": "OPR",
@@ -89,35 +85,35 @@
     },
     {
       "exchange": "OPR",
-      "shortname": "AAPL Nov 2025 270.000 put",
+      "shortname": "AAPL Nov 2025 272.500 put",
       "quoteType": "OPTION",
-      "symbol": "AAPL251121P00270000",
+      "symbol": "AAPL251121P00272500",
       "index": "quotes",
-      "score": 20005.0,
+      "score": 20002.0,
       "typeDisp": "Option",
-      "longname": "AAPL Nov 2025 270.000 put",
+      "longname": "AAPL Nov 2025 272.500 put",
       "exchDisp": "OPR",
       "isYahooFinance": true
     }
   ],
   "news": [
     {
-      "uuid": "cbb87852-02a5-396f-afcc-e37a6029d134",
-      "title": "This Pandemic Darling Is Down 40% This Year. Now the Stock Is Rising Sharply.",
-      "publisher": "Barrons.com",
-      "link": "https://finance.yahoo.com/m/cbb87852-02a5-396f-afcc-e37a6029d134/this-pandemic-darling-is-down.html",
-      "providerPublishTime": 1762959960,
+      "uuid": "57e06870-1187-395a-bc0f-bea8ef30eb3f",
+      "title": "Asian markets bounce as Nvidia takes centre stage amid AI bubble fears",
+      "publisher": "AFP",
+      "link": "https://finance.yahoo.com/news/asian-markets-bounce-nvidia-takes-025415956.html",
+      "providerPublishTime": 1763520855,
       "type": "STORY",
       "thumbnail": {
         "resolutions": [
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/488nltge_HJFI6yyv8zsAw--~B/aD02NDA7dz0xMjc5O2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/Barrons.com/4a277bdffe6bd7f5e65ba0335f5cd5d7",
-            "width": 1279,
-            "height": 640,
+            "url": "https://s.yimg.com/uu/api/res/1.2/0pBPCOlKTqvuFh6JDDrrMQ--~B/aD01MTI7dz03Njg7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/afp.com/c6803932ba21e5c11b6cb55fe32a7ca1",
+            "width": 768,
+            "height": 512,
             "tag": "original"
           },
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/5X5QF6c_LasNlAo42QSxKA--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/Barrons.com/4a277bdffe6bd7f5e65ba0335f5cd5d7",
+            "url": "https://s.yimg.com/uu/api/res/1.2/veG4dTgtGU.6_IDUIleZvQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/afp.com/c6803932ba21e5c11b6cb55fe32a7ca1",
             "width": 140,
             "height": 140,
             "tag": "140x140"
@@ -125,152 +121,86 @@
         ]
       },
       "relatedTickers": [
-        "BILL",
-        "AAPL",
-        "TRIP",
-        "^GSPC",
-        "QRVO"
-      ]
-    },
-    {
-      "uuid": "45e60972-12d3-3dbe-a1f0-6591352e48e4",
-      "title": "Nasdaq Loses Early Gains",
-      "publisher": "Barrons.com",
-      "link": "https://finance.yahoo.com/m/45e60972-12d3-3dbe-a1f0-6591352e48e4/nasdaq-loses-early-gains.html",
-      "providerPublishTime": 1762959719,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/_kc6REYMS1JrAuV5bYtjfA--~B/aD02NTt3PTMyMDthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/Barrons.com/12ea0f43d8f8307249a68d1cb2e0587e",
-            "width": 320,
-            "height": 65,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/5waH37HKuL3X52B3V2GWrw--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/Barrons.com/12ea0f43d8f8307249a68d1cb2e0587e",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "^IXIC",
-        "^SPX",
         "NVDA",
-        "MSFT",
-        "AAPL",
         "AMZN",
-        "GOOGL",
         "META",
-        "TSLA"
-      ]
-    },
-    {
-      "uuid": "b63dd1f9-7c44-3cb9-b4bf-0a8f8cc0ad5e",
-      "title": "What Tesla Stock Would Look Like in 10 Years If Musk Hits Pay Targets",
-      "publisher": "Barrons.com",
-      "link": "https://finance.yahoo.com/m/b63dd1f9-7c44-3cb9-b4bf-0a8f8cc0ad5e/what-tesla-stock-would-look.html",
-      "providerPublishTime": 1762959660,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/ERDV9d_xxtGVl5MyZHGYwQ--~B/aD02NDA7dz0xMjgwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/Barrons.com/97c5f015ef7e1da2fb60fb823d412fac",
-            "width": 1280,
-            "height": 640,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/aMH7VPFjlOHJoD0Lcb7Hrw--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/Barrons.com/97c5f015ef7e1da2fb60fb823d412fac",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "TSLA"
-      ]
-    },
-    {
-      "uuid": "927c325d-d8a8-3c22-aec9-731edd0be87e",
-      "title": "Whoop Is Considering Going Public in the Next Two Years, CEO Says",
-      "publisher": "Bloomberg",
-      "link": "https://finance.yahoo.com/news/whoop-considering-going-public-next-130009946.html",
-      "providerPublishTime": 1762958904,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/92QYrw4D5VB9ur19sIUr2Q--~B/aD0xNDY3O3c9MjIwMDthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/bloomberg_holding_pen_162/75f7aef99d782e65a8f14fa891496650",
-            "width": 2200,
-            "height": 1467,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/owcmVMTd42KwPoKEH8zPxg--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/bloomberg_holding_pen_162/75f7aef99d782e65a8f14fa891496650",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "WHOO.PVT",
-        "005930.KS",
-        "ABT",
-        "AAPL",
-        "DXCM"
-      ]
-    },
-    {
-      "uuid": "dcad3adf-7ef8-3a61-834a-b664bbac6c58",
-      "title": "If You'd Invested $500 in Nvidia Stock 1 Year Ago, Here's How Much You'd Have Today",
-      "publisher": "Motley Fool",
-      "link": "https://finance.yahoo.com/m/dcad3adf-7ef8-3a61-834a-b664bbac6c58/if-you%27d-invested-%24500-in.html",
-      "providerPublishTime": 1762957200,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/Fjs1Zfn_lfO5ksnGH66Wow--~B/aD04NDA7dz0xNDAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/df0fa248ea9b68e3a88a0f28eacc8b2c",
-            "width": 1400,
-            "height": 840,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/R20Ll6H2e4OTmte94_7HeQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/df0fa248ea9b68e3a88a0f28eacc8b2c",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "NVDA",
-        "^SPX",
+        "GOOGL",
         "AAPL"
       ]
     },
     {
-      "uuid": "b02a2c67-bf9b-3d30-b942-ed859a29b714",
-      "title": "Why Nvidia Stock Is Rebounding Today After SoftBank Shed Its Stake in the Chip Maker",
-      "publisher": "Barrons.com",
-      "link": "https://finance.yahoo.com/m/b02a2c67-bf9b-3d30-b942-ed859a29b714/why-nvidia-stock-is.html",
-      "providerPublishTime": 1762955820,
+      "uuid": "6891b76c-cb72-33c6-9215-90e051a68b6b",
+      "title": "Warren Buffett Keeps Selling His Apple Stock: Should You?",
+      "publisher": "Motley Fool",
+      "link": "https://finance.yahoo.com/m/6891b76c-cb72-33c6-9215-90e051a68b6b/warren-buffett-keeps-selling.html",
+      "providerPublishTime": 1763514300,
       "type": "STORY",
       "thumbnail": {
         "resolutions": [
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/ZVO9V9_cXefK3xg0Do_RUg--~B/aD02NDA7dz0xMjgwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/Barrons.com/f0391d9ff5b7c08cfe842f20fe50ede3",
+            "url": "https://s.yimg.com/uu/api/res/1.2/j7EMTpFKkl0fCNvG0__r_Q--~B/aD05MzM7dz0xNDAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/406095e46b01f46be5388bf6d4d7177e",
+            "width": 1400,
+            "height": 933,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/Lo3LnCZKIFL75iooUgiWHw--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/406095e46b01f46be5388bf6d4d7177e",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "AAPL",
+        "GOOGL",
+        "AXP"
+      ]
+    },
+    {
+      "uuid": "22718a9b-1884-3ecc-b9e1-110357f0bcc8",
+      "title": "Purpose Investments Inc. Announces November 2025 Distributions",
+      "publisher": "GlobeNewswire",
+      "link": "https://finance.yahoo.com/news/purpose-investments-inc-announces-november-000000080.html",
+      "providerPublishTime": 1763510400,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/YgQMiH9QwTaoJUmp3tIYqg--~B/aD03NTAwO3c9MTE1ODQ7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/globenewswire.com/ca68d7c660d4a63860be9c2e8901c158",
+            "width": 11584,
+            "height": 7500,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/Oi3lV.kAkWEnh5IwBrBcOQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/globenewswire.com/ca68d7c660d4a63860be9c2e8901c158",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "AAPL"
+      ]
+    },
+    {
+      "uuid": "798c99f5-72b9-3d52-a90a-9fbd64089c49",
+      "title": "Stocks Are Getting Slammed Again. This Isn\u2019t the Time to Panic.",
+      "publisher": "Barrons.com",
+      "link": "https://finance.yahoo.com/m/798c99f5-72b9-3d52-a90a-9fbd64089c49/stocks-are-getting-slammed.html",
+      "providerPublishTime": 1763501400,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/xuyLik2eJURA5LlOjgPMgw--~B/aD02NDA7dz0xMjgwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/Barrons.com/d7dc25f1f52a147d9cf959497ced9594",
             "width": 1280,
             "height": 640,
             "tag": "original"
           },
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/evqVhaogMU.Ze0QxyD5x_A--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/Barrons.com/f0391d9ff5b7c08cfe842f20fe50ede3",
+            "url": "https://s.yimg.com/uu/api/res/1.2/lE2B37WKGjjnTTw.q4Onzw--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/Barrons.com/d7dc25f1f52a147d9cf959497ced9594",
             "width": 140,
             "height": 140,
             "tag": "140x140"
@@ -278,34 +208,31 @@
         ]
       },
       "relatedTickers": [
-        "601138.SS",
-        "AAPL",
-        "AMD",
-        "SFTBF",
-        "SFTBY",
-        "AVGO",
+        "^RUT",
+        "^GSPC",
+        "^IXIC",
+        "MID",
         "NVDA",
-        "9984.T",
-        "2317.TW"
+        "AAPL"
       ]
     },
     {
-      "uuid": "35f447ab-50ac-36b2-a9db-a4bd23707067",
-      "title": "Warren Buffett Stepping Down With 31% of Berkshire in Cash: His 3 Ultra Safest Stocks",
-      "publisher": "24/7 Wall St.",
-      "link": "https://finance.yahoo.com/m/35f447ab-50ac-36b2-a9db-a4bd23707067/warren-buffett-stepping-down.html",
-      "providerPublishTime": 1762955369,
+      "uuid": "ff512b2c-c341-3c96-aeef-1425aacc4fb7",
+      "title": "Apple (AAPL) Valuation: Is There More Upside After Recent Gains?",
+      "publisher": "Simply Wall St.",
+      "link": "https://finance.yahoo.com/news/apple-aapl-valuation-more-upside-211317994.html",
+      "providerPublishTime": 1763500397,
       "type": "STORY",
       "thumbnail": {
         "resolutions": [
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/SKbdiHdwLSG2N3dK6AJ7HA--~B/aD03Njc7dz0xMzY2O2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/24_7_wall_st__718/6f111186c9b002288ac2b4cc92d11cf3",
-            "width": 1366,
-            "height": 767,
+            "url": "https://s.yimg.com/uu/api/res/1.2/fBnY8upz5XxbZDDWlufZ9w--~B/aD00MzI7dz0xMTk0O2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/simply_wall_st__316/69084628647944e382f8e555f97913e8",
+            "width": 1194,
+            "height": 432,
             "tag": "original"
           },
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/VVJxRwmR_BTCmasx0x_i4A--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/24_7_wall_st__718/6f111186c9b002288ac2b4cc92d11cf3",
+            "url": "https://s.yimg.com/uu/api/res/1.2/foN3eFZWC9tLTJfgfqJIuQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/simply_wall_st__316/69084628647944e382f8e555f97913e8",
             "width": 140,
             "height": 140,
             "tag": "140x140"
@@ -313,32 +240,88 @@
         ]
       },
       "relatedTickers": [
-        "MNST",
-        "AXP",
-        "AAPL",
-        "KO",
-        "BRK-B",
-        "KR",
-        "BAC"
+        "AAPL"
       ]
     },
     {
-      "uuid": "20dafd06-8d77-3da8-82d3-af0247ecb2e1",
-      "title": "Foxconn, On Running, Circle: Market Movers",
+      "uuid": "f0f78d56-a85f-39d0-a4f7-79b23b750e94",
+      "title": "Apple Is Apparently Getting Ready to Replace CEO Tim Cook. Is That Good News for AAPL Stock?",
+      "publisher": "Barchart",
+      "link": "https://finance.yahoo.com/m/f0f78d56-a85f-39d0-a4f7-79b23b750e94/apple-is-apparently-getting.html",
+      "providerPublishTime": 1763495464,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/g19_JeK9jEfGXeFwcSJIjw--~B/aD02Njc7dz0xMDAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/barchart_com_477/0ebcb181fa5c1dc0fd30a445fb867adb",
+            "width": 1000,
+            "height": 667,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/_yIGA.XZOx8Qwyq856GRdg--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/barchart_com_477/0ebcb181fa5c1dc0fd30a445fb867adb",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "AAPL"
+      ]
+    },
+    {
+      "uuid": "b0043fba-eeaf-362c-8a7a-e59fe1e64e00",
+      "title": "Wall Street slumps on AI bubble fears",
+      "publisher": "The Telegraph",
+      "link": "https://finance.yahoo.com/m/b0043fba-eeaf-362c-8a7a-e59fe1e64e00/wall-street-slumps-on-ai.html",
+      "providerPublishTime": 1763494522,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/jYxsjUv.d6HYu.zIwHNYgQ--~B/aD0xNTYzO3c9MjUwMDthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/the_telegraph_258/fbd1fbc4c660c802016a5f35a3650827",
+            "width": 2500,
+            "height": 1563,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/j9dNlUDEckWghHxNaXHxog--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/the_telegraph_258/fbd1fbc4c660c802016a5f35a3650827",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "^SPX",
+        "GOOGL",
+        "AAPL",
+        "AMZN",
+        "NVDA",
+        "TSLA",
+        "^IXIC",
+        "META",
+        "MSFT"
+      ]
+    },
+    {
+      "uuid": "8f631c22-8281-3ff1-ba50-bed4b7936d77",
+      "title": "Cloudflare resolves outage, iPhone sales surge in China",
       "publisher": "Yahoo Finance Video",
-      "link": "https://finance.yahoo.com/video/foxconn-running-circle-market-movers-134324690.html",
-      "providerPublishTime": 1762955004,
+      "link": "https://finance.yahoo.com/video/cloudflare-resolves-outage-iphone-sales-181114883.html",
+      "providerPublishTime": 1763489474,
       "type": "VIDEO",
       "thumbnail": {
         "resolutions": [
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/FZeJ3MA0fcz1p_qWpt16xg--~B/aD0yODE1O3c9NTAwMDthcHBpZD15dGFjaHlvbg--/https://s.yimg.com/os/creatr-uploaded-images/2025-11/d3b0d030-bfc8-11f0-bce7-217c525a7b0a",
-            "width": 5000,
-            "height": 2815,
+            "url": "https://s.yimg.com/uu/api/res/1.2/TUTNuRlKJBZdflDvIqdHng--~B/aD0zMDM0O3c9NTM4ODthcHBpZD15dGFjaHlvbg--/https://s.yimg.com/os/creatr-uploaded-images/2025-11/ec5d4ce0-c4a9-11f0-9fec-d2d949dcc1e1",
+            "width": 5388,
+            "height": 3034,
             "tag": "original"
           },
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/eQxJ6noFRAWn2A_brl6P7A--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://s.yimg.com/os/creatr-uploaded-images/2025-11/d3b0d030-bfc8-11f0-bce7-217c525a7b0a",
+            "url": "https://s.yimg.com/uu/api/res/1.2/7blR8SWz0PK5tYGIKn1TOw--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://s.yimg.com/os/creatr-uploaded-images/2025-11/ec5d4ce0-c4a9-11f0-9fec-d2d949dcc1e1",
             "width": 140,
             "height": 140,
             "tag": "140x140"
@@ -346,13 +329,8 @@
         ]
       },
       "relatedTickers": [
-        "601138.SS",
-        "2354.TW",
-        "CRCL",
-        "AAPL",
-        "NVDA",
-        "AMZN",
-        "ONON"
+        "NET",
+        "AAPL"
       ]
     }
   ],
@@ -360,8 +338,8 @@
   "lists": [],
   "researchReports": [],
   "screenerFieldResults": [],
-  "totalTime": 63,
-  "timeTakenForQuotes": 455,
+  "totalTime": 46,
+  "timeTakenForQuotes": 436,
   "timeTakenForNews": 700,
   "timeTakenForAlgowatchlist": 400,
   "timeTakenForPredefinedScreener": 400,

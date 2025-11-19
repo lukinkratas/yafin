@@ -21,23 +21,24 @@
           1762128000,
           1762214400,
           1762300800,
-          1762387200,
-          1762473600,
-          1762527600,
-          1762560000,
-          1762646400,
           1762732800,
           1762819200,
           1762905600,
-          1762948800
+          1762992000,
+          1763078400,
+          1763164800,
+          1763251200,
+          1763337600,
+          1763424000,
+          1763510400
         ],
         "economicEvents": [
           {
             "eventTime": 1758803400000,
             "countryCode": "US",
-            "eventName": "GDP Final",
-            "prior": "3.3",
-            "actual": "3.8",
+            "eventName": "Core PCE Prices Fnal",
+            "prior": "2.5",
+            "actual": "2.6",
             "period": "Q2"
           },
           {
@@ -64,108 +65,114 @@
           {
             "eventTime": 1761868800000,
             "countryCode": "US",
-            "eventName": "Core PCE Price Index YY*",
-            "prior": "2.9",
+            "eventName": "Employment Trends*",
+            "prior": "106.41",
             "period": "Sep"
           },
           {
             "eventTime": 1761955200000,
             "countryCode": "US",
-            "eventName": "Core PCE Price Index YY*",
-            "prior": "2.9",
+            "eventName": "Employment Trends*",
+            "prior": "106.41",
             "period": "Sep"
           },
           {
             "eventTime": 1762041600000,
             "countryCode": "US",
-            "eventName": "Core PCE Price Index YY*",
-            "prior": "2.9",
+            "eventName": "Employment Trends*",
+            "prior": "106.41",
             "period": "Sep"
           },
           {
             "eventTime": 1762128000000,
             "countryCode": "US",
-            "eventName": "Core PCE Price Index YY*",
-            "prior": "2.9",
+            "eventName": "Employment Trends*",
+            "prior": "106.41",
             "period": "Sep"
           },
           {
             "eventTime": 1762214400000,
             "countryCode": "US",
-            "eventName": "Core PCE Price Index YY*",
-            "prior": "2.9",
+            "eventName": "Employment Trends*",
+            "prior": "106.41",
             "period": "Sep"
           },
           {
             "eventTime": 1762300800000,
             "countryCode": "US",
-            "eventName": "Core PCE Price Index YY*",
-            "prior": "2.9",
-            "period": "Sep"
-          },
-          {
-            "eventTime": 1762387200000,
-            "countryCode": "US",
-            "eventName": "Core PCE Price Index YY*",
-            "prior": "2.9",
-            "period": "Sep"
-          },
-          {
-            "eventTime": 1762473600000,
-            "countryCode": "US",
-            "eventName": "Unemployment Rate",
-            "prior": "4.3",
-            "period": "Sep"
-          },
-          {
-            "eventTime": 1762527600000,
-            "countryCode": "US",
-            "eventName": "U Mich Sentiment Prelim",
-            "prior": "53.6",
-            "actual": "50.3",
-            "period": "Nov"
-          },
-          {
-            "eventTime": 1762560000000,
-            "countryCode": "US",
-            "eventName": "Unemployment Rate",
-            "prior": "4.3",
-            "period": "Sep"
-          },
-          {
-            "eventTime": 1762646400000,
-            "countryCode": "US",
-            "eventName": "Unemployment Rate",
-            "prior": "4.3",
+            "eventName": "Employment Trends*",
+            "prior": "106.41",
             "period": "Sep"
           },
           {
             "eventTime": 1762732800000,
             "countryCode": "US",
-            "eventName": "Unemployment Rate",
-            "prior": "4.3",
+            "eventName": "Dallas Fed PCE*",
+            "prior": "2.8",
             "period": "Sep"
           },
           {
             "eventTime": 1762819200000,
             "countryCode": "US",
-            "eventName": "Unemployment Rate",
-            "prior": "4.3",
+            "eventName": "Dallas Fed PCE*",
+            "prior": "2.8",
             "period": "Sep"
           },
           {
             "eventTime": 1762905600000,
             "countryCode": "US",
-            "eventName": "Unemployment Rate",
-            "prior": "4.3",
+            "eventName": "Dallas Fed PCE*",
+            "prior": "2.8",
             "period": "Sep"
           },
           {
-            "eventTime": 1762948800000,
+            "eventTime": 1762992000000,
             "countryCode": "US",
-            "eventName": "Mortgage Market Index",
-            "prior": "332.3",
-            "actual": "334.2"
+            "eventName": "Dallas Fed PCE*",
+            "prior": "2.8",
+            "period": "Sep"
+          },
+          {
+            "eventTime": 1763078400000,
+            "countryCode": "US",
+            "eventName": "Dallas Fed PCE*",
+            "prior": "2.8",
+            "period": "Sep"
+          },
+          {
+            "eventTime": 1763164800000,
+            "countryCode": "US",
+            "eventName": "Dallas Fed PCE*",
+            "prior": "2.8",
+            "period": "Sep"
+          },
+          {
+            "eventTime": 1763251200000,
+            "countryCode": "US",
+            "eventName": "Dallas Fed PCE*",
+            "prior": "2.8",
+            "period": "Sep"
+          },
+          {
+            "eventTime": 1763337600000,
+            "countryCode": "US",
+            "eventName": "Dallas Fed PCE*",
+            "prior": "2.8",
+            "period": "Sep"
+          },
+          {
+            "eventTime": 1763424000000,
+            "countryCode": "US",
+            "eventName": "CPI YY, NSA",
+            "prior": "3",
+            "period": "Oct"
+          },
+          {
+            "eventTime": 1763510400000,
+            "countryCode": "US",
+            "eventName": "CPI YY, NSA",
+            "prior": "3",
+            "period": "Oct"
           }
         ]
       },
@@ -10194,26 +10201,6 @@
             "AAPL"
           ],
           "type": [
-            "conferencePresentation"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "otherCorporate"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
             "shareHoldersAnnualMeetingsEvents"
           ]
         }
@@ -10224,7 +10211,7 @@
             "AAPL"
           ],
           "type": [
-            "conferenceEvents"
+            "corporateAnalystMeeting"
           ]
         }
       },
@@ -10244,7 +10231,7 @@
             "AAPL"
           ],
           "type": [
-            "corporateConferenceCallEvents"
+            "otherCorporate"
           ]
         }
       },
@@ -10254,7 +10241,27 @@
             "AAPL"
           ],
           "type": [
-            "corporateAnalystMeeting"
+            "conferencePresentation"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "conferenceEvents"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "corporateConferenceCallEvents"
           ]
         }
       }

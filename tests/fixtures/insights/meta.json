@@ -12,12 +12,12 @@
               "direction": "Neutral",
               "score": 0,
               "scoreDescription": "No Evidence",
-              "sectorDirection": "Bullish",
+              "sectorDirection": "Bearish",
               "sectorScore": 1,
-              "sectorScoreDescription": "Weak Bullish Evidence",
-              "indexDirection": "Neutral",
-              "indexScore": 0,
-              "indexScoreDescription": "Neutral Evidence"
+              "sectorScoreDescription": "Weak Bearish Evidence",
+              "indexDirection": "Bearish",
+              "indexScore": 3,
+              "indexScoreDescription": "Strong Bearish Evidence"
             },
             "intermediateTermOutlook": {
               "stateDescription": "There are no events.",
@@ -28,8 +28,8 @@
               "sectorScore": 3,
               "sectorScoreDescription": "Strong Bearish Evidence",
               "indexDirection": "Bearish",
-              "indexScore": 1,
-              "indexScoreDescription": "Weak Bearish Evidence"
+              "indexScore": 3,
+              "indexScoreDescription": "Strong Bearish Evidence"
             },
             "longTermOutlook": {
               "stateDescription": "There is one bearish event.",
@@ -39,9 +39,9 @@
               "sectorDirection": "Bullish",
               "sectorScore": 1,
               "sectorScoreDescription": "Weak Bullish Evidence",
-              "indexDirection": "Bullish",
-              "indexScore": 1,
-              "indexScoreDescription": "Weak Bullish Evidence"
+              "indexDirection": "Neutral",
+              "indexScore": 0,
+              "indexScoreDescription": "No Evidence"
             }
           },
           "keyTechnicals": {
@@ -62,8 +62,8 @@
             "innovativeness": 0.8288,
             "sustainability": 0.7643000000000001,
             "insiderSentiments": 0.0,
-            "earningsReports": 0.9093000000000001,
-            "dividends": 0.0128
+            "earningsReports": 0.9094,
+            "dividends": 0.0127
           },
           "sector": {
             "innovativeness": 0.5,
@@ -126,22 +126,22 @@
             "tickers": [
               "GOOGL",
               "AAPL",
-              "AVGO",
               "CSCO",
+              "AVGO",
               "JPM",
               "JNJ",
               "UNH",
               "ASML",
               "MSFT",
               "TSLA",
-              "IBM",
               "WFC",
-              "AMD",
+              "IBM",
               "LLY",
+              "AMD",
               "GE",
               "PLTR",
-              "BABA",
               "NFLX",
+              "BABA",
               "META",
               "NVDA",
               "BAC",
@@ -178,8 +178,8 @@
             "reportTitle": "Earnings Flood Continues The earnings flood continues this week. The October jobs report was supposed to come out on Friday -- but if the U.S. government shutdown continues, that indicator will not be released. Several Federal Reserve officials will be speaking publicly during the week. Last week, the Dow Jones Industrial Average gained 0.9%, the S&P 500 was up 0.8%, and the Nasdaq rose 2.3%. So far this year, the Dow is up 12%, the S&P 500 has gained 16%, and the Nasdaq has popped 23%.  On the earnings calendar, Palantir Technologies reports on Monday; AMD, Uber, Amgen, Pfizer, Spotify, Marriott, and Apollo Global Management on Tuesday; Toyota, Novo Nordisk, McDonald's, and Qualcomm on Wednesday; AstraZeneca, ConocoPhillips Airbnb, and Warner Bros. Discovery on Thursday; and Constellation Energy, Duke Energy, and Honda on Friday. Some 56% of S&P 500 companies have reported so far and earnings are up 13% from the prior-year quarter. That follows 13% growth in 2Q EPS and 14% growth in 1Q EPS, according to LSEG I/B/E/S. For 3Q, Information Technology is the leading sector so far, up 24%, and Energy is at the bottom, down 6%. On the economic calendar, the U.S. federal government shutdown is now the second longest in history, at 34 days. That means no government-issued economic reports will be released, including this week's scheduled October jobs report. Data that will be reported includes ISM Manufacturing on Monday; ADP employment on Wednesday; and Consumer Sentiment on Friday.  Turning to other data, the Atlanta Fed GDPNow measure calls for GDP of 3.9% in the third quarter. That is the same as last week's forecast. The Cleveland Fed Inflation Nowcast forecasts CPI of 3.0% in October, also the same as last week. Mortgage rates inched lower last week, with the average 30-year fixed-rate mortgage now at 6.17%, according to FreddieMac. Gas prices went up two cents last week and now average $3.04 per gallon for regular gas.  Looking ahead, the last Federal Open Market Committee meeting of the year is on December 10. After Chairman Powell's comments last week, odds have dropped to 63% from 92% for another 25-basis-point cut to the fed funds target rate, according to the CME FedWatch rate tool. After that, the first few meetings in 2026 are on January 28 and March 18. Taking a deeper dive into performance, U.S. stocks are lagging global stocks. A leading industrialized global stock-market index, the ETF EFA, has surged 25% year to date, while the leading emerging market ETF EEM has gained 32%. U.S. growth stocks, with a year-to-date gain of 20% (ETF IWF), have taken the edge over value stocks (ETF IWD), which have booked an advance of 11%. In other asset classes for the year to date, AGG bonds are up 4%, gold is up 54%, crude oil is down 14%, and Bitcoin is up 17%. The U.S. dollar is down 8%, tracking DXY. The VIX Volatility Index settled Friday at about 18, down from a high of 29 a few weeks ago. The current level is still in range of a bull market. Looking at leading and lagging sectors so far in 2025, Information Technology (+26%) is the top performer, followed by Communication Services, up 25%, Utilities (+21%) and Industrials (+18%) are outperforming the broader market, while Financials (+10%) is not too far behind. Defensive sectors like Energy, (+3%), Consumer Staples (+3%), Real Estate (+5%), Consumer Discretionary (+4%), Materials (+6%), and Healthcare (+6%) are at the bottom of the performance list.",
             "reportType": "Market Summary",
             "tickers": [
-              "META",
               "MDLZ",
+              "META",
               "ORLY",
               "FHI",
               "MCO",
@@ -207,8 +207,8 @@
         ],
         "sigDevs": [
           {
-            "headline": "Nebius Group Announces New Agreement To Deliver AI Infrastructure To Meta For $3 Billion Over 5 Years",
-            "date": "2025-11-11"
+            "headline": "Meta\u2019S Chief Revenue Officer John Hegeman Exits In Broad Leadership Reshuffle - Bloomberg News",
+            "date": "2025-11-18"
           }
         ],
         "secReports": [
@@ -276,15 +276,6 @@
             "formType": "S-8 POS"
           },
           {
-            "id": "0001326801-25-000096_1326801",
-            "type": "Offering Registrations",
-            "title": "S-8 POS : Offering Registrations",
-            "description": "Post-effective amendment to a S-8 registration statement",
-            "filingDate": 1748563200000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000096/thumbnail.png",
-            "formType": "S-8 POS"
-          },
-          {
             "id": "0001326801-25-000090_1326801",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
@@ -294,12 +285,12 @@
             "formType": "8-K"
           },
           {
-            "id": "0001326801-25-000094_1326801",
+            "id": "0001326801-25-000096_1326801",
             "type": "Offering Registrations",
             "title": "S-8 POS : Offering Registrations",
             "description": "Post-effective amendment to a S-8 registration statement",
             "filingDate": 1748563200000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000094/thumbnail.png",
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000096/thumbnail.png",
             "formType": "S-8 POS"
           },
           {
@@ -309,6 +300,15 @@
             "description": "Post-effective amendment to a S-8 registration statement",
             "filingDate": 1748563200000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000095/thumbnail.png",
+            "formType": "S-8 POS"
+          },
+          {
+            "id": "0001326801-25-000094_1326801",
+            "type": "Offering Registrations",
+            "title": "S-8 POS : Offering Registrations",
+            "description": "Post-effective amendment to a S-8 registration statement",
+            "filingDate": 1748563200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000094/thumbnail.png",
             "formType": "S-8 POS"
           },
           {

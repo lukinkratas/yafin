@@ -7,6 +7,52 @@
             {
               "maxAge": 1,
               "shares": {
+                "raw": 3750,
+                "fmt": "3.75k",
+                "longFmt": "3,750"
+              },
+              "value": {
+                "raw": 0,
+                "fmt": null,
+                "longFmt": "0"
+              },
+              "filerUrl": "",
+              "transactionText": "Stock Gift at price 0.00 per share.",
+              "filerName": "ADAMS KATHERINE L",
+              "filerRelation": "General Counsel",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1762905600,
+                "fmt": "2025-11-12"
+              },
+              "ownership": "D"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
+                "raw": 3752,
+                "fmt": "3.75k",
+                "longFmt": "3,752"
+              },
+              "value": {
+                "raw": 1017655,
+                "fmt": "1.02M",
+                "longFmt": "1,017,655"
+              },
+              "filerUrl": "",
+              "transactionText": "Sale at price 271.23 per share.",
+              "filerName": "KONDO CHRISTOPHER",
+              "filerRelation": "Officer",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1762473600,
+                "fmt": "2025-11-07"
+              },
+              "ownership": "D"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
                 "raw": 4199,
                 "fmt": "4.2k",
                 "longFmt": "4,199"
@@ -66,19 +112,19 @@
             {
               "maxAge": 1,
               "shares": {
-                "raw": 129963,
-                "fmt": "129.96k",
-                "longFmt": "129,963"
+                "raw": 43013,
+                "fmt": "43.01k",
+                "longFmt": "43,013"
               },
               "value": {
-                "raw": 33375723,
-                "fmt": "33.38M",
-                "longFmt": "33,375,723"
+                "raw": 11071078,
+                "fmt": "11.07M",
+                "longFmt": "11,071,078"
               },
               "filerUrl": "",
-              "transactionText": "Sale at price 254.83 - 257.57 per share.",
-              "filerName": "COOK TIMOTHY D",
-              "filerRelation": "Chief Executive Officer",
+              "transactionText": "Sale at price 257.36 - 258.08 per share.",
+              "filerName": "O'BRIEN DEIRDRE",
+              "filerRelation": "Officer",
               "moneyText": "",
               "startDate": {
                 "raw": 1759363200,
@@ -112,59 +158,23 @@
             {
               "maxAge": 1,
               "shares": {
-                "raw": 43013,
-                "fmt": "43.01k",
-                "longFmt": "43,013"
+                "raw": 129963,
+                "fmt": "129.96k",
+                "longFmt": "129,963"
               },
               "value": {
-                "raw": 11071078,
-                "fmt": "11.07M",
-                "longFmt": "11,071,078"
+                "raw": 33375723,
+                "fmt": "33.38M",
+                "longFmt": "33,375,723"
               },
               "filerUrl": "",
-              "transactionText": "Sale at price 257.36 - 258.08 per share.",
-              "filerName": "O'BRIEN DEIRDRE",
-              "filerRelation": "Officer",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1759363200,
-                "fmt": "2025-10-02"
-              },
-              "ownership": "D"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
-                "raw": 277206,
-                "fmt": "277.21k",
-                "longFmt": "277,206"
-              },
-              "filerUrl": "",
-              "transactionText": "",
+              "transactionText": "Sale at price 254.83 - 257.57 per share.",
               "filerName": "COOK TIMOTHY D",
               "filerRelation": "Chief Executive Officer",
               "moneyText": "",
               "startDate": {
-                "raw": 1759276800,
-                "fmt": "2025-10-01"
-              },
-              "ownership": "D"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
-                "raw": 92403,
-                "fmt": "92.4k",
-                "longFmt": "92,403"
-              },
-              "filerUrl": "",
-              "transactionText": "",
-              "filerName": "ADAMS KATHERINE L",
-              "filerRelation": "General Counsel",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1759276800,
-                "fmt": "2025-10-01"
+                "raw": 1759363200,
+                "fmt": "2025-10-02"
               },
               "ownership": "D"
             },
@@ -197,6 +207,42 @@
               "transactionText": "",
               "filerName": "KHAN SABIH",
               "filerRelation": "Chief Operating Officer",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1759276800,
+                "fmt": "2025-10-01"
+              },
+              "ownership": "D"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
+                "raw": 92403,
+                "fmt": "92.4k",
+                "longFmt": "92,403"
+              },
+              "filerUrl": "",
+              "transactionText": "",
+              "filerName": "ADAMS KATHERINE L",
+              "filerRelation": "General Counsel",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1759276800,
+                "fmt": "2025-10-01"
+              },
+              "ownership": "D"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
+                "raw": 277206,
+                "fmt": "277.21k",
+                "longFmt": "277,206"
+              },
+              "filerUrl": "",
+              "transactionText": "",
+              "filerName": "COOK TIMOTHY D",
+              "filerRelation": "Chief Executive Officer",
               "moneyText": "",
               "startDate": {
                 "raw": 1759276800,
@@ -358,19 +404,19 @@
             {
               "maxAge": 1,
               "shares": {
-                "raw": 108136,
-                "fmt": "108.14k",
-                "longFmt": "108,136"
+                "raw": 35493,
+                "fmt": "35.49k",
+                "longFmt": "35,493"
               },
               "value": {
-                "raw": 24184658,
-                "fmt": "24.18M",
-                "longFmt": "24,184,658"
+                "raw": 7950691,
+                "fmt": "7.95M",
+                "longFmt": "7,950,691"
               },
               "filerUrl": "",
-              "transactionText": "Sale at price 221.77 - 224.76 per share.",
-              "filerName": "COOK TIMOTHY D",
-              "filerRelation": "Chief Executive Officer",
+              "transactionText": "Sale at price 223.48 - 225.03 per share.",
+              "filerName": "WILLIAMS JEFFREY E",
+              "filerRelation": "Chief Operating Officer",
               "moneyText": "",
               "startDate": {
                 "raw": 1743552000,
@@ -404,19 +450,19 @@
             {
               "maxAge": 1,
               "shares": {
-                "raw": 35493,
-                "fmt": "35.49k",
-                "longFmt": "35,493"
+                "raw": 108136,
+                "fmt": "108.14k",
+                "longFmt": "108,136"
               },
               "value": {
-                "raw": 7950691,
-                "fmt": "7.95M",
-                "longFmt": "7,950,691"
+                "raw": 24184658,
+                "fmt": "24.18M",
+                "longFmt": "24,184,658"
               },
               "filerUrl": "",
-              "transactionText": "Sale at price 223.48 - 225.03 per share.",
-              "filerName": "WILLIAMS JEFFREY E",
-              "filerRelation": "Chief Operating Officer",
+              "transactionText": "Sale at price 221.77 - 224.76 per share.",
+              "filerName": "COOK TIMOTHY D",
+              "filerRelation": "Chief Executive Officer",
               "moneyText": "",
               "startDate": {
                 "raw": 1743552000,
@@ -427,14 +473,32 @@
             {
               "maxAge": 1,
               "shares": {
-                "raw": 218568,
-                "fmt": "218.57k",
-                "longFmt": "218,568"
+                "raw": 74535,
+                "fmt": "74.53k",
+                "longFmt": "74,535"
               },
               "filerUrl": "",
               "transactionText": "",
-              "filerName": "COOK TIMOTHY D",
-              "filerRelation": "Chief Executive Officer",
+              "filerName": "O'BRIEN DEIRDRE",
+              "filerRelation": "Officer",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1743465600,
+                "fmt": "2025-04-01"
+              },
+              "ownership": "D"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
+                "raw": 74535,
+                "fmt": "74.53k",
+                "longFmt": "74,535"
+              },
+              "filerUrl": "",
+              "transactionText": "",
+              "filerName": "WILLIAMS JEFFREY E",
+              "filerRelation": "Chief Operating Officer",
               "moneyText": "",
               "startDate": {
                 "raw": 1743465600,
@@ -463,32 +527,14 @@
             {
               "maxAge": 1,
               "shares": {
-                "raw": 74535,
-                "fmt": "74.53k",
-                "longFmt": "74,535"
+                "raw": 218568,
+                "fmt": "218.57k",
+                "longFmt": "218,568"
               },
               "filerUrl": "",
               "transactionText": "",
-              "filerName": "WILLIAMS JEFFREY E",
-              "filerRelation": "Chief Operating Officer",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1743465600,
-                "fmt": "2025-04-01"
-              },
-              "ownership": "D"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
-                "raw": 74535,
-                "fmt": "74.53k",
-                "longFmt": "74,535"
-              },
-              "filerUrl": "",
-              "transactionText": "",
-              "filerName": "O'BRIEN DEIRDRE",
-              "filerRelation": "Officer",
+              "filerName": "COOK TIMOTHY D",
+              "filerRelation": "Chief Executive Officer",
               "moneyText": "",
               "startDate": {
                 "raw": 1743465600,
@@ -528,24 +574,6 @@
               },
               "filerUrl": "",
               "transactionText": "",
-              "filerName": "LEVINSON ARTHUR D",
-              "filerRelation": "Director",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1738281600,
-                "fmt": "2025-01-31"
-              },
-              "ownership": "D"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
-                "raw": 1516,
-                "fmt": "1.52k",
-                "longFmt": "1,516"
-              },
-              "filerUrl": "",
-              "transactionText": "",
               "filerName": "SUGAR RONALD D",
               "filerRelation": "Director",
               "moneyText": "",
@@ -564,7 +592,25 @@
               },
               "filerUrl": "",
               "transactionText": "",
-              "filerName": "WAGNER SUSAN L",
+              "filerName": "LEVINSON ARTHUR D",
+              "filerRelation": "Director",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1738281600,
+                "fmt": "2025-01-31"
+              },
+              "ownership": "D"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
+                "raw": 1516,
+                "fmt": "1.52k",
+                "longFmt": "1,516"
+              },
+              "filerUrl": "",
+              "transactionText": "",
+              "filerName": "AUSTIN WANDA M",
               "filerRelation": "Director",
               "moneyText": "",
               "startDate": {
@@ -600,7 +646,7 @@
               },
               "filerUrl": "",
               "transactionText": "",
-              "filerName": "LOZANO MONICA C.",
+              "filerName": "WAGNER SUSAN L",
               "filerRelation": "Director",
               "moneyText": "",
               "startDate": {
@@ -636,7 +682,7 @@
               },
               "filerUrl": "",
               "transactionText": "",
-              "filerName": "AUSTIN WANDA M",
+              "filerName": "LOZANO MONICA C.",
               "filerRelation": "Director",
               "moneyText": "",
               "startDate": {
@@ -781,42 +827,19 @@
             {
               "maxAge": 1,
               "shares": {
-                "raw": 223986,
-                "fmt": "223.99k",
-                "longFmt": "223,986"
-              },
-              "value": {
-                "raw": 50276355,
-                "fmt": "50.28M",
-                "longFmt": "50,276,355"
-              },
-              "filerUrl": "",
-              "transactionText": "Sale at price 223.75 - 226.57 per share.",
-              "filerName": "COOK TIMOTHY D",
-              "filerRelation": "Chief Executive Officer",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1727827200,
-                "fmt": "2024-10-02"
-              },
-              "ownership": "D"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
                 "raw": 61019,
                 "fmt": "61.02k",
                 "longFmt": "61,019"
               },
               "value": {
-                "raw": 13802297,
-                "fmt": "13.8M",
-                "longFmt": "13,802,297"
+                "raw": 13843382,
+                "fmt": "13.84M",
+                "longFmt": "13,843,382"
               },
               "filerUrl": "",
-              "transactionText": "Sale at price 223.79 - 227.24 per share.",
-              "filerName": "ADAMS KATHERINE L",
-              "filerRelation": "General Counsel",
+              "transactionText": "Sale at price 226.72 - 227.13 per share.",
+              "filerName": "O'BRIEN DEIRDRE",
+              "filerRelation": "Officer",
               "moneyText": "",
               "startDate": {
                 "raw": 1727827200,
@@ -855,14 +878,14 @@
                 "longFmt": "61,019"
               },
               "value": {
-                "raw": 13843382,
-                "fmt": "13.84M",
-                "longFmt": "13,843,382"
+                "raw": 13802297,
+                "fmt": "13.8M",
+                "longFmt": "13,802,297"
               },
               "filerUrl": "",
-              "transactionText": "Sale at price 226.72 - 227.13 per share.",
-              "filerName": "O'BRIEN DEIRDRE",
-              "filerRelation": "Officer",
+              "transactionText": "Sale at price 223.79 - 227.24 per share.",
+              "filerName": "ADAMS KATHERINE L",
+              "filerRelation": "General Counsel",
               "moneyText": "",
               "startDate": {
                 "raw": 1727827200,
@@ -873,14 +896,55 @@
             {
               "maxAge": 1,
               "shares": {
-                "raw": 477301,
-                "fmt": "477.3k",
-                "longFmt": "477,301"
+                "raw": 223986,
+                "fmt": "223.99k",
+                "longFmt": "223,986"
+              },
+              "value": {
+                "raw": 50276355,
+                "fmt": "50.28M",
+                "longFmt": "50,276,355"
+              },
+              "filerUrl": "",
+              "transactionText": "Sale at price 223.75 - 226.57 per share.",
+              "filerName": "COOK TIMOTHY D",
+              "filerRelation": "Chief Executive Officer",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1727827200,
+                "fmt": "2024-10-02"
+              },
+              "ownership": "D"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
+                "raw": 127282,
+                "fmt": "127.28k",
+                "longFmt": "127,282"
               },
               "filerUrl": "",
               "transactionText": "",
-              "filerName": "COOK TIMOTHY D",
-              "filerRelation": "Chief Executive Officer",
+              "filerName": "O'BRIEN DEIRDRE",
+              "filerRelation": "Officer",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1727740800,
+                "fmt": "2024-10-01"
+              },
+              "ownership": "D"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
+                "raw": 127282,
+                "fmt": "127.28k",
+                "longFmt": "127,282"
+              },
+              "filerUrl": "",
+              "transactionText": "",
+              "filerName": "MAESTRI LUCA",
+              "filerRelation": "Chief Financial Officer",
               "moneyText": "",
               "startDate": {
                 "raw": 1727740800,
@@ -927,32 +991,14 @@
             {
               "maxAge": 1,
               "shares": {
-                "raw": 127282,
-                "fmt": "127.28k",
-                "longFmt": "127,282"
+                "raw": 477301,
+                "fmt": "477.3k",
+                "longFmt": "477,301"
               },
               "filerUrl": "",
               "transactionText": "",
-              "filerName": "MAESTRI LUCA",
-              "filerRelation": "Chief Financial Officer",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1727740800,
-                "fmt": "2024-10-01"
-              },
-              "ownership": "D"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
-                "raw": 127282,
-                "fmt": "127.28k",
-                "longFmt": "127,282"
-              },
-              "filerUrl": "",
-              "transactionText": "",
-              "filerName": "O'BRIEN DEIRDRE",
-              "filerRelation": "Officer",
+              "filerName": "COOK TIMOTHY D",
+              "filerRelation": "Chief Executive Officer",
               "moneyText": "",
               "startDate": {
                 "raw": 1727740800,
@@ -1142,29 +1188,6 @@
             {
               "maxAge": 1,
               "shares": {
-                "raw": 59162,
-                "fmt": "59.16k",
-                "longFmt": "59,162"
-              },
-              "value": {
-                "raw": 10188880,
-                "fmt": "10.19M",
-                "longFmt": "10,188,880"
-              },
-              "filerUrl": "",
-              "transactionText": "Sale at price 172.22 per share.",
-              "filerName": "WILLIAMS JEFFREY E",
-              "filerRelation": "Chief Operating Officer",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1712793600,
-                "fmt": "2024-04-11"
-              },
-              "ownership": "I"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
                 "raw": 53194,
                 "fmt": "53.19k",
                 "longFmt": "53,194"
@@ -1188,19 +1211,42 @@
             {
               "maxAge": 1,
               "shares": {
-                "raw": 196410,
-                "fmt": "196.41k",
-                "longFmt": "196,410"
+                "raw": 59162,
+                "fmt": "59.16k",
+                "longFmt": "59,162"
               },
               "value": {
-                "raw": 33258614,
-                "fmt": "33.26M",
-                "longFmt": "33,258,614"
+                "raw": 10188880,
+                "fmt": "10.19M",
+                "longFmt": "10,188,880"
               },
               "filerUrl": "",
-              "transactionText": "Sale at price 168.62 - 170.03 per share.",
-              "filerName": "COOK TIMOTHY D",
-              "filerRelation": "Chief Executive Officer",
+              "transactionText": "Sale at price 172.22 per share.",
+              "filerName": "WILLIAMS JEFFREY E",
+              "filerRelation": "Chief Operating Officer",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1712793600,
+                "fmt": "2024-04-11"
+              },
+              "ownership": "I"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
+                "raw": 54732,
+                "fmt": "54.73k",
+                "longFmt": "54,732"
+              },
+              "value": {
+                "raw": 9244782,
+                "fmt": "9.24M",
+                "longFmt": "9,244,782"
+              },
+              "filerUrl": "",
+              "transactionText": "Sale at price 168.91 per share.",
+              "filerName": "O'BRIEN DEIRDRE",
+              "filerRelation": "Officer",
               "moneyText": "",
               "startDate": {
                 "raw": 1712016000,
@@ -1234,19 +1280,19 @@
             {
               "maxAge": 1,
               "shares": {
-                "raw": 54732,
-                "fmt": "54.73k",
-                "longFmt": "54,732"
+                "raw": 196410,
+                "fmt": "196.41k",
+                "longFmt": "196,410"
               },
               "value": {
-                "raw": 9244782,
-                "fmt": "9.24M",
-                "longFmt": "9,244,782"
+                "raw": 33258614,
+                "fmt": "33.26M",
+                "longFmt": "33,258,614"
               },
               "filerUrl": "",
-              "transactionText": "Sale at price 168.91 per share.",
-              "filerName": "O'BRIEN DEIRDRE",
-              "filerRelation": "Officer",
+              "transactionText": "Sale at price 168.62 - 170.03 per share.",
+              "filerName": "COOK TIMOTHY D",
+              "filerRelation": "Chief Executive Officer",
               "moneyText": "",
               "startDate": {
                 "raw": 1712016000,
@@ -1257,14 +1303,14 @@
             {
               "maxAge": 1,
               "shares": {
-                "raw": 196410,
-                "fmt": "196.41k",
-                "longFmt": "196,410"
+                "raw": 113309,
+                "fmt": "113.31k",
+                "longFmt": "113,309"
               },
               "filerUrl": "",
               "transactionText": "",
-              "filerName": "COOK TIMOTHY D",
-              "filerRelation": "Chief Executive Officer",
+              "filerName": "O'BRIEN DEIRDRE",
+              "filerRelation": "Officer",
               "moneyText": "",
               "startDate": {
                 "raw": 1711929600,
@@ -1281,8 +1327,8 @@
               },
               "filerUrl": "",
               "transactionText": "",
-              "filerName": "ADAMS KATHERINE L",
-              "filerRelation": "General Counsel",
+              "filerName": "MAESTRI LUCA",
+              "filerRelation": "Chief Financial Officer",
               "moneyText": "",
               "startDate": {
                 "raw": 1711929600,
@@ -1317,8 +1363,8 @@
               },
               "filerUrl": "",
               "transactionText": "",
-              "filerName": "MAESTRI LUCA",
-              "filerRelation": "Chief Financial Officer",
+              "filerName": "ADAMS KATHERINE L",
+              "filerRelation": "General Counsel",
               "moneyText": "",
               "startDate": {
                 "raw": 1711929600,
@@ -1329,14 +1375,14 @@
             {
               "maxAge": 1,
               "shares": {
-                "raw": 113309,
-                "fmt": "113.31k",
-                "longFmt": "113,309"
+                "raw": 196410,
+                "fmt": "196.41k",
+                "longFmt": "196,410"
               },
               "filerUrl": "",
               "transactionText": "",
-              "filerName": "O'BRIEN DEIRDRE",
-              "filerRelation": "Officer",
+              "filerName": "COOK TIMOTHY D",
+              "filerRelation": "Chief Executive Officer",
               "moneyText": "",
               "startDate": {
                 "raw": 1711929600,
@@ -1376,6 +1422,24 @@
               },
               "filerUrl": "",
               "transactionText": "",
+              "filerName": "SUGAR RONALD D",
+              "filerRelation": "Director",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1706745600,
+                "fmt": "2024-02-01"
+              },
+              "ownership": "D"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
+                "raw": 1852,
+                "fmt": "1.85k",
+                "longFmt": "1,852"
+              },
+              "filerUrl": "",
+              "transactionText": "",
               "filerName": "LEVINSON ARTHUR D",
               "filerRelation": "Director",
               "moneyText": "",
@@ -1394,7 +1458,7 @@
               },
               "filerUrl": "",
               "transactionText": "",
-              "filerName": "SUGAR RONALD D",
+              "filerName": "JUNG ANDREA",
               "filerRelation": "Director",
               "moneyText": "",
               "startDate": {
@@ -1430,7 +1494,7 @@
               },
               "filerUrl": "",
               "transactionText": "",
-              "filerName": "JUNG ANDREA",
+              "filerName": "GORSKY ALEX",
               "filerRelation": "Director",
               "moneyText": "",
               "startDate": {
@@ -1496,24 +1560,6 @@
             {
               "maxAge": 1,
               "shares": {
-                "raw": 1852,
-                "fmt": "1.85k",
-                "longFmt": "1,852"
-              },
-              "filerUrl": "",
-              "transactionText": "",
-              "filerName": "GORSKY ALEX",
-              "filerRelation": "Director",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1706745600,
-                "fmt": "2024-02-01"
-              },
-              "ownership": "D"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
                 "raw": 5513,
                 "fmt": "5.51k",
                 "longFmt": "5,513"
@@ -1531,52 +1577,6 @@
               "startDate": {
                 "raw": 1701216000,
                 "fmt": "2023-11-29"
-              },
-              "ownership": "D"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
-                "raw": 123448,
-                "fmt": "123.45k",
-                "longFmt": "123,448"
-              },
-              "value": {
-                "raw": 23305748,
-                "fmt": "23.31M",
-                "longFmt": "23,305,748"
-              },
-              "filerUrl": "",
-              "transactionText": "Sale at price 188.79 per share.",
-              "filerName": "ADAMS KATHERINE L",
-              "filerRelation": "General Counsel",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1700179200,
-                "fmt": "2023-11-17"
-              },
-              "ownership": "I"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
-                "raw": 123448,
-                "fmt": "123.45k",
-                "longFmt": "123,448"
-              },
-              "value": {
-                "raw": 0,
-                "fmt": null,
-                "longFmt": "0"
-              },
-              "filerUrl": "",
-              "transactionText": "Stock Gift at price 0.00 per share.",
-              "filerName": "ADAMS KATHERINE L",
-              "filerRelation": "General Counsel",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1700092800,
-                "fmt": "2023-11-16"
               },
               "ownership": "D"
             }
