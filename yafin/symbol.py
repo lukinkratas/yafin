@@ -242,9 +242,8 @@ class Symbol(SymbolBase):
         Returns: Chart response result json.
 
         Note:
-            period_range:
-                Even though the the endpoint param name is range, period_range was
-                chosen to avoid collision with python built-in method name.
+            Even though the the endpoint param is called range, period_range was chosen
+            to avoid collision with python built-in method name.
         """
         kwargs: dict[str, Any] = {'ticker': self.ticker, 'interval': interval}
 
@@ -747,9 +746,7 @@ class AsyncSymbol(SymbolBase):
 
         Args:
             interval: Data interval.
-            period_range:
-                Range of the period. (Not named range due to collision with python
-                built-in method name)
+            period_range: Range of the period.
             period1: Start timestamp in seconds. (optional, default: None)
             period2: End timestamp in seconds. (optional, default: None)
             include_div: Whether to include dividends.
@@ -758,6 +755,10 @@ class AsyncSymbol(SymbolBase):
             include_capital_gain: Whether to include capital gains.
 
         Returns: Chart response result json.
+
+        Note:
+            Even though the the endpoint param is called range, period_range was chosen
+            to avoid collision with python built-in method name.
         """
         kwargs: dict[str, Any] = {'ticker': self.ticker, 'interval': interval}
 

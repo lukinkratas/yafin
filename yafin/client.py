@@ -272,9 +272,8 @@ class Client(ClientBase):
                 list of valid values.
 
         Note:
-            period_range:
-                Even though the the endpoint param name is range, period_range was
-                chosen to avoid collision with python built-in method name.
+            Even though the the endpoint param is called range, period_range was chosen
+            to avoid collision with python built-in method name.
         """
         logger.debug(
             f'Getting finance/chart for {ticker=}, '
@@ -732,9 +731,7 @@ class AsyncClient(ClientBase):
         Args:
             ticker: Ticker symbol.
             interval: Data interval.
-            period_range:
-                Range of the period. (Not named range due to collision with python
-                built-in method name)
+            period_range: Range of the period.
             period1: Start timestamp in seconds. (optional, default: None)
             period2: End timestamp in seconds. (optional, default: None)
             events: Comma-separated events to include.
@@ -744,6 +741,10 @@ class AsyncClient(ClientBase):
         Raises:
             ValueError: If any of period_range, interval or parsed_events are not in
                 list of valid values.
+
+        Note:
+            Even though the the endpoint param is called range, period_range was chosen
+            to avoid collision with python built-in method name.
         """
         logger.debug(
             f'Getting finance/chart for {ticker=}, '

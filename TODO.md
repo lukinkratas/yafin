@@ -1,9 +1,10 @@
 ## TODO
 
-- [ ] performance tests for all other endpoints
-- [ ] multi symbols support
 - [ ] publish to pypi test
 - [ ] publish
+
+- [ ] performance tests for all other endpoints
+- [ ] multi symbols support
 
 - ~~[z] timezone~~
 - ~~[x] sync + async fixtures, e.g. chart interval, period_range~~

@@ -122,6 +122,8 @@ class TestUnitClient:
         mocker: MockerFixture,
         chart_json_mock: dict[str, Any],
         ticker: str,
+        interval: str,
+        period_range: str | None,
     ) -> None:
         """Test _get_request method."""
         _mock_response(
@@ -133,15 +135,21 @@ class TestUnitClient:
             client._DEFAULT_PARAMS
             | client._CHART_PARAMS
             | {
-                'range': '1y',
-                'interval': '1d',
+                'range': period_range,
+                'interval': interval,
                 'events': 'div,split',
             }
         )
         response = client._get_request(client._CHART_URL.format(ticker=ticker), params)
         assert response
 
-    def test_get_request_http_err(self, client: Client, mocker: MockerFixture) -> None:
+    def test_get_request_http_err(
+        self,
+        client: Client,
+        mocker: MockerFixture,
+        interval: str,
+        period_range: str | None,
+    ) -> None:
         """Test _get_request method."""
         _mock_response(
             mocker,
@@ -161,8 +169,8 @@ class TestUnitClient:
             client._DEFAULT_PARAMS
             | client._CHART_PARAMS
             | {
-                'range': '1y',
-                'interval': '1d',
+                'range': period_range,
+                'interval': interval,
                 'events': 'div,split',
             }
         )
