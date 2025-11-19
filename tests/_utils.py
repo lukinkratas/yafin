@@ -1,11 +1,12 @@
 import json
 import pathlib
 from typing import Any
+from zoneinfo import ZoneInfo
+
 import pandas as pd
 from curl_cffi.requests import Response
 from curl_cffi.requests.exceptions import HTTPError
 from pytest_mock import MockerFixture
-from zoneinfo import ZoneInfo
 
 FIXTURE_PATH = pathlib.Path(__file__).resolve().parent.joinpath('fixtures')
 
