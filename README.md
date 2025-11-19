@@ -13,9 +13,9 @@ Unofficial [Yahoo!Ⓡ finance](https://finance.yahoo.com) API client.
 
 ![test-perf](docs/test-perf.png)
 
-**Installation**: `pip install yafin` for more details, see the [Documentation](https://lukinkratas.github.io/yafin/)
-
 **Documentation and Examples**: [https://lukinkratas.github.io/yafin/](https://lukinkratas.github.io/yafin/)
+
+**Installation**: `pip install yafin` for more details, see the [Documentation](https://lukinkratas.github.io/yafin/)
 
 **Quick Example**: for more details, see the [Examples](https://lukinkratas.github.io/yafin/examples/symbol/) section in documentation.
 

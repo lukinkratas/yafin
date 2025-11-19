@@ -1,11 +1,11 @@
 ## TODO
 
-- [ ] sync + async fixtures, e.g. chart interval, period_range
 - [ ] timezone
 - [ ] multi symbols support
 - [ ] publish to pypi test
 - [ ] publish
 
+- ~~[x] sync + async fixtures, e.g. chart interval, period_range~~
 - ~~[x] urls class attrs?~~
 - ~~[x] pytest-benchmark sync symbol vs yfinance~~
 - ~~[x] _CHART_KWARGS class attr?~~
