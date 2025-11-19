@@ -51,22 +51,22 @@
               "url": "",
               "transactionDescription": "Sale",
               "latestTransDate": {
-                "raw": 1755475200,
-                "fmt": "2025-08-18"
+                "raw": 1763078400,
+                "fmt": "2025-11-14"
               },
               "positionDirect": {
-                "raw": 68128,
-                "fmt": "68.13k",
-                "longFmt": "68,128"
+                "raw": 80434,
+                "fmt": "80.43k",
+                "longFmt": "80,434"
               },
               "positionDirectDate": {
-                "raw": 1755475200,
-                "fmt": "2025-08-18"
+                "raw": 1763078400,
+                "fmt": "2025-11-14"
               }
             },
             {
               "maxAge": 1,
-              "name": "COLLISON PATRICK",
+              "name": "ELKANN JOHN PHILIPP",
               "relation": "Director",
               "url": "",
               "transactionDescription": "Conversion of Exercise of derivative security",
@@ -75,9 +75,9 @@
                 "fmt": "2025-08-15"
               },
               "positionDirect": {
-                "raw": 155,
-                "fmt": "155",
-                "longFmt": "155"
+                "raw": 502,
+                "fmt": "502",
+                "longFmt": "502"
               },
               "positionDirectDate": {
                 "raw": 1755216000,
@@ -111,17 +111,17 @@
               "url": "",
               "transactionDescription": "Sale",
               "latestTransDate": {
-                "raw": 1755475200,
-                "fmt": "2025-08-18"
+                "raw": 1763078400,
+                "fmt": "2025-11-14"
               },
               "positionIndirect": {
-                "raw": 107129,
-                "fmt": "107.13k",
-                "longFmt": "107,129"
+                "raw": 125459,
+                "fmt": "125.46k",
+                "longFmt": "125,459"
               },
               "positionIndirectDate": {
-                "raw": 1755475200,
-                "fmt": "2025-08-18"
+                "raw": 1763078400,
+                "fmt": "2025-11-14"
               }
             },
             {
@@ -151,22 +151,22 @@
               "url": "",
               "transactionDescription": "Sale",
               "latestTransDate": {
-                "raw": 1762732800,
-                "fmt": "2025-11-10"
+                "raw": 1763337600,
+                "fmt": "2025-11-17"
               },
               "positionDirect": {
-                "raw": 117660,
-                "fmt": "117.66k",
-                "longFmt": "117,660"
+                "raw": 126038,
+                "fmt": "126.04k",
+                "longFmt": "126,038"
               },
               "positionDirectDate": {
-                "raw": 1762732800,
-                "fmt": "2025-11-10"
+                "raw": 1763337600,
+                "fmt": "2025-11-17"
               }
             },
             {
               "maxAge": 1,
-              "name": "XU TONY",
+              "name": "TAN HOCK E",
               "relation": "Director",
               "url": "",
               "transactionDescription": "Conversion of Exercise of derivative security",
@@ -175,9 +175,9 @@
                 "fmt": "2025-08-15"
               },
               "positionDirect": {
-                "raw": 7291,
-                "fmt": "7.29k",
-                "longFmt": "7,291"
+                "raw": 2061,
+                "fmt": "2.06k",
+                "longFmt": "2,061"
               },
               "positionDirectDate": {
                 "raw": 1755216000,

@@ -109,7 +109,7 @@
         },
         "events": [
           {
-            "eventType": "Williams %R",
+            "eventType": "Price Crosses Moving Average",
             "pricePeriod": "D",
             "tradingHorizon": "S",
             "tradeType": "S",

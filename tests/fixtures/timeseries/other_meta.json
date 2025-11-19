@@ -5927,7 +5927,7 @@
             "META"
           ],
           "type": [
-            "corporateAnalystMeeting"
+            "conferencePresentation"
           ]
         }
       },
@@ -5937,7 +5937,17 @@
             "META"
           ],
           "type": [
-            "conferencePresentation"
+            "earningsConferenceCallEvents"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "corporateAnalystMeeting"
           ]
         }
       },
@@ -5967,16 +5977,6 @@
             "META"
           ],
           "type": [
-            "otherCorporate"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
             "corporateConferenceCallEvents"
           ]
         }
@@ -5987,7 +5987,7 @@
             "META"
           ],
           "type": [
-            "earningsConferenceCallEvents"
+            "conferenceEvents"
           ]
         }
       },
@@ -5997,7 +5997,7 @@
             "META"
           ],
           "type": [
-            "conferenceEvents"
+            "otherCorporate"
           ]
         }
       }

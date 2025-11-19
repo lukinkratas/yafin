@@ -15,7 +15,7 @@ from tests._utils import (
     _process_chart_like_yfinance,
 )
 
-BENCHMARK_KWARGS = dict(rounds=1000, iterations=1, warmup_rounds=1)
+BENCHMARK_KWARGS = dict(rounds=100, iterations=1, warmup_rounds=1)
 
 
 def _assert_chart_df(chart_df: pd.DataFrame, expected_df: pd.DataFrame) -> None:

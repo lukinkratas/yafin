@@ -5,7 +5,6 @@ from functools import lru_cache
 from time import sleep
 from types import TracebackType
 from typing import Any, Self, Type
-from zoneinfo import ZoneInfo
 
 from async_lru import alru_cache
 from curl_cffi import AsyncSession, Response, Session
@@ -416,12 +415,12 @@ class Client(ClientBase):
         )
 
         if period1 is None:
-            period1 = datetime(2020, 1, 1, tzinfo=ZoneInfo('UTC')).timestamp()
+            period1 = datetime(2020, 1, 1).astimezone().timestamp()
 
         params['period1'] = int(period1)
 
         if period2 is None:
-            period2 = datetime.now(tz=ZoneInfo('UTC')).timestamp()
+            period2 = datetime.now().astimezone().timestamp()
 
         params['period2'] = int(period2)
 
@@ -581,7 +580,7 @@ class Client(ClientBase):
             params['modules'] = ','.join(parsed_modules)
 
         if end_date is None:
-            end_date = datetime.now(tz=ZoneInfo('UTC')).timestamp() * 1000
+            end_date = datetime.now().astimezone().timestamp() * 1000
 
         params['endDate'] = int(end_date)
 
@@ -889,12 +888,12 @@ class AsyncClient(ClientBase):
         )
 
         if period1 is None:
-            period1 = datetime(2020, 1, 1, tzinfo=ZoneInfo('UTC')).timestamp()
+            period1 = datetime(2020, 1, 1).astimezone().timestamp()
 
         params['period1'] = int(period1)
 
         if period2 is None:
-            period2 = datetime.now(tz=ZoneInfo('UTC')).timestamp()
+            period2 = datetime.now().astimezone().timestamp()
 
         params['period2'] = int(period2)
 
@@ -1060,7 +1059,7 @@ class AsyncClient(ClientBase):
             params['modules'] = ','.join(parsed_modules)
 
         if end_date is None:
-            end_date = datetime.now(tz=ZoneInfo('UTC')).timestamp() * 1000
+            end_date = datetime.now().astimezone().timestamp() * 1000
 
         params['endDate'] = int(end_date)
 

@@ -1,11 +1,11 @@
 import json
 import pathlib
 from typing import Any
-
 import pandas as pd
 from curl_cffi.requests import Response
 from curl_cffi.requests.exceptions import HTTPError
 from pytest_mock import MockerFixture
+from zoneinfo import ZoneInfo
 
 FIXTURE_PATH = pathlib.Path(__file__).resolve().parent.joinpath('fixtures')
 
@@ -53,10 +53,11 @@ def _mock_response(
     mocker.patch(patched_method, new=mock_class(return_value=mock_response))
 
 
-def _process_chart_like_yfinance(chart: dict[str, Any]) -> pd.DataFrame:
+def _process_chart_like_yfinance(chart_result: dict[str, Any]) -> pd.DataFrame:
     """Process chart response json into pandas dataframe, exact as yfinance."""
-    timestamps = chart['timestamp']
-    ohlcvs = chart['indicators']['quote'][0]
+    tz_info = ZoneInfo(chart_result['meta']['exchangeTimezoneName'])
+    timestamps = chart_result['timestamp']
+    ohlcvs = chart_result['indicators']['quote'][0]
     # adjcloses = chart['indicators']['adjclose'][0]['adjclose']
 
     chart_df = pd.DataFrame({**ohlcvs}, index=timestamps).rename(
@@ -69,11 +70,10 @@ def _process_chart_like_yfinance(chart: dict[str, Any]) -> pd.DataFrame:
         }
     )
 
-    tz = '-01:00'
-    chart_df['Date'] = pd.to_datetime(chart_df.index.values, unit='s', utc=True)
-    chart_df['Date'] = chart_df['Date'].dt.tz_convert(tz)
+    chart_df['Date'] = pd.to_datetime(chart_df.index.to_list(), unit='s', utc=True)
+    chart_df['Date'] = chart_df['Date'].dt.tz_convert(tz_info)
 
-    dividends = chart['events'].get('dividends')
+    dividends = chart_result['events'].get('dividends')
     dividends_df = (
         pd.DataFrame(
             dividends.values() if dividends is not None else {'date': [], 'amount': []}
@@ -83,7 +83,7 @@ def _process_chart_like_yfinance(chart: dict[str, Any]) -> pd.DataFrame:
     )
     chart_df = chart_df.join(dividends_df).fillna(value={'Dividends': 0})
 
-    splits = chart['events'].get('splits')
+    splits = chart_result['events'].get('splits')
     splits_df = (
         pd.DataFrame(
             splits.values() if splits is not None else {'date': [], 'numerator': []}

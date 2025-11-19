@@ -8,7 +8,7 @@
       "quoteType": "EQUITY",
       "symbol": "META",
       "index": "quotes",
-      "score": 12002000.0,
+      "score": 12114500.0,
       "typeDisp": "Equity",
       "longname": "Meta Platforms, Inc.",
       "exchDisp": "NASDAQ",
@@ -27,7 +27,7 @@
       "quoteType": "EQUITY",
       "symbol": "AAPL",
       "index": "quotes",
-      "score": 17906000.0,
+      "score": 18153500.0,
       "typeDisp": "Equity",
       "longname": "Apple Inc.",
       "exchDisp": "NASDAQ",
@@ -39,6 +39,186 @@
     }
   ],
   "news": [
+    {
+      "uuid": "6ba3b1dc-ca76-3678-944d-71e0250a5d36",
+      "title": "Elon Musk Says 'I'm Down' For xAI-Apple Collaboration Amid Bezos-Backed Project Prometheus Buzz",
+      "publisher": "Benzinga",
+      "link": "https://finance.yahoo.com/news/elon-musk-says-im-down-104543595.html",
+      "providerPublishTime": 1763549143,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/vzfsMGosN_pwXrX_jRm4FQ--~B/aD00ODA7dz03MjA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/benzinga_79/68ab8bff3c7445c8d524e63278930896",
+            "width": 720,
+            "height": 480,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/P5T_0zO7.7DqwyY3gfZXEA--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/benzinga_79/68ab8bff3c7445c8d524e63278930896",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "AAPL",
+        "XAAI.PVT"
+      ]
+    },
+    {
+      "uuid": "c0dbfbfd-d7db-36df-8191-260bdae2423d",
+      "title": "Cantor Fitzgerald Adjusts Price Target on Meta Platforms to $720 From $830, Maintains Overweight Rating",
+      "publisher": "MT Newswires",
+      "link": "https://finance.yahoo.com/news/cantor-fitzgerald-adjusts-price-target-103116209.html",
+      "providerPublishTime": 1763548276,
+      "type": "STORY",
+      "relatedTickers": [
+        "META"
+      ]
+    },
+    {
+      "uuid": "dfb3d6c6-da8e-38e2-acf2-5e176e50baeb",
+      "title": "Rotation From Tech Leads Investors to Dividend-Paying Stocks",
+      "publisher": "Bloomberg",
+      "link": "https://finance.yahoo.com/news/rotation-tech-leads-investors-dividend-103000212.html",
+      "providerPublishTime": 1763548200,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/.GH7N0uV1fnsDqDjcaUW9g--~B/aD05MjI7dz0xMzg0O2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/bloomberg_holding_pen_162/2fa537d3a4ec62affe4cb2002dd98daf",
+            "width": 1384,
+            "height": 922,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/4CM4Oq.h0z0VoaAvBGGxww--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/bloomberg_holding_pen_162/2fa537d3a4ec62affe4cb2002dd98daf",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "XOM",
+        "ORCL",
+        "AMZN",
+        "^NDX",
+        "META",
+        "JPM",
+        "PG"
+      ]
+    },
+    {
+      "uuid": "2831b044-62a7-3ce3-8095-4ff7b8a5be99",
+      "title": "Meet the Ultra-Low-Cost Vanguard ETF That Has 53% of Its Holdings in Tech Giants Like the \"Magnificent Seven\" Stocks",
+      "publisher": "Motley Fool",
+      "link": "https://finance.yahoo.com/m/2831b044-62a7-3ce3-8095-4ff7b8a5be99/meet-the-ultra-low-cost.html",
+      "providerPublishTime": 1763547300,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/HL2qpZUhUiZLKg.1nOFtQQ--~B/aD05MzM7dz0xNDAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/4ba60cc57bbb8074c81b2d50482baebb",
+            "width": 1400,
+            "height": 933,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/oV1fQbSdShfhjeJeY5vdPw--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/4ba60cc57bbb8074c81b2d50482baebb",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "VUG",
+        "^SPX",
+        "META",
+        "TSLA",
+        "NVDA",
+        "MSFT",
+        "AAPL",
+        "GOOGL",
+        "AMZN"
+      ]
+    },
+    {
+      "uuid": "43705197-970e-3449-b22c-c04a1258c65c",
+      "title": "Nvidia Takes On an Unfamiliar Role\u2014Weighing Down the Stock Market",
+      "publisher": "The Wall Street Journal",
+      "link": "https://finance.yahoo.com/m/43705197-970e-3449-b22c-c04a1258c65c/nvidia-takes-on-an-unfamiliar.html",
+      "providerPublishTime": 1763546403,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/Fwf5HL4GsEGPbDfR3MJBPg--~B/aD02MzA7dz0xMjAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/wsj.com/7b2c285183be07ca3c4e8242b25a59a8",
+            "width": 1200,
+            "height": 630,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/zIJaagDuCJitt1Cvcwyc7A--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/wsj.com/7b2c285183be07ca3c4e8242b25a59a8",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "NVDA",
+        "^SPX",
+        "^IXIC",
+        "SMCI",
+        "DELL",
+        "META",
+        "ORCL"
+      ]
+    },
+    {
+      "uuid": "f1464926-ebde-3c86-b882-73736e4d8e2f",
+      "title": "Meta Platforms Insider Sold Shares Worth $3,085,696, According to a Recent SEC Filing",
+      "publisher": "MT Newswires",
+      "link": "https://finance.yahoo.com/news/meta-platforms-insider-sold-shares-090420801.html",
+      "providerPublishTime": 1763543060,
+      "type": "STORY",
+      "relatedTickers": [
+        "META"
+      ]
+    },
+    {
+      "uuid": "ba3ab7b1-4172-3be5-a342-876654103317",
+      "title": "TAHO Raises $3.5 Million Seed Round to Redefine Compute Infrastructure for the AI Era",
+      "publisher": "GlobeNewswire",
+      "link": "https://finance.yahoo.com/news/taho-raises-3-5-million-090000751.html",
+      "providerPublishTime": 1763542800,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/clRvWeQ_bEX1jStgIWWB7Q--~B/aD00NzU7dz0xNDI2O2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/globenewswire.com/1539f1b44e8142c960ec7c33b726a359",
+            "width": 1426,
+            "height": 475,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/VEtYSKQ3G88gjE7fXZpuhw--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/globenewswire.com/1539f1b44e8142c960ec7c33b726a359",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "META",
+        "GOOGL",
+        "SNAP"
+      ]
+    },
     {
       "uuid": "a30741eb-8a55-3223-83a4-a42d94509261",
       "title": "Meta wins historic FTC antitrust trial focused on WhatsApp, Instagram",
@@ -65,229 +245,6 @@
       "relatedTickers": [
         "META",
         "GOOGL"
-      ]
-    },
-    {
-      "uuid": "57e06870-1187-395a-bc0f-bea8ef30eb3f",
-      "title": "Stocks struggle as Nvidia takes centre stage amid AI bubble fears",
-      "publisher": "AFP",
-      "link": "https://finance.yahoo.com/news/asian-markets-bounce-nvidia-takes-025415956.html",
-      "providerPublishTime": 1763540668,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/XGcIZs8oh5C8XvnjiSMjEw--~B/aD01MTI7dz03Njg7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/afp.com/d1e64b5a8a03f94b9c64e820ce99006e",
-            "width": 768,
-            "height": 512,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/vYN1Kax6h4wZhVoa4rEiiQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/afp.com/d1e64b5a8a03f94b9c64e820ce99006e",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "NVDA",
-        "AMZN",
-        "META",
-        "GOOGL",
-        "AAPL"
-      ]
-    },
-    {
-      "uuid": "1deec21f-a0c8-3bd7-ad89-07a80a8f5620",
-      "title": "Meta (META): Is the Valuation Right After Recent Momentum Slows?",
-      "publisher": "Simply Wall St.",
-      "link": "https://finance.yahoo.com/news/meta-meta-valuation-recent-momentum-081419325.html",
-      "providerPublishTime": 1763540059,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/BrUhbDoJKeNJUavlZ7MvVQ--~B/aD00MzI7dz0xMTk0O2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/simply_wall_st__316/fba9687e0054b528b01bdfa6c56cd20c",
-            "width": 1194,
-            "height": 432,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/ugpo6zQdWTcUD0neJdvYVQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/simply_wall_st__316/fba9687e0054b528b01bdfa6c56cd20c",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "META"
-      ]
-    },
-    {
-      "uuid": "b3ff695c-4f19-34c1-8743-0f3850080ca7",
-      "title": "Zacks Investment Ideas feature highlights: Taiwan Semiconductor, Nvidia, Apple and Vertiv",
-      "publisher": "Zacks",
-      "link": "https://finance.yahoo.com/news/zacks-investment-ideas-feature-highlights-072800348.html",
-      "providerPublishTime": 1763537280,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/mYQcKrBErD723LN8P5V9xQ--~B/aD00MDA7dz02MzU7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/zacks.com/d87cc8e5693753ce8e232e0a527e4885",
-            "width": 635,
-            "height": 400,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/4sRxY11S5IcQIY38NXtlew--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/zacks.com/d87cc8e5693753ce8e232e0a527e4885",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "NVDA",
-        "TSM",
-        "TSMWF",
-        "VRT",
-        "AAPL",
-        "2330.TW"
-      ]
-    },
-    {
-      "uuid": "2c4e4273-ca14-3de6-9888-c6dcdff9ff22",
-      "title": "Oracle and Other AI Stocks Are Spending Too Much Cash. These Companies Are Returning It in Spades.",
-      "publisher": "Barrons.com",
-      "link": "https://finance.yahoo.com/m/2c4e4273-ca14-3de6-9888-c6dcdff9ff22/oracle-and-other-ai-stocks.html",
-      "providerPublishTime": 1763533800,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/5sq7mem5sw8FLhHhzGbgsg--~B/aD02NDA7dz0xMjgwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/Barrons.com/afcec953d15a95d85727bcecf26c18d3",
-            "width": 1280,
-            "height": 640,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/dPDbm4ySmTF0vDUXuLydmQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/Barrons.com/afcec953d15a95d85727bcecf26c18d3",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "ORCL",
-        "^IXIC",
-        "AMZN",
-        "AEO",
-        "META",
-        "MSFT",
-        "GOOGL",
-        "TSLA",
-        "PLTR",
-        "NVDA",
-        "AMD"
-      ]
-    },
-    {
-      "uuid": "04570c6b-3fd6-37f7-b1bb-bdbb92751f20",
-      "title": "the*spark forum's charcha 2025 charts pathways for resilient livelihoods and collaborative action towards Viksit Bharat @ 2047",
-      "publisher": "PR Newswire",
-      "link": "https://finance.yahoo.com/news/spark-forums-charcha-2025-charts-061200450.html",
-      "providerPublishTime": 1763532720,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/6efsUPYOJu8mZO8oN0J21w--~B/aD0yNjc7dz00MDA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/prnewswire.com/fd9d093ea2a442dab7fb6b46386260f7",
-            "width": 400,
-            "height": 267,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/CVh749CecGFPS7dqPLp4cg--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/prnewswire.com/fd9d093ea2a442dab7fb6b46386260f7",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "META",
-        "MPHASIS.BO"
-      ]
-    },
-    {
-      "uuid": "238196cf-477f-3707-aca8-109cf1468012",
-      "title": "Dow Jones Futures: Nvidia Earnings Key For Market; Google Holds Strong",
-      "publisher": "Investor's Business Daily",
-      "link": "https://finance.yahoo.com/m/238196cf-477f-3707-aca8-109cf1468012/dow-jones-futures%3A-nvidia.html",
-      "providerPublishTime": 1763531809,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/aterTpLM91cTmONfVut1OQ--~B/aD01NjM7dz0xMDAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/ibd.com/d87b81127b1d78f7b81e03c51dbe90c0",
-            "width": 1000,
-            "height": 563,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/BU9BCWVnAayTOP670h3giA--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/ibd.com/d87b81127b1d78f7b81e03c51dbe90c0",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "GOOGL",
-        "NVDA",
-        "^DJI",
-        "BTC-USD",
-        "^SPX",
-        "^IXIC",
-        "RTX",
-        "META",
-        "AVGO",
-        "MSFT",
-        "AMZN",
-        "AMD",
-        "2330.TW"
-      ]
-    },
-    {
-      "uuid": "6891b76c-cb72-33c6-9215-90e051a68b6b",
-      "title": "Warren Buffett Keeps Selling His Apple Stock: Should You?",
-      "publisher": "Motley Fool",
-      "link": "https://finance.yahoo.com/m/6891b76c-cb72-33c6-9215-90e051a68b6b/warren-buffett-keeps-selling.html",
-      "providerPublishTime": 1763514300,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/j7EMTpFKkl0fCNvG0__r_Q--~B/aD05MzM7dz0xNDAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/406095e46b01f46be5388bf6d4d7177e",
-            "width": 1400,
-            "height": 933,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/Lo3LnCZKIFL75iooUgiWHw--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/406095e46b01f46be5388bf6d4d7177e",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "AAPL",
-        "GOOGL",
-        "AXP"
       ]
     }
   ],
@@ -348,9 +305,9 @@
   ],
   "researchReports": [],
   "screenerFieldResults": [],
-  "totalTime": 51,
-  "timeTakenForQuotes": 441,
-  "timeTakenForNews": 700,
+  "totalTime": 164,
+  "timeTakenForQuotes": 446,
+  "timeTakenForNews": 600,
   "timeTakenForAlgowatchlist": 400,
   "timeTakenForPredefinedScreener": 400,
   "timeTakenForCrunchbase": 0,

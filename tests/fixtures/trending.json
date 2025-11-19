@@ -8,65 +8,65 @@
             "symbol": "PLUG"
           },
           {
-            "symbol": "OLMA"
-          },
-          {
             "symbol": "TMC"
           },
           {
-            "symbol": "XRP-USD"
+            "symbol": "OLMA"
           },
           {
             "symbol": "NET"
           },
           {
-            "symbol": "HD"
-          },
-          {
-            "symbol": "MRK"
-          },
-          {
-            "symbol": "WIX"
-          },
-          {
-            "symbol": "1810.HK"
-          },
-          {
-            "symbol": "ANTH.PVT"
-          },
-          {
-            "symbol": "SGBX"
-          },
-          {
-            "symbol": "WBD"
-          },
-          {
-            "symbol": "CHR"
-          },
-          {
-            "symbol": "T.TO"
-          },
-          {
-            "symbol": "COST"
-          },
-          {
-            "symbol": "CEG"
-          },
-          {
-            "symbol": "BTQ"
+            "symbol": "XRP-USD"
           },
           {
             "symbol": "NVDA"
           },
           {
+            "symbol": "KZIA"
+          },
+          {
+            "symbol": "NKT.CO"
+          },
+          {
+            "symbol": "SGBX"
+          },
+          {
+            "symbol": "EPSM"
+          },
+          {
+            "symbol": "WIX"
+          },
+          {
+            "symbol": "CAN"
+          },
+          {
+            "symbol": "MVIS"
+          },
+          {
+            "symbol": "VRA"
+          },
+          {
+            "symbol": "ANTH.PVT"
+          },
+          {
+            "symbol": "WBD"
+          },
+          {
+            "symbol": "MRK"
+          },
+          {
+            "symbol": "MP"
+          },
+          {
             "symbol": "ONDS"
           },
           {
-            "symbol": "EOSE"
+            "symbol": "CEG"
           }
         ],
-        "jobTimestamp": 1763540047741,
-        "startInterval": 202511190700
+        "jobTimestamp": 1763547366072,
+        "startInterval": 202511190900
       }
     ],
     "error": null

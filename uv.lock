@@ -1406,7 +1406,7 @@ doc = [
     { name = "mkdocstrings" },
     { name = "mkdocstrings-python" },
 ]
-performance = [
+test = [
     { name = "pandas" },
     { name = "pytest" },
     { name = "pytest-asyncio" },
@@ -1416,13 +1416,6 @@ performance = [
     { name = "typeguard" },
     { name = "yahooquery" },
     { name = "yfinance" },
-]
-test = [
-    { name = "pytest" },
-    { name = "pytest-asyncio" },
-    { name = "pytest-cov" },
-    { name = "pytest-mock" },
-    { name = "typeguard" },
 ]
 
 [package.metadata]
@@ -1442,7 +1435,7 @@ doc = [
     { name = "mkdocstrings", specifier = ">=0.30.1" },
     { name = "mkdocstrings-python", specifier = ">=1.18.2" },
 ]
-performance = [
+test = [
     { name = "pandas", specifier = ">=2.3.3" },
     { name = "pytest", specifier = ">=7.0.0" },
     { name = "pytest-asyncio", specifier = ">=1.1.0" },
@@ -1452,13 +1445,6 @@ performance = [
     { name = "typeguard", specifier = ">=4.4.4" },
     { name = "yahooquery", specifier = ">=2.4.1" },
     { name = "yfinance", specifier = ">=0.2.66" },
-]
-test = [
-    { name = "pytest", specifier = ">=7.0.0" },
-    { name = "pytest-asyncio", specifier = ">=1.1.0" },
-    { name = "pytest-cov", specifier = ">=4.0.0" },
-    { name = "pytest-mock", specifier = ">=3.15.0" },
-    { name = "typeguard", specifier = ">=4.4.4" },
 ]
 
 [[package]]

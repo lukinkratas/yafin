@@ -10191,27 +10191,7 @@
             "AAPL"
           ],
           "type": [
-            "otherCorporate"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "shareHoldersAnnualMeetingsEvents"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "corporateConferenceCallEvents"
+            "mergerAndAcquisitionAnnouncement"
           ]
         }
       },
@@ -10231,7 +10211,7 @@
             "AAPL"
           ],
           "type": [
-            "mergerAndAcquisitionAnnouncement"
+            "shareHoldersAnnualMeetingsEvents"
           ]
         }
       },
@@ -10251,7 +10231,7 @@
             "AAPL"
           ],
           "type": [
-            "conferenceEvents"
+            "earningsConferenceCallEvents"
           ]
         }
       },
@@ -10261,7 +10241,27 @@
             "AAPL"
           ],
           "type": [
-            "earningsConferenceCallEvents"
+            "otherCorporate"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "corporateConferenceCallEvents"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "conferenceEvents"
           ]
         }
       }

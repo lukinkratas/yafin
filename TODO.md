@@ -1,10 +1,11 @@
 ## TODO
 
-- [ ] timezone
+- [ ] performance tests for all other endpoints
 - [ ] multi symbols support
 - [ ] publish to pypi test
 - [ ] publish
 
+- ~~[z] timezone~~
 - ~~[x] sync + async fixtures, e.g. chart interval, period_range~~
 - ~~[x] urls class attrs?~~
 - ~~[x] pytest-benchmark sync symbol vs yfinance~~

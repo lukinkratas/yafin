@@ -1,6 +1,6 @@
 # Yafin
 
-Unofficial [Yahoo!Ⓡ finance](https://finance.yahoo.com) API client.
+Unofficial [Yahoo!Ⓡ finance](https://finance.yahoo.com) Python API client.
 
 - Not affiliated with Yahoo, Inc.
 - Open source library that uses publicly available APIs.
