@@ -5,7 +5,7 @@ import pathlib
 from datetime import datetime
 from typing import Any
 
-from tests._utils import _get_fixture_path
+from tests._utils import _get_fixture_path, _process_chart_like_yfinance
 from yafin import AsyncClient
 from yafin.const import (
     ANNUAL_BALANCE_SHEET_TYPES,
@@ -15,6 +15,7 @@ from yafin.const import (
     OTHER_TYPES,
     QUOTE_SUMMARY_MODULES,
 )
+from yafin.utils import _async_log_func
 
 from .logging_config import configure_logging
 
@@ -25,6 +26,8 @@ TICKERS_NAME = TICKERS.replace(',', '_').lower()
 TICKER_LIST = TICKERS.split(',')
 PERIOD1 = datetime(2020, 1, 1).timestamp()
 PERIOD2 = datetime.now().timestamp()
+INTERVAL = '1d'
+PERIOD_RANGE = '1y'
 
 
 def write_json(data: dict[str, Any], file_path: pathlib.Path) -> None:
@@ -33,13 +36,14 @@ def write_json(data: dict[str, Any], file_path: pathlib.Path) -> None:
         json.dump(data, f, indent=2)
 
 
+@_async_log_func
 async def process_mock(
     instance: Any,
     method_name: str,
     kwargs: dict[str, Any] | None = None,
     file_name: str | None = None,
     folder_name: str | None = None,
-) -> None:
+) -> dict[str, Any]:
     """Do all steps necessary for storing the mock as a JSON file."""
     method = getattr(instance, method_name)
     data = await method(**kwargs) if kwargs else await method()
@@ -49,14 +53,20 @@ async def process_mock(
         else _get_fixture_path(method_name, folder_name)
     )
     write_json(data, data_path)
-    logger.debug(f'{method_name.capitalize()} data fetched and stored {data_path}.')
+    logger.debug(f'{method_name} data fetched and stored {data_path}.')
+    return data
 
 
 async def main() -> None:  # noqa: D103
     configure_logging()
 
     params = dict(
-        tickers=TICKERS, ticker_list=TICKER_LIST, period1=PERIOD1, period2=PERIOD2
+        tickers=TICKERS,
+        ticker_list=TICKER_LIST,
+        interval=INTERVAL,
+        period_range=PERIOD_RANGE,
+        period1=PERIOD1,
+        period2=PERIOD2,
     )
     params_path = _get_fixture_path('params.json')
     write_json(params, params_path)
@@ -100,13 +110,20 @@ async def main() -> None:  # noqa: D103
         )
 
         for ticker in TICKER_LIST:
-            await process_mock(
+            chart = await process_mock(
                 instance=client,
                 method_name='get_chart',
-                kwargs=dict(ticker=ticker, interval='1d', period_range='1y'),
-                file_name=f'{ticker.lower()}_1d_1y.json',
+                kwargs=dict(
+                    ticker=ticker, interval=INTERVAL, period_range=PERIOD_RANGE
+                ),
+                file_name=f'{ticker.lower()}_{INTERVAL}_{PERIOD_RANGE}.json',
                 folder_name='chart',
             )
+
+            chart_df = _process_chart_like_yfinance(chart['chart']['result'][0])
+            chart_path = _get_fixture_path(f'{ticker.lower()}.csv', 'performance')
+            chart_df.to_csv(chart_path)
+
             await process_mock(
                 instance=client,
                 method_name='get_quote',

@@ -30,6 +30,18 @@ def ticker(request: pytest.FixtureRequest) -> str:
     return request.param
 
 
+@pytest.fixture(scope='session')
+def interval(params: dict[str, Any]) -> str:
+    """Fresh new instance of interval for each tests."""
+    return params.get('interval', '1d')
+
+
+@pytest.fixture(scope='session')
+def period_range(params: dict[str, Any]) -> str:
+    """Fresh new instance of period_range for each tests."""
+    return params.get('period_range', '1y')
+
+
 @pytest.fixture(params=[None, int, float], scope='session')
 def period1(
     request: pytest.FixtureRequest, params: dict[str, Any]

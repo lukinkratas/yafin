@@ -1,6 +1,6 @@
 {
   "explains": [],
-  "count": 16,
+  "count": 20,
   "quotes": [
     {
       "exchange": "NMS",
@@ -8,7 +8,7 @@
       "quoteType": "EQUITY",
       "symbol": "META",
       "index": "quotes",
-      "score": 11893000.0,
+      "score": 12002000.0,
       "typeDisp": "Equity",
       "longname": "Meta Platforms, Inc.",
       "exchDisp": "NASDAQ",
@@ -27,7 +27,7 @@
       "quoteType": "EQUITY",
       "symbol": "WPM",
       "index": "quotes",
-      "score": 20271.0,
+      "score": 20291.0,
       "typeDisp": "Equity",
       "longname": "Wheaton Precious Metals Corp.",
       "exchDisp": "NYSE",
@@ -43,7 +43,7 @@
       "quoteType": "EQUITY",
       "symbol": "TMC",
       "index": "quotes",
-      "score": 20077.0,
+      "score": 20097.0,
       "typeDisp": "Equity",
       "longname": "TMC the metals company Inc.",
       "exchDisp": "NASDAQ",
@@ -61,10 +61,26 @@
       "quoteType": "ETF",
       "symbol": "REMX",
       "index": "quotes",
-      "score": 20071.0,
+      "score": 20072.0,
       "typeDisp": "ETF",
       "longname": "VanEck Rare Earth and Strategic Metals ETF",
       "exchDisp": "NYSEArca",
+      "isYahooFinance": true
+    },
+    {
+      "exchange": "ASE",
+      "shortname": "Silvercorp Metals Inc.",
+      "quoteType": "EQUITY",
+      "symbol": "SVM",
+      "index": "quotes",
+      "score": 20068.0,
+      "typeDisp": "Equity",
+      "longname": "Silvercorp Metals Inc.",
+      "exchDisp": "NYSE MKT",
+      "sector": "Basic Materials",
+      "sectorDisp": "Basic Materials",
+      "industry": "Silver",
+      "industryDisp": "Silver",
       "isYahooFinance": true
     },
     {
@@ -84,28 +100,12 @@
       "isYahooFinance": true
     },
     {
-      "exchange": "ASE",
-      "shortname": "Silvercorp Metals Inc.",
-      "quoteType": "EQUITY",
-      "symbol": "SVM",
-      "index": "quotes",
-      "score": 20063.0,
-      "typeDisp": "Equity",
-      "longname": "Silvercorp Metals Inc.",
-      "exchDisp": "NYSE MKT",
-      "sector": "Basic Materials",
-      "sectorDisp": "Basic Materials",
-      "industry": "Silver",
-      "industryDisp": "Silver",
-      "isYahooFinance": true
-    },
-    {
       "exchange": "NCM",
       "shortname": "Aqua Metals, Inc.",
       "quoteType": "EQUITY",
       "symbol": "AQMS",
       "index": "quotes",
-      "score": 20059.0,
+      "score": 20062.0,
       "typeDisp": "Equity",
       "longname": "Aqua Metals, Inc.",
       "exchDisp": "NASDAQ",
@@ -117,6 +117,92 @@
     }
   ],
   "news": [
+    {
+      "uuid": "a30741eb-8a55-3223-83a4-a42d94509261",
+      "title": "Meta wins historic FTC antitrust trial focused on WhatsApp, Instagram",
+      "publisher": "Euronews",
+      "link": "https://finance.yahoo.com/m/a30741eb-8a55-3223-83a4-a42d94509261/meta-wins-historic-ftc.html",
+      "providerPublishTime": 1763541971,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/.kvWqsayuJhO03HLLzo.TA--~B/aD00NTA7dz04MDA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/euronews_us_articles_576/aecd8befccad3b751b912ecd2a301047",
+            "width": 800,
+            "height": 450,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/xu9V2WJSJnI1Wdongw_bxw--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/euronews_us_articles_576/aecd8befccad3b751b912ecd2a301047",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "META",
+        "GOOGL"
+      ]
+    },
+    {
+      "uuid": "57e06870-1187-395a-bc0f-bea8ef30eb3f",
+      "title": "Stocks struggle as Nvidia takes centre stage amid AI bubble fears",
+      "publisher": "AFP",
+      "link": "https://finance.yahoo.com/news/asian-markets-bounce-nvidia-takes-025415956.html",
+      "providerPublishTime": 1763540668,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/XGcIZs8oh5C8XvnjiSMjEw--~B/aD01MTI7dz03Njg7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/afp.com/d1e64b5a8a03f94b9c64e820ce99006e",
+            "width": 768,
+            "height": 512,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/vYN1Kax6h4wZhVoa4rEiiQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/afp.com/d1e64b5a8a03f94b9c64e820ce99006e",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "NVDA",
+        "AMZN",
+        "META",
+        "GOOGL",
+        "AAPL"
+      ]
+    },
+    {
+      "uuid": "1deec21f-a0c8-3bd7-ad89-07a80a8f5620",
+      "title": "Meta (META): Is the Valuation Right After Recent Momentum Slows?",
+      "publisher": "Simply Wall St.",
+      "link": "https://finance.yahoo.com/news/meta-meta-valuation-recent-momentum-081419325.html",
+      "providerPublishTime": 1763540059,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/BrUhbDoJKeNJUavlZ7MvVQ--~B/aD00MzI7dz0xMTk0O2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/simply_wall_st__316/fba9687e0054b528b01bdfa6c56cd20c",
+            "width": 1194,
+            "height": 432,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/ugpo6zQdWTcUD0neJdvYVQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/simply_wall_st__316/fba9687e0054b528b01bdfa6c56cd20c",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "META"
+      ]
+    },
     {
       "uuid": "2c4e4273-ca14-3de6-9888-c6dcdff9ff22",
       "title": "Oracle and Other AI Stocks Are Spending Too Much Cash. These Companies Are Returning It in Spades.",
@@ -222,37 +308,6 @@
       ]
     },
     {
-      "uuid": "57e06870-1187-395a-bc0f-bea8ef30eb3f",
-      "title": "Asian markets bounce as Nvidia takes centre stage amid AI bubble fears",
-      "publisher": "AFP",
-      "link": "https://finance.yahoo.com/news/asian-markets-bounce-nvidia-takes-025415956.html",
-      "providerPublishTime": 1763520855,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/0pBPCOlKTqvuFh6JDDrrMQ--~B/aD01MTI7dz03Njg7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/afp.com/c6803932ba21e5c11b6cb55fe32a7ca1",
-            "width": 768,
-            "height": 512,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/veG4dTgtGU.6_IDUIleZvQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/afp.com/c6803932ba21e5c11b6cb55fe32a7ca1",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "NVDA",
-        "AMZN",
-        "META",
-        "GOOGL",
-        "AAPL"
-      ]
-    },
-    {
       "uuid": "148d420a-194d-313e-9234-635f97927405",
       "title": "Heard on the Street Recap: Stocks Continue Losing Streak",
       "publisher": "The Wall Street Journal",
@@ -309,68 +364,6 @@
       "relatedTickers": [
         "META"
       ]
-    },
-    {
-      "uuid": "9ca95972-bf9e-3192-8911-4fa306c68aaa",
-      "title": "Paramount denies Saudi involvement in WBD bid, Meta's antitrust win",
-      "publisher": "Yahoo Finance Video",
-      "link": "https://finance.yahoo.com/video/paramount-denies-saudi-involvement-wbd-215137865.html",
-      "providerPublishTime": 1763502697,
-      "type": "VIDEO",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/BAGf.v9c1SlOeK_xrF.aYQ--~B/aD0xOTY0O3c9MzQ4OTthcHBpZD15dGFjaHlvbg--/https://s.yimg.com/os/creatr-uploaded-images/2025-11/7599c380-c4c8-11f0-abfd-c8e05c619449",
-            "width": 3489,
-            "height": 1964,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/v3dUAI6gP2ErLRZiOvMx9g--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://s.yimg.com/os/creatr-uploaded-images/2025-11/7599c380-c4c8-11f0-abfd-c8e05c619449",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "META",
-        "WBD",
-        "PSKY"
-      ]
-    },
-    {
-      "uuid": "3d6f923f-5ca8-3ca7-b02d-85c32f447584",
-      "title": "Equities Hit Lowest Since October Amid Tech Selloff",
-      "publisher": "MT Newswires",
-      "link": "https://finance.yahoo.com/news/equities-hit-lowest-since-october-214445745.html",
-      "providerPublishTime": 1763502285,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/eYNqcCgn3G_qEuDD8GI7aw--~B/aD03NTA7dz0xMDAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/mt_newswires_premium_news_706/2475a8618428bf41d7b045240805a142",
-            "width": 1000,
-            "height": 750,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/LrkzM0CxMdNkMTDmn2vSDw--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/mt_newswires_premium_news_706/2475a8618428bf41d7b045240805a142",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "NVDA",
-        "^IXIC",
-        "^DJI",
-        "^SPX",
-        "MSFT",
-        "AMZN",
-        "ANTH.PVT"
-      ]
     }
   ],
   "nav": [
@@ -379,12 +372,57 @@
       "navUrl": "https://finance.yahoo.com/sectors/industrials/metal-fabrication"
     }
   ],
-  "lists": [],
+  "lists": [
+    {
+      "index": "2e1dd2f6-189b-4fb0-857d-79aec8ecef15",
+      "id": "2e1dd2f6-189b-4fb0-857d-79aec8ecef15",
+      "title": "Other Industrial Metals & Mining",
+      "canonicalName": "OTHER_INDUSTRIAL_METALS_MINING",
+      "score": 1.0,
+      "type": "PREDEFINED_SCREENER",
+      "total": 10,
+      "isPremium": false,
+      "iconUrl": "https://edgecast-img.yahoo.net/mysterio/api/b241f4b88dcc1439d37ed7dd74c3ee884516f53bc29bc8eece9b9fcf5c850fe8/finance/resizefill_w96_h96/https://s.yimg.com/cv/apiv2/fin/img/assets/predefined_screeners/diamond.png"
+    },
+    {
+      "index": "ca67a1b3-572c-433c-b1a4-a0da3738fc14",
+      "id": "ca67a1b3-572c-433c-b1a4-a0da3738fc14",
+      "title": "Commodity Metal Mutual Funds",
+      "canonicalName": "COMMODITY_MUTUAL_FUNDS",
+      "score": 1.0,
+      "type": "PREDEFINED_SCREENER",
+      "total": 82,
+      "isPremium": false,
+      "iconUrl": "https://edgecast-img.yahoo.net/mysterio/api/683fd6c45c5d4d5905e2caf5cd56ab1ab1c4e7d168bee45d8047945dc48ab943/finance/resizefill_w96_h96/https://s.yimg.com/cv/apiv2/fin/img/assets/predefined_screeners/theme.png"
+    },
+    {
+      "index": "05acca9e-1aee-44b6-8224-c92459eb2ed8",
+      "id": "05acca9e-1aee-44b6-8224-c92459eb2ed8",
+      "title": "Metal Fabrication",
+      "canonicalName": "METAL_FABRICATION",
+      "score": 1.0,
+      "type": "PREDEFINED_SCREENER",
+      "total": 12,
+      "isPremium": false,
+      "iconUrl": "https://edgecast-img.yahoo.net/mysterio/api/b241f4b88dcc1439d37ed7dd74c3ee884516f53bc29bc8eece9b9fcf5c850fe8/finance/resizefill_w96_h96/https://s.yimg.com/cv/apiv2/fin/img/assets/predefined_screeners/diamond.png"
+    },
+    {
+      "index": "63e7f272-cd8d-4307-9002-eb98746a036a",
+      "id": "63e7f272-cd8d-4307-9002-eb98746a036a",
+      "title": "Precious Metal ETFs",
+      "canonicalName": "PRECIOUS_METAL_ETFS",
+      "score": 1.0,
+      "type": "PREDEFINED_SCREENER",
+      "total": 14,
+      "isPremium": false,
+      "iconUrl": "https://edgecast-img.yahoo.net/mysterio/api/b241f4b88dcc1439d37ed7dd74c3ee884516f53bc29bc8eece9b9fcf5c850fe8/finance/resizefill_w96_h96/https://s.yimg.com/cv/apiv2/fin/img/assets/predefined_screeners/diamond.png"
+    }
+  ],
   "researchReports": [],
   "screenerFieldResults": [],
-  "totalTime": 40,
-  "timeTakenForQuotes": 431,
-  "timeTakenForNews": 700,
+  "totalTime": 54,
+  "timeTakenForQuotes": 433,
+  "timeTakenForNews": 600,
   "timeTakenForAlgowatchlist": 400,
   "timeTakenForPredefinedScreener": 400,
   "timeTakenForCrunchbase": 0,

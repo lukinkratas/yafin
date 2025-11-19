@@ -36,9 +36,9 @@
           {
             "eventTime": 1758803400000,
             "countryCode": "US",
-            "eventName": "Core PCE Prices Fnal",
-            "prior": "2.5",
-            "actual": "2.6",
+            "eventName": "GDP Final",
+            "prior": "3.3",
+            "actual": "3.8",
             "period": "Q2"
           },
           {
@@ -156,23 +156,23 @@
           {
             "eventTime": 1763337600000,
             "countryCode": "US",
-            "eventName": "Dallas Fed PCE*",
-            "prior": "2.8",
+            "eventName": "PCE Price Index YY *",
+            "prior": "2.7",
             "period": "Sep"
           },
           {
             "eventTime": 1763424000000,
             "countryCode": "US",
-            "eventName": "CPI YY, NSA",
-            "prior": "3",
-            "period": "Oct"
+            "eventName": "PCE Price Index YY *",
+            "prior": "2.7",
+            "period": "Sep"
           },
           {
             "eventTime": 1763510400000,
             "countryCode": "US",
-            "eventName": "CPI YY, NSA",
-            "prior": "3",
-            "period": "Oct"
+            "eventName": "PCE Price Index YY *",
+            "prior": "2.7",
+            "period": "Sep"
           }
         ]
       },
@@ -5927,6 +5927,26 @@
             "META"
           ],
           "type": [
+            "corporateAnalystMeeting"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "conferencePresentation"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
             "mergerAndAcquisitionAnnouncement"
           ]
         }
@@ -5947,7 +5967,17 @@
             "META"
           ],
           "type": [
-            "corporateAnalystMeeting"
+            "otherCorporate"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "corporateConferenceCallEvents"
           ]
         }
       },
@@ -5967,37 +5997,7 @@
             "META"
           ],
           "type": [
-            "otherCorporate"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "conferencePresentation"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
             "conferenceEvents"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "corporateConferenceCallEvents"
           ]
         }
       }

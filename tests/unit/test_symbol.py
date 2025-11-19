@@ -173,31 +173,17 @@ class TestUnitSymbol:
     @pytest.mark.parametrize(
         'kwargs',
         [
-            dict(interval='1d'),
-            dict(interval='1d', period_range='1y'),
+            dict(),
             dict(
-                interval='1d',
-                period_range='1y',
                 include_div=True,
                 include_split=True,
                 include_earn=True,
                 include_capital_gain=True,
             ),
-            dict(
-                interval='1d',
-                include_div=True,
-                include_split=True,
-                include_earn=True,
-                include_capital_gain=True,
-            ),
-            dict(interval='1d', period_range='1y', include_div=True),
-            dict(interval='1d', include_div=True),
-            dict(interval='1d', period_range='1y', include_split=True),
-            dict(interval='1d', include_split=True),
-            dict(interval='1d', period_range='1y', include_earn=True),
-            dict(interval='1d', include_earn=True),
-            dict(interval='1d', period_range='1y', include_capital_gain=True),
-            dict(interval='1d', include_capital_gain=True),
+            dict(include_div=True),
+            dict(include_split=True),
+            dict(include_earn=True),
+            dict(include_capital_gain=True),
         ],
     )
     def test_get_chart(
@@ -206,6 +192,8 @@ class TestUnitSymbol:
         kwargs: dict[str, Any],
         mocker: MockerFixture,
         chart_json_mock: dict[str, Any],
+        interval: str,
+        period_range: str | None,
         period1: int | float | None,
         period2: int | float | None,
     ) -> None:
@@ -215,7 +203,13 @@ class TestUnitSymbol:
             patched_method='yafin.client.Session.get',
             response_json=chart_json_mock,
         )
-        chart_result = symbol.get_chart(**kwargs, period1=period1, period2=period2)
+        chart_result = symbol.get_chart(
+            interval=interval,
+            period_range=period_range,
+            period1=period1,
+            period2=period2,
+            **kwargs,
+        )
         _assert_chart_result(chart_result, symbol.ticker)
 
     @pytest.mark.parametrize(
@@ -1114,31 +1108,17 @@ class TestUnitAsyncSymbol:
     @pytest.mark.parametrize(
         'kwargs',
         [
-            dict(interval='1d'),
-            dict(interval='1d', period_range='1y'),
+            dict(),
             dict(
-                interval='1d',
-                period_range='1y',
                 include_div=True,
                 include_split=True,
                 include_earn=True,
                 include_capital_gain=True,
             ),
-            dict(
-                interval='1d',
-                include_div=True,
-                include_split=True,
-                include_earn=True,
-                include_capital_gain=True,
-            ),
-            dict(interval='1d', period_range='1y', include_div=True),
-            dict(interval='1d', include_div=True),
-            dict(interval='1d', period_range='1y', include_split=True),
-            dict(interval='1d', include_split=True),
-            dict(interval='1d', period_range='1y', include_earn=True),
-            dict(interval='1d', include_earn=True),
-            dict(interval='1d', period_range='1y', include_capital_gain=True),
-            dict(interval='1d', include_capital_gain=True),
+            dict(include_div=True),
+            dict(include_split=True),
+            dict(include_earn=True),
+            dict(include_capital_gain=True),
         ],
     )
     @pytest.mark.asyncio
@@ -1148,6 +1128,8 @@ class TestUnitAsyncSymbol:
         kwargs: dict[str, Any],
         mocker: MockerFixture,
         chart_json_mock: dict[str, Any],
+        interval: str,
+        period_range: str | None,
         period1: int | float | None,
         period2: int | float | None,
     ) -> None:
@@ -1159,7 +1141,11 @@ class TestUnitAsyncSymbol:
             async_mock=True,
         )
         chart_result = await async_symbol.get_chart(
-            **kwargs, period1=period1, period2=period2
+            interval=interval,
+            period_range=period_range,
+            period1=period1,
+            period2=period2,
+            **kwargs,
         )
         _assert_chart_result(chart_result, async_symbol.ticker)
 

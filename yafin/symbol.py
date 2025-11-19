@@ -42,7 +42,7 @@ from .types import (
     TimeseriesResult,
     UpgradeDowngradeHistoryItem,
 )
-from .utils import _async_log_args, _log_args, get_types_with_frequency
+from .utils import _async_log_func, _log_func, get_types_with_frequency
 
 logger = logging.getLogger(__name__)
 
@@ -215,7 +215,7 @@ class Symbol(SymbolBase):
         """When closing context manager, release the client."""
         self.close()
 
-    @_log_args
+    @_log_func
     def get_chart(
         self,
         interval: str,
@@ -278,7 +278,7 @@ class Symbol(SymbolBase):
         chart_json = self._client.get_chart(**kwargs)
         return chart_json['chart']['result'][0]
 
-    @_log_args
+    @_log_func
     def get_quote(self) -> QuoteResult:
         """Get quote for the ticker.
 
@@ -288,7 +288,7 @@ class Symbol(SymbolBase):
         quote_json = self._client.get_quote(self.ticker)
         return quote_json['quoteResponse']['result'][0]
 
-    @_log_args
+    @_log_func
     def get_quote_type(self) -> QuoteTypeResult:
         """Get quote type for the ticker.
 
@@ -298,7 +298,7 @@ class Symbol(SymbolBase):
         quote_type_json = self._client.get_quote_type(self.ticker)
         return quote_type_json['quoteType']['result'][0]
 
-    @_log_args
+    @_log_func
     def get_quote_summary_all_modules(self) -> QuoteSummaryResult:
         """Get quote summary for all modules for the ticker.
 
@@ -310,13 +310,13 @@ class Symbol(SymbolBase):
         )
         return quote_summary_json['quoteSummary']['result'][0]
 
-    @_log_args
+    @_log_func
     def _get_quote_summary_single_module(self, module: str) -> QuoteSummaryModuleResult:
         self._get_client()
         quote_summary_json = self._client.get_quote_summary(self.ticker, module)
         return quote_summary_json['quoteSummary']['result'][0][module]
 
-    @_log_args
+    @_log_func
     def get_asset_profile(self) -> AssetProfile:
         """Get asset profile for the ticker.
 
@@ -324,7 +324,7 @@ class Symbol(SymbolBase):
         """
         return self._get_quote_summary_single_module('assetProfile')
 
-    @_log_args
+    @_log_func
     def get_summary_profile(self) -> SummaryProfile:
         """Get summary profile for the ticker.
 
@@ -332,7 +332,7 @@ class Symbol(SymbolBase):
         """
         return self._get_quote_summary_single_module('summaryProfile')
 
-    @_log_args
+    @_log_func
     def get_summary_detail(self) -> SummaryDetail:
         """Get summary detail for the ticker.
 
@@ -340,7 +340,7 @@ class Symbol(SymbolBase):
         """
         return self._get_quote_summary_single_module('summaryDetail')
 
-    @_log_args
+    @_log_func
     def get_price(self) -> Price:
         """Get price data for the ticker.
 
@@ -348,7 +348,7 @@ class Symbol(SymbolBase):
         """
         return self._get_quote_summary_single_module('price')
 
-    @_log_args
+    @_log_func
     def get_default_key_statistics(self) -> DefaultKeyStatistics:
         """Get default key statistics for the ticker.
 
@@ -356,7 +356,7 @@ class Symbol(SymbolBase):
         """
         return self._get_quote_summary_single_module('defaultKeyStatistics')
 
-    @_log_args
+    @_log_func
     def get_financial_data(self) -> FinancialData:
         """Get financial data for the ticker.
 
@@ -364,7 +364,7 @@ class Symbol(SymbolBase):
         """
         return self._get_quote_summary_single_module('financialData')
 
-    @_log_args
+    @_log_func
     def get_calendar_events(self) -> CalendarEvents:
         """Get calendar events for the ticker.
 
@@ -372,7 +372,7 @@ class Symbol(SymbolBase):
         """
         return self._get_quote_summary_single_module('calendarEvents')
 
-    @_log_args
+    @_log_func
     def get_sec_filings(self) -> SecFilings:
         """Get sec filings for the ticker.
 
@@ -380,7 +380,7 @@ class Symbol(SymbolBase):
         """
         return self._get_quote_summary_single_module('secFilings')
 
-    @_log_args
+    @_log_func
     def get_upgrade_downgrade_history(self) -> list[UpgradeDowngradeHistoryItem]:
         """Get upgrade downgrade history for the ticker.
 
@@ -391,7 +391,7 @@ class Symbol(SymbolBase):
         result = self._get_quote_summary_single_module('upgradeDowngradeHistory')
         return result['history']
 
-    @_log_args
+    @_log_func
     def get_institution_ownership(self) -> list[InstitutionOwnershipItem]:
         """Get institution ownership for the ticker.
 
@@ -400,7 +400,7 @@ class Symbol(SymbolBase):
         result = self._get_quote_summary_single_module('institutionOwnership')
         return result['ownershipList']
 
-    @_log_args
+    @_log_func
     def get_fund_ownership(self) -> list[FundOwnershipItem]:
         """Get fund ownership for the ticker.
 
@@ -409,7 +409,7 @@ class Symbol(SymbolBase):
         result = self._get_quote_summary_single_module('fundOwnership')
         return result['ownershipList']
 
-    @_log_args
+    @_log_func
     def get_major_direct_holders(self) -> MajorDirectHolders:
         """Get major direct holders for the ticker.
 
@@ -417,7 +417,7 @@ class Symbol(SymbolBase):
         """
         return self._get_quote_summary_single_module('majorDirectHolders')
 
-    @_log_args
+    @_log_func
     def get_major_holders_breakdown(self) -> MajorHoldersBreakdown:
         """Get major holders breakdown for the ticker.
 
@@ -425,7 +425,7 @@ class Symbol(SymbolBase):
         """
         return self._get_quote_summary_single_module('majorHoldersBreakdown')
 
-    @_log_args
+    @_log_func
     def get_insider_transactions(self) -> list[InsiderTransactionItem]:
         """Get insider transactions for the ticker.
 
@@ -434,7 +434,7 @@ class Symbol(SymbolBase):
         result = self._get_quote_summary_single_module('insiderTransactions')
         return result['transactions']
 
-    @_log_args
+    @_log_func
     def get_insider_holders(self) -> list[InsiderHolderItem]:
         """Get insider holders for the ticker.
 
@@ -443,7 +443,7 @@ class Symbol(SymbolBase):
         result = self._get_quote_summary_single_module('insiderHolders')
         return result['holders']
 
-    @_log_args
+    @_log_func
     def get_net_share_purchase_activity(self) -> NetSharePurchaseActivity:
         """Get net share purchase activity for the ticker.
 
@@ -453,7 +453,7 @@ class Symbol(SymbolBase):
         """
         return self._get_quote_summary_single_module('netSharePurchaseActivity')
 
-    @_log_args
+    @_log_func
     def get_earnings(self) -> Earnings:
         """Get earnings for the ticker.
 
@@ -461,7 +461,7 @@ class Symbol(SymbolBase):
         """
         return self._get_quote_summary_single_module('earnings')
 
-    @_log_args
+    @_log_func
     def get_earnings_history(self) -> list[EarningsHistoryItem]:
         """Get earnings history for the ticker.
 
@@ -470,7 +470,7 @@ class Symbol(SymbolBase):
         result = self._get_quote_summary_single_module('earningsHistory')
         return result['history']
 
-    @_log_args
+    @_log_func
     def get_earnings_trend(self) -> list[EarningsTrendItem]:
         """Get earnings trend for the ticker.
 
@@ -479,7 +479,7 @@ class Symbol(SymbolBase):
         result = self._get_quote_summary_single_module('earningsTrend')
         return result['trend']
 
-    @_log_args
+    @_log_func
     def get_industry_trend(self) -> IndustryTrend:
         """Get industry trend for the ticker.
 
@@ -487,7 +487,7 @@ class Symbol(SymbolBase):
         """
         return self._get_quote_summary_single_module('industryTrend')
 
-    @_log_args
+    @_log_func
     def get_index_trend(self) -> IndexTrend:
         """Get index trend for the ticker.
 
@@ -495,7 +495,7 @@ class Symbol(SymbolBase):
         """
         return self._get_quote_summary_single_module('indexTrend')
 
-    @_log_args
+    @_log_func
     def get_sector_trend(self) -> SectorTrend:
         """Get sector trend for the ticker.
 
@@ -503,7 +503,7 @@ class Symbol(SymbolBase):
         """
         return self._get_quote_summary_single_module('sectorTrend')
 
-    @_log_args
+    @_log_func
     def get_recommendation_trend(self) -> list[RecommendationTrendItem]:
         """Get recommendation trend for the ticker.
 
@@ -512,7 +512,7 @@ class Symbol(SymbolBase):
         result = self._get_quote_summary_single_module('recommendationTrend')
         return result['trend']
 
-    @_log_args
+    @_log_func
     def get_page_views(self) -> PageViews:
         """Get page views for the ticker.
 
@@ -520,7 +520,7 @@ class Symbol(SymbolBase):
         """
         return self._get_quote_summary_single_module('pageViews')
 
-    @_log_args
+    @_log_func
     def _get_financials(
         self,
         frequency: str,
@@ -535,7 +535,7 @@ class Symbol(SymbolBase):
         )
         return timeseries_json['timeseries']['result']
 
-    @_log_args
+    @_log_func
     def get_income_statement(
         self,
         frequency: str,
@@ -554,7 +554,7 @@ class Symbol(SymbolBase):
         """
         return self._get_financials(frequency, 'income_statement', period1, period2)
 
-    @_log_args
+    @_log_func
     def get_balance_sheet(
         self,
         frequency: str,
@@ -573,7 +573,7 @@ class Symbol(SymbolBase):
         """
         return self._get_financials(frequency, 'balance_sheet', period1, period2)
 
-    @_log_args
+    @_log_func
     def get_cash_flow(
         self,
         frequency: str,
@@ -592,7 +592,7 @@ class Symbol(SymbolBase):
         """
         return self._get_financials(frequency, 'cash_flow', period1, period2)
 
-    @_log_args
+    @_log_func
     def get_options(self) -> OptionChainResult:
         """Get options data for the ticker.
 
@@ -602,7 +602,7 @@ class Symbol(SymbolBase):
         options_json = self._client.get_options(self.ticker)
         return options_json['optionChain']['result'][0]
 
-    @_log_args
+    @_log_func
     def get_search(self) -> SearchResponseJson:
         """Get search results for the ticker.
 
@@ -611,7 +611,7 @@ class Symbol(SymbolBase):
         self._get_client()
         return self._client.get_search(self.ticker)
 
-    @_log_args
+    @_log_func
     def get_recommendations(self) -> RecommendationsFinanceResult:
         """Get analyst recommendations for the ticker.
 
@@ -621,7 +621,7 @@ class Symbol(SymbolBase):
         recommendations_json = self._client.get_recommendations(self.ticker)
         return recommendations_json['finance']['result'][0]
 
-    @_log_args
+    @_log_func
     def get_insights(self) -> InsightsFinanceResult:
         """Get insights for the ticker.
 
@@ -631,7 +631,7 @@ class Symbol(SymbolBase):
         insights_json = self._client.get_insights(self.ticker)
         return insights_json['finance']['result'][0]
 
-    @_log_args
+    @_log_func
     def get_ratings(self) -> RatingsResponseJson:
         """Get ratings for the ticker.
 
@@ -731,7 +731,7 @@ class AsyncSymbol(SymbolBase):
         """When closing context manager, release the client."""
         await self.close()
 
-    @_async_log_args
+    @_async_log_func
     async def get_chart(
         self,
         interval: str,
@@ -791,7 +791,7 @@ class AsyncSymbol(SymbolBase):
         chart_json = await self._client.get_chart(**kwargs)
         return chart_json['chart']['result'][0]
 
-    @_async_log_args
+    @_async_log_func
     async def get_quote(self) -> QuoteResult:
         """Get quote for the ticker.
 
@@ -801,7 +801,7 @@ class AsyncSymbol(SymbolBase):
         quote_json = await self._client.get_quote(self.ticker)
         return quote_json['quoteResponse']['result'][0]
 
-    @_async_log_args
+    @_async_log_func
     async def get_quote_type(self) -> QuoteTypeResult:
         """Get quote type for the ticker.
 
@@ -811,7 +811,7 @@ class AsyncSymbol(SymbolBase):
         quote_type_json = await self._client.get_quote_type(self.ticker)
         return quote_type_json['quoteType']['result'][0]
 
-    @_async_log_args
+    @_async_log_func
     async def get_quote_summary_all_modules(self) -> QuoteSummaryResult:
         """Get quote summary for all modules for the ticker.
 
@@ -823,7 +823,7 @@ class AsyncSymbol(SymbolBase):
         )
         return quote_summary_json['quoteSummary']['result'][0]
 
-    @_async_log_args
+    @_async_log_func
     async def _get_quote_summary_single_module(
         self, module: str
     ) -> QuoteSummaryModuleResult:
@@ -831,7 +831,7 @@ class AsyncSymbol(SymbolBase):
         quote_summary_json = await self._client.get_quote_summary(self.ticker, module)
         return quote_summary_json['quoteSummary']['result'][0][module]
 
-    @_async_log_args
+    @_async_log_func
     async def get_asset_profile(self) -> AssetProfile:
         """Get asset profile for the ticker.
 
@@ -839,7 +839,7 @@ class AsyncSymbol(SymbolBase):
         """
         return await self._get_quote_summary_single_module('assetProfile')
 
-    @_async_log_args
+    @_async_log_func
     async def get_summary_profile(self) -> SummaryProfile:
         """Get summary profile for the ticker.
 
@@ -847,7 +847,7 @@ class AsyncSymbol(SymbolBase):
         """
         return await self._get_quote_summary_single_module('summaryProfile')
 
-    @_async_log_args
+    @_async_log_func
     async def get_summary_detail(self) -> SummaryDetail:
         """Get summary detail for the ticker.
 
@@ -855,7 +855,7 @@ class AsyncSymbol(SymbolBase):
         """
         return await self._get_quote_summary_single_module('summaryDetail')
 
-    @_async_log_args
+    @_async_log_func
     async def get_price(self) -> Price:
         """Get price data for the ticker.
 
@@ -863,7 +863,7 @@ class AsyncSymbol(SymbolBase):
         """
         return await self._get_quote_summary_single_module('price')
 
-    @_async_log_args
+    @_async_log_func
     async def get_default_key_statistics(self) -> DefaultKeyStatistics:
         """Get default key statistics for the ticker.
 
@@ -871,7 +871,7 @@ class AsyncSymbol(SymbolBase):
         """
         return await self._get_quote_summary_single_module('defaultKeyStatistics')
 
-    @_async_log_args
+    @_async_log_func
     async def get_financial_data(self) -> FinancialData:
         """Get financial data for the ticker.
 
@@ -879,7 +879,7 @@ class AsyncSymbol(SymbolBase):
         """
         return await self._get_quote_summary_single_module('financialData')
 
-    @_async_log_args
+    @_async_log_func
     async def get_calendar_events(self) -> CalendarEvents:
         """Get calendar events for the ticker.
 
@@ -887,7 +887,7 @@ class AsyncSymbol(SymbolBase):
         """
         return await self._get_quote_summary_single_module('calendarEvents')
 
-    @_async_log_args
+    @_async_log_func
     async def get_sec_filings(self) -> SecFilings:
         """Get sec filings for the ticker.
 
@@ -895,7 +895,7 @@ class AsyncSymbol(SymbolBase):
         """
         return await self._get_quote_summary_single_module('secFilings')
 
-    @_async_log_args
+    @_async_log_func
     async def get_upgrade_downgrade_history(self) -> list[UpgradeDowngradeHistoryItem]:
         """Get upgrade downgrade history for the ticker.
 
@@ -906,7 +906,7 @@ class AsyncSymbol(SymbolBase):
         result = await self._get_quote_summary_single_module('upgradeDowngradeHistory')
         return result['history']
 
-    @_async_log_args
+    @_async_log_func
     async def get_institution_ownership(self) -> list[InstitutionOwnershipItem]:
         """Get institution ownership for the ticker.
 
@@ -915,7 +915,7 @@ class AsyncSymbol(SymbolBase):
         result = await self._get_quote_summary_single_module('institutionOwnership')
         return result['ownershipList']
 
-    @_async_log_args
+    @_async_log_func
     async def get_fund_ownership(self) -> list[FundOwnershipItem]:
         """Get fund ownership for the ticker.
 
@@ -924,7 +924,7 @@ class AsyncSymbol(SymbolBase):
         result = await self._get_quote_summary_single_module('fundOwnership')
         return result['ownershipList']
 
-    @_async_log_args
+    @_async_log_func
     async def get_major_direct_holders(self) -> MajorDirectHolders:
         """Get major direct holders for the ticker.
 
@@ -932,7 +932,7 @@ class AsyncSymbol(SymbolBase):
         """
         return await self._get_quote_summary_single_module('majorDirectHolders')
 
-    @_async_log_args
+    @_async_log_func
     async def get_major_holders_breakdown(self) -> MajorHoldersBreakdown:
         """Get major holders breakdown for the ticker.
 
@@ -940,7 +940,7 @@ class AsyncSymbol(SymbolBase):
         """
         return await self._get_quote_summary_single_module('majorHoldersBreakdown')
 
-    @_async_log_args
+    @_async_log_func
     async def get_insider_transactions(self) -> list[InsiderTransactionItem]:
         """Get insider transactions for the ticker.
 
@@ -949,7 +949,7 @@ class AsyncSymbol(SymbolBase):
         result = await self._get_quote_summary_single_module('insiderTransactions')
         return result['transactions']
 
-    @_async_log_args
+    @_async_log_func
     async def get_insider_holders(self) -> list[InsiderHolderItem]:
         """Get insider holders for the ticker.
 
@@ -958,7 +958,7 @@ class AsyncSymbol(SymbolBase):
         result = await self._get_quote_summary_single_module('insiderHolders')
         return result['holders']
 
-    @_async_log_args
+    @_async_log_func
     async def get_net_share_purchase_activity(self) -> NetSharePurchaseActivity:
         """Get net share purchase activity for the ticker.
 
@@ -968,7 +968,7 @@ class AsyncSymbol(SymbolBase):
         """
         return await self._get_quote_summary_single_module('netSharePurchaseActivity')
 
-    @_async_log_args
+    @_async_log_func
     async def get_earnings(self) -> Earnings:
         """Get earnings for the ticker.
 
@@ -976,7 +976,7 @@ class AsyncSymbol(SymbolBase):
         """
         return await self._get_quote_summary_single_module('earnings')
 
-    @_async_log_args
+    @_async_log_func
     async def get_earnings_history(self) -> list[EarningsHistoryItem]:
         """Get earnings history for the ticker.
 
@@ -985,7 +985,7 @@ class AsyncSymbol(SymbolBase):
         result = await self._get_quote_summary_single_module('earningsHistory')
         return result['history']
 
-    @_async_log_args
+    @_async_log_func
     async def get_earnings_trend(self) -> list[EarningsTrendItem]:
         """Get earnings trend for the ticker.
 
@@ -994,7 +994,7 @@ class AsyncSymbol(SymbolBase):
         result = await self._get_quote_summary_single_module('earningsTrend')
         return result['trend']
 
-    @_async_log_args
+    @_async_log_func
     async def get_industry_trend(self) -> IndustryTrend:
         """Get industry trend for the ticker.
 
@@ -1002,7 +1002,7 @@ class AsyncSymbol(SymbolBase):
         """
         return await self._get_quote_summary_single_module('industryTrend')
 
-    @_async_log_args
+    @_async_log_func
     async def get_index_trend(self) -> IndexTrend:
         """Get index trend for the ticker.
 
@@ -1010,7 +1010,7 @@ class AsyncSymbol(SymbolBase):
         """
         return await self._get_quote_summary_single_module('indexTrend')
 
-    @_async_log_args
+    @_async_log_func
     async def get_sector_trend(self) -> SectorTrend:
         """Get sector trend for the ticker.
 
@@ -1018,7 +1018,7 @@ class AsyncSymbol(SymbolBase):
         """
         return await self._get_quote_summary_single_module('sectorTrend')
 
-    @_async_log_args
+    @_async_log_func
     async def get_recommendation_trend(self) -> list[RecommendationTrendItem]:
         """Get recommendation trend for the ticker.
 
@@ -1027,7 +1027,7 @@ class AsyncSymbol(SymbolBase):
         result = await self._get_quote_summary_single_module('recommendationTrend')
         return result['trend']
 
-    @_async_log_args
+    @_async_log_func
     async def get_page_views(self) -> PageViews:
         """Get page views for the ticker.
 
@@ -1035,7 +1035,7 @@ class AsyncSymbol(SymbolBase):
         """
         return await self._get_quote_summary_single_module('pageViews')
 
-    @_async_log_args
+    @_async_log_func
     async def _get_financials(
         self,
         frequency: str,
@@ -1050,7 +1050,7 @@ class AsyncSymbol(SymbolBase):
         )
         return timeseries_json['timeseries']['result']
 
-    @_async_log_args
+    @_async_log_func
     async def get_income_statement(
         self,
         frequency: str,
@@ -1071,7 +1071,7 @@ class AsyncSymbol(SymbolBase):
             frequency, 'income_statement', period1, period2
         )
 
-    @_async_log_args
+    @_async_log_func
     async def get_balance_sheet(
         self,
         frequency: str,
@@ -1090,7 +1090,7 @@ class AsyncSymbol(SymbolBase):
         """
         return await self._get_financials(frequency, 'balance_sheet', period1, period2)
 
-    @_async_log_args
+    @_async_log_func
     async def get_cash_flow(
         self,
         frequency: str,
@@ -1109,7 +1109,7 @@ class AsyncSymbol(SymbolBase):
         """
         return await self._get_financials(frequency, 'cash_flow', period1, period2)
 
-    @_async_log_args
+    @_async_log_func
     async def get_options(self) -> OptionChainResult:
         """Get options data for the ticker.
 
@@ -1119,7 +1119,7 @@ class AsyncSymbol(SymbolBase):
         options_json = await self._client.get_options(self.ticker)
         return options_json['optionChain']['result'][0]
 
-    @_async_log_args
+    @_async_log_func
     async def get_search(self) -> SearchResponseJson:
         """Get search results for the ticker.
 
@@ -1128,7 +1128,7 @@ class AsyncSymbol(SymbolBase):
         await self._get_client()
         return await self._client.get_search(self.ticker)
 
-    @_async_log_args
+    @_async_log_func
     async def get_recommendations(self) -> RecommendationsFinanceResult:
         """Get analyst recommendations for the ticker.
 
@@ -1138,7 +1138,7 @@ class AsyncSymbol(SymbolBase):
         recommendations_json = await self._client.get_recommendations(self.ticker)
         return recommendations_json['finance']['result'][0]
 
-    @_async_log_args
+    @_async_log_func
     async def get_insights(self) -> InsightsFinanceResult:
         """Get insights for the ticker.
 
@@ -1148,7 +1148,7 @@ class AsyncSymbol(SymbolBase):
         insights_json = await self._client.get_insights(self.ticker)
         return insights_json['finance']['result'][0]
 
-    @_async_log_args
+    @_async_log_func
     async def get_ratings(self) -> RatingsResponseJson:
         """Get ratings for the ticker.
 

@@ -37,9 +37,11 @@ class TestIntegrationClient:
             yield client
 
     @pytest.mark.integration
-    def test_get_chart(self, client: Client, ticker: str) -> None:
+    def test_get_chart(
+        self, client: Client, ticker: str, interval: str, period_range: str
+    ) -> None:
         """Test get_chart method."""
-        chart = client.get_chart(ticker, interval='1d', period_range='1y')
+        chart = client.get_chart(ticker, interval, period_range)
         _assert_chart_response_json(chart, ticker)
 
     @pytest.mark.integration
@@ -135,9 +137,11 @@ class TestIntegrationAsyncClient:
 
     @pytest.mark.integration
     @pytest.mark.asyncio
-    async def test_get_chart(self, async_client: AsyncClient, ticker: str) -> None:
+    async def test_get_chart(
+        self, async_client: AsyncClient, ticker: str, interval: str, period_range: str
+    ) -> None:
         """Test get_chart method."""
-        chart = await async_client.get_chart(ticker, interval='1d', period_range='1y')
+        chart = await async_client.get_chart(ticker, interval, period_range)
         _assert_chart_response_json(chart, ticker)
 
     @pytest.mark.integration

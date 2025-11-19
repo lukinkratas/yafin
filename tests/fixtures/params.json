@@ -4,6 +4,8 @@
     "META",
     "AAPL"
   ],
+  "interval": "1d",
+  "period_range": "1y",
   "period1": 1577833200.0,
-  "period2": 1763537429.504583
+  "period2": 1763542357.874387
 }

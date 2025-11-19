@@ -106,10 +106,10 @@
         },
         "events": [
           {
-            "eventType": "Commodity Channel Index",
+            "eventType": "Relative Strength Index (RSI)",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "U",
+            "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
             "startDate": 1762785000,
             "endDate": 1762785000
@@ -276,6 +276,15 @@
             "formType": "S-8 POS"
           },
           {
+            "id": "0001326801-25-000096_1326801",
+            "type": "Offering Registrations",
+            "title": "S-8 POS : Offering Registrations",
+            "description": "Post-effective amendment to a S-8 registration statement",
+            "filingDate": 1748563200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000096/thumbnail.png",
+            "formType": "S-8 POS"
+          },
+          {
             "id": "0001326801-25-000090_1326801",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
@@ -285,12 +294,12 @@
             "formType": "8-K"
           },
           {
-            "id": "0001326801-25-000096_1326801",
+            "id": "0001326801-25-000094_1326801",
             "type": "Offering Registrations",
             "title": "S-8 POS : Offering Registrations",
             "description": "Post-effective amendment to a S-8 registration statement",
             "filingDate": 1748563200000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000096/thumbnail.png",
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000094/thumbnail.png",
             "formType": "S-8 POS"
           },
           {
@@ -303,12 +312,12 @@
             "formType": "S-8 POS"
           },
           {
-            "id": "0001326801-25-000094_1326801",
+            "id": "0001326801-25-000093_1326801",
             "type": "Offering Registrations",
             "title": "S-8 POS : Offering Registrations",
             "description": "Post-effective amendment to a S-8 registration statement",
             "filingDate": 1748563200000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000094/thumbnail.png",
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000093/thumbnail.png",
             "formType": "S-8 POS"
           },
           {
@@ -318,15 +327,6 @@
             "description": "Post-effective amendment to a S-8 registration statement",
             "filingDate": 1748563200000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000092/thumbnail.png",
-            "formType": "S-8 POS"
-          },
-          {
-            "id": "0001326801-25-000093_1326801",
-            "type": "Offering Registrations",
-            "title": "S-8 POS : Offering Registrations",
-            "description": "Post-effective amendment to a S-8 registration statement",
-            "filingDate": 1748563200000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000093/thumbnail.png",
             "formType": "S-8 POS"
           },
           {

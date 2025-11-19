@@ -8,7 +8,7 @@
       "quoteType": "EQUITY",
       "symbol": "META",
       "index": "quotes",
-      "score": 11893000.0,
+      "score": 12002000.0,
       "typeDisp": "Equity",
       "longname": "Meta Platforms, Inc.",
       "exchDisp": "NASDAQ",
@@ -27,7 +27,7 @@
       "quoteType": "EQUITY",
       "symbol": "AAPL",
       "index": "quotes",
-      "score": 17520500.0,
+      "score": 17906000.0,
       "typeDisp": "Equity",
       "longname": "Apple Inc.",
       "exchDisp": "NASDAQ",
@@ -39,6 +39,124 @@
     }
   ],
   "news": [
+    {
+      "uuid": "a30741eb-8a55-3223-83a4-a42d94509261",
+      "title": "Meta wins historic FTC antitrust trial focused on WhatsApp, Instagram",
+      "publisher": "Euronews",
+      "link": "https://finance.yahoo.com/m/a30741eb-8a55-3223-83a4-a42d94509261/meta-wins-historic-ftc.html",
+      "providerPublishTime": 1763541971,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/.kvWqsayuJhO03HLLzo.TA--~B/aD00NTA7dz04MDA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/euronews_us_articles_576/aecd8befccad3b751b912ecd2a301047",
+            "width": 800,
+            "height": 450,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/xu9V2WJSJnI1Wdongw_bxw--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/euronews_us_articles_576/aecd8befccad3b751b912ecd2a301047",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "META",
+        "GOOGL"
+      ]
+    },
+    {
+      "uuid": "57e06870-1187-395a-bc0f-bea8ef30eb3f",
+      "title": "Stocks struggle as Nvidia takes centre stage amid AI bubble fears",
+      "publisher": "AFP",
+      "link": "https://finance.yahoo.com/news/asian-markets-bounce-nvidia-takes-025415956.html",
+      "providerPublishTime": 1763540668,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/XGcIZs8oh5C8XvnjiSMjEw--~B/aD01MTI7dz03Njg7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/afp.com/d1e64b5a8a03f94b9c64e820ce99006e",
+            "width": 768,
+            "height": 512,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/vYN1Kax6h4wZhVoa4rEiiQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/afp.com/d1e64b5a8a03f94b9c64e820ce99006e",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "NVDA",
+        "AMZN",
+        "META",
+        "GOOGL",
+        "AAPL"
+      ]
+    },
+    {
+      "uuid": "1deec21f-a0c8-3bd7-ad89-07a80a8f5620",
+      "title": "Meta (META): Is the Valuation Right After Recent Momentum Slows?",
+      "publisher": "Simply Wall St.",
+      "link": "https://finance.yahoo.com/news/meta-meta-valuation-recent-momentum-081419325.html",
+      "providerPublishTime": 1763540059,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/BrUhbDoJKeNJUavlZ7MvVQ--~B/aD00MzI7dz0xMTk0O2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/simply_wall_st__316/fba9687e0054b528b01bdfa6c56cd20c",
+            "width": 1194,
+            "height": 432,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/ugpo6zQdWTcUD0neJdvYVQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/simply_wall_st__316/fba9687e0054b528b01bdfa6c56cd20c",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "META"
+      ]
+    },
+    {
+      "uuid": "b3ff695c-4f19-34c1-8743-0f3850080ca7",
+      "title": "Zacks Investment Ideas feature highlights: Taiwan Semiconductor, Nvidia, Apple and Vertiv",
+      "publisher": "Zacks",
+      "link": "https://finance.yahoo.com/news/zacks-investment-ideas-feature-highlights-072800348.html",
+      "providerPublishTime": 1763537280,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/mYQcKrBErD723LN8P5V9xQ--~B/aD00MDA7dz02MzU7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/zacks.com/d87cc8e5693753ce8e232e0a527e4885",
+            "width": 635,
+            "height": 400,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/4sRxY11S5IcQIY38NXtlew--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/zacks.com/d87cc8e5693753ce8e232e0a527e4885",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "NVDA",
+        "TSM",
+        "TSMWF",
+        "VRT",
+        "AAPL",
+        "2330.TW"
+      ]
+    },
     {
       "uuid": "2c4e4273-ca14-3de6-9888-c6dcdff9ff22",
       "title": "Oracle and Other AI Stocks Are Spending Too Much Cash. These Companies Are Returning It in Spades.",
@@ -144,37 +262,6 @@
       ]
     },
     {
-      "uuid": "57e06870-1187-395a-bc0f-bea8ef30eb3f",
-      "title": "Asian markets bounce as Nvidia takes centre stage amid AI bubble fears",
-      "publisher": "AFP",
-      "link": "https://finance.yahoo.com/news/asian-markets-bounce-nvidia-takes-025415956.html",
-      "providerPublishTime": 1763520855,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/0pBPCOlKTqvuFh6JDDrrMQ--~B/aD01MTI7dz03Njg7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/afp.com/c6803932ba21e5c11b6cb55fe32a7ca1",
-            "width": 768,
-            "height": 512,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/veG4dTgtGU.6_IDUIleZvQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/afp.com/c6803932ba21e5c11b6cb55fe32a7ca1",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "NVDA",
-        "AMZN",
-        "META",
-        "GOOGL",
-        "AAPL"
-      ]
-    },
-    {
       "uuid": "6891b76c-cb72-33c6-9215-90e051a68b6b",
       "title": "Warren Buffett Keeps Selling His Apple Stock: Should You?",
       "publisher": "Motley Fool",
@@ -201,91 +288,6 @@
         "AAPL",
         "GOOGL",
         "AXP"
-      ]
-    },
-    {
-      "uuid": "22718a9b-1884-3ecc-b9e1-110357f0bcc8",
-      "title": "Purpose Investments Inc. Announces November 2025 Distributions",
-      "publisher": "GlobeNewswire",
-      "link": "https://finance.yahoo.com/news/purpose-investments-inc-announces-november-000000080.html",
-      "providerPublishTime": 1763510400,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/YgQMiH9QwTaoJUmp3tIYqg--~B/aD03NTAwO3c9MTE1ODQ7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/globenewswire.com/ca68d7c660d4a63860be9c2e8901c158",
-            "width": 11584,
-            "height": 7500,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/Oi3lV.kAkWEnh5IwBrBcOQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/globenewswire.com/ca68d7c660d4a63860be9c2e8901c158",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "AAPL"
-      ]
-    },
-    {
-      "uuid": "148d420a-194d-313e-9234-635f97927405",
-      "title": "Heard on the Street Recap: Stocks Continue Losing Streak",
-      "publisher": "The Wall Street Journal",
-      "link": "https://finance.yahoo.com/m/148d420a-194d-313e-9234-635f97927405/heard-on-the-street-recap%3A.html",
-      "providerPublishTime": 1763503771,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/Fwf5HL4GsEGPbDfR3MJBPg--~B/aD02MzA7dz0xMjAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/wsj.com/7b2c285183be07ca3c4e8242b25a59a8",
-            "width": 1200,
-            "height": 630,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/zIJaagDuCJitt1Cvcwyc7A--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/wsj.com/7b2c285183be07ca3c4e8242b25a59a8",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "NVDA",
-        "META",
-        "HD",
-        "MSFT",
-        "ANTH.PVT"
-      ]
-    },
-    {
-      "uuid": "c7d41227-b62c-36fe-9016-7f95a52f6d13",
-      "title": "Meta Defeats FTC\u2019s Antitrust Case Alleging Social-Media Monopoly",
-      "publisher": "The Wall Street Journal",
-      "link": "https://finance.yahoo.com/m/c7d41227-b62c-36fe-9016-7f95a52f6d13/meta-defeats-ftc%E2%80%99s-antitrust.html",
-      "providerPublishTime": 1763503680,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/Gup5KmBZ7Iv3DzZzlOMMpQ--~B/aD02NDA7dz0xMjgwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/wsj.com/4d99e12ef35715eac058d2e9eba30972",
-            "width": 1280,
-            "height": 640,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/gGnW_iUYJlImAT904U2xbA--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/wsj.com/4d99e12ef35715eac058d2e9eba30972",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "META"
       ]
     }
   ],
@@ -346,8 +348,8 @@
   ],
   "researchReports": [],
   "screenerFieldResults": [],
-  "totalTime": 52,
-  "timeTakenForQuotes": 443,
+  "totalTime": 51,
+  "timeTakenForQuotes": 441,
   "timeTakenForNews": 700,
   "timeTakenForAlgowatchlist": 400,
   "timeTakenForPredefinedScreener": 400,

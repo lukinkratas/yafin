@@ -200,14 +200,9 @@ class TestUnitClient:
     @pytest.mark.parametrize(
         'kwargs',
         [
-            dict(interval='1d'),
-            dict(interval='1d', period_range='1y'),
-            dict(interval='1d', period_range='1y', events='div,split,earn,capitalGain'),
-            dict(
-                interval='1d',
-                period_range='1y',
-                events=' div , split , earn , capitalGain ',
-            ),
+            dict(),
+            dict(events='div,split,earn,capitalGain'),
+            dict(events=' div , split , earn , capitalGain '),
         ],
     )
     def test_get_chart(
@@ -217,6 +212,8 @@ class TestUnitClient:
         mocker: MockerFixture,
         chart_json_mock: dict[str, Any],
         ticker: str,
+        interval: str,
+        period_range: str | None,
         period1: int | float | None,
         period2: int | float | None,
     ) -> None:
@@ -227,7 +224,12 @@ class TestUnitClient:
             response_json=chart_json_mock,
         )
         chart = client.get_chart(
-            ticker=ticker, **kwargs, period1=period1, period2=period2
+            ticker=ticker,
+            interval=interval,
+            period_range=period_range,
+            period1=period1,
+            period2=period2,
+            **kwargs,
         )
         _assert_chart_response_json(chart, ticker)
 
@@ -770,14 +772,9 @@ class TestUnitAsyncClient:
     @pytest.mark.parametrize(
         'kwargs',
         [
-            dict(interval='1d'),
-            dict(interval='1d', period_range='1y'),
-            dict(interval='1d', period_range='1y', events='div,split,earn,capitalGain'),
-            dict(
-                interval='1d',
-                period_range='1y',
-                events=' div , split , earn , capitalGain ',
-            ),
+            dict(),
+            dict(events='div,split,earn,capitalGain'),
+            dict(events=' div , split , earn , capitalGain '),
         ],
     )
     @pytest.mark.asyncio
@@ -788,6 +785,8 @@ class TestUnitAsyncClient:
         mocker: MockerFixture,
         chart_json_mock: dict[str, Any],
         ticker: str,
+        interval: str,
+        period_range: str | None,
         period1: int | float | None,
         period2: int | float | None,
     ) -> None:
@@ -799,7 +798,12 @@ class TestUnitAsyncClient:
             async_mock=True,
         )
         chart = await async_client.get_chart(
-            ticker=ticker, **kwargs, period1=period1, period2=period2
+            ticker=ticker,
+            interval=interval,
+            period_range=period_range,
+            period1=period1,
+            period2=period2,
+            **kwargs,
         )
         _assert_chart_response_json(chart, ticker)
 

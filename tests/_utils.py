@@ -2,6 +2,7 @@ import json
 import pathlib
 from typing import Any
 
+import pandas as pd
 from curl_cffi.requests import Response
 from curl_cffi.requests.exceptions import HTTPError
 from pytest_mock import MockerFixture
@@ -50,3 +51,51 @@ def _mock_response(
 
     mock_class = mocker.AsyncMock if async_mock else mocker.Mock
     mocker.patch(patched_method, new=mock_class(return_value=mock_response))
+
+
+def _process_chart_like_yfinance(chart: dict[str, Any]) -> pd.DataFrame:
+    """Process chart response json into pandas dataframe, exact as yfinance."""
+    timestamps = chart['timestamp']
+    ohlcvs = chart['indicators']['quote'][0]
+    # adjcloses = chart['indicators']['adjclose'][0]['adjclose']
+
+    chart_df = pd.DataFrame({**ohlcvs}, index=timestamps).rename(
+        columns={
+            'open': 'Open',
+            'volume': 'Volume',
+            'close': 'Close',
+            'low': 'Low',
+            'high': 'High',
+        }
+    )
+
+    tz = '-01:00'
+    chart_df['Date'] = pd.to_datetime(chart_df.index.values, unit='s', utc=True)
+    chart_df['Date'] = chart_df['Date'].dt.tz_convert(tz)
+
+    dividends = chart['events'].get('dividends')
+    dividends_df = (
+        pd.DataFrame(
+            dividends.values() if dividends is not None else {'date': [], 'amount': []}
+        )
+        .set_index('date')
+        .rename(columns={'amount': 'Dividends'})
+    )
+    chart_df = chart_df.join(dividends_df).fillna(value={'Dividends': 0})
+
+    splits = chart['events'].get('splits')
+    splits_df = (
+        pd.DataFrame(
+            splits.values() if splits is not None else {'date': [], 'numerator': []}
+        )
+        .set_index('date')
+        .rename(columns={'numerator': 'Stock Splits'})
+    )
+    chart_df = chart_df.join(splits_df['Stock Splits']).fillna(
+        value={'Stock Splits': 0}
+    )
+
+    return chart_df.set_index('Date').loc[
+        :,
+        ['Open', 'High', 'Low', 'Close', 'Volume', 'Dividends', 'Stock Splits'],
+    ]

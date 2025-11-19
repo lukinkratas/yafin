@@ -73,7 +73,7 @@ test-all:
 	uv run --group test pytest tests/ -m "not performance" --cov=yafin --cov-report=term-missing --cov-branch --cov-fail-under=95 --cov-report=html:htmlcov
 
 clean:
-	rm -rvf __pycache__ scripts/__pycache__ tests/__pycache__ tests/integration/__pycache__ tests/unit/__pycache__ yafin/__pycache__ .pytest_cache .mypy_cache .ruff_cache .coverage htmlcov main.log dist yafin.egg-info site tests/fixtures/*.json tests/fixtures/*/*.json *.csv
+	rm -rvf __pycache__ scripts/__pycache__ tests/__pycache__ tests/integration/__pycache__ tests/unit/__pycache__ yafin/__pycache__ .pytest_cache .mypy_cache .ruff_cache .coverage htmlcov main.log dist yafin.egg-info site tests/fixtures/*.json tests/fixtures/*/* *.csv
 
 build:
 	uv build

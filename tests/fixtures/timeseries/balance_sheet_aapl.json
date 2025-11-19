@@ -676,64 +676,6 @@
             "AAPL"
           ],
           "type": [
-            "annualOtherEquityAdjustments"
-          ]
-        },
-        "timestamp": [
-          1664496000,
-          1696032000,
-          1727654400,
-          1759190400
-        ],
-        "annualOtherEquityAdjustments": [
-          {
-            "dataId": 23335,
-            "asOfDate": "2022-09-30",
-            "periodType": "12M",
-            "currencyCode": "USD",
-            "reportedValue": {
-              "raw": -11109000000.0,
-              "fmt": "-11.11B"
-            }
-          },
-          {
-            "dataId": 23335,
-            "asOfDate": "2023-09-30",
-            "periodType": "12M",
-            "currencyCode": "USD",
-            "reportedValue": {
-              "raw": -11452000000.0,
-              "fmt": "-11.45B"
-            }
-          },
-          {
-            "dataId": 23335,
-            "asOfDate": "2024-09-30",
-            "periodType": "12M",
-            "currencyCode": "USD",
-            "reportedValue": {
-              "raw": -7172000000.0,
-              "fmt": "-7.17B"
-            }
-          },
-          {
-            "dataId": 23335,
-            "asOfDate": "2025-09-30",
-            "periodType": "12M",
-            "currencyCode": "USD",
-            "reportedValue": {
-              "raw": -5571000000.0,
-              "fmt": "-5.57B"
-            }
-          }
-        ]
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
             "annualCurrentDeferredRevenue"
           ]
         },
@@ -782,6 +724,64 @@
             "reportedValue": {
               "raw": 9055000000.0,
               "fmt": "9.05B"
+            }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualOtherEquityAdjustments"
+          ]
+        },
+        "timestamp": [
+          1664496000,
+          1696032000,
+          1727654400,
+          1759190400
+        ],
+        "annualOtherEquityAdjustments": [
+          {
+            "dataId": 23335,
+            "asOfDate": "2022-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": {
+              "raw": -11109000000.0,
+              "fmt": "-11.11B"
+            }
+          },
+          {
+            "dataId": 23335,
+            "asOfDate": "2023-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": {
+              "raw": -11452000000.0,
+              "fmt": "-11.45B"
+            }
+          },
+          {
+            "dataId": 23335,
+            "asOfDate": "2024-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": {
+              "raw": -7172000000.0,
+              "fmt": "-7.17B"
+            }
+          },
+          {
+            "dataId": 23335,
+            "asOfDate": "2025-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": {
+              "raw": -5571000000.0,
+              "fmt": "-5.57B"
             }
           }
         ]
@@ -3975,7 +3975,7 @@
             "AAPL"
           ],
           "type": [
-            "annualPreferredStock"
+            "annualAdditionalPaidInCapital"
           ]
         }
       },
@@ -3985,7 +3985,7 @@
             "AAPL"
           ],
           "type": [
-            "annualGeneralPartnershipCapital"
+            "annualTradingSecurities"
           ]
         }
       },
@@ -3995,177 +3995,7 @@
             "AAPL"
           ],
           "type": [
-            "annualCurrentDeferredTaxesAssets"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualInvestmentsinSubsidiariesatCost"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualAllowanceForDoubtfulAccountsReceivable"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualGoodwill"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualDuetoRelatedPartiesCurrent"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualPrepaidAssets"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualLongTermProvisions"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualRestrictedCommonStock"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualGrossAccountsReceivable"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualPreferredStockEquity"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualNonCurrentAccruedExpenses"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualGoodwillAndOtherIntangibleAssets"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualInventoriesAdjustmentsAllowances"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualNonCurrentAccountsReceivable"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualNonCurrentDeferredLiabilities"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualFinancialAssets"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualOtherEquityInterest"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualTotalPartnershipCapital"
+            "annualHedgingAssetsCurrent"
           ]
         }
       },
@@ -4185,7 +4015,37 @@
             "AAPL"
           ],
           "type": [
-            "annualUnrealizedGainLoss"
+            "annualOtherPayable"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualFinancialAssetsDesignatedasFairValueThroughProfitorLossTotal"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualOtherIntangibleAssets"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualInvestmentsInOtherVenturesUnderEquityMethod"
           ]
         }
       },
@@ -4205,16 +4065,6 @@
             "AAPL"
           ],
           "type": [
-            "annualConstructionInProgress"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
             "annualRestrictedCash"
           ]
         }
@@ -4225,7 +4075,7 @@
             "AAPL"
           ],
           "type": [
-            "annualInterestPayable"
+            "annualDefinedPensionBenefit"
           ]
         }
       },
@@ -4235,7 +4085,7 @@
             "AAPL"
           ],
           "type": [
-            "annualNonCurrentDeferredRevenue"
+            "annualNonCurrentPensionAndOtherPostretirementBenefitPlans"
           ]
         }
       },
@@ -4245,7 +4095,7 @@
             "AAPL"
           ],
           "type": [
-            "annualLineOfCredit"
+            "annualDuetoRelatedPartiesNonCurrent"
           ]
         }
       },
@@ -4255,27 +4105,7 @@
             "AAPL"
           ],
           "type": [
-            "annualMinimumPensionLiabilities"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualNonCurrentPrepaidAssets"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualInvestmentsinAssociatesatCost"
+            "annualAccruedInterestReceivable"
           ]
         }
       },
@@ -4295,7 +4125,7 @@
             "AAPL"
           ],
           "type": [
-            "annualHeldToMaturitySecurities"
+            "annualFinancialAssets"
           ]
         }
       },
@@ -4305,7 +4135,77 @@
             "AAPL"
           ],
           "type": [
-            "annualCashCashEquivalentsAndFederalFundsSold"
+            "annualCurrentDeferredTaxesLiabilities"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualConstructionInProgress"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualOtherEquityInterest"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualInventoriesAdjustmentsAllowances"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualForeignCurrencyTranslationAdjustments"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualGoodwill"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualReceivablesAdjustmentsAllowances"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualPensionandOtherPostRetirementBenefitPlansCurrent"
           ]
         }
       },
@@ -4325,7 +4225,7 @@
             "AAPL"
           ],
           "type": [
-            "annualPreferredSharesNumber"
+            "annualRawMaterials"
           ]
         }
       },
@@ -4345,7 +4245,7 @@
             "AAPL"
           ],
           "type": [
-            "annualTreasuryStock"
+            "annualInvestmentProperties"
           ]
         }
       },
@@ -4355,7 +4255,47 @@
             "AAPL"
           ],
           "type": [
-            "annualRawMaterials"
+            "annualUnrealizedGainLoss"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualInvestmentsinAssociatesatCost"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualNonCurrentDeferredLiabilities"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualNonCurrentDeferredRevenue"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualMinimumPensionLiabilities"
           ]
         }
       },
@@ -4366,6 +4306,26 @@
           ],
           "type": [
             "annualFinishedGoods"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualFixedAssetsRevaluationReserve"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualNonCurrentAccruedExpenses"
           ]
         }
       },
@@ -4395,217 +4355,7 @@
             "AAPL"
           ],
           "type": [
-            "annualBuildingsAndImprovements"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualOtherIntangibleAssets"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualWorkInProcess"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualFinancialAssetsDesignatedasFairValueThroughProfitorLossTotal"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualInvestmentsInOtherVenturesUnderEquityMethod"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualTradingSecurities"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualOtherCapitalStock"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualDuefromRelatedPartiesCurrent"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualCurrentNotesPayable"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualReceivablesAdjustmentsAllowances"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualLongTermEquityInvestment"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualDividendsPayable"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualHedgingAssetsCurrent"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualNonCurrentPensionAndOtherPostretirementBenefitPlans"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualAssetsHeldForSaleCurrent"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualForeignCurrencyTranslationAdjustments"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualAccruedInterestReceivable"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualDuetoRelatedPartiesNonCurrent"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualCurrentDeferredTaxesLiabilities"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualInvestmentProperties"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualNonCurrentDeferredTaxesLiabilities"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualAdditionalPaidInCapital"
+            "annualGrossAccountsReceivable"
           ]
         }
       },
@@ -4625,77 +4375,7 @@
             "AAPL"
           ],
           "type": [
-            "annualCurrentDeferredAssets"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualInvestmentsinJointVenturesatCost"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualTaxesReceivable"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualPensionandOtherPostRetirementBenefitPlansCurrent"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualOtherPayable"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualNotesReceivable"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualDefinedPensionBenefit"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualLiabilitiesHeldforSaleNonCurrent"
+            "annualNonCurrentAccountsReceivable"
           ]
         }
       },
@@ -4715,7 +4395,7 @@
             "AAPL"
           ],
           "type": [
-            "annualDuefromRelatedPartiesNonCurrent"
+            "annualDuetoRelatedPartiesCurrent"
           ]
         }
       },
@@ -4725,7 +4405,327 @@
             "AAPL"
           ],
           "type": [
-            "annualFixedAssetsRevaluationReserve"
+            "annualTreasuryStock"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualOtherCapitalStock"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualLineOfCredit"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualHeldToMaturitySecurities"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualAllowanceForDoubtfulAccountsReceivable"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualCashCashEquivalentsAndFederalFundsSold"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualRestrictedCommonStock"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualLiabilitiesHeldforSaleNonCurrent"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualInterestPayable"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualGeneralPartnershipCapital"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualPreferredStockEquity"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualCurrentNotesPayable"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualAssetsHeldForSaleCurrent"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualTaxesReceivable"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualDividendsPayable"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualCurrentDeferredAssets"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualCurrentDeferredTaxesAssets"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualLongTermProvisions"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualDuefromRelatedPartiesCurrent"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualInvestmentsinJointVenturesatCost"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualNotesReceivable"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualBuildingsAndImprovements"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualWorkInProcess"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualPreferredStock"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualNonCurrentPrepaidAssets"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualPrepaidAssets"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualGoodwillAndOtherIntangibleAssets"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualNonCurrentDeferredTaxesLiabilities"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualPreferredSharesNumber"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualTotalPartnershipCapital"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualInvestmentsinSubsidiariesatCost"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualLongTermEquityInvestment"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualDuefromRelatedPartiesNonCurrent"
           ]
         }
       }

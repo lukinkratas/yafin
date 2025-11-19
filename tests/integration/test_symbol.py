@@ -34,9 +34,9 @@ class TestUnitSymbol:
             yield symbol
 
     @pytest.mark.integration
-    def test_get_chart(self, symbol: Symbol) -> None:
+    def test_get_chart(self, symbol: Symbol, interval: str, period_range: str) -> None:
         """Test get_chart method."""
-        chart_result = symbol.get_chart(interval='1d', period_range='1y')
+        chart_result = symbol.get_chart(interval, period_range)
         _assert_chart_result(chart_result, symbol.ticker)
 
     @pytest.mark.integration
@@ -130,9 +130,11 @@ class TestUnitAsyncSymbol:
 
     @pytest.mark.integration
     @pytest.mark.asyncio
-    async def test_get_chart(self, async_symbol: AsyncSymbol) -> None:
+    async def test_get_chart(
+        self, async_symbol: AsyncSymbol, interval: str, period_range: str
+    ) -> None:
         """Test get_chart method."""
-        chart_result = await async_symbol.get_chart(interval='1d', period_range='1y')
+        chart_result = await async_symbol.get_chart(interval, period_range)
         _assert_chart_result(chart_result, async_symbol.ticker)
 
     @pytest.mark.integration

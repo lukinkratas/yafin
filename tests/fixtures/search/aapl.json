@@ -8,7 +8,7 @@
       "quoteType": "EQUITY",
       "symbol": "AAPL",
       "index": "quotes",
-      "score": 17520500.0,
+      "score": 17906000.0,
       "typeDisp": "Equity",
       "longname": "Apple Inc.",
       "exchDisp": "NASDAQ",
@@ -61,7 +61,7 @@
       "quoteType": "EQUITY",
       "symbol": "AAPL.BA",
       "index": "quotes",
-      "score": 20003.0,
+      "score": 20004.0,
       "typeDisp": "Equity",
       "longname": "Apple Inc.",
       "exchDisp": "Buenos Aires",
@@ -69,18 +69,6 @@
       "sectorDisp": "Technology",
       "industry": "Consumer Electronics",
       "industryDisp": "Consumer Electronics",
-      "isYahooFinance": true
-    },
-    {
-      "exchange": "OPR",
-      "shortname": "AAPL Nov 2025 270.000 put",
-      "quoteType": "OPTION",
-      "symbol": "AAPL251121P00270000",
-      "index": "quotes",
-      "score": 20002.0,
-      "typeDisp": "Option",
-      "longname": "AAPL Nov 2025 270.000 put",
-      "exchDisp": "OPR",
       "isYahooFinance": true
     },
     {
@@ -94,26 +82,38 @@
       "longname": "AAPL Nov 2025 272.500 put",
       "exchDisp": "OPR",
       "isYahooFinance": true
+    },
+    {
+      "exchange": "OPR",
+      "shortname": "AAPL Nov 2025 270.000 put",
+      "quoteType": "OPTION",
+      "symbol": "AAPL251121P00270000",
+      "index": "quotes",
+      "score": 20002.0,
+      "typeDisp": "Option",
+      "longname": "AAPL Nov 2025 270.000 put",
+      "exchDisp": "OPR",
+      "isYahooFinance": true
     }
   ],
   "news": [
     {
       "uuid": "57e06870-1187-395a-bc0f-bea8ef30eb3f",
-      "title": "Asian markets bounce as Nvidia takes centre stage amid AI bubble fears",
+      "title": "Stocks struggle as Nvidia takes centre stage amid AI bubble fears",
       "publisher": "AFP",
       "link": "https://finance.yahoo.com/news/asian-markets-bounce-nvidia-takes-025415956.html",
-      "providerPublishTime": 1763520855,
+      "providerPublishTime": 1763540668,
       "type": "STORY",
       "thumbnail": {
         "resolutions": [
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/0pBPCOlKTqvuFh6JDDrrMQ--~B/aD01MTI7dz03Njg7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/afp.com/c6803932ba21e5c11b6cb55fe32a7ca1",
+            "url": "https://s.yimg.com/uu/api/res/1.2/XGcIZs8oh5C8XvnjiSMjEw--~B/aD01MTI7dz03Njg7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/afp.com/d1e64b5a8a03f94b9c64e820ce99006e",
             "width": 768,
             "height": 512,
             "tag": "original"
           },
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/veG4dTgtGU.6_IDUIleZvQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/afp.com/c6803932ba21e5c11b6cb55fe32a7ca1",
+            "url": "https://s.yimg.com/uu/api/res/1.2/vYN1Kax6h4wZhVoa4rEiiQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/afp.com/d1e64b5a8a03f94b9c64e820ce99006e",
             "width": 140,
             "height": 140,
             "tag": "140x140"
@@ -126,6 +126,38 @@
         "META",
         "GOOGL",
         "AAPL"
+      ]
+    },
+    {
+      "uuid": "b3ff695c-4f19-34c1-8743-0f3850080ca7",
+      "title": "Zacks Investment Ideas feature highlights: Taiwan Semiconductor, Nvidia, Apple and Vertiv",
+      "publisher": "Zacks",
+      "link": "https://finance.yahoo.com/news/zacks-investment-ideas-feature-highlights-072800348.html",
+      "providerPublishTime": 1763537280,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/mYQcKrBErD723LN8P5V9xQ--~B/aD00MDA7dz02MzU7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/zacks.com/d87cc8e5693753ce8e232e0a527e4885",
+            "width": 635,
+            "height": 400,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/4sRxY11S5IcQIY38NXtlew--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/zacks.com/d87cc8e5693753ce8e232e0a527e4885",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "NVDA",
+        "TSM",
+        "TSMWF",
+        "VRT",
+        "AAPL",
+        "2330.TW"
       ]
     },
     {
@@ -304,42 +336,14 @@
         "META",
         "MSFT"
       ]
-    },
-    {
-      "uuid": "8f631c22-8281-3ff1-ba50-bed4b7936d77",
-      "title": "Cloudflare resolves outage, iPhone sales surge in China",
-      "publisher": "Yahoo Finance Video",
-      "link": "https://finance.yahoo.com/video/cloudflare-resolves-outage-iphone-sales-181114883.html",
-      "providerPublishTime": 1763489474,
-      "type": "VIDEO",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/TUTNuRlKJBZdflDvIqdHng--~B/aD0zMDM0O3c9NTM4ODthcHBpZD15dGFjaHlvbg--/https://s.yimg.com/os/creatr-uploaded-images/2025-11/ec5d4ce0-c4a9-11f0-9fec-d2d949dcc1e1",
-            "width": 5388,
-            "height": 3034,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/7blR8SWz0PK5tYGIKn1TOw--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://s.yimg.com/os/creatr-uploaded-images/2025-11/ec5d4ce0-c4a9-11f0-9fec-d2d949dcc1e1",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "NET",
-        "AAPL"
-      ]
     }
   ],
   "nav": [],
   "lists": [],
   "researchReports": [],
   "screenerFieldResults": [],
-  "totalTime": 46,
-  "timeTakenForQuotes": 436,
+  "totalTime": 42,
+  "timeTakenForQuotes": 433,
   "timeTakenForNews": 700,
   "timeTakenForAlgowatchlist": 400,
   "timeTakenForPredefinedScreener": 400,

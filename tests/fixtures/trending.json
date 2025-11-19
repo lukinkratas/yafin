@@ -8,10 +8,13 @@
             "symbol": "PLUG"
           },
           {
+            "symbol": "OLMA"
+          },
+          {
             "symbol": "TMC"
           },
           {
-            "symbol": "OLMA"
+            "symbol": "XRP-USD"
           },
           {
             "symbol": "NET"
@@ -23,22 +26,10 @@
             "symbol": "MRK"
           },
           {
-            "symbol": "WBD"
-          },
-          {
-            "symbol": "XRP-CAD"
+            "symbol": "WIX"
           },
           {
             "symbol": "1810.HK"
-          },
-          {
-            "symbol": "NVDA"
-          },
-          {
-            "symbol": "CEG"
-          },
-          {
-            "symbol": "T.TO"
           },
           {
             "symbol": "ANTH.PVT"
@@ -47,26 +38,35 @@
             "symbol": "SGBX"
           },
           {
-            "symbol": "KULR"
+            "symbol": "WBD"
           },
           {
-            "symbol": "EOSE"
+            "symbol": "CHR"
           },
           {
-            "symbol": "KLAR"
-          },
-          {
-            "symbol": "PDD"
-          },
-          {
-            "symbol": "WIX"
+            "symbol": "T.TO"
           },
           {
             "symbol": "COST"
+          },
+          {
+            "symbol": "CEG"
+          },
+          {
+            "symbol": "BTQ"
+          },
+          {
+            "symbol": "NVDA"
+          },
+          {
+            "symbol": "ONDS"
+          },
+          {
+            "symbol": "EOSE"
           }
         ],
-        "jobTimestamp": 1763536436681,
-        "startInterval": 202511190600
+        "jobTimestamp": 1763540047741,
+        "startInterval": 202511190700
       }
     ],
     "error": null

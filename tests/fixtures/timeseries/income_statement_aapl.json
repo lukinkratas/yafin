@@ -3147,7 +3147,7 @@
             "AAPL"
           ],
           "type": [
-            "annualPolicyholderBenefitsGross"
+            "annualGainOnSaleOfSecurity"
           ]
         }
       },
@@ -3157,7 +3157,7 @@
             "AAPL"
           ],
           "type": [
-            "annualGainOnSaleOfSecurity"
+            "annualPolicyholderBenefitsGross"
           ]
         }
       },
