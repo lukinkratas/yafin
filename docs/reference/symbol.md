@@ -1,4 +1,4 @@
-::: yafin.AsyncSymbol
+::: yafin.Symbol
     options:
         members:
         - __init__
@@ -40,4 +40,3 @@
         - get_recommendations
         - get_insights
         - get_ratings
-        - get_analysis

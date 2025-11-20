@@ -7,14 +7,14 @@ from typeguard import TypeCheckError
 
 from tests._assertions import (
     _assert_chart_result,
-    _assert_insight_result,
+    _assert_insights_result,
     _assert_options_result,
-    _assert_quote_result,
     _assert_quote_summary_result,
     _assert_quote_summary_single_module_result,
-    _assert_quote_type_result,
+    _assert_quote_types_result,
+    _assert_quotes_result,
     _assert_ratings_response_json,
-    _assert_recommendation_result,
+    _assert_recommendations_result,
     _assert_search_response_json,
     _assert_timeseries_result,
 )
@@ -27,7 +27,6 @@ from yafin.const import (
     QUOTE_SUMMARY_MODULES,
 )
 from yafin.exceptions import TrailingBalanceSheetError
-from yafin.symbol import _AsyncClientManager, _ClientManager
 
 
 @pytest.fixture
@@ -70,45 +69,6 @@ def calendar_events_json_mock(ticker: str) -> dict[str, Any]:
     return _get_json_fixture(
         file_name=f'calendar_events_{ticker.lower()}.json', folder_name='quote_summary'
     )
-
-
-class TestUnitClientManager:
-    """Unit tests for yafin._ClientManager module."""
-
-    @pytest.fixture
-    def client_manager(self) -> _ClientManager:
-        """Fresh new instance of _ClientManager for each tests."""
-        return _ClientManager()
-
-    def test_client(self, client_manager: _ClientManager) -> None:
-        """Test client attribute."""
-        assert client_manager._client is None
-        assert client_manager._refcount == 0
-
-        client_manager._get_client()
-        assert client_manager._client is not None
-        assert client_manager._refcount == 1
-
-        client_manager._release_client()
-        assert client_manager._client is None
-        assert client_manager._refcount == 0
-
-    def test_client_singleton(self, client_manager: _ClientManager) -> None:
-        """Test client attribute singleton pattern."""
-        client1 = client_manager._get_client()
-        client2 = client_manager._get_client()
-
-        assert client_manager._client is not None
-        assert client_manager._refcount == 2
-        assert client1 is client2
-
-        client_manager._release_client()
-        assert client_manager._client is not None
-        assert client_manager._refcount == 1
-
-        client_manager._release_client()
-        assert client_manager._client is None
-        assert client_manager._refcount == 0
 
 
 class TestUnitSymbol:
@@ -324,8 +284,8 @@ class TestUnitSymbol:
             patched_method='yafin.client.Session.get',
             response_json=quote_json_mock,
         )
-        quote_result = symbol.get_quote()
-        _assert_quote_result(quote_result, symbol.ticker)
+        quotes_result = symbol.get_quote()
+        _assert_quotes_result(quotes_result, symbol.ticker)
 
     def test_get_quote_type(
         self,
@@ -339,8 +299,8 @@ class TestUnitSymbol:
             patched_method='yafin.client.Session.get',
             response_json=quote_type_json_mock,
         )
-        quote_type_result = symbol.get_quote_type()
-        _assert_quote_type_result(quote_type_result, symbol.ticker)
+        quote_types_result = symbol.get_quote_type()
+        _assert_quote_types_result(quote_types_result, symbol.ticker)
 
     def test_get_quote_summary_all_modules(
         self,
@@ -966,8 +926,8 @@ class TestUnitSymbol:
             patched_method='yafin.client.Session.get',
             response_json=recommendations_json_mock,
         )
-        recommendations = symbol.get_recommendations()
-        _assert_recommendation_result(recommendations, symbol.ticker)
+        recommendations_result = symbol.get_recommendations()
+        _assert_recommendations_result(recommendations_result, symbol.ticker)
 
     def test_get_insights(
         self,
@@ -981,8 +941,8 @@ class TestUnitSymbol:
             patched_method='yafin.client.Session.get',
             response_json=insights_json_mock,
         )
-        insights = symbol.get_insights()
-        _assert_insight_result(insights, symbol.ticker)
+        insights_result = symbol.get_insights()
+        _assert_insights_result(insights_result, symbol.ticker)
 
     def test_get_ratings(
         self,
@@ -998,49 +958,6 @@ class TestUnitSymbol:
         )
         ratings = symbol.get_ratings()
         _assert_ratings_response_json(ratings)
-
-
-class TestUnitAsyncClientManager:
-    """Unit tests for yafin._AsyncClientManager module."""
-
-    @pytest_asyncio.fixture
-    async def async_client_manager(self) -> _AsyncClientManager:
-        """Fresh new instance of _ClientManager for each tests."""
-        return _AsyncClientManager()
-
-    @pytest.mark.asyncio
-    async def test_client(self, async_client_manager: _AsyncClientManager) -> None:
-        """Test client attribute."""
-        assert async_client_manager._client is None
-        assert async_client_manager._refcount == 0
-
-        await async_client_manager._get_client()
-        assert async_client_manager._client is not None
-        assert async_client_manager._refcount == 1
-
-        await async_client_manager._release_client()
-        assert async_client_manager._client is None
-        assert async_client_manager._refcount == 0
-
-    @pytest.mark.asyncio
-    async def test_client_singleton(
-        self, async_client_manager: _AsyncClientManager
-    ) -> None:
-        """Test client attribute singleton pattern."""
-        client1 = await async_client_manager._get_client()
-        client2 = await async_client_manager._get_client()
-
-        assert async_client_manager._client is not None
-        assert async_client_manager._refcount == 2
-        assert client1 is client2
-
-        await async_client_manager._release_client()
-        assert async_client_manager._client is not None
-        assert async_client_manager._refcount == 1
-
-        await async_client_manager._release_client()
-        assert async_client_manager._client is None
-        assert async_client_manager._refcount == 0
 
 
 class TestUnitAsyncSymbol:
@@ -1267,8 +1184,8 @@ class TestUnitAsyncSymbol:
             response_json=quote_json_mock,
             async_mock=True,
         )
-        quote_result = await async_symbol.get_quote()
-        _assert_quote_result(quote_result, async_symbol.ticker)
+        quotes_result = await async_symbol.get_quote()
+        _assert_quotes_result(quotes_result, async_symbol.ticker)
 
     @pytest.mark.asyncio
     async def test_get_quote_type(
@@ -1284,8 +1201,8 @@ class TestUnitAsyncSymbol:
             response_json=quote_type_json_mock,
             async_mock=True,
         )
-        quote_type_result = await async_symbol.get_quote_type()
-        _assert_quote_type_result(quote_type_result, async_symbol.ticker)
+        quote_types_result = await async_symbol.get_quote_type()
+        _assert_quote_types_result(quote_types_result, async_symbol.ticker)
 
     @pytest.mark.asyncio
     async def test_get_quote_summary_all_modules(
@@ -2001,8 +1918,8 @@ class TestUnitAsyncSymbol:
             response_json=recommendations_json_mock,
             async_mock=True,
         )
-        recommendations = await async_symbol.get_recommendations()
-        _assert_recommendation_result(recommendations, async_symbol.ticker)
+        recommendations_result = await async_symbol.get_recommendations()
+        _assert_recommendations_result(recommendations_result, async_symbol.ticker)
 
     @pytest.mark.asyncio
     async def test_get_insights(
@@ -2018,8 +1935,8 @@ class TestUnitAsyncSymbol:
             response_json=insights_json_mock,
             async_mock=True,
         )
-        insights = await async_symbol.get_insights()
-        _assert_insight_result(insights, async_symbol.ticker)
+        insights_result = await async_symbol.get_insights()
+        _assert_insights_result(insights_result, async_symbol.ticker)
 
     @pytest.mark.asyncio
     async def test_get_ratings(

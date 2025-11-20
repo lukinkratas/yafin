@@ -42,7 +42,7 @@ from .utils import (
 logger = logging.getLogger(__name__)
 
 
-class ClientBase(object):
+class ClientBase:
     """Base for synchronous and asynchronous Client classes for Yahoo Finance API.
 
     Warning: HTTP resources closing
@@ -1073,3 +1073,58 @@ class AsyncClient(ClientBase):
 
         response = await self._get_request(self._CALENDAR_EVENTS_URL, params)
         return response.json()
+
+
+class _SingletonClientManager:
+    """Manages a Client singleton."""
+
+    _client: Client | None = None
+    _refcount = 0
+
+    @classmethod
+    def _get_client(cls) -> Client:
+        """Create Client singleton if not exists."""
+        if cls._client is None:
+            cls._client = Client()
+
+        cls._refcount += 1
+
+        return cls._client
+
+    @classmethod
+    def _release_client(cls) -> None:
+        """Decrease refcount and close client singleton if no symbols left."""
+        cls._refcount -= 1
+
+        if cls._refcount <= 0 and cls._client is not None:
+            cls._client.close()
+            cls._client = None
+
+
+class _AsyncSingletonClientManager:
+    """Manages a AsyncClient singleton."""
+
+    _client: AsyncClient | None = None
+    _refcount = 0
+    _lock = asyncio.Lock()
+
+    @classmethod
+    async def _get_client(cls) -> AsyncClient:
+        """Create client singleton if not exists."""
+        async with cls._lock:
+            if cls._client is None:
+                cls._client = AsyncClient()
+
+            cls._refcount += 1
+
+            return cls._client
+
+    @classmethod
+    async def _release_client(cls) -> None:
+        """Decrease refcount and close client singleton if no symbols left."""
+        async with cls._lock:
+            cls._refcount -= 1
+
+            if cls._refcount <= 0 and cls._client is not None:
+                await cls._client.close()
+                cls._client = None

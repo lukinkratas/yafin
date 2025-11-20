@@ -1,9 +1,13 @@
-import asyncio
 import logging
 from types import TracebackType
 from typing import Any, Self, Type
 
-from .client import AsyncClient, Client
+from .client import (
+    AsyncClient,
+    Client,
+    _AsyncSingletonClientManager,
+    _SingletonClientManager,
+)
 from .const import QUOTE_SUMMARY_MODULES
 from .types import (
     AssetProfile,
@@ -47,61 +51,6 @@ from .utils import _async_log_func, _log_func, get_types_with_frequency
 logger = logging.getLogger(__name__)
 
 
-class _ClientManager:
-    """Manages a Client singleton for all symbols."""
-
-    _client: Client | None = None
-    _refcount = 0
-
-    @classmethod
-    def _get_client(cls) -> Client:
-        """Create Client singleton if not exists."""
-        if cls._client is None:
-            cls._client = Client()
-
-        cls._refcount += 1
-
-        return cls._client
-
-    @classmethod
-    def _release_client(cls) -> None:
-        """Decrease refcount and close client singleton if no symbols left."""
-        cls._refcount -= 1
-
-        if cls._refcount <= 0 and cls._client is not None:
-            cls._client.close()
-            cls._client = None
-
-
-class _AsyncClientManager:
-    """Manages a AsyncClient singleton for all symbols."""
-
-    _client: AsyncClient | None = None
-    _refcount = 0
-    _lock = asyncio.Lock()
-
-    @classmethod
-    async def _get_client(cls) -> AsyncClient:
-        """Create client singleton if not exists."""
-        async with cls._lock:
-            if cls._client is None:
-                cls._client = AsyncClient()
-
-            cls._refcount += 1
-
-            return cls._client
-
-    @classmethod
-    async def _release_client(cls) -> None:
-        """Decrease refcount and close client singleton if no symbols left."""
-        async with cls._lock:
-            cls._refcount -= 1
-
-            if cls._refcount <= 0 and cls._client is not None:
-                await cls._client.close()
-                cls._client = None
-
-
 class SymbolBase:
     """Base for synchronous and asynchronous Symbol classes for a specific ticker.
 
@@ -135,7 +84,7 @@ class Symbol(SymbolBase):
     Attributes:
         ticker: Ticker symbol.
         _client:
-            client instance, that is used for all http requests.
+            Client instance, that is used for all http requests.
                 (Is lazily initialized.)
 
     Methods:
@@ -188,7 +137,7 @@ class Symbol(SymbolBase):
 
     def _get_client(self) -> None:
         if self._client is None:
-            self._client = _ClientManager._get_client()
+            self._client = _SingletonClientManager._get_client()
 
     def close(self) -> None:
         """Release the client if open for current symbol.
@@ -198,7 +147,7 @@ class Symbol(SymbolBase):
                 closed.
         """
         if self._client is not None:
-            _ClientManager._release_client()
+            _SingletonClientManager._release_client()
             self._client = None
 
     def __enter__(self) -> Self:
@@ -650,7 +599,7 @@ class AsyncSymbol(SymbolBase):
     Attributes:
         ticker: Ticker symbol.
         _client:
-            client instance, that is used for all http requests.
+            Client instance, that is used for all http requests.
                 (Is lazily initialized.)
 
     Methods:
@@ -703,7 +652,7 @@ class AsyncSymbol(SymbolBase):
 
     async def _get_client(self) -> None:
         if self._client is None:
-            self._client = await _AsyncClientManager._get_client()
+            self._client = await _AsyncSingletonClientManager._get_client()
 
     async def close(self) -> None:
         """Release the client if open for current symbol.
@@ -713,7 +662,7 @@ class AsyncSymbol(SymbolBase):
                 closed.
         """
         if self._client is not None:
-            await _AsyncClientManager._release_client()
+            await _AsyncSingletonClientManager._release_client()
             self._client = None
 
     async def __aenter__(self) -> Self:

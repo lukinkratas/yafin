@@ -25,6 +25,7 @@ from tests._assertions import (
 )
 from tests._utils import _get_json_fixture, _mock_response
 from yafin import AsyncClient, Client
+from yafin.client import _AsyncSingletonClientManager, _SingletonClientManager
 from yafin.const import (
     ANNUAL_INCOME_STATEMENT_TYPES,
     CALENDAR_EVENT_MODULES,
@@ -1275,3 +1276,87 @@ class TestUnitAsyncClient:
         """Test get_calendar_events method with invalid arguments."""
         with pytest.raises(err_cls):
             await async_client.get_calendar_events(**kwargs)
+
+
+class TestUnitClientManager:
+    """Unit tests for yafin._ClientManager module."""
+
+    @pytest.fixture
+    def client_manager(self) -> _SingletonClientManager:
+        """Fresh new instance of _ClientManager for each tests."""
+        return _SingletonClientManager()
+
+    def test_client(self, client_manager: _SingletonClientManager) -> None:
+        """Test client attribute."""
+        assert client_manager._client is None
+        assert client_manager._refcount == 0
+
+        client_manager._get_client()
+        assert client_manager._client is not None
+        assert client_manager._refcount == 1
+
+        client_manager._release_client()
+        assert client_manager._client is None
+        assert client_manager._refcount == 0
+
+    def test_client_singleton(self, client_manager: _SingletonClientManager) -> None:
+        """Test client attribute singleton pattern."""
+        client1 = client_manager._get_client()
+        client2 = client_manager._get_client()
+
+        assert client_manager._client is not None
+        assert client_manager._refcount == 2
+        assert client1 is client2
+
+        client_manager._release_client()
+        assert client_manager._client is not None
+        assert client_manager._refcount == 1
+
+        client_manager._release_client()
+        assert client_manager._client is None
+        assert client_manager._refcount == 0
+
+
+class TestUnitAsyncClientManager:
+    """Unit tests for yafin._AsyncClientManager module."""
+
+    @pytest_asyncio.fixture
+    async def async_client_manager(self) -> _AsyncSingletonClientManager:
+        """Fresh new instance of _ClientManager for each tests."""
+        return _AsyncSingletonClientManager()
+
+    @pytest.mark.asyncio
+    async def test_client(
+        self, async_client_manager: _AsyncSingletonClientManager
+    ) -> None:
+        """Test client attribute."""
+        assert async_client_manager._client is None
+        assert async_client_manager._refcount == 0
+
+        await async_client_manager._get_client()
+        assert async_client_manager._client is not None
+        assert async_client_manager._refcount == 1
+
+        await async_client_manager._release_client()
+        assert async_client_manager._client is None
+        assert async_client_manager._refcount == 0
+
+    @pytest.mark.asyncio
+    async def test_client_singleton(
+        self, async_client_manager: _AsyncSingletonClientManager
+    ) -> None:
+        """Test client attribute singleton pattern."""
+        client1 = await async_client_manager._get_client()
+        client2 = await async_client_manager._get_client()
+
+        assert async_client_manager._client is not None
+        assert async_client_manager._refcount == 2
+        assert client1 is client2
+
+        await async_client_manager._release_client()
+        assert async_client_manager._client is not None
+        assert async_client_manager._refcount == 1
+
+        await async_client_manager._release_client()
+        assert async_client_manager._client is None
+        assert async_client_manager._refcount == 0

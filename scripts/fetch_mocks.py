@@ -23,7 +23,7 @@ logger = logging.getLogger(__name__)
 
 TICKERS = 'META,AAPL'
 TICKERS_NAME = TICKERS.replace(',', '_').lower()
-TICKER_LIST = TICKERS.split(',')
+TICKERS_LIST = TICKERS.split(',')
 PERIOD1 = datetime(2020, 1, 1).timestamp()
 PERIOD2 = datetime.now().timestamp()
 INTERVAL = '1d'
@@ -62,7 +62,7 @@ async def main() -> None:  # noqa: D103
 
     params = dict(
         tickers=TICKERS,
-        ticker_list=TICKER_LIST,
+        tickers_list=TICKERS_LIST,
         interval=INTERVAL,
         period_range=PERIOD_RANGE,
         period1=PERIOD1,
@@ -109,7 +109,7 @@ async def main() -> None:  # noqa: D103
             folder_name='insights',
         )
 
-        for ticker in TICKER_LIST:
+        for ticker in TICKERS_LIST:
             chart = await process_mock(
                 instance=client,
                 method_name='get_chart',

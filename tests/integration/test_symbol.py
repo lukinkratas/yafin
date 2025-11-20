@@ -5,13 +5,13 @@ import pytest_asyncio
 
 from tests._assertions import (
     _assert_chart_result,
-    _assert_insight_result,
+    _assert_insights_result,
     _assert_options_result,
-    _assert_quote_result,
     _assert_quote_summary_result,
-    _assert_quote_type_result,
+    _assert_quote_types_result,
+    _assert_quotes_result,
     _assert_ratings_response_json,
-    _assert_recommendation_result,
+    _assert_recommendations_result,
     _assert_search_response_json,
     _assert_timeseries_result,
 )
@@ -42,14 +42,14 @@ class TestUnitSymbol:
     @pytest.mark.integration
     def test_get_quote(self, symbol: Symbol) -> None:
         """Test get_quote method."""
-        quote_result = symbol.get_quote()
-        _assert_quote_result(quote_result, symbol.ticker)
+        quotes_result = symbol.get_quote()
+        _assert_quotes_result(quotes_result, symbol.ticker)
 
     @pytest.mark.integration
     def test_get_quote_type(self, symbol: Symbol) -> None:
         """Test get_quote_type method."""
-        quote_type_result = symbol.get_quote_type()
-        _assert_quote_type_result(quote_type_result, symbol.ticker)
+        quote_types_result = symbol.get_quote_type()
+        _assert_quote_types_result(quote_types_result, symbol.ticker)
 
     @pytest.mark.integration
     def test_get_quote_summary_all_modules(self, symbol: Symbol) -> None:
@@ -103,14 +103,14 @@ class TestUnitSymbol:
     @pytest.mark.integration
     def test_get_recommendations(self, symbol: Symbol) -> None:
         """Test get_recommendations method."""
-        recommendations = symbol.get_recommendations()
-        _assert_recommendation_result(recommendations, symbol.ticker)
+        recommendations_result = symbol.get_recommendations()
+        _assert_recommendations_result(recommendations_result, symbol.ticker)
 
     @pytest.mark.integration
     def test_get_insights(self, symbol: Symbol) -> None:
         """Test get_insights method."""
-        insights = symbol.get_insights()
-        _assert_insight_result(insights, symbol.ticker)
+        insights_result = symbol.get_insights()
+        _assert_insights_result(insights_result, symbol.ticker)
 
     @pytest.mark.integration
     def test_get_ratings(self, symbol: Symbol) -> None:
@@ -141,15 +141,15 @@ class TestUnitAsyncSymbol:
     @pytest.mark.asyncio
     async def test_get_quote(self, async_symbol: AsyncSymbol) -> None:
         """Test get_quote method."""
-        quote_result = await async_symbol.get_quote()
-        _assert_quote_result(quote_result, async_symbol.ticker)
+        quotes_result = await async_symbol.get_quote()
+        _assert_quotes_result(quotes_result, async_symbol.ticker)
 
     @pytest.mark.integration
     @pytest.mark.asyncio
     async def test_get_quote_type(self, async_symbol: AsyncSymbol) -> None:
         """Test get_quote_type method."""
-        quote_type_result = await async_symbol.get_quote_type()
-        _assert_quote_type_result(quote_type_result, async_symbol.ticker)
+        quote_types_result = await async_symbol.get_quote_type()
+        _assert_quote_types_result(quote_types_result, async_symbol.ticker)
 
     @pytest.mark.integration
     @pytest.mark.asyncio
@@ -214,15 +214,15 @@ class TestUnitAsyncSymbol:
     @pytest.mark.asyncio
     async def test_get_recommendations(self, async_symbol: AsyncSymbol) -> None:
         """Test get_recommendations method."""
-        recommendations = await async_symbol.get_recommendations()
-        _assert_recommendation_result(recommendations, async_symbol.ticker)
+        recommendations_result = await async_symbol.get_recommendations()
+        _assert_recommendations_result(recommendations_result, async_symbol.ticker)
 
     @pytest.mark.integration
     @pytest.mark.asyncio
     async def test_get_insights(self, async_symbol: AsyncSymbol) -> None:
         """Test get_insights method."""
-        insights = await async_symbol.get_insights()
-        _assert_insight_result(insights, async_symbol.ticker)
+        insights_result = await async_symbol.get_insights()
+        _assert_insights_result(insights_result, async_symbol.ticker)
 
     @pytest.mark.integration
     @pytest.mark.asyncio

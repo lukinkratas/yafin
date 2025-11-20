@@ -92,41 +92,51 @@ def _assert_chart_response_json(chart: ChartResponseJson, ticker: str) -> None:
     _assert_chart_result(chart['chart']['result'][0], ticker)
 
 
-def _assert_quote_result(quote_result: QuoteResult, ticker: str) -> None:
+def _assert_quotes_result(quote_result: QuoteResult, ticker: str) -> None:
     assert quote_result
     assert check_type(quote_result, QuoteResult)
     assert quote_result['symbol'] == ticker
 
 
+def _assert_quotes_results(quote_results: list[QuoteResult], tickers: str) -> None:
+    tickers_list = tickers.split(',')
+    assert len(quote_results) == len(tickers_list)
+    for ticker, quote in zip(
+        sorted(tickers_list), sorted(quote_results, key=lambda result: result['symbol'])
+    ):
+        _assert_quotes_result(quote, ticker)
+
+
 def _assert_quote_response_json(quotes: QuoteResponseJson, tickers: str) -> None:
     _assert_response_json(quotes, QuoteResponseJson)
+    _assert_quotes_results(quotes['quoteResponse']['result'], tickers)
+
+
+def _assert_quote_types_result(
+    quote_types_result: QuoteTypeResult, ticker: str
+) -> None:
+    assert quote_types_result
+    assert check_type(quote_types_result, QuoteTypeResult)
+    assert quote_types_result['symbol'] == ticker
+
+
+def _assert_quote_types_results(
+    quote_types_results: list[QuoteTypeResult], tickers: str
+) -> None:
     tickers_list = tickers.split(',')
-    quotes_list = quotes['quoteResponse']['result']
-    assert len(quotes_list) == len(tickers_list)
-    for ticker, quote in zip(
-        sorted(tickers_list), sorted(quotes_list, key=lambda result: result['symbol'])
+    assert len(quote_types_results) == len(tickers_list)
+    for ticker, quote_types_result in zip(
+        sorted(tickers_list),
+        sorted(quote_types_results, key=lambda result: result['symbol']),
     ):
-        _assert_quote_result(quote, ticker)
-
-
-def _assert_quote_type_result(quote_type_result: QuoteTypeResult, ticker: str) -> None:
-    assert quote_type_result
-    assert check_type(quote_type_result, QuoteTypeResult)
-    assert quote_type_result['symbol'] == ticker
+        _assert_quote_types_result(quote_types_result, ticker)
 
 
 def _assert_quote_type_response_json(
     quote_types: QuoteTypeResponseJson, tickers: str
 ) -> None:
     _assert_response_json(quote_types, QuoteTypeResponseJson)
-    tickers_list = tickers.split(',')
-    quote_types_list = quote_types['quoteType']['result']
-    assert len(quote_types_list) == len(tickers_list)
-    for ticker, quote in zip(
-        sorted(tickers_list),
-        sorted(quote_types_list, key=lambda result: result['symbol']),
-    ):
-        _assert_quote_type_result(quote, ticker)
+    _assert_quote_types_results(quote_types['quoteType']['result'], tickers)
 
 
 def _assert_quote_summary_single_module_result(
@@ -217,7 +227,7 @@ def _assert_search_response_json(search: SearchResponseJson) -> None:
     assert check_type(search, SearchResponseJson)
 
 
-def _assert_recommendation_result(
+def _assert_recommendations_result(
     recommendation_result: RecommendationsFinanceResult, ticker: str
 ) -> None:
     assert recommendation_result
@@ -225,37 +235,50 @@ def _assert_recommendation_result(
     assert recommendation_result['symbol'] == ticker
 
 
+def _assert_recommendations_results(
+    recommendation_results: list[RecommendationsFinanceResult], tickers: str
+) -> None:
+    tickers_list = tickers.split(',')
+    assert len(recommendation_results) == len(tickers_list)
+    for ticker, insight in zip(
+        sorted(tickers_list),
+        sorted(recommendation_results, key=lambda result: result['symbol']),
+    ):
+        _assert_recommendations_result(insight, ticker)
+
+
 def _assert_recommendations_response_json(
     recommendations: RecommendationsResponseJson, tickers: str
 ) -> None:
     _assert_response_json(recommendations, RecommendationsResponseJson)
-    tickers_list = tickers.split(',')
-    recommendations_list = recommendations['finance']['result']
-    assert len(recommendations_list) == len(tickers_list)
-    for ticker, insight in zip(
-        sorted(tickers_list),
-        sorted(recommendations_list, key=lambda result: result['symbol']),
-    ):
-        _assert_recommendation_result(insight, ticker)
+    _assert_recommendations_results(recommendations['finance']['result'], tickers)
 
 
-def _assert_insight_result(insights_result: InsightsFinanceResult, ticker: str) -> None:
+def _assert_insights_result(
+    insights_result: InsightsFinanceResult, ticker: str
+) -> None:
     assert insights_result
     assert check_type(insights_result, InsightsFinanceResult)
     assert insights_result['symbol'] == ticker
+
+
+def _assert_insights_results(
+    insights_results: list[InsightsFinanceResult], tickers: str
+) -> None:
+    tickers_list = tickers.split(',')
+    assert len(insights_results) == len(tickers_list)
+    for ticker, insight in zip(
+        sorted(tickers_list),
+        sorted(insights_results, key=lambda result: result['symbol']),
+    ):
+        _assert_insights_result(insight, ticker)
 
 
 def _assert_insights_response_json(
     insights: InsightsResponseJson, tickers: str
 ) -> None:
     _assert_response_json(insights, InsightsResponseJson)
-    tickers_list = tickers.split(',')
-    insights_list = insights['finance']['result']
-    assert len(insights_list) == len(tickers_list)
-    for ticker, insight in zip(
-        sorted(tickers_list), sorted(insights_list, key=lambda result: result['symbol'])
-    ):
-        _assert_insight_result(insight, ticker)
+    _assert_insights_results(insights['finance']['result'], tickers)
 
 
 def _assert_ratings_response_json(ratings: RatingsResponseJson) -> None:
