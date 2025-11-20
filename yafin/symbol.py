@@ -54,15 +54,8 @@ logger = logging.getLogger(__name__)
 class SymbolBase:
     """Base for synchronous and asynchronous Symbol classes for a specific ticker.
 
-    Warning: HTTP resources closing
-        Uses http resources, so do not forget to close them after use to avoid resource
-            leakage or use context manager.
-
     Attributes:
         ticker: Ticker symbol.
-        _client:
-            client instance, that is used for all http requests.
-                (Is lazily initialized.)
     """
 
     def __init__(self, ticker: str) -> None:

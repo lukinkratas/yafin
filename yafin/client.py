@@ -1078,8 +1078,8 @@ class AsyncClient(ClientBase):
 class _SingletonClientManager:
     """Manages a Client singleton."""
 
-    _client: Client | None = None
     _refcount = 0
+    _client: Client | None = None
 
     @classmethod
     def _get_client(cls) -> Client:
@@ -1104,8 +1104,8 @@ class _SingletonClientManager:
 class _AsyncSingletonClientManager:
     """Manages a AsyncClient singleton."""
 
-    _client: AsyncClient | None = None
     _refcount = 0
+    _client: AsyncClient | None = None
     _lock = asyncio.Lock()
 
     @classmethod

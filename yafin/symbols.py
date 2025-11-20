@@ -15,16 +15,52 @@ from .utils import _log_func
 logger = logging.getLogger(__name__)
 
 
-class Symbols:
+class SymbolBase:
+    """Base for synchronous and asynchronous Symbol classes for a specific ticker.
+
+    Attributes:
+        ticker: Ticker symbol.
+    """
+
     def __init__(self, tickers: str) -> None:
-        """Create Symbols instance.
+        """Create new Symbols instance.
 
         Args:
-            tickers: Comma separated tickers.
+            tickers: Comma-separated ticker symbols.
         """
         self.tickers = tickers
         # self._ticker_list = self.ticker.split(',')
         # self._symbols = [Symbol(ticker) for ticker in self._ticker_list]
+
+
+class Symbols(SymbolBase):
+    """Symbols class for specified tickers.
+
+    Warning: HTTP resources closing
+        Uses http resources, so do not forget to close them after use to avoid resource
+            leakage or use context manager.
+
+    Attributes:
+        ticker: Ticker symbol.
+        _client:
+            Client instance, that is used for all http requests.
+                (Is lazily initialized.)
+
+    Methods:
+        get_quote: Get quote for the ticker.
+        get_quote_type: Get quote type for the ticker.
+        get_search: Get search results for the ticker.
+        get_recommendations: Get analyst recommendations for the ticker.
+        get_insights: Get insights for the ticker.
+    """
+
+    def __init__(self, tickers: str) -> None:
+        """Create Symbols instance.
+
+        Args:
+            tickers: Comma-separated ticker symbols.
+        """
+        super().__init__(tickers)
         self._client: Client | None = None
 
     def _get_client(self) -> None:
