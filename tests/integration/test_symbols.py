@@ -11,6 +11,7 @@ from tests._assertions import (
 )
 from yafin import Symbols
 
+
 class TestUnitSymbols:
     """Integration tests for yafin.Symbol."""
 

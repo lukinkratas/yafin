@@ -4,11 +4,11 @@ import pytest
 from pytest_mock import MockerFixture
 
 from tests._assertions import (
-    _assert_quotes_results,
+    _assert_insights_results,
     _assert_quote_types_results,
+    _assert_quotes_results,
     _assert_recommendations_results,
     _assert_search_response_json,
-    _assert_insights_results,
 )
 from tests._utils import _get_json_fixture, _mock_response
 from yafin import Symbols
@@ -44,6 +44,7 @@ def recommendations_json_mock(tickers_name: str) -> dict[str, Any]:
 def insights_json_mock(tickers_name: str) -> dict[str, Any]:
     """Insights response json mock."""
     return _get_json_fixture(file_name=f'{tickers_name}.json', folder_name='insights')
+
 
 class TestUnitSymbols:
     """Unit tests for yafin.Symbols."""

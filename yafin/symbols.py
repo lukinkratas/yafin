@@ -14,8 +14,8 @@ from .utils import _log_func
 
 logger = logging.getLogger(__name__)
 
+
 class Symbols:
-    
     def __init__(self, tickers: str) -> None:
         """Create Symbols instance.
 
@@ -84,7 +84,7 @@ class Symbols:
         """
         self._get_client()
         return self._client.get_search(self.tickers)
-    
+
     @_log_func
     def get_insights(self) -> list[InsightsFinanceResult]:
         """Get insights for tickers.
