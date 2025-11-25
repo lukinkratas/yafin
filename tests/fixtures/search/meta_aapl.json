@@ -1,0 +1,301 @@
+{
+  "explains": [],
+  "count": 11,
+  "quotes": [
+    {
+      "exchange": "NMS",
+      "shortname": "Meta Platforms, Inc.",
+      "quoteType": "EQUITY",
+      "symbol": "META",
+      "index": "quotes",
+      "score": 12433000.0,
+      "typeDisp": "Equity",
+      "longname": "Meta Platforms, Inc.",
+      "exchDisp": "NASDAQ",
+      "sector": "Communication Services",
+      "sectorDisp": "Communication Services",
+      "industry": "Internet Content & Information",
+      "industryDisp": "Internet Content & Information",
+      "dispSecIndFlag": false,
+      "isYahooFinance": true,
+      "prevName": "Facebook, Inc.",
+      "nameChangeDate": "2025-11-20"
+    },
+    {
+      "exchange": "NMS",
+      "shortname": "Apple Inc.",
+      "quoteType": "EQUITY",
+      "symbol": "AAPL",
+      "index": "quotes",
+      "score": 19073500.0,
+      "typeDisp": "Equity",
+      "longname": "Apple Inc.",
+      "exchDisp": "NASDAQ",
+      "sector": "Technology",
+      "sectorDisp": "Technology",
+      "industry": "Consumer Electronics",
+      "industryDisp": "Consumer Electronics",
+      "isYahooFinance": true
+    }
+  ],
+  "news": [
+    {
+      "uuid": "d4d11250-158a-340c-b800-f0f3bd132b26",
+      "title": "OpenAI and Taiwan's Foxconn to partner in AI hardware design and manufacturing in the US",
+      "publisher": "Associated Press Finance",
+      "link": "https://finance.yahoo.com/news/openai-taiwans-foxconn-partner-ai-040216256.html",
+      "providerPublishTime": 1763697736,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/uP5R6AJUP.BxBIx1SOdvNA--~B/aD0zNDM5O3c9NTE1ODthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/ap_finance_articles_694/b76efbb07d7183bb2cf1f6869cbb03bb",
+            "width": 5158,
+            "height": 3439,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/OH1knxUwIT_3seh63WX2rA--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/ap_finance_articles_694/b76efbb07d7183bb2cf1f6869cbb03bb",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "OPAI.PVT",
+        "601138.SS",
+        "NVDA",
+        "AAPL"
+      ]
+    },
+    {
+      "uuid": "6c74daae-7448-3a01-a188-f60d767083e1",
+      "title": "Foxconn can make 1,000 AI racks a week, to increase next year, chairman says",
+      "publisher": "Reuters",
+      "link": "https://finance.yahoo.com/news/foxconn-1-000-ai-racks-031805011.html",
+      "providerPublishTime": 1763695085,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/C9ZkZuDJouDvbBCkmm0ZDA--~B/aD01MzM7dz04MDA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/reuters-finance.com/340689790c16d1abfc5428c700b9f6e7",
+            "width": 800,
+            "height": 533,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/P7ER6458Yjjk5aYn0sFXPQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/reuters-finance.com/340689790c16d1abfc5428c700b9f6e7",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "601138.SS",
+        "NVDA",
+        "OPAI.PVT",
+        "AAPL"
+      ]
+    },
+    {
+      "uuid": "493d2f7b-a972-3886-92bd-ba24c58767c3",
+      "title": "Billionaire Sam Altman's Iris Orb Dream Crumbles: $240M From Khosla Ventures Fuels 1B User Hunt, But Just 2% There As Bans Mount Worldwide",
+      "publisher": "Benzinga",
+      "link": "https://finance.yahoo.com/news/billionaire-sam-altmans-iris-orb-010120228.html",
+      "providerPublishTime": 1763686880,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/thrn7.EwcaVtMk0TulUZbQ--~B/aD02ODM7dz0xMDI0O2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/Benzinga/94cad8bf160b0a0b3da6c073f8a68727",
+            "width": 1024,
+            "height": 683,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/6Bn3eq8N_VIrus5cgsCvGg--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/Benzinga/94cad8bf160b0a0b3da6c073f8a68727",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "WLD-USD",
+        "GOOGL",
+        "META",
+        "AMZN"
+      ]
+    },
+    {
+      "uuid": "3ac63103-1566-392c-ab7f-13708d8b18bc",
+      "title": "Foxconn to spend up to $3 billion a year on AI, chair sees China EV shakeout",
+      "publisher": "Reuters",
+      "link": "https://finance.yahoo.com/news/foxconn-spend-3-billion-ai-230148283.html",
+      "providerPublishTime": 1763679708,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/QIr4a.SQqGjDZGWfcam7bQ--~B/aD01MzM7dz04MDA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/reuters-finance.com/ffb4b2f388c8f4d60cedf110f66fae29",
+            "width": 800,
+            "height": 533,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/HXEEUuCzluCj3KTIwNF._g--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/reuters-finance.com/ffb4b2f388c8f4d60cedf110f66fae29",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "601138.SS",
+        "AAPL"
+      ]
+    },
+    {
+      "uuid": "522f66a0-01b0-38d3-acc8-9fc661b812cc",
+      "title": "Intrinsic, an Alphabet company, and Nvidia supplier Foxconn will join forces to deploy AI robots in the latter\u2019s U.S. factories",
+      "publisher": "Fortune",
+      "link": "https://finance.yahoo.com/news/intrinsic-alphabet-company-nvidia-supplier-230000944.html",
+      "providerPublishTime": 1763679600,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/h8sCAmNrLLSV9Znp_vP1gA--~B/aD0xMzY1O3c9MjA0ODthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/fortune_175/87a7a274b8d7f60cbe8dfe6e0e0d3ffe",
+            "width": 2048,
+            "height": 1365,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/y3VSA4wDSb7P6IAF.2Ky1g--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/fortune_175/87a7a274b8d7f60cbe8dfe6e0e0d3ffe",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "GOOGL",
+        "601138.SS",
+        "NVDA",
+        "AAPL"
+      ]
+    },
+    {
+      "uuid": "591dca7e-5868-3eb6-b408-286d607086f0",
+      "title": "Google Launches Unauthorized Pixel-to-iPhone File Sharing\u00a0With Apple\u2019s AirDrop",
+      "publisher": "Bloomberg",
+      "link": "https://finance.yahoo.com/news/google-launches-unauthorized-pixel-iphone-224310499.html",
+      "providerPublishTime": 1763678590,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/at614HkYEFAdsJ1XddWoWw--~B/aD0yMDAwO3c9MzAwMDthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/bloomberg_holding_pen_162/a61ff6b1962388c4fcb9974c27afe9a5",
+            "width": 3000,
+            "height": 2000,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/0wJG6iCFlU0kFJPhdI..bQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/bloomberg_holding_pen_162/a61ff6b1962388c4fcb9974c27afe9a5",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "GOOGL",
+        "AAPL"
+      ]
+    },
+    {
+      "uuid": "c7bcdf1f-66b8-36cc-b430-74f2b1c15a9e",
+      "title": "Walmart Is Talking Up Its Tech Focus. A New Stock Exchange Is Its Next Move",
+      "publisher": "Investopedia",
+      "link": "https://finance.yahoo.com/m/c7bcdf1f-66b8-36cc-b430-74f2b1c15a9e/walmart-is-talking-up-its.html",
+      "providerPublishTime": 1763675273,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/.777VoQoyx_XiVK_VaEDrQ--~B/aD01NDY0O3c9ODE5MjthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/investopedia_245/65f5207fd0f65eeb07553957863a357b",
+            "width": 8192,
+            "height": 5464,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/ge4IiiCTK3txqS.WgN.o9w--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/investopedia_245/65f5207fd0f65eeb07553957863a357b",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "WMT",
+        "^IXIC",
+        "AMZN",
+        "META",
+        "GOOGL"
+      ]
+    },
+    {
+      "uuid": "dd2b0464-f754-3c55-b7ec-5481fadbc6bc",
+      "title": "Zuckerberg, Meta directors agree to $190 million settlement of shareholder privacy case",
+      "publisher": "Reuters",
+      "link": "https://finance.yahoo.com/news/zuckerberg-meta-directors-agree-190-212626624.html",
+      "providerPublishTime": 1763673986,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/Pcsq7cbyCb_FeZ8RAbbOAA--~B/aD01MzM7dz04MDA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/reuters-finance.com/2d70563614659515bc3f0b9fed95aa51",
+            "width": 800,
+            "height": 533,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/qv3fw2C.hY9ppaaYM78Uug--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/reuters-finance.com/2d70563614659515bc3f0b9fed95aa51",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "META",
+        "PLTR"
+      ]
+    }
+  ],
+  "nav": [
+    {
+      "navType": "MULTIQUOTE",
+      "symbols": [
+        "META",
+        "AAPL"
+      ]
+    }
+  ],
+  "lists": [],
+  "researchReports": [],
+  "screenerFieldResults": [],
+  "totalTime": 128,
+  "timeTakenForQuotes": 468,
+  "timeTakenForNews": 700,
+  "timeTakenForAlgowatchlist": 400,
+  "timeTakenForPredefinedScreener": 400,
+  "timeTakenForCrunchbase": 0,
+  "timeTakenForNav": 400,
+  "timeTakenForResearchReports": 0,
+  "timeTakenForScreenerField": 0,
+  "timeTakenForCulturalAssets": 0,
+  "timeTakenForSearchLists": 0
+}

@@ -1,0 +1,19 @@
+{
+  "quoteSummary": {
+    "result": [
+      {
+        "netSharePurchaseActivity": {
+          "maxAge": 1,
+          "period": "6m",
+          "buyInfoCount": 0,
+          "buyInfoShares": 0,
+          "sellInfoCount": 0,
+          "netInfoCount": 0,
+          "netInfoShares": 0,
+          "totalInsiderShares": 1587932
+        }
+      }
+    ],
+    "error": null
+  }
+}

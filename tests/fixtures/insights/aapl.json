@@ -1,0 +1,592 @@
+{
+  "finance": {
+    "result": [
+      {
+        "symbol": "AAPL",
+        "instrumentInfo": {
+          "technicalEvents": {
+            "provider": "Trading Central",
+            "sector": "Technology",
+            "shortTermOutlook": {
+              "stateDescription": "Recent bearish events outweigh bullish events.",
+              "direction": "Bearish",
+              "score": 4,
+              "scoreDescription": "Very Strong Bearish Evidence",
+              "sectorDirection": "Bearish",
+              "sectorScore": 3,
+              "sectorScoreDescription": "Strong Bearish Evidence",
+              "indexDirection": "Bearish",
+              "indexScore": 3,
+              "indexScoreDescription": "Strong Bearish Evidence"
+            },
+            "intermediateTermOutlook": {
+              "stateDescription": "Bullish events outweigh bearish events.",
+              "direction": "Bullish",
+              "score": 1,
+              "scoreDescription": "Weak Bullish Evidence",
+              "sectorDirection": "Bearish",
+              "sectorScore": 2,
+              "sectorScoreDescription": "Bearish Evidence",
+              "indexDirection": "Bearish",
+              "indexScore": 3,
+              "indexScoreDescription": "Strong Bearish Evidence"
+            },
+            "longTermOutlook": {
+              "stateDescription": "All events are bullish.",
+              "direction": "Bullish",
+              "score": 2,
+              "scoreDescription": "Bullish Evidence",
+              "sectorDirection": "Bullish",
+              "sectorScore": 1,
+              "sectorScoreDescription": "Weak Bullish Evidence",
+              "indexDirection": "Neutral",
+              "indexScore": 0,
+              "indexScoreDescription": "No Evidence"
+            }
+          },
+          "keyTechnicals": {
+            "provider": "Trading Central",
+            "support": 229.4,
+            "resistance": 269.89,
+            "stopLoss": 248.647175
+          },
+          "valuation": {
+            "color": 0.0,
+            "description": "Overvalued",
+            "discount": "-10%",
+            "relativeValue": "Premium",
+            "provider": "Trading Central"
+          }
+        },
+        "companySnapshot": {
+          "sectorInfo": "Technology",
+          "company": {
+            "innovativeness": 0.9981,
+            "hiring": 0.9512999999999999,
+            "sustainability": 0.16519999999999999,
+            "insiderSentiments": 0.3265,
+            "earningsReports": 0.8784000000000001,
+            "dividends": 0.0625
+          },
+          "sector": {
+            "innovativeness": 0.5,
+            "hiring": 0.5,
+            "sustainability": 0.5,
+            "insiderSentiments": 0.5,
+            "earningsReports": 0.5,
+            "dividends": 0.5
+          }
+        },
+        "recommendation": {
+          "targetPrice": 325.0,
+          "provider": "Argus Research",
+          "rating": "BUY"
+        },
+        "upsell": {
+          "msBullishSummary": [
+            "Apple offers an expansive ecosystem of tightly integrated hardware, software, and services, which locks in customers and generates strong profitability.",
+            "We like Apple\u2019s move to in-house chip development, which we think has accelerated its product development and increased its differentiation. ",
+            "Apple has a stellar balance sheet and sends great amounts of cash flow back to shareholders."
+          ],
+          "msBearishSummary": [
+            "Apple is prone to consumer spending and preferences, which creates cyclicality and opens the firm up to disruption.",
+            "Apple\u2019s supply chain is highly concentrated in China and Taiwan, which opens up the firm to geopolitical risk. Attempts to diversify into other regions may pressure profitability or efficiency.",
+            "Regulators have a keen eye on Apple, and recent regulations have chipped away at parts of Apple\u2019s sticky ecosystem. "
+          ],
+          "companyName": "Apple Inc.",
+          "msBullishBearishSummariesPublishDate": 1761880948000,
+          "upsellReportType": "MORNINGSTAR_ANALYST"
+        },
+        "upsellSearchDD": {
+          "researchReports": {
+            "reportId": "ARGUS_2660_AnalystReport_1761910167000",
+            "provider": "Argus",
+            "title": "Raising target price and EPS estimates",
+            "reportDate": "2025-10-31T11:29:27Z",
+            "summary": "Apple manufactures smartphones, tablets, PCs, software, and peripherals for a worldwide customer base. Its products include Mac desktop and mobile PCs, iPhone, iPad, Apple Watch, and various consumer products, including Air Pods, Beats headphones, and Apple TV. Apple services include App Store, iTunes, iCloud, Apple TV+, Apple Arcade, Apple Music, Apple Pay, and more.",
+            "investmentRating": "Bullish"
+          }
+        },
+        "events": [
+          {
+            "eventType": "Price Crosses Moving Average",
+            "pricePeriod": "D",
+            "tradingHorizon": "S",
+            "tradeType": "S",
+            "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
+            "startDate": 1763389800,
+            "endDate": 1763389800
+          }
+        ],
+        "reports": [
+          {
+            "id": "ARGUS_45247_TechnicalAnalysis_1762517489000",
+            "headHtml": "Technical Assessment: Bullish in the Intermediate-Term",
+            "provider": "Argus Research",
+            "reportDate": "2025-11-07T12:11:29Z",
+            "reportTitle": "For the second time this week, stocks were hit with consistent selling pressure as November is off to a rocky start. Technology, and more specifically, semiconductor and software stocks, led the downside once again. Weakness from the largest semi and software companies was evident, with NVDA off 3.7%, AVGO 1%, TSM 1.5%, AMD over 7%, MSFT 2%, ORCL 2.6%, PLTR almost 7%, and CRM 5%.   It wasn't just the mega caps that were hit, with former leaders, some of which reported Q3 EPS, wrecked -- including ELF (-35%), DUOL (-25%), DASH (-17%), HOOD (-11%), and AXON, which fell 8% after Wednesday's 9% slide. OUCH!  The S&P 500 fell 1.1%, falling below its 21-day exponential average (EMA) and with a minor 5-day/13-day EMA bearish crossover. Key support from the rising 50-day lies at 6,666, with chart support at 6,550 (from the recent low on October 10). The Nasdaq and the Nasdaq 100 (QQQ) lost 1.9% and both broke their 21-day EMAs. The 50-day for the QQQ is at 601 with chart support at 589.     Buying the dip (BTD) has taken on a different meaning since the April bottom. Dips were once considered multiple-week affairs, with the S&P 500 dropping 5% to 10%. The index has seen a daily drop of more than 1% nine times since April 7. Incredibly, it has rebounded the next day every signal time, with five of those occasions wiping out the loss from the previous day. One way to spot a potential trend change is to look for a technical clue known as a change in character. If the current very rapid BTD stops, that would be a change in character. (Mark Arbeter, CMT)",
+            "reportType": "Technical Analysis",
+            "tickers": [
+              "AAPL",
+              "CME"
+            ],
+            "title": "For the second time this week, stocks were hit with consistent selling pressure as November is off to a rocky start."
+          },
+          {
+            "id": "ARGUS_45198_StockPicks_1762179101000",
+            "headHtml": "Weekly Stock List",
+            "provider": "Argus Research",
+            "reportDate": "2025-11-03T14:11:41Z",
+            "reportTitle": "The stock market keeps hitting all-time highs. We believe that diversification across sectors is powering this bull market and is wider than discussed in the media and by overall investing commentary. We want to highlight some of the high-flying sectors and individual companies that are having a banner year outside of the strong upward driver of AI. As such, the following is a two-tiered list of companies in Argus' fundamental Universe of Coverage and highlight stocks that are seeing the highest gains from their 52-week lows. We used our Argus screener to find large caps above $250 billion in market cap, and then sorted by sector. We also note our rating and the percentage gains in these stocks. The first list includes non-tech companies, while the second includes the tech companies. Some in this list are technically not categorized as IT companies, but we moved them into this group as IT is their main function.",
+            "reportType": "Stock Picks",
+            "tickers": [
+              "GOOGL",
+              "AAPL",
+              "CSCO",
+              "AVGO",
+              "JPM",
+              "JNJ",
+              "UNH",
+              "ASML",
+              "MSFT",
+              "TSLA",
+              "WFC",
+              "IBM",
+              "LLY",
+              "AMD",
+              "GE",
+              "PLTR",
+              "NFLX",
+              "BABA",
+              "META",
+              "NVDA",
+              "BAC",
+              "MS",
+              "MU",
+              "ORCL",
+              "ABBV",
+              "TSM",
+              "CAT",
+              "AMZN"
+            ],
+            "title": "Argus Quick Note: Weekly Stock List for 11/03/2025: Big-Cap High-Flyers"
+          },
+          {
+            "id": "ARGUS_45194_MarketOutlook_1762175071000",
+            "headHtml": "Daily Spotlight: Investors Generally Like November",
+            "provider": "Argus Research",
+            "reportDate": "2025-11-03T13:04:31Z",
+            "reportTitle": "The long-term upward trajectory in the U.S. stock market has its foundation in the country's democratic political system (remember to vote tomorrow in New Jersey, Virginia and New York City) and its market-based, capitalist economic system. In theory, the stock market efficiently allocates the nation's capital to generate solid investment returns. Theory typically turns into reality in November, which since 1980 has been the best month for equity performance, with an average 2.2% gain, ahead of April (+1.5%), July (1.4%), October (+1.3%), and December (+1.2%).  November's batting average is high as well: stocks advance during the month 73% of the time. The best Novembers have been 1980 (+10.2%), 2023 (+8.9%), 2001 (+7.5%), 1996 (+7.3%), 1985 (+6.5%), 1998 (+5.9%), and 2002 (5.7%). There have been some clunkers: 2000 (-8%), 2008 (-7.5%), and 1987 (-5.9%). Last year, the S&P 500 rose a solid 4.7% for the month, after the presidential election had been decided. November usually starts off at a fast pace, as nonfarm payrolls are reported -- when the government is open, which is not now the case. As well, many companies are still reporting earnings. But as the Thanksgiving holiday approaches, news and trading volumes both lighten up. The current market fundamentals -- strong earnings growth, declining interest rates, and an expanding economy -- suggest that this November can add to the positive monthly record.",
+            "reportType": "Market Outlook",
+            "tickers": [
+              "AAPL"
+            ],
+            "title": "Investors Generally Like November"
+          },
+          {
+            "id": "ARGUS_2660_AnalystReport_1761910167000",
+            "headHtml": "Analyst Report: Apple Inc",
+            "provider": "Argus Research",
+            "reportDate": "2025-10-31T11:29:27Z",
+            "reportTitle": "Apple manufactures smartphones, tablets, PCs, software, and peripherals for a worldwide customer base. Its products include Mac desktop and mobile PCs, iPhone, iPad, Apple Watch, and various consumer products, including Air Pods, Beats headphones, and Apple TV. Apple services include App Store, iTunes, iCloud, Apple TV+, Apple Arcade, Apple Music, Apple Pay, and more.",
+            "reportType": "Analyst Report",
+            "targetPrice": 325.0,
+            "targetPriceStatus": "Increased",
+            "investmentRating": "Bullish",
+            "tickers": [
+              "AAPL"
+            ],
+            "title": "Raising target price and EPS estimates"
+          }
+        ],
+        "sigDevs": [
+          {
+            "headline": "Abidur Chowdhury, The Apple Designer Who Introduced The iPhone Air, Leaves The Company - Bloomberg News",
+            "date": "2025-11-17"
+          }
+        ],
+        "secReports": [
+          {
+            "id": "0000320193-25-000079_320193",
+            "type": "Periodic Financial Reports",
+            "title": "10-K : Periodic Financial Reports",
+            "description": "Annual report pursuant to Section 13 and 15(d)",
+            "filingDate": 1761868800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000032019325000079/thumbnail.png",
+            "formType": "10-K"
+          },
+          {
+            "id": "0000320193-25-000077_320193",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1761782400000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000032019325000077/thumbnail.png",
+            "formType": "8-K"
+          },
+          {
+            "id": "0001140361-25-036313_320193",
+            "type": "Offering Registrations",
+            "title": "S-8 : Offering Registrations",
+            "description": "Initial registration statement for securities to be offered to employees pursuant to employee benefit plans",
+            "filingDate": 1758844800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000114036125036313/thumbnail.png",
+            "formType": "S-8"
+          },
+          {
+            "id": "0001140361-25-036310_320193",
+            "type": "Offering Registrations",
+            "title": "S-8 : Offering Registrations",
+            "description": "Initial registration statement for securities to be offered to employees pursuant to employee benefit plans",
+            "filingDate": 1758844800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000114036125036310/thumbnail.png",
+            "formType": "S-8"
+          },
+          {
+            "id": "0000320193-25-000073_320193",
+            "type": "Periodic Financial Reports",
+            "title": "10-Q : Periodic Financial Reports",
+            "description": "Quarterly report pursuant to Section 13 or 15(d)",
+            "filingDate": 1754006400000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000032019325000073/thumbnail.png",
+            "formType": "10-Q"
+          },
+          {
+            "id": "0000320193-25-000071_320193",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1753920000000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000032019325000071/thumbnail.png",
+            "formType": "8-K"
+          },
+          {
+            "id": "0001140361-25-027340_320193",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1753401600000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000114036125027340/thumbnail.png",
+            "formType": "8-K"
+          },
+          {
+            "id": "0001140361-25-025275_320193",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1752019200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000114036125025275/thumbnail.png",
+            "formType": "8-K"
+          },
+          {
+            "id": "0001140361-25-018400_320193",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1747008000000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000114036125018400/thumbnail.png",
+            "formType": "8-K"
+          },
+          {
+            "id": "0000320193-25-000057_320193",
+            "type": "Periodic Financial Reports",
+            "title": "10-Q : Periodic Financial Reports",
+            "description": "Quarterly report pursuant to Section 13 or 15(d)",
+            "filingDate": 1746144000000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000032019325000057/thumbnail.png",
+            "formType": "10-Q"
+          },
+          {
+            "id": "0000320193-25-000055_320193",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1746057600000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000032019325000055/thumbnail.png",
+            "formType": "8-K"
+          },
+          {
+            "id": "0001140361-25-005876_320193",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1740441600000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000114036125005876/thumbnail.png",
+            "formType": "8-K"
+          },
+          {
+            "id": "0000320193-25-000008_320193",
+            "type": "Periodic Financial Reports",
+            "title": "10-Q : Periodic Financial Reports",
+            "description": "Quarterly report pursuant to Section 13 or 15(d)",
+            "filingDate": 1738281600000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000032019325000008/thumbnail.png",
+            "formType": "10-Q"
+          },
+          {
+            "id": "0000320193-25-000007_320193",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1738195200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000032019325000007/thumbnail.png",
+            "formType": "8-K"
+          },
+          {
+            "id": "0001308179-25-000008_320193",
+            "type": "Proxy Statements",
+            "title": "DEF 14A : Proxy Statements",
+            "description": "Definitive proxy statements",
+            "filingDate": 1736467200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000130817925000008/thumbnail.png",
+            "formType": "DEF 14A"
+          },
+          {
+            "id": "0001308179-25-000009_320193",
+            "type": "Proxy Statements",
+            "title": "DEFA14A : Proxy Statements",
+            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
+            "filingDate": 1736467200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000130817925000009/thumbnail.png",
+            "formType": "DEFA14A"
+          },
+          {
+            "id": "0001140361-25-000228_320193",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1735862400000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000114036125000228/thumbnail.png",
+            "formType": "8-K"
+          },
+          {
+            "id": "0001140361-24-044880_320193",
+            "type": "Offering Registrations",
+            "title": "S-3ASR : Offering Registrations",
+            "description": "Automatic shelf registration statement of securities of well-known seasoned issuers",
+            "filingDate": 1730419200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000114036124044880/thumbnail.png",
+            "formType": "S-3ASR"
+          },
+          {
+            "id": "0000320193-24-000123_320193",
+            "type": "Periodic Financial Reports",
+            "title": "10-K : Periodic Financial Reports",
+            "description": "Annual report pursuant to Section 13 and 15(d)",
+            "filingDate": 1730419200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000032019324000123/thumbnail.png",
+            "formType": "10-K"
+          },
+          {
+            "id": "0000320193-24-000120_320193",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1730332800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000032019324000120/thumbnail.png",
+            "formType": "8-K"
+          },
+          {
+            "id": "0001140361-24-040659_320193",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1725926400000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000114036124040659/thumbnail.png",
+            "formType": "8-K"
+          },
+          {
+            "id": "0001140361-24-038601_320193",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1724630400000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000114036124038601/thumbnail.png",
+            "formType": "8-K"
+          },
+          {
+            "id": "0001140361-24-038403_320193",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1724371200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000114036124038403/thumbnail.png",
+            "formType": "8-K"
+          },
+          {
+            "id": "0000320193-24-000081_320193",
+            "type": "Periodic Financial Reports",
+            "title": "10-Q : Periodic Financial Reports",
+            "description": "Quarterly report pursuant to Section 13 or 15(d)",
+            "filingDate": 1722556800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000032019324000081/thumbnail.png",
+            "formType": "10-Q"
+          },
+          {
+            "id": "0000320193-24-000080_320193",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1722470400000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000032019324000080/thumbnail.png",
+            "formType": "8-K"
+          },
+          {
+            "id": "0001140361-24-024352_320193",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1714694400000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000114036124024352/thumbnail.png",
+            "formType": "8-K"
+          },
+          {
+            "id": "0000320193-24-000069_320193",
+            "type": "Periodic Financial Reports",
+            "title": "10-Q : Periodic Financial Reports",
+            "description": "Quarterly report pursuant to Section 13 or 15(d)",
+            "filingDate": 1714694400000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000032019324000069/thumbnail.png",
+            "formType": "10-Q"
+          },
+          {
+            "id": "0000320193-24-000067_320193",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1714608000000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000032019324000067/thumbnail.png",
+            "formType": "8-K"
+          },
+          {
+            "id": "0001140361-24-010155_320193",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1709078400000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000114036124010155/thumbnail.png",
+            "formType": "8-K"
+          },
+          {
+            "id": "0001193125-24-036431_320193",
+            "type": "Tender Offer/Acquisition Reports",
+            "title": "SC 13G/A : Tender Offer/Acquisition Reports",
+            "description": "Schedule filed to report acquisition of beneficial ownership of 5% or more of a class of equity securities by passive investors and certain institutions",
+            "filingDate": 1707868800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001067983/000119312524036431/thumbnail.png",
+            "formType": "SC 13G/A"
+          },
+          {
+            "id": "0000320193-24-000006_320193",
+            "type": "Periodic Financial Reports",
+            "title": "10-Q : Periodic Financial Reports",
+            "description": "Quarterly report pursuant to Section 13 or 15(d)",
+            "filingDate": 1706832000000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000032019324000006/thumbnail.png",
+            "formType": "10-Q"
+          },
+          {
+            "id": "0000320193-24-000005_320193",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1706745600000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000032019324000005/thumbnail.png",
+            "formType": "8-K"
+          },
+          {
+            "id": "0001308179-24-000011_320193",
+            "type": "Proxy Statements",
+            "title": "DEFA14A : Proxy Statements",
+            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
+            "filingDate": 1704931200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000130817924000011/thumbnail.png",
+            "formType": "DEFA14A"
+          },
+          {
+            "id": "0001308179-24-000010_320193",
+            "type": "Proxy Statements",
+            "title": "DEF 14A : Proxy Statements",
+            "description": "Definitive proxy statements",
+            "filingDate": 1704931200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000130817924000010/thumbnail.png",
+            "formType": "DEF 14A"
+          },
+          {
+            "id": "0000320193-23-000106_320193",
+            "type": "Periodic Financial Reports",
+            "title": "10-K : Periodic Financial Reports",
+            "description": "Annual report pursuant to Section 13 and 15(d)",
+            "filingDate": 1698969600000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000032019323000106/thumbnail.png",
+            "formType": "10-K"
+          },
+          {
+            "id": "0000320193-23-000104_320193",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1698883200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000032019323000104/thumbnail.png",
+            "formType": "8-K"
+          },
+          {
+            "id": "0000320193-23-000077_320193",
+            "type": "Periodic Financial Reports",
+            "title": "10-Q : Periodic Financial Reports",
+            "description": "Quarterly report pursuant to Section 13 or 15(d)",
+            "filingDate": 1691107200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000032019323000077/thumbnail.png",
+            "formType": "10-Q"
+          },
+          {
+            "id": "0000320193-23-000075_320193",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1691020800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000032019323000075/thumbnail.png",
+            "formType": "8-K"
+          },
+          {
+            "id": "0001140361-23-023909_320193",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1683676800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000114036123023909/thumbnail.png",
+            "formType": "8-K"
+          },
+          {
+            "id": "0000320193-23-000064_320193",
+            "type": "Periodic Financial Reports",
+            "title": "10-Q : Periodic Financial Reports",
+            "description": "Quarterly report pursuant to Section 13 or 15(d)",
+            "filingDate": 1683244800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000032019323000064/thumbnail.png",
+            "formType": "10-Q"
+          },
+          {
+            "id": "0000320193-23-000063_320193",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1683158400000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000032019323000063/thumbnail.png",
+            "formType": "8-K"
+          },
+          {
+            "id": "0001140361-23-011192_320193",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1678406400000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000114036123011192/thumbnail.png",
+            "formType": "8-K"
+          }
+        ]
+      }
+    ],
+    "error": null
+  }
+}

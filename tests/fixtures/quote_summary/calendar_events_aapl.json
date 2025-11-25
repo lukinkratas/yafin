@@ -1,0 +1,29 @@
+{
+  "quoteSummary": {
+    "result": [
+      {
+        "calendarEvents": {
+          "maxAge": 1,
+          "earnings": {
+            "earningsDate": [
+              1769720400
+            ],
+            "earningsCallDate": [
+              1761858000
+            ],
+            "isEarningsDateEstimate": true,
+            "earningsAverage": 2.65877,
+            "earningsLow": 2.51,
+            "earningsHigh": 2.71,
+            "revenueAverage": 138015309140,
+            "revenueLow": 136679500000,
+            "revenueHigh": 140666000000
+          },
+          "exDividendDate": 1762732800,
+          "dividendDate": 1762992000
+        }
+      }
+    ],
+    "error": null
+  }
+}

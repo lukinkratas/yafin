@@ -1,0 +1,1859 @@
+{
+	"info": {
+		"_postman_id": "145241df-5736-48ff-99ee-13b85fd834a8",
+		"name": "Yahoo Finance",
+		"description": "desc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47894645",
+		"_collection_link": "https://lukin-kratas-s-team.postman.co/workspace/Team-Workspace~e65703fb-893e-45f5-8259-68ab8b0697f4/collection/47894645-145241df-5736-48ff-99ee-13b85fd834a8?action=share&source=collection_link&creator=47894645"
+	},
+	"item": [
+		{
+			"name": "ws fundamentals timeseries",
+			"item": [
+				{
+					"name": "income stmt",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Error is null\", () => {",
+									"    pm.expect(response.timeseries.error).to.eql(null);",
+									"});",
+									"",
+									"pm.test(\"Result is not null\", () => {",
+									"    pm.expect(response.timeseries.result).to.not.eql(null);",
+									"});",
+									"",
+									"income_stmt_types = pm.environment.get('ANNUAL_INCOME_STATEMENT_TYPES');",
+									"",
+									"income_stmt_types.split(\",\").forEach(",
+									"    (t) => {",
+									"        pm.test(`${t} is not null`, () => {",
+									"            pm.expect(response.timeseries.result[t]).to.not.eql(null);",
+									"        });",
+									"    } ",
+									");"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"const startTs = Math.floor(new Date(2019,1,1).getTime() / 1000);",
+									"pm.environment.set(\"startTs\", startTs);",
+									"",
+									"const currentTs = Math.floor(new Date().getTime() / 1000);",
+									"pm.environment.set(\"currentTs\", currentTs);",
+									"",
+									"pm.environment.set(\"ANNUAL_INCOME_STATEMENT_TYPES\", \"annualContinuingAndDiscontinuedDilutedEPS,annualEBITDA,annualInterestExpenseNonOperating,annualNetIncomeExtraordinary,annualExciseTaxes,annualSellingAndMarketingExpense,annualTotalExpenses,annualNetPolicyholderBenefitsAndClaims,annualDilutedAccountingChange,annualDilutedNIAvailtoComStockholders,annualNetIncomeCommonStockholders,annualOtherNonOperatingIncomeExpenses,annualDilutedContinuousOperations,annualNormalizedIncome,annualInterestIncomeNonOperating,annualOtherSpecialCharges,annualBasicDiscontinuousOperations,annualTaxProvision,annualTaxLossCarryforwardDilutedEPS,annualDilutedAverageShares,annualNetNonOperatingInterestIncomeExpense,annualBasicExtraordinary,annualTaxEffectOfUnusualItems,annualNormalizedEBITDA,annualProvisionForDoubtfulAccounts,annualDepletionIncomeStatement,annualSpecialIncomeCharges,annualAmortization,annualNetIncomeDiscontinuousOperations,annualTotalOtherFinanceCost,annualSecuritiesAmortization,annualNetInterestIncome,annualLossAdjustmentExpense,annualOtherOperatingExpenses,annualPreferredStockDividends,annualNormalizedDilutedEPS,annualNetIncomeFromContinuingOperationNetMinorityInterest,annualOccupancyAndEquipment,annualTaxLossCarryforwardBasicEPS,annualSellingGeneralAndAdministration,annualDilutedEPS,annualGainOnSaleOfPPE,annualGainOnSaleOfBusiness,annualNetIncomeContinuousOperations,annualOtherunderPreferredStockDividend,annualOperatingRevenue,annualTaxRateForCalcs,annualOtherNonInterestExpense,annualOtherGandA,annualAverageDilutionEarnings,annualRentExpenseSupplemental,annualNetIncomeFromContinuingAndDiscontinuedOperation,annualReconciledDepreciation,annualBasicEPS,annualBasicEPSOtherGainsLosses,annualResearchAndDevelopment,annualProfessionalExpenseAndContractServicesExpense,annualRestructuringAndMergernAcquisition,annualSalariesAndWages,annualBasicAccountingChange,annualGeneralAndAdministrativeExpense,annualDilutedEPSOtherGainsLosses,annualReportedNormalizedDilutedEPS,annualTotalUnusualItemsExcludingGoodwill,annualInterestIncome,annualBasicAverageShares,annualTotalUnusualItems,annualPolicyholderBenefitsGross,annualEarningsFromEquityInterest,annualInterestExpense,annualEarningsFromEquityInterestNetOfTax,annualOperatingExpense,annualTotalRevenue,annualWriteOff,annualOtherTaxes,annualOtherIncomeExpense,annualRentAndLandingFees,annualPolicyholderBenefitsCeded,annualBasicContinuousOperations,annualMinorityInterests,annualOperatingIncome,annualImpairmentOfCapitalAssets,annualDepreciationIncomeStatement,annualDividendPerShare,annualDilutedDiscontinuousOperations,annualNetIncome,annualDepreciationAndAmortizationInIncomeStatement,annualDilutedExtraordinary,annualReportedNormalizedBasicEPS,annualEBIT,annualTotalOperatingIncomeAsReported,annualReconciledCostOfRevenue,annualPretaxIncome,annualNetIncomeIncludingNoncontrollingInterests,annualDepreciationAmortizationDepletionIncomeStatement,annualInsuranceAndClaims,annualNetIncomeFromTaxLossCarryforward,annualNormalizedBasicEPS,annualGainOnSaleOfSecurity,annualAmortizationOfIntangiblesIncomeStatement,annualGrossProfit,annualContinuingAndDiscontinuedBasicEPS,annualCostOfRevenue\");"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/ws/fundamentals-timeseries/v1/finance/timeseries/META?type={{ANNUAL_INCOME_STATEMENT_TYPES}}&period1={{startTs}}&period2={{currentTs}}&formatted=false&merge=true&padTimeSeries=true&region=US&lang=en-US&corsDomain=finance.yahoo.com",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"ws",
+								"fundamentals-timeseries",
+								"v1",
+								"finance",
+								"timeseries",
+								"META"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "META",
+									"disabled": true
+								},
+								{
+									"key": "type",
+									"value": "{{ANNUAL_INCOME_STATEMENT_TYPES}}"
+								},
+								{
+									"key": "period1",
+									"value": "{{startTs}}"
+								},
+								{
+									"key": "period2",
+									"value": "{{currentTs}}"
+								},
+								{
+									"key": "formatted",
+									"value": "false"
+								},
+								{
+									"key": "merge",
+									"value": "true"
+								},
+								{
+									"key": "padTimeSeries",
+									"value": "true"
+								},
+								{
+									"key": "region",
+									"value": "US"
+								},
+								{
+									"key": "lang",
+									"value": "en-US"
+								},
+								{
+									"key": "corsDomain",
+									"value": "finance.yahoo.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "balance sheet",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Error is null\", () => {",
+									"    pm.expect(response.timeseries.error).to.eql(null);",
+									"});",
+									"",
+									"pm.test(\"Result is not null\", () => {",
+									"    pm.expect(response.timeseries.result).to.not.eql(null);",
+									"});",
+									"",
+									"balance_sheet_types = pm.environment.get('ANNUAL_BALANCE_SHEET_TYPES');",
+									"",
+									"balance_sheet_types.split(\",\").forEach(",
+									"    (t) => {",
+									"        pm.test(`${t} is not null`, () => {",
+									"            pm.expect(response.timeseries.result[t]).to.not.eql(null);",
+									"        });",
+									"    } ",
+									");"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"const startTs = Math.floor(new Date(2019,1,1).getTime() / 1000);",
+									"pm.environment.set(\"startTs\", startTs);",
+									"",
+									"const currentTs = Math.floor(new Date().getTime() / 1000);",
+									"pm.environment.set(\"currentTs\", currentTs);",
+									"",
+									"pm.environment.set(\"ANNUAL_BALANCE_SHEET_TYPES\", \"annualTreasurySharesNumber,annualPreferredSharesNumber,annualOrdinarySharesNumber' annualShareIssued,annualNetDebt,annualTotalDebt,annualTangibleBookValue,annualInvestedCapital,annualWorkingCapital,annualNetTangibleAssets,annualCapitalLeaseObligations,annualCommonStockEquity,annualPreferredStockEquity,annualTotalCapitalization,annualTotalEquityGrossMinorityInterest,annualMinorityInterest,annualStockholdersEquity,annualOtherEquityInterest,annualGainsLossesNotAffectingRetainedEarnings,annualOtherEquityAdjustments,annualFixedAssetsRevaluationReserve,annualForeignCurrencyTranslationAdjustments,annualMinimumPensionLiabilities,annualUnrealizedGainLoss,annualTreasuryStock,annualRetainedEarnings,annualAdditionalPaidInCapital,annualCapitalStock,annualOtherCapitalStock,annualCommonStock,annualPreferredStock,annualTotalPartnershipCapital,annualGeneralPartnershipCapital,annualLimitedPartnershipCapital,annualTotalLiabilitiesNetMinorityInterest,annualTotalNonCurrentLiabilitiesNetMinorityInterest,annualOtherNonCurrentLiabilities,annualLiabilitiesHeldforSaleNonCurrent,annualRestrictedCommonStock,annualPreferredSecuritiesOutsideStockEquity,annualDerivativeProductLiabilities,annualEmployeeBenefits,annualNonCurrentPensionAndOtherPostretirementBenefitPlans,annualNonCurrentAccruedExpenses,annualDuetoRelatedPartiesNonCurrent,annualTradeandOtherPayablesNonCurrent,annualNonCurrentDeferredLiabilities,annualNonCurrentDeferredRevenue,annualNonCurrentDeferredTaxesLiabilities,annualLongTermDebtAndCapitalLeaseObligation,annualLongTermCapitalLeaseObligation,annualLongTermDebt,annualLongTermProvisions,annualCurrentLiabilities,annualOtherCurrentLiabilities,annualCurrentDeferredLiabilities,annualCurrentDeferredRevenue,annualCurrentDeferredTaxesLiabilities,annualCurrentDebtAndCapitalLeaseObligation,annualCurrentCapitalLeaseObligation,annualCurrentDebt,annualOtherCurrentBorrowings,annualLineOfCredit,annualCommercialPaper,annualCurrentNotesPayable,annualPensionandOtherPostRetirementBenefitPlansCurrent,annualCurrentProvisions,annualPayablesAndAccruedExpenses,annualCurrentAccruedExpenses,annualInterestPayable,annualPayables,annualOtherPayable,annualDuetoRelatedPartiesCurrent,annualDividendsPayable,annualTotalTaxPayable,annualIncomeTaxPayable,annualAccountsPayable,annualTotalAssets,annualTotalNonCurrentAssets,annualOtherNonCurrentAssets,annualDefinedPensionBenefit,annualNonCurrentPrepaidAssets,annualNonCurrentDeferredAssets,annualNonCurrentDeferredTaxesAssets,annualDuefromRelatedPartiesNonCurrent,annualNonCurrentNoteReceivables,annualNonCurrentAccountsReceivable,annualFinancialAssets,annualInvestmentsAndAdvances,annualOtherInvestments,annualInvestmentinFinancialAssets,annualHeldToMaturitySecurities,annualAvailableForSaleSecurities,annualFinancialAssetsDesignatedasFairValueThroughProfitorLossTotal,annualTradingSecurities,annualLongTermEquityInvestment,annualInvestmentsinJointVenturesatCost,annualInvestmentsInOtherVenturesUnderEquityMethod,annualInvestmentsinAssociatesatCost,annualInvestmentsinSubsidiariesatCost,annualInvestmentProperties,annualGoodwillAndOtherIntangibleAssets,annualOtherIntangibleAssets,annualGoodwill,annualNetPPE,annualAccumulatedDepreciation,annualGrossPPE,annualLeases,annualConstructionInProgress,annualOtherProperties,annualMachineryFurnitureEquipment,annualBuildingsAndImprovements,annualLandAndImprovements,annualProperties,annualCurrentAssets,annualOtherCurrentAssets,annualHedgingAssetsCurrent,annualAssetsHeldForSaleCurrent,annualCurrentDeferredAssets,annualCurrentDeferredTaxesAssets,annualRestrictedCash,annualPrepaidAssets,annualInventory,annualInventoriesAdjustmentsAllowances,annualOtherInventories,annualFinishedGoods,annualWorkInProcess,annualRawMaterials,annualReceivables,annualReceivablesAdjustmentsAllowances,annualOtherReceivables,annualDuefromRelatedPartiesCurrent,annualTaxesReceivable,annualAccruedInterestReceivable,annualNotesReceivable,annualLoansReceivable,annualAccountsReceivable,annualAllowanceForDoubtfulAccountsReceivable,annualGrossAccountsReceivable,annualCashCashEquivalentsAndShortTermInvestments,annualOtherShortTermInvestments,annualCashAndCashEquivalents,annualCashEquivalents,annualCashFinancial,annualCashCashEquivalentsAndFederalFundsSold\");"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/ws/fundamentals-timeseries/v1/finance/timeseries/META?type={{ANNUAL_BALANCE_SHEET_TYPES}}&period1={{startTs}}&period2={{currentTs}}&formatted=false&merge=true&padTimeSeries=true&region=US&lang=en-US&corsDomain=finance.yahoo.com",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"ws",
+								"fundamentals-timeseries",
+								"v1",
+								"finance",
+								"timeseries",
+								"META"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "META",
+									"disabled": true
+								},
+								{
+									"key": "type",
+									"value": "{{ANNUAL_BALANCE_SHEET_TYPES}}"
+								},
+								{
+									"key": "period1",
+									"value": "{{startTs}}"
+								},
+								{
+									"key": "period2",
+									"value": "{{currentTs}}"
+								},
+								{
+									"key": "formatted",
+									"value": "false"
+								},
+								{
+									"key": "merge",
+									"value": "true"
+								},
+								{
+									"key": "padTimeSeries",
+									"value": "true"
+								},
+								{
+									"key": "region",
+									"value": "US"
+								},
+								{
+									"key": "lang",
+									"value": "en-US"
+								},
+								{
+									"key": "corsDomain",
+									"value": "finance.yahoo.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cash flow",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Error is null\", () => {",
+									"    pm.expect(response.timeseries.error).to.eql(null);",
+									"});",
+									"",
+									"pm.test(\"Result is not null\", () => {",
+									"    pm.expect(response.timeseries.result).to.not.eql(null);",
+									"});",
+									"",
+									"cash_flow_types = pm.environment.get('ANNUAL_CASH_FLOW_TYPES');",
+									"",
+									"cash_flow_types.split(\",\").forEach(",
+									"    (t) => {",
+									"        pm.test(`${t} is not null`, () => {",
+									"            pm.expect(response.timeseries.result[t]).to.not.eql(null);",
+									"        });",
+									"    } ",
+									");"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"const startTs = Math.floor(new Date(2019,1,1).getTime() / 1000);",
+									"pm.environment.set(\"startTs\", startTs);",
+									"",
+									"const currentTs = Math.floor(new Date().getTime() / 1000);",
+									"pm.environment.set(\"currentTs\", currentTs);",
+									"",
+									"pm.environment.set(\"ANNUAL_CASH_FLOW_TYPES\", \"annualForeignSales,annualDomesticSales,annualAdjustedGeographySegmentData,annualFreeCashFlow,annualRepurchaseOfCapitalStock,annualRepaymentOfDebt,annualIssuanceOfDebt,annualIssuanceOfCapitalStock,annualCapitalExpenditure,annualInterestPaidSupplementalData,annualIncomeTaxPaidSupplementalData,annualEndCashPosition,annualOtherCashAdjustmentOutsideChangeinCash,annualBeginningCashPosition,annualEffectOfExchangeRateChanges,annualChangesInCash,annualOtherCashAdjustmentInsideChangeinCash,annualCashFlowFromDiscontinuedOperation,annualFinancingCashFlow,annualCashFromDiscontinuedFinancingActivities,annualCashFlowFromContinuingFinancingActivities,annualNetOtherFinancingCharges,annualInterestPaidCFF,annualProceedsFromStockOptionExercised,annualCashDividendsPaid,annualPreferredStockDividendPaid,annualCommonStockDividendPaid,annualNetPreferredStockIssuance,annualPreferredStockPayments,annualPreferredStockIssuance,annualNetCommonStockIssuance,annualCommonStockPayments,annualCommonStockIssuance,annualNetIssuancePaymentsOfDebt,annualNetShortTermDebtIssuance,annualShortTermDebtPayments,annualShortTermDebtIssuance,annualNetLongTermDebtIssuance,annualLongTermDebtPayments,annualLongTermDebtIssuance,annualInvestingCashFlow,annualCashFromDiscontinuedInvestingActivities,annualCashFlowFromContinuingInvestingActivities,annualNetOtherInvestingChanges,annualInterestReceivedCFI,annualDividendsReceivedCFI,annualNetInvestmentPurchaseAndSale,annualSaleOfInvestment,annualPurchaseOfInvestment,annualNetInvestmentPropertiesPurchaseAndSale,annualSaleOfInvestmentProperties,annualPurchaseOfInvestmentProperties,annualNetBusinessPurchaseAndSale,annualSaleOfBusiness,annualPurchaseOfBusiness,annualNetIntangiblesPurchaseAndSale,annualSaleOfIntangibles,annualPurchaseOfIntangibles,annualNetPPEPurchaseAndSale,annualSaleOfPPE,annualPurchaseOfPPE,annualCapitalExpenditureReported,annualOperatingCashFlow,annualCashFromDiscontinuedOperatingActivities,annualCashFlowFromContinuingOperatingActivities,annualTaxesRefundPaid,annualInterestReceivedCFO,annualInterestPaidCFO,annualDividendReceivedCFO,annualDividendPaidCFO,annualChangeInWorkingCapital,annualChangeInOtherWorkingCapital,annualChangeInOtherCurrentLiabilities,annualChangeInOtherCurrentAssets,annualChangeInPayablesAndAccruedExpense,annualChangeInAccruedExpense,annualChangeInInterestPayable,annualChangeInPayable,annualChangeInDividendPayable,annualChangeInAccountPayable,annualChangeInTaxPayable,annualChangeInIncomeTaxPayable,annualChangeInPrepaidAssets,annualChangeInInventory,annualChangeInReceivables,annualChangesInAccountReceivables,annualOtherNonCashItems,annualExcessTaxBenefitFromStockBasedCompensation,annualStockBasedCompensation,annualUnrealizedGainLossOnInvestmentSecurities,annualProvisionandWriteOffofAssets,annualAssetImpairmentCharge,annualAmortizationOfSecurities,annualDeferredTax,annualDeferredIncomeTax,annualDepreciationAmortizationDepletion,annualDepletion,annualDepreciationAndAmortization,annualAmortizationCashFlow,annualAmortizationOfIntangibles,annualDepreciation,annualOperatingGainsLosses,annualPensionAndEmployeeBenefitExpense,annualEarningsLossesFromEquityInvestments,annualGainLossOnInvestmentSecurities,annualNetForeignCurrencyExchangeGainLoss,annualGainLossOnSaleOfPPE,annualGainLossOnSaleOfBusiness,annualNetIncomeFromContinuingOperations,annualCashFlowsfromusedinOperatingActivitiesDirect,annualTaxesRefundPaidDirect,annualInterestReceivedDirect,annualInterestPaidDirect,annualDividendsReceivedDirect,annualDividendsPaidDirect,annualClassesofCashPayments,annualOtherCashPaymentsfromOperatingActivities,annualPaymentsonBehalfofEmployees,annualPaymentstoSuppliersforGoodsandServices,annualClassesofCashReceiptsfromOperatingActivities,annualOtherCashReceiptsfromOperatingActivities,annualReceiptsfromGovernmentGrants,annualReceiptsfromCustomers\");"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/ws/fundamentals-timeseries/v1/finance/timeseries/META?type={{ANNUAL_CASH_FLOW_TYPES}}&period1={{startTs}}&period2={{currentTs}}&formatted=false&merge=true&padTimeSeries=true&region=US&lang=en-US&corsDomain=finance.yahoo.com",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"ws",
+								"fundamentals-timeseries",
+								"v1",
+								"finance",
+								"timeseries",
+								"META"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "META",
+									"disabled": true
+								},
+								{
+									"key": "type",
+									"value": "{{ANNUAL_CASH_FLOW_TYPES}}"
+								},
+								{
+									"key": "period1",
+									"value": "{{startTs}}"
+								},
+								{
+									"key": "period2",
+									"value": "{{currentTs}}"
+								},
+								{
+									"key": "formatted",
+									"value": "false"
+								},
+								{
+									"key": "merge",
+									"value": "true"
+								},
+								{
+									"key": "padTimeSeries",
+									"value": "true"
+								},
+								{
+									"key": "region",
+									"value": "US"
+								},
+								{
+									"key": "lang",
+									"value": "en-US"
+								},
+								{
+									"key": "corsDomain",
+									"value": "finance.yahoo.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "other",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"const response = pm.response.json();",
+									"",
+									"pm.test(\"Error is null\", () => {",
+									"    pm.expect(response.timeseries.error).to.eql(null);",
+									"});",
+									"",
+									"pm.test(\"Result is not null\", () => {",
+									"    pm.expect(response.timeseries.result).to.not.eql(null);",
+									"});",
+									"",
+									"other_types = pm.environment.get('OTHER_TYPES');",
+									"",
+									"other_types.split(\",\").forEach(",
+									"    (t) => {",
+									"        pm.test(`${t} is not null`, () => {",
+									"            pm.expect(response.timeseries.result[t]).to.not.eql(null);",
+									"        });",
+									"    } ",
+									");"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"const startTs = Math.floor(new Date(2019,1,1).getTime() / 1000);",
+									"pm.environment.set(\"startTs\", startTs);",
+									"",
+									"const currentTs = Math.floor(new Date().getTime() / 1000);",
+									"pm.environment.set(\"currentTs\", currentTs);",
+									"",
+									"pm.environment.set(\"OTHER_TYPES\", \"EnterpriseValue,EnterprisesValueRevenueRatio,PbRatio,corporateConferenceCallEvents,analystRatings,otherCorporate,conferenceEvents,spEarningsReleaseEvents,shareHoldersAnnualMeetingsEvents,economicEvents,earningsConferenceCallEvents,MarketCap,ForwardPeRatio,PegRatio,corporateAnalystMeeting,EnterprisesValueEBITDARatio,PeRatio,mergerAndAcquisitionAnnouncement,conferencePresentation,PsRatio\");"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/ws/fundamentals-timeseries/v1/finance/timeseries/META?type={{OTHER_TYPES}}&period1={{startTs}}&period2={{currentTs}}&formatted=false&merge=true&padTimeSeries=true&region=US&lang=en-US&corsDomain=finance.yahoo.com",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"ws",
+								"fundamentals-timeseries",
+								"v1",
+								"finance",
+								"timeseries",
+								"META"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "META",
+									"disabled": true
+								},
+								{
+									"key": "type",
+									"value": "{{OTHER_TYPES}}"
+								},
+								{
+									"key": "period1",
+									"value": "{{startTs}}"
+								},
+								{
+									"key": "period2",
+									"value": "{{currentTs}}"
+								},
+								{
+									"key": "formatted",
+									"value": "false"
+								},
+								{
+									"key": "merge",
+									"value": "true"
+								},
+								{
+									"key": "padTimeSeries",
+									"value": "true"
+								},
+								{
+									"key": "region",
+									"value": "US"
+								},
+								{
+									"key": "lang",
+									"value": "en-US"
+								},
+								{
+									"key": "corsDomain",
+									"value": "finance.yahoo.com"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "crumb",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.environment.set(\"crumb\", pm.response.text());"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BASE_URL}}/v1/test/getcrumb",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"v1",
+						"test",
+						"getcrumb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "finance quote",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"const response = pm.response.json();",
+							"",
+							"pm.test(\"Error is null\", () => {",
+							"    pm.expect(response.quoteResponse.error).to.eql(null);",
+							"});",
+							"",
+							"pm.test(\"Result is not null\", () => {",
+							"    pm.expect(response.quoteResponse.result).to.not.eql(null);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"try {",
+							"    const response = await pm.execution.runRequest(\"47894645-03877942-92bf-4ce2-8be1-95383b1e8797\");",
+							"",
+							"    console.log(response.json());",
+							"} catch (err) {",
+							"    console.error(err);",
+							"}"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {
+							"47894645-03877942-92bf-4ce2-8be1-95383b1e8797": {
+								"workspace": "e65703fb-893e-45f5-8259-68ab8b0697f4",
+								"collection": "47894645-145241df-5736-48ff-99ee-13b85fd834a8",
+								"location": [
+									"Yahoo Finance",
+									"crumb"
+								]
+							}
+						}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/v7/finance/quote?symbols=META,AAPL&crumb={{crumb}}&includePrePost=true&formatted=false&region=US&lang=en-US&corsDomain=finance.yahoo.com",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"v7",
+						"finance",
+						"quote"
+					],
+					"query": [
+						{
+							"key": "symbols",
+							"value": "META,AAPL"
+						},
+						{
+							"key": "crumb",
+							"value": "{{crumb}}"
+						},
+						{
+							"key": "includePrePost",
+							"value": "true"
+						},
+						{
+							"key": "formatted",
+							"value": "false"
+						},
+						{
+							"key": "region",
+							"value": "US"
+						},
+						{
+							"key": "lang",
+							"value": "en-US"
+						},
+						{
+							"key": "corsDomain",
+							"value": "finance.yahoo.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "finance quote type",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"const response = pm.response.json();",
+							"",
+							"pm.test(\"Error is null\", () => {",
+							"    pm.expect(response.quoteType.error).to.eql(null);",
+							"});",
+							"",
+							"pm.test(\"Result is not null\", () => {",
+							"    pm.expect(response.quoteType.result).to.not.eql(null);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://query1.finance.yahoo.com/v1/finance/quoteType/?symbol=META,AAPL&lang=en-US&region=US&enablePrivateCompany=true",
+					"protocol": "https",
+					"host": [
+						"query1",
+						"finance",
+						"yahoo",
+						"com"
+					],
+					"path": [
+						"v1",
+						"finance",
+						"quoteType",
+						""
+					],
+					"query": [
+						{
+							"key": "symbol",
+							"value": "META,AAPL"
+						},
+						{
+							"key": "lang",
+							"value": "en-US"
+						},
+						{
+							"key": "region",
+							"value": "US"
+						},
+						{
+							"key": "enablePrivateCompany",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "finance search",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"const response = pm.response.json();",
+							"",
+							"pm.test(\"News is not null\", () => {",
+							"    pm.expect(response.news).to.not.eql(null);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/v1/finance/search?q=META,AAPL&formatted=false&region=US&lang=en-US&corsDomain=finance.yahoo.com",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"v1",
+						"finance",
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "META,AAPL"
+						},
+						{
+							"key": "formatted",
+							"value": "false"
+						},
+						{
+							"key": "region",
+							"value": "US"
+						},
+						{
+							"key": "lang",
+							"value": "en-US"
+						},
+						{
+							"key": "corsDomain",
+							"value": "finance.yahoo.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "finance insights",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"const response = pm.response.json();",
+							"",
+							"pm.test(\"Error is null\", () => {",
+							"    pm.expect(response.finance.error).to.eql(null);",
+							"});",
+							"",
+							"pm.test(\"Result is not null\", () => {",
+							"    pm.expect(response.finance.result).to.not.eql(null);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/ws/insights/v3/finance/insights?symbols=META,AAPL&formatted=false&region=US&lang=en-US&corsDomain=finance.yahoo.com&disableRelatedReports=true&getAllResearchReports=true&reportsCount=4&ssl=true",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"ws",
+						"insights",
+						"v3",
+						"finance",
+						"insights"
+					],
+					"query": [
+						{
+							"key": "symbols",
+							"value": "META,AAPL"
+						},
+						{
+							"key": "formatted",
+							"value": "false"
+						},
+						{
+							"key": "region",
+							"value": "US"
+						},
+						{
+							"key": "lang",
+							"value": "en-US"
+						},
+						{
+							"key": "corsDomain",
+							"value": "finance.yahoo.com"
+						},
+						{
+							"key": "disableRelatedReports",
+							"value": "true"
+						},
+						{
+							"key": "getAllResearchReports",
+							"value": "true"
+						},
+						{
+							"key": "reportsCount",
+							"value": "4"
+						},
+						{
+							"key": "ssl",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "finance recommendations by symbol",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"const response = pm.response.json();",
+							"",
+							"pm.test(\"Error is null\", () => {",
+							"    pm.expect(response.finance.error).to.eql(null);",
+							"});",
+							"",
+							"pm.test(\"Result is not null\", () => {",
+							"    pm.expect(response.finance.result).to.not.eql(null);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/v6/finance/recommendationsbysymbol/META,AAPL?formatted=false&region=US&lang=en-US&corsDomain=finance.yahoo.com",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"v6",
+						"finance",
+						"recommendationsbysymbol",
+						"META,AAPL"
+					],
+					"query": [
+						{
+							"key": "formatted",
+							"value": "false"
+						},
+						{
+							"key": "region",
+							"value": "US"
+						},
+						{
+							"key": "lang",
+							"value": "en-US"
+						},
+						{
+							"key": "corsDomain",
+							"value": "finance.yahoo.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "finance chart",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"const response = pm.response.json();",
+							"",
+							"pm.test(\"Error is null\", () => {",
+							"    pm.expect(response.chart.error).to.eql(null);",
+							"});",
+							"",
+							"pm.test(\"Result is not null\", () => {",
+							"    pm.expect(response.chart.result).to.not.eql(null);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/v8/finance/chart/AAPL?range=10y&interval=1d&events=div,split,earn,capitalGain&useYfid=true&includePrePost=true&formatted=false&region=US&lang=en-US&corsDomain=finance.yahoo.com&source=cosaic&includeAdjustedClose=true",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"v8",
+						"finance",
+						"chart",
+						"AAPL"
+					],
+					"query": [
+						{
+							"key": "symbol",
+							"value": "NVDA",
+							"disabled": true
+						},
+						{
+							"key": "range",
+							"value": "10y"
+						},
+						{
+							"key": "period1",
+							"value": "-883612800",
+							"disabled": true
+						},
+						{
+							"key": "period2",
+							"value": "1756484725",
+							"disabled": true
+						},
+						{
+							"key": "interval",
+							"value": "1d"
+						},
+						{
+							"key": "events",
+							"value": "div,split,earn,capitalGain"
+						},
+						{
+							"key": "useYfid",
+							"value": "true"
+						},
+						{
+							"key": "includePrePost",
+							"value": "true"
+						},
+						{
+							"key": ".tsrc",
+							"value": "finance",
+							"disabled": true
+						},
+						{
+							"key": "formatted",
+							"value": "false"
+						},
+						{
+							"key": "region",
+							"value": "US"
+						},
+						{
+							"key": "lang",
+							"value": "en-US"
+						},
+						{
+							"key": "corsDomain",
+							"value": "finance.yahoo.com"
+						},
+						{
+							"key": "source",
+							"value": "cosaic"
+						},
+						{
+							"key": "includeAdjustedClose",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "finance quote summary",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"const response = pm.response.json();",
+							"",
+							"pm.test(\"Error is null\", () => {",
+							"    pm.expect(response.quoteSummary.error).to.eql(null);",
+							"});",
+							"",
+							"pm.test(\"Result is not null\", () => {",
+							"    pm.expect(response.quoteSummary.result).to.not.eql(null);",
+							"});",
+							"",
+							"modules = pm.environment.get('ALL_MODULES');",
+							"",
+							"modules.split(\",\").forEach(",
+							"    (m) => {",
+							"        pm.test(`${m} is not null`, () => {",
+							"            pm.expect(response.quoteSummary.result[m]).to.not.eql(null);",
+							"        });",
+							"    } ",
+							");"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"try {",
+							"    const response = await pm.execution.runRequest(\"47894645-03877942-92bf-4ce2-8be1-95383b1e8797\");",
+							"",
+							"    console.log(response.json());",
+							"} catch (err) {",
+							"    console.error(err);",
+							"}",
+							"",
+							"pm.environment.set(\"ALL_MODULES\", \"details,fundProfile,quoteType,assetProfile,summaryProfile,summaryDetail,incomeStatementHistory,incomeStatementHistoryQuarterly,balanceSheetHistory,balanceSheetHistoryQuarterly,cashflowStatementHistory,cashflowStatementHistoryQuarterly,esgScores,price,defaultKeyStatistics,financialData,calendarEvents,secFilings,upgradeDowngradeHistory,institutionOwnership,fundOwnership,majorDirectHolders,majorHoldersBreakdown,insiderTransactions,insiderHolders,netSharePurchaseActivity,earnings,earningsHistory,earningsTrend,industryTrend,indexTrend,sectorTrend,recommendationTrend,futuresChain,pageViews,topHoldings,fundPerformance\");"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {
+							"47894645-03877942-92bf-4ce2-8be1-95383b1e8797": {
+								"workspace": "e65703fb-893e-45f5-8259-68ab8b0697f4",
+								"collection": "47894645-145241df-5736-48ff-99ee-13b85fd834a8",
+								"location": [
+									"Yahoo Finance",
+									"crumb"
+								]
+							}
+						}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/v10/finance/quoteSummary/META?crumb={{crumb}}&modules={{ALL_MODULES}}&formatted=false&region=US&lang=en-US&corsDomain=finance.yahoo.com&enablePrivateCompany=true&enableQSPExpandedEarnings=true&overnightPrice=true",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"v10",
+						"finance",
+						"quoteSummary",
+						"META"
+					],
+					"query": [
+						{
+							"key": "crumb",
+							"value": "{{crumb}}"
+						},
+						{
+							"key": "modules",
+							"value": "{{ALL_MODULES}}"
+						},
+						{
+							"key": "formatted",
+							"value": "false"
+						},
+						{
+							"key": "region",
+							"value": "US"
+						},
+						{
+							"key": "lang",
+							"value": "en-US"
+						},
+						{
+							"key": "corsDomain",
+							"value": "finance.yahoo.com"
+						},
+						{
+							"key": "enablePrivateCompany",
+							"value": "true"
+						},
+						{
+							"key": "enableQSPExpandedEarnings",
+							"value": "true"
+						},
+						{
+							"key": "overnightPrice",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "finance options",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"const response = pm.response.json();",
+							"",
+							"pm.test(\"Error is null\", () => {",
+							"    pm.expect(response.optionChain.error).to.eql(null);",
+							"});",
+							"",
+							"pm.test(\"Result is not optionChain\", () => {",
+							"    pm.expect(response.optionChain.result).to.not.eql(null);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"try {",
+							"    const response = await pm.execution.runRequest(\"47894645-03877942-92bf-4ce2-8be1-95383b1e8797\");",
+							"",
+							"    console.log(response.json());",
+							"} catch (err) {",
+							"    console.error(err);",
+							"}"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {
+							"47894645-03877942-92bf-4ce2-8be1-95383b1e8797": {
+								"workspace": "e65703fb-893e-45f5-8259-68ab8b0697f4",
+								"collection": "47894645-145241df-5736-48ff-99ee-13b85fd834a8",
+								"location": [
+									"Yahoo Finance",
+									"crumb"
+								]
+							}
+						}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/v7/finance/options/META?crumb={{crumb}}&formatted=false&region=US&lang=en-US&corsDomain=finance.yahoo.com&date=-1&straddle=False",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"v7",
+						"finance",
+						"options",
+						"META"
+					],
+					"query": [
+						{
+							"key": "crumb",
+							"value": "{{crumb}}"
+						},
+						{
+							"key": "date",
+							"value": "1756497020",
+							"disabled": true
+						},
+						{
+							"key": "formatted",
+							"value": "false"
+						},
+						{
+							"key": "region",
+							"value": "US"
+						},
+						{
+							"key": "lang",
+							"value": "en-US"
+						},
+						{
+							"key": "corsDomain",
+							"value": "finance.yahoo.com"
+						},
+						{
+							"key": "date",
+							"value": "-1"
+						},
+						{
+							"key": "straddle",
+							"value": "False"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "finance quote market summary",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"const response = pm.response.json();",
+							"",
+							"pm.test(\"Error is null\", () => {",
+							"    pm.expect(response.marketSummaryResponse.error).to.eql(null);",
+							"});",
+							"",
+							"pm.test(\"Result is not null\", () => {",
+							"    pm.expect(response.marketSummaryResponse.result).to.not.eql(null);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/v6/finance/quote/marketSummary?formatted=false&region=US&lang=en-US&corsDomain=finance.yahoo.com",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"v6",
+						"finance",
+						"quote",
+						"marketSummary"
+					],
+					"query": [
+						{
+							"key": "formatted",
+							"value": "false"
+						},
+						{
+							"key": "region",
+							"value": "US"
+						},
+						{
+							"key": "lang",
+							"value": "en-US"
+						},
+						{
+							"key": "corsDomain",
+							"value": "finance.yahoo.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "finance trending",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"const response = pm.response.json();",
+							"",
+							"pm.test(\"Error is null\", () => {",
+							"    pm.expect(response.finance.error).to.eql(null);",
+							"});",
+							"",
+							"pm.test(\"Result is not null\", () => {",
+							"    pm.expect(response.finance.result).to.not.eql(null);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/v1/finance/trending/US?formatted=false&region=US&lang=en-US&corsDomain=finance.yahoo.com",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"v1",
+						"finance",
+						"trending",
+						"US"
+					],
+					"query": [
+						{
+							"key": "formatted",
+							"value": "false"
+						},
+						{
+							"key": "region",
+							"value": "US"
+						},
+						{
+							"key": "lang",
+							"value": "en-US"
+						},
+						{
+							"key": "corsDomain",
+							"value": "finance.yahoo.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "finance currencies",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"const response = pm.response.json();",
+							"",
+							"pm.test(\"Error is null\", () => {",
+							"    pm.expect(response.currencies.error).to.eql(null);",
+							"});",
+							"",
+							"pm.test(\"Result is not optionChain\", () => {",
+							"    pm.expect(response.currencies.result).to.not.eql(null);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/v1/finance/currencies?formatted=false&region=US&lang=en-US&corsDomain=finance.yahoo.com",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"v1",
+						"finance",
+						"currencies"
+					],
+					"query": [
+						{
+							"key": "formatted",
+							"value": "false"
+						},
+						{
+							"key": "region",
+							"value": "US"
+						},
+						{
+							"key": "lang",
+							"value": "en-US"
+						},
+						{
+							"key": "corsDomain",
+							"value": "finance.yahoo.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "finance ratings",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://query1.finance.yahoo.com/v2/ratings/top/META?exclude_noncurrent=true&lang=en-US&region=US",
+					"protocol": "https",
+					"host": [
+						"query1",
+						"finance",
+						"yahoo",
+						"com"
+					],
+					"path": [
+						"v2",
+						"ratings",
+						"top",
+						"META"
+					],
+					"query": [
+						{
+							"key": "exclude_noncurrent",
+							"value": "true"
+						},
+						{
+							"key": "lang",
+							"value": "en-US"
+						},
+						{
+							"key": "region",
+							"value": "US"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ws screener calendar events",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"const response = pm.response.json();",
+							"",
+							"pm.test(\"Error is null\", () => {",
+							"    pm.expect(response.finance.error).to.eql(null);",
+							"});",
+							"",
+							"pm.test(\"Result is not null\", () => {",
+							"    pm.expect(response.finance.result).to.not.eql(null);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const currentTsMs = new Date().getTime();",
+							"pm.environment.set(\"currentTsMs\", currentTsMs);",
+							"",
+							"const startTsMs = new Date(currentTsMs - 149*24*60*60*1000).getTime();",
+							"pm.environment.set(\"startTsMs\", startTsMs);",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://query1.finance.yahoo.com/ws/screeners/v1/finance/calendar-events?countPerDay=25&economicEventsHighImportanceOnly=true&economicEventsRegionFilter=&endDate={{currentTsMs}}&modules=economicEvents&startDate={{startTsMs}}&lang=en-US&region=US",
+					"protocol": "https",
+					"host": [
+						"query1",
+						"finance",
+						"yahoo",
+						"com"
+					],
+					"path": [
+						"ws",
+						"screeners",
+						"v1",
+						"finance",
+						"calendar-events"
+					],
+					"query": [
+						{
+							"key": "countPerDay",
+							"value": "25"
+						},
+						{
+							"key": "economicEventsHighImportanceOnly",
+							"value": "true"
+						},
+						{
+							"key": "economicEventsRegionFilter",
+							"value": ""
+						},
+						{
+							"key": "endDate",
+							"value": "{{currentTsMs}}"
+						},
+						{
+							"key": "modules",
+							"value": "economicEvents"
+						},
+						{
+							"key": "startDate",
+							"value": "{{startTsMs}}"
+						},
+						{
+							"key": "lang",
+							"value": "en-US"
+						},
+						{
+							"key": "region",
+							"value": "US"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "finance spark",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"const response = pm.response.json();",
+							"",
+							"pm.test(\"Error is null\", () => {",
+							"    pm.expect(response.spark.error).to.eql(null);",
+							"});",
+							"",
+							"pm.test(\"Result is not null\", () => {",
+							"    pm.expect(response.spark.result).to.not.eql(null);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/v7/finance/spark?symbols=META,AAPL&range=1mo&interval=1d&formatted=false&region=US&lang=en-US&corsDomain=finance.yahoo.com",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"v7",
+						"finance",
+						"spark"
+					],
+					"query": [
+						{
+							"key": "symbols",
+							"value": "META,AAPL"
+						},
+						{
+							"key": "range",
+							"value": "1mo"
+						},
+						{
+							"key": "interval",
+							"value": "1d"
+						},
+						{
+							"key": "includePrePost",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "includeTimestamps",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "formatted",
+							"value": "false"
+						},
+						{
+							"key": "region",
+							"value": "US"
+						},
+						{
+							"key": "lang",
+							"value": "en-US"
+						},
+						{
+							"key": "corsDomain",
+							"value": "finance.yahoo.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "xhr ticker analysis",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://finance.yahoo.com/xhr/ticker-analysis?debug=false&symbol=META&lang=en-US&region=US",
+					"protocol": "https",
+					"host": [
+						"finance",
+						"yahoo",
+						"com"
+					],
+					"path": [
+						"xhr",
+						"ticker-analysis"
+					],
+					"query": [
+						{
+							"key": "debug",
+							"value": "false"
+						},
+						{
+							"key": "symbol",
+							"value": "META"
+						},
+						{
+							"key": "lang",
+							"value": "en-US"
+						},
+						{
+							"key": "region",
+							"value": "US"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "news",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"const response = pm.response.json();",
+							"",
+							"pm.test(\"Status is OK\", () => {",
+							"    pm.expect(response.status).to.eql(\"OK\");",
+							"});",
+							"",
+							"pm.test(\"Data is not null\", () => {",
+							"    pm.expect(response.data).to.not.eql(null);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"serviceConfig\": {\n        \"snippetCount\": 10,\n        \"s\": [\"AAPL\"]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://finance.yahoo.com/xhr/ncp?queryRef=latestNews&serviceKey=ncp_fin&formatted=false&region=US&lang=en-US&corsDomain=finance.yahoo.com",
+					"protocol": "https",
+					"host": [
+						"finance",
+						"yahoo",
+						"com"
+					],
+					"path": [
+						"xhr",
+						"ncp"
+					],
+					"query": [
+						{
+							"key": "queryRef",
+							"value": "latestNews"
+						},
+						{
+							"key": "serviceKey",
+							"value": "ncp_fin"
+						},
+						{
+							"key": "formatted",
+							"value": "false"
+						},
+						{
+							"key": "region",
+							"value": "US"
+						},
+						{
+							"key": "lang",
+							"value": "en-US"
+						},
+						{
+							"key": "corsDomain",
+							"value": "finance.yahoo.com"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

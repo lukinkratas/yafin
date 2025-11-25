@@ -1,0 +1,11 @@
+{
+  "tickers": "META,AAPL",
+  "tickers_list": [
+    "META",
+    "AAPL"
+  ],
+  "interval": "1d",
+  "period_range": "1y",
+  "period1": 1577833200.0,
+  "period2": 1763712781.569804
+}

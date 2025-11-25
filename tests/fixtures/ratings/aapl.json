@@ -1,0 +1,110 @@
+{
+  "dir": {
+    "analyst": "Daiwa Capital",
+    "dir": {
+      "raw": 79.0616723141338,
+      "fmt": 79.0
+    },
+    "mm": {
+      "raw": 77.7724798198329,
+      "fmt": 78.0
+    },
+    "pt": {
+      "raw": 64.84056443074495,
+      "fmt": 65.0
+    },
+    "fin_score": {
+      "raw": 75.83069298916575,
+      "fmt": 76.0
+    },
+    "datapoints": 6,
+    "ticker": "AAPL",
+    "uuid": "d9d7a7fe-1eb0-5dc0-bf43-381862994571",
+    "rating_current": "Outperform",
+    "rating_sentiment": 1,
+    "pt_current": 275.0,
+    "adjusted_pt_current": 275.0,
+    "announcement_date": "2024-12-19"
+  },
+  "mm": {
+    "analyst": "Daiwa Capital",
+    "dir": {
+      "raw": 79.0616723141338,
+      "fmt": 79.0
+    },
+    "mm": {
+      "raw": 77.7724798198329,
+      "fmt": 78.0
+    },
+    "pt": {
+      "raw": 64.84056443074495,
+      "fmt": 65.0
+    },
+    "fin_score": {
+      "raw": 75.83069298916575,
+      "fmt": 76.0
+    },
+    "datapoints": 6,
+    "ticker": "AAPL",
+    "uuid": "d9d7a7fe-1eb0-5dc0-bf43-381862994571",
+    "rating_current": "Outperform",
+    "rating_sentiment": 1,
+    "pt_current": 275.0,
+    "adjusted_pt_current": 275.0,
+    "announcement_date": "2024-12-19"
+  },
+  "pt": {
+    "analyst": "Melius Research",
+    "dir": {
+      "raw": 62.6639111759462,
+      "fmt": 63.0
+    },
+    "mm": {
+      "raw": 49.897759721731006,
+      "fmt": 50.0
+    },
+    "pt": {
+      "raw": 99.99381440158449,
+      "fmt": 100.0
+    },
+    "fin_score": {
+      "raw": 66.30004638480929,
+      "fmt": 66.0
+    },
+    "datapoints": 6,
+    "ticker": "AAPL",
+    "uuid": "98a9e088-be74-5d1d-a5de-1cd48832bfb1",
+    "rating_current": "Buy",
+    "rating_sentiment": 1,
+    "pt_current": 290.0,
+    "adjusted_pt_current": 290.0,
+    "announcement_date": "2025-09-10"
+  },
+  "fin_score": {
+    "analyst": "Daiwa Capital",
+    "dir": {
+      "raw": 79.0616723141338,
+      "fmt": 79.0
+    },
+    "mm": {
+      "raw": 77.7724798198329,
+      "fmt": 78.0
+    },
+    "pt": {
+      "raw": 64.84056443074495,
+      "fmt": 65.0
+    },
+    "fin_score": {
+      "raw": 75.83069298916575,
+      "fmt": 76.0
+    },
+    "datapoints": 6,
+    "ticker": "AAPL",
+    "uuid": "d9d7a7fe-1eb0-5dc0-bf43-381862994571",
+    "rating_current": "Outperform",
+    "rating_sentiment": 1,
+    "pt_current": 275.0,
+    "adjusted_pt_current": 275.0,
+    "announcement_date": "2024-12-19"
+  }
+}

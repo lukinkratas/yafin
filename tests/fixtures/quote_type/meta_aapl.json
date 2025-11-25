@@ -1,0 +1,39 @@
+{
+  "quoteType": {
+    "result": [
+      {
+        "symbol": "META",
+        "quoteType": "EQUITY",
+        "quartrId": "4109",
+        "exchange": "NMS",
+        "shortName": "Meta Platforms, Inc.",
+        "longName": "Meta Platforms, Inc.",
+        "messageBoardId": "finmb_20765463",
+        "exchangeTimezoneName": "America/New_York",
+        "exchangeTimezoneShortName": "EST",
+        "gmtOffSetMilliseconds": "-18000000",
+        "market": "us_market",
+        "isEsgPopulated": false,
+        "hasSelerityEarnings": true,
+        "selerityIsGaap": true
+      },
+      {
+        "symbol": "AAPL",
+        "quoteType": "EQUITY",
+        "quartrId": "4742",
+        "exchange": "NMS",
+        "shortName": "Apple Inc.",
+        "longName": "Apple Inc.",
+        "messageBoardId": "finmb_24937",
+        "exchangeTimezoneName": "America/New_York",
+        "exchangeTimezoneShortName": "EST",
+        "gmtOffSetMilliseconds": "-18000000",
+        "market": "us_market",
+        "isEsgPopulated": false,
+        "hasSelerityEarnings": true,
+        "selerityIsGaap": true
+      }
+    ],
+    "error": null
+  }
+}

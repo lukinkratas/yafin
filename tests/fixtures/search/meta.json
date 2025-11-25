@@ -1,0 +1,412 @@
+{
+  "explains": [],
+  "count": 20,
+  "quotes": [
+    {
+      "exchange": "NMS",
+      "shortname": "Meta Platforms, Inc.",
+      "quoteType": "EQUITY",
+      "symbol": "META",
+      "index": "quotes",
+      "score": 12433000.0,
+      "typeDisp": "Equity",
+      "longname": "Meta Platforms, Inc.",
+      "exchDisp": "NASDAQ",
+      "sector": "Communication Services",
+      "industry": "Internet Content & Information",
+      "dispSecIndFlag": true,
+      "isYahooFinance": true,
+      "prevName": "Facebook, Inc.",
+      "nameChangeDate": "2025-11-20"
+    },
+    {
+      "exchange": "NYQ",
+      "shortname": "Wheaton Precious Metals Corp",
+      "quoteType": "EQUITY",
+      "symbol": "WPM",
+      "index": "quotes",
+      "score": 20311.0,
+      "typeDisp": "Equity",
+      "longname": "Wheaton Precious Metals Corp.",
+      "exchDisp": "NYSE",
+      "sector": "Basic Materials",
+      "industry": "Gold",
+      "isYahooFinance": true
+    },
+    {
+      "exchange": "NMS",
+      "shortname": "TMC the metals company Inc.",
+      "quoteType": "EQUITY",
+      "symbol": "TMC",
+      "index": "quotes",
+      "score": 20140.0,
+      "typeDisp": "Equity",
+      "longname": "TMC the metals company Inc.",
+      "exchDisp": "NASDAQ",
+      "sector": "Basic Materials",
+      "industry": "Other Industrial Metals & Mining",
+      "isYahooFinance": true,
+      "prevName": "Sustainable Opportunities Acquisition Corp.",
+      "nameChangeDate": "2025-11-20"
+    },
+    {
+      "exchange": "ASE",
+      "shortname": "Platinum Group Metals Ltd.",
+      "quoteType": "EQUITY",
+      "symbol": "PLG",
+      "index": "quotes",
+      "score": 20077.0,
+      "typeDisp": "Equity",
+      "longname": "Platinum Group Metals Ltd.",
+      "exchDisp": "NYSE MKT",
+      "sector": "Basic Materials",
+      "industry": "Other Precious Metals & Mining",
+      "isYahooFinance": true
+    },
+    {
+      "exchange": "PCX",
+      "shortname": "VanEck Rare Earth and Strategic",
+      "quoteType": "ETF",
+      "symbol": "REMX",
+      "index": "quotes",
+      "score": 20076.0,
+      "typeDisp": "ETF",
+      "longname": "VanEck Rare Earth and Strategic Metals ETF",
+      "exchDisp": "NYSEArca",
+      "isYahooFinance": true
+    },
+    {
+      "exchange": "ASE",
+      "shortname": "Silvercorp Metals Inc.",
+      "quoteType": "EQUITY",
+      "symbol": "SVM",
+      "index": "quotes",
+      "score": 20059.0,
+      "typeDisp": "Equity",
+      "longname": "Silvercorp Metals Inc.",
+      "exchDisp": "NYSE MKT",
+      "sector": "Basic Materials",
+      "industry": "Silver",
+      "isYahooFinance": true
+    },
+    {
+      "exchange": "VAN",
+      "shortname": "DISTRICT METALS CORP",
+      "quoteType": "EQUITY",
+      "symbol": "DMX.V",
+      "index": "quotes",
+      "score": 20050.0,
+      "typeDisp": "Equity",
+      "longname": "District Metals Corp.",
+      "exchDisp": "CDNX",
+      "sector": "Basic Materials",
+      "industry": "Other Industrial Metals & Mining",
+      "isYahooFinance": true
+    }
+  ],
+  "news": [
+    {
+      "uuid": "493d2f7b-a972-3886-92bd-ba24c58767c3",
+      "title": "Billionaire Sam Altman's Iris Orb Dream Crumbles: $240M From Khosla Ventures Fuels 1B User Hunt, But Just 2% There As Bans Mount Worldwide",
+      "publisher": "Benzinga",
+      "link": "https://finance.yahoo.com/news/billionaire-sam-altmans-iris-orb-010120228.html",
+      "providerPublishTime": 1763686880,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/thrn7.EwcaVtMk0TulUZbQ--~B/aD02ODM7dz0xMDI0O2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/Benzinga/94cad8bf160b0a0b3da6c073f8a68727",
+            "width": 1024,
+            "height": 683,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/6Bn3eq8N_VIrus5cgsCvGg--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/Benzinga/94cad8bf160b0a0b3da6c073f8a68727",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "WLD-USD",
+        "GOOGL",
+        "META",
+        "AMZN"
+      ]
+    },
+    {
+      "uuid": "c7bcdf1f-66b8-36cc-b430-74f2b1c15a9e",
+      "title": "Walmart Is Talking Up Its Tech Focus. A New Stock Exchange Is Its Next Move",
+      "publisher": "Investopedia",
+      "link": "https://finance.yahoo.com/m/c7bcdf1f-66b8-36cc-b430-74f2b1c15a9e/walmart-is-talking-up-its.html",
+      "providerPublishTime": 1763675273,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/.777VoQoyx_XiVK_VaEDrQ--~B/aD01NDY0O3c9ODE5MjthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/investopedia_245/65f5207fd0f65eeb07553957863a357b",
+            "width": 8192,
+            "height": 5464,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/ge4IiiCTK3txqS.WgN.o9w--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/investopedia_245/65f5207fd0f65eeb07553957863a357b",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "WMT",
+        "^IXIC",
+        "AMZN",
+        "META",
+        "GOOGL"
+      ]
+    },
+    {
+      "uuid": "dd2b0464-f754-3c55-b7ec-5481fadbc6bc",
+      "title": "Zuckerberg, Meta directors agree to $190 million settlement of shareholder privacy case",
+      "publisher": "Reuters",
+      "link": "https://finance.yahoo.com/news/zuckerberg-meta-directors-agree-190-212626624.html",
+      "providerPublishTime": 1763673986,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/Pcsq7cbyCb_FeZ8RAbbOAA--~B/aD01MzM7dz04MDA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/reuters-finance.com/2d70563614659515bc3f0b9fed95aa51",
+            "width": 800,
+            "height": 533,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/qv3fw2C.hY9ppaaYM78Uug--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/reuters-finance.com/2d70563614659515bc3f0b9fed95aa51",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "META",
+        "PLTR"
+      ]
+    },
+    {
+      "uuid": "29ed3d75-d2dd-473f-9911-380246989fc6",
+      "title": "Nvidia stock slides after Q3 earnings, forecasts top estimates with sales for AI chips 'off the charts'",
+      "publisher": "Yahoo Finance",
+      "link": "https://finance.yahoo.com/news/nvidia-stock-slides-after-q3-earnings-forecasts-top-estimates-with-sales-for-ai-chips-off-the-charts-210758368.html",
+      "providerPublishTime": 1763672878,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/EbId7qRNv96p.o3TgQYjcQ--~B/aD0zMzM5O3c9NTAwODthcHBpZD15dGFjaHlvbg--/https://s.yimg.com/os/creatr-uploaded-images/2025-11/5e6f77e0-c185-11f0-af9a-1cb3b0b5ae8d",
+            "width": 5008,
+            "height": 3339,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/RaVND4083m7F0DVHCFVB1A--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://s.yimg.com/os/creatr-uploaded-images/2025-11/5e6f77e0-c185-11f0-af9a-1cb3b0b5ae8d",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "NVDA",
+        "AMD",
+        "ORCL",
+        "META",
+        "9984.T"
+      ]
+    },
+    {
+      "uuid": "9b73b31c-247a-372b-8005-5f12f72d3fda",
+      "title": "Prediction: This AI Stock Could Quietly Outperform Wall Street Favorites",
+      "publisher": "Motley Fool",
+      "link": "https://finance.yahoo.com/m/9b73b31c-247a-372b-8005-5f12f72d3fda/prediction%3A-this-ai-stock.html",
+      "providerPublishTime": 1763668800,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/XM6SpOsKuJAxcw1Qn7tieA--~B/aD04Nzc7dz0xNDAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/006bde325fc810755a62db98f5f3b521",
+            "width": 1400,
+            "height": 877,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/mKdgGaj.MyUlbHwpIITIqQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/006bde325fc810755a62db98f5f3b521",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "META",
+        "^IXIC",
+        "NVDA",
+        "AVGO",
+        "AMD",
+        "PLTR"
+      ]
+    },
+    {
+      "uuid": "01f7f6cc-fce4-311a-b759-967afe0f4989",
+      "title": "Meta Hit With $552 Million Fine In Spain Over Ad Practices",
+      "publisher": "GuruFocus.com",
+      "link": "https://finance.yahoo.com/news/meta-hit-552-million-fine-192738425.html",
+      "providerPublishTime": 1763666858,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/l4RQ9ctGoVJ.pATDH._65Q--~B/aD0xOTIwO3c9MTkyMDthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/us.finance.gurufocus/0a1fabbe0615fb9205b4c17d7c6011e3",
+            "width": 1920,
+            "height": 1920,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/VUt4xocHBmNOSFpKPnmsyA--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/us.finance.gurufocus/0a1fabbe0615fb9205b4c17d7c6011e3",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "META"
+      ]
+    },
+    {
+      "uuid": "1dafc41e-b76c-3588-b027-41a5a562339f",
+      "title": "Bursting AI Stock Bubble Gets Ugly \u2014 Erases $2.4 Trillion In Value",
+      "publisher": "Investor's Business Daily",
+      "link": "https://finance.yahoo.com/m/1dafc41e-b76c-3588-b027-41a5a562339f/bursting-ai-stock-bubble-gets.html",
+      "providerPublishTime": 1763665099,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/xRCkAdFaqpOAv5MzGetMkg--~B/aD01NjM7dz0xMDAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/ibd.com/df29b6176d7553eecff0ac80582003e4",
+            "width": 1000,
+            "height": 563,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/lRHr9kQvGagy0b2CShwAjg--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/ibd.com/df29b6176d7553eecff0ac80582003e4",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "NVDA",
+        "META",
+        "AMZN"
+      ]
+    },
+    {
+      "uuid": "b8d42252-2037-30a5-b965-bfee19583d12",
+      "title": "The \u2018loopification\u2019 of AI is making me dizzy",
+      "publisher": "Fortune",
+      "link": "https://finance.yahoo.com/news/loopification-ai-making-dizzy-184055219.html",
+      "providerPublishTime": 1763664055,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/I00c.qnhSFTA6oLC4iA9sg--~B/aD0xMzY1O3c9MjA0ODthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/fortune_175/f9fb1bbfb7700c62371c03a5692527a8",
+            "width": 2048,
+            "height": 1365,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/grVymn1APdHdRmLES1MhSQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/fortune_175/f9fb1bbfb7700c62371c03a5692527a8",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "MSFT",
+        "ANTH.PVT",
+        "NVDA",
+        "META"
+      ]
+    }
+  ],
+  "nav": [
+    {
+      "navName": "Metal Fabrication",
+      "navUrl": "https://finance.yahoo.com/sectors/industrials/metal-fabrication"
+    }
+  ],
+  "lists": [
+    {
+      "index": "ca67a1b3-572c-433c-b1a4-a0da3738fc14",
+      "id": "ca67a1b3-572c-433c-b1a4-a0da3738fc14",
+      "title": "Commodity Metal Mutual Funds",
+      "canonicalName": "COMMODITY_MUTUAL_FUNDS",
+      "score": 1.0,
+      "type": "PREDEFINED_SCREENER",
+      "total": 82,
+      "isPremium": false,
+      "iconUrl": "https://edgecast-img.yahoo.net/mysterio/api/683fd6c45c5d4d5905e2caf5cd56ab1ab1c4e7d168bee45d8047945dc48ab943/finance/resizefill_w96_h96/https://s.yimg.com/cv/apiv2/fin/img/assets/predefined_screeners/theme.png"
+    },
+    {
+      "index": "05acca9e-1aee-44b6-8224-c92459eb2ed8",
+      "id": "05acca9e-1aee-44b6-8224-c92459eb2ed8",
+      "title": "Metal Fabrication",
+      "canonicalName": "METAL_FABRICATION",
+      "score": 1.0,
+      "type": "PREDEFINED_SCREENER",
+      "total": 12,
+      "isPremium": false,
+      "iconUrl": "https://edgecast-img.yahoo.net/mysterio/api/b241f4b88dcc1439d37ed7dd74c3ee884516f53bc29bc8eece9b9fcf5c850fe8/finance/resizefill_w96_h96/https://s.yimg.com/cv/apiv2/fin/img/assets/predefined_screeners/diamond.png"
+    },
+    {
+      "index": "63e7f272-cd8d-4307-9002-eb98746a036a",
+      "id": "63e7f272-cd8d-4307-9002-eb98746a036a",
+      "title": "Precious Metal ETFs",
+      "canonicalName": "PRECIOUS_METAL_ETFS",
+      "score": 1.0,
+      "type": "PREDEFINED_SCREENER",
+      "total": 14,
+      "isPremium": false,
+      "iconUrl": "https://edgecast-img.yahoo.net/mysterio/api/b241f4b88dcc1439d37ed7dd74c3ee884516f53bc29bc8eece9b9fcf5c850fe8/finance/resizefill_w96_h96/https://s.yimg.com/cv/apiv2/fin/img/assets/predefined_screeners/diamond.png"
+    },
+    {
+      "index": "62e97ea1-46c8-4e6e-86f2-901a4ffa8b47",
+      "id": "62e97ea1-46c8-4e6e-86f2-901a4ffa8b47",
+      "title": "Other Precious Metals & Mining",
+      "canonicalName": "OTHER_PRECIOUS_METALS_MINING",
+      "score": 1.0,
+      "type": "PREDEFINED_SCREENER",
+      "total": 6,
+      "isPremium": false,
+      "iconUrl": "https://edgecast-img.yahoo.net/mysterio/api/b241f4b88dcc1439d37ed7dd74c3ee884516f53bc29bc8eece9b9fcf5c850fe8/finance/resizefill_w96_h96/https://s.yimg.com/cv/apiv2/fin/img/assets/predefined_screeners/diamond.png"
+    }
+  ],
+  "researchReports": [],
+  "screenerFieldResults": [],
+  "totalTime": 94,
+  "timeTakenForQuotes": 427,
+  "timeTakenForNews": 700,
+  "timeTakenForAlgowatchlist": 400,
+  "timeTakenForPredefinedScreener": 400,
+  "timeTakenForCrunchbase": 0,
+  "timeTakenForNav": 400,
+  "timeTakenForResearchReports": 0,
+  "timeTakenForScreenerField": 0,
+  "timeTakenForCulturalAssets": 0,
+  "timeTakenForSearchLists": 0
+}

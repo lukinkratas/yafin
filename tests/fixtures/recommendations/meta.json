@@ -1,0 +1,32 @@
+{
+  "finance": {
+    "result": [
+      {
+        "symbol": "META",
+        "recommendedSymbols": [
+          {
+            "symbol": "AMZN",
+            "score": 0.212912
+          },
+          {
+            "symbol": "AAPL",
+            "score": 0.206946
+          },
+          {
+            "symbol": "GOOG",
+            "score": 0.197234
+          },
+          {
+            "symbol": "TSLA",
+            "score": 0.191394
+          },
+          {
+            "symbol": "NFLX",
+            "score": 0.18212
+          }
+        ]
+      }
+    ],
+    "error": null
+  }
+}

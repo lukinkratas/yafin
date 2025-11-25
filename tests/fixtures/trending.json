@@ -1,0 +1,74 @@
+{
+  "finance": {
+    "result": [
+      {
+        "count": 20,
+        "quotes": [
+          {
+            "symbol": "BTC-USD"
+          },
+          {
+            "symbol": "ETH-USD"
+          },
+          {
+            "symbol": "XRP-USD"
+          },
+          {
+            "symbol": "NFE"
+          },
+          {
+            "symbol": "^VIX"
+          },
+          {
+            "symbol": "BTC-CAD"
+          },
+          {
+            "symbol": "^GSPC"
+          },
+          {
+            "symbol": "MELI"
+          },
+          {
+            "symbol": "SNDK"
+          },
+          {
+            "symbol": "NVVE"
+          },
+          {
+            "symbol": "BTC-EUR"
+          },
+          {
+            "symbol": "^IXIC"
+          },
+          {
+            "symbol": "SOL-USD"
+          },
+          {
+            "symbol": "WMT"
+          },
+          {
+            "symbol": "MRNA"
+          },
+          {
+            "symbol": "ES=F"
+          },
+          {
+            "symbol": "INTU"
+          },
+          {
+            "symbol": "DOGE-USD"
+          },
+          {
+            "symbol": "BBWI"
+          },
+          {
+            "symbol": "NQ=F"
+          }
+        ],
+        "jobTimestamp": 1763709271436,
+        "startInterval": 202511210600
+      }
+    ],
+    "error": null
+  }
+}

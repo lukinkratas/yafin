@@ -1,0 +1,51 @@
+{
+  "quoteSummary": {
+    "result": [
+      {
+        "defaultKeyStatistics": {
+          "maxAge": 1,
+          "priceHint": 2,
+          "enterpriseValue": 4026017251328,
+          "forwardPE": 29.211119,
+          "profitMargins": 0.26915002,
+          "floatShares": 14750642146,
+          "sharesOutstanding": 14776353000,
+          "sharesShort": 115557836,
+          "sharesShortPriorMonth": 110777598,
+          "sharesShortPreviousMonthDate": 1759190400,
+          "dateShortInterest": 1761868800,
+          "sharesPercentSharesOut": 0.0078,
+          "heldPercentInsiders": 0.016970001,
+          "heldPercentInstitutions": 0.64386004,
+          "shortRatio": 2.44,
+          "shortPercentOfFloat": 0.0078,
+          "beta": 1.109,
+          "impliedSharesOutstanding": 14840390000,
+          "category": null,
+          "bookValue": 4.991,
+          "priceToBook": 53.34602,
+          "fundFamily": null,
+          "legalType": null,
+          "lastFiscalYearEnd": 1758931200,
+          "nextFiscalYearEnd": 1790467200,
+          "mostRecentQuarter": 1758931200,
+          "earningsQuarterlyGrowth": 0.864,
+          "netIncomeToCommon": 112010002432,
+          "trailingEps": 7.46,
+          "forwardEps": 8.31,
+          "lastSplitFactor": "4:1",
+          "lastSplitDate": 1598832000,
+          "enterpriseToRevenue": 9.674,
+          "enterpriseToEbitda": 27.814,
+          "52WeekChange": 0.17521441,
+          "SandP52WeekChange": 0.116571546,
+          "lastDividendValue": 0.26,
+          "lastDividendDate": 1762732800,
+          "latestShareClass": null,
+          "leadInvestor": null
+        }
+      }
+    ],
+    "error": null
+  }
+}

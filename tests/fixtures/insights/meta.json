@@ -1,0 +1,634 @@
+{
+  "finance": {
+    "result": [
+      {
+        "symbol": "META",
+        "instrumentInfo": {
+          "technicalEvents": {
+            "provider": "Trading Central",
+            "sector": "Communication Services",
+            "shortTermOutlook": {
+              "stateDescription": "There are no events.",
+              "direction": "Neutral",
+              "score": 0,
+              "scoreDescription": "No Evidence",
+              "sectorDirection": "Bullish",
+              "sectorScore": 2,
+              "sectorScoreDescription": "Bullish Evidence",
+              "indexDirection": "Bearish",
+              "indexScore": 3,
+              "indexScoreDescription": "Strong Bearish Evidence"
+            },
+            "intermediateTermOutlook": {
+              "stateDescription": "There are no events.",
+              "direction": "Neutral",
+              "score": 0,
+              "scoreDescription": "No Evidence",
+              "sectorDirection": "Bearish",
+              "sectorScore": 3,
+              "sectorScoreDescription": "Strong Bearish Evidence",
+              "indexDirection": "Bearish",
+              "indexScore": 3,
+              "indexScoreDescription": "Strong Bearish Evidence"
+            },
+            "longTermOutlook": {
+              "stateDescription": "There is one bearish event.",
+              "direction": "Bearish",
+              "score": 1,
+              "scoreDescription": "Weak Bearish Evidence",
+              "sectorDirection": "Bullish",
+              "sectorScore": 1,
+              "sectorScoreDescription": "Weak Bullish Evidence",
+              "indexDirection": "Neutral",
+              "indexScore": 0,
+              "indexScoreDescription": "No Evidence"
+            }
+          },
+          "keyTechnicals": {
+            "provider": "Trading Central",
+            "support": 191.068,
+            "resistance": 329.51
+          },
+          "valuation": {
+            "color": 0.5,
+            "description": "Near Fair Value",
+            "discount": "-5%",
+            "provider": "Trading Central"
+          }
+        },
+        "companySnapshot": {
+          "sectorInfo": "Communication Services",
+          "company": {
+            "innovativeness": 0.8288,
+            "sustainability": 0.7643000000000001,
+            "insiderSentiments": 0.0,
+            "earningsReports": 0.9098,
+            "dividends": 0.0127
+          },
+          "sector": {
+            "innovativeness": 0.5,
+            "hiring": 0.5,
+            "sustainability": 0.5,
+            "insiderSentiments": 0.5,
+            "earningsReports": 0.5,
+            "dividends": 0.5
+          }
+        },
+        "recommendation": {
+          "targetPrice": 850.0,
+          "provider": "Argus Research",
+          "rating": "BUY"
+        },
+        "upsell": {
+          "msBullishSummary": [
+            "Meta's core advertising business has benefited greatly through improved ad targeting and content recommendation algorithms as well as a secular increase in digital advertising spending.",
+            "Meta's scale, with the majority of the world's internet-connected users accessing its applications, allows it access to high-quality user data which it can package and sell to advertisers.",
+            "The firm has an opportunity to drive more ad inventory growth, leveraging new products such as Threads while also improving its monetization of ads on more nascent features such as Stories and Reels."
+          ],
+          "msBearishSummary": [
+            "Meta's investments in Reality Labs and generative AI stand to lose the firm billions of dollars annually, taking some of the shine off its overall business.",
+            "The firm has a monopoly case against it in the US which could potentially force it to break up, severing some of the scale advantages it has built up over time.",
+            "Meta has disproportionately benefited from increased ad spending by Chinese retailers including Temu and Shein. A slowdown in spending by these firms could hit Meta's growth."
+          ],
+          "companyName": "Meta Platforms, Inc.",
+          "msBullishBearishSummariesPublishDate": 1761865705000,
+          "upsellReportType": "MORNINGSTAR_ANALYST"
+        },
+        "upsellSearchDD": {
+          "researchReports": {
+            "reportId": "ARGUS_3592_AnalystReport_1762174991000",
+            "provider": "Argus",
+            "title": "Capex spending dings Meta's story",
+            "reportDate": "2025-11-03T13:03:11Z",
+            "summary": "Meta Platforms operates the world's largest family of social networking websites, including the flagship Facebook site, Instagram, Facebook Messenger, WhatsApp, Reels, and Threads. The sites enable users to communicate with friends and family by posting content; to comment on the posts of others; to share photographs, website links, and videos; to message; and to play games. The company also partners with application developers to add functionality to the sites, and allows users to pay for virtual goods and services through its Payments function. Meta's Superintelligence Labs is one of the pioneers in generative AI research its and its Reality Labs segment develops and sells new computing form factors like virtual reality headsets and smart glasses. Meta derives about 55% of its revenue from outside the U.S. and Canada.",
+            "investmentRating": "Bullish"
+          }
+        },
+        "events": [
+          {
+            "eventType": "Relative Strength Index (RSI)",
+            "pricePeriod": "D",
+            "tradingHorizon": "S",
+            "tradeType": "L",
+            "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
+            "startDate": 1762785000,
+            "endDate": 1762785000
+          }
+        ],
+        "reports": [
+          {
+            "id": "ARGUS_45198_StockPicks_1762179101000",
+            "headHtml": "Weekly Stock List",
+            "provider": "Argus Research",
+            "reportDate": "2025-11-03T14:11:41Z",
+            "reportTitle": "The stock market keeps hitting all-time highs. We believe that diversification across sectors is powering this bull market and is wider than discussed in the media and by overall investing commentary. We want to highlight some of the high-flying sectors and individual companies that are having a banner year outside of the strong upward driver of AI. As such, the following is a two-tiered list of companies in Argus' fundamental Universe of Coverage and highlight stocks that are seeing the highest gains from their 52-week lows. We used our Argus screener to find large caps above $250 billion in market cap, and then sorted by sector. We also note our rating and the percentage gains in these stocks. The first list includes non-tech companies, while the second includes the tech companies. Some in this list are technically not categorized as IT companies, but we moved them into this group as IT is their main function.",
+            "reportType": "Stock Picks",
+            "tickers": [
+              "GOOGL",
+              "AAPL",
+              "CSCO",
+              "AVGO",
+              "JPM",
+              "JNJ",
+              "UNH",
+              "ASML",
+              "MSFT",
+              "TSLA",
+              "WFC",
+              "IBM",
+              "LLY",
+              "AMD",
+              "GE",
+              "PLTR",
+              "NFLX",
+              "BABA",
+              "META",
+              "NVDA",
+              "BAC",
+              "MS",
+              "MU",
+              "ORCL",
+              "ABBV",
+              "TSM",
+              "CAT",
+              "AMZN"
+            ],
+            "title": "Argus Quick Note: Weekly Stock List for 11/03/2025: Big-Cap High-Flyers"
+          },
+          {
+            "id": "ARGUS_45191_MarketSummary_1762174991000",
+            "headHtml": "Market Digest: FHI, IEX, MCO, ORLY, UTHR, VLO, META, MDLZ",
+            "provider": "Argus Research",
+            "reportDate": "2025-11-03T13:03:11Z",
+            "reportTitle": "Earnings Flood Continues The earnings flood continues this week. The October jobs report was supposed to come out on Friday -- but if the U.S. government shutdown continues, that indicator will not be released. Several Federal Reserve officials will be speaking publicly during the week. Last week, the Dow Jones Industrial Average gained 0.9%, the S&P 500 was up 0.8%, and the Nasdaq rose 2.3%. So far this year, the Dow is up 12%, the S&P 500 has gained 16%, and the Nasdaq has popped 23%.  On the earnings calendar, Palantir Technologies reports on Monday; AMD, Uber, Amgen, Pfizer, Spotify, Marriott, and Apollo Global Management on Tuesday; Toyota, Novo Nordisk, McDonald's, and Qualcomm on Wednesday; AstraZeneca, ConocoPhillips Airbnb, and Warner Bros. Discovery on Thursday; and Constellation Energy, Duke Energy, and Honda on Friday. Some 56% of S&P 500 companies have reported so far and earnings are up 13% from the prior-year quarter. That follows 13% growth in 2Q EPS and 14% growth in 1Q EPS, according to LSEG I/B/E/S. For 3Q, Information Technology is the leading sector so far, up 24%, and Energy is at the bottom, down 6%. On the economic calendar, the U.S. federal government shutdown is now the second longest in history, at 34 days. That means no government-issued economic reports will be released, including this week's scheduled October jobs report. Data that will be reported includes ISM Manufacturing on Monday; ADP employment on Wednesday; and Consumer Sentiment on Friday.  Turning to other data, the Atlanta Fed GDPNow measure calls for GDP of 3.9% in the third quarter. That is the same as last week's forecast. The Cleveland Fed Inflation Nowcast forecasts CPI of 3.0% in October, also the same as last week. Mortgage rates inched lower last week, with the average 30-year fixed-rate mortgage now at 6.17%, according to FreddieMac. Gas prices went up two cents last week and now average $3.04 per gallon for regular gas.  Looking ahead, the last Federal Open Market Committee meeting of the year is on December 10. After Chairman Powell's comments last week, odds have dropped to 63% from 92% for another 25-basis-point cut to the fed funds target rate, according to the CME FedWatch rate tool. After that, the first few meetings in 2026 are on January 28 and March 18. Taking a deeper dive into performance, U.S. stocks are lagging global stocks. A leading industrialized global stock-market index, the ETF EFA, has surged 25% year to date, while the leading emerging market ETF EEM has gained 32%. U.S. growth stocks, with a year-to-date gain of 20% (ETF IWF), have taken the edge over value stocks (ETF IWD), which have booked an advance of 11%. In other asset classes for the year to date, AGG bonds are up 4%, gold is up 54%, crude oil is down 14%, and Bitcoin is up 17%. The U.S. dollar is down 8%, tracking DXY. The VIX Volatility Index settled Friday at about 18, down from a high of 29 a few weeks ago. The current level is still in range of a bull market. Looking at leading and lagging sectors so far in 2025, Information Technology (+26%) is the top performer, followed by Communication Services, up 25%, Utilities (+21%) and Industrials (+18%) are outperforming the broader market, while Financials (+10%) is not too far behind. Defensive sectors like Energy, (+3%), Consumer Staples (+3%), Real Estate (+5%), Consumer Discretionary (+4%), Materials (+6%), and Healthcare (+6%) are at the bottom of the performance list.",
+            "reportType": "Market Summary",
+            "tickers": [
+              "MDLZ",
+              "META",
+              "ORLY",
+              "FHI",
+              "VLO",
+              "MCO",
+              "IEX",
+              "UTHR"
+            ],
+            "title": "Earnings Flood Continues\n\nThe earnings flood continues this week. The October"
+          },
+          {
+            "id": "ARGUS_3592_AnalystReport_1762174991000",
+            "headHtml": "Analyst Report: Meta Platforms Inc",
+            "provider": "Argus Research",
+            "reportDate": "2025-11-03T13:03:11Z",
+            "reportTitle": "Meta Platforms operates the world's largest family of social networking websites, including the flagship Facebook site, Instagram, Facebook Messenger, WhatsApp, Reels, and Threads. The sites enable users to communicate with friends and family by posting content; to comment on the posts of others; to share photographs, website links, and videos; to message; and to play games. The company also partners with application developers to add functionality to the sites, and allows users to pay for virtual goods and services through its Payments function. Meta's Superintelligence Labs is one of the pioneers in generative AI research its and its Reality Labs segment develops and sells new computing form factors like virtual reality headsets and smart glasses. Meta derives about 55% of its revenue from outside the U.S. and Canada.",
+            "reportType": "Analyst Report",
+            "targetPrice": 850.0,
+            "targetPriceStatus": "Maintained",
+            "investmentRating": "Bullish",
+            "tickers": [
+              "META"
+            ],
+            "title": "Capex spending dings Meta's story"
+          },
+          {
+            "id": "MS_0P0000W3KZ_AnalystReport_1761865705000",
+            "headHtml": "Analyst Report: Meta Platforms, Inc.",
+            "provider": "Morningstar",
+            "reportDate": "2025-10-30T23:08:25Z",
+            "reportTitle": "Meta is the largest social media company in the world, boasting close to 4 billion monthly active users worldwide. The firm's \"Family of Apps,\" its core business, consists of Facebook, Instagram, Messenger, and WhatsApp. End users can leverage these applications for a variety of different purposes, from keeping in touch with friends to following celebrities and running digital businesses for free. Meta packages customer data, gleaned from its application ecosystem and sells ads to digital advertisers. While the firm has been investing heavily in its Reality Labs business, it remains a very small part of Meta\u2019s overall sales. ",
+            "reportType": "Analyst Report",
+            "targetPrice": 850.0,
+            "targetPriceStatus": "Maintained",
+            "investmentRating": "Bullish",
+            "tickers": [
+              "META"
+            ],
+            "title": "Meta Earnings: Ad Revenue Momentum Is Strong, but an Avalanche of AI Costs Are Coming in 2026"
+          }
+        ],
+        "sigDevs": [
+          {
+            "headline": "Meta\u2019S Chief Revenue Officer John Hegeman Exits In Broad Leadership Reshuffle - Bloomberg News",
+            "date": "2025-11-18"
+          }
+        ],
+        "secReports": [
+          {
+            "id": "0001193125-25-262593_1326801",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1762128000000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000119312525262593/thumbnail.png",
+            "formType": "8-K"
+          },
+          {
+            "id": "0001628280-25-047240_1326801",
+            "type": "Periodic Financial Reports",
+            "title": "10-Q : Periodic Financial Reports",
+            "description": "Quarterly report pursuant to Section 13 or 15(d)",
+            "filingDate": 1761782400000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000162828025047240/thumbnail.png",
+            "formType": "10-Q"
+          },
+          {
+            "id": "0001628280-25-047114_1326801",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1761696000000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000162828025047114/thumbnail.png",
+            "formType": "8-K"
+          },
+          {
+            "id": "0001628280-25-036791_1326801",
+            "type": "Periodic Financial Reports",
+            "title": "10-Q : Periodic Financial Reports",
+            "description": "Quarterly report pursuant to Section 13 or 15(d)",
+            "filingDate": 1753920000000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000162828025036791/thumbnail.png",
+            "formType": "10-Q"
+          },
+          {
+            "id": "0001628280-25-036719_1326801",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1753833600000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000162828025036719/thumbnail.png",
+            "formType": "8-K"
+          },
+          {
+            "id": "0001326801-25-000098_1326801",
+            "type": "Offering Registrations",
+            "title": "S-8 POS : Offering Registrations",
+            "description": "Post-effective amendment to a S-8 registration statement",
+            "filingDate": 1748563200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000098/thumbnail.png",
+            "formType": "S-8 POS"
+          },
+          {
+            "id": "0001326801-25-000091_1326801",
+            "type": "Offering Registrations",
+            "title": "S-8 POS : Offering Registrations",
+            "description": "Post-effective amendment to a S-8 registration statement",
+            "filingDate": 1748563200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000091/thumbnail.png",
+            "formType": "S-8 POS"
+          },
+          {
+            "id": "0001326801-25-000096_1326801",
+            "type": "Offering Registrations",
+            "title": "S-8 POS : Offering Registrations",
+            "description": "Post-effective amendment to a S-8 registration statement",
+            "filingDate": 1748563200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000096/thumbnail.png",
+            "formType": "S-8 POS"
+          },
+          {
+            "id": "0001326801-25-000090_1326801",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1748563200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000090/thumbnail.png",
+            "formType": "8-K"
+          },
+          {
+            "id": "0001326801-25-000094_1326801",
+            "type": "Offering Registrations",
+            "title": "S-8 POS : Offering Registrations",
+            "description": "Post-effective amendment to a S-8 registration statement",
+            "filingDate": 1748563200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000094/thumbnail.png",
+            "formType": "S-8 POS"
+          },
+          {
+            "id": "0001326801-25-000095_1326801",
+            "type": "Offering Registrations",
+            "title": "S-8 POS : Offering Registrations",
+            "description": "Post-effective amendment to a S-8 registration statement",
+            "filingDate": 1748563200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000095/thumbnail.png",
+            "formType": "S-8 POS"
+          },
+          {
+            "id": "0001326801-25-000093_1326801",
+            "type": "Offering Registrations",
+            "title": "S-8 POS : Offering Registrations",
+            "description": "Post-effective amendment to a S-8 registration statement",
+            "filingDate": 1748563200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000093/thumbnail.png",
+            "formType": "S-8 POS"
+          },
+          {
+            "id": "0001326801-25-000097_1326801",
+            "type": "Offering Registrations",
+            "title": "S-8 POS : Offering Registrations",
+            "description": "Post-effective amendment to a S-8 registration statement",
+            "filingDate": 1748563200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000097/thumbnail.png",
+            "formType": "S-8 POS"
+          },
+          {
+            "id": "0001326801-25-000092_1326801",
+            "type": "Offering Registrations",
+            "title": "S-8 POS : Offering Registrations",
+            "description": "Post-effective amendment to a S-8 registration statement",
+            "filingDate": 1748563200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000092/thumbnail.png",
+            "formType": "S-8 POS"
+          },
+          {
+            "id": "0001326801-25-000054_1326801",
+            "type": "Periodic Financial Reports",
+            "title": "10-Q : Periodic Financial Reports",
+            "description": "Quarterly report pursuant to Section 13 or 15(d)",
+            "filingDate": 1746057600000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000054/thumbnail.png",
+            "formType": "10-Q"
+          },
+          {
+            "id": "0001326801-25-000050_1326801",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1745971200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000050/thumbnail.png",
+            "formType": "8-K"
+          },
+          {
+            "id": "0001326801-25-000040_1326801",
+            "type": "Proxy Statements",
+            "title": "DEF 14A : Proxy Statements",
+            "description": "Definitive proxy statements",
+            "filingDate": 1744848000000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000040/thumbnail.png",
+            "formType": "DEF 14A"
+          },
+          {
+            "id": "0001326801-25-000043_1326801",
+            "type": "Annual Report to Shareholders",
+            "title": "ARS : Annual Report to Shareholders",
+            "description": "Annual report to security holders",
+            "filingDate": 1744848000000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000043/thumbnail.png",
+            "formType": "ARS"
+          },
+          {
+            "id": "0001326801-25-000041_1326801",
+            "type": "Proxy Statements",
+            "title": "DEFA14A : Proxy Statements",
+            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
+            "filingDate": 1744848000000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000041/thumbnail.png",
+            "formType": "DEFA14A"
+          },
+          {
+            "id": "0001326801-25-000027_1326801",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1744329600000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000027/thumbnail.png",
+            "formType": "8-K"
+          },
+          {
+            "id": "0001326801-25-000021_1326801",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1740009600000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000021/thumbnail.png",
+            "formType": "8-K"
+          },
+          {
+            "id": "0001326801-25-000017_1326801",
+            "type": "Periodic Financial Reports",
+            "title": "10-K : Periodic Financial Reports",
+            "description": "Annual report pursuant to Section 13 and 15(d)",
+            "filingDate": 1738195200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000017/thumbnail.png",
+            "formType": "10-K"
+          },
+          {
+            "id": "0001326801-25-000014_1326801",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1738108800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000014/thumbnail.png",
+            "formType": "8-K"
+          },
+          {
+            "id": "0001326801-25-000005_1326801",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1736121600000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000005/thumbnail.png",
+            "formType": "8-K"
+          },
+          {
+            "id": "0001326801-24-000081_1326801",
+            "type": "Periodic Financial Reports",
+            "title": "10-Q : Periodic Financial Reports",
+            "description": "Quarterly report pursuant to Section 13 or 15(d)",
+            "filingDate": 1730332800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680124000081/thumbnail.png",
+            "formType": "10-Q"
+          },
+          {
+            "id": "0001326801-24-000077_1326801",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1730246400000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680124000077/thumbnail.png",
+            "formType": "8-K"
+          },
+          {
+            "id": "0001326801-24-000072_1326801",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1725926400000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680124000072/thumbnail.png",
+            "formType": "8-K"
+          },
+          {
+            "id": "0001193125-24-197873_1326801",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1723161600000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000119312524197873/thumbnail.png",
+            "formType": "8-K"
+          },
+          {
+            "id": "0001326801-24-000069_1326801",
+            "type": "Periodic Financial Reports",
+            "title": "10-Q : Periodic Financial Reports",
+            "description": "Quarterly report pursuant to Section 13 or 15(d)",
+            "filingDate": 1722470400000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680124000069/thumbnail.png",
+            "formType": "10-Q"
+          },
+          {
+            "id": "0001326801-24-000065_1326801",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1722384000000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680124000065/thumbnail.png",
+            "formType": "8-K"
+          },
+          {
+            "id": "0001326801-24-000057_1326801",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1717113600000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680124000057/thumbnail.png",
+            "formType": "8-K"
+          },
+          {
+            "id": "0001326801-24-000049_1326801",
+            "type": "Periodic Financial Reports",
+            "title": "10-Q : Periodic Financial Reports",
+            "description": "Quarterly report pursuant to Section 13 or 15(d)",
+            "filingDate": 1714003200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680124000049/thumbnail.png",
+            "formType": "10-Q"
+          },
+          {
+            "id": "0001326801-24-000044_1326801",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1713916800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680124000044/thumbnail.png",
+            "formType": "8-K"
+          },
+          {
+            "id": "0001326801-24-000034_1326801",
+            "type": "Proxy Statements",
+            "title": "DEF 14A : Proxy Statements",
+            "description": "Definitive proxy statements",
+            "filingDate": 1713484800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680124000034/thumbnail.png",
+            "formType": "DEF 14A"
+          },
+          {
+            "id": "0001326801-24-000038_1326801",
+            "type": "Annual Report to Shareholders",
+            "title": "ARS : Annual Report to Shareholders",
+            "description": "Annual report to security holders",
+            "filingDate": 1713484800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680124000038/thumbnail.png",
+            "formType": "ARS"
+          },
+          {
+            "id": "0001326801-24-000036_1326801",
+            "type": "Proxy Statements",
+            "title": "DEFA14A : Proxy Statements",
+            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
+            "filingDate": 1713484800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680124000036/thumbnail.png",
+            "formType": "DEFA14A"
+          },
+          {
+            "id": "0001326801-24-000022_1326801",
+            "type": "Proxy Statements",
+            "title": "PRE 14A : Proxy Statements",
+            "description": "Preliminary proxy statement not related to a contested matter or merger/acquisition",
+            "filingDate": 1711670400000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680124000022/thumbnail.png",
+            "formType": "PRE 14A"
+          },
+          {
+            "id": "0001326801-24-000019_1326801",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1707868800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680124000019/thumbnail.png",
+            "formType": "8-K"
+          },
+          {
+            "id": "0001326801-24-000012_1326801",
+            "type": "Periodic Financial Reports",
+            "title": "10-K : Periodic Financial Reports",
+            "description": "Annual report pursuant to Section 13 and 15(d)",
+            "filingDate": 1706832000000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680124000012/thumbnail.png",
+            "formType": "10-K"
+          },
+          {
+            "id": "0001326801-24-000010_1326801",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1706745600000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680124000010/thumbnail.png",
+            "formType": "8-K"
+          },
+          {
+            "id": "0001326801-24-000003_1326801",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1705536000000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680124000003/thumbnail.png",
+            "formType": "8-K"
+          },
+          {
+            "id": "0001326801-23-000103_1326801",
+            "type": "Periodic Financial Reports",
+            "title": "10-Q : Periodic Financial Reports",
+            "description": "Quarterly report pursuant to Section 13 or 15(d)",
+            "filingDate": 1698278400000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680123000103/thumbnail.png",
+            "formType": "10-Q"
+          },
+          {
+            "id": "0001326801-23-000100_1326801",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1698192000000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680123000100/thumbnail.png",
+            "formType": "8-K"
+          },
+          {
+            "id": "0001326801-23-000093_1326801",
+            "type": "Periodic Financial Reports",
+            "title": "10-Q : Periodic Financial Reports",
+            "description": "Quarterly report pursuant to Section 13 or 15(d)",
+            "filingDate": 1690416000000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680123000093/thumbnail.png",
+            "formType": "10-Q"
+          },
+          {
+            "id": "0001326801-23-000089_1326801",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1690329600000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680123000089/thumbnail.png",
+            "formType": "8-K"
+          },
+          {
+            "id": "0001326801-23-000083_1326801",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1685664000000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680123000083/thumbnail.png",
+            "formType": "8-K"
+          }
+        ]
+      }
+    ],
+    "error": null
+  }
+}

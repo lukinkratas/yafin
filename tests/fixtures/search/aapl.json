@@ -1,0 +1,328 @@
+{
+  "explains": [],
+  "count": 15,
+  "quotes": [
+    {
+      "exchange": "NMS",
+      "shortname": "Apple Inc.",
+      "quoteType": "EQUITY",
+      "symbol": "AAPL",
+      "index": "quotes",
+      "score": 19073500.0,
+      "typeDisp": "Equity",
+      "longname": "Apple Inc.",
+      "exchDisp": "NASDAQ",
+      "sector": "Technology",
+      "sectorDisp": "Technology",
+      "industry": "Consumer Electronics",
+      "industryDisp": "Consumer Electronics",
+      "dispSecIndFlag": true,
+      "isYahooFinance": true
+    },
+    {
+      "exchange": "NGM",
+      "shortname": "Direxion Daily AAPL Bull 2X Sha",
+      "quoteType": "ETF",
+      "symbol": "AAPU",
+      "index": "quotes",
+      "score": 20008.0,
+      "typeDisp": "ETF",
+      "longname": "Direxion Daily AAPL Bull 2X Shares",
+      "exchDisp": "NASDAQ",
+      "isYahooFinance": true
+    },
+    {
+      "exchange": "NGM",
+      "shortname": "Direxion Daily AAPL Bear 1X Sha",
+      "quoteType": "ETF",
+      "symbol": "AAPD",
+      "index": "quotes",
+      "score": 20004.0,
+      "typeDisp": "ETF",
+      "longname": "Direxion Daily AAPL Bear 1X Shares",
+      "exchDisp": "NASDAQ",
+      "isYahooFinance": true
+    },
+    {
+      "exchange": "OPR",
+      "shortname": "AAPL Nov 2025 267.500 put",
+      "quoteType": "OPTION",
+      "symbol": "AAPL251121P00267500",
+      "index": "quotes",
+      "score": 20004.0,
+      "typeDisp": "Option",
+      "longname": "AAPL Nov 2025 267.500 put",
+      "exchDisp": "OPR",
+      "isYahooFinance": true
+    },
+    {
+      "exchange": "OPR",
+      "shortname": "AAPL Jan 2026 185.000 call",
+      "quoteType": "OPTION",
+      "symbol": "AAPL260116C00185000",
+      "index": "quotes",
+      "score": 20002.0,
+      "typeDisp": "Option",
+      "longname": "AAPL Jan 2026 185.000 call",
+      "exchDisp": "OPR",
+      "isYahooFinance": true
+    },
+    {
+      "exchange": "OPR",
+      "shortname": "AAPL Jun 2026 175.000 call",
+      "quoteType": "OPTION",
+      "symbol": "AAPL260618C00175000",
+      "index": "quotes",
+      "score": 20002.0,
+      "typeDisp": "Option",
+      "longname": "AAPL Jun 2026 175.000 call",
+      "exchDisp": "OPR",
+      "isYahooFinance": true
+    },
+    {
+      "exchange": "OPR",
+      "shortname": "AAPL Jan 2026 125.000 put",
+      "quoteType": "OPTION",
+      "symbol": "AAPL260116P00125000",
+      "index": "quotes",
+      "score": 20002.0,
+      "typeDisp": "Option",
+      "longname": "AAPL Jan 2026 125.000 put",
+      "exchDisp": "OPR",
+      "isYahooFinance": true
+    }
+  ],
+  "news": [
+    {
+      "uuid": "d4d11250-158a-340c-b800-f0f3bd132b26",
+      "title": "OpenAI and Taiwan's Foxconn to partner in AI hardware design and manufacturing in the US",
+      "publisher": "Associated Press Finance",
+      "link": "https://finance.yahoo.com/news/openai-taiwans-foxconn-partner-ai-040216256.html",
+      "providerPublishTime": 1763697736,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/uP5R6AJUP.BxBIx1SOdvNA--~B/aD0zNDM5O3c9NTE1ODthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/ap_finance_articles_694/b76efbb07d7183bb2cf1f6869cbb03bb",
+            "width": 5158,
+            "height": 3439,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/OH1knxUwIT_3seh63WX2rA--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/ap_finance_articles_694/b76efbb07d7183bb2cf1f6869cbb03bb",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "OPAI.PVT",
+        "601138.SS",
+        "NVDA",
+        "AAPL"
+      ]
+    },
+    {
+      "uuid": "6c74daae-7448-3a01-a188-f60d767083e1",
+      "title": "Foxconn can make 1,000 AI racks a week, to increase next year, chairman says",
+      "publisher": "Reuters",
+      "link": "https://finance.yahoo.com/news/foxconn-1-000-ai-racks-031805011.html",
+      "providerPublishTime": 1763695085,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/C9ZkZuDJouDvbBCkmm0ZDA--~B/aD01MzM7dz04MDA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/reuters-finance.com/340689790c16d1abfc5428c700b9f6e7",
+            "width": 800,
+            "height": 533,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/P7ER6458Yjjk5aYn0sFXPQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/reuters-finance.com/340689790c16d1abfc5428c700b9f6e7",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "601138.SS",
+        "NVDA",
+        "OPAI.PVT",
+        "AAPL"
+      ]
+    },
+    {
+      "uuid": "3ac63103-1566-392c-ab7f-13708d8b18bc",
+      "title": "Foxconn to spend up to $3 billion a year on AI, chair sees China EV shakeout",
+      "publisher": "Reuters",
+      "link": "https://finance.yahoo.com/news/foxconn-spend-3-billion-ai-230148283.html",
+      "providerPublishTime": 1763679708,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/QIr4a.SQqGjDZGWfcam7bQ--~B/aD01MzM7dz04MDA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/reuters-finance.com/ffb4b2f388c8f4d60cedf110f66fae29",
+            "width": 800,
+            "height": 533,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/HXEEUuCzluCj3KTIwNF._g--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/reuters-finance.com/ffb4b2f388c8f4d60cedf110f66fae29",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "601138.SS",
+        "AAPL"
+      ]
+    },
+    {
+      "uuid": "522f66a0-01b0-38d3-acc8-9fc661b812cc",
+      "title": "Intrinsic, an Alphabet company, and Nvidia supplier Foxconn will join forces to deploy AI robots in the latter\u2019s U.S. factories",
+      "publisher": "Fortune",
+      "link": "https://finance.yahoo.com/news/intrinsic-alphabet-company-nvidia-supplier-230000944.html",
+      "providerPublishTime": 1763679600,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/h8sCAmNrLLSV9Znp_vP1gA--~B/aD0xMzY1O3c9MjA0ODthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/fortune_175/87a7a274b8d7f60cbe8dfe6e0e0d3ffe",
+            "width": 2048,
+            "height": 1365,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/y3VSA4wDSb7P6IAF.2Ky1g--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/fortune_175/87a7a274b8d7f60cbe8dfe6e0e0d3ffe",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "GOOGL",
+        "601138.SS",
+        "NVDA",
+        "AAPL"
+      ]
+    },
+    {
+      "uuid": "591dca7e-5868-3eb6-b408-286d607086f0",
+      "title": "Google Launches Unauthorized Pixel-to-iPhone File Sharing\u00a0With Apple\u2019s AirDrop",
+      "publisher": "Bloomberg",
+      "link": "https://finance.yahoo.com/news/google-launches-unauthorized-pixel-iphone-224310499.html",
+      "providerPublishTime": 1763678590,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/at614HkYEFAdsJ1XddWoWw--~B/aD0yMDAwO3c9MzAwMDthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/bloomberg_holding_pen_162/a61ff6b1962388c4fcb9974c27afe9a5",
+            "width": 3000,
+            "height": 2000,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/0wJG6iCFlU0kFJPhdI..bQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/bloomberg_holding_pen_162/a61ff6b1962388c4fcb9974c27afe9a5",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "GOOGL",
+        "AAPL"
+      ]
+    },
+    {
+      "uuid": "48d25879-60d6-3ed0-a4d9-ab10aa37e951",
+      "title": "Wall Street Sees a \u2018Buying Opportunity\u2019 in This Rare Earths Stock. Should You Snap Up Shares Now?",
+      "publisher": "Barchart",
+      "link": "https://finance.yahoo.com/m/48d25879-60d6-3ed0-a4d9-ab10aa37e951/wall-street-sees-a-%E2%80%98buying.html",
+      "providerPublishTime": 1763671014,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/CgfxE82kgsg_3sbsZmLAhQ--~B/aD04NTM7dz0xMjgwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/barchart_com_477/41cc0a3dc654d4313174091e7380ac67",
+            "width": 1280,
+            "height": 853,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/z9onFdYxtrogq6jkg7YrrQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/barchart_com_477/41cc0a3dc654d4313174091e7380ac67",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "MP",
+        "AAPL"
+      ]
+    },
+    {
+      "uuid": "0939d1d5-3bfa-395d-905d-df9e1015a6a4",
+      "title": "Warren Buffett Is Selling Apple and Piling Into This \"Magnificent Seven\" Stock Trading at a Fraction of Tesla's Valuation",
+      "publisher": "Motley Fool",
+      "link": "https://finance.yahoo.com/m/0939d1d5-3bfa-395d-905d-df9e1015a6a4/warren-buffett-is-selling.html",
+      "providerPublishTime": 1763669700,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/nnydNnWP4vqkrR5L0Qcbdg--~B/aD05MzM7dz0xNDAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/9160442686379fe8e7841b4752a46121",
+            "width": 1400,
+            "height": 933,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/VEmDHISALADP6QinAivztw--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/9160442686379fe8e7841b4752a46121",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "AAPL",
+        "TSLA"
+      ]
+    },
+    {
+      "uuid": "db39b22f-37f8-3a21-ac3b-ee0ed402d5af",
+      "title": "ESPN, NBCUniversal, Netflix Secure MLB Broadcast Rights From 2026",
+      "publisher": "MT Newswires",
+      "link": "https://finance.yahoo.com/news/espn-nbcuniversal-netflix-secure-mlb-182208415.html",
+      "providerPublishTime": 1763662928,
+      "type": "STORY",
+      "relatedTickers": [
+        "DIS",
+        "CMCSA",
+        "WBD",
+        "AAPL"
+      ]
+    }
+  ],
+  "nav": [],
+  "lists": [],
+  "researchReports": [],
+  "screenerFieldResults": [],
+  "totalTime": 41,
+  "timeTakenForQuotes": 428,
+  "timeTakenForNews": 700,
+  "timeTakenForAlgowatchlist": 400,
+  "timeTakenForPredefinedScreener": 400,
+  "timeTakenForCrunchbase": 0,
+  "timeTakenForNav": 400,
+  "timeTakenForResearchReports": 0,
+  "timeTakenForScreenerField": 0,
+  "timeTakenForCulturalAssets": 0,
+  "timeTakenForSearchLists": 0
+}

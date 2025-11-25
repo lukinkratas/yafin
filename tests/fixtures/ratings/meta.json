@@ -1,0 +1,110 @@
+{
+  "dir": {
+    "analyst": "Wolfe Research",
+    "dir": {
+      "raw": 89.09119369882983,
+      "fmt": 89.0
+    },
+    "mm": {
+      "raw": 79.214451750048,
+      "fmt": 79.0
+    },
+    "pt": {
+      "raw": 98.54287182779088,
+      "fmt": 99.0
+    },
+    "fin_score": {
+      "raw": 88.01850673998749,
+      "fmt": 88.0
+    },
+    "datapoints": 9,
+    "ticker": "META",
+    "uuid": "8eea66ed-57cf-5b1f-bb0e-d3341e982fe0",
+    "rating_current": "Outperform",
+    "rating_sentiment": 1,
+    "pt_current": 730.0,
+    "adjusted_pt_current": 730.0,
+    "announcement_date": "2025-01-04"
+  },
+  "mm": {
+    "analyst": "Wolfe Research",
+    "dir": {
+      "raw": 89.09119369882983,
+      "fmt": 89.0
+    },
+    "mm": {
+      "raw": 79.214451750048,
+      "fmt": 79.0
+    },
+    "pt": {
+      "raw": 98.54287182779088,
+      "fmt": 99.0
+    },
+    "fin_score": {
+      "raw": 88.01850673998749,
+      "fmt": 88.0
+    },
+    "datapoints": 9,
+    "ticker": "META",
+    "uuid": "8eea66ed-57cf-5b1f-bb0e-d3341e982fe0",
+    "rating_current": "Outperform",
+    "rating_sentiment": 1,
+    "pt_current": 730.0,
+    "adjusted_pt_current": 730.0,
+    "announcement_date": "2025-01-04"
+  },
+  "pt": {
+    "analyst": "Evercore ISI Group",
+    "dir": {
+      "raw": 74.20606802669745,
+      "fmt": 74.0
+    },
+    "mm": {
+      "raw": 52.91161935085341,
+      "fmt": 53.0
+    },
+    "pt": {
+      "raw": 99.61081928851242,
+      "fmt": 100.0
+    },
+    "fin_score": {
+      "raw": 72.89868367630723,
+      "fmt": 73.0
+    },
+    "datapoints": 19,
+    "ticker": "META",
+    "uuid": "7b1f3eae-1811-5c5f-8ebc-60d953c7e720",
+    "rating_current": "Outperform",
+    "rating_sentiment": 1,
+    "pt_current": 750.0,
+    "adjusted_pt_current": 750.0,
+    "announcement_date": "2025-05-02"
+  },
+  "fin_score": {
+    "analyst": "Wolfe Research",
+    "dir": {
+      "raw": 89.09119369882983,
+      "fmt": 89.0
+    },
+    "mm": {
+      "raw": 79.214451750048,
+      "fmt": 79.0
+    },
+    "pt": {
+      "raw": 98.54287182779088,
+      "fmt": 99.0
+    },
+    "fin_score": {
+      "raw": 88.01850673998749,
+      "fmt": 88.0
+    },
+    "datapoints": 9,
+    "ticker": "META",
+    "uuid": "8eea66ed-57cf-5b1f-bb0e-d3341e982fe0",
+    "rating_current": "Outperform",
+    "rating_sentiment": 1,
+    "pt_current": 730.0,
+    "adjusted_pt_current": 730.0,
+    "announcement_date": "2025-01-04"
+  }
+}

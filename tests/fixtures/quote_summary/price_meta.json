@@ -1,0 +1,50 @@
+{
+  "quoteSummary": {
+    "result": [
+      {
+        "price": {
+          "maxAge": 1,
+          "preMarketSource": "FREE_REALTIME",
+          "postMarketChangePercent": -0.0024273167,
+          "postMarketChange": -1.4300537,
+          "postMarketTime": 1763686798,
+          "postMarketPrice": 587.72,
+          "postMarketSource": "FREE_REALTIME",
+          "regularMarketChangePercent": -0.00198195,
+          "regularMarketChange": -1.16998,
+          "regularMarketTime": 1763672400,
+          "priceHint": 2,
+          "regularMarketPrice": 589.15,
+          "regularMarketDayHigh": 606.72,
+          "regularMarketDayLow": 583.35,
+          "regularMarketVolume": 20301467,
+          "regularMarketPreviousClose": 590.32,
+          "regularMarketSource": "FREE_REALTIME",
+          "regularMarketOpen": 602.945,
+          "overnightMarketSource": "BOATS Real Time Price",
+          "overnightMarketChangePercent": -0.0030043614,
+          "overnightMarketChange": -1.7700195,
+          "overnightMarketTime": 1763712771,
+          "overnightMarketPrice": 587.38,
+          "exchange": "NMS",
+          "exchangeName": "NasdaqGS",
+          "exchangeDataDelayedBy": 0,
+          "marketState": "OVERNIGHT",
+          "quoteType": "EQUITY",
+          "symbol": "META",
+          "underlyingSymbol": null,
+          "shortName": "Meta Platforms, Inc.",
+          "longName": "Meta Platforms, Inc.",
+          "currency": "USD",
+          "quoteSourceName": "BOATS Real Time Price",
+          "currencySymbol": "$",
+          "fromCurrency": null,
+          "toCurrency": null,
+          "lastMarket": null,
+          "marketCap": 1484968951808
+        }
+      }
+    ],
+    "error": null
+  }
+}

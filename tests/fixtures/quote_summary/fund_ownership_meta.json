@@ -1,0 +1,274 @@
+{
+  "quoteSummary": {
+    "result": [
+      {
+        "fundOwnership": {
+          "maxAge": 1,
+          "ownershipList": [
+            {
+              "maxAge": 1,
+              "reportDate": {
+                "raw": 1751241600,
+                "fmt": "2025-06-30"
+              },
+              "organization": "VANGUARD INDEX FUNDS-Vanguard Total Stock Market Index Fund",
+              "pctHeld": {
+                "raw": 0.0321,
+                "fmt": "3.21%"
+              },
+              "position": {
+                "raw": 69815301,
+                "fmt": "69.82M",
+                "longFmt": "69,815,301"
+              },
+              "value": {
+                "raw": 41131686288,
+                "fmt": "41.13B",
+                "longFmt": "41,131,686,288"
+              },
+              "pctChange": {
+                "raw": 0.0091,
+                "fmt": "0.91%"
+              }
+            },
+            {
+              "maxAge": 1,
+              "reportDate": {
+                "raw": 1751241600,
+                "fmt": "2025-06-30"
+              },
+              "organization": "VANGUARD INDEX FUNDS-Vanguard 500 Index Fund",
+              "pctHeld": {
+                "raw": 0.028299998,
+                "fmt": "2.83%"
+              },
+              "position": {
+                "raw": 61627857,
+                "fmt": "61.63M",
+                "longFmt": "61,627,857"
+              },
+              "value": {
+                "raw": 36308053456,
+                "fmt": "36.31B",
+                "longFmt": "36,308,053,456"
+              },
+              "pctChange": {
+                "raw": 0.0128,
+                "fmt": "1.28%"
+              }
+            },
+            {
+              "maxAge": 1,
+              "reportDate": {
+                "raw": 1759190400,
+                "fmt": "2025-09-30"
+              },
+              "organization": "Fidelity Contrafund",
+              "pctHeld": {
+                "raw": 0.0167,
+                "fmt": "1.67%"
+              },
+              "position": {
+                "raw": 36423191,
+                "fmt": "36.42M",
+                "longFmt": "36,423,191"
+              },
+              "value": {
+                "raw": 21458723866,
+                "fmt": "21.46B",
+                "longFmt": "21,458,723,866"
+              },
+              "pctChange": {
+                "raw": -0.049200002,
+                "fmt": "-4.92%"
+              }
+            },
+            {
+              "maxAge": 1,
+              "reportDate": {
+                "raw": 1759190400,
+                "fmt": "2025-09-30"
+              },
+              "organization": "Fidelity Concord Street Trust-Fidelity 500 Index Fund",
+              "pctHeld": {
+                "raw": 0.0126,
+                "fmt": "1.26%"
+              },
+              "position": {
+                "raw": 27463985,
+                "fmt": "27.46M",
+                "longFmt": "27,463,985"
+              },
+              "value": {
+                "raw": 16180407433,
+                "fmt": "16.18B",
+                "longFmt": "16,180,407,433"
+              },
+              "pctChange": {
+                "raw": -0.0038,
+                "fmt": "-0.38%"
+              }
+            },
+            {
+              "maxAge": 1,
+              "reportDate": {
+                "raw": 1759190400,
+                "fmt": "2025-09-30"
+              },
+              "organization": "iShares Trust-iShares Core S&P 500 ETF",
+              "pctHeld": {
+                "raw": 0.012200001,
+                "fmt": "1.22%"
+              },
+              "position": {
+                "raw": 26603844,
+                "fmt": "26.6M",
+                "longFmt": "26,603,844"
+              },
+              "value": {
+                "raw": 15673655342,
+                "fmt": "15.67B",
+                "longFmt": "15,673,655,342"
+              },
+              "pctChange": {
+                "raw": 0.0183,
+                "fmt": "1.83%"
+              }
+            },
+            {
+              "maxAge": 1,
+              "reportDate": {
+                "raw": 1759190400,
+                "fmt": "2025-09-30"
+              },
+              "organization": "SPDR S&P 500 ETF TRUST",
+              "pctHeld": {
+                "raw": 0.0119,
+                "fmt": "1.19%"
+              },
+              "position": {
+                "raw": 25861535,
+                "fmt": "25.86M",
+                "longFmt": "25,861,535"
+              },
+              "value": {
+                "raw": 15236323976,
+                "fmt": "15.24B",
+                "longFmt": "15,236,323,976"
+              },
+              "pctChange": {
+                "raw": -0.0137,
+                "fmt": "-1.37%"
+              }
+            },
+            {
+              "maxAge": 1,
+              "reportDate": {
+                "raw": 1759190400,
+                "fmt": "2025-09-30"
+              },
+              "organization": "GROWTH FUND OF AMERICA",
+              "pctHeld": {
+                "raw": 0.0104,
+                "fmt": "1.04%"
+              },
+              "position": {
+                "raw": 22547548,
+                "fmt": "22.55M",
+                "longFmt": "22,547,548"
+              },
+              "value": {
+                "raw": 13283888454,
+                "fmt": "13.28B",
+                "longFmt": "13,283,888,454"
+              },
+              "pctChange": {
+                "raw": -0.050300002,
+                "fmt": "-5.03%"
+              }
+            },
+            {
+              "maxAge": 1,
+              "reportDate": {
+                "raw": 1751241600,
+                "fmt": "2025-06-30"
+              },
+              "organization": "VANGUARD INDEX FUNDS-Vanguard Growth Index Fund",
+              "pctHeld": {
+                "raw": 0.0089,
+                "fmt": "0.89%"
+              },
+              "position": {
+                "raw": 19350445,
+                "fmt": "19.35M",
+                "longFmt": "19,350,445"
+              },
+              "value": {
+                "raw": 11400315144,
+                "fmt": "11.4B",
+                "longFmt": "11,400,315,144"
+              },
+              "pctChange": {
+                "raw": -0.0138,
+                "fmt": "-1.38%"
+              }
+            },
+            {
+              "maxAge": 1,
+              "reportDate": {
+                "raw": 1759190400,
+                "fmt": "2025-09-30"
+              },
+              "organization": "Invesco QQQ Trust, Series 1",
+              "pctHeld": {
+                "raw": 0.0084,
+                "fmt": "0.84%"
+              },
+              "position": {
+                "raw": 18236017,
+                "fmt": "18.24M",
+                "longFmt": "18,236,017"
+              },
+              "value": {
+                "raw": 10743749860,
+                "fmt": "10.74B",
+                "longFmt": "10,743,749,860"
+              },
+              "pctChange": {
+                "raw": 0.0095999995,
+                "fmt": "0.96%"
+              }
+            },
+            {
+              "maxAge": 1,
+              "reportDate": {
+                "raw": 1751241600,
+                "fmt": "2025-06-30"
+              },
+              "organization": "VANGUARD INSTITUTIONAL INDEX FUNDS-Vanguard Institutional Index Fund",
+              "pctHeld": {
+                "raw": 0.0061000003,
+                "fmt": "0.61%"
+              },
+              "position": {
+                "raw": 13307195,
+                "fmt": "13.31M",
+                "longFmt": "13,307,195"
+              },
+              "value": {
+                "raw": 7839934259,
+                "fmt": "7.84B",
+                "longFmt": "7,839,934,259"
+              },
+              "pctChange": {
+                "raw": -0.0143,
+                "fmt": "-1.43%"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "error": null
+  }
+}

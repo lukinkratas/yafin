@@ -1,0 +1,41 @@
+{
+  "quoteSummary": {
+    "result": [
+      {
+        "financialData": {
+          "maxAge": 86400,
+          "currentPrice": 266.25,
+          "targetHighPrice": 345.0,
+          "targetLowPrice": 215.0,
+          "targetMeanPrice": 281.74805,
+          "targetMedianPrice": 280.0,
+          "recommendationMean": 2.0,
+          "recommendationKey": "buy",
+          "numberOfAnalystOpinions": 41,
+          "totalCash": 54697000960,
+          "totalCashPerShare": 3.702,
+          "ebitda": 144748003328,
+          "totalDebt": 112377004032,
+          "quickRatio": 0.771,
+          "currentRatio": 0.893,
+          "totalRevenue": 416161005568,
+          "debtToEquity": 152.411,
+          "revenuePerShare": 27.84,
+          "returnOnAssets": 0.22964,
+          "returnOnEquity": 1.7142199,
+          "grossProfits": 195201007616,
+          "freeCashflow": 78862254080,
+          "operatingCashflow": 111482003456,
+          "earningsGrowth": 0.912,
+          "revenueGrowth": 0.079,
+          "grossMargins": 0.46905,
+          "ebitdaMargins": 0.34782,
+          "operatingMargins": 0.31647,
+          "profitMargins": 0.26915002,
+          "financialCurrency": "USD"
+        }
+      }
+    ],
+    "error": null
+  }
+}
