@@ -100,4 +100,4 @@ changelog:
 		--decorate-refs-exclude=HEAD \
 		--decorate-refs-exclude="refs/remotes/*" \
 		--decorate-refs-exclude="refs/heads/*" \
-		--pretty=format:"%(decorate:prefix=%n,suffix=%n,separator=|,tag=##,pointer=) - %s"
+		--pretty=format:"%(decorate:prefix=%n,suffix=%n,separator=|,tag=##,pointer=) - %s" > CHANGELOG.md

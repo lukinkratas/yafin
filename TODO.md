@@ -1,0 +1,156 @@
+## TODO
+
+0.1.1:
+- [ ] performance tests for all other endpoints
+- [ ] claude and codex local review
+- [x] resolve types -> typed dicts only checked in unit tests, anottated as dict in codebase
+- [x] add changelog
+- [x] clear crumb cache
+- [x] GH actions for build, publish
+- [x] client args name from ticker to symbol? - No, bcs to stay consistent with Symbol(ticker) -> add note into docstring
+- [x] gh actions test permissions
+- [x] do not show source code in docs.
+- [x] common method for Symbols methods, where  sybols are called (and the same for, where client is called)
+- [x] pyproject.toml: description update
+- [x] async needed? -> hierarchy of async commands
+- [x] symbol annotate Enums / Literals for freq, etc. -> check, where it can be used. Enum no, cause these are mostly function arguments, so Enum only is inconvenient (strings set + Enum could work, brings no benefits)
+- [x] symbol annotate Enums / Literals for freq, etc. -> check, where it can be used. Literal no, cause Literal[*INTERVALS], etc. is not supported.
+
+- [x] git tag
+- [x] publish to pypi test
+- [x] publish
+- [x] prepost data bool
+- [x] multi symbols support
+- [z] timezone
+- [x] sync + async fixtures, e.g. chart interval, period_range
+- [x] urls class attrs?
+- [x] pytest-benchmark sync symbol vs yfinance
+- [x] _CHART_KWARGS class attr?
+- [x] mock yfinance response
+- [x] (sync) client and (sync) symbol ?
+- [x] run unit tests w/o internet
+- [x] tests - timestamp fixtures?
+- [x] get_chart implement period1 and period2 ?
+- [x] symbol get_quote_summary_quote_type x get_quote_type
+- [x] symbol get_income_statement get_balance_sheet get_cash_flow x get_income_statement_history get_income_statement_history_quarterly get_balance_sheet_history get_balance_sheet_history_quarterly get_cashflow_statement_history get_cashflow_statement_history_quarterly
+- [x] caching
+- [x] client.get_timeseries, symbol.get_income_statement, symbol.get_balance_sheet and symbol.get_cash_flow default period1 and 2 args datetime.datetime.timestamp ? -> Noe, bcs default will not be set on runtime, but on import
+- [x] TypedDicts types per endpoint
+- [x] utils.get_types_with_frequency - add OTHER types ? -> str | None annotation for frequency
+- [x] unit test symbol / client singleton factory
+- [x] AsyncSymbol singleton via _ClientManager + refcount works, but it’s not concurrency-safe if symbols are created/released concurrently. Consider an asyncio.Lock to guard _refcount and the client close path to avoid edge-case races in heavy async code.
+- [x] datetime timezone-aware
+- [x] remove typeguard for PROD
+- [x] restrict retries to retryable status codes (e.g., 429, 500, 503)
+- [x] reverse eng the rest API
+- [x] symbol - test other endpoints with multiple symbols
+  - [x] recommendations
+- [x] const TYPES_CSV -> TYPES / TYPES -> TYPES_LIST
+- [x] custom types in types.py
+- [x] ResponseJson with strict schema - result, error -> not working, because this is always behinf a key, e.g. finance.
+- [x] switch to query1 (insights v3) -> keep query2 - more stable, less. crowded
+- [x] fetch mocks - mapping -> not readable
+- [x] new events + unit tests
+- [x] new types + unit tests
+- [x] docs for const (+options)
+- [x] new endpoints client + symbol + fixtures + unit tests + integration tests + doc examples
+  - [x] quoteType
+  - [x] ratings/top
+  - [x] ws/screeners/v1/finance/calendar-events
+  - [x] xhr/ticker-analysis
+- [x] gh pages
+- [x] utils - private functions - error, encode_url, log_arg
+- [x] session retry logic ?
+- [x] examples docs update
+- [x] docs for utils
+- [x] const - ANNUAL_INCOME_STMT, TRALING_CASH_FLOW, etc
+- [x] automatic docs from docstrings?
+- [x] add docstrings everywhere
+- [x] issue calling client.session out of context window / after it was closed craetes new session? -> get rid of session as a property ?
+- [x] issue calling symbol.client out of context window / after it was closed craetes new client? -> get rid of client as a property ?
+- [x] client._get_async_request -> NoReturn
+- [x] redacting crumb
+- [x] add codex gh action
+- [x] calling close() on one symbol closes the client for all - reference_count in _ClientSingletonFactory -> _refcount
+- [x] add typeguard.typechecked
+- [x] util funcs to make args, kwargs shorter
+- [x] util funcs to make result shorter
+- [x] typecheck also private methods
+- [x] periods as int or float
+- [x] session timeout ? - curl_cffi.requests.AsyncSession(timeout)
+- [x] custom types
+- [x] ALL_MODULES and ALL_TYPES sets - then information of extra types / modules can be easily provided.
+- [x] ALL_MODULES_CSV = ','.join(sorted(ALL_MODULES))
+- [x]xrename Stonk -> Symbol ? (bcs 1. not onyl stocks, but also crypto, funds, indexes, etc., 2. Yahoo Finance uses symbol)
+- [x] custom exceptions?
+- [x] claude code review: client.session not closed properly -> resource leakage https://curl-cffi.readthedocs.io/en/v0.5.8.1/api/curl_cffi.requests/
+- [x] claude code review: stonk.client management
+  - [x] stonk.client singleton
+- [x] claude code review: stonk._crumb caching
+- [x] new unit tests
+- [x] update unit tests
+- [x] update readme
+- [x] test utils process_chart_like_yfinance
+- [x] perf test get chart - test even dict version - not anymore for yfinance
+- [x] measure performance against yfinance - perf_test.py, tried pytest-benchmark - does not work with asyncio coroutines
+- [x] test yfinance with asyncsession
+- [x] AI code review gh action
+- [x] common assertion functions for stonk.get_graph, client.get_graph (in unit and in integration)
+- [x] mock_response function for tests?
+- [x] build
+- [x] add license
+- [x] code QL gh action - > not it's in repo settings
+- [x] add logging conf
+- [x] args wrapper decorator
+- [x] main commits cleanup
+- [x] document
+- [x] add logging
+- [x] cicd
+- [x] create postman collection from findings - yfinance urls + openapi spec
+- [x] create tests within the postman collection
+- [x] compare to the bruno collection
+- [x] AsyncClient - get crumb only once
+    - crumb set as attribute in the constructor: TypeError: __init__() should return None, not 'coroutine'
+    - crumb cached_property: RuntimeError: cannot reuse already awaited coroutine
+    - fetch crumb via synchronous session - not possible session (cookies) and crumb have to 1:1 (otherwise HTTP401)
+- [x] modules as enum - Module.QUOTE_TYPE.value usage is meh
+- [x] client as a separate module
+- [x] fetch multiple tickers at once? - used wheerever could
+- [x] rest of found postman endpoints?
+    - [x] finance quote
+    - [x] finance quote summary market
+    - [x] finance trending
+    - [x] finance recommendations
+    - [x] finance currencies
+    - [x] finance insights
+- [x] quoteSummary single modules
+- [x] modules and types as str, instead of list
+- [x] lint, format
+- [x] remove finance from method names
+- [x] process response method?
+- [x] mypy type checking
+- [x] makefile
+- [x] unit tests
+  - [x] test client w/o mocking
+  - [x] add tests for stonk
+  - [x] add mocking ?
+  - [x] script for fetching mocks
+  - [x] add tests for unit methods
+  - [x] cover missing lines
+  - [x] add invalid args tests
+  - [x] add keys assertion
+  - [x] test utils?
+  - [x] utils docstrings args and returns
+- [x] add integration tests for client
+  - [x] add keys assertion
+- [x] add integration tests for stonk
+- [x] run and solve pre-commits
+- [x] update main.py
+- [x] client responses in raw format and not returning the result field? -> results parsing on stonk
+- [x] const modules long line
+
+### Name
+- yafin / yahfin
+- _ystonkz / yastonkz / yahstonks / yostonks_ - (not just stocks, also crypto and indexes)
+- _ytickers / yatickers / yotickers_ / yahoo_tickers - from ytickers import Ticker ?
+- _ysymbols / yasymbols / yosymbols_ / yahoo_symbols - from ysymbols import Symbol ?
