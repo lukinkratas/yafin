@@ -15,7 +15,7 @@ from yafin.const import (
     OTHER_TYPES,
     QUOTE_SUMMARY_MODULES,
 )
-from yafin.utils import _async_log_func
+from yafin.utils import _alog_func
 
 from .logging_config import configure_logging
 
@@ -35,7 +35,7 @@ def write_json(data: dict[str, Any], file_path: pathlib.Path) -> None:
         json.dump(data, f, indent=2)
 
 
-@_async_log_func
+@_alog_func
 async def process_mock(
     instance: Any,
     method_name: str,

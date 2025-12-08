@@ -1,11 +1,14 @@
-name: Run Unit Tests
+name: Test
 
 on:
   push:
     branches: [main]
 
+permissions:
+  contents: read
+
 jobs:
-  unit_test:
+  test:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -13,19 +16,20 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v5
-      - name: Setup python
-        uses: actions/setup-python@v6
+
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v7
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Setup uv
-        uses: astral-sh/setup-uv@v6
-      - name: Install dependencies
-        run: make install-all
+
       - name: Format
         run: make format
+
       - name: Lint
         run: make lint
+
       - name: Typecheck
         run: make typecheck
+
       - name: Run unit tests
         run: make test

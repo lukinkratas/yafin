@@ -8,7 +8,7 @@
       "quoteType": "EQUITY",
       "symbol": "AAPL",
       "index": "quotes",
-      "score": 19073500.0,
+      "score": 18791500.0,
       "typeDisp": "Equity",
       "longname": "Apple Inc.",
       "exchDisp": "NASDAQ",
@@ -25,57 +25,21 @@
       "quoteType": "ETF",
       "symbol": "AAPU",
       "index": "quotes",
-      "score": 20008.0,
+      "score": 20012.0,
       "typeDisp": "ETF",
       "longname": "Direxion Daily AAPL Bull 2X Shares",
       "exchDisp": "NASDAQ",
       "isYahooFinance": true
     },
     {
-      "exchange": "NGM",
-      "shortname": "Direxion Daily AAPL Bear 1X Sha",
-      "quoteType": "ETF",
-      "symbol": "AAPD",
-      "index": "quotes",
-      "score": 20004.0,
-      "typeDisp": "ETF",
-      "longname": "Direxion Daily AAPL Bear 1X Shares",
-      "exchDisp": "NASDAQ",
-      "isYahooFinance": true
-    },
-    {
       "exchange": "OPR",
-      "shortname": "AAPL Nov 2025 267.500 put",
+      "shortname": "AAPL Jan 2026 255.000 put",
       "quoteType": "OPTION",
-      "symbol": "AAPL251121P00267500",
+      "symbol": "AAPL260116P00255000",
       "index": "quotes",
-      "score": 20004.0,
+      "score": 20012.0,
       "typeDisp": "Option",
-      "longname": "AAPL Nov 2025 267.500 put",
-      "exchDisp": "OPR",
-      "isYahooFinance": true
-    },
-    {
-      "exchange": "OPR",
-      "shortname": "AAPL Jan 2026 185.000 call",
-      "quoteType": "OPTION",
-      "symbol": "AAPL260116C00185000",
-      "index": "quotes",
-      "score": 20002.0,
-      "typeDisp": "Option",
-      "longname": "AAPL Jan 2026 185.000 call",
-      "exchDisp": "OPR",
-      "isYahooFinance": true
-    },
-    {
-      "exchange": "OPR",
-      "shortname": "AAPL Jun 2026 175.000 call",
-      "quoteType": "OPTION",
-      "symbol": "AAPL260618C00175000",
-      "index": "quotes",
-      "score": 20002.0,
-      "typeDisp": "Option",
-      "longname": "AAPL Jun 2026 175.000 call",
+      "longname": "AAPL Jan 2026 255.000 put",
       "exchDisp": "OPR",
       "isYahooFinance": true
     },
@@ -85,177 +49,67 @@
       "quoteType": "OPTION",
       "symbol": "AAPL260116P00125000",
       "index": "quotes",
-      "score": 20002.0,
+      "score": 20009.0,
       "typeDisp": "Option",
       "longname": "AAPL Jan 2026 125.000 put",
+      "exchDisp": "OPR",
+      "isYahooFinance": true
+    },
+    {
+      "exchange": "OPR",
+      "shortname": "AAPL Jan 2026 285.000 put",
+      "quoteType": "OPTION",
+      "symbol": "AAPL260116P00285000",
+      "index": "quotes",
+      "score": 20007.0,
+      "typeDisp": "Option",
+      "longname": "AAPL Jan 2026 285.000 put",
+      "exchDisp": "OPR",
+      "isYahooFinance": true
+    },
+    {
+      "exchange": "OPR",
+      "shortname": "AAPL Jun 2026 175.000 call",
+      "quoteType": "OPTION",
+      "symbol": "AAPL260618C00175000",
+      "index": "quotes",
+      "score": 20006.0,
+      "typeDisp": "Option",
+      "longname": "AAPL Jun 2026 175.000 call",
+      "exchDisp": "OPR",
+      "isYahooFinance": true
+    },
+    {
+      "exchange": "OPR",
+      "shortname": "AAPL Jan 2026 115.000 put",
+      "quoteType": "OPTION",
+      "symbol": "AAPL260116P00115000",
+      "index": "quotes",
+      "score": 20004.0,
+      "typeDisp": "Option",
+      "longname": "AAPL Jan 2026 115.000 put",
       "exchDisp": "OPR",
       "isYahooFinance": true
     }
   ],
   "news": [
     {
-      "uuid": "d4d11250-158a-340c-b800-f0f3bd132b26",
-      "title": "OpenAI and Taiwan's Foxconn to partner in AI hardware design and manufacturing in the US",
-      "publisher": "Associated Press Finance",
-      "link": "https://finance.yahoo.com/news/openai-taiwans-foxconn-partner-ai-040216256.html",
-      "providerPublishTime": 1763697736,
+      "uuid": "0f1d04aa-68ba-37cc-bd76-3fd724d705f0",
+      "title": "Nasdaq ISE Seeks to Quadruple Trading Limits on BlackRock's Bitcoin ETF Options",
+      "publisher": "decrypt",
+      "link": "https://finance.yahoo.com/m/0f1d04aa-68ba-37cc-bd76-3fd724d705f0/nasdaq-ise-seeks-to-quadruple.html",
+      "providerPublishTime": 1764217285,
       "type": "STORY",
       "thumbnail": {
         "resolutions": [
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/uP5R6AJUP.BxBIx1SOdvNA--~B/aD0zNDM5O3c9NTE1ODthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/ap_finance_articles_694/b76efbb07d7183bb2cf1f6869cbb03bb",
-            "width": 5158,
-            "height": 3439,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/OH1knxUwIT_3seh63WX2rA--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/ap_finance_articles_694/b76efbb07d7183bb2cf1f6869cbb03bb",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "OPAI.PVT",
-        "601138.SS",
-        "NVDA",
-        "AAPL"
-      ]
-    },
-    {
-      "uuid": "6c74daae-7448-3a01-a188-f60d767083e1",
-      "title": "Foxconn can make 1,000 AI racks a week, to increase next year, chairman says",
-      "publisher": "Reuters",
-      "link": "https://finance.yahoo.com/news/foxconn-1-000-ai-racks-031805011.html",
-      "providerPublishTime": 1763695085,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/C9ZkZuDJouDvbBCkmm0ZDA--~B/aD01MzM7dz04MDA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/reuters-finance.com/340689790c16d1abfc5428c700b9f6e7",
-            "width": 800,
-            "height": 533,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/P7ER6458Yjjk5aYn0sFXPQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/reuters-finance.com/340689790c16d1abfc5428c700b9f6e7",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "601138.SS",
-        "NVDA",
-        "OPAI.PVT",
-        "AAPL"
-      ]
-    },
-    {
-      "uuid": "3ac63103-1566-392c-ab7f-13708d8b18bc",
-      "title": "Foxconn to spend up to $3 billion a year on AI, chair sees China EV shakeout",
-      "publisher": "Reuters",
-      "link": "https://finance.yahoo.com/news/foxconn-spend-3-billion-ai-230148283.html",
-      "providerPublishTime": 1763679708,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/QIr4a.SQqGjDZGWfcam7bQ--~B/aD01MzM7dz04MDA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/reuters-finance.com/ffb4b2f388c8f4d60cedf110f66fae29",
-            "width": 800,
-            "height": 533,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/HXEEUuCzluCj3KTIwNF._g--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/reuters-finance.com/ffb4b2f388c8f4d60cedf110f66fae29",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "601138.SS",
-        "AAPL"
-      ]
-    },
-    {
-      "uuid": "522f66a0-01b0-38d3-acc8-9fc661b812cc",
-      "title": "Intrinsic, an Alphabet company, and Nvidia supplier Foxconn will join forces to deploy AI robots in the latter\u2019s U.S. factories",
-      "publisher": "Fortune",
-      "link": "https://finance.yahoo.com/news/intrinsic-alphabet-company-nvidia-supplier-230000944.html",
-      "providerPublishTime": 1763679600,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/h8sCAmNrLLSV9Znp_vP1gA--~B/aD0xMzY1O3c9MjA0ODthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/fortune_175/87a7a274b8d7f60cbe8dfe6e0e0d3ffe",
-            "width": 2048,
-            "height": 1365,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/y3VSA4wDSb7P6IAF.2Ky1g--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/fortune_175/87a7a274b8d7f60cbe8dfe6e0e0d3ffe",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "GOOGL",
-        "601138.SS",
-        "NVDA",
-        "AAPL"
-      ]
-    },
-    {
-      "uuid": "591dca7e-5868-3eb6-b408-286d607086f0",
-      "title": "Google Launches Unauthorized Pixel-to-iPhone File Sharing\u00a0With Apple\u2019s AirDrop",
-      "publisher": "Bloomberg",
-      "link": "https://finance.yahoo.com/news/google-launches-unauthorized-pixel-iphone-224310499.html",
-      "providerPublishTime": 1763678590,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/at614HkYEFAdsJ1XddWoWw--~B/aD0yMDAwO3c9MzAwMDthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/bloomberg_holding_pen_162/a61ff6b1962388c4fcb9974c27afe9a5",
-            "width": 3000,
-            "height": 2000,
-            "tag": "original"
-          },
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/0wJG6iCFlU0kFJPhdI..bQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/bloomberg_holding_pen_162/a61ff6b1962388c4fcb9974c27afe9a5",
-            "width": 140,
-            "height": 140,
-            "tag": "140x140"
-          }
-        ]
-      },
-      "relatedTickers": [
-        "GOOGL",
-        "AAPL"
-      ]
-    },
-    {
-      "uuid": "48d25879-60d6-3ed0-a4d9-ab10aa37e951",
-      "title": "Wall Street Sees a \u2018Buying Opportunity\u2019 in This Rare Earths Stock. Should You Snap Up Shares Now?",
-      "publisher": "Barchart",
-      "link": "https://finance.yahoo.com/m/48d25879-60d6-3ed0-a4d9-ab10aa37e951/wall-street-sees-a-%E2%80%98buying.html",
-      "providerPublishTime": 1763671014,
-      "type": "STORY",
-      "thumbnail": {
-        "resolutions": [
-          {
-            "url": "https://s.yimg.com/uu/api/res/1.2/CgfxE82kgsg_3sbsZmLAhQ--~B/aD04NTM7dz0xMjgwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/barchart_com_477/41cc0a3dc654d4313174091e7380ac67",
+            "url": "https://s.yimg.com/uu/api/res/1.2/DrbpWo1utRon5nZnQ3jN8A--~B/aD03MjA7dz0xMjgwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/decrypt_157/5bd01223db17bbaf71e8e541a28bfad4",
             "width": 1280,
-            "height": 853,
+            "height": 720,
             "tag": "original"
           },
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/z9onFdYxtrogq6jkg7YrrQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/barchart_com_477/41cc0a3dc654d4313174091e7380ac67",
+            "url": "https://s.yimg.com/uu/api/res/1.2/OaBaLJ2un1ltn76cS2l12A--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/decrypt_157/5bd01223db17bbaf71e8e541a28bfad4",
             "width": 140,
             "height": 140,
             "tag": "140x140"
@@ -263,27 +117,66 @@
         ]
       },
       "relatedTickers": [
-        "MP",
-        "AAPL"
+        "IBIT",
+        "BLK",
+        "BTC-USD",
+        "AAPL",
+        "NVDA",
+        "SPY"
       ]
     },
     {
-      "uuid": "0939d1d5-3bfa-395d-905d-df9e1015a6a4",
-      "title": "Warren Buffett Is Selling Apple and Piling Into This \"Magnificent Seven\" Stock Trading at a Fraction of Tesla's Valuation",
-      "publisher": "Motley Fool",
-      "link": "https://finance.yahoo.com/m/0939d1d5-3bfa-395d-905d-df9e1015a6a4/warren-buffett-is-selling.html",
-      "providerPublishTime": 1763669700,
+      "uuid": "d092b001-1da6-39b9-8c8b-bc310df540b5",
+      "title": "These Stocks Moved the Most Today: Alphabet, Nvidia, AMD, Apple, Dell, Robinhood, Deere, HP Inc., Urban Outfitters, and More",
+      "publisher": "Barrons.com",
+      "link": "https://finance.yahoo.com/m/d092b001-1da6-39b9-8c8b-bc310df540b5/these-stocks-moved-the-most.html",
+      "providerPublishTime": 1764193080,
       "type": "STORY",
       "thumbnail": {
         "resolutions": [
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/nnydNnWP4vqkrR5L0Qcbdg--~B/aD05MzM7dz0xNDAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/9160442686379fe8e7841b4752a46121",
-            "width": 1400,
-            "height": 933,
+            "url": "https://s.yimg.com/uu/api/res/1.2/UqFZblSbcNIaE5yCHQ30nA--~B/aD02NDA7dz0xMjgwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/Barrons.com/84b9aed704c1fe780e3a53b2d78ea946",
+            "width": 1280,
+            "height": 640,
             "tag": "original"
           },
           {
-            "url": "https://s.yimg.com/uu/api/res/1.2/VEmDHISALADP6QinAivztw--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/motleyfool.com/9160442686379fe8e7841b4752a46121",
+            "url": "https://s.yimg.com/uu/api/res/1.2/mWGLSxkXJHeqr4GluKrdtw--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/Barrons.com/84b9aed704c1fe780e3a53b2d78ea946",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "GOOG",
+        "AMD",
+        "AAPL",
+        "DELL",
+        "HOOD",
+        "DE",
+        "HPQ",
+        "URBN",
+        "NVDA"
+      ]
+    },
+    {
+      "uuid": "cd3c1822-96f8-3ee1-8bc0-121ceb0b852d",
+      "title": "As AI Market Wobbles, This Giant Makes Waves On Wall Street",
+      "publisher": "Investor's Business Daily",
+      "link": "https://finance.yahoo.com/m/cd3c1822-96f8-3ee1-8bc0-121ceb0b852d/as-ai-market-wobbles%2C-this.html",
+      "providerPublishTime": 1764191416,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/nYTSaHjD.Iha1Qpmn5AWUQ--~B/aD01NjM7dz0xMDAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/ibd.com/4a3cd3c0e58791e0d4b08dce4cbf9bac",
+            "width": 1000,
+            "height": 563,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/cQiOsP1JkH4h9ZcoAmTJ8A--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/ibd.com/4a3cd3c0e58791e0d4b08dce4cbf9bac",
             "width": 140,
             "height": 140,
             "tag": "140x140"
@@ -292,21 +185,175 @@
       },
       "relatedTickers": [
         "AAPL",
-        "TSLA"
+        "PLTR",
+        "GOOG",
+        "NVDA",
+        "SAN"
       ]
     },
     {
-      "uuid": "db39b22f-37f8-3a21-ac3b-ee0ed402d5af",
-      "title": "ESPN, NBCUniversal, Netflix Secure MLB Broadcast Rights From 2026",
-      "publisher": "MT Newswires",
-      "link": "https://finance.yahoo.com/news/espn-nbcuniversal-netflix-secure-mlb-182208415.html",
-      "providerPublishTime": 1763662928,
+      "uuid": "05ebc7dd-9d8a-39f6-b42c-e3cc41209261",
+      "title": "Roblox Isn\u2019t Playing Games. Why the Stock Could Jump 50%.",
+      "publisher": "Barrons.com",
+      "link": "https://finance.yahoo.com/m/05ebc7dd-9d8a-39f6-b42c-e3cc41209261/roblox-isn%E2%80%99t-playing-games..html",
+      "providerPublishTime": 1764191340,
       "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/frmKMv8WHdeP68fc_3VGeQ--~B/aD02NDA7dz0xMjgwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/Barrons.com/1bc6076d1b866fa5953d5e0a240666a2",
+            "width": 1280,
+            "height": 640,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/o8JaA0whZqrW_GU48wztww--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/Barrons.com/1bc6076d1b866fa5953d5e0a240666a2",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
       "relatedTickers": [
-        "DIS",
-        "CMCSA",
-        "WBD",
+        "TTWO",
+        "AAPL",
+        "EA",
+        "META",
+        "RBLX"
+      ]
+    },
+    {
+      "uuid": "8de58f22-0b6d-3da7-a942-b72468669b9f",
+      "title": "Apple Stock Heads for Record as Big Tech Pecking Order Gets Reshuffled",
+      "publisher": "Barrons.com",
+      "link": "https://finance.yahoo.com/m/8de58f22-0b6d-3da7-a942-b72468669b9f/apple-stock-heads-for-record.html",
+      "providerPublishTime": 1764191220,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/_EqA8ja5JJ1xmeEcz7Rjmw--~B/aD02NDA7dz0xMjgwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/Barrons.com/1c38892472faa098cfb9e7a233888021",
+            "width": 1280,
+            "height": 640,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/dWcVECnC2NbJI0g6BcJuqg--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/Barrons.com/1c38892472faa098cfb9e7a233888021",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "AVGO",
+        "NVDA",
+        "GOOG",
+        "AAPL",
+        "META"
+      ]
+    },
+    {
+      "uuid": "cf3de9e4-0036-496d-b707-404f7deb425e",
+      "title": "Stock market today: Dow, S&P 500, Nasdaq rally into Thanksgiving, notch best 4-day stretch since May",
+      "publisher": "Yahoo Finance",
+      "link": "https://finance.yahoo.com/news/live/stock-market-today-dow-sp-500-nasdaq-rally-into-thanksgiving-notch-best-4-day-stretch-since-may-210107147.html",
+      "providerPublishTime": 1764190867,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/TrY2jsRmuQ1USYByv7Dsug--~B/aD0zMTM3O3c9NDcwNTthcHBpZD15dGFjaHlvbg--/https://s.yimg.com/os/creatr-uploaded-images/2025-11/95e3ca90-ca55-11f0-99ff-c79ce8deeaff",
+            "width": 4705,
+            "height": 3137,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/j6tW6JokXw6t1BL9IkboDg--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://s.yimg.com/os/creatr-uploaded-images/2025-11/95e3ca90-ca55-11f0-99ff-c79ce8deeaff",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "^DJI",
+        "NQ=F",
+        "YM=F",
+        "ES=F",
+        "^GSPC",
+        "^IXIC",
+        "NVDA",
+        "MSFT",
+        "GOOG",
+        "TSLA",
         "AAPL"
+      ]
+    },
+    {
+      "uuid": "2928f033-fe29-3318-af9f-5f13fe032ccc",
+      "title": "Apple projected to beat Samsung in smartphone shipments for first time since 2011",
+      "publisher": "Fox Business",
+      "link": "https://finance.yahoo.com/m/2928f033-fe29-3318-af9f-5f13fe032ccc/apple-projected-to-beat.html",
+      "providerPublishTime": 1764189770,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/uirgvwmuiLPMKVmGoXOeiw--~B/aD02MzA7dz0xMjAwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/fox_business_text_367/858b7de755d191a1c62d854937e472aa",
+            "width": 1200,
+            "height": 630,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/V71DWF02AFpaqHeg3RAOZQ--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/fox_business_text_367/858b7de755d191a1c62d854937e472aa",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "AAPL",
+        "SSNLF"
+      ]
+    },
+    {
+      "uuid": "68eb0fb3-0e01-3095-8f86-0fe34989bef5",
+      "title": "Tech Firms From Dell to HP Warn of Memory Chip Squeeze From AI",
+      "publisher": "Bloomberg",
+      "link": "https://finance.yahoo.com/news/tech-firms-dell-hp-warn-201433341.html",
+      "providerPublishTime": 1764188073,
+      "type": "STORY",
+      "thumbnail": {
+        "resolutions": [
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/y1wWjZVBQji.kr64rRdhFg--~B/aD04NTI7dz0xMzQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/bloomberg_holding_pen_162/a0edfd6058ecc41cd23749eff71cc042",
+            "width": 1340,
+            "height": 852,
+            "tag": "original"
+          },
+          {
+            "url": "https://s.yimg.com/uu/api/res/1.2/choYAqLpZXURVN1VMSQkig--~B/Zmk9ZmlsbDtoPTE0MDtweW9mZj0wO3c9MTQwO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/bloomberg_holding_pen_162/a0edfd6058ecc41cd23749eff71cc042",
+            "width": 140,
+            "height": 140,
+            "tag": "140x140"
+          }
+        ]
+      },
+      "relatedTickers": [
+        "DELL",
+        "AAPL",
+        "LNVGF",
+        "000660.KS",
+        "HPQ",
+        "0981.HK",
+        "NVDA",
+        "XIACF",
+        "MU",
+        "SSNLF",
+        "ASUUY",
+        "KXHCF"
       ]
     }
   ],
@@ -314,8 +361,8 @@
   "lists": [],
   "researchReports": [],
   "screenerFieldResults": [],
-  "totalTime": 41,
-  "timeTakenForQuotes": 428,
+  "totalTime": 63,
+  "timeTakenForQuotes": 446,
   "timeTakenForNews": 700,
   "timeTakenForAlgowatchlist": 400,
   "timeTakenForPredefinedScreener": 400,

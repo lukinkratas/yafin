@@ -6,22 +6,22 @@
           "holders": [
             {
               "maxAge": 1,
-              "name": "ARNOLD JOHN DOUGLAS",
-              "relation": "Director",
+              "name": "ANDERSON AARON",
+              "relation": "Officer",
               "url": "",
-              "transactionDescription": "Conversion of Exercise of derivative security",
+              "transactionDescription": "Sale",
               "latestTransDate": {
-                "raw": 1763078400,
-                "fmt": "2025-11-14"
+                "raw": 1763424000,
+                "fmt": "2025-11-18"
               },
               "positionDirect": {
-                "raw": 2228,
-                "fmt": "2.23k",
-                "longFmt": "2,228"
+                "raw": 6035,
+                "fmt": "6.04k",
+                "longFmt": "6,035"
               },
               "positionDirectDate": {
-                "raw": 1763078400,
-                "fmt": "2025-11-14"
+                "raw": 1763424000,
+                "fmt": "2025-11-18"
               }
             },
             {
@@ -29,19 +29,19 @@
               "name": "BOSWORTH ANDREW",
               "relation": "Chief Technology Officer",
               "url": "",
-              "transactionDescription": "Conversion of Exercise of derivative security",
+              "transactionDescription": "Sale",
               "latestTransDate": {
-                "raw": 1763078400,
-                "fmt": "2025-11-14"
+                "raw": 1763424000,
+                "fmt": "2025-11-18"
               },
               "positionDirect": {
-                "raw": 80434,
-                "fmt": "80.43k",
-                "longFmt": "80,434"
+                "raw": 68744,
+                "fmt": "68.74k",
+                "longFmt": "68,744"
               },
               "positionDirectDate": {
-                "raw": 1763078400,
-                "fmt": "2025-11-14"
+                "raw": 1763424000,
+                "fmt": "2025-11-18"
               }
             },
             {
@@ -66,28 +66,8 @@
             },
             {
               "maxAge": 1,
-              "name": "LI SUSAN J.",
-              "relation": "Chief Financial Officer",
-              "url": "",
-              "transactionDescription": "Conversion of Exercise of derivative security",
-              "latestTransDate": {
-                "raw": 1763078400,
-                "fmt": "2025-11-14"
-              },
-              "positionIndirect": {
-                "raw": 125459,
-                "fmt": "125.46k",
-                "longFmt": "125,459"
-              },
-              "positionIndirectDate": {
-                "raw": 1763078400,
-                "fmt": "2025-11-14"
-              }
-            },
-            {
-              "maxAge": 1,
-              "name": "NEWSTEAD JENNIFER",
-              "relation": "Officer",
+              "name": "ELKANN JOHN PHILIPP",
+              "relation": "Director",
               "url": "",
               "transactionDescription": "Conversion of Exercise of derivative security",
               "latestTransDate": {
@@ -95,13 +75,73 @@
                 "fmt": "2025-11-14"
               },
               "positionDirect": {
-                "raw": 35150,
-                "fmt": "35.15k",
-                "longFmt": "35,150"
+                "raw": 611,
+                "fmt": "611",
+                "longFmt": "611"
               },
               "positionDirectDate": {
                 "raw": 1763078400,
                 "fmt": "2025-11-14"
+              }
+            },
+            {
+              "maxAge": 1,
+              "name": "KIMMITT ROBERT M",
+              "relation": "Director",
+              "url": "",
+              "transactionDescription": "Sale",
+              "latestTransDate": {
+                "raw": 1763337600,
+                "fmt": "2025-11-17"
+              },
+              "positionDirect": {
+                "raw": 7347,
+                "fmt": "7.35k",
+                "longFmt": "7,347"
+              },
+              "positionDirectDate": {
+                "raw": 1763337600,
+                "fmt": "2025-11-17"
+              }
+            },
+            {
+              "maxAge": 1,
+              "name": "LI SUSAN J.",
+              "relation": "Chief Financial Officer",
+              "url": "",
+              "transactionDescription": "Stock Gift",
+              "latestTransDate": {
+                "raw": 1763596800,
+                "fmt": "2025-11-20"
+              },
+              "positionIndirect": {
+                "raw": 56571,
+                "fmt": "56.57k",
+                "longFmt": "56,571"
+              },
+              "positionIndirectDate": {
+                "raw": 1763596800,
+                "fmt": "2025-11-20"
+              }
+            },
+            {
+              "maxAge": 1,
+              "name": "NEWSTEAD JENNIFER",
+              "relation": "Officer",
+              "url": "",
+              "transactionDescription": "Stock Gift",
+              "latestTransDate": {
+                "raw": 1763510400,
+                "fmt": "2025-11-19"
+              },
+              "positionDirect": {
+                "raw": 31772,
+                "fmt": "31.77k",
+                "longFmt": "31,772"
+              },
+              "positionDirectDate": {
+                "raw": 1763510400,
+                "fmt": "2025-11-19"
               }
             },
             {
@@ -146,26 +186,6 @@
             },
             {
               "maxAge": 1,
-              "name": "SONGHURST CHARLES",
-              "relation": "Director",
-              "url": "",
-              "transactionDescription": "Conversion of Exercise of derivative security",
-              "latestTransDate": {
-                "raw": 1763078400,
-                "fmt": "2025-11-14"
-              },
-              "positionDirect": {
-                "raw": 575,
-                "fmt": "575",
-                "longFmt": "575"
-              },
-              "positionDirectDate": {
-                "raw": 1763078400,
-                "fmt": "2025-11-14"
-              }
-            },
-            {
-              "maxAge": 1,
               "name": "WHITE DANA",
               "relation": "Director",
               "url": "",
@@ -178,26 +198,6 @@
                 "raw": 575,
                 "fmt": "575",
                 "longFmt": "575"
-              },
-              "positionDirectDate": {
-                "raw": 1763078400,
-                "fmt": "2025-11-14"
-              }
-            },
-            {
-              "maxAge": 1,
-              "name": "XU TONY",
-              "relation": "Director",
-              "url": "",
-              "transactionDescription": "Conversion of Exercise of derivative security",
-              "latestTransDate": {
-                "raw": 1763078400,
-                "fmt": "2025-11-14"
-              },
-              "positionDirect": {
-                "raw": 7480,
-                "fmt": "7.48k",
-                "longFmt": "7,480"
               },
               "positionDirectDate": {
                 "raw": 1763078400,

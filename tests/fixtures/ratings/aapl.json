@@ -2,24 +2,24 @@
   "dir": {
     "analyst": "Daiwa Capital",
     "dir": {
-      "raw": 79.0616723141338,
+      "raw": 79.14059592679958,
       "fmt": 79.0
     },
     "mm": {
-      "raw": 77.7724798198329,
+      "raw": 77.67597921899312,
       "fmt": 78.0
     },
     "pt": {
-      "raw": 64.84056443074495,
+      "raw": 65.04091191532618,
       "fmt": 65.0
     },
     "fin_score": {
-      "raw": 75.83069298916575,
+      "raw": 75.88127411216296,
       "fmt": 76.0
     },
     "datapoints": 6,
     "ticker": "AAPL",
-    "uuid": "d9d7a7fe-1eb0-5dc0-bf43-381862994571",
+    "uuid": "7c161205-623e-5130-a906-7dddad7e087c",
     "rating_current": "Outperform",
     "rating_sentiment": 1,
     "pt_current": 275.0,
@@ -29,24 +29,24 @@
   "mm": {
     "analyst": "Daiwa Capital",
     "dir": {
-      "raw": 79.0616723141338,
+      "raw": 79.14059592679958,
       "fmt": 79.0
     },
     "mm": {
-      "raw": 77.7724798198329,
+      "raw": 77.67597921899312,
       "fmt": 78.0
     },
     "pt": {
-      "raw": 64.84056443074495,
+      "raw": 65.04091191532618,
       "fmt": 65.0
     },
     "fin_score": {
-      "raw": 75.83069298916575,
+      "raw": 75.88127411216296,
       "fmt": 76.0
     },
     "datapoints": 6,
     "ticker": "AAPL",
-    "uuid": "d9d7a7fe-1eb0-5dc0-bf43-381862994571",
+    "uuid": "7c161205-623e-5130-a906-7dddad7e087c",
     "rating_current": "Outperform",
     "rating_sentiment": 1,
     "pt_current": 275.0,
@@ -56,24 +56,24 @@
   "pt": {
     "analyst": "Melius Research",
     "dir": {
-      "raw": 62.6639111759462,
+      "raw": 63.143116971694894,
       "fmt": 63.0
     },
     "mm": {
-      "raw": 49.897759721731006,
+      "raw": 50.15571418578788,
       "fmt": 50.0
     },
     "pt": {
-      "raw": 99.99381440158449,
+      "raw": 99.9908432744884,
       "fmt": 100.0
     },
     "fin_score": {
-      "raw": 66.30004638480929,
-      "fmt": 66.0
+      "raw": 66.61644139648149,
+      "fmt": 67.0
     },
     "datapoints": 6,
     "ticker": "AAPL",
-    "uuid": "98a9e088-be74-5d1d-a5de-1cd48832bfb1",
+    "uuid": "2b6a5130-4384-516c-98f0-62ec7daf1e66",
     "rating_current": "Buy",
     "rating_sentiment": 1,
     "pt_current": 290.0,
@@ -83,24 +83,24 @@
   "fin_score": {
     "analyst": "Daiwa Capital",
     "dir": {
-      "raw": 79.0616723141338,
+      "raw": 79.14059592679958,
       "fmt": 79.0
     },
     "mm": {
-      "raw": 77.7724798198329,
+      "raw": 77.67597921899312,
       "fmt": 78.0
     },
     "pt": {
-      "raw": 64.84056443074495,
+      "raw": 65.04091191532618,
       "fmt": 65.0
     },
     "fin_score": {
-      "raw": 75.83069298916575,
+      "raw": 75.88127411216296,
       "fmt": 76.0
     },
     "datapoints": 6,
     "ticker": "AAPL",
-    "uuid": "d9d7a7fe-1eb0-5dc0-bf43-381862994571",
+    "uuid": "7c161205-623e-5130-a906-7dddad7e087c",
     "rating_current": "Outperform",
     "rating_sentiment": 1,
     "pt_current": 275.0,

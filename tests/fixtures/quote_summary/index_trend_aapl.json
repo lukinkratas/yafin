@@ -8,19 +8,19 @@
           "estimates": [
             {
               "period": "0q",
-              "growth": 0.14729999
+              "growth": 0.15010001
             },
             {
               "period": "+1q",
-              "growth": 0.0639
+              "growth": 0.0668
             },
             {
               "period": "0y",
-              "growth": 0.1082
+              "growth": 0.1096
             },
             {
               "period": "+1y",
-              "growth": 0.13949999
+              "growth": 0.1447
             },
             {
               "period": "LTG",

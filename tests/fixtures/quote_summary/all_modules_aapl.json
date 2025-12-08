@@ -317,19 +317,19 @@
           "estimates": [
             {
               "period": "0q",
-              "growth": 0.14729999
+              "growth": 0.15010001
             },
             {
               "period": "+1q",
-              "growth": 0.0639
+              "growth": 0.0668
             },
             {
               "period": "0y",
-              "growth": 0.1082
+              "growth": 0.1096
             },
             {
               "period": "+1y",
-              "growth": 0.13949999
+              "growth": 0.1447
             },
             {
               "period": "LTG",
@@ -340,25 +340,25 @@
         "defaultKeyStatistics": {
           "maxAge": 1,
           "priceHint": 2,
-          "enterpriseValue": 4026017251328,
-          "forwardPE": 29.211119,
+          "enterpriseValue": 4158856888320,
+          "forwardPE": 30.450874,
           "profitMargins": 0.26915002,
           "floatShares": 14750642146,
           "sharesOutstanding": 14776353000,
-          "sharesShort": 115557836,
-          "sharesShortPriorMonth": 110777598,
-          "sharesShortPreviousMonthDate": 1759190400,
-          "dateShortInterest": 1761868800,
+          "sharesShort": 114913396,
+          "sharesShortPriorMonth": 109135657,
+          "sharesShortPreviousMonthDate": 1760486400,
+          "dateShortInterest": 1763078400,
           "sharesPercentSharesOut": 0.0078,
           "heldPercentInsiders": 0.016970001,
-          "heldPercentInstitutions": 0.64386004,
-          "shortRatio": 2.44,
+          "heldPercentInstitutions": 0.64362997,
+          "shortRatio": 2.34,
           "shortPercentOfFloat": 0.0078,
           "beta": 1.109,
           "impliedSharesOutstanding": 14840390000,
           "category": null,
           "bookValue": 4.991,
-          "priceToBook": 53.34602,
+          "priceToBook": 55.610092,
           "fundFamily": null,
           "legalType": null,
           "lastFiscalYearEnd": 1758931200,
@@ -366,14 +366,14 @@
           "mostRecentQuarter": 1758931200,
           "earningsQuarterlyGrowth": 0.864,
           "netIncomeToCommon": 112010002432,
-          "trailingEps": 7.46,
+          "trailingEps": 7.47,
           "forwardEps": 8.31,
           "lastSplitFactor": "4:1",
           "lastSplitDate": 1598832000,
-          "enterpriseToRevenue": 9.674,
-          "enterpriseToEbitda": 27.814,
-          "52WeekChange": 0.17521441,
-          "SandP52WeekChange": 0.116571546,
+          "enterpriseToRevenue": 9.993,
+          "enterpriseToEbitda": 28.732,
+          "52WeekChange": 0.16702485,
+          "SandP52WeekChange": 0.12159383,
           "lastDividendValue": 0.26,
           "lastDividendDate": 1762732800,
           "latestShareClass": null,
@@ -652,9 +652,9 @@
                 "longFmt": "480,283,704"
               },
               "value": {
-                "raw": 127875536190,
-                "fmt": "127.88B",
-                "longFmt": "127,875,536,190"
+                "raw": 133302736182,
+                "fmt": "133.3B",
+                "longFmt": "133,302,736,182"
               },
               "pctChange": {
                 "raw": 0.012,
@@ -664,27 +664,27 @@
             {
               "maxAge": 1,
               "reportDate": {
-                "raw": 1751241600,
-                "fmt": "2025-06-30"
+                "raw": 1759190400,
+                "fmt": "2025-09-30"
               },
               "organization": "VANGUARD INDEX FUNDS-Vanguard 500 Index Fund",
               "pctHeld": {
-                "raw": 0.0287,
-                "fmt": "2.87%"
+                "raw": 0.0248,
+                "fmt": "2.48%"
               },
               "position": {
-                "raw": 423950930,
-                "fmt": "423.95M",
-                "longFmt": "423,950,930"
+                "raw": 366145920,
+                "fmt": "366.15M",
+                "longFmt": "366,145,920"
               },
               "value": {
-                "raw": 112876935112,
-                "fmt": "112.88B",
-                "longFmt": "112,876,935,112"
+                "raw": 101623795626,
+                "fmt": "101.62B",
+                "longFmt": "101,623,795,626"
               },
               "pctChange": {
-                "raw": 0.015700001,
-                "fmt": "1.57%"
+                "raw": -0.1363,
+                "fmt": "-13.63%"
               }
             },
             {
@@ -704,9 +704,9 @@
                 "longFmt": "187,913,047"
               },
               "value": {
-                "raw": 50031848763,
-                "fmt": "50.03B",
-                "longFmt": "50,031,848,763"
+                "raw": 52155263900,
+                "fmt": "52.16B",
+                "longFmt": "52,155,263,900"
               },
               "pctChange": {
                 "raw": -0.0091,
@@ -730,9 +730,9 @@
                 "longFmt": "182,023,835"
               },
               "value": {
-                "raw": 48463846068,
-                "fmt": "48.46B",
-                "longFmt": "48,463,846,068"
+                "raw": 50520713182,
+                "fmt": "50.52B",
+                "longFmt": "50,520,713,182"
               },
               "pctChange": {
                 "raw": 0.0128,
@@ -756,9 +756,9 @@
                 "longFmt": "176,953,084"
               },
               "value": {
-                "raw": 47113758615,
-                "fmt": "47.11B",
-                "longFmt": "47,113,758,615"
+                "raw": 49113326304,
+                "fmt": "49.11B",
+                "longFmt": "49,113,326,304"
               },
               "pctChange": {
                 "raw": -0.019,
@@ -768,27 +768,27 @@
             {
               "maxAge": 1,
               "reportDate": {
-                "raw": 1751241600,
-                "fmt": "2025-06-30"
+                "raw": 1759190400,
+                "fmt": "2025-09-30"
               },
               "organization": "VANGUARD INDEX FUNDS-Vanguard Growth Index Fund",
               "pctHeld": {
-                "raw": 0.01,
-                "fmt": "1.00%"
+                "raw": 0.0095,
+                "fmt": "0.95%"
               },
               "position": {
-                "raw": 147872804,
-                "fmt": "147.87M",
-                "longFmt": "147,872,804"
+                "raw": 140904646,
+                "fmt": "140.9M",
+                "longFmt": "140,904,646"
               },
               "value": {
-                "raw": 39371134065,
-                "fmt": "39.37B",
-                "longFmt": "39,371,134,065"
+                "raw": 39108082777,
+                "fmt": "39.11B",
+                "longFmt": "39,108,082,777"
               },
               "pctChange": {
-                "raw": 0.0145000005,
-                "fmt": "1.45%"
+                "raw": -0.0471,
+                "fmt": "-4.71%"
               }
             },
             {
@@ -808,9 +808,9 @@
                 "longFmt": "124,773,851"
               },
               "value": {
-                "raw": 33221037828,
-                "fmt": "33.22B",
-                "longFmt": "33,221,037,828"
+                "raw": 34630980821,
+                "fmt": "34.63B",
+                "longFmt": "34,630,980,821"
               },
               "pctChange": {
                 "raw": 0.0041,
@@ -820,27 +820,27 @@
             {
               "maxAge": 1,
               "reportDate": {
-                "raw": 1751241600,
-                "fmt": "2025-06-30"
+                "raw": 1759190400,
+                "fmt": "2025-09-30"
               },
               "organization": "VANGUARD INSTITUTIONAL INDEX FUNDS-Vanguard Institutional Index Fund",
               "pctHeld": {
-                "raw": 0.0062,
-                "fmt": "0.62%"
+                "raw": 0.0058999998,
+                "fmt": "0.59%"
               },
               "position": {
-                "raw": 91543381,
-                "fmt": "91.54M",
-                "longFmt": "91,543,381"
+                "raw": 86511134,
+                "fmt": "86.51M",
+                "longFmt": "86,511,134"
               },
               "value": {
-                "raw": 24373425191,
-                "fmt": "24.37B",
-                "longFmt": "24,373,425,191"
+                "raw": 24011164185,
+                "fmt": "24.01B",
+                "longFmt": "24,011,164,185"
               },
               "pctChange": {
-                "raw": -0.0115,
-                "fmt": "-1.15%"
+                "raw": -0.055,
+                "fmt": "-5.50%"
               }
             },
             {
@@ -860,9 +860,9 @@
                 "longFmt": "66,163,735"
               },
               "value": {
-                "raw": 17616094443,
-                "fmt": "17.62B",
-                "longFmt": "17,616,094,443"
+                "raw": 18363743841,
+                "fmt": "18.36B",
+                "longFmt": "18,363,743,841"
               },
               "pctChange": {
                 "raw": -0.10609999,
@@ -881,18 +881,18 @@
                 "fmt": "0.36%"
               },
               "position": {
-                "raw": 53571651,
-                "fmt": "53.57M",
-                "longFmt": "53,571,651"
+                "raw": 53561374,
+                "fmt": "53.56M",
+                "longFmt": "53,561,374"
               },
               "value": {
-                "raw": 14263452078,
-                "fmt": "14.26B",
-                "longFmt": "14,263,452,078"
+                "raw": 14865958699,
+                "fmt": "14.87B",
+                "longFmt": "14,865,958,699"
               },
               "pctChange": {
-                "raw": -0.0345,
-                "fmt": "-3.45%"
+                "raw": -0.0347,
+                "fmt": "-3.47%"
               }
             }
           ]
@@ -900,41 +900,41 @@
         "summaryDetail": {
           "maxAge": 1,
           "priceHint": 2,
-          "previousClose": 268.56,
-          "open": 270.81,
-          "dayLow": 265.92,
-          "dayHigh": 275.43,
-          "regularMarketPreviousClose": 268.56,
-          "regularMarketOpen": 270.81,
-          "regularMarketDayLow": 265.92,
-          "regularMarketDayHigh": 275.43,
+          "previousClose": 276.97,
+          "open": 276.96,
+          "dayLow": 276.63,
+          "dayHigh": 279.53,
+          "regularMarketPreviousClose": 276.97,
+          "regularMarketOpen": 276.96,
+          "regularMarketDayLow": 276.63,
+          "regularMarketDayHigh": 279.53,
           "dividendRate": 1.04,
-          "dividendYield": 0.0039,
+          "dividendYield": 0.0037,
           "exDividendDate": 1762732800,
           "payoutRatio": 0.1367,
           "fiveYearAvgDividendYield": 0.53,
           "beta": 1.109,
-          "trailingPE": 35.69035,
-          "forwardPE": 32.03971,
-          "volume": 43720835,
-          "regularMarketVolume": 43720835,
-          "averageVolume": 50573067,
-          "averageVolume10days": 46343540,
-          "averageDailyVolume10Day": 46343540,
-          "bid": 257.18,
-          "ask": 266.53,
-          "bidSize": 100,
-          "askSize": 400,
-          "marketCap": 3951253782528,
+          "trailingPE": 37.15529,
+          "forwardPE": 33.399517,
+          "volume": 31046299,
+          "regularMarketVolume": 31046299,
+          "averageVolume": 51812426,
+          "averageVolume10days": 49390660,
+          "averageDailyVolume10Day": 49390660,
+          "bid": 277.5,
+          "ask": 277.71,
+          "bidSize": 200,
+          "askSize": 200,
+          "marketCap": 4118949920768,
           "fiftyTwoWeekLow": 169.21,
-          "fiftyTwoWeekHigh": 277.32,
-          "allTimeHigh": 277.32,
+          "fiftyTwoWeekHigh": 280.38,
+          "allTimeHigh": 280.38,
           "allTimeLow": 0.049107,
-          "priceToSalesTrailing12Months": 9.494532,
-          "fiftyDayAverage": 258.0152,
-          "twoHundredDayAverage": 225.90906,
+          "priceToSalesTrailing12Months": 9.897491,
+          "fiftyDayAverage": 261.0488,
+          "twoHundredDayAverage": 226.75735,
           "trailingAnnualDividendRate": 1.02,
-          "trailingAnnualDividendYield": 0.0037980338,
+          "trailingAnnualDividendYield": 0.0036827093,
           "currency": "USD",
           "fromCurrency": null,
           "toCurrency": null,
@@ -1003,6 +1003,26 @@
               "positionDirectDate": {
                 "raw": 1759363200,
                 "fmt": "2025-10-02"
+              }
+            },
+            {
+              "maxAge": 1,
+              "name": "GORSKY ALEX",
+              "relation": "Director",
+              "url": "",
+              "transactionDescription": "Conversion of Exercise of derivative security",
+              "latestTransDate": {
+                "raw": 1738281600,
+                "fmt": "2025-01-31"
+              },
+              "positionDirect": {
+                "raw": 5539,
+                "fmt": "5.54k",
+                "longFmt": "5,539"
+              },
+              "positionDirectDate": {
+                "raw": 1738281600,
+                "fmt": "2025-01-31"
               }
             },
             {
@@ -1103,26 +1123,6 @@
               "positionDirectDate": {
                 "raw": 1760572800,
                 "fmt": "2025-10-16"
-              }
-            },
-            {
-              "maxAge": 1,
-              "name": "SUGAR RONALD D",
-              "relation": "Director",
-              "url": "",
-              "transactionDescription": "Conversion of Exercise of derivative security",
-              "latestTransDate": {
-                "raw": 1738281600,
-                "fmt": "2025-01-31"
-              },
-              "positionDirect": {
-                "raw": 109311,
-                "fmt": "109.31k",
-                "longFmt": "109,311"
-              },
-              "positionDirectDate": {
-                "raw": 1738281600,
-                "fmt": "2025-01-31"
               }
             },
             {
@@ -10846,41 +10846,40 @@
         "price": {
           "maxAge": 1,
           "preMarketSource": "FREE_REALTIME",
+          "postMarketChangePercent": 0.001261056,
+          "postMarketChange": 0.3500061,
+          "postMarketTime": 1764205177,
+          "postMarketPrice": 277.9,
           "postMarketSource": "FREE_REALTIME",
-          "regularMarketChangePercent": -0.00860142,
-          "regularMarketChange": -2.31,
-          "regularMarketTime": 1763672402,
+          "regularMarketChangePercent": 0.0020940402,
+          "regularMarketChange": 0.579987,
+          "regularMarketTime": 1764190802,
           "priceHint": 2,
-          "regularMarketPrice": 266.25,
-          "regularMarketDayHigh": 275.43,
-          "regularMarketDayLow": 265.92,
-          "regularMarketVolume": 43720835,
-          "averageDailyVolume10Day": 46343540,
-          "averageDailyVolume3Month": 50573067,
-          "regularMarketPreviousClose": 268.56,
+          "regularMarketPrice": 277.55,
+          "regularMarketDayHigh": 279.53,
+          "regularMarketDayLow": 276.63,
+          "regularMarketVolume": 31046299,
+          "averageDailyVolume10Day": 49390660,
+          "averageDailyVolume3Month": 51812426,
+          "regularMarketPreviousClose": 276.97,
           "regularMarketSource": "FREE_REALTIME",
-          "regularMarketOpen": 270.81,
-          "overnightMarketSource": "BOATS Real Time Price",
-          "overnightMarketChangePercent": 0.00030041905,
-          "overnightMarketChange": 0.07998657,
-          "overnightMarketTime": 1763712789,
-          "overnightMarketPrice": 266.33,
+          "regularMarketOpen": 276.96,
           "exchange": "NMS",
           "exchangeName": "NasdaqGS",
           "exchangeDataDelayedBy": 0,
-          "marketState": "OVERNIGHT",
+          "marketState": "CLOSED",
           "quoteType": "EQUITY",
           "symbol": "AAPL",
           "underlyingSymbol": null,
           "shortName": "Apple Inc.",
           "longName": "Apple Inc.",
           "currency": "USD",
-          "quoteSourceName": "BOATS Real Time Price",
+          "quoteSourceName": "Nasdaq Real Time Price",
           "currencySymbol": "$",
           "fromCurrency": null,
           "toCurrency": null,
           "lastMarket": null,
-          "marketCap": 3951253782528
+          "marketCap": 4118949920768
         },
         "balanceSheetHistory": {
           "balanceSheetStatements": [
@@ -12984,9 +12983,9 @@
                 "longFmt": "1,399,427,162"
               },
               "value": {
-                "raw": 372597481882,
-                "fmt": "372.6B",
-                "longFmt": "372,597,481,882"
+                "raw": 388410991730,
+                "fmt": "388.41B",
+                "longFmt": "388,410,991,730"
               },
               "pctChange": {
                 "raw": -0.0117,
@@ -13010,9 +13009,9 @@
                 "longFmt": "1,146,332,274"
               },
               "value": {
-                "raw": 305210967952,
-                "fmt": "305.21B",
-                "longFmt": "305,210,967,952"
+                "raw": 318164508655,
+                "fmt": "318.16B",
+                "longFmt": "318,164,508,655"
               },
               "pctChange": {
                 "raw": -0.0022,
@@ -13036,9 +13035,9 @@
                 "longFmt": "597,501,113"
               },
               "value": {
-                "raw": 159084671336,
-                "fmt": "159.08B",
-                "longFmt": "159,084,671,336"
+                "raw": 165836426619,
+                "fmt": "165.84B",
+                "longFmt": "165,836,426,619"
               },
               "pctChange": {
                 "raw": -0.0062,
@@ -13062,9 +13061,9 @@
                 "longFmt": "356,166,414"
               },
               "value": {
-                "raw": 94829307727,
-                "fmt": "94.83B",
-                "longFmt": "94,829,307,727"
+                "raw": 98853983857,
+                "fmt": "98.85B",
+                "longFmt": "98,853,983,857"
               },
               "pctChange": {
                 "raw": 0.004,
@@ -13088,9 +13087,9 @@
                 "longFmt": "303,254,081"
               },
               "value": {
-                "raw": 80741399066,
-                "fmt": "80.74B",
-                "longFmt": "80,741,399,066"
+                "raw": 84168166479,
+                "fmt": "84.17B",
+                "longFmt": "84,168,166,479"
               },
               "pctChange": {
                 "raw": -0.0114,
@@ -13114,9 +13113,9 @@
                 "longFmt": "238,212,764"
               },
               "value": {
-                "raw": 63424148415,
-                "fmt": "63.42B",
-                "longFmt": "63,424,148,415"
+                "raw": 66115949740,
+                "fmt": "66.12B",
+                "longFmt": "66,115,949,740"
               },
               "pctChange": {
                 "raw": -0.1492,
@@ -13140,9 +13139,9 @@
                 "longFmt": "236,655,531"
               },
               "value": {
-                "raw": 63009535128,
-                "fmt": "63.01B",
-                "longFmt": "63,009,535,128"
+                "raw": 65683739740,
+                "fmt": "65.68B",
+                "longFmt": "65,683,739,740"
               },
               "pctChange": {
                 "raw": 0.1027,
@@ -13166,9 +13165,9 @@
                 "longFmt": "229,103,384"
               },
               "value": {
-                "raw": 60998775990,
-                "fmt": "61B",
-                "longFmt": "60,998,775,990"
+                "raw": 63587641432,
+                "fmt": "63.59B",
+                "longFmt": "63,587,641,432"
               },
               "pctChange": {
                 "raw": -0.0176,
@@ -13192,9 +13191,9 @@
                 "longFmt": "212,755,053"
               },
               "value": {
-                "raw": 56646032861,
-                "fmt": "56.65B",
-                "longFmt": "56,646,032,861"
+                "raw": 59050162363,
+                "fmt": "59.05B",
+                "longFmt": "59,050,162,363"
               },
               "pctChange": {
                 "raw": 0.0495,
@@ -13218,9 +13217,9 @@
                 "longFmt": "189,804,820"
               },
               "value": {
-                "raw": 50535533325,
-                "fmt": "50.54B",
-                "longFmt": "50,535,533,325"
+                "raw": 52680325474,
+                "fmt": "52.68B",
+                "longFmt": "52,680,325,474"
               },
               "pctChange": {
                 "raw": 0.014099999,
@@ -13232,9 +13231,9 @@
         "majorHoldersBreakdown": {
           "maxAge": 1,
           "insidersPercentHeld": 0.016970001,
-          "institutionsPercentHeld": 0.64386004,
-          "institutionsFloatPercentHeld": 0.65498,
-          "institutionsCount": 7060
+          "institutionsPercentHeld": 0.64362997,
+          "institutionsFloatPercentHeld": 0.65474,
+          "institutionsCount": 7062
         },
         "balanceSheetHistoryQuarterly": {
           "balanceSheetStatements": [
@@ -13488,14 +13487,14 @@
             {
               "maxAge": 1,
               "shares": {
-                "raw": 7371,
-                "fmt": "7.37k",
-                "longFmt": "7,371"
+                "raw": 16457,
+                "fmt": "16.46k",
+                "longFmt": "16,457"
               },
               "filerUrl": "",
               "transactionText": "",
-              "filerName": "KONDO CHRISTOPHER",
-              "filerRelation": "Officer",
+              "filerName": "PAREKH KEVAN",
+              "filerRelation": "Chief Financial Officer",
               "moneyText": "",
               "startDate": {
                 "raw": 1760486400,
@@ -13506,14 +13505,14 @@
             {
               "maxAge": 1,
               "shares": {
-                "raw": 16457,
-                "fmt": "16.46k",
-                "longFmt": "16,457"
+                "raw": 7371,
+                "fmt": "7.37k",
+                "longFmt": "7,371"
               },
               "filerUrl": "",
               "transactionText": "",
-              "filerName": "PAREKH KEVAN",
-              "filerRelation": "Chief Financial Officer",
+              "filerName": "KONDO CHRISTOPHER",
+              "filerRelation": "Officer",
               "moneyText": "",
               "startDate": {
                 "raw": 1760486400,
@@ -13599,6 +13598,24 @@
               },
               "filerUrl": "",
               "transactionText": "",
+              "filerName": "ADAMS KATHERINE L",
+              "filerRelation": "General Counsel",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1759276800,
+                "fmt": "2025-10-01"
+              },
+              "ownership": "D"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
+                "raw": 92403,
+                "fmt": "92.4k",
+                "longFmt": "92,403"
+              },
+              "filerUrl": "",
+              "transactionText": "",
               "filerName": "O'BRIEN DEIRDRE",
               "filerRelation": "Officer",
               "moneyText": "",
@@ -13619,24 +13636,6 @@
               "transactionText": "",
               "filerName": "KHAN SABIH",
               "filerRelation": "Chief Operating Officer",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1759276800,
-                "fmt": "2025-10-01"
-              },
-              "ownership": "D"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
-                "raw": 92403,
-                "fmt": "92.4k",
-                "longFmt": "92,403"
-              },
-              "filerUrl": "",
-              "transactionText": "",
-              "filerName": "ADAMS KATHERINE L",
-              "filerRelation": "General Counsel",
               "moneyText": "",
               "startDate": {
                 "raw": 1759276800,
@@ -13780,14 +13779,14 @@
             {
               "maxAge": 1,
               "shares": {
-                "raw": 7373,
-                "fmt": "7.37k",
-                "longFmt": "7,373"
+                "raw": 16458,
+                "fmt": "16.46k",
+                "longFmt": "16,458"
               },
               "filerUrl": "",
               "transactionText": "",
-              "filerName": "KONDO CHRISTOPHER",
-              "filerRelation": "Officer",
+              "filerName": "PAREKH KEVAN",
+              "filerRelation": "Chief Financial Officer",
               "moneyText": "",
               "startDate": {
                 "raw": 1744675200,
@@ -13798,14 +13797,14 @@
             {
               "maxAge": 1,
               "shares": {
-                "raw": 16458,
-                "fmt": "16.46k",
-                "longFmt": "16,458"
+                "raw": 7373,
+                "fmt": "7.37k",
+                "longFmt": "7,373"
               },
               "filerUrl": "",
               "transactionText": "",
-              "filerName": "PAREKH KEVAN",
-              "filerRelation": "Chief Financial Officer",
+              "filerName": "KONDO CHRISTOPHER",
+              "filerRelation": "Officer",
               "moneyText": "",
               "startDate": {
                 "raw": 1744675200,
@@ -13891,24 +13890,6 @@
               },
               "filerUrl": "",
               "transactionText": "",
-              "filerName": "O'BRIEN DEIRDRE",
-              "filerRelation": "Officer",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1743465600,
-                "fmt": "2025-04-01"
-              },
-              "ownership": "D"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
-                "raw": 74535,
-                "fmt": "74.53k",
-                "longFmt": "74,535"
-              },
-              "filerUrl": "",
-              "transactionText": "",
               "filerName": "WILLIAMS JEFFREY E",
               "filerRelation": "Chief Operating Officer",
               "moneyText": "",
@@ -13929,6 +13910,24 @@
               "transactionText": "",
               "filerName": "ADAMS KATHERINE L",
               "filerRelation": "General Counsel",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1743465600,
+                "fmt": "2025-04-01"
+              },
+              "ownership": "D"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
+                "raw": 74535,
+                "fmt": "74.53k",
+                "longFmt": "74,535"
+              },
+              "filerUrl": "",
+              "transactionText": "",
+              "filerName": "O'BRIEN DEIRDRE",
+              "filerRelation": "Officer",
               "moneyText": "",
               "startDate": {
                 "raw": 1743465600,
@@ -13986,6 +13985,60 @@
               },
               "filerUrl": "",
               "transactionText": "",
+              "filerName": "GORSKY ALEX",
+              "filerRelation": "Director",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1738281600,
+                "fmt": "2025-01-31"
+              },
+              "ownership": "D"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
+                "raw": 1516,
+                "fmt": "1.52k",
+                "longFmt": "1,516"
+              },
+              "filerUrl": "",
+              "transactionText": "",
+              "filerName": "AUSTIN WANDA M",
+              "filerRelation": "Director",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1738281600,
+                "fmt": "2025-01-31"
+              },
+              "ownership": "D"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
+                "raw": 1516,
+                "fmt": "1.52k",
+                "longFmt": "1,516"
+              },
+              "filerUrl": "",
+              "transactionText": "",
+              "filerName": "LOZANO MONICA C.",
+              "filerRelation": "Director",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1738281600,
+                "fmt": "2025-01-31"
+              },
+              "ownership": "D"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
+                "raw": 1516,
+                "fmt": "1.52k",
+                "longFmt": "1,516"
+              },
+              "filerUrl": "",
+              "transactionText": "",
               "filerName": "SUGAR RONALD D",
               "filerRelation": "Director",
               "moneyText": "",
@@ -14022,42 +14075,6 @@
               },
               "filerUrl": "",
               "transactionText": "",
-              "filerName": "AUSTIN WANDA M",
-              "filerRelation": "Director",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1738281600,
-                "fmt": "2025-01-31"
-              },
-              "ownership": "D"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
-                "raw": 1516,
-                "fmt": "1.52k",
-                "longFmt": "1,516"
-              },
-              "filerUrl": "",
-              "transactionText": "",
-              "filerName": "WAGNER SUSAN L",
-              "filerRelation": "Director",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1738281600,
-                "fmt": "2025-01-31"
-              },
-              "ownership": "D"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
-                "raw": 1516,
-                "fmt": "1.52k",
-                "longFmt": "1,516"
-              },
-              "filerUrl": "",
-              "transactionText": "",
               "filerName": "JUNG ANDREA",
               "filerRelation": "Director",
               "moneyText": "",
@@ -14076,25 +14093,7 @@
               },
               "filerUrl": "",
               "transactionText": "",
-              "filerName": "GORSKY ALEX",
-              "filerRelation": "Director",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1738281600,
-                "fmt": "2025-01-31"
-              },
-              "ownership": "D"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
-                "raw": 1516,
-                "fmt": "1.52k",
-                "longFmt": "1,516"
-              },
-              "filerUrl": "",
-              "transactionText": "",
-              "filerName": "LOZANO MONICA C.",
+              "filerName": "WAGNER SUSAN L",
               "filerRelation": "Director",
               "moneyText": "",
               "startDate": {
@@ -14239,29 +14238,6 @@
             {
               "maxAge": 1,
               "shares": {
-                "raw": 61019,
-                "fmt": "61.02k",
-                "longFmt": "61,019"
-              },
-              "value": {
-                "raw": 13843382,
-                "fmt": "13.84M",
-                "longFmt": "13,843,382"
-              },
-              "filerUrl": "",
-              "transactionText": "Sale at price 226.72 - 227.13 per share.",
-              "filerName": "O'BRIEN DEIRDRE",
-              "filerRelation": "Officer",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1727827200,
-                "fmt": "2024-10-02"
-              },
-              "ownership": "D"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
                 "raw": 59730,
                 "fmt": "59.73k",
                 "longFmt": "59,730"
@@ -14275,6 +14251,29 @@
               "transactionText": "Sale at price 226.80 - 227.22 per share.",
               "filerName": "WILLIAMS JEFFREY E",
               "filerRelation": "Chief Operating Officer",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1727827200,
+                "fmt": "2024-10-02"
+              },
+              "ownership": "D"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
+                "raw": 61019,
+                "fmt": "61.02k",
+                "longFmt": "61,019"
+              },
+              "value": {
+                "raw": 13843382,
+                "fmt": "13.84M",
+                "longFmt": "13,843,382"
+              },
+              "filerUrl": "",
+              "transactionText": "Sale at price 226.72 - 227.13 per share.",
+              "filerName": "O'BRIEN DEIRDRE",
+              "filerRelation": "Officer",
               "moneyText": "",
               "startDate": {
                 "raw": 1727827200,
@@ -14337,42 +14336,6 @@
               },
               "filerUrl": "",
               "transactionText": "",
-              "filerName": "O'BRIEN DEIRDRE",
-              "filerRelation": "Officer",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1727740800,
-                "fmt": "2024-10-01"
-              },
-              "ownership": "D"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
-                "raw": 127282,
-                "fmt": "127.28k",
-                "longFmt": "127,282"
-              },
-              "filerUrl": "",
-              "transactionText": "",
-              "filerName": "MAESTRI LUCA",
-              "filerRelation": "Chief Financial Officer",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1727740800,
-                "fmt": "2024-10-01"
-              },
-              "ownership": "D"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
-                "raw": 127282,
-                "fmt": "127.28k",
-                "longFmt": "127,282"
-              },
-              "filerUrl": "",
-              "transactionText": "",
               "filerName": "WILLIAMS JEFFREY E",
               "filerRelation": "Chief Operating Officer",
               "moneyText": "",
@@ -14393,6 +14356,42 @@
               "transactionText": "",
               "filerName": "ADAMS KATHERINE L",
               "filerRelation": "General Counsel",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1727740800,
+                "fmt": "2024-10-01"
+              },
+              "ownership": "D"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
+                "raw": 127282,
+                "fmt": "127.28k",
+                "longFmt": "127,282"
+              },
+              "filerUrl": "",
+              "transactionText": "",
+              "filerName": "O'BRIEN DEIRDRE",
+              "filerRelation": "Officer",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1727740800,
+                "fmt": "2024-10-01"
+              },
+              "ownership": "D"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
+                "raw": 127282,
+                "fmt": "127.28k",
+                "longFmt": "127,282"
+              },
+              "filerUrl": "",
+              "transactionText": "",
+              "filerName": "MAESTRI LUCA",
+              "filerRelation": "Chief Financial Officer",
               "moneyText": "",
               "startDate": {
                 "raw": 1727740800,
@@ -14721,42 +14720,6 @@
               },
               "filerUrl": "",
               "transactionText": "",
-              "filerName": "O'BRIEN DEIRDRE",
-              "filerRelation": "Officer",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1711929600,
-                "fmt": "2024-04-01"
-              },
-              "ownership": "D"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
-                "raw": 113309,
-                "fmt": "113.31k",
-                "longFmt": "113,309"
-              },
-              "filerUrl": "",
-              "transactionText": "",
-              "filerName": "MAESTRI LUCA",
-              "filerRelation": "Chief Financial Officer",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1711929600,
-                "fmt": "2024-04-01"
-              },
-              "ownership": "D"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
-                "raw": 113309,
-                "fmt": "113.31k",
-                "longFmt": "113,309"
-              },
-              "filerUrl": "",
-              "transactionText": "",
               "filerName": "WILLIAMS JEFFREY E",
               "filerRelation": "Chief Operating Officer",
               "moneyText": "",
@@ -14777,6 +14740,42 @@
               "transactionText": "",
               "filerName": "ADAMS KATHERINE L",
               "filerRelation": "General Counsel",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1711929600,
+                "fmt": "2024-04-01"
+              },
+              "ownership": "D"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
+                "raw": 113309,
+                "fmt": "113.31k",
+                "longFmt": "113,309"
+              },
+              "filerUrl": "",
+              "transactionText": "",
+              "filerName": "O'BRIEN DEIRDRE",
+              "filerRelation": "Officer",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1711929600,
+                "fmt": "2024-04-01"
+              },
+              "ownership": "D"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
+                "raw": 113309,
+                "fmt": "113.31k",
+                "longFmt": "113,309"
+              },
+              "filerUrl": "",
+              "transactionText": "",
+              "filerName": "MAESTRI LUCA",
+              "filerRelation": "Chief Financial Officer",
               "moneyText": "",
               "startDate": {
                 "raw": 1711929600,
@@ -14822,78 +14821,6 @@
               "startDate": {
                 "raw": 1709164800,
                 "fmt": "2024-02-29"
-              },
-              "ownership": "D"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
-                "raw": 1852,
-                "fmt": "1.85k",
-                "longFmt": "1,852"
-              },
-              "filerUrl": "",
-              "transactionText": "",
-              "filerName": "SUGAR RONALD D",
-              "filerRelation": "Director",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1706745600,
-                "fmt": "2024-02-01"
-              },
-              "ownership": "D"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
-                "raw": 1852,
-                "fmt": "1.85k",
-                "longFmt": "1,852"
-              },
-              "filerUrl": "",
-              "transactionText": "",
-              "filerName": "LEVINSON ARTHUR D",
-              "filerRelation": "Director",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1706745600,
-                "fmt": "2024-02-01"
-              },
-              "ownership": "D"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
-                "raw": 1852,
-                "fmt": "1.85k",
-                "longFmt": "1,852"
-              },
-              "filerUrl": "",
-              "transactionText": "",
-              "filerName": "JUNG ANDREA",
-              "filerRelation": "Director",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1706745600,
-                "fmt": "2024-02-01"
-              },
-              "ownership": "D"
-            },
-            {
-              "maxAge": 1,
-              "shares": {
-                "raw": 1852,
-                "fmt": "1.85k",
-                "longFmt": "1,852"
-              },
-              "filerUrl": "",
-              "transactionText": "",
-              "filerName": "WAGNER SUSAN L",
-              "filerRelation": "Director",
-              "moneyText": "",
-              "startDate": {
-                "raw": 1706745600,
-                "fmt": "2024-02-01"
               },
               "ownership": "D"
             },
@@ -14961,6 +14888,78 @@
               "filerUrl": "",
               "transactionText": "",
               "filerName": "GORE ALBERT A JR",
+              "filerRelation": "Director",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1706745600,
+                "fmt": "2024-02-01"
+              },
+              "ownership": "D"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
+                "raw": 1852,
+                "fmt": "1.85k",
+                "longFmt": "1,852"
+              },
+              "filerUrl": "",
+              "transactionText": "",
+              "filerName": "SUGAR RONALD D",
+              "filerRelation": "Director",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1706745600,
+                "fmt": "2024-02-01"
+              },
+              "ownership": "D"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
+                "raw": 1852,
+                "fmt": "1.85k",
+                "longFmt": "1,852"
+              },
+              "filerUrl": "",
+              "transactionText": "",
+              "filerName": "LEVINSON ARTHUR D",
+              "filerRelation": "Director",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1706745600,
+                "fmt": "2024-02-01"
+              },
+              "ownership": "D"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
+                "raw": 1852,
+                "fmt": "1.85k",
+                "longFmt": "1,852"
+              },
+              "filerUrl": "",
+              "transactionText": "",
+              "filerName": "JUNG ANDREA",
+              "filerRelation": "Director",
+              "moneyText": "",
+              "startDate": {
+                "raw": 1706745600,
+                "fmt": "2024-02-01"
+              },
+              "ownership": "D"
+            },
+            {
+              "maxAge": 1,
+              "shares": {
+                "raw": 1852,
+                "fmt": "1.85k",
+                "longFmt": "1,852"
+              },
+              "filerUrl": "",
+              "transactionText": "",
+              "filerName": "WAGNER SUSAN L",
               "filerRelation": "Director",
               "moneyText": "",
               "startDate": {
@@ -15391,14 +15390,14 @@
           "defaultMethodology": "gaap"
         },
         "pageViews": {
-          "shortTermTrend": "UP",
+          "shortTermTrend": "DOWN",
           "midTermTrend": "UP",
           "longTermTrend": "UP",
           "maxAge": 1
         },
         "financialData": {
           "maxAge": 86400,
-          "currentPrice": 266.25,
+          "currentPrice": 277.55,
           "targetHighPrice": 345.0,
           "targetLowPrice": 215.0,
           "targetMeanPrice": 281.74805,

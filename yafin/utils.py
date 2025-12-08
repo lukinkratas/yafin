@@ -176,7 +176,7 @@ def _get_func_name(func: Callable[..., Any], args: tuple[Any, ...]) -> str:
     return func.__name__
 
 
-def _async_log_func(func: Callable[..., Any]) -> Callable[..., Any]:
+def _alog_func(func: Callable[..., Any]) -> Callable[..., Any]:
     """Decorator for logging functions."""
 
     @wraps(func)

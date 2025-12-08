@@ -12,15 +12,7 @@
         },
         "timestamp": [
           1758803400,
-          1761696000,
-          1761760800,
-          1761782400,
-          1761868800,
-          1761955200,
-          1762041600,
-          1762128000,
-          1762214400,
-          1762300800,
+          1761309000,
           1762992000,
           1763078400,
           1763164800,
@@ -29,9 +21,11 @@
           1763424000,
           1763510400,
           1763596800,
-          1763645400,
           1763650800,
-          1763683200
+          1763737200,
+          1764082800,
+          1764158400,
+          1764163800
         ],
         "economicEvents": [
           {
@@ -43,130 +37,68 @@
             "period": "Q2"
           },
           {
-            "eventTime": 1761696000000,
+            "eventTime": 1761309000000,
             "countryCode": "US",
-            "eventName": "Employment Trends*",
-            "prior": "106.41",
-            "period": "Sep"
-          },
-          {
-            "eventTime": 1761760800000,
-            "countryCode": "US",
-            "eventName": "Fed Funds Tgt Rate",
-            "prior": "4.12",
-            "actual": "4"
-          },
-          {
-            "eventTime": 1761782400000,
-            "countryCode": "US",
-            "eventName": "Employment Trends*",
-            "prior": "106.41",
-            "period": "Sep"
-          },
-          {
-            "eventTime": 1761868800000,
-            "countryCode": "US",
-            "eventName": "Employment Trends*",
-            "prior": "106.41",
-            "period": "Sep"
-          },
-          {
-            "eventTime": 1761955200000,
-            "countryCode": "US",
-            "eventName": "Employment Trends*",
-            "prior": "106.41",
-            "period": "Sep"
-          },
-          {
-            "eventTime": 1762041600000,
-            "countryCode": "US",
-            "eventName": "Employment Trends*",
-            "prior": "106.41",
-            "period": "Sep"
-          },
-          {
-            "eventTime": 1762128000000,
-            "countryCode": "US",
-            "eventName": "Employment Trends*",
-            "prior": "106.41",
-            "period": "Sep"
-          },
-          {
-            "eventTime": 1762214400000,
-            "countryCode": "US",
-            "eventName": "Employment Trends*",
-            "prior": "106.41",
-            "period": "Sep"
-          },
-          {
-            "eventTime": 1762300800000,
-            "countryCode": "US",
-            "eventName": "Employment Trends*",
-            "prior": "106.41",
+            "eventName": "CPI YY, NSA",
+            "prior": "2.9",
+            "actual": "3",
             "period": "Sep"
           },
           {
             "eventTime": 1762992000000,
             "countryCode": "US",
-            "eventName": "CPI YY, NSA",
-            "prior": "3",
+            "eventName": "Employment Trends*",
+            "prior": "106.84",
             "period": "Oct"
           },
           {
             "eventTime": 1763078400000,
             "countryCode": "US",
-            "eventName": "CPI YY, NSA",
-            "prior": "3",
+            "eventName": "Employment Trends*",
+            "prior": "106.84",
             "period": "Oct"
           },
           {
             "eventTime": 1763164800000,
             "countryCode": "US",
-            "eventName": "CPI YY, NSA",
-            "prior": "3",
+            "eventName": "Employment Trends*",
+            "prior": "106.84",
             "period": "Oct"
           },
           {
             "eventTime": 1763251200000,
             "countryCode": "US",
-            "eventName": "CPI YY, NSA",
-            "prior": "3",
+            "eventName": "Employment Trends*",
+            "prior": "106.84",
             "period": "Oct"
           },
           {
             "eventTime": 1763337600000,
             "countryCode": "US",
-            "eventName": "CPI YY, NSA",
-            "prior": "3",
+            "eventName": "Employment Trends*",
+            "prior": "106.84",
             "period": "Oct"
           },
           {
             "eventTime": 1763424000000,
             "countryCode": "US",
-            "eventName": "CPI YY, NSA",
-            "prior": "3",
+            "eventName": "Employment Trends*",
+            "prior": "106.84",
             "period": "Oct"
           },
           {
             "eventTime": 1763510400000,
             "countryCode": "US",
-            "eventName": "CPI YY, NSA",
-            "prior": "3",
+            "eventName": "Employment Trends*",
+            "prior": "106.84",
             "period": "Oct"
           },
           {
             "eventTime": 1763596800000,
             "countryCode": "US",
-            "eventName": "Dallas Fed PCE*",
-            "prior": "2.8",
-            "period": "Sep"
-          },
-          {
-            "eventTime": 1763645400000,
-            "countryCode": "US",
-            "eventName": "Initial Jobless Clm *",
-            "prior": "228",
-            "actual": "220"
+            "eventName": "Employment Trends*",
+            "prior": "106.84",
+            "period": "Oct"
           },
           {
             "eventTime": 1763650800000,
@@ -178,11 +110,36 @@
             "revisedFrom": "4.05"
           },
           {
-            "eventTime": 1763683200000,
+            "eventTime": 1763737200000,
             "countryCode": "US",
-            "eventName": "Dallas Fed PCE*",
-            "prior": "2.8",
-            "period": "Sep"
+            "eventName": "U Mich Sentiment Final*",
+            "prior": "50.3",
+            "actual": "51",
+            "period": "Nov"
+          },
+          {
+            "eventTime": 1764082800000,
+            "countryCode": "US",
+            "eventName": "Pending Homes Index",
+            "prior": "74.8",
+            "actual": "76.3",
+            "period": "Oct",
+            "revisedFrom": "74.9"
+          },
+          {
+            "eventTime": 1764158400000,
+            "countryCode": "US",
+            "eventName": "Mortgage Market Index",
+            "prior": "316.9",
+            "actual": "317.6"
+          },
+          {
+            "eventTime": 1764163800000,
+            "countryCode": "US",
+            "eventName": "Initial Jobless Clm *",
+            "prior": "220",
+            "actual": "216",
+            "revisedFrom": "222"
           }
         ]
       },
@@ -5947,17 +5904,7 @@
             "META"
           ],
           "type": [
-            "corporateAnalystMeeting"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "shareHoldersAnnualMeetingsEvents"
+            "earningsConferenceCallEvents"
           ]
         }
       },
@@ -5977,26 +5924,6 @@
             "META"
           ],
           "type": [
-            "conferenceEvents"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "earningsConferenceCallEvents"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
             "conferencePresentation"
           ]
         }
@@ -6007,7 +5934,37 @@
             "META"
           ],
           "type": [
+            "shareHoldersAnnualMeetingsEvents"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
             "mergerAndAcquisitionAnnouncement"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "corporateAnalystMeeting"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "conferenceEvents"
           ]
         }
       }

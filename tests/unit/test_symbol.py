@@ -995,7 +995,7 @@ class TestUnitAsyncSymbol:
         async_symbol = AsyncSymbol('META')
         assert async_symbol._client is None
 
-        await async_symbol._get_client()
+        async_symbol._get_client()
         assert async_symbol._client
 
         await async_symbol.close()
@@ -1012,8 +1012,8 @@ class TestUnitAsyncSymbol:
         meta = AsyncSymbol('META')
         aapl = AsyncSymbol('AAPL')
 
-        await meta._get_client()
-        await aapl._get_client()
+        meta._get_client()
+        aapl._get_client()
 
         # test it is singleton
         assert meta._client is aapl._client
@@ -1027,8 +1027,8 @@ class TestUnitAsyncSymbol:
         meta = AsyncSymbol('META')
         aapl = AsyncSymbol('AAPL')
 
-        await meta._get_client()
-        await aapl._get_client()
+        meta._get_client()
+        aapl._get_client()
 
         assert meta._client
         assert aapl._client

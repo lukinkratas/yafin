@@ -96,64 +96,6 @@
             "AAPL"
           ],
           "type": [
-            "annualDepreciationAndAmortization"
-          ]
-        },
-        "timestamp": [
-          1664496000,
-          1696032000,
-          1727654400,
-          1759190400
-        ],
-        "annualDepreciationAndAmortization": [
-          {
-            "dataId": 26060,
-            "asOfDate": "2022-09-30",
-            "periodType": "12M",
-            "currencyCode": "USD",
-            "reportedValue": {
-              "raw": 11104000000.0,
-              "fmt": "11.10B"
-            }
-          },
-          {
-            "dataId": 26060,
-            "asOfDate": "2023-09-30",
-            "periodType": "12M",
-            "currencyCode": "USD",
-            "reportedValue": {
-              "raw": 11519000000.0,
-              "fmt": "11.52B"
-            }
-          },
-          {
-            "dataId": 26060,
-            "asOfDate": "2024-09-30",
-            "periodType": "12M",
-            "currencyCode": "USD",
-            "reportedValue": {
-              "raw": 11445000000.0,
-              "fmt": "11.45B"
-            }
-          },
-          {
-            "dataId": 26060,
-            "asOfDate": "2025-09-30",
-            "periodType": "12M",
-            "currencyCode": "USD",
-            "reportedValue": {
-              "raw": 11698000000.0,
-              "fmt": "11.70B"
-            }
-          }
-        ]
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
             "annualChangeInInventory"
           ]
         },
@@ -202,6 +144,64 @@
             "reportedValue": {
               "raw": 1400000000.0,
               "fmt": "1.40B"
+            }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualDepreciationAndAmortization"
+          ]
+        },
+        "timestamp": [
+          1664496000,
+          1696032000,
+          1727654400,
+          1759190400
+        ],
+        "annualDepreciationAndAmortization": [
+          {
+            "dataId": 26060,
+            "asOfDate": "2022-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": {
+              "raw": 11104000000.0,
+              "fmt": "11.10B"
+            }
+          },
+          {
+            "dataId": 26060,
+            "asOfDate": "2023-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": {
+              "raw": 11519000000.0,
+              "fmt": "11.52B"
+            }
+          },
+          {
+            "dataId": 26060,
+            "asOfDate": "2024-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": {
+              "raw": 11445000000.0,
+              "fmt": "11.45B"
+            }
+          },
+          {
+            "dataId": 26060,
+            "asOfDate": "2025-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": {
+              "raw": 11698000000.0,
+              "fmt": "11.70B"
             }
           }
         ]
@@ -2624,64 +2624,6 @@
             "AAPL"
           ],
           "type": [
-            "annualChangeInPayable"
-          ]
-        },
-        "timestamp": [
-          1664496000,
-          1696032000,
-          1727654400,
-          1759190400
-        ],
-        "annualChangeInPayable": [
-          {
-            "dataId": 26040,
-            "asOfDate": "2022-09-30",
-            "periodType": "12M",
-            "currencyCode": "USD",
-            "reportedValue": {
-              "raw": 9448000000.0,
-              "fmt": "9.45B"
-            }
-          },
-          {
-            "dataId": 26040,
-            "asOfDate": "2023-09-30",
-            "periodType": "12M",
-            "currencyCode": "USD",
-            "reportedValue": {
-              "raw": -1889000000.0,
-              "fmt": "-1.89B"
-            }
-          },
-          {
-            "dataId": 26040,
-            "asOfDate": "2024-09-30",
-            "periodType": "12M",
-            "currencyCode": "USD",
-            "reportedValue": {
-              "raw": 6020000000.0,
-              "fmt": "6.02B"
-            }
-          },
-          {
-            "dataId": 26040,
-            "asOfDate": "2025-09-30",
-            "periodType": "12M",
-            "currencyCode": "USD",
-            "reportedValue": {
-              "raw": 902000000.0,
-              "fmt": "902.00M"
-            }
-          }
-        ]
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
             "annualNetPPEPurchaseAndSale"
           ]
         },
@@ -2730,6 +2672,64 @@
             "reportedValue": {
               "raw": -12715000000.0,
               "fmt": "-12.71B"
+            }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualChangeInPayable"
+          ]
+        },
+        "timestamp": [
+          1664496000,
+          1696032000,
+          1727654400,
+          1759190400
+        ],
+        "annualChangeInPayable": [
+          {
+            "dataId": 26040,
+            "asOfDate": "2022-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": {
+              "raw": 9448000000.0,
+              "fmt": "9.45B"
+            }
+          },
+          {
+            "dataId": 26040,
+            "asOfDate": "2023-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": {
+              "raw": -1889000000.0,
+              "fmt": "-1.89B"
+            }
+          },
+          {
+            "dataId": 26040,
+            "asOfDate": "2024-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": {
+              "raw": 6020000000.0,
+              "fmt": "6.02B"
+            }
+          },
+          {
+            "dataId": 26040,
+            "asOfDate": "2025-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": {
+              "raw": 902000000.0,
+              "fmt": "902.00M"
             }
           }
         ]
@@ -2856,176 +2856,6 @@
             "AAPL"
           ],
           "type": [
-            "annualOperatingGainsLosses"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualUnrealizedGainLossOnInvestmentSecurities"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualSaleOfPPE"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualSaleOfIntangibles"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualProceedsFromStockOptionExercised"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualChangeInIncomeTaxPayable"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualNetIntangiblesPurchaseAndSale"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualAmortizationCashFlow"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualChangeInTaxPayable"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualOtherCashReceiptsfromOperatingActivities"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualAmortizationOfSecurities"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualDividendsReceivedCFI"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualEarningsLossesFromEquityInvestments"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualEffectOfExchangeRateChanges"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualDividendPaidCFO"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualShortTermDebtPayments"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualInterestPaidCFF"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
             "annualNetForeignCurrencyExchangeGainLoss"
           ]
         }
@@ -3036,67 +2866,7 @@
             "AAPL"
           ],
           "type": [
-            "annualTaxesRefundPaid"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualInterestPaidDirect"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualDividendReceivedCFO"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualInterestReceivedCFI"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualOtherCashAdjustmentOutsideChangeinCash"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualInterestReceivedDirect"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualForeignSales"
+            "annualPaymentsonBehalfofEmployees"
           ]
         }
       },
@@ -3116,107 +2886,7 @@
             "AAPL"
           ],
           "type": [
-            "annualOtherCashPaymentsfromOperatingActivities"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualChangeInInterestPayable"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualDomesticSales"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualDividendsReceivedDirect"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualGainLossOnSaleOfBusiness"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualReceiptsfromGovernmentGrants"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualPreferredStockPayments"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualCashFromDiscontinuedOperatingActivities"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualAmortizationOfIntangibles"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualProvisionandWriteOffofAssets"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualChangeInDividendPayable"
+            "annualDividendsPaidDirect"
           ]
         }
       },
@@ -3236,7 +2906,7 @@
             "AAPL"
           ],
           "type": [
-            "annualAssetImpairmentCharge"
+            "annualChangeInInterestPayable"
           ]
         }
       },
@@ -3246,57 +2916,7 @@
             "AAPL"
           ],
           "type": [
-            "annualPurchaseOfIntangibles"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualClassesofCashPayments"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualPreferredStockDividendPaid"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualGainLossOnSaleOfPPE"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualSaleOfInvestmentProperties"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualCashFromDiscontinuedInvestingActivities"
+            "annualInterestReceivedCFI"
           ]
         }
       },
@@ -3316,7 +2936,7 @@
             "AAPL"
           ],
           "type": [
-            "annualCapitalExpenditureReported"
+            "annualPurchaseOfIntangibles"
           ]
         }
       },
@@ -3336,47 +2956,167 @@
             "AAPL"
           ],
           "type": [
+            "annualForeignSales"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualSaleOfIntangibles"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualDividendReceivedCFO"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualOperatingGainsLosses"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualProceedsFromStockOptionExercised"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualSaleOfBusiness"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualClassesofCashPayments"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualShortTermDebtIssuance"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualCashFromDiscontinuedOperatingActivities"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualDividendsReceivedDirect"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualInterestReceivedDirect"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualNetPreferredStockIssuance"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualDividendsReceivedCFI"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualEffectOfExchangeRateChanges"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualDomesticSales"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualChangeInDividendPayable"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
             "annualExcessTaxBenefitFromStockBasedCompensation"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualCashFlowsfromusedinOperatingActivitiesDirect"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualTaxesRefundPaidDirect"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualDividendsPaidDirect"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualPensionAndEmployeeBenefitExpense"
           ]
         }
       },
@@ -3396,7 +3136,347 @@
             "AAPL"
           ],
           "type": [
+            "annualShortTermDebtPayments"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualGainLossOnInvestmentSecurities"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualClassesofCashReceiptsfromOperatingActivities"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualGainLossOnSaleOfPPE"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualPreferredStockPayments"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualReceiptsfromGovernmentGrants"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualOtherCashAdjustmentOutsideChangeinCash"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualCashFromDiscontinuedFinancingActivities"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualInterestPaidCFO"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualChangeInIncomeTaxPayable"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualTaxesRefundPaid"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualNetIntangiblesPurchaseAndSale"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualDepletion"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualProvisionandWriteOffofAssets"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualAssetImpairmentCharge"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualOtherCashReceiptsfromOperatingActivities"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualCashFlowFromDiscontinuedOperation"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualCashFlowsfromusedinOperatingActivitiesDirect"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualChangeInTaxPayable"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualPensionAndEmployeeBenefitExpense"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualInterestPaidCFF"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
             "annualOtherCashAdjustmentInsideChangeinCash"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualAmortizationOfIntangibles"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualUnrealizedGainLossOnInvestmentSecurities"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualCashFromDiscontinuedInvestingActivities"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualGainLossOnSaleOfBusiness"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualNetInvestmentPropertiesPurchaseAndSale"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualChangeInPrepaidAssets"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualInterestPaidDirect"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualOtherCashPaymentsfromOperatingActivities"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualPreferredStockDividendPaid"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualTaxesRefundPaidDirect"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualAmortizationOfSecurities"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualSaleOfPPE"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualAmortizationCashFlow"
           ]
         }
       },
@@ -3426,7 +3506,7 @@
             "AAPL"
           ],
           "type": [
-            "annualChangeInPrepaidAssets"
+            "annualSaleOfInvestmentProperties"
           ]
         }
       },
@@ -3436,47 +3516,7 @@
             "AAPL"
           ],
           "type": [
-            "annualNetInvestmentPropertiesPurchaseAndSale"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualPaymentsonBehalfofEmployees"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualShortTermDebtIssuance"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualGainLossOnInvestmentSecurities"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualCashFromDiscontinuedFinancingActivities"
+            "annualEarningsLossesFromEquityInvestments"
           ]
         }
       },
@@ -3496,7 +3536,7 @@
             "AAPL"
           ],
           "type": [
-            "annualNetPreferredStockIssuance"
+            "annualDividendPaidCFO"
           ]
         }
       },
@@ -3506,47 +3546,7 @@
             "AAPL"
           ],
           "type": [
-            "annualSaleOfBusiness"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualClassesofCashReceiptsfromOperatingActivities"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualInterestPaidCFO"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualDepletion"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualCashFlowFromDiscontinuedOperation"
+            "annualCapitalExpenditureReported"
           ]
         }
       }

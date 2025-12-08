@@ -11,62 +11,62 @@
             "symbol": "ETH-USD"
           },
           {
+            "symbol": "SMX"
+          },
+          {
             "symbol": "XRP-USD"
           },
           {
-            "symbol": "NFE"
-          },
-          {
-            "symbol": "^VIX"
-          },
-          {
-            "symbol": "BTC-CAD"
-          },
-          {
-            "symbol": "^GSPC"
-          },
-          {
-            "symbol": "MELI"
-          },
-          {
-            "symbol": "SNDK"
-          },
-          {
-            "symbol": "NVVE"
-          },
-          {
-            "symbol": "BTC-EUR"
+            "symbol": "TMC"
           },
           {
             "symbol": "^IXIC"
           },
           {
+            "symbol": "^GSPC"
+          },
+          {
+            "symbol": "BTC-EUR"
+          },
+          {
             "symbol": "SOL-USD"
           },
           {
-            "symbol": "WMT"
+            "symbol": "BTC-CAD"
           },
           {
-            "symbol": "MRNA"
+            "symbol": "TLRY"
           },
           {
-            "symbol": "ES=F"
+            "symbol": "BYND"
           },
           {
-            "symbol": "INTU"
+            "symbol": "^NSEI"
           },
           {
             "symbol": "DOGE-USD"
           },
           {
-            "symbol": "BBWI"
+            "symbol": "9992.HK"
           },
           {
-            "symbol": "NQ=F"
+            "symbol": "ASML"
+          },
+          {
+            "symbol": "BITF"
+          },
+          {
+            "symbol": "^DJI"
+          },
+          {
+            "symbol": "^KS11"
+          },
+          {
+            "symbol": "IBIT"
           }
         ],
-        "jobTimestamp": 1763709271436,
-        "startInterval": 202511210600
+        "jobTimestamp": 1764227572387,
+        "startInterval": 202511270600
       }
     ],
     "error": null

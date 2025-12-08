@@ -1162,7 +1162,7 @@ class TestUnitAsyncSymbols:
         async_symbols = AsyncSymbols('NETA,AAPL')
         assert async_symbols._client is None
 
-        await async_symbols._get_client()
+        async_symbols._get_client()
         assert async_symbols._client
 
         await async_symbols.close()
@@ -1179,8 +1179,8 @@ class TestUnitAsyncSymbols:
         meta_aapl = AsyncSymbols('NETA,AAPL')
         googl_msft = AsyncSymbols('GOOGL,MSFT')
 
-        await meta_aapl._get_client()
-        await googl_msft._get_client()
+        meta_aapl._get_client()
+        googl_msft._get_client()
 
         # test it is singleton
         assert meta_aapl._client is googl_msft._client
@@ -1194,8 +1194,8 @@ class TestUnitAsyncSymbols:
         meta_aapl = AsyncSymbols('NETA,AAPL')
         googl_msft = AsyncSymbols('GOOGL,MSFT')
 
-        await meta_aapl._get_client()
-        await googl_msft._get_client()
+        meta_aapl._get_client()
+        googl_msft._get_client()
 
         assert meta_aapl._client
         assert googl_msft._client

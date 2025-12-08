@@ -1,0 +1,14 @@
+- update lock
+- refactor
+- update doc - disable show source code
+- add changelog
+- add publish and changelog steps into Makefile
+- remove openai codex and claude code reviews
+- add release gh action workflow
+- refactor, _get_client and _get_symbols to sync
+- refactor, _get_client to sync
+- refactor
+- refactor, add cache clearing for crumb, docstring ticker x symbol
+- update fixtures
+- add postman collection, unit, integration and performance tests and pre commit, automated documentation via mkdocs, gh actions, lru caching.
+- init

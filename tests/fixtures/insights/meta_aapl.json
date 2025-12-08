@@ -13,11 +13,11 @@
               "score": 0,
               "scoreDescription": "No Evidence",
               "sectorDirection": "Bullish",
-              "sectorScore": 2,
-              "sectorScoreDescription": "Bullish Evidence",
-              "indexDirection": "Bearish",
-              "indexScore": 3,
-              "indexScoreDescription": "Strong Bearish Evidence"
+              "sectorScore": 4,
+              "sectorScoreDescription": "Very Strong Bullish Evidence",
+              "indexDirection": "Bullish",
+              "indexScore": 2,
+              "indexScoreDescription": "Bullish Evidence"
             },
             "intermediateTermOutlook": {
               "stateDescription": "There are no events.",
@@ -28,8 +28,8 @@
               "sectorScore": 3,
               "sectorScoreDescription": "Strong Bearish Evidence",
               "indexDirection": "Bearish",
-              "indexScore": 3,
-              "indexScoreDescription": "Strong Bearish Evidence"
+              "indexScore": 2,
+              "indexScoreDescription": "Bearish Evidence"
             },
             "longTermOutlook": {
               "stateDescription": "There is one bearish event.",
@@ -62,7 +62,7 @@
             "innovativeness": 0.8288,
             "sustainability": 0.7643000000000001,
             "insiderSentiments": 0.0,
-            "earningsReports": 0.9098,
+            "earningsReports": 0.9143000000000001,
             "dividends": 0.0127
           },
           "sector": {
@@ -106,13 +106,13 @@
         },
         "events": [
           {
-            "eventType": "Relative Strength Index (RSI)",
+            "eventType": "Momentum",
             "pricePeriod": "D",
             "tradingHorizon": "S",
             "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1762785000,
-            "endDate": 1762785000
+            "startDate": 1764081000,
+            "endDate": 1764081000
           }
         ],
         "reports": [
@@ -134,14 +134,14 @@
               "ASML",
               "MSFT",
               "TSLA",
-              "WFC",
               "IBM",
+              "WFC",
               "LLY",
               "AMD",
               "GE",
               "PLTR",
-              "NFLX",
               "BABA",
+              "NFLX",
               "META",
               "NVDA",
               "BAC",
@@ -154,25 +154,6 @@
               "AMZN"
             ],
             "title": "Argus Quick Note: Weekly Stock List for 11/03/2025: Big-Cap High-Flyers"
-          },
-          {
-            "id": "ARGUS_45191_MarketSummary_1762174991000",
-            "headHtml": "Market Digest: FHI, IEX, MCO, ORLY, UTHR, VLO, META, MDLZ",
-            "provider": "Argus Research",
-            "reportDate": "2025-11-03T13:03:11Z",
-            "reportTitle": "Earnings Flood Continues The earnings flood continues this week. The October jobs report was supposed to come out on Friday -- but if the U.S. government shutdown continues, that indicator will not be released. Several Federal Reserve officials will be speaking publicly during the week. Last week, the Dow Jones Industrial Average gained 0.9%, the S&P 500 was up 0.8%, and the Nasdaq rose 2.3%. So far this year, the Dow is up 12%, the S&P 500 has gained 16%, and the Nasdaq has popped 23%.  On the earnings calendar, Palantir Technologies reports on Monday; AMD, Uber, Amgen, Pfizer, Spotify, Marriott, and Apollo Global Management on Tuesday; Toyota, Novo Nordisk, McDonald's, and Qualcomm on Wednesday; AstraZeneca, ConocoPhillips Airbnb, and Warner Bros. Discovery on Thursday; and Constellation Energy, Duke Energy, and Honda on Friday. Some 56% of S&P 500 companies have reported so far and earnings are up 13% from the prior-year quarter. That follows 13% growth in 2Q EPS and 14% growth in 1Q EPS, according to LSEG I/B/E/S. For 3Q, Information Technology is the leading sector so far, up 24%, and Energy is at the bottom, down 6%. On the economic calendar, the U.S. federal government shutdown is now the second longest in history, at 34 days. That means no government-issued economic reports will be released, including this week's scheduled October jobs report. Data that will be reported includes ISM Manufacturing on Monday; ADP employment on Wednesday; and Consumer Sentiment on Friday.  Turning to other data, the Atlanta Fed GDPNow measure calls for GDP of 3.9% in the third quarter. That is the same as last week's forecast. The Cleveland Fed Inflation Nowcast forecasts CPI of 3.0% in October, also the same as last week. Mortgage rates inched lower last week, with the average 30-year fixed-rate mortgage now at 6.17%, according to FreddieMac. Gas prices went up two cents last week and now average $3.04 per gallon for regular gas.  Looking ahead, the last Federal Open Market Committee meeting of the year is on December 10. After Chairman Powell's comments last week, odds have dropped to 63% from 92% for another 25-basis-point cut to the fed funds target rate, according to the CME FedWatch rate tool. After that, the first few meetings in 2026 are on January 28 and March 18. Taking a deeper dive into performance, U.S. stocks are lagging global stocks. A leading industrialized global stock-market index, the ETF EFA, has surged 25% year to date, while the leading emerging market ETF EEM has gained 32%. U.S. growth stocks, with a year-to-date gain of 20% (ETF IWF), have taken the edge over value stocks (ETF IWD), which have booked an advance of 11%. In other asset classes for the year to date, AGG bonds are up 4%, gold is up 54%, crude oil is down 14%, and Bitcoin is up 17%. The U.S. dollar is down 8%, tracking DXY. The VIX Volatility Index settled Friday at about 18, down from a high of 29 a few weeks ago. The current level is still in range of a bull market. Looking at leading and lagging sectors so far in 2025, Information Technology (+26%) is the top performer, followed by Communication Services, up 25%, Utilities (+21%) and Industrials (+18%) are outperforming the broader market, while Financials (+10%) is not too far behind. Defensive sectors like Energy, (+3%), Consumer Staples (+3%), Real Estate (+5%), Consumer Discretionary (+4%), Materials (+6%), and Healthcare (+6%) are at the bottom of the performance list.",
-            "reportType": "Market Summary",
-            "tickers": [
-              "MDLZ",
-              "META",
-              "ORLY",
-              "FHI",
-              "VLO",
-              "MCO",
-              "IEX",
-              "UTHR"
-            ],
-            "title": "Earnings Flood Continues\n\nThe earnings flood continues this week. The October"
           },
           {
             "id": "ARGUS_3592_AnalystReport_1762174991000",
@@ -188,6 +169,25 @@
               "META"
             ],
             "title": "Capex spending dings Meta's story"
+          },
+          {
+            "id": "ARGUS_45191_MarketSummary_1762174991000",
+            "headHtml": "Market Digest: FHI, IEX, MCO, ORLY, UTHR, VLO, META, MDLZ",
+            "provider": "Argus Research",
+            "reportDate": "2025-11-03T13:03:11Z",
+            "reportTitle": "Earnings Flood Continues The earnings flood continues this week. The October jobs report was supposed to come out on Friday -- but if the U.S. government shutdown continues, that indicator will not be released. Several Federal Reserve officials will be speaking publicly during the week. Last week, the Dow Jones Industrial Average gained 0.9%, the S&P 500 was up 0.8%, and the Nasdaq rose 2.3%. So far this year, the Dow is up 12%, the S&P 500 has gained 16%, and the Nasdaq has popped 23%.  On the earnings calendar, Palantir Technologies reports on Monday; AMD, Uber, Amgen, Pfizer, Spotify, Marriott, and Apollo Global Management on Tuesday; Toyota, Novo Nordisk, McDonald's, and Qualcomm on Wednesday; AstraZeneca, ConocoPhillips Airbnb, and Warner Bros. Discovery on Thursday; and Constellation Energy, Duke Energy, and Honda on Friday. Some 56% of S&P 500 companies have reported so far and earnings are up 13% from the prior-year quarter. That follows 13% growth in 2Q EPS and 14% growth in 1Q EPS, according to LSEG I/B/E/S. For 3Q, Information Technology is the leading sector so far, up 24%, and Energy is at the bottom, down 6%. On the economic calendar, the U.S. federal government shutdown is now the second longest in history, at 34 days. That means no government-issued economic reports will be released, including this week's scheduled October jobs report. Data that will be reported includes ISM Manufacturing on Monday; ADP employment on Wednesday; and Consumer Sentiment on Friday.  Turning to other data, the Atlanta Fed GDPNow measure calls for GDP of 3.9% in the third quarter. That is the same as last week's forecast. The Cleveland Fed Inflation Nowcast forecasts CPI of 3.0% in October, also the same as last week. Mortgage rates inched lower last week, with the average 30-year fixed-rate mortgage now at 6.17%, according to FreddieMac. Gas prices went up two cents last week and now average $3.04 per gallon for regular gas.  Looking ahead, the last Federal Open Market Committee meeting of the year is on December 10. After Chairman Powell's comments last week, odds have dropped to 63% from 92% for another 25-basis-point cut to the fed funds target rate, according to the CME FedWatch rate tool. After that, the first few meetings in 2026 are on January 28 and March 18. Taking a deeper dive into performance, U.S. stocks are lagging global stocks. A leading industrialized global stock-market index, the ETF EFA, has surged 25% year to date, while the leading emerging market ETF EEM has gained 32%. U.S. growth stocks, with a year-to-date gain of 20% (ETF IWF), have taken the edge over value stocks (ETF IWD), which have booked an advance of 11%. In other asset classes for the year to date, AGG bonds are up 4%, gold is up 54%, crude oil is down 14%, and Bitcoin is up 17%. The U.S. dollar is down 8%, tracking DXY. The VIX Volatility Index settled Friday at about 18, down from a high of 29 a few weeks ago. The current level is still in range of a bull market. Looking at leading and lagging sectors so far in 2025, Information Technology (+26%) is the top performer, followed by Communication Services, up 25%, Utilities (+21%) and Industrials (+18%) are outperforming the broader market, while Financials (+10%) is not too far behind. Defensive sectors like Energy, (+3%), Consumer Staples (+3%), Real Estate (+5%), Consumer Discretionary (+4%), Materials (+6%), and Healthcare (+6%) are at the bottom of the performance list.",
+            "reportType": "Market Summary",
+            "tickers": [
+              "META",
+              "MDLZ",
+              "ORLY",
+              "FHI",
+              "VLO",
+              "MCO",
+              "IEX",
+              "UTHR"
+            ],
+            "title": "Earnings Flood Continues\n\nThe earnings flood continues this week. The October"
           },
           {
             "id": "MS_0P0000W3KZ_AnalystReport_1761865705000",
@@ -207,8 +207,8 @@
         ],
         "sigDevs": [
           {
-            "headline": "Meta\u2019S Chief Revenue Officer John Hegeman Exits In Broad Leadership Reshuffle - Bloomberg News",
-            "date": "2025-11-18"
+            "headline": "Meta rejects Italy's competition authority claims as \"unfounded\"",
+            "date": "2025-11-26"
           }
         ],
         "secReports": [
@@ -312,21 +312,21 @@
             "formType": "S-8 POS"
           },
           {
-            "id": "0001326801-25-000093_1326801",
-            "type": "Offering Registrations",
-            "title": "S-8 POS : Offering Registrations",
-            "description": "Post-effective amendment to a S-8 registration statement",
-            "filingDate": 1748563200000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000093/thumbnail.png",
-            "formType": "S-8 POS"
-          },
-          {
             "id": "0001326801-25-000092_1326801",
             "type": "Offering Registrations",
             "title": "S-8 POS : Offering Registrations",
             "description": "Post-effective amendment to a S-8 registration statement",
             "filingDate": 1748563200000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000092/thumbnail.png",
+            "formType": "S-8 POS"
+          },
+          {
+            "id": "0001326801-25-000093_1326801",
+            "type": "Offering Registrations",
+            "title": "S-8 POS : Offering Registrations",
+            "description": "Post-effective amendment to a S-8 registration statement",
+            "filingDate": 1748563200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001326801/000132680125000093/thumbnail.png",
             "formType": "S-8 POS"
           },
           {
@@ -635,16 +635,16 @@
             "provider": "Trading Central",
             "sector": "Technology",
             "shortTermOutlook": {
-              "stateDescription": "Recent bearish events outweigh bullish events.",
-              "direction": "Bearish",
-              "score": 4,
-              "scoreDescription": "Very Strong Bearish Evidence",
+              "stateDescription": "Recent bullish events outweigh bearish events.",
+              "direction": "Bullish",
+              "score": 3,
+              "scoreDescription": "Strong Bullish Evidence",
               "sectorDirection": "Bearish",
-              "sectorScore": 3,
-              "sectorScoreDescription": "Strong Bearish Evidence",
-              "indexDirection": "Bearish",
-              "indexScore": 3,
-              "indexScoreDescription": "Strong Bearish Evidence"
+              "sectorScore": 1,
+              "sectorScoreDescription": "Weak Bearish Evidence",
+              "indexDirection": "Bullish",
+              "indexScore": 2,
+              "indexScoreDescription": "Bullish Evidence"
             },
             "intermediateTermOutlook": {
               "stateDescription": "Bullish events outweigh bearish events.",
@@ -652,11 +652,11 @@
               "score": 1,
               "scoreDescription": "Weak Bullish Evidence",
               "sectorDirection": "Bearish",
-              "sectorScore": 2,
-              "sectorScoreDescription": "Bearish Evidence",
+              "sectorScore": 3,
+              "sectorScoreDescription": "Strong Bearish Evidence",
               "indexDirection": "Bearish",
-              "indexScore": 3,
-              "indexScoreDescription": "Strong Bearish Evidence"
+              "indexScore": 2,
+              "indexScoreDescription": "Bearish Evidence"
             },
             "longTermOutlook": {
               "stateDescription": "All events are bullish.",
@@ -674,8 +674,8 @@
           "keyTechnicals": {
             "provider": "Trading Central",
             "support": 229.4,
-            "resistance": 269.89,
-            "stopLoss": 248.647175
+            "resistance": 277.32,
+            "stopLoss": 258.743024
           },
           "valuation": {
             "color": 0.0,
@@ -691,9 +691,9 @@
             "innovativeness": 0.9981,
             "hiring": 0.9512999999999999,
             "sustainability": 0.16519999999999999,
-            "insiderSentiments": 0.3265,
-            "earningsReports": 0.8784000000000001,
-            "dividends": 0.0625
+            "insiderSentiments": 0.32049999999999995,
+            "earningsReports": 0.8856,
+            "dividends": 0.06269999999999999
           },
           "sector": {
             "innovativeness": 0.5,
@@ -736,16 +736,70 @@
         },
         "events": [
           {
-            "eventType": "Williams %R",
+            "eventType": "Commodity Channel Index",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "S",
+            "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1763389800,
-            "endDate": 1763389800
+            "startDate": 1763994600,
+            "endDate": 1763994600
           }
         ],
         "reports": [
+          {
+            "id": "ARGUS_45432_ThematicPortfolio_1764162486000",
+            "headHtml": "The Argus Sustainable Growth Theme Model Portfolio",
+            "provider": "Argus Research",
+            "reportDate": "2025-11-26T13:08:06Z",
+            "reportTitle": "Sustainable Impact Investing is gaining traction not only with Argus Research clients but also with the global investment community. As assets have flowed in over the past 40 years, Sustainable Investing has evolved. The discipline, originally known as Socially Responsible Investing, first focused on excluding companies that conducted business in South Africa, or participated in industries such as tobacco, alcohol, and firearms. In time, the list of industries to avoid increased to include soft drinks, fast food, and oil and gas, among numerous others.  Performance of initial strategies lagged, and the approach has been modified. Now, instead of merely identifying industries to avoid, the discipline promotes \"sustainable\" business practices across all industries that can have an \"impact\" on global issues such as climate, hunger, poverty, disease, shelter, and workers' rights. Given the strategy's focus on leading management practices, we expect the growth curve for Sustainable Investing to again slope upward in the years ahead.",
+            "reportType": "Thematic Portfolio",
+            "tickers": [
+              "TT",
+              "APO",
+              "DE",
+              "GOOGL",
+              "AAPL",
+              "NDAQ",
+              "AVGO",
+              "JPM",
+              "MSFT",
+              "TFC",
+              "ABT",
+              "MA",
+              "IBM",
+              "LLY",
+              "TRV",
+              "SPGI",
+              "GE",
+              "NFLX",
+              "NVDA",
+              "CEG",
+              "BSX",
+              "AEP",
+              "ACN",
+              "GS",
+              "ECL",
+              "TMUS",
+              "JCI",
+              "LMT",
+              "HPE",
+              "AMZN"
+            ],
+            "title": "The Argus Sustainable Growth Theme Model Portfolio"
+          },
+          {
+            "id": "ARGUS_45428_TechnicalAnalysis_1764160070000",
+            "headHtml": "Technical Assessment: Bullish in the Intermediate-Term",
+            "provider": "Argus Research",
+            "reportDate": "2025-11-26T12:27:50Z",
+            "reportTitle": "The stock market turned the corner following Thursday's rather large downside reversal, which just happened to coincide with the short-term disappointment over Nvidia's quarterly report. The S&P 500 closed at $6,539 on November 20, just points below its prior low from October 10. Since then, the entire market reversed higher -- and this time, stocks were not led by Information Technology, but rather by diverse sector and industry strength. While IT and semiconductors have bounced, some of the largest losers on Tuesday were AMD, NVDA, SMCI, VST, and NFLX (which all fell between 2.4% and 4.2%). The IT sector was near the bottom, with a 0.3% gain, with only Energy (XLE -0.6%) and (XLU -0.4%) worse off.   As we have talked about in recent commentaries, Healthcare (XLV) led once again on Tuesday, with a 2.3% pop, followed by Discretionary (XLY +2.1%); Materials (XLB +1.5%); Staples (XLP + 1.4%); Industrials (XLI) and Financials (XLF), both rising 1.3%; Communication Services (XLC +1.1%); and Real Estate (XLRE +0.8%). So there was strength in many different sectors and industries, and rotation remains in gear as money flows from area to area but never moves to the sidelines.     The S&P 500 reclaimed its 21-day exponential and 50-day simple averages, but ran right into the key 61.8% retracement of the recent decline. In addition, price ran right to prior support off the lows since late July -- which is now resistance in the 6,770 area. A pop over this region will likely put an end to the multi-month sloppy action and open the doors for new all-time highs during the last month of 2025. (Mark Arbeter, CMT)",
+            "reportType": "Technical Analysis",
+            "tickers": [
+              "AAPL",
+              "CME"
+            ],
+            "title": "The stock market turned the corner following Thursday's rather large downside reversal, which just happened to coincide with the short-term disappointment over Nvidia's quarterly report."
+          },
           {
             "id": "ARGUS_45247_TechnicalAnalysis_1762517489000",
             "headHtml": "Technical Assessment: Bullish in the Intermediate-Term",
@@ -777,14 +831,14 @@
               "ASML",
               "MSFT",
               "TSLA",
-              "WFC",
               "IBM",
+              "WFC",
               "LLY",
               "AMD",
               "GE",
               "PLTR",
-              "NFLX",
               "BABA",
+              "NFLX",
               "META",
               "NVDA",
               "BAC",
@@ -797,39 +851,12 @@
               "AMZN"
             ],
             "title": "Argus Quick Note: Weekly Stock List for 11/03/2025: Big-Cap High-Flyers"
-          },
-          {
-            "id": "ARGUS_45194_MarketOutlook_1762175071000",
-            "headHtml": "Daily Spotlight: Investors Generally Like November",
-            "provider": "Argus Research",
-            "reportDate": "2025-11-03T13:04:31Z",
-            "reportTitle": "The long-term upward trajectory in the U.S. stock market has its foundation in the country's democratic political system (remember to vote tomorrow in New Jersey, Virginia and New York City) and its market-based, capitalist economic system. In theory, the stock market efficiently allocates the nation's capital to generate solid investment returns. Theory typically turns into reality in November, which since 1980 has been the best month for equity performance, with an average 2.2% gain, ahead of April (+1.5%), July (1.4%), October (+1.3%), and December (+1.2%).  November's batting average is high as well: stocks advance during the month 73% of the time. The best Novembers have been 1980 (+10.2%), 2023 (+8.9%), 2001 (+7.5%), 1996 (+7.3%), 1985 (+6.5%), 1998 (+5.9%), and 2002 (5.7%). There have been some clunkers: 2000 (-8%), 2008 (-7.5%), and 1987 (-5.9%). Last year, the S&P 500 rose a solid 4.7% for the month, after the presidential election had been decided. November usually starts off at a fast pace, as nonfarm payrolls are reported -- when the government is open, which is not now the case. As well, many companies are still reporting earnings. But as the Thanksgiving holiday approaches, news and trading volumes both lighten up. The current market fundamentals -- strong earnings growth, declining interest rates, and an expanding economy -- suggest that this November can add to the positive monthly record.",
-            "reportType": "Market Outlook",
-            "tickers": [
-              "AAPL"
-            ],
-            "title": "Investors Generally Like November"
-          },
-          {
-            "id": "ARGUS_2660_AnalystReport_1761910167000",
-            "headHtml": "Analyst Report: Apple Inc",
-            "provider": "Argus Research",
-            "reportDate": "2025-10-31T11:29:27Z",
-            "reportTitle": "Apple manufactures smartphones, tablets, PCs, software, and peripherals for a worldwide customer base. Its products include Mac desktop and mobile PCs, iPhone, iPad, Apple Watch, and various consumer products, including Air Pods, Beats headphones, and Apple TV. Apple services include App Store, iTunes, iCloud, Apple TV+, Apple Arcade, Apple Music, Apple Pay, and more.",
-            "reportType": "Analyst Report",
-            "targetPrice": 325.0,
-            "targetPriceStatus": "Increased",
-            "investmentRating": "Bullish",
-            "tickers": [
-              "AAPL"
-            ],
-            "title": "Raising target price and EPS estimates"
           }
         ],
         "sigDevs": [
           {
-            "headline": "Abidur Chowdhury, The Apple Designer Who Introduced The iPhone Air, Leaves The Company - Bloomberg News",
-            "date": "2025-11-17"
+            "headline": "Apple Cuts Jobs Across Its Sales Organization In Rare Layoff - Bloomberg News",
+            "date": "2025-11-24"
           }
         ],
         "secReports": [
@@ -987,15 +1014,6 @@
             "formType": "8-K"
           },
           {
-            "id": "0000320193-24-000123_320193",
-            "type": "Periodic Financial Reports",
-            "title": "10-K : Periodic Financial Reports",
-            "description": "Annual report pursuant to Section 13 and 15(d)",
-            "filingDate": 1730419200000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000032019324000123/thumbnail.png",
-            "formType": "10-K"
-          },
-          {
             "id": "0001140361-24-044880_320193",
             "type": "Offering Registrations",
             "title": "S-3ASR : Offering Registrations",
@@ -1003,6 +1021,15 @@
             "filingDate": 1730419200000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000114036124044880/thumbnail.png",
             "formType": "S-3ASR"
+          },
+          {
+            "id": "0000320193-24-000123_320193",
+            "type": "Periodic Financial Reports",
+            "title": "10-K : Periodic Financial Reports",
+            "description": "Annual report pursuant to Section 13 and 15(d)",
+            "filingDate": 1730419200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000032019324000123/thumbnail.png",
+            "formType": "10-K"
           },
           {
             "id": "0000320193-24-000120_320193",

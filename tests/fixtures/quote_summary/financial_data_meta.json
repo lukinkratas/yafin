@@ -4,12 +4,12 @@
       {
         "financialData": {
           "maxAge": 86400,
-          "currentPrice": 589.15,
+          "currentPrice": 633.61,
           "targetHighPrice": 1117.0,
-          "targetLowPrice": 560.0,
-          "targetMeanPrice": 837.4155,
+          "targetLowPrice": 685.0,
+          "targetMeanPrice": 841.4155,
           "targetMedianPrice": 850.0,
-          "recommendationMean": 1.41176,
+          "recommendationMean": 1.38235,
           "recommendationKey": "strong_buy",
           "numberOfAnalystOpinions": 60,
           "totalCash": 44447997952,

@@ -11,24 +11,8 @@ from curl_cffi import AsyncSession, Response, Session
 from curl_cffi.requests.exceptions import HTTPError, Timeout
 
 from .const import EVENTS
-from .types import (
-    CalendarEventsResponseJson,
-    ChartResponseJson,
-    CurrenciesResponseJson,
-    InsightsResponseJson,
-    MarketSummaryResponseJson,
-    OptionsResponseJson,
-    QuoteResponseJson,
-    QuoteSummaryResponseJson,
-    QuoteTypeResponseJson,
-    RatingsResult,
-    RecommendationsResponseJson,
-    SearchResult,
-    TimeseriesResponseJson,
-    TrendingResponseJson,
-)
 from .utils import (
-    _async_log_func,
+    _alog_func,
     _check_calendar_event_modules,
     _check_events,
     _check_interval,
@@ -39,7 +23,7 @@ from .utils import (
     _log_func,
 )
 
-logger = logging.getLogger(__name__)
+_logger = logging.getLogger(__name__)
 
 
 class ClientBase:
@@ -175,6 +159,7 @@ class Client(ClientBase):
 
         if self._crumb is not None:
             self._crumb = None
+            self._get_crumb.cache_clear()
 
     def __enter__(self) -> Self:
         """When entering context manager, create the session."""
@@ -197,7 +182,7 @@ class Client(ClientBase):
         params: dict[str, Any] | None = None,
         headers: dict[str, str] | None = None,
     ) -> Response:
-        logger.debug(_encode_url(url, params))
+        _logger.debug(_encode_url(url, params))
 
         kwargs: dict[str, Any] = {'url': url}
 
@@ -209,22 +194,22 @@ class Client(ClientBase):
 
         for attempt in range(1, self.max_retries + 1):
             try:
-                logger.debug(f'Request no. {attempt}/{self.max_retries} - started.')
+                _logger.debug(f'Request no. {attempt}/{self.max_retries} - started.')
                 self._get_session()
                 response = self._session.get(**kwargs)
                 response.raise_for_status()
-                logger.debug(f'Request no. {attempt}/{self.max_retries} - succeeded.')
+                _logger.debug(f'Request no. {attempt}/{self.max_retries} - succeeded.')
                 return response
 
-            except (HTTPError, Timeout) as e:
-                logger.warning(f'Request no. {attempt}/{self.max_retries} - failed.')
+            except (HTTPError, Timeout):
+                _logger.warning(f'Request no. {attempt}/{self.max_retries} - failed.')
 
                 if (
-                    response.status_code >= 400
-                    and response.status_code <= 499
+                    response is not None
+                    and 400 <= response.status_code <= 499
                     and response.status_code != 429
                 ):
-                    raise e
+                    raise
 
                 wait_time = min(2**attempt, 60)  # Exponential backoff with cap
                 sleep(wait_time)
@@ -232,11 +217,11 @@ class Client(ClientBase):
         # # gives RET503 ruff err
         # # _error(msg=f'All {self.max_retries} requests failed.', err_cls=HTTPError)
         msg = f'All {self.max_retries} requests failed.'
-        logger.error(msg)
+        _logger.error(msg)
         raise HTTPError(msg)
 
-    @_log_func
     @lru_cache(maxsize=128)
+    @_log_func
     def _get_crumb(self) -> None:
         if self._crumb is None:
             response = self._get_request(self._CRUMB_URL)
@@ -253,7 +238,7 @@ class Client(ClientBase):
         period2: int | float | None = None,
         include_pre_post: bool | None = None,
         events: str | None = EVENTS,
-    ) -> ChartResponseJson:
+    ) -> dict[str, Any]:
         """Get chart data for the ticker.
 
         Args:
@@ -275,7 +260,7 @@ class Client(ClientBase):
             Even though the the endpoint param is called range, period_range was chosen
             to avoid collision with python built-in method name.
         """
-        logger.debug(
+        _logger.debug(
             f'Getting finance/chart for {ticker=}, '
             f'{period_range=}, {interval=}, {events=}, {period1=}, {period2=}.'
         )
@@ -307,11 +292,11 @@ class Client(ClientBase):
         response = self._get_request(self._CHART_URL.format(ticker=ticker), params)
         return response.json()
 
-    @_log_func
     @lru_cache(maxsize=128)
+    @_log_func
     def get_quote(
         self, tickers: str, include_pre_post: bool | None = None
-    ) -> QuoteResponseJson:
+    ) -> dict[str, Any]:
         """Get quote for tickers.
 
         Args:
@@ -319,8 +304,12 @@ class Client(ClientBase):
             include_pre_post: Whether to include pre and post market.
 
         Returns: Quote response json including result and error.
+
+        Note:
+            Even though the the endpoint param is called symbols, tickers was chosen
+            to use the same name as is used in higher level (Async)Symbol class.
         """
-        logger.debug(f'Getting finance/quote for {tickers=}.')
+        _logger.debug(f'Getting finance/quote for {tickers=}.')
 
         self._get_crumb()
         params = self._DEFAULT_PARAMS | {'symbols': tickers, 'crumb': self._crumb}
@@ -331,25 +320,29 @@ class Client(ClientBase):
         response = self._get_request(self._QUOTE_URL, params)
         return response.json()
 
-    @_log_func
     @lru_cache(maxsize=128)
-    def get_quote_type(self, tickers: str) -> QuoteTypeResponseJson:
+    @_log_func
+    def get_quote_type(self, tickers: str) -> dict[str, Any]:
         """Get quote type for tickers.
 
         Args:
             tickers: Comma-separated ticker symbols.
 
         Returns: Quote type response json including result and error.
+
+        Note:
+            Even though the the endpoint param is called symbol, ticker was chosen
+            to use the same name as is used in higher level (Async)Symbol class.
         """
-        logger.debug(f'Getting finance/quoteType for {tickers=}.')
+        _logger.debug(f'Getting finance/quoteType for {tickers=}.')
 
         params = self._DEFAULT_PARAMS | self._QUOTE_TYPE_PARAMS | {'symbol': tickers}
         response = self._get_request(self._QUOTE_TYPE_URL, params)
         return response.json()
 
-    @_log_func
     @lru_cache(maxsize=128)
-    def get_quote_summary(self, ticker: str, modules: str) -> QuoteSummaryResponseJson:
+    @_log_func
+    def get_quote_summary(self, ticker: str, modules: str) -> dict[str, Any]:
         """Get quote summary for the ticker.
 
         Args:
@@ -360,7 +353,7 @@ class Client(ClientBase):
 
         Raises: ValueError: If modules are not in list of valid values.
         """
-        logger.debug(f'Getting finance/quoteSummary for {ticker=}.')
+        _logger.debug(f'Getting finance/quoteSummary for {ticker=}.')
 
         parsed_modules = {m.strip() for m in modules.split(',')}
         _check_quote_summary_modules(parsed_modules)
@@ -388,7 +381,7 @@ class Client(ClientBase):
         types: str,
         period1: int | float | None = None,
         period2: int | float | None = None,
-    ) -> TimeseriesResponseJson:
+    ) -> dict[str, Any]:
         """Get timeseries for the ticker.
 
         Args:
@@ -402,7 +395,7 @@ class Client(ClientBase):
 
         Raises: ValueError: If types are not in list of valid values.
         """
-        logger.debug(
+        _logger.debug(
             f'Getting finance/timeseries for {ticker=}, '
             f'{types=}, {period1=}, {period2=}.'
         )
@@ -432,9 +425,9 @@ class Client(ClientBase):
         response = self._get_request(self._TIMESERIES_URL.format(ticker=ticker), params)
         return response.json()
 
-    @_log_func
     @lru_cache(maxsize=128)
-    def get_options(self, ticker: str) -> OptionsResponseJson:
+    @_log_func
+    def get_options(self, ticker: str) -> dict[str, Any]:
         """Get options for the ticker.
 
         Args:
@@ -442,16 +435,16 @@ class Client(ClientBase):
 
         Returns: Options response json including result and error.
         """
-        logger.debug(f'Getting finance/options for {ticker=}.')
+        _logger.debug(f'Getting finance/options for {ticker=}.')
 
         self._get_crumb()
         params = self._DEFAULT_PARAMS | self._OPTIONS_PARAMS | {'crumb': self._crumb}
         response = self._get_request(self._OPTIONS_URL.format(ticker=ticker), params)
         return response.json()
 
-    @_log_func
     @lru_cache(maxsize=128)
-    def get_search(self, tickers: str) -> SearchResult:
+    @_log_func
+    def get_search(self, tickers: str) -> dict[str, Any]:
         """Get search results for tickers.
 
         Args:
@@ -459,15 +452,15 @@ class Client(ClientBase):
 
         Returns: Search result json.
         """
-        logger.debug(f'Getting finance/search for {tickers=}.')
+        _logger.debug(f'Getting finance/search for {tickers=}.')
 
         params = self._DEFAULT_PARAMS | {'q': tickers}
         response = self._get_request(self._SEARCH_URL, params)
         return response.json()
 
-    @_log_func
     @lru_cache(maxsize=128)
-    def get_recommendations(self, tickers: str) -> RecommendationsResponseJson:
+    @_log_func
+    def get_recommendations(self, tickers: str) -> dict[str, Any]:
         """Get analyst recommendations for tickers.
 
         Args:
@@ -475,7 +468,7 @@ class Client(ClientBase):
 
         Returns: Recommendations response json including result and error.
         """
-        logger.debug(f'Getting finance/recommendations for {tickers=}.')
+        _logger.debug(f'Getting finance/recommendations for {tickers=}.')
 
         params = self._DEFAULT_PARAMS
         response = self._get_request(
@@ -483,25 +476,29 @@ class Client(ClientBase):
         )
         return response.json()
 
-    @_log_func
     @lru_cache(maxsize=128)
-    def get_insights(self, tickers: str) -> InsightsResponseJson:
+    @_log_func
+    def get_insights(self, tickers: str) -> dict[str, Any]:
         """Get insights for tickers.
 
         Args:
             tickers: Comma-separated ticker symbols.
 
         Returns: Insights response json including result and error.
+
+        Note:
+            Even though the the endpoint param is called symbols, tickers was chosen
+            to use the same name as is used in higher level (Async)Symbol class.
         """
-        logger.debug(f'Getting finance/insights for {tickers=}.')
+        _logger.debug(f'Getting finance/insights for {tickers=}.')
 
         params = self._DEFAULT_PARAMS | self._INSIGHTS_PARAMS | {'symbols': tickers}
         response = self._get_request(self._INSIGHTS_URL, params)
         return response.json()
 
-    @_log_func
     @lru_cache(maxsize=128)
-    def get_ratings(self, ticker: str) -> RatingsResult:
+    @_log_func
+    def get_ratings(self, ticker: str) -> dict[str, Any]:
         """Get ratings for the ticker.
 
         Args:
@@ -509,46 +506,46 @@ class Client(ClientBase):
 
         Returns: Ratings result json.
         """
-        logger.debug(f'Getting ratings for {ticker=}.')
+        _logger.debug(f'Getting ratings for {ticker=}.')
 
         params = self._DEFAULT_PARAMS | self._RATINGS_PARAMS
         response = self._get_request(self._RATINGS_URL.format(ticker=ticker), params)
         return response.json()
 
-    @_log_func
     @lru_cache(maxsize=128)
-    def get_market_summaries(self) -> MarketSummaryResponseJson:
+    @_log_func
+    def get_market_summaries(self) -> dict[str, Any]:
         """Get market summaries.
 
         Returns: Market summaries response json including result and error.
         """
-        logger.debug('Getting finance/quote/marketSummary.')
+        _logger.debug('Getting finance/quote/marketSummary.')
 
         params = self._DEFAULT_PARAMS
         response = self._get_request(self._MARKET_SUMMARIES_URL, params)
         return response.json()
 
-    @_log_func
     @lru_cache(maxsize=128)
-    def get_trending(self) -> TrendingResponseJson:
+    @_log_func
+    def get_trending(self) -> dict[str, Any]:
         """Get trending tickers.
 
         Returns: Trending tickers response json including result and error.
         """
-        logger.debug('Getting finance/trending.')
+        _logger.debug('Getting finance/trending.')
 
         params = self._DEFAULT_PARAMS
         response = self._get_request(self._TRENDING_URL, params)
         return response.json()
 
-    @_log_func
     @lru_cache(maxsize=128)
-    def get_currencies(self) -> CurrenciesResponseJson:
+    @_log_func
+    def get_currencies(self) -> dict[str, Any]:
         """Get currency exchange rates.
 
         Returns: Currency exchange rates response json including result and error.
         """
-        logger.debug('Getting finance/currencies.')
+        _logger.debug('Getting finance/currencies.')
 
         params = self._DEFAULT_PARAMS
         response = self._get_request(self._CURRENCIES_URL, params)
@@ -560,7 +557,7 @@ class Client(ClientBase):
         modules: str | None = None,
         start_date: int | float | None = None,
         end_date: int | float | None = None,
-    ) -> CalendarEventsResponseJson:
+    ) -> dict[str, Any]:
         """Get calendar events.
 
         Args:
@@ -574,7 +571,7 @@ class Client(ClientBase):
 
         Note: Query range cannot be greater than 150 days.
         """
-        logger.debug('Getting finance/calendar-events.')
+        _logger.debug('Getting finance/calendar-events.')
 
         params = self._DEFAULT_PARAMS | self._CALENDAR_EVENTS_PARAMS
 
@@ -604,8 +601,8 @@ class AsyncClient(ClientBase):
     """Asynchronous Client for Yahoo Finance API.
 
     Warning: HTTP resources closing
-        Uses http resources, so do not forget to close them after use to avoid resource
-            leakage or use context manager.
+        Uses http resources, so do not forget to await close() them after use to avoid
+        resource leakage or use context manager.
 
     Attributes:
         timeout: timeout (in secs) for each http request.
@@ -645,7 +642,7 @@ class AsyncClient(ClientBase):
         if self._session is None:
             self._session = AsyncSession(impersonate='chrome', timeout=self.timeout)
 
-    @_async_log_func
+    @_alog_func
     async def close(self) -> None:
         """Close the session if open and reset crumb."""
         if self._session is not None:
@@ -654,6 +651,7 @@ class AsyncClient(ClientBase):
 
         if self._crumb is not None:
             self._crumb = None
+            self._get_crumb.cache_clear()
 
     async def __aenter__(self) -> Self:
         """When entering context manager, create the session."""
@@ -669,14 +667,14 @@ class AsyncClient(ClientBase):
         """When closing context manager, close the session."""
         await self.close()
 
-    @_async_log_func
+    @_alog_func
     async def _get_request(
         self,
         url: str,
         params: dict[str, Any] | None = None,
         headers: dict[str, str] | None = None,
     ) -> Response:
-        logger.debug(_encode_url(url, params))
+        _logger.debug(_encode_url(url, params))
 
         kwargs: dict[str, Any] = {'url': url}
 
@@ -688,22 +686,22 @@ class AsyncClient(ClientBase):
 
         for attempt in range(1, self.max_retries + 1):
             try:
-                logger.debug(f'Request no. {attempt}/{self.max_retries} - started.')
+                _logger.debug(f'Request no. {attempt}/{self.max_retries} - started.')
                 self._get_session()
                 response = await self._session.get(**kwargs)
                 response.raise_for_status()
-                logger.debug(f'Request no. {attempt}/{self.max_retries} - succeeded.')
+                _logger.debug(f'Request no. {attempt}/{self.max_retries} - succeeded.')
                 return response
 
-            except (HTTPError, Timeout) as e:
-                logger.warning(f'Request no. {attempt}/{self.max_retries} - failed.')
+            except (HTTPError, Timeout):
+                _logger.warning(f'Request no. {attempt}/{self.max_retries} - failed.')
 
                 if (
-                    response.status_code >= 400
-                    and response.status_code <= 499
+                    response is not None
+                    and 400 <= response.status_code <= 499
                     and response.status_code != 429
                 ):
-                    raise e
+                    raise
 
                 wait_time = min(2**attempt, 60)  # Exponential backoff with cap
                 await asyncio.sleep(wait_time)
@@ -711,18 +709,18 @@ class AsyncClient(ClientBase):
         # # gives RET503 ruff err
         # # _error(msg=f'All {self.max_retries} requests failed.', err_cls=HTTPError)
         msg = f'All {self.max_retries} requests failed.'
-        logger.error(msg)
+        _logger.error(msg)
         raise HTTPError(msg)
 
-    @_async_log_func
     @alru_cache(maxsize=128)
+    @_alog_func
     async def _get_crumb(self) -> None:
         if self._crumb is None:
             response = await self._get_request(self._CRUMB_URL)
             self._crumb = response.text
 
-    @_async_log_func
     @alru_cache(maxsize=128)
+    @_alog_func
     async def get_chart(
         self,
         ticker: str,
@@ -732,7 +730,7 @@ class AsyncClient(ClientBase):
         period2: int | float | None = None,
         include_pre_post: bool | None = None,
         events: str | None = EVENTS,
-    ) -> ChartResponseJson:
+    ) -> dict[str, Any]:
         """Get chart data for the ticker.
 
         Args:
@@ -754,7 +752,7 @@ class AsyncClient(ClientBase):
             Even though the the endpoint param is called range, period_range was chosen
             to avoid collision with python built-in method name.
         """
-        logger.debug(
+        _logger.debug(
             f'Getting finance/chart for {ticker=}, '
             f'{period_range=}, {interval=}, {events=}, {period1=}, {period2=}.'
         )
@@ -788,11 +786,11 @@ class AsyncClient(ClientBase):
         )
         return response.json()
 
-    @_async_log_func
     @alru_cache(maxsize=128)
+    @_alog_func
     async def get_quote(
         self, tickers: str, include_pre_post: bool | None = None
-    ) -> QuoteResponseJson:
+    ) -> dict[str, Any]:
         """Get quote for tickers.
 
         Args:
@@ -800,8 +798,12 @@ class AsyncClient(ClientBase):
             include_pre_post: Whether to include pre and post market.
 
         Returns: Quote response json including result and error.
+
+        Note:
+            Even though the the endpoint param is called symbols, tickers was chosen
+            to use the same name as is used in higher level (Async)Symbol class.
         """
-        logger.debug(f'Getting finance/quote for {tickers=}.')
+        _logger.debug(f'Getting finance/quote for {tickers=}.')
 
         await self._get_crumb()
         params = self._DEFAULT_PARAMS | {'symbols': tickers, 'crumb': self._crumb}
@@ -812,27 +814,29 @@ class AsyncClient(ClientBase):
         response = await self._get_request(self._QUOTE_URL, params)
         return response.json()
 
-    @_async_log_func
     @alru_cache(maxsize=128)
-    async def get_quote_type(self, tickers: str) -> QuoteTypeResponseJson:
+    @_alog_func
+    async def get_quote_type(self, tickers: str) -> dict[str, Any]:
         """Get quote type for tickers.
 
         Args:
             tickers: Comma-separated ticker symbols.
 
         Returns: Quote type response json including result and error.
+
+        Note:
+            Even though the the endpoint param is called symbol, ticker was chosen
+            to use the same name as is used in higher level (Async)Symbol class.
         """
-        logger.debug(f'Getting finance/quoteType for {tickers=}.')
+        _logger.debug(f'Getting finance/quoteType for {tickers=}.')
 
         params = self._DEFAULT_PARAMS | self._QUOTE_TYPE_PARAMS | {'symbol': tickers}
         response = await self._get_request(self._QUOTE_TYPE_URL, params)
         return response.json()
 
-    @_async_log_func
     @alru_cache(maxsize=128)
-    async def get_quote_summary(
-        self, ticker: str, modules: str
-    ) -> QuoteSummaryResponseJson:
+    @_alog_func
+    async def get_quote_summary(self, ticker: str, modules: str) -> dict[str, Any]:
         """Get quote summary for the ticker.
 
         Args:
@@ -843,7 +847,7 @@ class AsyncClient(ClientBase):
 
         Raises: ValueError: If modules are not in list of valid values.
         """
-        logger.debug(f'Getting finance/quoteSummary for {ticker=}.')
+        _logger.debug(f'Getting finance/quoteSummary for {ticker=}.')
 
         parsed_modules = {m.strip() for m in modules.split(',')}
         _check_quote_summary_modules(parsed_modules)
@@ -864,14 +868,14 @@ class AsyncClient(ClientBase):
         )
         return response.json()
 
-    @_async_log_func
+    @_alog_func
     async def get_timeseries(
         self,
         ticker: str,
         types: str,
         period1: int | float | None = None,
         period2: int | float | None = None,
-    ) -> TimeseriesResponseJson:
+    ) -> dict[str, Any]:
         """Get timeseries for the ticker.
 
         Args:
@@ -885,7 +889,7 @@ class AsyncClient(ClientBase):
 
         Raises: ValueError: If types are not in list of valid values.
         """
-        logger.debug(
+        _logger.debug(
             f'Getting finance/timeseries for {ticker=}, '
             f'{types=}, {period1=}, {period2=}.'
         )
@@ -917,9 +921,9 @@ class AsyncClient(ClientBase):
         )
         return response.json()
 
-    @_async_log_func
     @alru_cache(maxsize=128)
-    async def get_options(self, ticker: str) -> OptionsResponseJson:
+    @_alog_func
+    async def get_options(self, ticker: str) -> dict[str, Any]:
         """Get options for the ticker.
 
         Args:
@@ -927,7 +931,7 @@ class AsyncClient(ClientBase):
 
         Returns: Options response json including result and error.
         """
-        logger.debug(f'Getting finance/options for {ticker=}.')
+        _logger.debug(f'Getting finance/options for {ticker=}.')
 
         await self._get_crumb()
         params = self._DEFAULT_PARAMS | self._OPTIONS_PARAMS | {'crumb': self._crumb}
@@ -936,9 +940,9 @@ class AsyncClient(ClientBase):
         )
         return response.json()
 
-    @_async_log_func
     @alru_cache(maxsize=128)
-    async def get_search(self, tickers: str) -> SearchResult:
+    @_alog_func
+    async def get_search(self, tickers: str) -> dict[str, Any]:
         """Get search results for tickers.
 
         Args:
@@ -946,15 +950,15 @@ class AsyncClient(ClientBase):
 
         Returns: Search result json.
         """
-        logger.debug(f'Getting finance/search for {tickers=}.')
+        _logger.debug(f'Getting finance/search for {tickers=}.')
 
         params = self._DEFAULT_PARAMS | {'q': tickers}
         response = await self._get_request(self._SEARCH_URL, params)
         return response.json()
 
-    @_async_log_func
     @alru_cache(maxsize=128)
-    async def get_recommendations(self, tickers: str) -> RecommendationsResponseJson:
+    @_alog_func
+    async def get_recommendations(self, tickers: str) -> dict[str, Any]:
         """Get analyst recommendations for tickers.
 
         Args:
@@ -962,7 +966,7 @@ class AsyncClient(ClientBase):
 
         Returns: Recommendations response json including result and error.
         """
-        logger.debug(f'Getting finance/recommendations for {tickers=}.')
+        _logger.debug(f'Getting finance/recommendations for {tickers=}.')
 
         params = self._DEFAULT_PARAMS
         response = await self._get_request(
@@ -970,25 +974,29 @@ class AsyncClient(ClientBase):
         )
         return response.json()
 
-    @_async_log_func
     @alru_cache(maxsize=128)
-    async def get_insights(self, tickers: str) -> InsightsResponseJson:
+    @_alog_func
+    async def get_insights(self, tickers: str) -> dict[str, Any]:
         """Get insights for tickers.
 
         Args:
             tickers: Comma-separated ticker symbols.
 
         Returns: Insights response json including result and error.
+
+        Note:
+            Even though the the endpoint param is called symbols, tickers was chosen
+            to use the same name as is used in higher level (Async)Symbol class.
         """
-        logger.debug(f'Getting finance/insights for {tickers=}.')
+        _logger.debug(f'Getting finance/insights for {tickers=}.')
 
         params = self._DEFAULT_PARAMS | self._INSIGHTS_PARAMS | {'symbols': tickers}
         response = await self._get_request(self._INSIGHTS_URL, params)
         return response.json()
 
-    @_async_log_func
     @alru_cache(maxsize=128)
-    async def get_ratings(self, ticker: str) -> RatingsResult:
+    @_alog_func
+    async def get_ratings(self, ticker: str) -> dict[str, Any]:
         """Get ratings for the ticker.
 
         Args:
@@ -996,7 +1004,7 @@ class AsyncClient(ClientBase):
 
         Returns: Ratings result json.
         """
-        logger.debug(f'Getting ratings for {ticker=}.')
+        _logger.debug(f'Getting ratings for {ticker=}.')
 
         params = self._DEFAULT_PARAMS | self._RATINGS_PARAMS
         response = await self._get_request(
@@ -1004,52 +1012,52 @@ class AsyncClient(ClientBase):
         )
         return response.json()
 
-    @_async_log_func
     @alru_cache(maxsize=128)
-    async def get_market_summaries(self) -> MarketSummaryResponseJson:
+    @_alog_func
+    async def get_market_summaries(self) -> dict[str, Any]:
         """Get market summaries.
 
         Returns: Market summaries response json including result and error.
         """
-        logger.debug('Getting finance/quote/marketSummary.')
+        _logger.debug('Getting finance/quote/marketSummary.')
 
         params = self._DEFAULT_PARAMS
         response = await self._get_request(self._MARKET_SUMMARIES_URL, params)
         return response.json()
 
-    @_async_log_func
     @alru_cache(maxsize=128)
-    async def get_trending(self) -> TrendingResponseJson:
+    @_alog_func
+    async def get_trending(self) -> dict[str, Any]:
         """Get trending tickers.
 
         Returns: Trending tickers response json including result and error.
         """
-        logger.debug('Getting finance/trending.')
+        _logger.debug('Getting finance/trending.')
 
         params = self._DEFAULT_PARAMS
         response = await self._get_request(self._TRENDING_URL, params)
         return response.json()
 
-    @_async_log_func
     @alru_cache(maxsize=128)
-    async def get_currencies(self) -> CurrenciesResponseJson:
+    @_alog_func
+    async def get_currencies(self) -> dict[str, Any]:
         """Get currency exchange rates.
 
         Returns: Currency exchange rates response json including result and error.
         """
-        logger.debug('Getting finance/currencies.')
+        _logger.debug('Getting finance/currencies.')
 
         params = self._DEFAULT_PARAMS
         response = await self._get_request(self._CURRENCIES_URL, params)
         return response.json()
 
-    @_async_log_func
+    @_alog_func
     async def get_calendar_events(
         self,
         modules: str | None = None,
         start_date: int | float | None = None,
         end_date: int | float | None = None,
-    ) -> CalendarEventsResponseJson:
+    ) -> dict[str, Any]:
         """Get calendar events.
 
         Args:
@@ -1063,7 +1071,7 @@ class AsyncClient(ClientBase):
 
         Note: Query range cannot be greater than 150 days.
         """
-        logger.debug('Getting finance/calendar-events.')
+        _logger.debug('Getting finance/calendar-events.')
 
         params = self._DEFAULT_PARAMS | self._CALENDAR_EVENTS_PARAMS
 
@@ -1123,15 +1131,14 @@ class _SingletonAsyncClientManager:
     _lock = asyncio.Lock()
 
     @classmethod
-    async def _get_client(cls) -> AsyncClient:
+    def _get_client(cls) -> AsyncClient:
         """Create client singleton if not exists."""
-        async with cls._lock:
-            if cls._client is None:
-                cls._client = AsyncClient()
+        if cls._client is None:
+            cls._client = AsyncClient()
 
-            cls._refcount += 1
+        cls._refcount += 1
 
-            return cls._client
+        return cls._client
 
     @classmethod
     async def _release_client(cls) -> None:

@@ -1,6 +1,6 @@
 from typing import Any, Callable
 
-from yafin.types import (
+from ._types import (
     AssetProfile,
     CalendarEvents,
     CalendarEventsResponseJson,

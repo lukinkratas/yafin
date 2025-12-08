@@ -1,7 +1,7 @@
 import asyncio
 import logging
 from types import TracebackType
-from typing import Any, Self
+from typing import Any, Literal, Self, overload
 
 from .client import (
     AsyncClient,
@@ -9,44 +9,9 @@ from .client import (
     _SingletonAsyncClientManager,
     _SingletonClientManager,
 )
+from .const import _RESULT_KEY_MAP
 from .symbol import AsyncSymbol, Symbol
-from .types import (
-    AssetProfile,
-    CalendarEvents,
-    ChartResult,
-    DefaultKeyStatistics,
-    Earnings,
-    EarningsHistoryItem,
-    EarningsTrendItem,
-    FinancialData,
-    FundOwnershipItem,
-    IndexTrend,
-    IndustryTrend,
-    InsiderHolderItem,
-    InsiderTransactionItem,
-    InsightsFinanceResult,
-    InstitutionOwnershipItem,
-    MajorDirectHolders,
-    MajorHoldersBreakdown,
-    NetSharePurchaseActivity,
-    OptionChainResult,
-    PageViews,
-    Price,
-    QuoteResult,
-    QuoteSummaryResult,
-    QuoteTypeResult,
-    RatingsResult,
-    RecommendationsFinanceResult,
-    RecommendationTrendItem,
-    SearchResult,
-    SecFilings,
-    SectorTrend,
-    SummaryDetail,
-    SummaryProfile,
-    TimeseriesResult,
-    UpgradeDowngradeHistoryItem,
-)
-from .utils import _async_log_func, _log_func
+from .utils import _alog_func, _log_func
 
 logger = logging.getLogger(__name__)
 
@@ -176,6 +141,76 @@ class Symbols(SymbolsBase):
         """When closing context manager, release the client."""
         self.close()
 
+    @overload
+    def _call_symbols_method(
+        self,
+        method_name: Literal[
+            'get_upgrade_downgrade_history',
+            'get_institution_ownership',
+            'get_fund_ownership',
+            'get_insider_transactions',
+            'get_insider_holders',
+            'get_earnings_history',
+            'get_earnings_trend',
+            'get_recommendation_trend',
+            'get_income_statement',
+            'get_balance_sheet',
+            'get_cash_flow',
+        ],
+        kwargs: dict[str, Any] | None = None,
+    ) -> list[list[dict[str, Any]]]: ...
+
+    @overload
+    def _call_symbols_method(
+        self, method_name: str, kwargs: dict[str, Any] | None = None
+    ) -> list[dict[str, Any]]: ...
+
+    def _call_symbols_method(
+        self, method_name: str, kwargs: dict[str, Any] | None = None
+    ) -> list[dict[str, Any]]:
+        # cannot use *args, **kwargs, bcs most of the time **locals() are passed from
+        # upstream call - self defined twice error
+
+        processed_kwargs = self._process_kwargs(kwargs) if kwargs else {}
+
+        self._get_symbols()
+
+        results = []
+        for symbol in self._symbols:
+            method = getattr(symbol, method_name)
+            results.append(method(**processed_kwargs))
+
+        return results
+
+    @overload
+    def _call_client_method(
+        self, method_name: Literal['get_search'], kwargs: dict[str, Any] | None = None
+    ) -> dict[str, Any]: ...
+
+    @overload
+    def _call_client_method(
+        self, method_name: str, kwargs: dict[str, Any] | None = None
+    ) -> list[dict[str, Any]]: ...
+
+    def _call_client_method(
+        self, method_name: str, kwargs: dict[str, Any] | None = None
+    ) -> list[dict[str, Any]] | dict[str, Any]:
+        # cannot use *args, **kwargs, bcs most of the time **locals() are passed from
+        # upstream call - self defined twice error
+
+        processed_kwargs = self._process_kwargs(kwargs) if kwargs else {}
+        processed_kwargs['tickers'] = self.tickers
+
+        result_key = _RESULT_KEY_MAP.get(method_name)
+
+        self._get_client()
+
+        method = getattr(self._client, method_name)
+        response_json = method(**processed_kwargs)
+
+        # search does not have result key
+        return response_json[result_key]['result'] if result_key else response_json
+
     @_log_func
     def get_chart(
         self,
@@ -188,7 +223,7 @@ class Symbols(SymbolsBase):
         include_split: bool = True,
         include_earn: bool = True,
         include_capital_gain: bool = True,
-    ) -> list[ChartResult]:
+    ) -> list[dict[str, Any]]:
         """Get chart data for tickers in series requests.
 
         Args:
@@ -208,12 +243,10 @@ class Symbols(SymbolsBase):
             Even though the the endpoint param is called range, period_range was chosen
             to avoid collision with python built-in method name.
         """
-        kwargs = self._process_kwargs(locals())
-        self._get_symbols()
-        return [s.get_chart(**kwargs) for s in self._symbols]
+        return self._call_symbols_method('get_chart', locals())
 
     @_log_func
-    def get_quote(self, include_pre_post: bool | None = None) -> list[QuoteResult]:
+    def get_quote(self, include_pre_post: bool | None = None) -> list[dict[str, Any]]:
         """Get quote for tickers in a single request.
 
         Args:
@@ -221,265 +254,234 @@ class Symbols(SymbolsBase):
 
         Returns: List of quote response result jsons.
         """
-        kwargs = self._process_kwargs(locals())
-        kwargs['tickers'] = self.tickers
-        self._get_client()
-        quote_json = self._client.get_quote(**kwargs)
-        return quote_json['quoteResponse']['result']
+        return self._call_client_method('get_quote', locals())
 
     @_log_func
-    def get_quote_type(self) -> list[QuoteTypeResult]:
+    def get_quote_type(self) -> list[dict[str, Any]]:
         """Get quote type for tickers in a single request.
 
         Returns: List of quote type response result jsons.
         """
-        self._get_client()
-        quote_type_json = self._client.get_quote_type(self.tickers)
-        return quote_type_json['quoteType']['result']
+        return self._call_client_method('get_quote_type')
 
     @_log_func
-    def get_quote_summary_all_modules(self) -> list[QuoteSummaryResult]:
+    def get_quote_summary_all_modules(self) -> list[dict[str, Any]]:
         """Get quote summary for all modules for tickers.
 
         Returns: List of quote summary with all modules response result jsons.
         """
-        self._get_symbols()
-        return [s.get_quote_summary_all_modules() for s in self._symbols]
+        return self._call_symbols_method('get_quote_summary_all_modules')
 
     @_log_func
-    def get_asset_profile(self) -> list[AssetProfile]:
+    def get_asset_profile(self) -> list[dict[str, Any]]:
         """Get asset profile for tickers.
 
         Returns: List of quote summary with asset profile module response result jsons.
         """
-        self._get_symbols()
-        return [s.get_asset_profile() for s in self._symbols]
+        return self._call_symbols_method('get_asset_profile')
 
     @_log_func
-    def get_summary_profile(self) -> list[SummaryProfile]:
+    def get_summary_profile(self) -> list[dict[str, Any]]:
         """Get summary profile for tickers.
 
         Returns:
             List of quote summary with summary profile module response result jsons.
         """
-        self._get_symbols()
-        return [s.get_summary_profile() for s in self._symbols]
+        return self._call_symbols_method('get_summary_profile')
 
     @_log_func
-    def get_summary_detail(self) -> list[SummaryDetail]:
+    def get_summary_detail(self) -> list[dict[str, Any]]:
         """Get summary detail for tickers.
 
         Returns: List of quote summary with summary detail module response result jsons.
         """
-        self._get_symbols()
-        return [s.get_summary_detail() for s in self._symbols]
+        return self._call_symbols_method('get_summary_detail')
 
     @_log_func
-    def get_price(self) -> list[Price]:
+    def get_price(self) -> list[dict[str, Any]]:
         """Get price data for tickers.
 
         Returns: List of quote summary with price data module response result jsons.
         """
-        self._get_symbols()
-        return [s.get_price() for s in self._symbols]
+        return self._call_symbols_method('get_price')
 
     @_log_func
-    def get_default_key_statistics(self) -> list[DefaultKeyStatistics]:
+    def get_default_key_statistics(self) -> list[dict[str, Any]]:
         """Get default key statistics for tickers.
 
         Returns:
             List of quote summary with default key statistics module response result
             jsons.
         """
-        self._get_symbols()
-        return [s.get_default_key_statistics() for s in self._symbols]
+        return self._call_symbols_method('get_default_key_statistics')
 
     @_log_func
-    def get_financial_data(self) -> list[FinancialData]:
+    def get_financial_data(self) -> list[dict[str, Any]]:
         """Get financial data for tickers.
 
         Returns: List of quote summary with financial data module response result jsons.
         """
-        self._get_symbols()
-        return [s.get_financial_data() for s in self._symbols]
+        return self._call_symbols_method('get_financial_data')
 
     @_log_func
-    def get_calendar_events(self) -> list[CalendarEvents]:
+    def get_calendar_events(self) -> list[dict[str, Any]]:
         """Get calendar events for tickers.
 
         Returns:
             List of quote summary with calendar events module response result jsons.
         """
-        self._get_symbols()
-        return [s.get_calendar_events() for s in self._symbols]
+        return self._call_symbols_method('get_calendar_events')
 
     @_log_func
-    def get_sec_filings(self) -> list[SecFilings]:
+    def get_sec_filings(self) -> list[dict[str, Any]]:
         """Get sec filings for tickers.
 
         Returns: List of quote summary with sec filings module response result jsons.
         """
-        self._get_symbols()
-        return [s.get_sec_filings() for s in self._symbols]
+        return self._call_symbols_method('get_sec_filings')
 
     @_log_func
-    def get_upgrade_downgrade_history(self) -> list[list[UpgradeDowngradeHistoryItem]]:
+    def get_upgrade_downgrade_history(self) -> list[list[dict[str, Any]]]:
         """Get upgrade downgrade history for tickers.
 
         Returns:
             List of quote summary with upgrade downgrade history module response results
             jsons.
         """
-        self._get_symbols()
-        return [s.get_upgrade_downgrade_history() for s in self._symbols]
+        return self._call_symbols_method('get_upgrade_downgrade_history')
 
     @_log_func
-    def get_institution_ownership(self) -> list[list[InstitutionOwnershipItem]]:
+    def get_institution_ownership(self) -> list[list[dict[str, Any]]]:
         """Get institution ownership for tickers.
 
         Returns:
             List of quote summary with institution ownership module response results
             jsons.
         """
-        self._get_symbols()
-        return [s.get_institution_ownership() for s in self._symbols]
+        return self._call_symbols_method('get_institution_ownership')
 
     @_log_func
-    def get_fund_ownership(self) -> list[list[FundOwnershipItem]]:
+    def get_fund_ownership(self) -> list[list[dict[str, Any]]]:
         """Get fund ownership for tickers.
 
         Returns:
             List of quote summary with fund ownership module response results jsons.
         """
-        self._get_symbols()
-        return [s.get_fund_ownership() for s in self._symbols]
+        return self._call_symbols_method('get_fund_ownership')
 
     @_log_func
-    def get_major_direct_holders(self) -> list[MajorDirectHolders]:
+    def get_major_direct_holders(self) -> list[dict[str, Any]]:
         """Get major direct holders for tickers.
 
         Returns: List of quote summary with direct holders module response result jsons.
         """
-        self._get_symbols()
-        return [s.get_major_direct_holders() for s in self._symbols]
+        return self._call_symbols_method('get_major_direct_holders')
 
     @_log_func
-    def get_major_holders_breakdown(self) -> list[MajorHoldersBreakdown]:
+    def get_major_holders_breakdown(self) -> list[dict[str, Any]]:
         """Get major holders breakdown for tickers.
 
         Returns:
             List of quote summary with holders breakdown module response result jsons.
         """
-        self._get_symbols()
-        return [s.get_major_holders_breakdown() for s in self._symbols]
+        return self._call_symbols_method('get_major_holders_breakdown')
 
     @_log_func
-    def get_insider_transactions(self) -> list[list[InsiderTransactionItem]]:
+    def get_insider_transactions(self) -> list[list[dict[str, Any]]]:
         """Get insider transactions for tickers.
 
         Returns:
             List of quote summary with insider transactions module response results
             jsons.
         """
-        self._get_symbols()
-        return [s.get_insider_transactions() for s in self._symbols]
+        return self._call_symbols_method('get_insider_transactions')
 
     @_log_func
-    def get_insider_holders(self) -> list[list[InsiderHolderItem]]:
+    def get_insider_holders(self) -> list[list[dict[str, Any]]]:
         """Get insider holders for tickers.
 
         Returns:
             List of quote summary with insider holders module response results jsons.
         """
-        self._get_symbols()
-        return [s.get_insider_holders() for s in self._symbols]
+        return self._call_symbols_method('get_insider_holders')
 
     @_log_func
-    def get_net_share_purchase_activity(self) -> list[NetSharePurchaseActivity]:
+    def get_net_share_purchase_activity(self) -> list[dict[str, Any]]:
         """Get net share purchase activity for tickers.
 
         Returns:
             List of quote summary with net share purchase activity module response
             result jsons.
         """
-        self._get_symbols()
-        return [s.get_net_share_purchase_activity() for s in self._symbols]
+        return self._call_symbols_method('get_net_share_purchase_activity')
 
     @_log_func
-    def get_earnings(self) -> list[Earnings]:
+    def get_earnings(self) -> list[dict[str, Any]]:
         """Get earnings for tickers.
 
         Returns: List of quote summary with earnings module response result jsons.
         """
-        self._get_symbols()
-        return [s.get_earnings() for s in self._symbols]
+        return self._call_symbols_method('get_earnings')
 
     @_log_func
-    def get_earnings_history(self) -> list[list[EarningsHistoryItem]]:
+    def get_earnings_history(self) -> list[list[dict[str, Any]]]:
         """Get earnings history for tickers.
 
         Returns:
             List of quote summary with earnings history module response results jsons.
         """
-        self._get_symbols()
-        return [s.get_earnings_history() for s in self._symbols]
+        return self._call_symbols_method('get_earnings_history')
 
     @_log_func
-    def get_earnings_trend(self) -> list[list[EarningsTrendItem]]:
+    def get_earnings_trend(self) -> list[list[dict[str, Any]]]:
         """Get earnings trend for tickers.
 
         Returns:
             List of quote summary with earnings trend module response results jsons.
         """
-        self._get_symbols()
-        return [s.get_earnings_trend() for s in self._symbols]
+        return self._call_symbols_method('get_earnings_trend')
 
     @_log_func
-    def get_industry_trend(self) -> list[IndustryTrend]:
+    def get_industry_trend(self) -> list[dict[str, Any]]:
         """Get industry trend for tickers.
 
         Returns: List of quote summary with industry trend module response result jsons.
         """
-        self._get_symbols()
-        return [s.get_industry_trend() for s in self._symbols]
+        return self._call_symbols_method('get_industry_trend')
 
     @_log_func
-    def get_index_trend(self) -> list[IndexTrend]:
+    def get_index_trend(self) -> list[dict[str, Any]]:
         """Get index trend for the ticker.
 
         Returns: List of quote summary with index trend module response result jsons.
         """
-        self._get_symbols()
-        return [s.get_index_trend() for s in self._symbols]
+        return self._call_symbols_method('get_index_trend')
 
     @_log_func
-    def get_sector_trend(self) -> list[SectorTrend]:
+    def get_sector_trend(self) -> list[dict[str, Any]]:
         """Get sector trend for tickers.
 
         Returns: List of quote summary with sector trend module response result jsons.
         """
-        self._get_symbols()
-        return [s.get_sector_trend() for s in self._symbols]
+        return self._call_symbols_method('get_sector_trend')
 
     @_log_func
-    def get_recommendation_trend(self) -> list[list[RecommendationTrendItem]]:
+    def get_recommendation_trend(self) -> list[list[dict[str, Any]]]:
         """Get recommendation trend for tickers.
 
         Returns:
             List of quote summary with recommendation trend module response results
             jsons.
         """
-        self._get_symbols()
-        return [s.get_recommendation_trend() for s in self._symbols]
+        return self._call_symbols_method('get_recommendation_trend')
 
     @_log_func
-    def get_page_views(self) -> list[PageViews]:
+    def get_page_views(self) -> list[dict[str, Any]]:
         """Get page views for tickers.
 
         Returns: List of quote summary with page views module response result jsons.
         """
-        self._get_symbols()
-        return [s.get_page_views() for s in self._symbols]
+        return self._call_symbols_method('get_page_views')
 
     @_log_func
     def get_income_statement(
@@ -487,7 +489,7 @@ class Symbols(SymbolsBase):
         frequency: str,
         period1: int | float | None = None,
         period2: int | float | None = None,
-    ) -> list[list[TimeseriesResult]]:
+    ) -> list[list[dict[str, Any]]]:
         """Get income statement for tickers.
 
         Args:
@@ -498,9 +500,7 @@ class Symbols(SymbolsBase):
 
         Returns: List of income statement response results jsons.
         """
-        kwargs = self._process_kwargs(locals())
-        self._get_symbols()
-        return [s.get_income_statement(**kwargs) for s in self._symbols]
+        return self._call_symbols_method('get_income_statement', locals())
 
     @_log_func
     def get_balance_sheet(
@@ -508,7 +508,7 @@ class Symbols(SymbolsBase):
         frequency: str,
         period1: int | float | None = None,
         period2: int | float | None = None,
-    ) -> list[list[TimeseriesResult]]:
+    ) -> list[list[dict[str, Any]]]:
         """Get balance sheet for tickers.
 
         Args:
@@ -519,9 +519,7 @@ class Symbols(SymbolsBase):
 
         Returns: List of balance sheet response results jsons.
         """
-        kwargs = self._process_kwargs(locals())
-        self._get_symbols()
-        return [s.get_balance_sheet(**kwargs) for s in self._symbols]
+        return self._call_symbols_method('get_balance_sheet', locals())
 
     @_log_func
     def get_cash_flow(
@@ -529,7 +527,7 @@ class Symbols(SymbolsBase):
         frequency: str,
         period1: int | float | None = None,
         period2: int | float | None = None,
-    ) -> list[list[TimeseriesResult]]:
+    ) -> list[list[dict[str, Any]]]:
         """Get cash flow statement for tickers.
 
         Args:
@@ -540,56 +538,47 @@ class Symbols(SymbolsBase):
 
         Returns: List of cash flow response results jsons.
         """
-        kwargs = self._process_kwargs(locals())
-        self._get_symbols()
-        return [s.get_cash_flow(**kwargs) for s in self._symbols]
+        return self._call_symbols_method('get_cash_flow', locals())
 
     @_log_func
-    def get_options(self) -> list[OptionChainResult]:
+    def get_options(self) -> list[dict[str, Any]]:
         """Get options data for tickers.
 
         Returns: List of options response result jsons.
         """
-        self._get_symbols()
-        return [s.get_options() for s in self._symbols]
+        return self._call_symbols_method('get_options')
 
     @_log_func
-    def get_search(self) -> SearchResult:
+    def get_search(self) -> dict[str, Any]:
         """Get search results for tickers in a single request.
 
         Returns: Search response result json.
         """
-        self._get_client()
-        return self._client.get_search(self.tickers)
+        return self._call_client_method('get_search')
 
     @_log_func
-    def get_insights(self) -> list[InsightsFinanceResult]:
+    def get_insights(self) -> list[dict[str, Any]]:
         """Get insights for tickers in a single request.
 
         Returns: List of insights response result jsons.
         """
-        self._get_client()
-        insights_json = self._client.get_insights(self.tickers)
-        return insights_json['finance']['result']
+        return self._call_client_method('get_insights')
 
     @_log_func
-    def get_recommendations(self) -> list[RecommendationsFinanceResult]:
+    def get_recommendations(self) -> list[dict[str, Any]]:
         """Get analyst recommendations for tickers in a single request.
 
         Returns: List of recommendations response result jsons.
         """
-        self._get_client()
-        recommendations_json = self._client.get_recommendations(self.tickers)
-        return recommendations_json['finance']['result']
+        return self._call_client_method('get_recommendations')
 
     @_log_func
-    def get_ratings(self) -> list[RatingsResult]:
+    def get_ratings(self) -> list[dict[str, Any]]:
         """Get ratings for tickers.
 
         Returns: List of ratings response result jsons.
         """
-        self._get_symbols()
-        return [s.get_ratings() for s in self._symbols]
+        return self._call_symbols_method('get_ratings')
 
 
 class AsyncSymbols(SymbolsBase):
@@ -654,13 +643,13 @@ class AsyncSymbols(SymbolsBase):
         self._client: AsyncClient | None = None
         self._symbols: list[AsyncSymbol] | None = None
 
-    async def _get_symbols(self) -> None:
+    def _get_symbols(self) -> None:
         if self._symbols is None:
             self._symbols = [AsyncSymbol(ticker) for ticker in self._ticker_list]
 
-    async def _get_client(self) -> None:
+    def _get_client(self) -> None:
         if self._client is None:
-            self._client = await _SingletonAsyncClientManager._get_client()
+            self._client = _SingletonAsyncClientManager._get_client()
 
     async def close(self) -> None:
         """Release the client if open for current symbol.
@@ -680,8 +669,8 @@ class AsyncSymbols(SymbolsBase):
 
     async def __aenter__(self) -> Self:
         """When entering context manager, get the client."""
-        await self._get_client()
-        await self._get_symbols()
+        self._get_client()
+        self._get_symbols()
         return self
 
     async def __aexit__(
@@ -693,7 +682,77 @@ class AsyncSymbols(SymbolsBase):
         """When closing context manager, release the client."""
         await self.close()
 
-    @_async_log_func
+    @overload
+    async def _call_symbols_method(
+        self,
+        method_name: Literal[
+            'get_upgrade_downgrade_history',
+            'get_institution_ownership',
+            'get_fund_ownership',
+            'get_insider_transactions',
+            'get_insider_holders',
+            'get_earnings_history',
+            'get_earnings_trend',
+            'get_recommendation_trend',
+            'get_income_statement',
+            'get_balance_sheet',
+            'get_cash_flow',
+        ],
+        kwargs: dict[str, Any] | None = None,
+    ) -> list[list[dict[str, Any]]]: ...
+
+    @overload
+    async def _call_symbols_method(
+        self, method_name: str, kwargs: dict[str, Any] | None = None
+    ) -> list[dict[str, Any]]: ...
+
+    async def _call_symbols_method(
+        self, method_name: str, kwargs: dict[str, Any] | None = None
+    ) -> list[dict[str, Any]]:
+        # cannot use *args, **kwargs, bcs most of the time **locals() are passed from
+        # upstream call - self defined twice error
+
+        processed_kwargs = self._process_kwargs(kwargs) if kwargs else {}
+
+        self._get_symbols()
+
+        results = []
+        for symbol in self._symbols:
+            method = getattr(symbol, method_name)
+            results.append(method(**processed_kwargs))
+
+        return await asyncio.gather(*results)
+
+    @overload
+    async def _call_client_method(
+        self, method_name: Literal['get_search'], kwargs: dict[str, Any] | None = None
+    ) -> dict[str, Any]: ...
+
+    @overload
+    async def _call_client_method(
+        self, method_name: str, kwargs: dict[str, Any] | None = None
+    ) -> list[dict[str, Any]]: ...
+
+    async def _call_client_method(
+        self, method_name: str, kwargs: dict[str, Any] | None = None
+    ) -> list[dict[str, Any]]:
+        # cannot use *args, **kwargs, bcs most of the time **locals() are passed from
+        # upstream call - self defined twice error
+
+        result_key = _RESULT_KEY_MAP.get(method_name)
+
+        processed_kwargs = self._process_kwargs(kwargs) if kwargs else {}
+        processed_kwargs['tickers'] = self.tickers
+
+        self._get_client()
+
+        method = getattr(self._client, method_name)
+        response_json = await method(**processed_kwargs)
+
+        # search does not have result key
+        return response_json[result_key]['result'] if result_key else response_json
+
+    @_alog_func
     async def get_chart(
         self,
         interval: str,
@@ -705,7 +764,7 @@ class AsyncSymbols(SymbolsBase):
         include_split: bool = True,
         include_earn: bool = True,
         include_capital_gain: bool = True,
-    ) -> list[ChartResult]:
+    ) -> list[dict[str, Any]]:
         """Get chart data for tickers in series requests.
 
         Args:
@@ -725,14 +784,12 @@ class AsyncSymbols(SymbolsBase):
             Even though the the endpoint param is called range, period_range was chosen
             to avoid collision with python built-in method name.
         """
-        kwargs = self._process_kwargs(locals())
-        await self._get_symbols()
-        return await asyncio.gather(*[s.get_chart(**kwargs) for s in self._symbols])
+        return await self._call_symbols_method('get_chart', locals())
 
-    @_async_log_func
+    @_alog_func
     async def get_quote(
         self, include_pre_post: bool | None = None
-    ) -> list[QuoteResult]:
+    ) -> list[dict[str, Any]]:
         """Get quote for tickers in a single request.
 
         Args:
@@ -740,293 +797,242 @@ class AsyncSymbols(SymbolsBase):
 
         Returns: List of quote response result jsons.
         """
-        kwargs = self._process_kwargs(locals())
-        kwargs['tickers'] = self.tickers
-        await self._get_client()
-        quote_json = await self._client.get_quote(**kwargs)
-        return quote_json['quoteResponse']['result']
+        return await self._call_client_method('get_quote', locals())
 
-    @_async_log_func
-    async def get_quote_type(self) -> list[QuoteTypeResult]:
+    @_alog_func
+    async def get_quote_type(self) -> list[dict[str, Any]]:
         """Get quote type for tickers in a single request.
 
         Returns: List of quote type response result jsons.
         """
-        await self._get_client()
-        quote_type_json = await self._client.get_quote_type(self.tickers)
-        return quote_type_json['quoteType']['result']
+        return await self._call_client_method('get_quote_type')
 
-    @_async_log_func
-    async def get_quote_summary_all_modules(self) -> list[QuoteSummaryResult]:
+    @_alog_func
+    async def get_quote_summary_all_modules(self) -> list[dict[str, Any]]:
         """Get quote summary for all modules for tickers.
 
         Returns: List of quote summary with all modules response result jsons.
         """
-        await self._get_symbols()
-        return await asyncio.gather(
-            *[s.get_quote_summary_all_modules() for s in self._symbols]
-        )
+        return await self._call_symbols_method('get_quote_summary_all_modules')
 
-    @_async_log_func
-    async def get_asset_profile(self) -> list[AssetProfile]:
+    @_alog_func
+    async def get_asset_profile(self) -> list[dict[str, Any]]:
         """Get asset profile for tickers.
 
         Returns: List of quote summary with asset profile module response result jsons.
         """
-        await self._get_symbols()
-        return await asyncio.gather(*[s.get_asset_profile() for s in self._symbols])
+        return await self._call_symbols_method('get_asset_profile')
 
-    @_async_log_func
-    async def get_summary_profile(self) -> list[SummaryProfile]:
+    @_alog_func
+    async def get_summary_profile(self) -> list[dict[str, Any]]:
         """Get summary profile for tickers.
 
         Returns:
             List of quote summary with summary profile module response result jsons.
         """
-        await self._get_symbols()
-        return await asyncio.gather(*[s.get_summary_profile() for s in self._symbols])
+        return await self._call_symbols_method('get_summary_profile')
 
-    @_async_log_func
-    async def get_summary_detail(self) -> list[SummaryDetail]:
+    @_alog_func
+    async def get_summary_detail(self) -> list[dict[str, Any]]:
         """Get summary detail for tickers.
 
         Returns: List of quote summary with summary detail module response result jsons.
         """
-        await self._get_symbols()
-        return await asyncio.gather(*[s.get_summary_detail() for s in self._symbols])
+        return await self._call_symbols_method('get_summary_detail')
 
-    @_async_log_func
-    async def get_price(self) -> list[Price]:
+    @_alog_func
+    async def get_price(self) -> list[dict[str, Any]]:
         """Get price data for tickers.
 
         Returns: List of quote summary with price data module response result jsons.
         """
-        await self._get_symbols()
-        return await asyncio.gather(*[s.get_price() for s in self._symbols])
+        return await self._call_symbols_method('get_price')
 
-    @_async_log_func
-    async def get_default_key_statistics(self) -> list[DefaultKeyStatistics]:
+    @_alog_func
+    async def get_default_key_statistics(self) -> list[dict[str, Any]]:
         """Get default key statistics for tickers.
 
         Returns:
             List of quote summary with default key statistics module response result
             jsons.
         """
-        await self._get_symbols()
-        return await asyncio.gather(
-            *[s.get_default_key_statistics() for s in self._symbols]
-        )
+        return await self._call_symbols_method('get_default_key_statistics')
 
-    @_async_log_func
-    async def get_financial_data(self) -> list[FinancialData]:
+    @_alog_func
+    async def get_financial_data(self) -> list[dict[str, Any]]:
         """Get financial data for tickers.
 
         Returns: List of quote summary with financial data module response result jsons.
         """
-        await self._get_symbols()
-        return await asyncio.gather(*[s.get_financial_data() for s in self._symbols])
+        return await self._call_symbols_method('get_financial_data')
 
-    @_async_log_func
-    async def get_calendar_events(self) -> list[CalendarEvents]:
+    @_alog_func
+    async def get_calendar_events(self) -> list[dict[str, Any]]:
         """Get calendar events for tickers.
 
         Returns:
             List of quote summary with calendar events module response result jsons.
         """
-        await self._get_symbols()
-        return await asyncio.gather(*[s.get_calendar_events() for s in self._symbols])
+        return await self._call_symbols_method('get_calendar_events')
 
-    @_async_log_func
-    async def get_sec_filings(self) -> list[SecFilings]:
+    @_alog_func
+    async def get_sec_filings(self) -> list[dict[str, Any]]:
         """Get sec filings for tickers.
 
         Returns: List of quote summary with sec filings module response result jsons.
         """
-        await self._get_symbols()
-        return await asyncio.gather(*[s.get_sec_filings() for s in self._symbols])
+        return await self._call_symbols_method('get_sec_filings')
 
-    @_async_log_func
-    async def get_upgrade_downgrade_history(
-        self,
-    ) -> list[list[UpgradeDowngradeHistoryItem]]:
+    @_alog_func
+    async def get_upgrade_downgrade_history(self) -> list[list[dict[str, Any]]]:
         """Get upgrade downgrade history for tickers.
 
         Returns:
             List of quote summary with upgrade downgrade history module response results
             jsons.
         """
-        await self._get_symbols()
-        return await asyncio.gather(
-            *[s.get_upgrade_downgrade_history() for s in self._symbols]
-        )
+        return await self._call_symbols_method('get_upgrade_downgrade_history')
 
-    @_async_log_func
-    async def get_institution_ownership(self) -> list[list[InstitutionOwnershipItem]]:
+    @_alog_func
+    async def get_institution_ownership(self) -> list[list[dict[str, Any]]]:
         """Get institution ownership for tickers.
 
         Returns:
             List of quote summary with institution ownership module response results
             jsons.
         """
-        await self._get_symbols()
-        return await asyncio.gather(
-            *[s.get_institution_ownership() for s in self._symbols]
-        )
+        return await self._call_symbols_method('get_institution_ownership')
 
-    @_async_log_func
-    async def get_fund_ownership(self) -> list[list[FundOwnershipItem]]:
+    @_alog_func
+    async def get_fund_ownership(self) -> list[list[dict[str, Any]]]:
         """Get fund ownership for tickers.
 
         Returns:
             List of quote summary with fund ownership module response results jsons.
         """
-        await self._get_symbols()
-        return await asyncio.gather(*[s.get_fund_ownership() for s in self._symbols])
+        return await self._call_symbols_method('get_fund_ownership')
 
-    @_async_log_func
-    async def get_major_direct_holders(self) -> list[MajorDirectHolders]:
+    @_alog_func
+    async def get_major_direct_holders(self) -> list[dict[str, Any]]:
         """Get major direct holders for tickers.
 
         Returns: List of quote summary with direct holders module response result jsons.
         """
-        await self._get_symbols()
-        return await asyncio.gather(
-            *[s.get_major_direct_holders() for s in self._symbols]
-        )
+        return await self._call_symbols_method('get_major_direct_holders')
 
-    @_async_log_func
-    async def get_major_holders_breakdown(self) -> list[MajorHoldersBreakdown]:
+    @_alog_func
+    async def get_major_holders_breakdown(self) -> list[dict[str, Any]]:
         """Get major holders breakdown for tickers.
 
         Returns:
             List of quote summary with holders breakdown module response result jsons.
         """
-        await self._get_symbols()
-        return await asyncio.gather(
-            *[s.get_major_holders_breakdown() for s in self._symbols]
-        )
+        return await self._call_symbols_method('get_major_holders_breakdown')
 
-    @_async_log_func
-    async def get_insider_transactions(self) -> list[list[InsiderTransactionItem]]:
+    @_alog_func
+    async def get_insider_transactions(self) -> list[list[dict[str, Any]]]:
         """Get insider transactions for tickers.
 
         Returns:
             List of quote summary with insider transactions module response results
             jsons.
         """
-        await self._get_symbols()
-        return await asyncio.gather(
-            *[s.get_insider_transactions() for s in self._symbols]
-        )
+        return await self._call_symbols_method('get_insider_transactions')
 
-    @_async_log_func
-    async def get_insider_holders(self) -> list[list[InsiderHolderItem]]:
+    @_alog_func
+    async def get_insider_holders(self) -> list[list[dict[str, Any]]]:
         """Get insider holders for tickers.
 
         Returns:
             List of quote summary with insider holders module response results jsons.
         """
-        await self._get_symbols()
-        return await asyncio.gather(*[s.get_insider_holders() for s in self._symbols])
+        return await self._call_symbols_method('get_insider_holders')
 
-    @_async_log_func
-    async def get_net_share_purchase_activity(self) -> list[NetSharePurchaseActivity]:
+    @_alog_func
+    async def get_net_share_purchase_activity(self) -> list[dict[str, Any]]:
         """Get net share purchase activity for tickers.
 
         Returns:
             List of quote summary with net share purchase activity module response
             result jsons.
         """
-        await self._get_symbols()
-        return await asyncio.gather(
-            *[s.get_net_share_purchase_activity() for s in self._symbols]
-        )
+        return await self._call_symbols_method('get_net_share_purchase_activity')
 
-    @_async_log_func
-    async def get_earnings(self) -> list[Earnings]:
+    @_alog_func
+    async def get_earnings(self) -> list[dict[str, Any]]:
         """Get earnings for tickers.
 
         Returns: List of quote summary with earnings module response result jsons.
         """
-        await self._get_symbols()
-        return await asyncio.gather(*[s.get_earnings() for s in self._symbols])
+        return await self._call_symbols_method('get_earnings')
 
-    @_async_log_func
-    async def get_earnings_history(self) -> list[list[EarningsHistoryItem]]:
+    @_alog_func
+    async def get_earnings_history(self) -> list[list[dict[str, Any]]]:
         """Get earnings history for tickers.
 
         Returns:
             List of quote summary with earnings history module response results jsons.
         """
-        await self._get_symbols()
-        return await asyncio.gather(*[s.get_earnings_history() for s in self._symbols])
+        return await self._call_symbols_method('get_earnings_history')
 
-    @_async_log_func
-    async def get_earnings_trend(self) -> list[list[EarningsTrendItem]]:
+    @_alog_func
+    async def get_earnings_trend(self) -> list[list[dict[str, Any]]]:
         """Get earnings trend for tickers.
 
         Returns:
             List of quote summary with earnings trend module response results jsons.
         """
-        await self._get_symbols()
-        return await asyncio.gather(*[s.get_earnings_trend() for s in self._symbols])
+        return await self._call_symbols_method('get_earnings_trend')
 
-    @_async_log_func
-    async def get_industry_trend(self) -> list[IndustryTrend]:
+    @_alog_func
+    async def get_industry_trend(self) -> list[dict[str, Any]]:
         """Get industry trend for tickers.
 
         Returns: List of quote summary with industry trend module response result jsons.
         """
-        await self._get_symbols()
-        return await asyncio.gather(*[s.get_industry_trend() for s in self._symbols])
+        return await self._call_symbols_method('get_industry_trend')
 
-    @_async_log_func
-    async def get_index_trend(self) -> list[IndexTrend]:
+    @_alog_func
+    async def get_index_trend(self) -> list[dict[str, Any]]:
         """Get index trend for the ticker.
 
         Returns: List of quote summary with index trend module response result jsons.
         """
-        await self._get_symbols()
-        return await asyncio.gather(*[s.get_index_trend() for s in self._symbols])
+        return await self._call_symbols_method('get_index_trend')
 
-    @_async_log_func
-    async def get_sector_trend(self) -> list[SectorTrend]:
+    @_alog_func
+    async def get_sector_trend(self) -> list[dict[str, Any]]:
         """Get sector trend for tickers.
 
         Returns: List of quote summary with sector trend module response result jsons.
         """
-        await self._get_symbols()
-        return await asyncio.gather(*[s.get_sector_trend() for s in self._symbols])
+        return await self._call_symbols_method('get_sector_trend')
 
-    @_async_log_func
-    async def get_recommendation_trend(self) -> list[list[RecommendationTrendItem]]:
+    @_alog_func
+    async def get_recommendation_trend(self) -> list[list[dict[str, Any]]]:
         """Get recommendation trend for tickers.
 
         Returns:
             List of quote summary with recommendation trend module response results
             jsons.
         """
-        await self._get_symbols()
-        return await asyncio.gather(
-            *[s.get_recommendation_trend() for s in self._symbols]
-        )
+        return await self._call_symbols_method('get_recommendation_trend')
 
-    @_async_log_func
-    async def get_page_views(self) -> list[PageViews]:
+    @_alog_func
+    async def get_page_views(self) -> list[dict[str, Any]]:
         """Get page views for tickers.
 
         Returns: List of quote summary with page views module response result jsons.
         """
-        await self._get_symbols()
-        return await asyncio.gather(*[s.get_page_views() for s in self._symbols])
+        return await self._call_symbols_method('get_page_views')
 
-    @_async_log_func
+    @_alog_func
     async def get_income_statement(
         self,
         frequency: str,
         period1: int | float | None = None,
         period2: int | float | None = None,
-    ) -> list[list[TimeseriesResult]]:
+    ) -> list[list[dict[str, Any]]]:
         """Get income statement for tickers.
 
         Args:
@@ -1037,19 +1043,15 @@ class AsyncSymbols(SymbolsBase):
 
         Returns: List of income statement response results jsons.
         """
-        kwargs = self._process_kwargs(locals())
-        await self._get_symbols()
-        return await asyncio.gather(
-            *[s.get_income_statement(**kwargs) for s in self._symbols]
-        )
+        return await self._call_symbols_method('get_income_statement', locals())
 
-    @_async_log_func
+    @_alog_func
     async def get_balance_sheet(
         self,
         frequency: str,
         period1: int | float | None = None,
         period2: int | float | None = None,
-    ) -> list[list[TimeseriesResult]]:
+    ) -> list[list[dict[str, Any]]]:
         """Get balance sheet for tickers.
 
         Args:
@@ -1060,19 +1062,15 @@ class AsyncSymbols(SymbolsBase):
 
         Returns: List of balance sheet response results jsons.
         """
-        kwargs = self._process_kwargs(locals())
-        await self._get_symbols()
-        return await asyncio.gather(
-            *[s.get_balance_sheet(**kwargs) for s in self._symbols]
-        )
+        return await self._call_symbols_method('get_balance_sheet', locals())
 
-    @_async_log_func
+    @_alog_func
     async def get_cash_flow(
         self,
         frequency: str,
         period1: int | float | None = None,
         period2: int | float | None = None,
-    ) -> list[list[TimeseriesResult]]:
+    ) -> list[list[dict[str, Any]]]:
         """Get cash flow statement for tickers.
 
         Args:
@@ -1083,53 +1081,44 @@ class AsyncSymbols(SymbolsBase):
 
         Returns: List of cash flow response results jsons.
         """
-        kwargs = self._process_kwargs(locals())
-        await self._get_symbols()
-        return await asyncio.gather(*[s.get_cash_flow(**kwargs) for s in self._symbols])
+        return await self._call_symbols_method('get_cash_flow', locals())
 
-    @_async_log_func
-    async def get_options(self) -> list[OptionChainResult]:
+    @_alog_func
+    async def get_options(self) -> list[dict[str, Any]]:
         """Get options data for tickers.
 
         Returns: List of options response result jsons.
         """
-        await self._get_symbols()
-        return await asyncio.gather(*[s.get_options() for s in self._symbols])
+        return await self._call_symbols_method('get_options')
 
-    @_async_log_func
-    async def get_search(self) -> SearchResult:
+    @_alog_func
+    async def get_search(self) -> dict[str, Any]:
         """Get search results for tickers in a single request.
 
         Returns: Search response result json.
         """
-        await self._get_client()
-        return await self._client.get_search(self.tickers)
+        return await self._call_client_method('get_search')
 
-    @_async_log_func
-    async def get_insights(self) -> list[InsightsFinanceResult]:
+    @_alog_func
+    async def get_insights(self) -> list[dict[str, Any]]:
         """Get insights for tickers in a single request.
 
         Returns: List of insights response result jsons.
         """
-        await self._get_client()
-        insights_json = await self._client.get_insights(self.tickers)
-        return insights_json['finance']['result']
+        return await self._call_client_method('get_insights')
 
-    @_async_log_func
-    async def get_recommendations(self) -> list[RecommendationsFinanceResult]:
+    @_alog_func
+    async def get_recommendations(self) -> list[dict[str, Any]]:
         """Get analyst recommendations for tickers in a single request.
 
         Returns: List of recommendations response result jsons.
         """
-        await self._get_client()
-        recommendations_json = await self._client.get_recommendations(self.tickers)
-        return recommendations_json['finance']['result']
+        return await self._call_client_method('get_recommendations')
 
-    @_async_log_func
-    async def get_ratings(self) -> list[RatingsResult]:
+    @_alog_func
+    async def get_ratings(self) -> list[dict[str, Any]]:
         """Get ratings for tickers.
 
         Returns: List of ratings response result jsons.
         """
-        await self._get_symbols()
-        return await asyncio.gather(*[s.get_ratings() for s in self._symbols])
+        return await self._call_symbols_method('get_ratings')

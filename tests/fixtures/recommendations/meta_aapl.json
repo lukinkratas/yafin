@@ -6,23 +6,23 @@
         "recommendedSymbols": [
           {
             "symbol": "AMZN",
-            "score": 0.212912
+            "score": 0.210396
           },
           {
             "symbol": "AAPL",
-            "score": 0.206946
+            "score": 0.204787
           },
           {
             "symbol": "GOOG",
-            "score": 0.197234
+            "score": 0.194749
           },
           {
             "symbol": "TSLA",
-            "score": 0.191394
+            "score": 0.189164
           },
           {
             "symbol": "NFLX",
-            "score": 0.18212
+            "score": 0.179809
           }
         ]
       },
@@ -31,23 +31,23 @@
         "recommendedSymbols": [
           {
             "symbol": "AMZN",
-            "score": 0.244594
+            "score": 0.242118
           },
           {
             "symbol": "TSLA",
-            "score": 0.230616
+            "score": 0.22833
           },
           {
             "symbol": "GOOG",
-            "score": 0.2158
+            "score": 0.213638
           },
           {
             "symbol": "META",
-            "score": 0.206946
+            "score": 0.204787
           },
           {
             "symbol": "MSFT",
-            "score": 0.182092
+            "score": 0.180516
           }
         ]
       }

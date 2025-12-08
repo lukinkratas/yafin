@@ -1631,64 +1631,6 @@
             "AAPL"
           ],
           "type": [
-            "annualNetIncome"
-          ]
-        },
-        "timestamp": [
-          1664496000,
-          1696032000,
-          1727654400,
-          1759190400
-        ],
-        "annualNetIncome": [
-          {
-            "dataId": 20091,
-            "asOfDate": "2022-09-30",
-            "periodType": "12M",
-            "currencyCode": "USD",
-            "reportedValue": {
-              "raw": 99803000000.0,
-              "fmt": "99.80B"
-            }
-          },
-          {
-            "dataId": 20091,
-            "asOfDate": "2023-09-30",
-            "periodType": "12M",
-            "currencyCode": "USD",
-            "reportedValue": {
-              "raw": 96995000000.0,
-              "fmt": "97.00B"
-            }
-          },
-          {
-            "dataId": 20091,
-            "asOfDate": "2024-09-30",
-            "periodType": "12M",
-            "currencyCode": "USD",
-            "reportedValue": {
-              "raw": 93736000000.0,
-              "fmt": "93.74B"
-            }
-          },
-          {
-            "dataId": 20091,
-            "asOfDate": "2025-09-30",
-            "periodType": "12M",
-            "currencyCode": "USD",
-            "reportedValue": {
-              "raw": 112010000000.0,
-              "fmt": "112.01B"
-            }
-          }
-        ]
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
             "annualEBIT"
           ]
         },
@@ -1737,6 +1679,64 @@
             "reportedValue": {
               "raw": 133050000000.0,
               "fmt": "133.05B"
+            }
+          }
+        ]
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualNetIncome"
+          ]
+        },
+        "timestamp": [
+          1664496000,
+          1696032000,
+          1727654400,
+          1759190400
+        ],
+        "annualNetIncome": [
+          {
+            "dataId": 20091,
+            "asOfDate": "2022-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": {
+              "raw": 99803000000.0,
+              "fmt": "99.80B"
+            }
+          },
+          {
+            "dataId": 20091,
+            "asOfDate": "2023-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": {
+              "raw": 96995000000.0,
+              "fmt": "97.00B"
+            }
+          },
+          {
+            "dataId": 20091,
+            "asOfDate": "2024-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": {
+              "raw": 93736000000.0,
+              "fmt": "93.74B"
+            }
+          },
+          {
+            "dataId": 20091,
+            "asOfDate": "2025-09-30",
+            "periodType": "12M",
+            "currencyCode": "USD",
+            "reportedValue": {
+              "raw": 112010000000.0,
+              "fmt": "112.01B"
             }
           }
         ]
@@ -2617,257 +2617,7 @@
             "AAPL"
           ],
           "type": [
-            "annualTotalUnusualItems"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualImpairmentOfCapitalAssets"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualGainOnSaleOfBusiness"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualPolicyholderBenefitsGross"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualRestructuringAndMergernAcquisition"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualAverageDilutionEarnings"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualTaxLossCarryforwardBasicEPS"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualBasicExtraordinary"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualBasicContinuousOperations"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualProfessionalExpenseAndContractServicesExpense"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualNetPolicyholderBenefitsAndClaims"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualDilutedExtraordinary"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualAmortization"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualNormalizedBasicEPS"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualRentExpenseSupplemental"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualBasicEPSOtherGainsLosses"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualContinuingAndDiscontinuedBasicEPS"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualOtherunderPreferredStockDividend"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualLossAdjustmentExpense"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualDepletionIncomeStatement"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualSalariesAndWages"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualOtherSpecialCharges"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
             "annualDividendPerShare"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualOtherNonInterestExpense"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualDilutedDiscontinuousOperations"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualEarningsFromEquityInterest"
           ]
         }
       },
@@ -2887,36 +2637,6 @@
             "AAPL"
           ],
           "type": [
-            "annualDepreciationAndAmortizationInIncomeStatement"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualTaxLossCarryforwardDilutedEPS"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualOtherTaxes"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
             "annualPreferredStockDividends"
           ]
         }
@@ -2927,7 +2647,7 @@
             "AAPL"
           ],
           "type": [
-            "annualRentAndLandingFees"
+            "annualOccupancyAndEquipment"
           ]
         }
       },
@@ -2937,7 +2657,17 @@
             "AAPL"
           ],
           "type": [
-            "annualNormalizedDilutedEPS"
+            "annualPolicyholderBenefitsGross"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualGainOnSaleOfBusiness"
           ]
         }
       },
@@ -2957,7 +2687,57 @@
             "AAPL"
           ],
           "type": [
-            "annualTotalOtherFinanceCost"
+            "annualDilutedAccountingChange"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualBasicAccountingChange"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualTaxLossCarryforwardDilutedEPS"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualGainOnSaleOfSecurity"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualSecuritiesAmortization"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualBasicExtraordinary"
           ]
         }
       },
@@ -2977,6 +2757,66 @@
             "AAPL"
           ],
           "type": [
+            "annualDepreciationIncomeStatement"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualPolicyholderBenefitsCeded"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualOtherGandA"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualOtherSpecialCharges"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualNetPolicyholderBenefitsAndClaims"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualOtherTaxes"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
             "annualWriteOff"
           ]
         }
@@ -2987,7 +2827,7 @@
             "AAPL"
           ],
           "type": [
-            "annualGainOnSaleOfPPE"
+            "annualOtherOperatingExpenses"
           ]
         }
       },
@@ -2997,27 +2837,7 @@
             "AAPL"
           ],
           "type": [
-            "annualBasicDiscontinuousOperations"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualSpecialIncomeCharges"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "AAPL"
-          ],
-          "type": [
-            "annualInsuranceAndClaims"
+            "annualNetIncomeExtraordinary"
           ]
         }
       },
@@ -3037,7 +2857,107 @@
             "AAPL"
           ],
           "type": [
-            "annualGainOnSaleOfSecurity"
+            "annualNormalizedDilutedEPS"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualDilutedEPSOtherGainsLosses"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualDilutedContinuousOperations"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualRentExpenseSupplemental"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualDepletionIncomeStatement"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualTotalUnusualItems"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualNetIncomeDiscontinuousOperations"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualRestructuringAndMergernAcquisition"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualAmortizationOfIntangiblesIncomeStatement"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualRentAndLandingFees"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualBasicEPSOtherGainsLosses"
           ]
         }
       },
@@ -3067,7 +2987,7 @@
             "AAPL"
           ],
           "type": [
-            "annualOtherGandA"
+            "annualOtherunderPreferredStockDividend"
           ]
         }
       },
@@ -3077,7 +2997,7 @@
             "AAPL"
           ],
           "type": [
-            "annualSecuritiesAmortization"
+            "annualAmortization"
           ]
         }
       },
@@ -3087,7 +3007,7 @@
             "AAPL"
           ],
           "type": [
-            "annualDilutedContinuousOperations"
+            "annualAverageDilutionEarnings"
           ]
         }
       },
@@ -3097,7 +3017,7 @@
             "AAPL"
           ],
           "type": [
-            "annualOccupancyAndEquipment"
+            "annualImpairmentOfCapitalAssets"
           ]
         }
       },
@@ -3107,7 +3027,7 @@
             "AAPL"
           ],
           "type": [
-            "annualNetIncomeFromTaxLossCarryforward"
+            "annualSalariesAndWages"
           ]
         }
       },
@@ -3117,7 +3037,7 @@
             "AAPL"
           ],
           "type": [
-            "annualPolicyholderBenefitsCeded"
+            "annualOtherNonInterestExpense"
           ]
         }
       },
@@ -3127,7 +3047,7 @@
             "AAPL"
           ],
           "type": [
-            "annualContinuingAndDiscontinuedDilutedEPS"
+            "annualNormalizedBasicEPS"
           ]
         }
       },
@@ -3137,7 +3057,7 @@
             "AAPL"
           ],
           "type": [
-            "annualDilutedEPSOtherGainsLosses"
+            "annualProfessionalExpenseAndContractServicesExpense"
           ]
         }
       },
@@ -3147,7 +3067,7 @@
             "AAPL"
           ],
           "type": [
-            "annualDepreciationAmortizationDepletionIncomeStatement"
+            "annualMinorityInterests"
           ]
         }
       },
@@ -3157,7 +3077,47 @@
             "AAPL"
           ],
           "type": [
-            "annualNetIncomeExtraordinary"
+            "annualSpecialIncomeCharges"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualBasicDiscontinuousOperations"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualTaxLossCarryforwardBasicEPS"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualBasicContinuousOperations"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualContinuingAndDiscontinuedBasicEPS"
           ]
         }
       },
@@ -3177,6 +3137,26 @@
             "AAPL"
           ],
           "type": [
+            "annualLossAdjustmentExpense"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualDepreciationAmortizationDepletionIncomeStatement"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
             "annualReportedNormalizedBasicEPS"
           ]
         }
@@ -3187,7 +3167,7 @@
             "AAPL"
           ],
           "type": [
-            "annualOtherOperatingExpenses"
+            "annualEarningsFromEquityInterest"
           ]
         }
       },
@@ -3197,7 +3177,7 @@
             "AAPL"
           ],
           "type": [
-            "annualNetIncomeDiscontinuousOperations"
+            "annualGainOnSaleOfPPE"
           ]
         }
       },
@@ -3207,7 +3187,7 @@
             "AAPL"
           ],
           "type": [
-            "annualBasicAccountingChange"
+            "annualDilutedExtraordinary"
           ]
         }
       },
@@ -3217,7 +3197,7 @@
             "AAPL"
           ],
           "type": [
-            "annualDepreciationIncomeStatement"
+            "annualNetIncomeFromTaxLossCarryforward"
           ]
         }
       },
@@ -3227,7 +3207,7 @@
             "AAPL"
           ],
           "type": [
-            "annualDilutedAccountingChange"
+            "annualDepreciationAndAmortizationInIncomeStatement"
           ]
         }
       },
@@ -3237,7 +3217,7 @@
             "AAPL"
           ],
           "type": [
-            "annualAmortizationOfIntangiblesIncomeStatement"
+            "annualDilutedDiscontinuousOperations"
           ]
         }
       },
@@ -3247,7 +3227,27 @@
             "AAPL"
           ],
           "type": [
-            "annualMinorityInterests"
+            "annualTotalOtherFinanceCost"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualContinuingAndDiscontinuedDilutedEPS"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "AAPL"
+          ],
+          "type": [
+            "annualInsuranceAndClaims"
           ]
         }
       }

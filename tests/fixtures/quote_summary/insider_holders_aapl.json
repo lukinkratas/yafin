@@ -66,6 +66,26 @@
             },
             {
               "maxAge": 1,
+              "name": "GORSKY ALEX",
+              "relation": "Director",
+              "url": "",
+              "transactionDescription": "Conversion of Exercise of derivative security",
+              "latestTransDate": {
+                "raw": 1738281600,
+                "fmt": "2025-01-31"
+              },
+              "positionDirect": {
+                "raw": 5539,
+                "fmt": "5.54k",
+                "longFmt": "5,539"
+              },
+              "positionDirectDate": {
+                "raw": 1738281600,
+                "fmt": "2025-01-31"
+              }
+            },
+            {
+              "maxAge": 1,
               "name": "KHAN SABIH",
               "relation": "Chief Operating Officer",
               "url": "",
@@ -162,26 +182,6 @@
               "positionDirectDate": {
                 "raw": 1760572800,
                 "fmt": "2025-10-16"
-              }
-            },
-            {
-              "maxAge": 1,
-              "name": "SUGAR RONALD D",
-              "relation": "Director",
-              "url": "",
-              "transactionDescription": "Conversion of Exercise of derivative security",
-              "latestTransDate": {
-                "raw": 1738281600,
-                "fmt": "2025-01-31"
-              },
-              "positionDirect": {
-                "raw": 109311,
-                "fmt": "109.31k",
-                "longFmt": "109,311"
-              },
-              "positionDirectDate": {
-                "raw": 1738281600,
-                "fmt": "2025-01-31"
               }
             },
             {

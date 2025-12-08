@@ -525,3 +525,14 @@ _ALL_TYPES_SET = (
     | TRAILING_CASH_FLOW_TYPES_SET
     | OTHER_TYPES_SET
 )
+
+_RESULT_KEY_MAP = {
+    'get_chart': 'chart',
+    'get_quote': 'quoteResponse',
+    'get_quote_type': 'quoteType',
+    'get_quote_summary': 'quoteSummary',
+    'get_timeseries': 'timeseries',
+    'get_insights': 'finance',
+    'get_recommendations': 'finance',
+    'get_options': 'optionChain',
+}

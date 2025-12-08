@@ -2962,437 +2962,7 @@
             "META"
           ],
           "type": [
-            "annualEarningsFromEquityInterestNetOfTax"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualImpairmentOfCapitalAssets"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualBasicContinuousOperations"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualNetIncomeExtraordinary"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualNormalizedDilutedEPS"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualNetIncomeDiscontinuousOperations"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualGainOnSaleOfBusiness"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualSecuritiesAmortization"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualAmortizationOfIntangiblesIncomeStatement"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualBasicEPSOtherGainsLosses"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualTaxLossCarryforwardDilutedEPS"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualEarningsFromEquityInterest"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualProfessionalExpenseAndContractServicesExpense"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualBasicExtraordinary"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualOtherOperatingExpenses"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualBasicAccountingChange"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualDepreciationIncomeStatement"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualWriteOff"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualDepletionIncomeStatement"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
             "annualOccupancyAndEquipment"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualRestructuringAndMergernAcquisition"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualDilutedEPSOtherGainsLosses"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualDilutedAccountingChange"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualDepreciationAmortizationDepletionIncomeStatement"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualContinuingAndDiscontinuedBasicEPS"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualDilutedExtraordinary"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualDilutedDiscontinuousOperations"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualExciseTaxes"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualBasicDiscontinuousOperations"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualPolicyholderBenefitsGross"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualMinorityInterests"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualAverageDilutionEarnings"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualDividendPerShare"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualProvisionForDoubtfulAccounts"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualSalariesAndWages"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualReportedNormalizedDilutedEPS"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualRentExpenseSupplemental"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualOtherTaxes"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualContinuingAndDiscontinuedDilutedEPS"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualRentAndLandingFees"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualDepreciationAndAmortizationInIncomeStatement"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualNormalizedBasicEPS"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualNetPolicyholderBenefitsAndClaims"
-          ]
-        }
-      },
-      {
-        "meta": {
-          "symbol": [
-            "META"
-          ],
-          "type": [
-            "annualDilutedContinuousOperations"
           ]
         }
       },
@@ -3412,7 +2982,27 @@
             "META"
           ],
           "type": [
-            "annualPolicyholderBenefitsCeded"
+            "annualDepreciationAmortizationDepletionIncomeStatement"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualGainOnSaleOfBusiness"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualOtherOperatingExpenses"
           ]
         }
       },
@@ -3432,7 +3022,7 @@
             "META"
           ],
           "type": [
-            "annualNetIncomeFromTaxLossCarryforward"
+            "annualEarningsFromEquityInterestNetOfTax"
           ]
         }
       },
@@ -3442,7 +3032,7 @@
             "META"
           ],
           "type": [
-            "annualReportedNormalizedBasicEPS"
+            "annualSecuritiesAmortization"
           ]
         }
       },
@@ -3452,7 +3042,7 @@
             "META"
           ],
           "type": [
-            "annualOtherNonInterestExpense"
+            "annualContinuingAndDiscontinuedDilutedEPS"
           ]
         }
       },
@@ -3462,7 +3052,7 @@
             "META"
           ],
           "type": [
-            "annualAmortization"
+            "annualMinorityInterests"
           ]
         }
       },
@@ -3482,7 +3072,327 @@
             "META"
           ],
           "type": [
-            "annualLossAdjustmentExpense"
+            "annualNetPolicyholderBenefitsAndClaims"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualDilutedDiscontinuousOperations"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualDilutedEPSOtherGainsLosses"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualAmortization"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualBasicAccountingChange"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualDividendPerShare"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualRestructuringAndMergernAcquisition"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualDepletionIncomeStatement"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualDilutedExtraordinary"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualProfessionalExpenseAndContractServicesExpense"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualProvisionForDoubtfulAccounts"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualBasicExtraordinary"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualRentAndLandingFees"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualSalariesAndWages"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualImpairmentOfCapitalAssets"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualAverageDilutionEarnings"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualReportedNormalizedBasicEPS"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualDilutedContinuousOperations"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualOtherSpecialCharges"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualOtherNonInterestExpense"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualDepreciationAndAmortizationInIncomeStatement"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualOtherTaxes"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualWriteOff"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualPolicyholderBenefitsCeded"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualReportedNormalizedDilutedEPS"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualBasicContinuousOperations"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualEarningsFromEquityInterest"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualBasicDiscontinuousOperations"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualTaxLossCarryforwardDilutedEPS"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualDilutedAccountingChange"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualNetIncomeFromTaxLossCarryforward"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualNormalizedDilutedEPS"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualBasicEPSOtherGainsLosses"
           ]
         }
       },
@@ -3502,7 +3412,97 @@
             "META"
           ],
           "type": [
-            "annualOtherSpecialCharges"
+            "annualContinuingAndDiscontinuedBasicEPS"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualDepreciationIncomeStatement"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualAmortizationOfIntangiblesIncomeStatement"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualLossAdjustmentExpense"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualNormalizedBasicEPS"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualNetIncomeExtraordinary"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualNetIncomeDiscontinuousOperations"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualRentExpenseSupplemental"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualExciseTaxes"
+          ]
+        }
+      },
+      {
+        "meta": {
+          "symbol": [
+            "META"
+          ],
+          "type": [
+            "annualPolicyholderBenefitsGross"
           ]
         }
       }

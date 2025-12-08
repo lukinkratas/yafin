@@ -2,8 +2,8 @@ from typing import Any, Callable
 
 from typeguard import check_type
 
-from tests._const import _MODULE_MAP, _PARSE_TICKER_FUNCS_MAP, _RESULT_KEY_MAP
-from yafin.types import (
+from ._const import _MODULE_MAP, _PARSE_TICKER_FUNCS_MAP, _RESULT_KEY_MAP
+from ._types import (
     CalendarEventsFinanceResult,
     CalendarEventsResponseJson,
     ChartResponseJson,
@@ -95,7 +95,6 @@ def _assert_timeseries_result(
     expected_types: str,
 ) -> None:
     assert timeseries_results
-    # assert check_type(timeseries_results, list[TimeseriesResult])
 
     for result in timeseries_results:
         assert result['meta']['symbol'][0] == expected_ticker

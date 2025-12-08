@@ -1,7 +1,7 @@
 [project]
 name = "yafin"
 version = "0.1.0"
-description = "Unofficial Yahoo Finance API asynchronous client"
+description = "Unofficial Yahoo Finance API client"
 readme = "README.md"
 requires-python = ">=3.11"
 license-files = ["LICENSE"]
@@ -30,11 +30,11 @@ test = [
     "pytest-mock>=3.15.0",
     "pytest-asyncio>=1.1.0",
     "pytest-cov>=4.0.0",
-    "typeguard>=4.4.4",
     "pytest-benchmark>=5.2.3",
     "yfinance>=0.2.66",
     "pandas>=2.3.3",
     "yahooquery>=2.4.1",
+    "typeguard>=4.4.4",
 ]
 doc = [
     "mkdocs>=1.6.1",
@@ -88,7 +88,6 @@ disable_error_code = ["no-any-return", "union-attr", "misc"]
 exclude = ["scripts"]
 
 [tool.pytest.ini_options]
-# addopts = "--typeguard-packages=yafin"
 markers = [
     "integration: marks tests that hit real external services or APIs",
     "performance: marks tests as performance benchmarks",

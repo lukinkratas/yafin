@@ -1041,7 +1041,7 @@ class TestUnitAsyncClientManager:
         assert async_client_manager._refcount == 0
         assert async_client_manager._client is None
 
-        await async_client_manager._get_client()
+        async_client_manager._get_client()
         assert async_client_manager._refcount == 1
         assert async_client_manager._client is not None
 
@@ -1054,8 +1054,8 @@ class TestUnitAsyncClientManager:
         self, async_client_manager: _SingletonAsyncClientManager
     ) -> None:
         """Test client attribute singleton pattern."""
-        client1 = await async_client_manager._get_client()
-        client2 = await async_client_manager._get_client()
+        client1 = async_client_manager._get_client()
+        client2 = async_client_manager._get_client()
 
         assert async_client_manager._refcount == 2
         assert async_client_manager._client is not None

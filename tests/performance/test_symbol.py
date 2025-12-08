@@ -15,7 +15,7 @@ from tests._utils import (
     _process_chart_like_yfinance,
 )
 
-BENCHMARK_KWARGS = dict(rounds=10, iterations=10, warmup_rounds=10)
+BENCHMARK_KWARGS = dict(rounds=100, iterations=10, warmup_rounds=10)
 
 
 def _assert_chart_df(chart_df: pd.DataFrame, expected_df: pd.DataFrame) -> None:
@@ -50,27 +50,6 @@ class TestPerformanceSymbol:
         with yafin.Symbol('META') as symbol:
             yield symbol
 
-    def run_get_chart(
-        self, symbol: yafin.Symbol, interval: str, period_range: str
-    ) -> pd.DataFrame:
-        """Run get_chart method."""
-        chart = symbol.get_chart(interval, period_range)
-        return _process_chart_like_yfinance(chart)
-
-    def benchmark_chart(
-        self,
-        symbol: yafin.Symbol,
-        benchmark: BenchmarkFixture,
-        interval: str,
-        period_range: str,
-    ) -> pd.DataFrame:
-        """Benchmark get_chart method."""
-        return benchmark.pedantic(
-            self.run_get_chart,
-            args=[symbol, interval, period_range],
-            **BENCHMARK_KWARGS,
-        )  # type: ignore[no-untyped-call, unused-ignore]
-
     @pytest.mark.performance
     def test_get_chart(
         self,
@@ -83,12 +62,22 @@ class TestPerformanceSymbol:
         expected_chart_df: pd.DataFrame,
     ) -> None:
         """Test get_chart method."""
+
+        def run_get_chart(
+            symbol: yafin.Symbol, interval: str, period_range: str
+        ) -> pd.DataFrame:
+            chart = symbol.get_chart(interval, period_range)
+            return _process_chart_like_yfinance(chart)
+
         _mock_response(
             mocker,
             patched_method='yafin.client.Session.get',
             response_jsons=[chart_json_mock],
         )
-        chart_df = self.benchmark_chart(symbol, benchmark, interval, period_range)
+        chart_df = benchmark.pedantic(
+            run_get_chart, args=[symbol, interval, period_range], **BENCHMARK_KWARGS
+        )  # type: ignore[no-untyped-call, unused-ignore]
+
         _assert_chart_df(chart_df, expected_chart_df)
 
 
@@ -102,26 +91,6 @@ class TestPerformanceYfinance:
         yield yf.Ticker('META', session=session)
         session.close()
 
-    def run_get_chart(
-        self, ticker: yf.Ticker, interval: str, period_range: str
-    ) -> pd.DataFrame:
-        """Run history method."""
-        return ticker.history(period=period_range, interval=interval)
-
-    def benchmark_chart(
-        self,
-        ticker: yf.Ticker,
-        benchmark: BenchmarkFixture,
-        interval: str,
-        period_range: str,
-    ) -> pd.DataFrame:
-        """Benchmark history method."""
-        return benchmark.pedantic(
-            self.run_get_chart,
-            args=[ticker, interval, period_range],
-            **BENCHMARK_KWARGS,
-        )  # type: ignore[no-untyped-call, unused-ignore]
-
     @pytest.mark.performance
     def test_get_chart_yfinance(
         self,
@@ -134,11 +103,31 @@ class TestPerformanceYfinance:
         expected_chart_df: pd.DataFrame,
     ) -> None:
         """Test history method."""
+
+        def run_get_chart(
+            ticker: yf.Ticker, interval: str, period_range: str
+        ) -> pd.DataFrame:
+            return ticker.history(period=period_range, interval=interval)
+
         _mock_response(
             mocker,
             patched_method='yfinance.data.YfData.get',
             response_jsons=[chart_json_mock],
             text='',
         )
-        chart_df = self.benchmark_chart(ticker, benchmark, interval, period_range)
+
+        chart_df = benchmark.pedantic(
+            run_get_chart, args=[ticker, interval, period_range], **BENCHMARK_KWARGS
+        )  # type: ignore[no-untyped-call, unused-ignore]
+
         _assert_chart_df(chart_df, expected_chart_df)
+
+
+# stocks.income_stmt
+# stocks.quarterly_income_stmt
+# stocks.ttm_income_stmt
+# stock.info
+# stock.analyst_price_targets
+# stock.upgrades_downgrades
+# stock.options
+# stock.news
