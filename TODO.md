@@ -1,8 +1,22 @@
 ## TODO
 
-0.1.1:
+0.1.2:
+- [x] merge dev and test deps ?
+- [ ] ticker upper() and strip()
 - [ ] performance tests for all other endpoints
 - [ ] claude and codex local review
+- [ ] make release work
+Run make test-build
+uv run --isolated --no-project --with dist/*.whl pytest tests/unit
+Downloading curl-cffi (7.9MiB)
+ Downloaded curl-cffi
+Installed 6 packages in 2ms
+error: Failed to spawn: `pytest`
+  Caused by: No such file or directory (os error 2)
+make: *** [Makefile:75: test-build] Error 2
+Error: Process completed with exit code 2.
+
+0.1.1:
 - [x] resolve types -> typed dicts only checked in unit tests, anottated as dict in codebase
 - [x] add changelog
 - [x] clear crumb cache

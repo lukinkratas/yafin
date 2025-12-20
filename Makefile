@@ -1,11 +1,10 @@
-.PHONY: install install-all install-dev install-test install-doc install-editable format format lint lint-fix typecheck fetch-mocks test test-int test-perf test-build test-all doc doc-serve build publish changelog
+.PHONY: install install-all install-dev install-doc install-editable format format lint lint-fix typecheck fetch-mocks test test-int test-perf test-build test-all doc doc-serve build publish changelog clean-up
 
 help:
 	@echo "Available targets:"
 	@echo "  install          - Install the package and its dependencies"
 	@echo "  install-all      - Install the package with all extras"
 	@echo "  install-dev      - Install the package with dev dependencies"
-	@echo "  install-test     - Install the package with test dependencies"
 	@echo "  install-doc      - Install the package with doc dependencies"
 	@echo "  install-editable - Make the package installation editable"
 	@echo "  format           - Format the code using ruff"
@@ -18,7 +17,7 @@ help:
 	@echo "  test-perf        - Run performance tests"
 	@echo "  test-build       - Test built package"
 	@echo "  test-all         - Run all tests with html coverage"
-	@echo "  clean            - Clean up - remove htmlcov, __pycache__, pytest mypy and ruff cache dirs"
+	@echo "  clean-up         - Clean up - remove htmlcov, __pycache__, pytest mypy and ruff cache dirs"
 	@echo "  doc              - build documentation html"
 	@echo "  doc-serve        - serve documentation html"
 	@echo "  build            - Build package - bdist wheel and sdist"
@@ -35,9 +34,6 @@ install-all:
 install-dev:
 	uv sync --group dev
 
-install-test:
-	uv sync --group test
-
 install-doc:
 	uv sync --group doc
 
@@ -45,31 +41,31 @@ install-editable:
 	uv pip install -e .
 
 format:
-	uv run --group dev ruff format
+	uv run --dev ruff format
 
 lint:
-	uv run --group dev ruff check
+	uv run --dev ruff check
 
 lint-fix:
-	uv run --group dev ruff check --fix
+	uv run --dev ruff check --fix
 
 typecheck:
-	uv run --group dev mypy .
+	uv run --dev mypy .
 
 fetch-mocks:
-	uv run --group dev python -m scripts.fetch_mocks
+	uv run --dev python -m scripts.fetch_mocks
 
 test:
 	$(MAKE) install-editable
-	uv run --group test pytest tests/unit -p no:warnings --cov=yafin --cov-report=term-missing --cov-branch
+	uv run --dev pytest tests/unit -p no:warnings --cov=yafin --cov-report=term-missing --cov-branch
 
 test-int:
 	$(MAKE) install-editable
-	uv run --group test pytest tests/integration -p no:warnings
+	uv run --dev pytest tests/integration -p no:warnings
 
 test-perf:
 	$(MAKE) install-editable
-	uv run --group test pytest tests/performance --benchmark-autosave -p no:warnings
+	uv run --dev pytest tests/performance --benchmark-autosave -p no:warnings
 
 test-build:
 	uv run --isolated --no-project --with dist/*.whl pytest tests/unit
@@ -77,9 +73,9 @@ test-build:
 
 test-all:
 	$(MAKE) install-editable
-	uv run --group test pytest tests/ -m "not performance" --cov=yafin --cov-report=term-missing --cov-branch --cov-fail-under=95 --cov-report=html:htmlcov
+	uv run --dev pytest tests/ -m "not performance" --cov=yafin --cov-report=term-missing --cov-branch --cov-fail-under=95 --cov-report=html:htmlcov
 
-clean:
+clean-up:
 	rm -rvf __pycache__ scripts/__pycache__ tests/__pycache__ tests/integration/__pycache__ tests/unit/__pycache__ yafin/__pycache__ .pytest_cache .mypy_cache .ruff_cache .coverage htmlcov main.log dist yafin.egg-info site *.csv
 
 doc:
@@ -93,7 +89,7 @@ build:
 	uv build
 
 publish:
-	[[ -n $UV_PUBLISH_TOKEN ]] && uv publish || echo "Env var UV_PUBLISH_TOKEN not set."
+	[[ -n $UV_PUBLISH_TOKEN ]] && uv publish --token $UV_PUBLISH_TOKEN || echo "Env var UV_PUBLISH_TOKEN not set."
 
 changelog:
 	git log \
